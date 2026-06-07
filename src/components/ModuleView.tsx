@@ -21,33 +21,14 @@ import {
   topPick,
   weightedTotal,
 } from '../lib/scoring';
-import { assetUrl } from '../lib/assets';
+import Thumb from './Thumb';
+import OptionDetail from './OptionDetail';
 
 const clampScore = (v: number) => Math.max(0, Math.min(5, v));
 const clampWeight = (v: number) => Math.max(1, Math.min(5, v));
 
 const numInput = 'rounded-md border border-slate-300 px-2 py-1 text-right tabular-nums';
 const textInput = 'rounded-md border border-slate-300 px-2 py-1';
-
-/** Small product thumbnail with a graceful fallback when no image is set. */
-function Thumb({ src, alt }: { src?: string; alt: string }) {
-  const url = assetUrl(src);
-  if (!url) {
-    return (
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-dashed border-slate-200 bg-slate-50 text-slate-300">
-        <span className="text-xs">🍼</span>
-      </div>
-    );
-  }
-  return (
-    <img
-      src={url}
-      alt={alt}
-      className="h-10 w-10 shrink-0 rounded-md border border-slate-200 bg-white object-contain"
-      loading="lazy"
-    />
-  );
-}
 
 /** Editable list of sourced retailer prices for one option (the engine's data). */
 function PriceSourcesEditor({ module, option }: { module: Module; option: Option }) {
@@ -196,6 +177,13 @@ export default function ModuleView({
   const setScore = useStore((s) => s.setScore);
 
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [detailId, setDetailId] = useState<string | null>(null);
+
+  // Drill-down: a full read-only page describing one option.
+  const detailOption = detailId ? module.options.find((o) => o.id === detailId) : undefined;
+  if (detailOption) {
+    return <OptionDetail module={module} option={detailOption} onBack={() => setDetailId(null)} />;
+  }
 
   const max = maxScore(module.criteria);
   const best = topPick(module);
@@ -315,13 +303,27 @@ export default function ModuleView({
                   <tr className={`border-b border-slate-100 ${expanded ? '' : 'last:border-0'} ${isTop ? 'bg-indigo-50' : ''}`}>
                     <td className="px-3 py-2">
                       <div className="flex items-center gap-2">
-                        <Thumb src={o.image} alt={o.name} />
+                        <button
+                          onClick={() => setDetailId(o.id)}
+                          title="View product details"
+                          className="rounded-md hover:ring-2 hover:ring-indigo-300"
+                        >
+                          <Thumb src={o.image} alt={o.name} />
+                        </button>
                         {isTop && <span className="text-indigo-600">★</span>}
-                        <input
-                          value={o.name}
-                          onChange={(e) => updateOption(module.id, o.id, { name: e.target.value })}
-                          className={`w-44 ${textInput} font-medium text-slate-800`}
-                        />
+                        <div className="flex flex-col">
+                          <input
+                            value={o.name}
+                            onChange={(e) => updateOption(module.id, o.id, { name: e.target.value })}
+                            className={`w-44 ${textInput} font-medium text-slate-800`}
+                          />
+                          <button
+                            onClick={() => setDetailId(o.id)}
+                            className="mt-0.5 self-start text-xs text-indigo-600 hover:underline"
+                          >
+                            View details →
+                          </button>
+                        </div>
                       </div>
                     </td>
                     <td className="px-3 py-2 text-right">
