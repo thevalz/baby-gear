@@ -21,6 +21,7 @@ const yesNo = (v: unknown): string => (v ? 'Yes' : 'No');
  */
 const ATTRIBUTE_META: Record<string, { label: string; format: (v: unknown) => string }> = {
   carrierLb: { label: 'Carrier weight', format: (v) => `${v} lb` },
+  rearFacingLengthIn: { label: 'Rear-facing length', format: (v) => `${v} in` },
   fitsWayfinder: { label: 'Fits BOB Wayfinder', format: yesNo },
   fitsAlterrain: { label: 'Fits BOB Alterrain', format: yesNo },
   safety: { label: 'Safety features', format: (v) => String(v) },
@@ -78,6 +79,9 @@ export function optionSummary(option: Option): SummaryChip[] {
   if (a.carrierLb != null) {
     chips.push({ key: 'carrierLb', text: `${a.carrierLb} lb`, tone: 'neutral' });
   }
+  if (a.rearFacingLengthIn != null) {
+    chips.push({ key: 'rearFacingLengthIn', text: `${a.rearFacingLengthIn}" long`, tone: 'neutral' });
+  }
   if (a.fitsWayfinder != null) {
     chips.push({
       key: 'fitsWayfinder',
@@ -113,6 +117,11 @@ export function criterionEvidence(criterion: Criterion, option: Option): string 
   // Carrier weight / mass.
   if (has('weight', 'mass') && a.carrierLb != null) {
     return `${a.carrierLb} lb carrier`;
+  }
+
+  // Rear-facing footprint — the length that drives tight-vehicle (e.g. Tacoma) fit.
+  if (has('fit', 'tacoma', 'footprint', 'rear-facing', 'length') && a.rearFacingLengthIn != null) {
+    return `${a.rearFacingLengthIn} in rear-facing footprint`;
   }
 
   // Stroller / BOB adapter compatibility.

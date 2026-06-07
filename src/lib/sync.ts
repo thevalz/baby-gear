@@ -17,12 +17,18 @@ import type { AppState, Module, Option } from './types';
  */
 function refreshOption(userOpt: Option, seedOpt: Option): Option {
   // Only copy a field the seed actually defines, so an unsourced seed entry
-  // never wipes a value the user typed in.
+  // never wipes a value the user typed in. Sourced facts in `attributes`
+  // (verified weight, rear-facing length, fit flags, …) are merged like prices
+  // so a newer repo data version reaches returning visitors; user-only keys are
+  // preserved because seed values are layered on top of the user's.
   return {
     ...userOpt,
     ...(seedOpt.price !== undefined ? { price: seedOpt.price } : {}),
     ...(seedOpt.image !== undefined ? { image: seedOpt.image } : {}),
     ...(seedOpt.priceSources !== undefined ? { priceSources: seedOpt.priceSources } : {}),
+    ...(seedOpt.attributes !== undefined
+      ? { attributes: { ...userOpt.attributes, ...seedOpt.attributes } }
+      : {}),
   };
 }
 

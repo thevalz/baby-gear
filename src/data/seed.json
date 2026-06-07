@@ -1,5 +1,5 @@
 {
-  "dataVersion": 3,
+  "dataVersion": 4,
   "config": {
     "overallBudget": 1000,
     "adapterCost": 100
@@ -45,6 +45,7 @@
           "price": 380,
           "attributes": {
             "carrierLb": 6.2,
+            "rearFacingLengthIn": 27.25,
             "fitsWayfinder": true,
             "fitsAlterrain": true,
             "safety": "load leg + anti-rebound panel + rigid (TrueLock) LATCH + side-impact; Aeroflex EPP"
@@ -96,6 +97,7 @@
           "price": 330,
           "attributes": {
             "carrierLb": 9,
+            "rearFacingLengthIn": 26.1,
             "fitsWayfinder": true,
             "fitsAlterrain": true,
             "safety": "swivel load-leg base + Linear Side-impact (L.S.P.) + belt tensioner; no-rethread harness"
@@ -140,6 +142,7 @@
           "price": 130,
           "attributes": {
             "carrierLb": 7.2,
+            "rearFacingLengthIn": 26,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
             "safety": "basic — no load leg or anti-rebound; meets federal side-impact (ProtectPlus)"
@@ -184,6 +187,7 @@
           "price": 230,
           "attributes": {
             "carrierLb": 10,
+            "rearFacingLengthIn": 27.5,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
             "safety": "integrated anti-rebound bar + top crash-test scores; SuperCinch LATCH"
@@ -228,6 +232,7 @@
           "price": 230,
           "attributes": {
             "carrierLb": 10.9,
+            "rearFacingLengthIn": 26.6,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
             "safety": "SafeCell crumple zone + steel-reinforced base + side-impact foam surround; SafeWash"
@@ -265,6 +270,7 @@
           "price": 250,
           "attributes": {
             "carrierLb": 9,
+            "rearFacingLengthIn": 26.4,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
             "safety": "steel anti-rebound bar + rigid LATCH + side-impact (SafePlus); required top tether"
@@ -316,6 +322,7 @@
           "price": 250,
           "attributes": {
             "carrierLb": 9,
+            "rearFacingLengthIn": 28.9,
             "fitsWayfinder": true,
             "fitsAlterrain": true,
             "safety": "side-impact protection (SIP) + ClimaFlow shell; no load leg / anti-rebound"
@@ -353,6 +360,7 @@
           "price": 380,
           "attributes": {
             "carrierLb": 9.3,
+            "rearFacingLengthIn": 28.1,
             "fitsWayfinder": true,
             "fitsAlterrain": true,
             "safety": "ClickTight install + ReboundReduce anti-rebound bar + side-impact (head/neck/torso); SafeWash"
@@ -397,6 +405,7 @@
           "price": 200,
           "attributes": {
             "carrierLb": 10,
+            "rearFacingLengthIn": 29,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
             "safety": "anti-rebound bar + Safety Surround side-impact; no load leg"
@@ -434,6 +443,7 @@
           "price": 300,
           "attributes": {
             "carrierLb": 12.3,
+            "rearFacingLengthIn": 28,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
             "safety": "extended rear-facing to ~2 yr; anti-rebound bar + EPS side-impact; FAA-approved"
@@ -478,6 +488,7 @@
           "price": 400,
           "attributes": {
             "carrierLb": 9.9,
+            "rearFacingLengthIn": 25.8,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
             "safety": "no-rethread harness + side-impact (EPP headrest) + rebound carry-handle position; FR-free"
@@ -522,6 +533,7 @@
           "price": 350,
           "attributes": {
             "carrierLb": 10,
+            "rearFacingLengthIn": 26,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
             "safety": "load leg + anti-rebound bar + Kinetic Pods side-impact (SIP); EPS foam"
@@ -610,6 +622,7 @@
           "price": 550,
           "attributes": {
             "carrierLb": 11,
+            "rearFacingLengthIn": 26.5,
             "fitsWayfinder": false,
             "fitsAlterrain": false,
             "safety": "lie-flat recline + load-leg base + Linear Side-impact (L.S.P.); SensorSafe clip"
@@ -661,6 +674,7 @@
           "price": 550,
           "attributes": {
             "carrierLb": 16.5,
+            "rearFacingLengthIn": 26,
             "fitsWayfinder": false,
             "fitsAlterrain": false,
             "safety": "integrated seat→stroller; 5-pt harness + anti-rebound LATCH base; NHTSA 5-star"
