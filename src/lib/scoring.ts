@@ -1,30 +1,34 @@
-import type { Module, Option } from './types';
+import type { Criterion, Module, Option } from './types';
 
 /** Σ over criteria of (weight × score). */
-export function weightedTotal(module: Module, option: Option): number {
-  return module.criteria.reduce(
+export function weightedTotal(option: Option, criteria: Criterion[]): number {
+  return criteria.reduce(
     (sum, c) => sum + (c.weight || 0) * (option.scores[c.id] || 0),
     0,
   );
 }
 
 /** 5 × Σ(weights) — the maximum achievable weighted total. */
-export function maxScore(module: Module): number {
-  return 5 * module.criteria.reduce((sum, c) => sum + (c.weight || 0), 0);
+export function maxScore(criteria: Criterion[]): number {
+  return 5 * criteria.reduce((sum, c) => sum + (c.weight || 0), 0);
 }
 
 /** weightedTotal / maxScore, in [0, 1]. */
-export function percent(module: Module, option: Option): number {
-  const max = maxScore(module);
-  return max ? weightedTotal(module, option) / max : 0;
+export function percent(option: Option, criteria: Criterion[]): number {
+  const max = maxScore(criteria);
+  return max ? weightedTotal(option, criteria) / max : 0;
+}
+
+/** Options sorted by weighted total, highest first. */
+export function rankedOptions(module: Module): Option[] {
+  return [...module.options].sort(
+    (a, b) => weightedTotal(b, module.criteria) - weightedTotal(a, module.criteria),
+  );
 }
 
 /** Option with the highest weighted total (the "top pick"), or null if none. */
 export function topPick(module: Module): Option | null {
-  return module.options.reduce<Option | null>(
-    (best, o) => (best === null || weightedTotal(module, o) > weightedTotal(module, best) ? o : best),
-    null,
-  );
+  return rankedOptions(module)[0] ?? null;
 }
 
 /** The user-selected pick, defaulting to the top pick when none is chosen. */

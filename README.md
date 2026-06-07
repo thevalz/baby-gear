@@ -20,6 +20,7 @@ Other scripts:
 ```bash
 npm run build    # typecheck + production build to dist/
 npm run preview  # serve the production build
+npm test         # run the vitest unit tests
 ```
 
 ## Project structure

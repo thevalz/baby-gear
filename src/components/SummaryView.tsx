@@ -32,7 +32,7 @@ export default function SummaryView({ state }: { state: AppState }) {
 
   const chartData = modules.map((m) => {
     const t = topPick(m);
-    return { name: m.label, percent: t ? Math.round(percent(m, t) * 100) : 0 };
+    return { name: m.label, percent: t ? Math.round(percent(t, m.criteria) * 100) : 0 };
   });
 
   return (
@@ -50,7 +50,7 @@ export default function SummaryView({ state }: { state: AppState }) {
                 <>
                   <div className="mt-1 text-lg font-semibold text-slate-800">{t.name}</div>
                   <div className="mt-1 text-sm text-slate-500">
-                    {weightedTotal(m, t)}/{maxScore(m)} · {formatPercent(percent(m, t))} ·{' '}
+                    {weightedTotal(t, m.criteria)}/{maxScore(m.criteria)} · {formatPercent(percent(t, m.criteria))} ·{' '}
                     {formatMoney(t.price)}
                   </div>
                 </>

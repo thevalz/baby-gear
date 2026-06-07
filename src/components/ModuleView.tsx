@@ -21,12 +21,12 @@ import {
 
 export default function ModuleView({ module }: { module: Module }) {
   const setModuleBudget = useStore((s) => s.setModuleBudget);
-  const max = maxScore(module);
+  const max = maxScore(module.criteria);
   const best = topPick(module);
 
   const chartData = module.options.map((o) => ({
     name: o.name,
-    score: weightedTotal(module, o),
+    score: weightedTotal(o, module.criteria),
     isTop: best?.id === o.id,
   }));
 
@@ -87,10 +87,10 @@ export default function ModuleView({ module }: { module: Module }) {
                     </td>
                   ))}
                   <td className="px-3 py-2 text-right font-semibold tabular-nums">
-                    {weightedTotal(module, o)}
+                    {weightedTotal(o, module.criteria)}
                   </td>
                   <td className="px-3 py-2 text-right tabular-nums text-slate-500">
-                    {formatPercent(percent(module, o))}
+                    {formatPercent(percent(o, module.criteria))}
                   </td>
                 </tr>
               );
