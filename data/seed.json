@@ -1,116 +1,44 @@
 {
-  "config": {
-    "overallBudget": 1500,
-    "adapterCost": 100
-  },
+  "config": { "overallBudget": 500 },
   "modules": [
     {
-      "id": "m-carseat",
-      "label": "Car Seat",
+      "id": "car-seat",
+      "label": "Infant Car Seat",
       "budget": 500,
       "selectedOptionId": null,
       "criteria": [
-        { "id": "c-safety",    "label": "Safety / crash ratings", "weight": 5 },
-        { "id": "c-install",   "label": "Ease of install",        "weight": 4 },
-        { "id": "c-weight",    "label": "Carrier weight / portability", "weight": 3 },
-        { "id": "c-longevity", "label": "Longevity / convertibility",   "weight": 3 },
-        { "id": "c-csvalue",   "label": "Value for money",        "weight": 4 }
+        { "id": "fit",    "label": "Tacoma rear-facing fit", "weight": 5 },
+        { "id": "weight", "label": "Carrier weight",          "weight": 4 },
+        { "id": "compat", "label": "BOB stroller compat",     "weight": 3 },
+        { "id": "safety", "label": "Safety extras",           "weight": 2 },
+        { "id": "price",  "label": "Price",                   "weight": 1 }
       ],
       "options": [
-        {
-          "id": "o-cybex", "moduleId": "m-carseat", "name": "Cybex Cloud G",
-          "price": 550,
-          "attributes": {
-            "brand": "Cybex", "type": "infant",
-            "carrierLb": 9, "carrierLbVerify": true,
-            "fits": { "o-uppababy": "adapter", "o-nuna-mixx": "adapter" }
-          },
-          "scores": { "c-safety": 5, "c-install": 4, "c-weight": 3, "c-longevity": 3, "c-csvalue": 3 },
-          "notes": "Lie-flat outside the car. Carrier weight (9 lb) marked carrierLbVerify — confirm before relying on it."
-        },
-        {
-          "id": "o-nuna-pipa", "moduleId": "m-carseat", "name": "Nuna Pipa RX",
-          "price": 400,
-          "attributes": {
-            "brand": "Nuna", "type": "infant",
-            "carrierLb": 8.6,
-            "fits": { "o-nuna-mixx": "native", "o-uppababy": "adapter" }
-          },
-          "scores": { "c-safety": 5, "c-install": 5, "c-weight": 4, "c-longevity": 3, "c-csvalue": 3 },
-          "notes": "Native click-in with Nuna strollers (no adapter)."
-        },
-        {
-          "id": "o-chicco", "moduleId": "m-carseat", "name": "Chicco KeyFit 35",
-          "price": 250,
-          "attributes": {
-            "brand": "Chicco", "type": "infant",
-            "carrierLb": 9.8,
-            "fits": { "o-bob": "adapter", "o-citymini": "adapter", "o-uppababy": "adapter" }
-          },
-          "scores": { "c-safety": 4, "c-install": 5, "c-weight": 4, "c-longevity": 3, "c-csvalue": 5 },
-          "notes": "Best value; very wide adapter availability."
-        },
-        {
-          "id": "o-graco", "moduleId": "m-carseat", "name": "Graco SnugRide",
-          "price": 200,
-          "attributes": {
-            "brand": "Graco", "type": "infant",
-            "carrierLb": 7.5,
-            "fits": { "o-citymini": "adapter" }
-          },
-          "scores": { "c-safety": 4, "c-install": 3, "c-weight": 4, "c-longevity": 2, "c-csvalue": 4 },
-          "notes": "Lightest carrier; limited stroller compatibility."
-        }
-      ]
-    },
-    {
-      "id": "m-stroller",
-      "label": "Stroller",
-      "budget": 700,
-      "selectedOptionId": null,
-      "criteria": [
-        { "id": "s-maneuver", "label": "Maneuverability", "weight": 4 },
-        { "id": "s-fold",     "label": "Fold / storage",  "weight": 3 },
-        { "id": "s-basket",   "label": "Storage basket",  "weight": 2 },
-        { "id": "s-comfort",  "label": "Child comfort",   "weight": 3 },
-        { "id": "s-stvalue",  "label": "Value for money", "weight": 4 }
-      ],
-      "options": [
-        {
-          "id": "o-uppababy", "moduleId": "m-stroller", "name": "UPPAbaby Vista V2",
-          "price": 1000,
-          "attributes": { "brand": "UPPAbaby", "type": "full-size / convertible" },
-          "scores": { "s-maneuver": 4, "s-fold": 3, "s-basket": 5, "s-comfort": 5, "s-stvalue": 2 },
-          "notes": "Expands to double; big basket; premium price."
-        },
-        {
-          "id": "o-bob", "moduleId": "m-stroller", "name": "BOB Gear Revolution Flex 3.0",
-          "price": 500,
-          "attributes": { "brand": "BOB", "type": "jogging" },
-          "scores": { "s-maneuver": 5, "s-fold": 2, "s-basket": 4, "s-comfort": 4, "s-stvalue": 3 },
-          "notes": "BOB sells brand-specific car-seat adapters (~$100)."
-        },
-        {
-          "id": "o-nuna-mixx", "moduleId": "m-stroller", "name": "Nuna MIXX Next",
-          "price": 750,
-          "attributes": { "brand": "Nuna", "type": "full-size" },
-          "scores": { "s-maneuver": 4, "s-fold": 4, "s-basket": 4, "s-comfort": 5, "s-stvalue": 3 },
-          "notes": "Native fit with Nuna Pipa (no adapter)."
-        },
-        {
-          "id": "o-citymini", "moduleId": "m-stroller", "name": "Baby Jogger City Mini GT2",
-          "price": 400,
-          "attributes": { "brand": "Baby Jogger", "type": "compact" },
-          "scores": { "s-maneuver": 5, "s-fold": 5, "s-basket": 3, "s-comfort": 4, "s-stvalue": 5 },
-          "notes": "One-hand quick fold; best value."
-        }
+        { "id": "nuna-pipa-aire-rx", "moduleId": "car-seat", "name": "Nuna Pipa Aire RX", "price": 380,
+          "attributes": { "carrierLb": 6, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "load leg + anti-rebound + rigid LATCH" },
+          "scores": { "fit": 4, "weight": 5, "compat": 5, "safety": 5, "price": 2 },
+          "notes": "Lightest premium; top safety; both strollers. Loses on price only." },
+        { "id": "cybex-aton-g", "moduleId": "car-seat", "name": "Cybex Aton G Swivel", "price": 330,
+          "attributes": { "carrierLb": 12, "carrierLbVerify": true, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "load leg + linear side-impact; 90° swivel" },
+          "scores": { "fit": 5, "weight": 2, "compat": 5, "safety": 5, "price": 3 },
+          "notes": "Swivel = best tight-space loading; heavier; both strollers." },
+        { "id": "graco-snugride-35-lite-lx", "moduleId": "car-seat", "name": "Graco SnugRide 35 Lite LX", "price": 130,
+          "attributes": { "carrierLb": 7.2, "fitsWayfinder": false, "fitsAlterrain": true, "safety": "basic (no load leg)" },
+          "scores": { "fit": 4, "weight": 5, "compat": 3, "safety": 3, "price": 5 },
+          "notes": "Budget + ultralight; Alterrain only (no Wayfinder Graco adapter)." },
+        { "id": "chicco-keyfit-35", "moduleId": "car-seat", "name": "Chicco KeyFit 35", "price": 230,
+          "attributes": { "carrierLb": 10, "fitsWayfinder": false, "fitsAlterrain": false, "safety": "anti-rebound + top crash scores" },
+          "scores": { "fit": 5, "weight": 3, "compat": 1, "safety": 4, "price": 4 },
+          "notes": "Best fit, but no current BOB adapter for either stroller." },
+        { "id": "britax-b-safe-gen2", "moduleId": "car-seat", "name": "Britax B-Safe Gen2", "price": 230,
+          "attributes": { "carrierLb": 11, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "anti-rebound (SafeCell)" },
+          "scores": { "fit": 3, "weight": 2, "compat": 5, "safety": 4, "price": 4 },
+          "notes": "Native BOB (both strollers); heavier; 4–35 lb runway." }
       ]
     }
   ],
   "inventory": [
-    { "id": "i-graco",    "name": "Graco SnugRide (registry gift)",       "moduleId": "m-carseat",  "status": "undecided", "refund": 200, "notes": "Could return for store credit." },
-    { "id": "i-citymini", "name": "Baby Jogger City Mini GT2 (owned)",     "moduleId": "m-stroller", "status": "keep",      "refund": 0,   "notes": "Already using it." },
-    { "id": "i-bob",      "name": "BOB Revolution (gift — no jogging)",    "moduleId": "m-stroller", "status": "return",    "refund": 500, "notes": "Don't run; returning." },
-    { "id": "i-base",     "name": "Extra car-seat base",                   "moduleId": "m-carseat",  "status": "undecided", "refund": 60,  "notes": "Only needed for a 2nd car." }
+    { "id": "evenflo-safemax", "name": "Evenflo SafeMax (infant seat)", "moduleId": "car-seat", "status": "return", "refund": 0, "notes": "Heavy; poor Tacoma fit — return candidate." },
+    { "id": "bob-wayfinder", "name": "BOB Wayfinder (stroller)", "moduleId": "stroller", "status": "keep", "refund": 0, "notes": "Already owned." }
   ]
 }

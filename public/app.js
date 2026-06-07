@@ -148,15 +148,56 @@ function compatibilityFlags() {
     });
   });
 
-  // carrierLbVerify reminders on selected picks.
-  picks.forEach((P) => {
-    if (P.opt && P.opt.attributes && P.opt.attributes.carrierLbVerify) {
-      flags.push({ k: 'warn', t: `Verify ${P.opt.name} carrier weight (${P.opt.attributes.carrierLb ?? '?'} lb) before relying on it.` });
+  // Boolean fits<Stroller> compatibility (e.g. fitsWayfinder / fitsAlterrain),
+  // cross-referenced against strollers you own (matched by inventory name).
+  flags.push(...strollerFitFlags());
+
+  // carrierLbVerify reminders on any option that carries the flag.
+  state.modules.forEach((m) => m.options.forEach((o) => {
+    if (o.attributes && o.attributes.carrierLbVerify) {
+      flags.push({ k: 'warn', t: `Verify ${o.name} carrier weight (${o.attributes.carrierLb ?? '?'} lb) before relying on it.` });
     }
-  });
+  }));
 
   if (flags.length === 0) flags.push({ k: 'good', t: 'No compatibility issues detected.' });
   return flags;
+}
+
+// Universe of stroller names mentioned via boolean fits<Name> attributes.
+function detectStrollers() {
+  const names = new Set();
+  state.modules.forEach((m) => m.options.forEach((o) => boolFitKeys(o).forEach((k) => names.add(fitLabel(k)))));
+  return [...names];
+}
+// Strollers you own/keep, matched by inventory item name (status not "return").
+function ownedStrollers(names) {
+  const owned = new Set();
+  names.forEach((n) => {
+    if (state.inventory.some((i) => i.status !== 'return' && new RegExp(n, 'i').test(i.name || ''))) owned.add(n);
+  });
+  return owned;
+}
+function strollerFitFlags() {
+  const out = [];
+  const names = detectStrollers();
+  if (!names.length) return out;
+  const owned = ownedStrollers(names);
+  const fmt = (a) => a.join(' & ');
+  state.modules.forEach((m) => m.options.forEach((o) => {
+    if (!boolFitKeys(o).length) return;
+    const fits = names.filter((n) => o.attributes['fits' + n] === true);
+    const missing = names.filter((n) => !fits.includes(n));
+    const ownedMissing = missing.filter((n) => owned.has(n));
+    if (fits.length === 0) {
+      out.push({ k: 'bad', t: `${o.name}: fits none of your strollers (${fmt(names)}).` });
+    } else if (ownedMissing.length) {
+      out.push({ k: 'bad', t: `${o.name}: does NOT fit your owned ${fmt(ownedMissing)} — fits only ${fmt(fits)}.` });
+    } else if (missing.length) {
+      out.push({ k: 'warn', t: `${o.name}: fits only ${fmt(fits)} (not ${fmt(missing)} you're considering).` });
+    }
+    // fits all → no flag (kept quiet to reduce noise)
+  }));
+  return out;
 }
 
 /* ---------------- Rendering: full ---------------- */
@@ -257,6 +298,13 @@ function renderModule(m) {
   </div>`;
 }
 
+// Attribute keys of the form fits<Name> with a boolean value (e.g. fitsWayfinder).
+function boolFitKeys(o) {
+  const a = o.attributes || {};
+  return Object.keys(a).filter((k) => /^fits[A-Z]\w*$/.test(k) && typeof a[k] === 'boolean');
+}
+const fitLabel = (k) => k.replace(/^fits/, '');
+
 function renderAttrLine(o) {
   const a = o.attributes || {};
   const bits = [];
@@ -265,6 +313,11 @@ function renderAttrLine(o) {
   if (a.carrierLb != null) {
     bits.push(`carrier ${esc(a.carrierLb)} lb${a.carrierLbVerify ? ' <span class="verify">⚠ verify</span>' : ''}`);
   }
+  const fk = boolFitKeys(o);
+  if (fk.length) {
+    bits.push('strollers: ' + fk.map((k) => `${esc(fitLabel(k))} ${a[k] ? '✓' : '✗'}`).join(', '));
+  }
+  if (a.safety) bits.push(esc(a.safety));
   return bits.length ? `<div class="attr-line">${bits.join(' · ')}</div>` : '';
 }
 
@@ -287,6 +340,12 @@ function renderCompatEditor(m, o) {
     return `<div><div class="attr-line">Fits with ${esc(other.label)}:</div><div class="compat-grid">${items}</div></div>`;
   }).join('');
 
+  const boolKeys = boolFitKeys(o);
+  const boolHtml = boolKeys.length ? `
+    <div><div class="attr-line">Stroller fit:</div><div class="compat-grid">
+      ${boolKeys.map((k) => `<span class="compat-item"><label><input type="checkbox" data-action="fits-bool" data-opt="${o.id}" data-key="${k}" ${o.attributes[k] ? 'checked' : ''} /> ${esc(fitLabel(k))}</label></span>`).join('')}
+    </div></div>` : '';
+
   const attrEditor = hasCarrier ? `
     <div class="compat-grid" style="margin-top:.5rem">
       <span class="compat-item">
@@ -298,8 +357,8 @@ function renderCompatEditor(m, o) {
       </span>
     </div>` : '';
 
-  if (!compatHtml && !attrEditor) return '';
-  return `<details class="compat"><summary>Attributes & compatibility</summary>${compatHtml}${attrEditor}</details>`;
+  if (!compatHtml && !boolHtml && !attrEditor) return '';
+  return `<details class="compat"><summary>Attributes & compatibility</summary>${compatHtml}${boolHtml}${attrEditor}</details>`;
 }
 
 function renderInventory() {
@@ -513,6 +572,7 @@ function onChange(e) {
     case 'inv-module': findInv(t.dataset.inv).moduleId = t.value; updateComputed(); save(); break;
     case 'inv-status': findInv(t.dataset.inv).status = t.value; renderInventory(); renderDashboard(); save(); break;
     case 'attr-verify': ensureAttrs(findOption(t.dataset.opt)).carrierLbVerify = t.checked; renderModules(); renderDashboard(); save(); break;
+    case 'fits-bool': ensureAttrs(findOption(t.dataset.opt))[t.dataset.key] = t.checked; renderModules(); renderDashboard(); save(); break;
     default: return;
   }
 }
