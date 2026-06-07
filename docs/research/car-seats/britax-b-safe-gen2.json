@@ -1,0 +1,49 @@
+{
+  "_comment": "Staging fragment for ONE car-seat option. Filled by Batch B sourcing session. Do NOT edit seed.json — the integration pass folds this in. See ../../RESEARCH_PLAN.md.",
+
+  "id": "britax-b-safe-gen2",
+  "name": "Britax B-Safe Gen2",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/britax-b-safe-gen2.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Mega Babies",
+      "price": 219.99,
+      "url": "https://www.megababiesusa.com/products/britax-b-safe-gen2-infant-car-seat",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Britax (DTC)",
+      "price": 199.99,
+      "url": "https://us.britax.com/shop/retired/britax-b-safe-gen2-infant-car-seat",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "carrierLb / fitsWayfinder / fitsAlterrain / safety map into seed.json. NOTE: fitsWayfinder differs from the current stub — see notes.",
+    "carrierLb": 10.9,
+    "fitsWayfinder": false,
+    "fitsAlterrain": true,
+    "safety": "SafeCell crumple zone + steel-reinforced base, SafeCenter LATCH, foam head/neck/torso surround, SafeWash (no added flame retardants); 4-35 lb / <32\"",
+
+    "bobWayfinderAdapter": "none — B-Safe Gen2 is NOT on the BOB Wayfinder compatibility list. The Wayfinder universal adapter ($59.99) covers Britax ClickTight seats (Willow/Willow S/Willow SC/Cypress), Nuna, Cybex, Maxi-Cosi — not the SafeCenter-LATCH B-Safe Gen2.",
+    "bobAlterrainAdapter": "native — Britax owns BOB; the B-Safe Gen2 is listed for the Alterrain/Alterrain Pro via BOB's own Britax adapter (e.g. CS1305).",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "No direct data found for the B-Safe Gen2 specifically. General CPST guidance: rear-facing infant seats fit a Tacoma Access/Double Cab rear seat (Regular Cab is not rated for rear-facing); the front passenger seat often must slide forward, and only two seats fit comfortably across the second row (Toyota owner's manual + Cars.com 2016 Tacoma car-seat check)."
+  },
+
+  "sources": [
+    "https://us.britax.com/shop/retired/britax-b-safe-gen2-infant-car-seat",
+    "https://us.britax.com/press/archive/next-generation-of-britax-infant-car-seats",
+    "https://www.megababiesusa.com/products/britax-b-safe-gen2-infant-car-seat",
+    "https://strolleria.com/products/bob-infant-car-seat-adapter-for-wayfinder-nuna-cybex-maxi-cosi-britax-clicktight",
+    "https://littlefolksnyc.com/products/bob-wayfinder-adapter-for-nuna-cybex-maxi-cosi-and-britax-infant-seats",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-alterrain-alterrain-pro"
+  ],
+  "notes": "DISCONTINUED: Britax now lists the B-Safe Gen2 under /shop/retired/ (superseded by the Willow line); standalone seat is sold out at major retailers as of 2026-06. MSRP per Britax press release is $199.99 (Mega Babies last-listed $219.99, sold out). VERIFICATION FLAG: stub has fitsWayfinder=true, but the B-Safe Gen2 is NOT on the BOB Wayfinder adapter list (Wayfinder Britax compat is ClickTight Willow/Cypress only) — recommend integration set fitsWayfinder=false. Alterrain = native (✓). Carrier-only weight measured 10.9 lb (stub had 11). Keep price:230 as MSRP fallback per SOURCING.md."
+}
