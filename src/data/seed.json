@@ -1,8 +1,14 @@
 {
-  "dataVersion": 6,
+  "dataVersion": 7,
   "config": {
     "overallBudget": 1000,
-    "adapterCost": 100
+    "adapterCost": 100,
+    "creator": {
+      "name": "The Baby Gear Lab",
+      "tagline": "Honest, tested baby-gear picks — find the one that fits your life.",
+      "youtubeUrl": "https://www.youtube.com/@thebabygearlab",
+      "subscribeUrl": "https://www.youtube.com/@thebabygearlab?sub_confirmation=1"
+    }
   },
   "modules": [
     {
@@ -13,7 +19,7 @@
       "criteria": [
         {
           "id": "fit",
-          "label": "Tacoma rear-facing fit",
+          "label": "Vehicle rear-facing fit",
           "weight": 5
         },
         {
@@ -23,7 +29,7 @@
         },
         {
           "id": "compat",
-          "label": "BOB stroller compat",
+          "label": "Stroller compatibility",
           "weight": 3
         },
         {
@@ -116,6 +122,13 @@
           "moduleId": "car-seat",
           "name": "Cybex Aton G Swivel",
           "price": 330,
+          "reviewUrl": "https://www.youtube.com/@thebabygearlab",
+          "endorsements": [
+            { "critic": "The Baby Gear Lab", "verdict": "recommended", "score": 95, "quote": "The 180° swivel is a back-saver and it's genuinely short enough for tight trucks. My #1 this year.", "url": "https://www.youtube.com/@thebabygearlab", "date": "2026-05-20" },
+            { "critic": "Mountain Mom Reviews", "verdict": "recommended", "score": 90, "date": "2026-04-11" },
+            { "critic": "GearDad", "verdict": "recommended", "score": 88, "date": "2026-03-02" },
+            { "critic": "CarSeatNerd", "verdict": "not-recommended", "score": 70, "quote": "Excellent seat, but the price is hard to swallow versus the KeyFit.", "date": "2026-02-18" }
+          ],
           "attributes": {
             "carrierLb": 9,
             "rearFacingLengthIn": 26.1,
@@ -219,6 +232,11 @@
           "moduleId": "car-seat",
           "name": "Chicco KeyFit 35",
           "price": 230,
+          "endorsements": [
+            { "critic": "The Baby Gear Lab", "verdict": "recommended", "score": 89, "quote": "The value champ. Dead-simple install and a price that leaves room in the budget for the stroller.", "url": "https://www.youtube.com/@thebabygearlab", "date": "2026-05-20" },
+            { "critic": "CarSeatNerd", "verdict": "recommended", "score": 92, "date": "2026-02-18" },
+            { "critic": "GearDad", "verdict": "recommended", "score": 85, "date": "2026-03-02" }
+          ],
           "attributes": {
             "carrierLb": 10,
             "rearFacingLengthIn": 27.5,
@@ -945,6 +963,11 @@
           "name": "BOB Alterrain Pro",
           "price": 830,
           "image": "images/bob-alterrain-pro-opt.jpg",
+          "reviewUrl": "https://www.youtube.com/@thebabygearlab",
+          "endorsements": [
+            { "critic": "The Baby Gear Lab", "verdict": "recommended", "score": 93, "quote": "If you'll actually use the trails, the air tires and suspension are worth every penny. My pick for active families.", "url": "https://www.youtube.com/@thebabygearlab", "date": "2026-05-20" },
+            { "critic": "Mountain Mom Reviews", "verdict": "recommended", "score": 96, "date": "2026-04-11" }
+          ],
           "attributes": {
             "brand": "BOB",
             "type": "all-terrain / jogging",

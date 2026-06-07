@@ -13,6 +13,9 @@ import {
 import { optionSummary } from '../lib/evidence';
 import { assetUrl } from '../lib/assets';
 import { computeCompatibilityFlags, type FlagSeverity } from '../lib/compatibility';
+import { criticScore, isFresh } from '../lib/endorsements';
+import CreatorBanner from './CreatorBanner';
+import RecommendationHero from './RecommendationHero';
 
 /** Module that incurs the stroller adapter cost. */
 const ADAPTER_MODULE_ID = 'car-seat';
@@ -76,6 +79,7 @@ function OptionCard({
   const perPoint = pricePerPoint(option, module);
   const img = assetUrl(option.image);
   const chips = optionSummary(option).slice(0, 4);
+  const critics = criticScore(option);
 
   return (
     <button
@@ -108,6 +112,16 @@ function OptionCard({
           {isBestValue && (
             <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-700">
               Best value
+            </span>
+          )}
+          {critics && (
+            <span
+              title={`${critics.recommended} of ${critics.count} creators recommend`}
+              className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${
+                isFresh(critics) ? 'bg-rose-100 text-rose-700' : 'bg-slate-100 text-slate-500'
+              }`}
+            >
+              {isFresh(critics) ? '🍅' : '🥬'} {Math.round(critics.recommendedPct * 100)}%
             </span>
           )}
         </div>
@@ -165,6 +179,7 @@ export default function SummaryDashboard({
   const setAdapterCost = useStore((s) => s.setAdapterCost);
   const setInventoryStatus = useStore((s) => s.setInventoryStatus);
   const setInventoryRefund = useStore((s) => s.setInventoryRefund);
+  const resetOnboarding = useStore((s) => s.resetOnboarding);
 
   const adapterCost = config.adapterCost ?? DEFAULT_ADAPTER_COST;
   const picks = modules.map((m) => ({ module: m, pick: topPick(m) }));
@@ -190,7 +205,11 @@ export default function SummaryDashboard({
 
   return (
     <div className="space-y-6">
-      <h2 className="text-xl font-semibold text-slate-800">Summary</h2>
+      <CreatorBanner onRetake={resetOnboarding} />
+
+      <RecommendationHero state={state} onOpenDetail={onOpenDetail} />
+
+      <h2 className="text-xl font-semibold text-slate-800">The full breakdown</h2>
 
       <div className="grid gap-4 lg:grid-cols-2">
         {/* Card 1 — Top pick per module */}
