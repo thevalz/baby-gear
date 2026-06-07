@@ -202,388 +202,180 @@
 
   <hr class="sec" />
   <div class="sectit">Part 1 — Six proposed interfaces</div>
-  <div id="concepts"></div>
-
-  <hr class="sec" />
-  <div class="sectit">Part 2 — Five analogies worth stealing from</div>
-  <div id="analogies"></div>
-
-  <hr class="sec" />
-  <div class="sectit">Part 3 — Side-by-side evaluation</div>
-  <div id="evaltable" style="margin-top:16px"></div>
-  <div class="rec" id="rec"></div>
-
-</div>
-
-<script>
-//====================== REAL DATA (from src/data/seed.json) ======================
-const CRIT = [
-  {id:"fit",          label:"Vehicle rear-facing fit",      w:5},
-  {id:"weight",       label:"Carrier weight",               w:4},
-  {id:"compat",       label:"Stroller compatibility",       w:3},
-  {id:"safety",       label:"Safety extras",                w:2},
-  {id:"growthheight", label:"Outgrow-by-height (headroom)", w:4},
-  {id:"growthweight", label:"Weight capacity",              w:2},
-  {id:"growthlongevity",label:"Infant→toddler longevity",   w:3},
-  {id:"price",        label:"Price",                        w:1},
-];
-const OPTS = [
-  {name:"Nuna Pipa Aire RX",        price:650,   carrierLb:6.2, foot:27.25, maxH:30, maxW:30, way:true,  todd:false, s:{fit:4,weight:5,compat:5,safety:5,price:1,growthheight:2,growthweight:3,growthlongevity:2}},
-  {name:"Cybex Aton G Swivel",      price:499.95,carrierLb:9,   foot:26.1,  maxH:32, maxW:35, way:true,  todd:false, s:{fit:5,weight:4,compat:5,safety:5,price:2,growthheight:4,growthweight:5,growthlongevity:4}},
-  {name:"Graco SnugRide 35 Lite LX",price:139.99,carrierLb:7.2, foot:26,    maxH:32, maxW:35, way:false, todd:false, s:{fit:4,weight:5,compat:3,safety:3,price:5,growthheight:4,growthweight:5,growthlongevity:4}},
-  {name:"Chicco KeyFit 35",         price:229.99,carrierLb:10,  foot:27.5,  maxH:32, maxW:35, way:false, todd:false, s:{fit:5,weight:3,compat:3,safety:4,price:4,growthheight:4,growthweight:5,growthlongevity:4}},
-  {name:"Britax B-Safe Gen2",       price:230,   carrierLb:10.9,foot:26.6,  maxH:32, maxW:35, way:false, todd:false, s:{fit:3,weight:2,compat:3,safety:4,price:4,growthheight:4,growthweight:5,growthlongevity:4}},
-  {name:"Diono LiteClik 30",        price:250,   carrierLb:9,   foot:26.4,  maxH:30, maxW:30, way:false, todd:false, s:{fit:4,weight:4,compat:3,safety:4,price:4,growthheight:2,growthweight:3,growthlongevity:2}},
-  {name:"Maxi-Cosi Mico Luxe",      price:239,   carrierLb:9,   foot:28.9,  maxH:32, maxW:30, way:true,  todd:false, s:{fit:4,weight:4,compat:5,safety:3,price:4,growthheight:4,growthweight:3,growthlongevity:3}},
-  {name:"Britax Willow Brook S+",   price:380,   carrierLb:9.3, foot:28.1,  maxH:32, maxW:30, way:true,  todd:false, s:{fit:3,weight:3,compat:5,safety:4,price:2,growthheight:4,growthweight:3,growthlongevity:3}},
-  {name:"Graco SnugFit 35 DLX",     price:239.99,carrierLb:10,  foot:29,    maxH:32, maxW:35, way:false, todd:false, s:{fit:3,weight:3,compat:3,safety:4,price:4,growthheight:4,growthweight:5,growthlongevity:4}},
-  {name:"Chicco Fit2 (2-Year)",     price:329.99,carrierLb:12.3,foot:28,    maxH:35, maxW:35, way:false, todd:true,  s:{fit:2,weight:1,compat:3,safety:4,price:3,growthheight:5,growthweight:5,growthlongevity:5}},
-  {name:"UPPAbaby Mesa V3",         price:349.99,carrierLb:9.9, foot:25.8,  maxH:32, maxW:30, way:false, todd:false, s:{fit:3,weight:3,compat:3,safety:4,price:3,growthheight:4,growthweight:3,growthlongevity:3}},
-  {name:"Peg Perego 4-35 Nido",     price:359,   carrierLb:10,  foot:26,    maxH:32, maxW:30, way:false, todd:false, s:{fit:3,weight:3,compat:3,safety:5,price:3,growthheight:4,growthweight:3,growthlongevity:3}},
-  {name:"Clek Liing",               price:499.99,carrierLb:9,   foot:null,  maxH:32, maxW:30, way:false, todd:false, s:{fit:5,weight:4,compat:1,safety:5,price:2,growthheight:4,growthweight:3,growthlongevity:3}},
-  {name:"Cybex Cloud G Lux",        price:499.95,carrierLb:11,  foot:26.5,  maxH:32, maxW:35, way:false, todd:false, s:{fit:2,weight:2,compat:1,safety:5,price:2,growthheight:4,growthweight:5,growthlongevity:4}},
-  {name:"Doona Car Seat & Stroller",price:650,   carrierLb:16.5,foot:26,    maxH:32, maxW:30, way:false, todd:false, s:{fit:2,weight:1,compat:1,safety:4,price:1,growthheight:4,growthweight:3,growthlongevity:3}},
-];
-const PERSONA = { backSeat:28, budget:500, ownsWayfinder:true };
-const FOCAL = OPTS[0];
-
-// metric directions: -1 = lower is better, +1 = higher is better
-const METRICS = {
-  carrierLb:{label:"Carrier weight", unit:"lb", dir:-1},
-  foot:{label:"Rear-facing footprint", unit:"in", dir:-1, thr:PERSONA.backSeat, thrLabel:"your back seat 28″"},
-  maxH:{label:"Outgrow height", unit:"in", dir:+1},
-  maxW:{label:"Weight capacity", unit:"lb", dir:+1},
-  price:{label:"Best price", unit:"$", dir:-1, money:true, thr:PERSONA.budget, thrLabel:"budget $500"},
-};
-const range = (key)=>{const v=OPTS.map(o=>o[key]).filter(x=>x!=null);return [Math.min(...v),Math.max(...v)];};
-const pct = (v,[mn,mx])=> mx===mn?50:((v-mn)/(mx-mn))*100;
-const money = n=>"$"+(Math.round(n*100)/100).toLocaleString();
-const rank = (o,key,dir)=>{const v=OPTS.map(x=>x[key]).filter(x=>x!=null).sort((a,b)=>dir<0?a-b:b-a);return v.indexOf(o[key])+1;};
-const el = (h)=>{const t=document.createElement("template");t.innerHTML=h.trim();return t.content.firstChild;};
-
-// criterion -> underlying measurement (the evidence that de-opaques the score)
-const EVIDENCE = {
-  fit:        o=> o.foot==null ? {txt:"n/a", key:null} : {txt:o.foot+" in footprint", key:"foot"},
-  weight:     o=> ({txt:o.carrierLb+" lb carrier", key:"carrierLb"}),
-  compat:     o=> ({txt:(o.way?"fits BOB Wayfinder ✓":"no Wayfinder fit ✗"), key:null, good:o.way}),
-  safety:     o=> ({txt:"load-leg / anti-rebound tier", key:null}),
-  growthheight:o=> ({txt:"fits to "+o.maxH+" in tall", key:"maxH"}),
-  growthweight:o=> ({txt:"up to "+o.maxW+" lb", key:"maxW"}),
-  growthlongevity:o=> ({txt:(o.todd?"rear-faces into toddlerhood":"infant bucket only"), key:null, good:o.todd}),
-  price:      o=> ({txt:money(o.price), key:"price"}),
-};
-
-//====================== PART 1: CONCEPTS ======================
-const concepts = document.getElementById("concepts");
-
-function conceptShell(n,title,tag,why,stage,pros,cons){
-  const c = el(`<section class="concept">
-    <header>
-      <div><h3>${n}. ${title}</h3><p class="why">${why}</p></div>
-      <span class="tag">${tag}</span>
-    </header>
-    <div class="stage"></div>
-    <div class="note"></div>
-  </section>`);
-  c.querySelector(".stage").appendChild(stage);
-  const note = c.querySelector(".note");
-  pros.forEach(p=>note.appendChild(el(`<div class="pro">${p}</div>`)));
-  cons.forEach(p=>note.appendChild(el(`<div class="con">${p}</div>`)));
-  concepts.appendChild(c);
-}
-
-// ---- Concept 1: Anchored value rows (EnergyGuide strips) ----
-(function(){
-  const rows = ["fit","weight","compat","growthheight","growthlongevity","price"].map(cid=>{
-    const crit = CRIT.find(c=>c.id===cid);
-    const ev = EVIDENCE[cid](FOCAL);
-    const score = FOCAL.s[cid];
-    let strip = "";
-    if(ev.key){
-      const m = METRICS[ev.key]; const rg = range(ev.key);
-      const p = pct(FOCAL[ev.key], rg);
-      const goodLeft = m.dir<0;
-      const gz = goodLeft ? `left:0;width:${p}%` : `left:${p}%;right:0`;
-      const dots = OPTS.filter(o=>o[ev.key]!=null).map(o=>`<span class="dot" style="left:${pct(o[ev.key],rg)}%"></span>`).join("");
-      const thr = m.thr!=null ? `<span class="thr" style="left:${pct(m.thr,rg)}%"></span>` : "";
-      const thrLab = m.thr!=null ? `<span class="thrlab">▲ ${m.thrLabel}</span>` : "<span></span>";
-      strip = `<div class="track"><span class="goodzone" style="${gz}"></span>${dots}${thr}<span class="mark" style="left:${p}%"></span></div>
-        <div class="ends"><span>${m.money?money(rg[0]):rg[0]+m.unit} ·  best</span>${thrLab}<span>worst  · ${m.money?money(rg[1]):rg[1]+m.unit}</span></div>`;
-    } else {
-      strip = `<div class="ends" style="margin-top:6px"><span style="color:${ev.good===false?'var(--bad)':ev.good?'var(--good)':'var(--mut)'}">${ev.good===false?'does not meet your stroller':ev.good?'meets your stroller':'qualitative — see notes'}</span></div>`;
-    }
-    return `<div class="arow">
-      <div class="lab"><span class="crit">${crit.label} <span class="w">· weight ×${crit.w}</span></span>
-        <span class="val">${ev.txt}<small>rates ${score}/5</small></span></div>
-      ${strip}
-    </div>`;
-  }).join("");
-  const stage = el(`<div class="device"><div class="topbar"><i></i><i></i><i></i></div>
+  <div id="concepts"><section class="concept">
+    <header><div><h3>1. Anchored Value Rows</h3><p class="why">Each requirement leads with its literal measurement; a strip places that value on the cohort’s full range, tints the “good” end, plots the other 14 seats as ghost dots, and marks <b>your</b> threshold (back-seat 28″, budget $500). The 0–5 score survives only as a faint trailing tag.</p></div><span class="tag">recommended · EnergyGuide</span></header>
+    <div class="stage"><div class="device"><div class="topbar"><i></i><i></i><i></i></div>
     <div class="screen">
       <div class="prodhead"><div class="thumb">🍼</div>
         <div><div class="nm">Nuna Pipa Aire RX</div><div class="sub">Infant Car Seat · best price $650 at Nuna</div></div></div>
-      ${rows}
-    </div></div>`);
-  conceptShell(1,"Anchored Value Rows","recommended · EnergyGuide",
-    "Each requirement leads with its literal measurement; a strip places that value on the cohort’s full range, tints the “good” end, plots the other 14 seats as ghost dots, and marks <b>your</b> threshold (back-seat 28″, budget $500). The 0–5 score survives only as a faint trailing tag.",
-    stage,
-    ["The value evaluates itself — position on the range <i>is</i> the judgment, no trust required",
-     "Personal threshold line answers “compared to <b>my</b> car?” directly",
-     "Score is present for continuity but visibly subordinate"],
-    ["Taller per row — ~6 criteria is the comfortable ceiling on a phone",
-     "Qualitative criteria (safety) fall back to text — no strip to anchor them"]);
-})();
-
-// ---- Concept 2: Comparison matrix (Bloomberg / Wikipedia) ----
-(function(){
-  const cols = [
-    {k:"price", h:"Price", f:o=>money(o.price), dir:-1, num:o=>o.price},
-    {k:"carrierLb", h:"Carrier", f:o=>o.carrierLb+"♯", dir:-1, num:o=>o.carrierLb},
-    {k:"foot", h:"Footprint", f:o=>o.foot==null?"—":o.foot+"″", dir:-1, num:o=>o.foot, fail:o=>o.foot!=null&&o.foot>PERSONA.backSeat},
-    {k:"maxH", h:"Outgrow", f:o=>o.maxH+"″", dir:+1, num:o=>o.maxH},
-    {k:"maxW", h:"Max lb", f:o=>o.maxW, dir:+1, num:o=>o.maxW},
-    {k:"way", h:"Wayfinder", f:o=>o.way?"✓":"✗", dir:0, fail:o=>!o.way},
-  ];
-  // best value per numeric col for heat
-  const best = {};
-  cols.forEach(c=>{ if(c.dir){ const vals=OPTS.map(c.num).filter(x=>x!=null); best[c.k]= c.dir<0?Math.min(...vals):Math.max(...vals);}});
-  const head = `<tr><th class="optname">Option (15)</th>${cols.map(c=>`<th>${c.h}</th>`).join("")}<th>Match</th></tr>`;
-  const rows = OPTS.map(o=>{
-    const focus = o===FOCAL?"focus":"";
-    const cells = cols.map(c=>{
-      let cls="";
-      if(c.dir && c.num(o)===best[c.k]) cls="heat0";
-      if(c.fail && c.fail(o)) cls="fail";
-      return `<td class="${cls.includes('fail')?'fail':''}"><span class="cell ${cls.replace('fail','')}">${c.f(o)}</span></td>`;
-    }).join("");
-    const tot = CRIT.reduce((s,c)=>s+c.w*o.s[c.id],0);
-    return `<tr class="${focus}"><td class="optname">${o.name}</td>${cells}<td class="num" style="color:var(--acc);font-weight:600">${tot}</td></tr>`;
-  }).join("");
-  const stage = el(`<div class="mxwrap"><table class="mx"><thead>${head}</thead><tbody>${rows}</tbody></table></div>`);
-  conceptShell(2,"Comparison Matrix","small multiples",
-    "Tufte’s “tables beat graphics under ~20 numbers.” Every option is a row, every spec a real-unit column, best-in-column subtly heat-shaded, values that violate the persona’s limits flagged red. The focal product is just the highlighted row — detail and comparison in one eyespan.",
-    stage,
-    ["Highest data density; “compared to what” is the whole object",
-     "Best-in-column shading guides the eye with no derived score column",
-     "Reuses the data already in ModuleView — low build cost"],
-    ["15 rows × 8 cols is wide — needs horizontal scroll / sticky first column on mobile",
-     "Less “product page” feeling; it’s a spreadsheet, not a hero"]);
-})();
-
-// ---- Concept 3: Value tiles + distribution sparkline ----
-(function(){
-  const keys=["price","carrierLb","foot","maxH","maxW"];
-  const tiles = keys.map(k=>{
-    const m=METRICS[k]; const rg=range(k); const r=rank(FOCAL,k,m.dir); const n=OPTS.filter(o=>o[k]!=null).length;
-    // mini histogram (8 bins) with focal bin highlighted
-    const bins=new Array(8).fill(0); let myBin=0;
-    OPTS.forEach(o=>{if(o[k]==null)return;const b=Math.min(7,Math.floor(pct(o[k],rg)/12.5));bins[b]++;if(o===FOCAL)myBin=b;});
-    const mx=Math.max(...bins);
-    const spark = bins.map((b,i)=>`<span class="${i===myBin?'me':''}" style="height:${(b/mx)*100}%"></span>`).join("");
-    const top = r<=Math.ceil(n/3);
-    const val = m.money?money(FOCAL[k]):FOCAL[k];
-    return `<div class="tile">
-      <div class="t-lab">${m.label}</div>
-      <div class="t-val">${val}<small> ${m.money?'':m.unit}</small></div>
-      <div class="t-rank"><span class="${top?'badge-good':''}">#${r} of ${n}</span> ${m.dir<0?'lowest':'highest'} ${top?'— top third':''}</div>
-      <div class="spark">${spark}</div>
-    </div>`;
-  }).join("");
-  // compat + longevity as boolean tiles
-  const bt = `<div class="tile"><div class="t-lab">Your stroller</div>
-    <div class="t-val ${FOCAL.way?'badge-good':'badge-bad'}" style="font-size:16px">${FOCAL.way?'Fits BOB Wayfinder':'No fit'}</div>
-    <div class="t-rank">${OPTS.filter(o=>o.way).length} of 15 seats fit it</div></div>`;
-  const stage = el(`<div class="device"><div class="topbar"><i></i><i></i><i></i></div>
+      <div class="arow">
+      <div class="lab"><span class="crit">Vehicle rear-facing fit <span class="w">· weight ×5</span></span>
+        <span class="val">27.25 in footprint<small>rates 4/5</small></span></div>
+      <div class="track"><span class="goodzone" style="left:0;width:45.312499999999986%"></span><span class="dot" style="left:45.312499999999986%"></span><span class="dot" style="left:9.375000000000025%"></span><span class="dot" style="left:6.24999999999998%"></span><span class="dot" style="left:53.124999999999986%"></span><span class="dot" style="left:25.00000000000003%"></span><span class="dot" style="left:18.749999999999936%"></span><span class="dot" style="left:96.87499999999996%"></span><span class="dot" style="left:71.87500000000003%"></span><span class="dot" style="left:100%"></span><span class="dot" style="left:68.74999999999999%"></span><span class="dot" style="left:0%"></span><span class="dot" style="left:6.24999999999998%"></span><span class="dot" style="left:21.874999999999982%"></span><span class="dot" style="left:6.24999999999998%"></span><span class="thr" style="left:68.74999999999999%"></span><span class="mark" style="left:45.312499999999986%"></span></div>
+        <div class="ends"><span>25.8in ·  best</span><span class="thrlab">▲ your back seat 28″</span><span>worst  · 29in</span></div>
+    </div><div class="arow">
+      <div class="lab"><span class="crit">Carrier weight <span class="w">· weight ×4</span></span>
+        <span class="val">6.2 lb carrier<small>rates 5/5</small></span></div>
+      <div class="track"><span class="goodzone" style="left:0;width:0%"></span><span class="dot" style="left:0%"></span><span class="dot" style="left:27.184466019417474%"></span><span class="dot" style="left:9.70873786407767%"></span><span class="dot" style="left:36.89320388349514%"></span><span class="dot" style="left:45.631067961165044%"></span><span class="dot" style="left:27.184466019417474%"></span><span class="dot" style="left:27.184466019417474%"></span><span class="dot" style="left:30.09708737864078%"></span><span class="dot" style="left:36.89320388349514%"></span><span class="dot" style="left:59.22330097087378%"></span><span class="dot" style="left:35.92233009708738%"></span><span class="dot" style="left:36.89320388349514%"></span><span class="dot" style="left:27.184466019417474%"></span><span class="dot" style="left:46.60194174757281%"></span><span class="dot" style="left:100%"></span><span class="mark" style="left:0%"></span></div>
+        <div class="ends"><span>6.2lb ·  best</span><span></span><span>worst  · 16.5lb</span></div>
+    </div><div class="arow">
+      <div class="lab"><span class="crit">Stroller compatibility <span class="w">· weight ×3</span></span>
+        <span class="val">fits BOB Wayfinder ✓<small>rates 5/5</small></span></div>
+      <div class="ends" style="margin-top:6px"><span style="color:var(--good)">meets your stroller</span></div>
+    </div><div class="arow">
+      <div class="lab"><span class="crit">Outgrow-by-height (headroom) <span class="w">· weight ×4</span></span>
+        <span class="val">fits to 30 in tall<small>rates 2/5</small></span></div>
+      <div class="track"><span class="goodzone" style="left:0%;right:0"></span><span class="dot" style="left:0%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:0%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:100%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="mark" style="left:0%"></span></div>
+        <div class="ends"><span>30in ·  best</span><span></span><span>worst  · 35in</span></div>
+    </div><div class="arow">
+      <div class="lab"><span class="crit">Infant→toddler longevity <span class="w">· weight ×3</span></span>
+        <span class="val">infant bucket only<small>rates 2/5</small></span></div>
+      <div class="ends" style="margin-top:6px"><span style="color:var(--bad)">does not meet your stroller</span></div>
+    </div><div class="arow">
+      <div class="lab"><span class="crit">Price <span class="w">· weight ×1</span></span>
+        <span class="val">$650<small>rates 1/5</small></span></div>
+      <div class="track"><span class="goodzone" style="left:0;width:100%"></span><span class="dot" style="left:100%"></span><span class="dot" style="left:70.5790082547401%"></span><span class="dot" style="left:0%"></span><span class="dot" style="left:17.646712809552753%"></span><span class="dot" style="left:17.64867355542048%"></span><span class="dot" style="left:21.57016529087665%"></span><span class="dot" style="left:19.413344836375757%"></span><span class="dot" style="left:47.059861571341735%"></span><span class="dot" style="left:19.607458677280835%"></span><span class="dot" style="left:37.25417148683359%"></span><span class="dot" style="left:41.17566322228976%"></span><span class="dot" style="left:42.94229524911276%"></span><span class="dot" style="left:70.58685123821101%"></span><span class="dot" style="left:70.5790082547401%"></span><span class="dot" style="left:100%"></span><span class="thr" style="left:70.58881198407875%"></span><span class="mark" style="left:100%"></span></div>
+        <div class="ends"><span>$139.99 ·  best</span><span class="thrlab">▲ budget $500</span><span>worst  · $650</span></div>
+    </div>
+    </div></div></div>
+    <div class="note"><div class="pro">The value evaluates itself — position on the range <i>is</i> the judgment, no trust required</div><div class="pro">Personal threshold line answers “compared to <b>my</b> car?” directly</div><div class="pro">Score is present for continuity but visibly subordinate</div><div class="con">Taller per row — ~6 criteria is the comfortable ceiling on a phone</div><div class="con">Qualitative criteria (safety) fall back to text — no strip to anchor them</div></div>
+  </section><section class="concept">
+    <header><div><h3>2. Comparison Matrix</h3><p class="why">Tufte’s “tables beat graphics under ~20 numbers.” Every option is a row, every spec a real-unit column, best-in-column subtly heat-shaded, values that violate the persona’s limits flagged red. The focal product is just the highlighted row — detail and comparison in one eyespan.</p></div><span class="tag">small multiples</span></header>
+    <div class="stage"><div class="mxwrap"><table class="mx"><thead><tr><th class="optname">Option (15)</th><th>Price</th><th>Carrier</th><th>Footprint</th><th>Outgrow</th><th>Max lb</th><th>Wayfinder</th><th>Match</th></tr></thead><tbody><tr class="focus"><td class="optname">Nuna Pipa Aire RX</td><td class=""><span class="cell ">$650</span></td><td class=""><span class="cell heat0">6.2♯</span></td><td class=""><span class="cell ">27.25″</span></td><td class=""><span class="cell ">30″</span></td><td class=""><span class="cell ">30</span></td><td class=""><span class="cell ">✓</span></td><td class="num" style="color:var(--acc);font-weight:600">86</td></tr><tr class=""><td class="optname">Cybex Aton G Swivel</td><td class=""><span class="cell ">$499.95</span></td><td class=""><span class="cell ">9♯</span></td><td class=""><span class="cell ">26.1″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell heat0">35</span></td><td class=""><span class="cell ">✓</span></td><td class="num" style="color:var(--acc);font-weight:600">106</td></tr><tr class=""><td class="optname">Graco SnugRide 35 Lite LX</td><td class=""><span class="cell heat0">$139.99</span></td><td class=""><span class="cell ">7.2♯</span></td><td class=""><span class="cell ">26″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell heat0">35</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">98</td></tr><tr class=""><td class="optname">Chicco KeyFit 35</td><td class=""><span class="cell ">$229.99</span></td><td class=""><span class="cell ">10♯</span></td><td class=""><span class="cell ">27.5″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell heat0">35</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">96</td></tr><tr class=""><td class="optname">Britax B-Safe Gen2</td><td class=""><span class="cell ">$230</span></td><td class=""><span class="cell ">10.9♯</span></td><td class=""><span class="cell ">26.6″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell heat0">35</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">82</td></tr><tr class=""><td class="optname">Diono LiteClik 30</td><td class=""><span class="cell ">$250</span></td><td class=""><span class="cell ">9♯</span></td><td class=""><span class="cell ">26.4″</span></td><td class=""><span class="cell ">30″</span></td><td class=""><span class="cell ">30</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">77</td></tr><tr class=""><td class="optname">Maxi-Cosi Mico Luxe</td><td class=""><span class="cell ">$239</span></td><td class=""><span class="cell ">9♯</span></td><td class="fail"><span class="cell ">28.9″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell ">30</span></td><td class=""><span class="cell ">✓</span></td><td class="num" style="color:var(--acc);font-weight:600">92</td></tr><tr class=""><td class="optname">Britax Willow Brook S+</td><td class=""><span class="cell ">$380</span></td><td class=""><span class="cell ">9.3♯</span></td><td class="fail"><span class="cell ">28.1″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell ">30</span></td><td class=""><span class="cell ">✓</span></td><td class="num" style="color:var(--acc);font-weight:600">83</td></tr><tr class=""><td class="optname">Graco SnugFit 35 DLX</td><td class=""><span class="cell ">$239.99</span></td><td class=""><span class="cell ">10♯</span></td><td class="fail"><span class="cell ">29″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell heat0">35</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">86</td></tr><tr class=""><td class="optname">Chicco Fit2 (2-Year)</td><td class=""><span class="cell ">$329.99</span></td><td class=""><span class="cell ">12.3♯</span></td><td class=""><span class="cell ">28″</span></td><td class=""><span class="cell heat0">35″</span></td><td class=""><span class="cell heat0">35</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">79</td></tr><tr class=""><td class="optname">UPPAbaby Mesa V3</td><td class=""><span class="cell ">$349.99</span></td><td class=""><span class="cell ">9.9♯</span></td><td class=""><span class="cell heat0">25.8″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell ">30</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">78</td></tr><tr class=""><td class="optname">Peg Perego 4-35 Nido</td><td class=""><span class="cell ">$359</span></td><td class=""><span class="cell ">10♯</span></td><td class=""><span class="cell ">26″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell ">30</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">80</td></tr><tr class=""><td class="optname">Clek Liing</td><td class=""><span class="cell ">$499.99</span></td><td class=""><span class="cell ">9♯</span></td><td class=""><span class="cell ">—</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell ">30</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">87</td></tr><tr class=""><td class="optname">Cybex Cloud G Lux</td><td class=""><span class="cell ">$499.95</span></td><td class=""><span class="cell ">11♯</span></td><td class=""><span class="cell ">26.5″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell heat0">35</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">71</td></tr><tr class=""><td class="optname">Doona Car Seat & Stroller</td><td class=""><span class="cell ">$650</span></td><td class=""><span class="cell ">16.5♯</span></td><td class=""><span class="cell ">26″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell ">30</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">57</td></tr></tbody></table></div></div>
+    <div class="note"><div class="pro">Highest data density; “compared to what” is the whole object</div><div class="pro">Best-in-column shading guides the eye with no derived score column</div><div class="pro">Reuses the data already in ModuleView — low build cost</div><div class="con">15 rows × 8 cols is wide — needs horizontal scroll / sticky first column on mobile</div><div class="con">Less “product page” feeling; it’s a spreadsheet, not a hero</div></div>
+  </section><section class="concept">
+    <header><div><h3>3. Value Tiles + Distribution Spark</h3><p class="why">A scannable grid of tiles. Each is a big real value, a rank within the cohort (“#2 of 15 lightest”), and a word-sized histogram showing where this product sits in the field. Visual, mobile-friendly, and the score disappears entirely.</p></div><span class="tag">RTINGS / dashboard</span></header>
+    <div class="stage"><div class="device"><div class="topbar"><i></i><i></i><i></i></div>
     <div class="screen">
       <div class="prodhead"><div class="thumb">🍼</div><div><div class="nm">Nuna Pipa Aire RX</div><div class="sub">Infant Car Seat</div></div></div>
-      <div class="tiles">${tiles}${bt}</div>
-    </div></div>`);
-  conceptShell(3,"Value Tiles + Distribution Spark","RTINGS / dashboard",
-    "A scannable grid of tiles. Each is a big real value, a rank within the cohort (“#2 of 15 lightest”), and a word-sized histogram showing where this product sits in the field. Visual, mobile-friendly, and the score disappears entirely.",
-    stage,
-    ["Very glanceable; the histogram makes “where in the pack” instant",
-     "Card grid maps cleanly onto the existing optionFacts() tiles",
-     "No score shown at all — purest break from the opaque number"],
-    ["Rank + 8-bin spark is approximate — hides exact gaps between rivals",
-     "Per-tile context is cohort-only; doesn’t encode the user’s threshold as crisply as #1/#4"]);
-})();
-
-// ---- Concept 4: Fit ledger (Nutrition %DV / pass-fail vs your life) ----
-(function(){
-  const spare = (PERSONA.backSeat - FOCAL.foot).toFixed(2);
-  const over = (FOCAL.price - PERSONA.budget);
-  const rows = [
-    {need:`Back seat fits ≤ <b>28 in</b>`, val:`${FOCAL.foot} in footprint`, ok:FOCAL.foot<=PERSONA.backSeat, detail:`${spare} in to spare`},
-    {need:`Within budget <b>$500</b>`, val:`${money(FOCAL.price)}`, ok:FOCAL.price<=PERSONA.budget, detail: over>0?`over by ${money(over)}`:`under by ${money(-over)}`},
-    {need:`Fits your <b>BOB Wayfinder</b>`, val:`${FOCAL.way?'compatible':'not compatible'}`, ok:FOCAL.way, detail: FOCAL.way?'click-in, no adapter drama':'needs adapter / no fit'},
-    {need:`Light enough to carry`, val:`${FOCAL.carrierLb} lb`, ok:FOCAL.carrierLb<=8, detail:`lightest of all 15 seats`},
-    {need:`Lasts past infancy`, val:`${FOCAL.todd?'to toddler':'infant only'}`, ok:FOCAL.todd, detail: FOCAL.todd?'rear-faces to ~2 yr':`outgrown by ${FOCAL.maxH}″ height`},
-  ];
-  const passes = rows.filter(r=>r.ok).length;
-  const body = rows.map(r=>`<tr>
-    <td class="need">${r.need}</td>
-    <td class="arrow">→</td>
-    <td class="res ${r.ok?'pass':'fail'}">${r.val} ${r.ok?'✓':'✗'}<div class="detail">${r.detail}</div></td>
-  </tr>`).join("");
-  const stage = el(`<div class="device"><div class="topbar"><i></i><i></i><i></i></div>
+      <div class="tiles"><div class="tile">
+      <div class="t-lab">Best price</div>
+      <div class="t-val">$650<small> </small></div>
+      <div class="t-rank"><span class="">#14 of 15</span> lowest </div>
+      <div class="spark"><span class="" style="height:20%"></span><span class="" style="height:100%"></span><span class="" style="height:20%"></span><span class="" style="height:60%"></span><span class="" style="height:0%"></span><span class="" style="height:60%"></span><span class="" style="height:0%"></span><span class="me" style="height:40%"></span></div>
+    </div><div class="tile">
+      <div class="t-lab">Carrier weight</div>
+      <div class="t-val">6.2<small> lb</small></div>
+      <div class="t-rank"><span class="badge-good">#1 of 15</span> lowest — top third</div>
+      <div class="spark"><span class="me" style="height:22.22222222222222%"></span><span class="" style="height:0%"></span><span class="" style="height:100%"></span><span class="" style="height:22.22222222222222%"></span><span class="" style="height:11.11111111111111%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:11.11111111111111%"></span></div>
+    </div><div class="tile">
+      <div class="t-lab">Rear-facing footprint</div>
+      <div class="t-val">27.25<small> in</small></div>
+      <div class="t-rank"><span class="">#9 of 14</span> lowest </div>
+      <div class="spark"><span class="" style="height:100%"></span><span class="" style="height:40%"></span><span class="" style="height:20%"></span><span class="me" style="height:20%"></span><span class="" style="height:20%"></span><span class="" style="height:40%"></span><span class="" style="height:0%"></span><span class="" style="height:40%"></span></div>
+    </div><div class="tile">
+      <div class="t-lab">Outgrow height</div>
+      <div class="t-val">30<small> in</small></div>
+      <div class="t-rank"><span class="">#14 of 15</span> highest </div>
+      <div class="spark"><span class="me" style="height:16.666666666666664%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:100%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:8.333333333333332%"></span></div>
+    </div><div class="tile">
+      <div class="t-lab">Weight capacity</div>
+      <div class="t-val">30<small> lb</small></div>
+      <div class="t-rank"><span class="">#8 of 15</span> highest </div>
+      <div class="spark"><span class="me" style="height:100%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:87.5%"></span></div>
+    </div><div class="tile"><div class="t-lab">Your stroller</div>
+    <div class="t-val badge-good" style="font-size:16px">Fits BOB Wayfinder</div>
+    <div class="t-rank">4 of 15 seats fit it</div></div></div>
+    </div></div></div>
+    <div class="note"><div class="pro">Very glanceable; the histogram makes “where in the pack” instant</div><div class="pro">Card grid maps cleanly onto the existing optionFacts() tiles</div><div class="pro">No score shown at all — purest break from the opaque number</div><div class="con">Rank + 8-bin spark is approximate — hides exact gaps between rivals</div><div class="con">Per-tile context is cohort-only; doesn’t encode the user’s threshold as crisply as #1/#4</div></div>
+  </section><section class="concept">
+    <header><div><h3>4. Fit Ledger — “vs. your life”</h3><p class="why">Drops the cohort entirely and anchors every value to the parent’s own constraints, like a Nutrition label’s %DV column. Each row is <i>your need → this product’s actual value → pass/fail</i>, with the real margin (“0.75 in to spare”, “over by $150”). Zero abstract scores.</p></div><span class="tag">Nutrition %DV</span></header>
+    <div class="stage"><div class="device"><div class="topbar"><i></i><i></i><i></i></div>
     <div class="screen">
       <div class="prodhead"><div class="thumb">🍼</div><div><div class="nm">Nuna Pipa Aire RX</div><div class="sub">Does it fit <b>your</b> life?</div></div></div>
-      <table class="ledger"><tbody>${body}</tbody></table>
-      <div class="verdict mix"><b>Meets ${passes} of 5 of your must-haves.</b> The lightest, most stroller-friendly seat that still fits the Tacoma — but it breaks your budget by $150 and is an infant-only bucket.</div>
-    </div></div>`);
-  conceptShell(4,"Fit Ledger — “vs. your life”","Nutrition %DV",
-    "Drops the cohort entirely and anchors every value to the parent’s own constraints, like a Nutrition label’s %DV column. Each row is <i>your need → this product’s actual value → pass/fail</i>, with the real margin (“0.75 in to spare”, “over by $150”). Zero abstract scores.",
-    stage,
-    ["Most decision-relevant framing — speaks the user’s constraints, not ours",
-     "Pass/fail falls straight out of real numbers; nothing to trust",
-     "Reuses Preferences (backSeatLengthIn, budget, ownedStroller) already in the model"],
-    ["Needs onboarding answers to shine; degrades to generic thresholds without them",
-     "Loses the field view — you see fit, not how it ranks vs rivals"]);
-})();
-
-// ---- Concept 5: Dot-plot strips (Tufte dotplot) ----
-(function(){
-  const keys=["price","carrierLb","foot","maxH"];
-  const strips = keys.map(k=>{
-    const m=METRICS[k]; const rg=range(k);
-    const pts = OPTS.filter(o=>o[k]!=null).map(o=>`<span class="pt ${o===FOCAL?'me':''}" style="left:${pct(o[k],rg)}%"></span>`).join("");
-    const thr = m.thr!=null?`<span class="thr" style="left:${pct(m.thr,rg)}%"></span>`:"";
-    const meVal = m.money?money(FOCAL[k]):FOCAL[k]+m.unit;
-    return `<div class="dp">
-      <div class="dphead"><span class="crit">${m.label} <span style="color:var(--mut)">· ${m.dir<0?'lower better':'higher better'}</span></span>
-        <span class="meval">${meVal}</span></div>
-      <div class="dpt"><span class="melabel" style="left:${pct(FOCAL[k],rg)}%">this seat</span>${pts}${thr}</div>
-      <div class="dpends"><span>${m.money?money(rg[0]):rg[0]+m.unit}</span>${m.thr!=null?`<span style="color:var(--warn)">▲ ${m.thrLabel}</span>`:'<span></span>'}<span>${m.money?money(rg[1]):rg[1]+m.unit}</span></div>
-    </div>`;
-  }).join("");
-  const stage = el(`<div class="device" style="max-width:600px"><div class="topbar"><i></i><i></i><i></i></div>
+      <table class="ledger"><tbody><tr>
+    <td class="need">Back seat fits ≤ <b>28 in</b></td>
+    <td class="arrow">→</td>
+    <td class="res pass">27.25 in footprint ✓<div class="detail">0.75 in to spare</div></td>
+  </tr><tr>
+    <td class="need">Within budget <b>$500</b></td>
+    <td class="arrow">→</td>
+    <td class="res fail">$650 ✗<div class="detail">over by $150</div></td>
+  </tr><tr>
+    <td class="need">Fits your <b>BOB Wayfinder</b></td>
+    <td class="arrow">→</td>
+    <td class="res pass">compatible ✓<div class="detail">click-in, no adapter drama</div></td>
+  </tr><tr>
+    <td class="need">Light enough to carry</td>
+    <td class="arrow">→</td>
+    <td class="res pass">6.2 lb ✓<div class="detail">lightest of all 15 seats</div></td>
+  </tr><tr>
+    <td class="need">Lasts past infancy</td>
+    <td class="arrow">→</td>
+    <td class="res fail">infant only ✗<div class="detail">outgrown by 30″ height</div></td>
+  </tr></tbody></table>
+      <div class="verdict mix"><b>Meets 3 of 5 of your must-haves.</b> The lightest, most stroller-friendly seat that still fits the Tacoma — but it breaks your budget by $150 and is an infant-only bucket.</div>
+    </div></div></div>
+    <div class="note"><div class="pro">Most decision-relevant framing — speaks the user’s constraints, not ours</div><div class="pro">Pass/fail falls straight out of real numbers; nothing to trust</div><div class="pro">Reuses Preferences (backSeatLengthIn, budget, ownedStroller) already in the model</div><div class="con">Needs onboarding answers to shine; degrades to generic thresholds without them</div><div class="con">Loses the field view — you see fit, not how it ranks vs rivals</div></div>
+  </section><section class="concept">
+    <header><div><h3>5. Per-Criterion Dot-Plots</h3><p class="why">The purest Tufte move: one horizontal strip per spec, all 15 seats plotted as dots by their true value, this product highlighted and labelled, the persona’s threshold marked. Reading the focal dot down the stack is the product detail — and you see the full distribution and clustering for free.</p></div><span class="tag">Tufte dotplot</span></header>
+    <div class="stage"><div class="device" style="max-width:600px"><div class="topbar"><i></i><i></i><i></i></div>
     <div class="screen">
       <div class="prodhead"><div class="thumb">🍼</div><div><div class="nm">Nuna Pipa Aire RX</div><div class="sub">Where it lands in the field of 15</div></div></div>
-      ${strips}
-    </div></div>`);
-  conceptShell(5,"Per-Criterion Dot-Plots","Tufte dotplot",
-    "The purest Tufte move: one horizontal strip per spec, all 15 seats plotted as dots by their true value, this product highlighted and labelled, the persona’s threshold marked. Reading the focal dot down the stack is the product detail — and you see the full distribution and clustering for free.",
-    stage,
-    ["Shows the entire field’s shape — gaps, clusters, outliers — not just a rank",
-     "Exact positions; no binning, no lie factor",
-     "Threshold line ties the distribution to the user’s reality"],
-    ["Dots collide when seats share a value (needs jitter / stacking)",
-     "More chart than most parents expect on a product page — power-user lean"]);
-})();
-
-// ---- Concept 6: Honest decomposed score bar ----
-(function(){
-  const palette=["#4f46e5","#6366f1","#0ea5e9","#14b8a6","#10b981","#84cc16","#f59e0b","#ef4444"];
-  function bar(o){
-    const segs = CRIT.map((c,i)=>{
-      const contrib=c.w*o.s[c.id]; const ev=EVIDENCE[c.id](o);
-      return {w:contrib, c:palette[i], lab:c.label, val:ev.txt, sc:o.s[c.id], wt:c.w};
-    });
-    const tot=segs.reduce((s,x)=>s+x.w,0); const max=5*CRIT.reduce((s,c)=>s+c.w,0);
-    const inner = segs.map(s=>`<span class="seg" title="${s.lab}: ${s.val} → ${s.sc}/5 × weight ${s.wt} = ${s.w} pts" style="width:${(s.w/max)*100}%;background:${s.c}">${s.w>=8?s.w:''}</span>`).join("");
-    return `<div class="stackrow"><div class="nm"><span>${o.name}</span><span class="tot">${tot} / ${max} pts</span></div>
-      <div class="stack">${inner}</div></div>`;
-  }
-  const legend = CRIT.map((c,i)=>`<span><i style="background:${palette[i]}"></i>${c.label} ×${c.w}</span>`).join("");
-  const alt = OPTS[1]; // Cybex Aton G — the strong all-rounder
-  const stage = el(`<div class="device" style="max-width:600px"><div class="topbar"><i></i><i></i><i></i></div>
+      <div class="dp">
+      <div class="dphead"><span class="crit">Best price <span style="color:var(--mut)">· lower better</span></span>
+        <span class="meval">$650</span></div>
+      <div class="dpt"><span class="melabel" style="left:100%">this seat</span><span class="pt me" style="left:100%"></span><span class="pt " style="left:70.5790082547401%"></span><span class="pt " style="left:0%"></span><span class="pt " style="left:17.646712809552753%"></span><span class="pt " style="left:17.64867355542048%"></span><span class="pt " style="left:21.57016529087665%"></span><span class="pt " style="left:19.413344836375757%"></span><span class="pt " style="left:47.059861571341735%"></span><span class="pt " style="left:19.607458677280835%"></span><span class="pt " style="left:37.25417148683359%"></span><span class="pt " style="left:41.17566322228976%"></span><span class="pt " style="left:42.94229524911276%"></span><span class="pt " style="left:70.58685123821101%"></span><span class="pt " style="left:70.5790082547401%"></span><span class="pt " style="left:100%"></span><span class="thr" style="left:70.58881198407875%"></span></div>
+      <div class="dpends"><span>$139.99</span><span style="color:var(--warn)">▲ budget $500</span><span>$650</span></div>
+    </div><div class="dp">
+      <div class="dphead"><span class="crit">Carrier weight <span style="color:var(--mut)">· lower better</span></span>
+        <span class="meval">6.2lb</span></div>
+      <div class="dpt"><span class="melabel" style="left:0%">this seat</span><span class="pt me" style="left:0%"></span><span class="pt " style="left:27.184466019417474%"></span><span class="pt " style="left:9.70873786407767%"></span><span class="pt " style="left:36.89320388349514%"></span><span class="pt " style="left:45.631067961165044%"></span><span class="pt " style="left:27.184466019417474%"></span><span class="pt " style="left:27.184466019417474%"></span><span class="pt " style="left:30.09708737864078%"></span><span class="pt " style="left:36.89320388349514%"></span><span class="pt " style="left:59.22330097087378%"></span><span class="pt " style="left:35.92233009708738%"></span><span class="pt " style="left:36.89320388349514%"></span><span class="pt " style="left:27.184466019417474%"></span><span class="pt " style="left:46.60194174757281%"></span><span class="pt " style="left:100%"></span></div>
+      <div class="dpends"><span>6.2lb</span><span></span><span>16.5lb</span></div>
+    </div><div class="dp">
+      <div class="dphead"><span class="crit">Rear-facing footprint <span style="color:var(--mut)">· lower better</span></span>
+        <span class="meval">27.25in</span></div>
+      <div class="dpt"><span class="melabel" style="left:45.312499999999986%">this seat</span><span class="pt me" style="left:45.312499999999986%"></span><span class="pt " style="left:9.375000000000025%"></span><span class="pt " style="left:6.24999999999998%"></span><span class="pt " style="left:53.124999999999986%"></span><span class="pt " style="left:25.00000000000003%"></span><span class="pt " style="left:18.749999999999936%"></span><span class="pt " style="left:96.87499999999996%"></span><span class="pt " style="left:71.87500000000003%"></span><span class="pt " style="left:100%"></span><span class="pt " style="left:68.74999999999999%"></span><span class="pt " style="left:0%"></span><span class="pt " style="left:6.24999999999998%"></span><span class="pt " style="left:21.874999999999982%"></span><span class="pt " style="left:6.24999999999998%"></span><span class="thr" style="left:68.74999999999999%"></span></div>
+      <div class="dpends"><span>25.8in</span><span style="color:var(--warn)">▲ your back seat 28″</span><span>29in</span></div>
+    </div><div class="dp">
+      <div class="dphead"><span class="crit">Outgrow height <span style="color:var(--mut)">· higher better</span></span>
+        <span class="meval">30in</span></div>
+      <div class="dpt"><span class="melabel" style="left:0%">this seat</span><span class="pt me" style="left:0%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:0%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:100%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span></div>
+      <div class="dpends"><span>30in</span><span></span><span>35in</span></div>
+    </div>
+    </div></div></div>
+    <div class="note"><div class="pro">Shows the entire field’s shape — gaps, clusters, outliers — not just a rank</div><div class="pro">Exact positions; no binning, no lie factor</div><div class="pro">Threshold line ties the distribution to the user’s reality</div><div class="con">Dots collide when seats share a value (needs jitter / stacking)</div><div class="con">More chart than most parents expect on a product page — power-user lean</div></div>
+  </section><section class="concept">
+    <header><div><h3>6. Decomposed Contribution Bar</h3><p class="why">Keeps a single weighted total — because the score does encode the creator’s <i>preference weighting</i> that raw specs can’t — but never as a bare number. Each segment is one criterion’s weight×score contribution, hover reveals the underlying value, and stacking two products compares <i>where</i> the points come from, not just the totals.</p></div><span class="tag">honest rollup · micro+macro</span></header>
+    <div class="stage"><div class="device" style="max-width:600px"><div class="topbar"><i></i><i></i><i></i></div>
     <div class="screen">
       <p style="font-size:12px;color:var(--ink2);margin:0 0 6px">The one place a score is allowed — and it’s fully decomposed. Hover any segment for the value behind it.</p>
-      ${bar(FOCAL)}
-      ${bar(alt)}
-      <div class="legend">${legend}</div>
-    </div></div>`);
-  conceptShell(6,"Decomposed Contribution Bar","honest rollup · micro+macro",
-    "Keeps a single weighted total — because the score does encode the creator’s <i>preference weighting</i> that raw specs can’t — but never as a bare number. Each segment is one criterion’s weight×score contribution, hover reveals the underlying value, and stacking two products compares <i>where</i> the points come from, not just the totals.",
-    stage,
-    ["Macro total and micro breakdown in one object — an auditable score, not a trusted one",
-     "Stacked side-by-side shows <i>why</i> Nuna≈Cybex while having opposite strengths",
-     "Drop-in companion to any other concept; doesn’t replace the values"],
-    ["Still leans on the 0–5 scores under the hood — inherits their subjectivity",
-     "Segment widths mix weight and score; hard to read an exact spec off the bar alone"]);
-})();
+      <div class="stackrow"><div class="nm"><span>Nuna Pipa Aire RX</span><span class="tot">86 / 120 pts</span></div>
+      <div class="stack"><span class="seg" title="Vehicle rear-facing fit: 27.25 in footprint → 4/5 × weight 5 = 20 pts" style="width:16.666666666666664%;background:#4f46e5">20</span><span class="seg" title="Carrier weight: 6.2 lb carrier → 5/5 × weight 4 = 20 pts" style="width:16.666666666666664%;background:#6366f1">20</span><span class="seg" title="Stroller compatibility: fits BOB Wayfinder ✓ → 5/5 × weight 3 = 15 pts" style="width:12.5%;background:#0ea5e9">15</span><span class="seg" title="Safety extras: load-leg / anti-rebound tier → 5/5 × weight 2 = 10 pts" style="width:8.333333333333332%;background:#14b8a6">10</span><span class="seg" title="Outgrow-by-height (headroom): fits to 30 in tall → 2/5 × weight 4 = 8 pts" style="width:6.666666666666667%;background:#10b981">8</span><span class="seg" title="Weight capacity: up to 30 lb → 3/5 × weight 2 = 6 pts" style="width:5%;background:#84cc16"></span><span class="seg" title="Infant→toddler longevity: infant bucket only → 2/5 × weight 3 = 6 pts" style="width:5%;background:#f59e0b"></span><span class="seg" title="Price: $650 → 1/5 × weight 1 = 1 pts" style="width:0.8333333333333334%;background:#ef4444"></span></div></div>
+      <div class="stackrow"><div class="nm"><span>Cybex Aton G Swivel</span><span class="tot">106 / 120 pts</span></div>
+      <div class="stack"><span class="seg" title="Vehicle rear-facing fit: 26.1 in footprint → 5/5 × weight 5 = 25 pts" style="width:20.833333333333336%;background:#4f46e5">25</span><span class="seg" title="Carrier weight: 9 lb carrier → 4/5 × weight 4 = 16 pts" style="width:13.333333333333334%;background:#6366f1">16</span><span class="seg" title="Stroller compatibility: fits BOB Wayfinder ✓ → 5/5 × weight 3 = 15 pts" style="width:12.5%;background:#0ea5e9">15</span><span class="seg" title="Safety extras: load-leg / anti-rebound tier → 5/5 × weight 2 = 10 pts" style="width:8.333333333333332%;background:#14b8a6">10</span><span class="seg" title="Outgrow-by-height (headroom): fits to 32 in tall → 4/5 × weight 4 = 16 pts" style="width:13.333333333333334%;background:#10b981">16</span><span class="seg" title="Weight capacity: up to 35 lb → 5/5 × weight 2 = 10 pts" style="width:8.333333333333332%;background:#84cc16">10</span><span class="seg" title="Infant→toddler longevity: infant bucket only → 4/5 × weight 3 = 12 pts" style="width:10%;background:#f59e0b">12</span><span class="seg" title="Price: $499.95 → 2/5 × weight 1 = 2 pts" style="width:1.6666666666666667%;background:#ef4444"></span></div></div>
+      <div class="legend"><span><i style="background:#4f46e5"></i>Vehicle rear-facing fit ×5</span><span><i style="background:#6366f1"></i>Carrier weight ×4</span><span><i style="background:#0ea5e9"></i>Stroller compatibility ×3</span><span><i style="background:#14b8a6"></i>Safety extras ×2</span><span><i style="background:#10b981"></i>Outgrow-by-height (headroom) ×4</span><span><i style="background:#84cc16"></i>Weight capacity ×2</span><span><i style="background:#f59e0b"></i>Infant→toddler longevity ×3</span><span><i style="background:#ef4444"></i>Price ×1</span></div>
+    </div></div></div>
+    <div class="note"><div class="pro">Macro total and micro breakdown in one object — an auditable score, not a trusted one</div><div class="pro">Stacked side-by-side shows <i>why</i> Nuna≈Cybex while having opposite strengths</div><div class="pro">Drop-in companion to any other concept; doesn’t replace the values</div><div class="con">Still leans on the 0–5 scores under the hood — inherits their subjectivity</div><div class="con">Segment widths mix weight and score; hard to read an exact spec off the bar alone</div></div>
+  </section></div>
 
-//====================== PART 2: ANALOGIES ======================
-const an = document.getElementById("analogies");
-function analogy(demo,title,from,desc,steal){
-  an.appendChild(el(`<div class="analogy"><div class="demo">${demo}</div>
-    <div class="text"><div class="from">${from}</div><h4>${title}</h4><p>${desc}</p><div class="steal"><b>Steal:</b> ${steal}</div></div></div>`));
-}
-
-// A. EnergyGuide
-(function(){
-  const rg=range("carrierLb"); const p=pct(FOCAL.carrierLb,rg);
-  analogy(`<div class="eg"><div class="egtop">Carrier weight · this model</div><div class="egbig">${FOCAL.carrierLb} lb</div>
-    <div class="egbar"><span class="you" style="left:${p}%"></span><span class="youlab" style="left:${p}%">this seat</span></div>
-    <div class="egends"><span>${rg[0]} lb · lightest</span><span>${rg[1]} lb · heaviest</span></div>
-    <div style="font-size:11px;color:var(--ink2);margin-top:6px">Compared with all 15 infant seats</div></div>`,
-    "Federal EnergyGuide / EPA fuel label","Appliances · vehicles",
-    "A regulated solution to the exact problem: a single product’s value is meaningless alone, so the label always plots it on the range of <i>all comparable products</i>. The number plus its position is the rating.",
-    "the range strip in Concept&nbsp;1 — value-on-a-spectrum is the canonical de-opaquing device.");
-})();
-
-// B. Nutrition %DV
-(function(){
-  analogy(`<div class="nf"><div class="nft">Fits Your Car</div>
+  <hr class="sec" />
+  <div class="sectit">Part 2 — Five analogies worth stealing from</div>
+  <div id="analogies"><div class="analogy"><div class="demo"><div class="eg"><div class="egtop">Carrier weight · this model</div><div class="egbig">6.2 lb</div>
+    <div class="egbar"><span class="you" style="left:0%"></span><span class="youlab" style="left:0%">this seat</span></div>
+    <div class="egends"><span>6.2 lb · lightest</span><span>16.5 lb · heaviest</span></div>
+    <div style="font-size:11px;color:var(--ink2);margin-top:6px">Compared with all 15 infant seats</div></div></div>
+    <div class="text"><div class="from">Appliances · vehicles</div><h4>Federal EnergyGuide / EPA fuel label</h4><p>A regulated solution to the exact problem: a single product’s value is meaningless alone, so the label always plots it on the range of <i>all comparable products</i>. The number plus its position is the rating.</p><div class="steal"><b>Steal:</b> the range strip in Concept&nbsp;1 — value-on-a-spectrum is the canonical de-opaquing device.</div></div></div><div class="analogy"><div class="demo"><div class="nf"><div class="nft">Fits Your Car</div>
     <div class="nfrow"><span><b>Footprint</b> 27.25 in</span><span class="dv">97%</span></div>
     <div class="nfrow"><span><b>Budget</b> $650</span><span class="dv" style="color:var(--bad)">130%</span></div>
     <div class="nfrow"><span><b>Carry weight</b> 6.2 lb</span><span class="dv" style="color:var(--good)">62%</span></div>
-    <div style="font-size:10px;color:var(--mut);margin-top:6px">% of <i>your</i> limit (28 in · $500 · 10 lb)</div></div>`,
-    "Nutrition Facts — % Daily Value","Packaged food",
-    "%DV solved “is 12 g a lot?” by anchoring every value to a personal reference. The raw gram is kept <i>and</i> contextualized — context without hiding the measurement.",
-    "the per-user anchor in Concept&nbsp;4 — express each value as a % of the parent’s own threshold.");
-})();
+    <div style="font-size:10px;color:var(--mut);margin-top:6px">% of <i>your</i> limit (28 in · $500 · 10 lb)</div></div></div>
+    <div class="text"><div class="from">Packaged food</div><h4>Nutrition Facts — % Daily Value</h4><p>%DV solved “is 12 g a lot?” by anchoring every value to a personal reference. The raw gram is kept <i>and</i> contextualized — context without hiding the measurement.</p><div class="steal"><b>Steal:</b> the per-user anchor in Concept&nbsp;4 — express each value as a % of the parent’s own threshold.</div></div></div><div class="analogy"><div class="demo"><div class="rt"><div class="rtrow"><span class="rl">Carrier</span><span class="rmeas">6.2 lb</span>
+    <span class="rbarw"><span class="rbar" style="width:100%"></span></span><span class="rsub">5/5</span></div><div class="rtrow"><span class="rl">Footprint</span><span class="rmeas">27.25 in</span>
+    <span class="rbarw"><span class="rbar" style="width:54.687500000000014%"></span></span><span class="rsub">4/5</span></div><div class="rtrow"><span class="rl">Outgrow</span><span class="rmeas">30 in</span>
+    <span class="rbarw"><span class="rbar" style="width:0%"></span></span><span class="rsub">2/5</span></div></div></div>
+    <div class="text"><div class="from">Electronics reviews</div><h4>RTINGS / DPReview</h4><p>Measurement is the headline (“contrast 4500:1”); the derived sub-score is a faint companion on the right, and everything is built for side-by-side. The number leads, the grade follows.</p><div class="steal"><b>Steal:</b> the measurement-first ordering — keep the 0–5 as a quiet trailing companion (Concepts 1&nbsp;&amp;&nbsp;3), never the headline.</div></div></div><div class="analogy"><div class="demo"><table class="mx" style="font-size:11px"><thead><tr><th class="optname">Seat</th><th>$</th><th>lb</th><th>in</th></tr></thead>
+    <tbody><tr><td class="optname" style="font-size:11px">Nuna Pipa</td><td class="num" style="">$650</td><td class="num" style="background:#dcfce7;font-weight:700">6.2</td><td class="num" style="">30</td></tr><tr><td class="optname" style="font-size:11px">Cybex Aton</td><td class="num" style="">$499.95</td><td class="num" style="">9</td><td class="num" style="background:#dcfce7;font-weight:700">32</td></tr><tr><td class="optname" style="font-size:11px">Graco SnugRide</td><td class="num" style="background:#dcfce7;font-weight:700">$139.99</td><td class="num" style="">7.2</td><td class="num" style="background:#dcfce7;font-weight:700">32</td></tr><tr><td class="optname" style="font-size:11px">Chicco KeyFit</td><td class="num" style="">$229.99</td><td class="num" style="">10</td><td class="num" style="background:#dcfce7;font-weight:700">32</td></tr><tr><td class="optname" style="font-size:11px">Britax B-Safe</td><td class="num" style="">$230</td><td class="num" style="">10.9</td><td class="num" style="background:#dcfce7;font-weight:700">32</td></tr></tbody></table></div>
+    <div class="text"><div class="from">Finance · reference</div><h4>Bloomberg terminal · Wikipedia “Comparison of…”</h4><p>Dense all-real-value matrices where best-in-column heat shading does the evaluative work. No grade column — your eye finds the green.</p><div class="steal"><b>Steal:</b> the heat-shaded matrix of Concept&nbsp;2 — let conditional shading replace a derived score column entirely.</div></div></div><div class="analogy"><div class="demo"><div><div style="font-size:12px;color:var(--ink2);margin-bottom:6px">Price, last 8 weeks</div>
+    <div style="display:flex;align-items:flex-end;gap:10px"><div class="skl"><span class="" style="height:30px"></span><span class="" style="height:25.10204081632653px"></span><span class="" style="height:20.20408163265306px"></span><span class="" style="height:16.775510204081634px"></span><span class="" style="height:13.346938775510203px"></span><span class="" style="height:10.408163265306122px"></span><span class="" style="height:6px"></span><span class="last" style="height:6px"></span></div>
+    <div><div style="font-size:20px;font-weight:700" class="num">$650</div><div style="font-size:11px;color:var(--good)">▼ $49 since Apr</div></div></div></div></div>
+    <div class="text"><div class="from">Beautiful Evidence</div><h4>Tufte sparklines · dot-dash-plots</h4><p>“Data-intense, design-simple, word-sized graphics.” A trend or distribution embedded inline at the point of the number — your priceSources timestamps are a sparkline waiting to happen.</p><div class="steal"><b>Steal:</b> word-sized context everywhere — the inline histograms (Concept&nbsp;3) and a real price-history spark on the detail header.</div></div></div></div>
 
-// C. RTINGS measurement + subscore
-(function(){
-  const rows=[["Carrier",FOCAL.carrierLb+" lb",100-pct(FOCAL.carrierLb,range("carrierLb")),5],
-              ["Footprint",FOCAL.foot+" in",100-pct(FOCAL.foot,range("foot")),4],
-              ["Outgrow",FOCAL.maxH+" in",pct(FOCAL.maxH,range("maxH")),2]];
-  analogy(`<div class="rt">${rows.map(r=>`<div class="rtrow"><span class="rl">${r[0]}</span><span class="rmeas">${r[1]}</span>
-    <span class="rbarw"><span class="rbar" style="width:${r[2]}%"></span></span><span class="rsub">${r[3]}/5</span></div>`).join("")}</div>`,
-    "RTINGS / DPReview","Electronics reviews",
-    "Measurement is the headline (“contrast 4500:1”); the derived sub-score is a faint companion on the right, and everything is built for side-by-side. The number leads, the grade follows.",
-    "the measurement-first ordering — keep the 0–5 as a quiet trailing companion (Concepts 1&nbsp;&amp;&nbsp;3), never the headline.");
-})();
-
-// D. Bloomberg / Wikipedia heat table
-(function(){
-  const sub=OPTS.slice(0,5);
-  const cell=(o,k,best,dir)=>{const v=o[k];const hot=(dir<0?v===Math.min(...sub.map(x=>x[k])):v===Math.max(...sub.map(x=>x[k])));return `<td class="num" style="${hot?'background:#dcfce7;font-weight:700':''}">${k==='price'?money(v):v}</td>`;};
-  analogy(`<table class="mx" style="font-size:11px"><thead><tr><th class="optname">Seat</th><th>$</th><th>lb</th><th>in</th></tr></thead>
-    <tbody>${sub.map(o=>`<tr><td class="optname" style="font-size:11px">${o.name.split(" ").slice(0,2).join(" ")}</td>${cell(o,'price',1,-1)}${cell(o,'carrierLb',1,-1)}${cell(o,'maxH',1,1)}</tr>`).join("")}</tbody></table>`,
-    "Bloomberg terminal · Wikipedia “Comparison of…”","Finance · reference",
-    "Dense all-real-value matrices where best-in-column heat shading does the evaluative work. No grade column — your eye finds the green.",
-    "the heat-shaded matrix of Concept&nbsp;2 — let conditional shading replace a derived score column entirely.");
-})();
-
-// E. Tufte sparkline (price history)
-(function(){
-  const hist=[699,689,679,672,665,659,650,650]; const mx=Math.max(...hist),mn=Math.min(...hist);
-  const bars=hist.map((h,i)=>`<span class="${i===hist.length-1?'last':''}" style="height:${6+((h-mn)/(mx-mn))*24}px"></span>`).join("");
-  analogy(`<div><div style="font-size:12px;color:var(--ink2);margin-bottom:6px">Price, last 8 weeks</div>
-    <div style="display:flex;align-items:flex-end;gap:10px"><div class="skl">${bars}</div>
-    <div><div style="font-size:20px;font-weight:700" class="num">$650</div><div style="font-size:11px;color:var(--good)">▼ $49 since Apr</div></div></div></div>`,
-    "Tufte sparklines · dot-dash-plots","Beautiful Evidence",
-    "“Data-intense, design-simple, word-sized graphics.” A trend or distribution embedded inline at the point of the number — your priceSources timestamps are a sparkline waiting to happen.",
-    "word-sized context everywhere — the inline histograms (Concept&nbsp;3) and a real price-history spark on the detail header.");
-})();
-
-//====================== PART 3: EVALUATION ======================
-const evalDiv = document.getElementById("evaltable");
-const ROWS = [
-  ["1 · Anchored Value Rows","hi|High","hi|Strong","hi|Score demoted","md|Medium","hi|Drop-in"],
-  ["2 · Comparison Matrix","hi|Highest","hi|Strongest","hi|No score col","hi|Low (reuse)","md|New surface"],
-  ["3 · Value Tiles + Spark","md|Medium","md|Cohort only","hi|No score","hi|Low","hi|Drop-in"],
-  ["4 · Fit Ledger","md|Focused","hi|To the user","hi|Zero scores","md|Medium","hi|Drop-in"],
-  ["5 · Dot-Plots","hi|High","hi|Full field","hi|No score","md|Medium","lo|Power-user"],
-  ["6 · Decomposed Bar","md|Medium","md|Self only","md|Keeps score","hi|Low","hi|Companion"],
-];
-const HEAD=["Concept","Data density","“Compared to what?”","De-opaqued?","Build effort here","IA fit"];
-evalDiv.appendChild(el(`<table class="eval"><thead><tr>${HEAD.map(h=>`<th>${h}</th>`).join("")}</tr></thead>
-  <tbody>${ROWS.map(r=>`<tr><td>${r[0]}</td>${r.slice(1).map(c=>{const[k,t]=c.split("|");return `<td class="${k}">${t}</td>`;}).join("")}</tr>`).join("")}</tbody></table>`));
-
-document.getElementById("rec").appendChild(el(`<div>
+  <hr class="sec" />
+  <div class="sectit">Part 3 — Side-by-side evaluation</div>
+  <div id="evaltable" style="margin-top:16px"><table class="eval"><thead><tr><th>Concept</th><th>Data density</th><th>“Compared to what?”</th><th>De-opaqued?</th><th>Build effort here</th><th>IA fit</th></tr></thead>
+  <tbody><tr><td>1 · Anchored Value Rows</td><td class="hi">High</td><td class="hi">Strong</td><td class="hi">Score demoted</td><td class="md">Medium</td><td class="hi">Drop-in</td></tr><tr><td>2 · Comparison Matrix</td><td class="hi">Highest</td><td class="hi">Strongest</td><td class="hi">No score col</td><td class="hi">Low (reuse)</td><td class="md">New surface</td></tr><tr><td>3 · Value Tiles + Spark</td><td class="md">Medium</td><td class="md">Cohort only</td><td class="hi">No score</td><td class="hi">Low</td><td class="hi">Drop-in</td></tr><tr><td>4 · Fit Ledger</td><td class="md">Focused</td><td class="hi">To the user</td><td class="hi">Zero scores</td><td class="md">Medium</td><td class="hi">Drop-in</td></tr><tr><td>5 · Dot-Plots</td><td class="hi">High</td><td class="hi">Full field</td><td class="hi">No score</td><td class="md">Medium</td><td class="lo">Power-user</td></tr><tr><td>6 · Decomposed Bar</td><td class="md">Medium</td><td class="md">Self only</td><td class="md">Keeps score</td><td class="hi">Low</td><td class="hi">Companion</td></tr></tbody></table></div>
+  <div class="rec" id="rec"><div>
   <h3>Recommendation</h3>
   <p style="margin:0 0 8px;color:var(--ink2)">
     Lead the product-detail page with <b>Concept&nbsp;1 (Anchored Value Rows)</b> — it honors your “detail is the most
@@ -596,7 +388,9 @@ document.getElementById("rec").appendChild(el(`<div>
     The through-line, straight from Tufte: <b>show the measurement, anchor it (to the cohort and to the parent), and let
     the score be a thin, decomposable top layer</b> — never the headline.
   </p>
-</div>`));
-</script>
+</div></div>
+
+</div>
+
 </body>
 </html>
