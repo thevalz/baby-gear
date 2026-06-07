@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { AppState, InventoryStatus, Module, Option } from '../lib/types';
 import { useStore } from '../lib/store';
 import {
@@ -154,6 +155,41 @@ function OptionCard({
   );
 }
 
+/** The ranked option cards for one module — the body of a gallery tab. */
+function ModuleOptionsGrid({
+  module,
+  onOpenDetail,
+}: {
+  module: Module;
+  onOpenDetail: (moduleId: string, optionId: string) => void;
+}) {
+  const ranked = rankedOptions(module);
+  if (ranked.length === 0) {
+    return <p className="text-sm text-slate-400">No options in this module yet.</p>;
+  }
+  const top = topPick(module);
+  // Best value = lowest $/point among options that have both a price and score.
+  const bestValue = ranked.reduce<Option | null>((bestSoFar, o) => {
+    if (pricePerPoint(o, module) === Infinity) return bestSoFar;
+    if (!bestSoFar) return o;
+    return pricePerPoint(o, module) < pricePerPoint(bestSoFar, module) ? o : bestSoFar;
+  }, null);
+  return (
+    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {ranked.map((o) => (
+        <OptionCard
+          key={o.id}
+          module={module}
+          option={o}
+          isTop={top?.id === o.id}
+          isBestValue={bestValue?.id === o.id}
+          onOpen={() => onOpenDetail(module.id, o.id)}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function SummaryDashboard({
   state,
   onOpenDetail,
@@ -187,6 +223,18 @@ export default function SummaryDashboard({
   const netSpend = purchases - refunds;
 
   const moduleLabel = (id: string) => modules.find((m) => m.id === id)?.label ?? '—';
+
+  // Gallery tabs: "All" plus one per module. Falls back to "all" if the saved
+  // tab points at a module that no longer exists.
+  const [galleryTab, setGalleryTab] = useState<string>('all');
+  const activeTab =
+    galleryTab !== 'all' && modules.some((m) => m.id === galleryTab) ? galleryTab : 'all';
+  const visibleModules = activeTab === 'all' ? modules : modules.filter((m) => m.id === activeTab);
+  const totalOptions = modules.reduce((n, m) => n + m.options.length, 0);
+  const galleryTabs = [
+    { id: 'all', label: 'All', count: totalOptions },
+    ...modules.map((m) => ({ id: m.id, label: m.label, count: m.options.length })),
+  ];
 
   return (
     <div className="space-y-6">
@@ -380,40 +428,52 @@ export default function SummaryDashboard({
         </section>
       </div>
 
-      {/* Gallery — every option, grouped by module, ranked best-first */}
-      {modules.map((m) => {
-        const ranked = rankedOptions(m);
-        if (ranked.length === 0) return null;
-        const top = topPick(m);
-        // Best value = lowest $/point among options that have both a price and score.
-        const bestValue = ranked.reduce<Option | null>((bestSoFar, o) => {
-          if (pricePerPoint(o, m) === Infinity) return bestSoFar;
-          if (!bestSoFar) return o;
-          return pricePerPoint(o, m) < pricePerPoint(bestSoFar, m) ? o : bestSoFar;
-        }, null);
-        return (
-          <section key={m.id} className={card}>
-            <div className="mb-3 flex items-center justify-between">
-              <h3 className="text-sm font-medium text-slate-600">{m.label} — all options</h3>
-              <span className="text-xs text-slate-400">
-                {ranked.length} option{ranked.length === 1 ? '' : 's'} · ranked best-first
-              </span>
-            </div>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {ranked.map((o) => (
-                <OptionCard
-                  key={o.id}
-                  module={m}
-                  option={o}
-                  isTop={top?.id === o.id}
-                  isBestValue={bestValue?.id === o.id}
-                  onOpen={() => onOpenDetail(m.id, o.id)}
-                />
-              ))}
-            </div>
-          </section>
-        );
-      })}
+      {/* Gallery — every option as a card, switchable by module via tabs */}
+      {modules.length > 0 && (
+        <section className={card}>
+          <div className="mb-4 flex flex-wrap items-center gap-1 border-b border-slate-200" role="tablist">
+            {galleryTabs.map((tab) => {
+              const isActive = tab.id === activeTab;
+              return (
+                <button
+                  key={tab.id}
+                  role="tab"
+                  aria-selected={isActive}
+                  onClick={() => setGalleryTab(tab.id)}
+                  className={`-mb-px flex items-center gap-1.5 border-b-2 px-3 py-2 text-sm font-medium transition-colors ${
+                    isActive
+                      ? 'border-indigo-500 text-indigo-600'
+                      : 'border-transparent text-slate-500 hover:text-slate-700'
+                  }`}
+                >
+                  {tab.label}
+                  <span
+                    className={`rounded-full px-1.5 py-0.5 text-[10px] tabular-nums ${
+                      isActive ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-100 text-slate-500'
+                    }`}
+                  >
+                    {tab.count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="space-y-6" role="tabpanel">
+            {visibleModules.map((m) => (
+              <div key={m.id}>
+                <div className="mb-3 flex items-center justify-between">
+                  <h3 className="text-sm font-medium text-slate-600">{m.label}</h3>
+                  <span className="text-xs text-slate-400">
+                    {m.options.length} option{m.options.length === 1 ? '' : 's'} · ranked best-first
+                  </span>
+                </div>
+                <ModuleOptionsGrid module={m} onOpenDetail={onOpenDetail} />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }
