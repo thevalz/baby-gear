@@ -9,6 +9,7 @@ export default function Toolbar() {
   const setOverallBudget = useStore((s) => s.setOverallBudget);
   const replaceState = useStore((s) => s.replaceState);
   const resetToSeed = useStore((s) => s.resetToSeed);
+  const refreshPricingFromSeed = useStore((s) => s.refreshPricingFromSeed);
 
   function handleExport() {
     const data = useStore.getState().exportState();
@@ -60,6 +61,13 @@ export default function Toolbar() {
       </label>
 
       <div className="flex items-center gap-2">
+        <button
+          className={btn}
+          title="Pull the latest committed prices & images from the repo, keeping your scores"
+          onClick={refreshPricingFromSeed}
+        >
+          Refresh prices
+        </button>
         <button className={btn} onClick={handleExport}>
           Export
         </button>

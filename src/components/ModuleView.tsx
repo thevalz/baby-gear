@@ -1,3 +1,4 @@
+import { Fragment, useState } from 'react';
 import {
   Bar,
   BarChart,
@@ -8,12 +9,173 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import type { Module } from '../lib/types';
+import type { Module, Option } from '../lib/types';
 import { useStore } from '../lib/store';
-import { formatPercent, maxScore, percent, topPick, weightedTotal } from '../lib/scoring';
+import {
+  bestPrice,
+  bestSource,
+  formatMoney,
+  formatPercent,
+  maxScore,
+  percent,
+  topPick,
+  weightedTotal,
+} from '../lib/scoring';
+import { assetUrl } from '../lib/assets';
 
 const clampScore = (v: number) => Math.max(0, Math.min(5, v));
 const clampWeight = (v: number) => Math.max(1, Math.min(5, v));
+
+const numInput = 'rounded-md border border-slate-300 px-2 py-1 text-right tabular-nums';
+const textInput = 'rounded-md border border-slate-300 px-2 py-1';
+
+/** Small product thumbnail with a graceful fallback when no image is set. */
+function Thumb({ src, alt }: { src?: string; alt: string }) {
+  const url = assetUrl(src);
+  if (!url) {
+    return (
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-dashed border-slate-200 bg-slate-50 text-slate-300">
+        <span className="text-xs">🍼</span>
+      </div>
+    );
+  }
+  return (
+    <img
+      src={url}
+      alt={alt}
+      className="h-10 w-10 shrink-0 rounded-md border border-slate-200 bg-white object-contain"
+      loading="lazy"
+    />
+  );
+}
+
+/** Editable list of sourced retailer prices for one option (the engine's data). */
+function PriceSourcesEditor({ module, option }: { module: Module; option: Option }) {
+  const addPriceSource = useStore((s) => s.addPriceSource);
+  const updatePriceSource = useStore((s) => s.updatePriceSource);
+  const deletePriceSource = useStore((s) => s.deletePriceSource);
+  const updateOption = useStore((s) => s.updateOption);
+  const sources = option.priceSources ?? [];
+  const best = bestSource(option);
+
+  return (
+    <div className="space-y-3">
+      {/* Image path */}
+      <label className="flex items-center gap-2 text-xs text-slate-500">
+        Image path
+        <input
+          value={option.image ?? ''}
+          placeholder="images/my-product.jpg"
+          onChange={(e) => updateOption(module.id, option.id, { image: e.target.value })}
+          className={`w-72 ${textInput}`}
+        />
+        <span className="text-slate-400">(relative to public/)</span>
+      </label>
+
+      {/* Reference price */}
+      <label className="flex items-center gap-2 text-xs text-slate-500">
+        Reference price <span className="text-slate-400">$</span>
+        <input
+          type="number"
+          min={0}
+          step={10}
+          value={option.price}
+          onChange={(e) => updateOption(module.id, option.id, { price: Number(e.target.value) || 0 })}
+          className={`w-24 ${numInput}`}
+        />
+        <span className="text-slate-400">used when no in-stock source exists</span>
+      </label>
+
+      {/* Sources table */}
+      <div className="overflow-x-auto rounded-md border border-slate-200">
+        <table className="w-full text-xs">
+          <thead>
+            <tr className="bg-slate-50 text-slate-500">
+              <th className="px-2 py-1 text-left font-medium">Retailer</th>
+              <th className="px-2 py-1 text-right font-medium">Price</th>
+              <th className="px-2 py-1 text-left font-medium">URL</th>
+              <th className="px-2 py-1 text-center font-medium">In stock</th>
+              <th className="px-2 py-1 text-left font-medium">Checked</th>
+              <th className="px-2 py-1" />
+            </tr>
+          </thead>
+          <tbody>
+            {sources.map((src, i) => {
+              const isBest = best != null && src === best;
+              return (
+                <tr key={i} className={`border-t border-slate-100 ${isBest ? 'bg-emerald-50' : ''}`}>
+                  <td className="px-2 py-1">
+                    <input
+                      value={src.retailer}
+                      placeholder="Amazon"
+                      onChange={(e) => updatePriceSource(module.id, option.id, i, { retailer: e.target.value })}
+                      className={`w-28 ${textInput}`}
+                    />
+                  </td>
+                  <td className="px-2 py-1 text-right">
+                    <input
+                      type="number"
+                      min={0}
+                      step={1}
+                      value={src.price}
+                      onChange={(e) => updatePriceSource(module.id, option.id, i, { price: Number(e.target.value) || 0 })}
+                      className={`w-20 ${numInput}`}
+                    />
+                  </td>
+                  <td className="px-2 py-1">
+                    <input
+                      value={src.url}
+                      placeholder="https://…"
+                      onChange={(e) => updatePriceSource(module.id, option.id, i, { url: e.target.value })}
+                      className={`w-64 ${textInput}`}
+                    />
+                  </td>
+                  <td className="px-2 py-1 text-center">
+                    <input
+                      type="checkbox"
+                      checked={src.inStock !== false}
+                      onChange={(e) => updatePriceSource(module.id, option.id, i, { inStock: e.target.checked })}
+                    />
+                  </td>
+                  <td className="px-2 py-1">
+                    <input
+                      type="date"
+                      value={src.checkedAt}
+                      onChange={(e) => updatePriceSource(module.id, option.id, i, { checkedAt: e.target.value })}
+                      className={textInput}
+                    />
+                  </td>
+                  <td className="px-2 py-1 text-right">
+                    <button
+                      onClick={() => deletePriceSource(module.id, option.id, i)}
+                      title="Remove source"
+                      className="text-slate-400 hover:text-red-600"
+                    >
+                      ✕
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
+            {sources.length === 0 && (
+              <tr>
+                <td colSpan={6} className="px-2 py-2 text-slate-400">
+                  No sourced prices yet — add one, or let a research session populate them.
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+      <button
+        onClick={() => addPriceSource(module.id, option.id)}
+        className="rounded-md border border-dashed border-slate-300 px-3 py-1 text-xs text-slate-600 hover:bg-slate-100"
+      >
+        + price source
+      </button>
+    </div>
+  );
+}
 
 export default function ModuleView({
   module,
@@ -33,6 +195,8 @@ export default function ModuleView({
   const deleteOption = useStore((s) => s.deleteOption);
   const setScore = useStore((s) => s.setScore);
 
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+
   const max = maxScore(module.criteria);
   const best = topPick(module);
 
@@ -42,9 +206,7 @@ export default function ModuleView({
     isTop: best?.id === o.id,
   }));
 
-  const numInput =
-    'rounded-md border border-slate-300 px-2 py-1 text-right tabular-nums';
-  const textInput = 'rounded-md border border-slate-300 px-2 py-1';
+  const colSpan = module.criteria.length + 5;
 
   return (
     <div className="space-y-6">
@@ -129,7 +291,7 @@ export default function ModuleView({
           <thead>
             <tr className="border-b border-slate-200 bg-slate-50 text-slate-500">
               <th className="px-3 py-2 text-left font-medium">Option</th>
-              <th className="px-3 py-2 text-right font-medium">Price</th>
+              <th className="px-3 py-2 text-right font-medium">Best price</th>
               {module.criteria.map((c) => (
                 <th key={c.id} className="px-3 py-2 text-center font-medium">
                   {c.label}
@@ -144,59 +306,79 @@ export default function ModuleView({
           <tbody>
             {module.options.map((o) => {
               const isTop = best?.id === o.id;
+              const expanded = expandedId === o.id;
+              const price = bestPrice(o);
+              const bsrc = bestSource(o);
+              const nSources = (o.priceSources ?? []).length;
               return (
-                <tr key={o.id} className={`border-b border-slate-100 last:border-0 ${isTop ? 'bg-indigo-50' : ''}`}>
-                  <td className="px-3 py-2">
-                    {isTop && <span className="mr-1 text-indigo-600">★</span>}
-                    <input
-                      value={o.name}
-                      onChange={(e) => updateOption(module.id, o.id, { name: e.target.value })}
-                      className={`w-44 ${textInput} font-medium text-slate-800`}
-                    />
-                  </td>
-                  <td className="px-3 py-2 text-right">
-                    <input
-                      type="number"
-                      min={0}
-                      step={10}
-                      value={o.price}
-                      onChange={(e) => updateOption(module.id, o.id, { price: Number(e.target.value) || 0 })}
-                      className={`w-24 ${numInput}`}
-                    />
-                  </td>
-                  {module.criteria.map((c) => (
-                    <td key={c.id} className="px-3 py-2 text-center">
-                      <input
-                        type="number"
-                        min={0}
-                        max={5}
-                        value={o.scores[c.id] ?? 0}
-                        onChange={(e) => setScore(module.id, o.id, c.id, clampScore(Number(e.target.value) || 0))}
-                        className={`w-14 ${numInput} text-center`}
-                      />
+                <Fragment key={o.id}>
+                  <tr className={`border-b border-slate-100 ${expanded ? '' : 'last:border-0'} ${isTop ? 'bg-indigo-50' : ''}`}>
+                    <td className="px-3 py-2">
+                      <div className="flex items-center gap-2">
+                        <Thumb src={o.image} alt={o.name} />
+                        {isTop && <span className="text-indigo-600">★</span>}
+                        <input
+                          value={o.name}
+                          onChange={(e) => updateOption(module.id, o.id, { name: e.target.value })}
+                          className={`w-44 ${textInput} font-medium text-slate-800`}
+                        />
+                      </div>
                     </td>
-                  ))}
-                  <td className="px-3 py-2 text-right font-semibold tabular-nums">
-                    {weightedTotal(o, module.criteria)}
-                  </td>
-                  <td className="px-3 py-2 text-right tabular-nums text-slate-500">
-                    {formatPercent(percent(o, module.criteria))}
-                  </td>
-                  <td className="px-2 py-2 text-right">
-                    <button
-                      onClick={() => deleteOption(module.id, o.id)}
-                      title="Delete option"
-                      className="text-slate-400 hover:text-red-600"
-                    >
-                      🗑
-                    </button>
-                  </td>
-                </tr>
+                    <td className="px-3 py-2 text-right">
+                      <button
+                        onClick={() => setExpandedId(expanded ? null : o.id)}
+                        className="inline-flex flex-col items-end rounded-md px-2 py-1 hover:bg-slate-100"
+                        title="Edit price sources & image"
+                      >
+                        <span className="font-semibold tabular-nums text-slate-800">{formatMoney(price)}</span>
+                        <span className="text-xs text-slate-400">
+                          {bsrc ? `${bsrc.retailer} · ` : ''}
+                          {nSources > 0 ? `${nSources} source${nSources > 1 ? 's' : ''} ` : 'no sources '}
+                          {expanded ? '▴' : '▾'}
+                        </span>
+                      </button>
+                    </td>
+                    {module.criteria.map((c) => (
+                      <td key={c.id} className="px-3 py-2 text-center">
+                        <input
+                          type="number"
+                          min={0}
+                          max={5}
+                          value={o.scores[c.id] ?? 0}
+                          onChange={(e) => setScore(module.id, o.id, c.id, clampScore(Number(e.target.value) || 0))}
+                          className={`w-14 ${numInput} text-center`}
+                        />
+                      </td>
+                    ))}
+                    <td className="px-3 py-2 text-right font-semibold tabular-nums">
+                      {weightedTotal(o, module.criteria)}
+                    </td>
+                    <td className="px-3 py-2 text-right tabular-nums text-slate-500">
+                      {formatPercent(percent(o, module.criteria))}
+                    </td>
+                    <td className="px-2 py-2 text-right">
+                      <button
+                        onClick={() => deleteOption(module.id, o.id)}
+                        title="Delete option"
+                        className="text-slate-400 hover:text-red-600"
+                      >
+                        🗑
+                      </button>
+                    </td>
+                  </tr>
+                  {expanded && (
+                    <tr className="border-b border-slate-100 last:border-0 bg-slate-50/60">
+                      <td colSpan={colSpan} className="px-3 py-3">
+                        <PriceSourcesEditor module={module} option={o} />
+                      </td>
+                    </tr>
+                  )}
+                </Fragment>
               );
             })}
             {module.options.length === 0 && (
               <tr>
-                <td colSpan={module.criteria.length + 5} className="px-3 py-3 text-slate-400">
+                <td colSpan={colSpan} className="px-3 py-3 text-slate-400">
                   No options yet — add one below.
                 </td>
               </tr>

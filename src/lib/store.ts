@@ -1,7 +1,8 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import seed from '../data/seed.json';
-import type { AppState, Criterion, InventoryStatus, Module, Option } from './types';
+import type { AppState, Criterion, InventoryStatus, Module, Option, PriceSource } from './types';
+import { mergePricingFromSeed } from './sync';
 
 const seedState = seed as unknown as AppState;
 
@@ -23,6 +24,8 @@ interface StoreActions {
   replaceState: (next: AppState) => void;
   /** Restore the original seed data. */
   resetToSeed: () => void;
+  /** Fold the repo's latest prices/images into the working copy (keeps scores). */
+  refreshPricingFromSeed: () => void;
   /** Snapshot of just the persisted data (used by Export). */
   exportState: () => AppState;
   setOverallBudget: (value: number) => void;
@@ -39,10 +42,26 @@ interface StoreActions {
   updateCriterion: (moduleId: string, criterionId: string, patch: Partial<Criterion>) => void;
   deleteCriterion: (moduleId: string, criterionId: string) => void;
   addOption: (moduleId: string) => void;
-  updateOption: (moduleId: string, optionId: string, patch: Partial<Pick<Option, 'name' | 'price'>>) => void;
+  updateOption: (moduleId: string, optionId: string, patch: Partial<Pick<Option, 'name' | 'price' | 'image'>>) => void;
   deleteOption: (moduleId: string, optionId: string) => void;
   setScore: (moduleId: string, optionId: string, criterionId: string, value: number) => void;
+
+  // --- price sources (the "pricing engine" data) ---
+  addPriceSource: (moduleId: string, optionId: string) => void;
+  updatePriceSource: (
+    moduleId: string,
+    optionId: string,
+    index: number,
+    patch: Partial<PriceSource>,
+  ) => void;
+  deletePriceSource: (moduleId: string, optionId: string, index: number) => void;
 }
+
+/** Immutably replace one option within a module. */
+const updateOptionIn = (m: Module, optionId: string, fn: (o: Option) => Option): Module => ({
+  ...m,
+  options: m.options.map((o) => (o.id === optionId ? fn(o) : o)),
+});
 
 export type Store = AppState & StoreActions;
 
@@ -56,13 +75,28 @@ export const useStore = create<Store>()(
 
       // --- actions ---
       replaceState: (next) =>
-        set({ config: next.config, modules: next.modules, inventory: next.inventory }),
+        set({
+          dataVersion: next.dataVersion,
+          config: next.config,
+          modules: next.modules,
+          inventory: next.inventory,
+        }),
 
       resetToSeed: () => set(cloneSeed()),
 
+      refreshPricingFromSeed: () =>
+        set((s) => {
+          const merged = mergePricingFromSeed(
+            { dataVersion: s.dataVersion, config: s.config, modules: s.modules, inventory: s.inventory },
+            seedState,
+            true, // force: manual button refreshes regardless of version
+          );
+          return { dataVersion: merged.dataVersion, modules: merged.modules };
+        }),
+
       exportState: () => {
-        const { config, modules, inventory } = get();
-        return { config, modules, inventory };
+        const { dataVersion, config, modules, inventory } = get();
+        return { dataVersion, config, modules, inventory };
       },
 
       setOverallBudget: (value) =>
@@ -182,13 +216,73 @@ export const useStore = create<Store>()(
             ),
           })),
         })),
+
+      // --- price sources ---
+      addPriceSource: (moduleId, optionId) =>
+        set((s) => ({
+          modules: updateModuleIn(s.modules, moduleId, (m) =>
+            updateOptionIn(m, optionId, (o) => {
+              const src: PriceSource = {
+                retailer: '',
+                price: 0,
+                url: '',
+                inStock: true,
+                checkedAt: new Date().toISOString().slice(0, 10),
+              };
+              return { ...o, priceSources: [...(o.priceSources ?? []), src] };
+            }),
+          ),
+        })),
+
+      updatePriceSource: (moduleId, optionId, index, patch) =>
+        set((s) => ({
+          modules: updateModuleIn(s.modules, moduleId, (m) =>
+            updateOptionIn(m, optionId, (o) => ({
+              ...o,
+              priceSources: (o.priceSources ?? []).map((src, i) =>
+                i === index ? { ...src, ...patch } : src,
+              ),
+            })),
+          ),
+        })),
+
+      deletePriceSource: (moduleId, optionId, index) =>
+        set((s) => ({
+          modules: updateModuleIn(s.modules, moduleId, (m) =>
+            updateOptionIn(m, optionId, (o) => ({
+              ...o,
+              priceSources: (o.priceSources ?? []).filter((_, i) => i !== index),
+            })),
+          ),
+        })),
     }),
     {
       name: STORAGE_KEY,
       version: 1,
       storage: createJSONStorage(() => localStorage),
       // Persist only the data, not the action functions.
-      partialize: (s) => ({ config: s.config, modules: s.modules, inventory: s.inventory }),
+      partialize: (s) => ({
+        dataVersion: s.dataVersion,
+        config: s.config,
+        modules: s.modules,
+        inventory: s.inventory,
+      }),
+      // Repo is the source of truth: when the committed seed carries a newer
+      // dataVersion than the persisted copy, fold its prices/images in while
+      // keeping the user's scores/weights/budgets (see lib/sync.ts).
+      merge: (persisted, current) => {
+        const p = (persisted ?? {}) as Partial<AppState>;
+        const data = mergePricingFromSeed(
+          {
+            dataVersion: p.dataVersion,
+            config: p.config ?? current.config,
+            modules: p.modules ?? current.modules,
+            inventory: p.inventory ?? current.inventory,
+          },
+          seedState,
+        );
+        return { ...current, ...data };
+      },
     },
   ),
 );

@@ -1,12 +1,26 @@
 # Baby-Gear Trade Study
 
-A local, modular **trade-study dashboard** for baby-gear decisions (car seat,
+A modular **trade-study dashboard** for baby-gear decisions (car seat,
 stroller, …). Each gear category is a *module* with weighted criteria and
 scored options; the app computes weighted scores and rolls everything up into a
-**Summary** view.
+**Summary** view. Options carry **product images** and **best-price data**
+sourced from across the web.
 
 Built with **Vite + React + TypeScript**, styled with **Tailwind CSS**, charts
-via **recharts**.
+via **recharts**. Deployed as a static site to **GitHub Pages**.
+
+## Pricing engine & images
+
+There is **no backend and no live scraping**. The "engine" that finds best
+pricing is a **Claude session**: it researches current retailer prices, records
+them with sources, downloads product images into the repo, and commits. The
+deployed app reads that committed data. Each option holds a `priceSources[]`
+list (retailer, price, deep link, date) — the app shows the lowest in-stock
+price as the **best price** and renders every source as a dated link — plus a
+local `image` path under `public/images/`.
+
+See **[`docs/SOURCING.md`](docs/SOURCING.md)** for the full architecture, the
+data contract, and the prompt to run a sourcing session.
 
 ## Run
 
@@ -18,10 +32,20 @@ npm run dev      # → http://localhost:5173
 Other scripts:
 
 ```bash
-npm run build    # typecheck + production build to dist/
+npm run build    # typecheck + production build to dist/ (base path /family/)
 npm run preview  # serve the production build
 npm test         # run the vitest unit tests
 ```
+
+## Deployment (GitHub Pages)
+
+`.github/workflows/deploy.yml` builds the app and publishes `dist/` to GitHub
+Pages on every push to `main`. The Vite `base` is `/family/` to match the
+project-pages URL `https://<owner>.github.io/family/` (override via `VITE_BASE`,
+or rename in `vite.config.ts` if the repo is renamed).
+
+**One-time setup:** in repo **Settings → Pages → Build and deployment**, set the
+**Source** to **GitHub Actions**.
 
 ## Project structure
 
@@ -39,22 +63,32 @@ src/
     ModuleView.tsx     Editable module: label/budget, criteria + weights,
                        options with prices & scores, weighted-score chart
   lib/
-    types.ts           Data model (Config / Module / Option / Criterion / InventoryItem)
-    scoring.ts         weightedTotal / maxScore / percent / topPick / rankedOptions
+    types.ts           Data model (Config / Module / Option / PriceSource / Criterion / InventoryItem)
+    scoring.ts         weightedTotal / maxScore / percent / topPick / bestPrice / bestSource
     compatibility.ts   Data-driven cross-module compatibility map + flag engine
+    sync.ts            Repo-as-source-of-truth pricing merge (dataVersion)
+    assets.ts          Base-path-aware asset URL helper (for images)
     store.ts           Zustand store + persist (localStorage)
   data/
-    seed.json          Seed data (Infant Car Seat + Stroller modules)
+    seed.json          Seed data (Infant Car Seat + Stroller modules) — source of truth
+public/
+  images/              Product images committed to the repo (see its README)
+docs/
+  SOURCING.md          How a Claude session sources prices/images into the repo
+.github/workflows/
+  deploy.yml           Build + deploy to GitHub Pages
 ```
 
 ## Data model
 
 ```
 Criterion     { id, label, weight (1–5) }
-Option        { id, moduleId, name, price, attributes {…}, scores { criterionId: 1–5 }, notes }
+PriceSource   { retailer, price, url, inStock?, checkedAt (ISO date) }
+Option        { id, moduleId, name, price, image?, priceSources?[], attributes {…}, scores { criterionId: 1–5 }, notes }
 Module        { id, label, budget, selectedOptionId, criteria[], options[] }
 InventoryItem { id, name, moduleId, status: keep|return|undecided, refund, notes }
 Config        { overallBudget, adapterCost }
+AppState      { dataVersion?, config, modules[], inventory[] }
 ```
 
 ## Compatibility
@@ -89,9 +123,20 @@ first run, then persists the entire state (`config`, `modules`, `inventory`) to
 from it on reload — so edits survive a full page refresh.
 
 The toolbar provides:
+- **Refresh prices** — folds the repo's latest committed prices/images into your
+  working copy *without* discarding your scores/weights/budgets.
 - **Export** — downloads the current state as `data.json`.
 - **Import** — loads a `data.json` file and replaces the state.
 - **Reset** — restores the original seed data.
+
+### Repo as source of truth
+
+`seed.json` carries a top-level `dataVersion`. When a sourcing session commits
+new prices and bumps `dataVersion`, the deployed app detects the newer version
+on load and merges the fresh **pricing fields only** (`price`, `image`,
+`priceSources`) into each returning visitor's saved state, preserving their
+scores. The **Refresh prices** button forces the same merge on demand. Logic
+lives in `src/lib/sync.ts` (unit-tested in `sync.test.ts`).
 
 ## Adding gear categories at runtime
 
