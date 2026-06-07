@@ -1,0 +1,9 @@
+{
+  "name": "baby-gear-trade-study",
+  "version": "1.0.0",
+  "description": "Local, persistent, modular trade-study dashboard for baby-gear decisions.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}

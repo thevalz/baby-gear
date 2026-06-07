@@ -1,0 +1,3 @@
+node_modules/
+# Runtime state is generated from data/seed.json on first run.
+data/state.json
