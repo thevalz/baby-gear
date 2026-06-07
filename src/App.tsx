@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import Toolbar from './components/Toolbar';
 import SummaryDashboard from './components/SummaryDashboard';
 import ModuleView from './components/ModuleView';
+import ErrorBoundary from './components/ErrorBoundary';
 import { useStore } from './lib/store';
 import type { AppState, NavItem } from './lib/types';
 
@@ -13,6 +14,7 @@ export default function App() {
   const modules = useStore((s) => s.modules);
   const inventory = useStore((s) => s.inventory);
   const addModule = useStore((s) => s.addModule);
+  const resetToSeed = useStore((s) => s.resetToSeed);
   const [activeId, setActiveId] = useState<string>(SUMMARY_ID);
 
   const navItems: NavItem[] = [
@@ -35,11 +37,19 @@ export default function App() {
         <Toolbar />
         <div className="flex-1 overflow-auto">
           <div className="mx-auto max-w-5xl px-6 py-6">
-            {activeModule ? (
-              <ModuleView module={activeModule} onDeleted={() => setActiveId(SUMMARY_ID)} />
-            ) : (
-              <SummaryDashboard state={state} />
-            )}
+            {/* Keyed by the active view so switching nav items spins up a fresh
+                boundary — a crash in one module never strands the others. */}
+            <ErrorBoundary
+              key={activeId}
+              label={activeModule ? activeModule.label : 'Summary'}
+              onReset={resetToSeed}
+            >
+              {activeModule ? (
+                <ModuleView module={activeModule} onDeleted={() => setActiveId(SUMMARY_ID)} />
+              ) : (
+                <SummaryDashboard state={state} />
+              )}
+            </ErrorBoundary>
           </div>
         </div>
       </main>
