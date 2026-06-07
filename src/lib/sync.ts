@@ -15,12 +15,20 @@ import type { AppState, Module, Option } from './types';
  * `force` performs the same merge regardless of version (the "Refresh prices
  * from repo" button).
  */
-function refreshOption(userOpt: Option, seedOpt: Option): Option {
+function refreshOption(userOpt: Option, seedOpt: Option, newCriterionIds: Set<string>): Option {
   // Only copy a field the seed actually defines, so an unsourced seed entry
   // never wipes a value the user typed in. Sourced facts in `attributes`
   // (verified weight, rear-facing length, fit flags, …) are merged like prices
   // so a newer repo data version reaches returning visitors; user-only keys are
   // preserved because seed values are layered on top of the user's.
+  //
+  // Scores stay user-owned, with one exception: criteria the repo *just added*
+  // (which the user has never seen, let alone scored) get the seed's score so a
+  // new requirement arrives pre-filled instead of as a meaningless 0.
+  const seededScores: Record<string, number> = {};
+  for (const id of newCriterionIds) {
+    if (seedOpt.scores[id] !== undefined) seededScores[id] = seedOpt.scores[id];
+  }
   return {
     ...userOpt,
     ...(seedOpt.price !== undefined ? { price: seedOpt.price } : {}),
@@ -29,19 +37,31 @@ function refreshOption(userOpt: Option, seedOpt: Option): Option {
     ...(seedOpt.attributes !== undefined
       ? { attributes: { ...userOpt.attributes, ...seedOpt.attributes } }
       : {}),
+    scores: { ...seededScores, ...userOpt.scores },
   };
 }
 
 function refreshModule(userMod: Module, seedMod: Module): Module {
+  // Criteria the repo added since the user's copy was saved: append them so a
+  // newer data version delivers new requirements, while keeping the user's
+  // existing criteria (and their tuned weights) exactly as they are.
+  const userCritIds = new Set(userMod.criteria.map((c) => c.id));
+  const newCriteria = seedMod.criteria.filter((c) => !userCritIds.has(c.id));
+  const newCriterionIds = new Set(newCriteria.map((c) => c.id));
+
   const seedById = new Map(seedMod.options.map((o) => [o.id, o]));
   const userIds = new Set(userMod.options.map((o) => o.id));
   const options = userMod.options.map((o) => {
     const s = seedById.get(o.id);
-    return s ? refreshOption(o, s) : o;
+    return s ? refreshOption(o, s, newCriterionIds) : o;
   });
   // Surface products the sourcing session added that the user doesn't have yet.
   const added = seedMod.options.filter((o) => !userIds.has(o.id));
-  return { ...userMod, options: [...options, ...added] };
+  return {
+    ...userMod,
+    criteria: [...userMod.criteria, ...newCriteria],
+    options: [...options, ...added],
+  };
 }
 
 /**

@@ -22,6 +22,10 @@ const yesNo = (v: unknown): string => (v ? 'Yes' : 'No');
 const ATTRIBUTE_META: Record<string, { label: string; format: (v: unknown) => string }> = {
   carrierLb: { label: 'Carrier weight', format: (v) => `${v} lb` },
   rearFacingLengthIn: { label: 'Rear-facing length', format: (v) => `${v} in` },
+  maxHeightIn: { label: 'Max child height', format: (v) => `${v} in` },
+  maxWeightLb: { label: 'Max child weight', format: (v) => `${v} lb` },
+  convertsToToddler: { label: 'Extends to toddler', format: yesNo },
+  maxAgeMonths: { label: 'Max age', format: (v) => `${v} mo` },
   fitsWayfinder: { label: 'Fits BOB Wayfinder', format: yesNo },
   fitsAlterrain: { label: 'Fits BOB Alterrain', format: yesNo },
   safety: { label: 'Safety features', format: (v) => String(v) },
@@ -88,6 +92,16 @@ export function optionSummary(option: Option): SummaryChip[] {
   if (a.rearFacingLengthIn != null) {
     chips.push({ key: 'rearFacingLengthIn', text: `${a.rearFacingLengthIn}" long`, tone: 'neutral' });
   }
+  // Growth / longevity — how long the seat fits the child as he grows.
+  if (a.maxHeightIn != null) {
+    chips.push({ key: 'maxHeightIn', text: `fits to ${a.maxHeightIn}"`, tone: a.maxHeightIn >= 35 ? 'good' : 'neutral' });
+  }
+  if (a.maxWeightLb != null) {
+    chips.push({ key: 'maxWeightLb', text: `${a.maxWeightLb} lb max`, tone: a.maxWeightLb >= 35 ? 'good' : 'neutral' });
+  }
+  if (a.convertsToToddler) {
+    chips.push({ key: 'convertsToToddler', text: 'To toddler', tone: 'good' });
+  }
   if (a.fitsWayfinder != null) {
     chips.push({
       key: 'fitsWayfinder',
@@ -136,6 +150,31 @@ export function criterionEvidence(criterion: Criterion, option: Option): string 
   const a = option.attributes ?? {};
   const hay = `${criterion.id} ${criterion.label}`.toLowerCase();
   const has = (...needles: string[]) => needles.some((n) => hay.includes(n));
+
+  // ── Growth / longevity (how long the seat keeps fitting the child) ──
+  // These come first because "Weight capacity" also contains "weight" and would
+  // otherwise be captured by the carrier-weight rule below.
+  // Outgrow-by-height — the binding constraint for infant seats.
+  if (has('height', 'headroom', 'outgrow') && a.maxHeightIn != null) {
+    return `fits to ${a.maxHeightIn} in tall`;
+  }
+  // Weight capacity — the max child weight the seat accommodates.
+  if (has('capacity') && a.maxWeightLb != null) {
+    return `up to ${a.maxWeightLb} lb`;
+  }
+  // Infant→toddler longevity — convertibility class, with realistic duration.
+  if (has('longevity', 'toddler', 'grows')) {
+    if (a.convertsToToddler) {
+      return `rear-faces into toddlerhood${a.maxAgeMonths ? ` (~${a.maxAgeMonths} mo)` : ''}`;
+    }
+    const caps = [
+      a.maxHeightIn != null ? `${a.maxHeightIn} in` : null,
+      a.maxWeightLb != null ? `${a.maxWeightLb} lb` : null,
+    ]
+      .filter(Boolean)
+      .join(' / ');
+    return caps ? `infant bucket (to ${caps})` : 'infant bucket seat';
+  }
 
   // Carrier weight / mass.
   if (has('weight', 'mass') && a.carrierLb != null) {

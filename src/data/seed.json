@@ -1,5 +1,5 @@
 {
-  "dataVersion": 5,
+  "dataVersion": 6,
   "config": {
     "overallBudget": 1000,
     "adapterCost": 100
@@ -32,6 +32,21 @@
           "weight": 2
         },
         {
+          "id": "growthheight",
+          "label": "Outgrow-by-height (headroom)",
+          "weight": 4
+        },
+        {
+          "id": "growthweight",
+          "label": "Weight capacity",
+          "weight": 2
+        },
+        {
+          "id": "growthlongevity",
+          "label": "Infant→toddler longevity",
+          "weight": 3
+        },
+        {
           "id": "price",
           "label": "Price",
           "weight": 1
@@ -48,14 +63,20 @@
             "rearFacingLengthIn": 27.25,
             "fitsWayfinder": true,
             "fitsAlterrain": true,
-            "safety": "load leg + anti-rebound panel + rigid (TrueLock) LATCH + side-impact; Aeroflex EPP"
+            "safety": "load leg + anti-rebound panel + rigid (TrueLock) LATCH + side-impact; Aeroflex EPP",
+            "maxHeightIn": 30,
+            "maxWeightLb": 30,
+            "convertsToToddler": false
           },
           "scores": {
             "fit": 4,
             "weight": 5,
             "compat": 5,
             "safety": 5,
-            "price": 1
+            "price": 1,
+            "growthheight": 2,
+            "growthweight": 3,
+            "growthlongevity": 2
           },
           "notes": "Lightest carrier (6.2 lb) + top-tier safety (load leg + anti-rebound + rigid LATCH); fits Wayfinder & Alterrain. Real street price ~$650 (uniform MAP) is its only weak spot.",
           "image": "images/nuna-pipa-aire-rx.jpg",
@@ -100,14 +121,21 @@
             "rearFacingLengthIn": 26.1,
             "fitsWayfinder": true,
             "fitsAlterrain": true,
-            "safety": "swivel load-leg base + Linear Side-impact (L.S.P.) + belt tensioner; no-rethread harness"
+            "safety": "swivel load-leg base + Linear Side-impact (L.S.P.) + belt tensioner; no-rethread harness",
+            "maxHeightIn": 32,
+            "maxWeightLb": 35,
+            "convertsToToddler": false,
+            "maxAgeMonths": 18
           },
           "scores": {
             "fit": 5,
             "weight": 4,
             "compat": 5,
             "safety": 5,
-            "price": 2
+            "price": 2,
+            "growthheight": 4,
+            "growthweight": 5,
+            "growthlongevity": 4
           },
           "notes": "Verified carrier 9 lb (stub overstated 12); 180° swivel = best tight-space loading; load leg + L.S.P.; fits both BOB strollers. Top weighted pick.",
           "image": "images/cybex-aton-g.jpg",
@@ -145,14 +173,20 @@
             "rearFacingLengthIn": 26,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
-            "safety": "basic — no load leg or anti-rebound; meets federal side-impact (ProtectPlus)"
+            "safety": "basic — no load leg or anti-rebound; meets federal side-impact (ProtectPlus)",
+            "maxHeightIn": 32,
+            "maxWeightLb": 35,
+            "convertsToToddler": false
           },
           "scores": {
             "fit": 4,
             "weight": 5,
             "compat": 3,
             "safety": 3,
-            "price": 5
+            "price": 5,
+            "growthheight": 4,
+            "growthweight": 5,
+            "growthlongevity": 4
           },
           "notes": "Budget + ultralight (7.2 lb); Alterrain only (no Wayfinder Graco adapter). Basic safety. Best price (~$140).",
           "image": "images/graco-snugride-35-lite-lx.jpg",
@@ -190,14 +224,20 @@
             "rearFacingLengthIn": 27.5,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
-            "safety": "integrated anti-rebound bar + top crash-test scores; SuperCinch LATCH"
+            "safety": "integrated anti-rebound bar + top crash-test scores; SuperCinch LATCH",
+            "maxHeightIn": 32,
+            "maxWeightLb": 35,
+            "convertsToToddler": false
           },
           "scores": {
             "fit": 5,
             "weight": 3,
             "compat": 3,
             "safety": 4,
-            "price": 4
+            "price": 4,
+            "growthheight": 4,
+            "growthweight": 5,
+            "growthlongevity": 4
           },
           "notes": "FLAG RESOLVED — fitsAlterrain flips TRUE (bobgear.com Chicco adapter $99.99 lists KeyFit 35). Excellent Tacoma fit; carrier 10 lb; ~$230. Still not on Wayfinder.",
           "image": "images/chicco-keyfit-35.jpg",
@@ -235,14 +275,20 @@
             "rearFacingLengthIn": 26.6,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
-            "safety": "SafeCell crumple zone + steel-reinforced base + side-impact foam surround; SafeWash"
+            "safety": "SafeCell crumple zone + steel-reinforced base + side-impact foam surround; SafeWash",
+            "maxHeightIn": 32,
+            "maxWeightLb": 35,
+            "convertsToToddler": false
           },
           "scores": {
             "fit": 3,
             "weight": 2,
             "compat": 3,
             "safety": 4,
-            "price": 4
+            "price": 4,
+            "growthheight": 4,
+            "growthweight": 5,
+            "growthlongevity": 4
           },
           "notes": "Discontinued/retired; widely sold out (MSRP $199.99). VERIFIED not on BOB Wayfinder list (Wayfinder Britax = ClickTight Willow only); Alterrain native. Carrier 10.9 lb. MSRP $230 kept as fallback.",
           "image": "images/britax-b-safe-gen2.jpg",
@@ -273,14 +319,20 @@
             "rearFacingLengthIn": 26.4,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
-            "safety": "steel anti-rebound bar + rigid LATCH + side-impact (SafePlus); required top tether"
+            "safety": "steel anti-rebound bar + rigid LATCH + side-impact (SafePlus); required top tether",
+            "maxHeightIn": 30,
+            "maxWeightLb": 30,
+            "convertsToToddler": false
           },
           "scores": {
             "fit": 4,
             "weight": 4,
             "compat": 3,
             "safety": 4,
-            "price": 4
+            "price": 4,
+            "growthheight": 2,
+            "growthweight": 3,
+            "growthlongevity": 2
           },
           "notes": "VERIFIED only on Alterrain list (via $99.99 Maxi-Cosi-footprint adapter), NOT Wayfinder (stub overstated). Light 9 lb base trim, narrow, baseless install. Widely OOS; MSRP $250 kept as fallback.",
           "image": "images/diono-liteclik-30.png",
@@ -325,14 +377,20 @@
             "rearFacingLengthIn": 28.9,
             "fitsWayfinder": true,
             "fitsAlterrain": true,
-            "safety": "side-impact protection (SIP) + ClimaFlow shell; no load leg / anti-rebound"
+            "safety": "side-impact protection (SIP) + ClimaFlow shell; no load leg / anti-rebound",
+            "maxHeightIn": 32,
+            "maxWeightLb": 30,
+            "convertsToToddler": false
           },
           "scores": {
             "fit": 4,
             "weight": 4,
             "compat": 5,
             "safety": 3,
-            "price": 4
+            "price": 4,
+            "growthheight": 4,
+            "growthweight": 3,
+            "growthlongevity": 3
           },
           "notes": "Light (9 lb), fits both BOB strollers, well-priced (~$239). Safety is mid — side-impact only, no load leg/anti-rebound.",
           "image": "images/maxi-cosi-mico-luxe.png",
@@ -363,14 +421,20 @@
             "rearFacingLengthIn": 28.1,
             "fitsWayfinder": true,
             "fitsAlterrain": true,
-            "safety": "ClickTight install + ReboundReduce anti-rebound bar + side-impact (head/neck/torso); SafeWash"
+            "safety": "ClickTight install + ReboundReduce anti-rebound bar + side-impact (head/neck/torso); SafeWash",
+            "maxHeightIn": 32,
+            "maxWeightLb": 30,
+            "convertsToToddler": false
           },
           "scores": {
             "fit": 3,
             "weight": 3,
             "compat": 5,
             "safety": 4,
-            "price": 2
+            "price": 2,
+            "growthheight": 4,
+            "growthweight": 3,
+            "growthlongevity": 3
           },
           "notes": "ClickTight + anti-rebound + side-impact; fits both BOB strollers (Wayfinder universal + Alterrain native). Carrier 9.3 lb. Sold out ~$279.99; MSRP $380 kept as fallback.",
           "image": "images/britax-willow-brook-s.jpg",
@@ -408,14 +472,20 @@
             "rearFacingLengthIn": 29,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
-            "safety": "anti-rebound bar + Safety Surround side-impact; no load leg"
+            "safety": "anti-rebound bar + Safety Surround side-impact; no load leg",
+            "maxHeightIn": 32,
+            "maxWeightLb": 35,
+            "convertsToToddler": false
           },
           "scores": {
             "fit": 3,
             "weight": 3,
             "compat": 3,
             "safety": 4,
-            "price": 4
+            "price": 4,
+            "growthheight": 4,
+            "growthweight": 5,
+            "growthlongevity": 4
           },
           "notes": "Adds anti-rebound bar + side-impact over the Lite LX; heavier (10 lb), bigger footprint. Alterrain only. ~$240.",
           "image": "images/graco-snugride-snugfit-35-dlx.jpg",
@@ -446,14 +516,21 @@
             "rearFacingLengthIn": 28,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
-            "safety": "extended rear-facing to ~2 yr; anti-rebound bar + EPS side-impact; FAA-approved"
+            "safety": "extended rear-facing to ~2 yr; anti-rebound bar + EPS side-impact; FAA-approved",
+            "maxHeightIn": 35,
+            "maxWeightLb": 35,
+            "convertsToToddler": true,
+            "maxAgeMonths": 24
           },
           "scores": {
             "fit": 2,
             "weight": 1,
             "compat": 3,
             "safety": 4,
-            "price": 3
+            "price": 3,
+            "growthheight": 5,
+            "growthweight": 5,
+            "growthlongevity": 5
           },
           "notes": "Extended rear-facing to ~2 yr → large footprint (watch Tacoma fit) and heaviest non-Doona carrier (12.3 lb). Alterrain only. ~$330.",
           "image": "images/chicco-fit2.jpg",
@@ -491,14 +568,20 @@
             "rearFacingLengthIn": 25.8,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
-            "safety": "no-rethread harness + side-impact (EPP headrest) + rebound carry-handle position; FR-free"
+            "safety": "no-rethread harness + side-impact (EPP headrest) + rebound carry-handle position; FR-free",
+            "maxHeightIn": 32,
+            "maxWeightLb": 30,
+            "convertsToToddler": false
           },
           "scores": {
             "fit": 3,
             "weight": 3,
             "compat": 3,
             "safety": 4,
-            "price": 3
+            "price": 3,
+            "growthheight": 4,
+            "growthweight": 3,
+            "growthlongevity": 3
           },
           "notes": "Verified current model is the Mesa V3; carrier 9.9 lb; no-rethread harness + side-impact, FR-free, GREENGUARD Gold. Alterrain only. ~$350.",
           "image": "images/uppababy-mesa-v2.jpg",
@@ -536,14 +619,20 @@
             "rearFacingLengthIn": 26,
             "fitsWayfinder": false,
             "fitsAlterrain": true,
-            "safety": "load leg + anti-rebound bar + Kinetic Pods side-impact (SIP); EPS foam"
+            "safety": "load leg + anti-rebound bar + Kinetic Pods side-impact (SIP); EPS foam",
+            "maxHeightIn": 32,
+            "maxWeightLb": 30,
+            "convertsToToddler": false
           },
           "scores": {
             "fit": 3,
             "weight": 3,
             "compat": 3,
             "safety": 5,
-            "price": 3
+            "price": 3,
+            "growthheight": 4,
+            "growthweight": 3,
+            "growthlongevity": 3
           },
           "notes": "Load leg + anti-rebound bar + side-impact (Kinetic Pods) — top safety. Carrier 10 lb; Alterrain only. ~$359 (Amazon).",
           "image": "images/peg-perego-primo-viaggio-4-35-nido.jpg",
@@ -580,14 +669,20 @@
             "carrierLb": 9,
             "fitsWayfinder": false,
             "fitsAlterrain": false,
-            "safety": "energy-absorbing load leg + rigid LATCH; flame-retardant-free fabric"
+            "safety": "energy-absorbing load leg + rigid LATCH; flame-retardant-free fabric",
+            "maxHeightIn": 32,
+            "maxWeightLb": 30,
+            "convertsToToddler": false
           },
           "scores": {
             "fit": 5,
             "weight": 4,
             "compat": 1,
             "safety": 5,
-            "price": 2
+            "price": 2,
+            "growthheight": 4,
+            "growthweight": 3,
+            "growthlongevity": 3
           },
           "notes": "FLAG RESOLVED — genuinely on neither BOB Wayfinder/Alterrain list. Here for best-in-class compact Tacoma fit + load-leg/rigid-LATCH safety. Street ~$499.99; the $300 ANB listing is open-box & baseless (marked out-of-stock so it does not drive best-price). MSRP $449 kept as fallback.",
           "image": "images/clek-liing.jpg",
@@ -625,14 +720,21 @@
             "rearFacingLengthIn": 26.5,
             "fitsWayfinder": false,
             "fitsAlterrain": false,
-            "safety": "lie-flat recline + load-leg base + Linear Side-impact (L.S.P.); SensorSafe clip"
+            "safety": "lie-flat recline + load-leg base + Linear Side-impact (L.S.P.); SensorSafe clip",
+            "maxHeightIn": 32,
+            "maxWeightLb": 35,
+            "convertsToToddler": false,
+            "maxAgeMonths": 18
           },
           "scores": {
             "fit": 2,
             "weight": 2,
             "compat": 1,
             "safety": 5,
-            "price": 2
+            "price": 2,
+            "growthheight": 4,
+            "growthweight": 5,
+            "growthlongevity": 4
           },
           "notes": "FLAG RESOLVED — Cloud G does NOT share Cloud Q’s BOB adapter; both fits flip FALSE. Lie-flat recline (larger footprint) + load leg + L.S.P. Being phased out for Cloud G Pro; ~$499.95. Carrier 11 lb.",
           "image": "images/cybex-cloud-g-lux.jpg",
@@ -677,14 +779,20 @@
             "rearFacingLengthIn": 26,
             "fitsWayfinder": false,
             "fitsAlterrain": false,
-            "safety": "integrated seat→stroller; 5-pt harness + anti-rebound LATCH base; NHTSA 5-star"
+            "safety": "integrated seat→stroller; 5-pt harness + anti-rebound LATCH base; NHTSA 5-star",
+            "maxHeightIn": 32,
+            "maxWeightLb": 30,
+            "convertsToToddler": false
           },
           "scores": {
             "fit": 2,
             "weight": 1,
             "compat": 1,
             "safety": 4,
-            "price": 1
+            "price": 1,
+            "growthheight": 4,
+            "growthweight": 3,
+            "growthlongevity": 3
           },
           "notes": "Wildcard: integrated car-seat→stroller, so BOB compat is N/A (scored low — won’t pair with your BOB). Heaviest carrier (16.5 lb), large footprint, ~$650. Competes with the stroller module.",
           "image": "images/doona-car-seat-stroller.jpg",
