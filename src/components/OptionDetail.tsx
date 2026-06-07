@@ -10,12 +10,28 @@ import {
   weightedTotal,
 } from '../lib/scoring';
 import { criterionEvidence, optionFacts } from '../lib/evidence';
+import {
+  allCriterionRanks,
+  percentileLabel,
+  rankLabel,
+  rankOf,
+  rankTier,
+  type RankTier,
+} from '../lib/ranking';
+import { tagHint, tagIcon, tagLabel } from '../lib/tags';
 import { useStore } from '../lib/store';
 import Thumb from './Thumb';
 
 const card = 'rounded-lg border border-slate-200 bg-white p-4';
 const cardTitle = 'mb-3 text-sm font-medium text-slate-600';
 const clampScore = (v: number) => Math.max(0, Math.min(5, v));
+
+/** Colour for a per-criterion standing pill, by tier. */
+const TIER_PILL: Record<RankTier, string> = {
+  top: 'bg-emerald-100 text-emerald-700',
+  mid: 'bg-slate-100 text-slate-600',
+  weak: 'bg-amber-100 text-amber-700',
+};
 
 /**
  * Read-only "drill-down" page for a single option: describes the product, the
@@ -38,6 +54,10 @@ export default function OptionDetail({
   const facts = optionFacts(option);
   const sources = option.priceSources ?? [];
   const best = bestSource(option);
+  const tags = option.tags ?? [];
+  // Standing across the whole field — the headline metric, not the raw index.
+  const standing = rankOf(module, option);
+  const critRanks = allCriterionRanks(module);
 
   return (
     <div className="space-y-6">
@@ -66,6 +86,18 @@ export default function OptionDetail({
           <p className="mt-1 text-sm text-slate-500">{module.label}</p>
 
           <div className="mt-4 flex flex-wrap gap-6">
+            {/* Standing leads: where this product sits in the whole field. */}
+            <div>
+              <div className="text-xs uppercase tracking-wide text-slate-400">
+                Overall rank
+              </div>
+              <div className="text-xl font-semibold tabular-nums text-indigo-600">
+                {rankLabel(standing)}
+              </div>
+              <div className="text-xs text-slate-400">
+                {percentileLabel(standing.percentile)} percentile of the field
+              </div>
+            </div>
             <div>
               <div className="text-xs uppercase tracking-wide text-slate-400">Best price</div>
               <div className="text-xl font-semibold tabular-nums text-slate-800">
@@ -74,8 +106,8 @@ export default function OptionDetail({
               {best && <div className="text-xs text-slate-400">at {best.retailer}</div>}
             </div>
             <div>
-              <div className="text-xs uppercase tracking-wide text-slate-400">Weighted score</div>
-              <div className="text-xl font-semibold tabular-nums text-indigo-600">
+              <div className="text-xs uppercase tracking-wide text-slate-400">Match index</div>
+              <div className="text-xl font-semibold tabular-nums text-slate-700">
                 {total}
                 <span className="text-sm font-normal text-slate-400"> / {max}</span>
               </div>
@@ -84,6 +116,22 @@ export default function OptionDetail({
               </div>
             </div>
           </div>
+
+          {/* Material / certification tags (non-toxic, flame-retardant-free, …). */}
+          {tags.length > 0 && (
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {tags.map((t) => (
+                <span
+                  key={t}
+                  title={tagHint(t)}
+                  className="inline-flex items-center gap-1 rounded-full bg-lime-50 px-2 py-0.5 text-xs font-medium text-lime-800 ring-1 ring-lime-200"
+                >
+                  <span aria-hidden>{tagIcon(t)}</span>
+                  {tagLabel(t)}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </header>
 
@@ -110,10 +158,12 @@ export default function OptionDetail({
       {/* Scoring against requirements — score + the literal value that motivates it */}
       <section className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
         <div className="border-b border-slate-100 px-4 py-3">
-          <h3 className="text-sm font-medium text-slate-600">Scoring against requirements</h3>
+          <h3 className="text-sm font-medium text-slate-600">
+            Scoring against requirements — and what drives each one
+          </h3>
           <p className="mt-0.5 text-xs text-slate-400">
-            Each requirement's 0–5 score (editable — edits save instantly) with the
-            actual product value behind it.
+            Each requirement's 0–5 score (editable — edits save instantly), where this
+            product ranks against the field on it, and the actual product fact behind it.
           </p>
         </div>
         <table className="w-full text-sm">
@@ -122,6 +172,7 @@ export default function OptionDetail({
               <th className="px-4 py-2 font-medium">Requirement</th>
               <th className="px-3 py-2 text-center font-medium">Weight</th>
               <th className="px-3 py-2 text-center font-medium">Score</th>
+              <th className="px-3 py-2 text-center font-medium">Field rank</th>
               <th className="px-3 py-2 text-right font-medium">Weighted</th>
               <th className="px-4 py-2 font-medium">Why this score</th>
             </tr>
@@ -130,6 +181,7 @@ export default function OptionDetail({
             {module.criteria.map((c) => {
               const score = option.scores[c.id] ?? 0;
               const evidence = criterionEvidence(c, option);
+              const cr = critRanks[c.id]?.[option.id];
               return (
                 <tr key={c.id} className="border-b border-slate-100 last:border-0 align-top">
                   <td className="px-4 py-2 font-medium text-slate-700">{c.label}</td>
@@ -147,6 +199,18 @@ export default function OptionDetail({
                       className="w-16 rounded-md border border-slate-300 px-2 py-1 text-center font-semibold tabular-nums text-slate-700"
                     />
                   </td>
+                  <td className="px-3 py-2 text-center">
+                    {cr ? (
+                      <span
+                        title={`${percentileLabel(cr.percentile)} percentile on ${c.label}`}
+                        className={`inline-block rounded-full px-2 py-0.5 text-xs font-semibold tabular-nums ${TIER_PILL[rankTier(cr)]}`}
+                      >
+                        {rankLabel(cr)}
+                      </span>
+                    ) : (
+                      <span className="text-slate-300">—</span>
+                    )}
+                  </td>
                   <td className="px-3 py-2 text-right font-semibold tabular-nums text-slate-700">
                     {c.weight * score}
                   </td>
@@ -158,7 +222,7 @@ export default function OptionDetail({
             })}
             {module.criteria.length === 0 && (
               <tr>
-                <td colSpan={5} className="px-4 py-3 text-slate-400">
+                <td colSpan={6} className="px-4 py-3 text-slate-400">
                   No requirements defined for this module yet.
                 </td>
               </tr>
@@ -167,7 +231,7 @@ export default function OptionDetail({
           {module.criteria.length > 0 && (
             <tfoot>
               <tr className="border-t border-slate-200 bg-slate-50 font-semibold text-slate-800">
-                <td className="px-4 py-2" colSpan={3}>
+                <td className="px-4 py-2" colSpan={4}>
                   Weighted total
                 </td>
                 <td className="px-3 py-2 text-right tabular-nums">

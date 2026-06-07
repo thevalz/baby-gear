@@ -95,6 +95,8 @@ src/
   lib/
     types.ts           Data model (Config / Module / Option / PriceSource / Criterion / InventoryItem)
     scoring.ts         weightedTotal / maxScore / percent / topPick / bestPrice / bestSource
+    ranking.ts         Rank-order + percentile across the field (overall & per-criterion)
+    tags.ts            Material/certification tag labels + module tag list + filter
     compatibility.ts   Data-driven cross-module compatibility map + flag engine
     sync.ts            Repo-as-source-of-truth pricing merge (dataVersion)
     assets.ts          Base-path-aware asset URL helper (for images)
@@ -114,7 +116,7 @@ docs/
 ```
 Criterion     { id, label, weight (1–5) }
 PriceSource   { retailer, price, url, inStock?, checkedAt (ISO date) }
-Option        { id, moduleId, name, price, image?, priceSources?[], attributes {…}, scores { criterionId: 1–5 }, notes }
+Option        { id, moduleId, name, price, image?, priceSources?[], endorsements?[], tags?[], attributes {…}, scores { criterionId: 1–5 }, notes }
 Module        { id, label, budget, selectedOptionId, criteria[], options[] }
 InventoryItem { id, name, moduleId, status: keep|return|undecided, refund, notes }
 Config        { overallBudget, adapterCost }
@@ -140,10 +142,38 @@ changes required.
 
 ## Scoring
 
+The weighted total is the engine, but a bare index (`106/120`) is opaque — it
+doesn't tell you whether that's best-in-class or middle of the pack. So the app
+**leads with rank-order / percentile across the whole field** and keeps the
+index as a secondary "match" number.
+
 - `weightedTotal(option)` = Σ over criteria of `weight × score`
 - `maxScore(module)` = `5 × Σ(weights)`
 - `percent` = `weightedTotal / maxScore`
 - Top pick per module = option with the max weighted total
+
+### Rank & percentile (`src/lib/ranking.ts`)
+
+- `overallRanks(module)` — every option's standing by weighted total, as
+  `{ rank, of, percentile }` (competition ranking: ties share the lower rank).
+- `criterionRanks(module, criterionId)` / `allCriterionRanks(module)` — the same
+  standing **per criterion**, so the drill-down can say "Safety: **#1 of 15**"
+  and you see *which dimensions* a product leads or lags on, not just a total.
+- `percentile` runs 100 (best/tied-best) → 0 (worst); `rankTier` buckets it into
+  top / mid / weak for colour-coding.
+
+The comparison table sorts by rank by default and shows a per-row rank badge;
+the drill-down pairs each criterion's rank with the literal fact behind it
+(`criterionEvidence`) — that's the "what drives the score" view.
+
+### Tags (`src/lib/tags.ts`)
+
+Options carry `tags[]` — material / certification facets like
+`flame-retardant-free`, `greenguard-gold`, `non-toxic`, `merino-wool` — the
+things "MAHA" parents shop for specifically. The comparison view renders them as
+chips and offers an **AND-combined tag filter + name search** so the database is
+navigable. Tags are sourced (with citations) like prices; coverage starts
+partial and a sourcing pass expands it.
 
 ## Persistence
 

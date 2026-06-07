@@ -140,6 +140,16 @@ export interface Option {
   reviewUrl?: string;
   /** Critic/creator endorsements, aggregated into a Rotten-Tomatoes-style score. */
   endorsements?: Endorsement[];
+  /**
+   * Material / certification tags a shopper filters on — e.g. "non-toxic",
+   * "flame-retardant-free", "greenguard-gold", "plastic-free", "organic". These
+   * are the attributes "MAHA" parents look for specifically, so they're a
+   * first-class, sourced facet rather than buried in prose. Lower-case, kebab
+   * slugs; see TAG_LABELS in lib/tags.ts for display labels. Sourced like prices
+   * (a research pass fills them with citations) — coverage is intentionally
+   * partial until then.
+   */
+  tags?: string[];
   attributes: OptionAttributes;
   scores: Record<string, number>; // criterionId -> 1–5
   notes?: string;

@@ -34,6 +34,8 @@ function refreshOption(userOpt: Option, seedOpt: Option, newCriterionIds: Set<st
     ...(seedOpt.price !== undefined ? { price: seedOpt.price } : {}),
     ...(seedOpt.image !== undefined ? { image: seedOpt.image } : {}),
     ...(seedOpt.priceSources !== undefined ? { priceSources: seedOpt.priceSources } : {}),
+    ...(seedOpt.endorsements !== undefined ? { endorsements: seedOpt.endorsements } : {}),
+    ...(seedOpt.tags !== undefined ? { tags: seedOpt.tags } : {}),
     ...(seedOpt.attributes !== undefined
       ? { attributes: { ...userOpt.attributes, ...seedOpt.attributes } }
       : {}),

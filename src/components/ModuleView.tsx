@@ -22,6 +22,14 @@ import {
   weightedTotal,
 } from '../lib/scoring';
 import { optionSummary, type SummaryChip } from '../lib/evidence';
+import {
+  overallRanks,
+  percentileLabel,
+  rankLabel,
+  rankTier,
+  type RankTier,
+} from '../lib/ranking';
+import { moduleTags, optionMatchesTags, tagHint, tagIcon, tagLabel } from '../lib/tags';
 import Thumb from './Thumb';
 
 const clampScore = (v: number) => Math.max(0, Math.min(5, v));
@@ -31,6 +39,13 @@ const CHIP_TONE: Record<SummaryChip['tone'], string> = {
   good: 'bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200',
   bad: 'bg-red-50 text-red-700 ring-1 ring-red-200',
   neutral: 'bg-slate-100 text-slate-600 ring-1 ring-slate-200',
+};
+
+/** Colour for the field-rank badge, by tier. */
+const RANK_TIER_STYLE: Record<RankTier, string> = {
+  top: 'bg-emerald-100 text-emerald-700',
+  mid: 'bg-slate-100 text-slate-600',
+  weak: 'bg-amber-100 text-amber-700',
 };
 
 const numInput = 'rounded-md border border-slate-300 px-2 py-1 text-right tabular-nums';
@@ -168,7 +183,7 @@ function PriceSourcesEditor({ module, option }: { module: Module; option: Option
  * What the options table is sorted by: a special column key or a criterion id
  * (so every rating column is sortable too).
  */
-type SortKey = 'name' | 'price' | 'weighted' | 'percent' | (string & {});
+type SortKey = 'name' | 'price' | 'rank' | 'weighted' | 'percent' | (string & {});
 interface SortState {
   key: SortKey;
   dir: 'asc' | 'desc';
@@ -229,28 +244,50 @@ export default function ModuleView({
   const setScore = useStore((s) => s.setScore);
 
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  // Default to the ranked view (highest weighted total first); clicking any
-  // column header re-sorts. Numeric columns start high→low, name/price low→high.
-  const [sort, setSort] = useState<SortState>({ key: 'weighted', dir: 'desc' });
+  // Default to the ranked view (#1 first); clicking any column header re-sorts.
+  // Rank/name/price start ascending, the rest (scores, %) high→low.
+  const [sort, setSort] = useState<SortState>({ key: 'rank', dir: 'asc' });
+  // Navigability filters: free-text name search + AND-combined tag chips.
+  const [query, setQuery] = useState('');
+  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
 
   const max = maxScore(module.criteria);
   const best = topPick(module);
+  // Standing of every option across the whole field (independent of any filter).
+  const ranks = useMemo(() => overallRanks(module), [module]);
+  const availableTags = useMemo(() => moduleTags(module), [module]);
+  const ascByDefault = (key: SortKey) => key === 'name' || key === 'price' || key === 'rank';
   const onSort = (key: SortKey) =>
     setSort((s) =>
       s.key === key
         ? { key, dir: s.dir === 'asc' ? 'desc' : 'asc' }
-        : { key, dir: key === 'name' || key === 'price' ? 'asc' : 'desc' },
+        : { key, dir: ascByDefault(key) ? 'asc' : 'desc' },
     );
 
+  const toggleTag = (tag: string) =>
+    setSelectedTags((prev) => {
+      const next = new Set(prev);
+      if (next.has(tag)) next.delete(tag);
+      else next.add(tag);
+      return next;
+    });
+
   const sortedOptions = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const filtered = module.options.filter(
+      (o) =>
+        (q === '' || (o.name || '').toLowerCase().includes(q)) &&
+        optionMatchesTags(o, selectedTags),
+    );
     const value = (o: Option): number | string => {
       if (sort.key === 'name') return (o.name || '').toLowerCase();
       if (sort.key === 'price') return bestPrice(o);
+      if (sort.key === 'rank') return ranks[o.id]?.rank ?? Infinity;
       if (sort.key === 'weighted') return weightedTotal(o, module.criteria);
       if (sort.key === 'percent') return percent(o, module.criteria);
       return o.scores[sort.key] ?? 0; // a criterion id → its 0–5 rating
     };
-    return [...module.options].sort((a, b) => {
+    return filtered.sort((a, b) => {
       const av = value(a);
       const bv = value(b);
       const cmp =
@@ -259,7 +296,7 @@ export default function ModuleView({
           : av - bv;
       return sort.dir === 'asc' ? cmp : -cmp;
     });
-  }, [module.options, module.criteria, sort]);
+  }, [module.options, module.criteria, sort, query, selectedTags, ranks]);
 
   const chartData = module.options.map((o) => ({
     name: o.name || '(unnamed)',
@@ -267,7 +304,10 @@ export default function ModuleView({
     isTop: best?.id === o.id,
   }));
 
-  const colSpan = module.criteria.length + 6;
+  const colSpan = module.criteria.length + 7;
+  const filteredCount = sortedOptions.length;
+  const totalCount = module.options.length;
+  const filtersActive = query.trim() !== '' || selectedTags.size > 0;
 
   return (
     <div className="space-y-6">
@@ -346,6 +386,71 @@ export default function ModuleView({
         )}
       </section>
 
+      {/* Filter / navigate the field: name search + material/cert tag chips */}
+      <section className="rounded-lg border border-slate-200 bg-white p-4">
+        <div className="flex flex-wrap items-center gap-3">
+          <label className="flex items-center gap-2 text-sm text-slate-500">
+            <span className="text-slate-400">🔎</span>
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder={`Search ${module.label.toLowerCase()}…`}
+              className={`w-56 ${textInput}`}
+            />
+          </label>
+
+          {availableTags.length > 0 && (
+            <div className="flex flex-wrap items-center gap-1.5">
+              <span className="text-xs uppercase tracking-wide text-slate-400">Tags</span>
+              {availableTags.map((t) => {
+                const on = selectedTags.has(t);
+                return (
+                  <button
+                    key={t}
+                    type="button"
+                    onClick={() => toggleTag(t)}
+                    title={tagHint(t)}
+                    aria-pressed={on}
+                    className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ring-1 transition ${
+                      on
+                        ? 'bg-lime-600 text-white ring-lime-600'
+                        : 'bg-lime-50 text-lime-800 ring-lime-200 hover:bg-lime-100'
+                    }`}
+                  >
+                    <span aria-hidden>{tagIcon(t)}</span>
+                    {tagLabel(t)}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          <div className="ml-auto flex items-center gap-3 text-xs text-slate-400">
+            <span>
+              {filtersActive ? `${filteredCount} of ${totalCount}` : `${totalCount}`} option
+              {totalCount === 1 ? '' : 's'}
+            </span>
+            {filtersActive && (
+              <button
+                onClick={() => {
+                  setQuery('');
+                  setSelectedTags(new Set());
+                }}
+                className="rounded-md border border-slate-200 px-2 py-1 text-slate-500 hover:bg-slate-100"
+              >
+                Clear filters
+              </button>
+            )}
+          </div>
+        </div>
+        {availableTags.length === 0 && (
+          <p className="mt-2 text-xs text-slate-400">
+            No material/certification tags sourced for this category yet (e.g. non-toxic,
+            flame-retardant-free, GREENGUARD Gold). A sourcing pass can add them.
+          </p>
+        )}
+      </section>
+
       {/* Options table (editable) */}
       <section className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
         <table className="w-full text-sm">
@@ -357,6 +462,9 @@ export default function ModuleView({
               <th className="px-3 py-2 text-left font-medium">Key facts</th>
               <SortHeader sortKey="price" sort={sort} onSort={onSort} align="right">
                 Best price
+              </SortHeader>
+              <SortHeader sortKey="rank" sort={sort} onSort={onSort} align="center">
+                Rank
               </SortHeader>
               {module.criteria.map((c) => (
                 <SortHeader key={c.id} sortKey={c.id} sort={sort} onSort={onSort} align="center">
@@ -413,7 +521,7 @@ export default function ModuleView({
                       </div>
                     </td>
                     <td className="px-3 py-2">
-                      <div className="flex max-w-[14rem] flex-wrap gap-1">
+                      <div className="flex max-w-[15rem] flex-wrap gap-1">
                         {optionSummary(o).map((chip) => (
                           <span
                             key={chip.key}
@@ -422,7 +530,17 @@ export default function ModuleView({
                             {chip.text}
                           </span>
                         ))}
-                        {optionSummary(o).length === 0 && (
+                        {(o.tags ?? []).map((t) => (
+                          <span
+                            key={t}
+                            title={tagHint(t)}
+                            className="inline-flex items-center gap-0.5 whitespace-nowrap rounded-full bg-lime-50 px-2 py-0.5 text-xs font-medium text-lime-800 ring-1 ring-lime-200"
+                          >
+                            <span aria-hidden>{tagIcon(t)}</span>
+                            {tagLabel(t)}
+                          </span>
+                        ))}
+                        {optionSummary(o).length === 0 && (o.tags ?? []).length === 0 && (
                           <span className="text-xs text-slate-300">—</span>
                         )}
                       </div>
@@ -440,6 +558,23 @@ export default function ModuleView({
                           {expanded ? '▴' : '▾'}
                         </span>
                       </button>
+                    </td>
+                    <td className="px-3 py-2 text-center">
+                      {(() => {
+                        const r = ranks[o.id];
+                        if (!r) return <span className="text-slate-300">—</span>;
+                        return (
+                          <span
+                            title={`${percentileLabel(r.percentile)} percentile of ${r.of}`}
+                            className={`inline-flex flex-col items-center rounded-md px-2 py-0.5 text-xs font-semibold tabular-nums ${RANK_TIER_STYLE[rankTier(r)]}`}
+                          >
+                            <span>{rankLabel(r)}</span>
+                            <span className="text-[10px] font-normal opacity-75">
+                              {percentileLabel(r.percentile)} pct
+                            </span>
+                          </span>
+                        );
+                      })()}
                     </td>
                     {module.criteria.map((c) => (
                       <td key={c.id} className="px-3 py-2 text-center">
@@ -483,6 +618,22 @@ export default function ModuleView({
               <tr>
                 <td colSpan={colSpan} className="px-3 py-3 text-slate-400">
                   No options yet — add one below.
+                </td>
+              </tr>
+            )}
+            {module.options.length > 0 && sortedOptions.length === 0 && (
+              <tr>
+                <td colSpan={colSpan} className="px-3 py-3 text-slate-400">
+                  No options match the current filters.{' '}
+                  <button
+                    onClick={() => {
+                      setQuery('');
+                      setSelectedTags(new Set());
+                    }}
+                    className="text-indigo-600 hover:underline"
+                  >
+                    Clear filters
+                  </button>
                 </td>
               </tr>
             )}

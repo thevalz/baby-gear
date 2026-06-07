@@ -11,6 +11,8 @@ import {
   weightedTotal,
 } from '../lib/scoring';
 import { optionSummary } from '../lib/evidence';
+import { overallRanks, percentileLabel, rankLabel, rankTier, type Rank } from '../lib/ranking';
+import { tagHint, tagIcon, tagLabel } from '../lib/tags';
 import { assetUrl } from '../lib/assets';
 import { computeCompatibilityFlags, type FlagSeverity } from '../lib/compatibility';
 import { criticScore, isFresh } from '../lib/endorsements';
@@ -59,15 +61,23 @@ const pricePerPoint = (o: Option, m: Module): number => {
 };
 
 /** A gallery card for one option: image, score bar, price & value, key facts. */
+const RANK_TIER_STYLE: Record<ReturnType<typeof rankTier>, string> = {
+  top: 'bg-emerald-100 text-emerald-700',
+  mid: 'bg-slate-100 text-slate-600',
+  weak: 'bg-amber-100 text-amber-700',
+};
+
 function OptionCard({
   module,
   option,
+  rank,
   isTop,
   isBestValue,
   onOpen,
 }: {
   module: Module;
   option: Option;
+  rank?: Rank;
   isTop: boolean;
   isBestValue: boolean;
   onOpen: () => void;
@@ -80,6 +90,7 @@ function OptionCard({
   const img = assetUrl(option.image);
   const chips = optionSummary(option).slice(0, 4);
   const critics = criticScore(option);
+  const tags = option.tags ?? [];
 
   return (
     <button
@@ -104,6 +115,14 @@ function OptionCard({
       <div className="flex items-start justify-between gap-2">
         <span className="font-medium leading-tight text-slate-800">{option.name || '(unnamed)'}</span>
         <div className="flex shrink-0 flex-col items-end gap-1">
+          {rank && (
+            <span
+              title={`${percentileLabel(rank.percentile)} percentile of ${rank.of}`}
+              className={`rounded-full px-2 py-0.5 text-[10px] font-semibold tabular-nums ${RANK_TIER_STYLE[rankTier(rank)]}`}
+            >
+              {rankLabel(rank)}
+            </span>
+          )}
           {isTop && (
             <span className="rounded-full bg-indigo-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-indigo-700">
               Top pick
@@ -160,6 +179,22 @@ function OptionCard({
               className={`whitespace-nowrap rounded-full px-2 py-0.5 text-[11px] ${CHIP_TONE[chip.tone]}`}
             >
               {chip.text}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {/* Material / certification tags */}
+      {tags.length > 0 && (
+        <div className="flex flex-wrap gap-1">
+          {tags.map((t) => (
+            <span
+              key={t}
+              title={tagHint(t)}
+              className="inline-flex items-center gap-0.5 whitespace-nowrap rounded-full bg-lime-50 px-2 py-0.5 text-[11px] font-medium text-lime-800 ring-1 ring-lime-200"
+            >
+              <span aria-hidden>{tagIcon(t)}</span>
+              {tagLabel(t)}
             </span>
           ))}
         </div>
@@ -404,6 +439,7 @@ export default function SummaryDashboard({
         const ranked = rankedOptions(m);
         if (ranked.length === 0) return null;
         const top = topPick(m);
+        const ranks = overallRanks(m);
         // Best value = lowest $/point among options that have both a price and score.
         const bestValue = ranked.reduce<Option | null>((bestSoFar, o) => {
           if (pricePerPoint(o, m) === Infinity) return bestSoFar;
@@ -424,6 +460,7 @@ export default function SummaryDashboard({
                   key={o.id}
                   module={m}
                   option={o}
+                  rank={ranks[o.id]}
                   isTop={top?.id === o.id}
                   isBestValue={bestValue?.id === o.id}
                   onOpen={() => onOpenDetail(m.id, o.id)}

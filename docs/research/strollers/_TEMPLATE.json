@@ -7,6 +7,9 @@
 
   "image": "images/REPLACE-with-option-id.jpg",
 
+  "_tags_comment": "Material/certification facets to fold into the option's tags[]. ONLY include a slug you can cite (record the source in sources[] below). Known slugs: flame-retardant-free, greenguard-gold, non-toxic, plastic-free, organic, merino-wool. Omit or leave [] if none verified.",
+  "tags": [],
+
   "priceSources": [
     {
       "retailer": "Amazon",

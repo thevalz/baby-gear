@@ -1,5 +1,5 @@
 {
-  "dataVersion": 7,
+  "dataVersion": 8,
   "config": {
     "overallBudget": 1000,
     "adapterCost": 100,
@@ -64,6 +64,7 @@
           "moduleId": "car-seat",
           "name": "Nuna Pipa Aire RX",
           "price": 380,
+          "tags": ["flame-retardant-free", "greenguard-gold"],
           "attributes": {
             "carrierLb": 6.2,
             "rearFacingLengthIn": 27.25,
@@ -581,6 +582,7 @@
           "moduleId": "car-seat",
           "name": "UPPAbaby Mesa V3",
           "price": 400,
+          "tags": ["flame-retardant-free", "greenguard-gold"],
           "attributes": {
             "carrierLb": 9.9,
             "rearFacingLengthIn": 25.8,
@@ -683,6 +685,7 @@
           "moduleId": "car-seat",
           "name": "Clek Liing",
           "price": 449,
+          "tags": ["flame-retardant-free", "greenguard-gold", "merino-wool"],
           "attributes": {
             "carrierLb": 9,
             "fitsWayfinder": false,

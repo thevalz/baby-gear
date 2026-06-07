@@ -47,6 +47,28 @@ Per-product pricing lives on each `Option` in
 }
 ```
 
+### Material / certification tags
+
+Options also carry an optional `tags[]` of lower-case kebab slugs — the
+material/certification facets some parents shop on specifically (non-toxic,
+flame-retardant-free, GREENGUARD Gold, plastic-free, organic, merino-wool). The
+comparison view renders them as chips and filters on them.
+
+```jsonc
+{
+  "id": "clek-liing",
+  "tags": ["flame-retardant-free", "greenguard-gold", "merino-wool"]
+}
+```
+
+Treat tags like prices — **only assert what you can cite**. Curated slugs and
+their display labels live in [`src/lib/tags.ts`](../src/lib/tags.ts) (`TAG_META`);
+add a new slug there to give it a friendly label + tooltip, otherwise it renders
+title-cased. Coverage is intentionally partial today (only a few seats with
+well-documented certifications are tagged) — a sourcing pass should verify each
+manufacturer/UL claim and expand it, recording the source URL in the option's
+`notes` or the staging fragment's `sources[]`.
+
 Rules:
 
 - The app shows the **lowest in-stock** `priceSources` price as the "best
