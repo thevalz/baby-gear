@@ -61,6 +61,20 @@ describe('mergePricingFromSeed', () => {
     expect(o.image).toBe('images/x.jpg'); // preserved, not clobbered
   });
 
+  it('folds newly-sourced attributes (e.g. rear-facing length) into the user copy', () => {
+    const persisted = state({
+      dataVersion: 1,
+      modules: [{ ...state({}).modules[0], options: [opt('x', { attributes: { carrierLb: 9, userNote: 'keep' } as unknown as Option['attributes'] })] }],
+    });
+    const seed = state({
+      dataVersion: 2,
+      modules: [{ ...state({}).modules[0], options: [opt('x', { attributes: { carrierLb: 9, rearFacingLengthIn: 27 } })] }],
+    });
+    const o = mergePricingFromSeed(persisted, seed).modules[0].options[0];
+    expect(o.attributes.rearFacingLengthIn).toBe(27); // sourced fact folded in
+    expect((o.attributes as Record<string, unknown>).userNote).toBe('keep'); // user-only key preserved
+  });
+
   it('appends newly-sourced options the user does not have yet', () => {
     const persisted = state({ dataVersion: 1 });
     const seed = state({

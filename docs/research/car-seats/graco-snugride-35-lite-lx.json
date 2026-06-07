@@ -40,7 +40,7 @@
 
     "bobWayfinderAdapter": "none — BOB has no Wayfinder Graco adapter (Wayfinder's universal adapter only serves Nuna/Cybex/Maxi-Cosi/Britax-Willow/Diono)",
     "bobAlterrainAdapter": "BOB Gear Single Jogging Stroller Adapter for Graco Infant Car Seats — $99.99 (fits Alterrain / Alterrain Pro)",
-    "rearFacingShellLengthIn": null,
+    "rearFacingShellLengthIn": 26,
     "tacomaFitNotes": "No direct Toyota Tacoma data found. Compact front-to-back with a ~17–17.5 in carrier width; reviewers call it a good pick for tight/small back seats and 3-across. Offers European (baseless) belt routing to save depth. Carrier is one of the lightest at 7.2 lb."
   },
 

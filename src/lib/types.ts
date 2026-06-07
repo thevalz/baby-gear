@@ -16,6 +16,8 @@ export interface OptionAttributes {
   // car-seat attributes
   carrierLb?: number;
   carrierLbVerify?: boolean;
+  /** Rear-facing installed/shell length (front-to-back footprint), inches. */
+  rearFacingLengthIn?: number;
   fitsWayfinder?: boolean;
   fitsAlterrain?: boolean;
   safety?: string;

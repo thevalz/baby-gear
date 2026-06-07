@@ -26,8 +26,13 @@ describe('criterionEvidence', () => {
     expect(criterionEvidence(crit('price'), nuna)).toBe('$650 at Nordstrom');
   });
 
+  it('shows the rear-facing footprint length behind the Tacoma-fit score', () => {
+    expect(criterionEvidence(crit('fit'), nuna)).toBe('27.25 in rear-facing footprint');
+  });
+
   it('returns null when no attribute maps to the criterion', () => {
-    expect(criterionEvidence(crit('fit'), nuna)).toBeNull();
+    const unmapped: Criterion = { id: 'aesthetics', label: 'Looks', weight: 1 };
+    expect(criterionEvidence(unmapped, nuna)).toBeNull();
   });
 
   it('keeps mapping after a criterion is renamed (matches by label keyword)', () => {
@@ -41,6 +46,7 @@ describe('optionFacts', () => {
     const facts = optionFacts(nuna);
     const byLabel = Object.fromEntries(facts.map((f) => [f.label, f.value]));
     expect(byLabel['Carrier weight']).toBe('6.2 lb');
+    expect(byLabel['Rear-facing length']).toBe('27.25 in');
     expect(byLabel['Fits BOB Wayfinder']).toBe('Yes');
     expect(byLabel['Fits BOB Alterrain']).toBe('Yes');
   });
@@ -51,6 +57,7 @@ describe('optionSummary', () => {
     const chips = optionSummary(nuna);
     const byKey = Object.fromEntries(chips.map((c) => [c.key, c]));
     expect(byKey.carrierLb).toMatchObject({ text: '6.2 lb', tone: 'neutral' });
+    expect(byKey.rearFacingLengthIn).toMatchObject({ text: '27.25" long', tone: 'neutral' });
     expect(byKey.fitsWayfinder).toMatchObject({ text: 'Wayfinder ✓', tone: 'good' });
     expect(byKey.fitsAlterrain).toMatchObject({ text: 'Alterrain ✓', tone: 'good' });
   });
