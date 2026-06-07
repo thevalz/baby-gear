@@ -1,0 +1,63 @@
+{
+  "_comment": "Staging fragment for ONE car-seat option. Filled by Batch B sourcing session. Do NOT edit seed.json — the integration pass folds this in. See ../../RESEARCH_PLAN.md.",
+
+  "id": "diono-liteclik-30",
+  "name": "Diono LiteClik 30 SafePlus",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/diono-liteclik-30.png",
+
+  "priceSources": [
+    {
+      "retailer": "Diono (DTC) — LiteClik 30 R + base",
+      "price": 189.99,
+      "url": "https://store.diono.com/liteclik-30-r-safeplus-infant-car-seat-and-base/",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Diono (DTC) — LiteClik 30 RXT + base",
+      "price": 174.99,
+      "url": "https://store.diono.com/liteclik-30-rxt-safeplus-infant-car-seat-and-base/",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Diono (DTC) — LiteClik 30 XT + base",
+      "price": 209.99,
+      "url": "https://store.diono.com/liteclik-30-xt-safeplus-infant-car-seat-and-base/",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Blossom Baby — LiteClik 30 R",
+      "price": 189.99,
+      "url": "https://www.blossom.baby/product/diono-liteclik-30-r-safeplus-infant-car-seat/",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "carrierLb / fitsWayfinder / fitsAlterrain / safety map into seed.json. NOTE: fitsWayfinder differs from the current stub — see notes.",
+    "carrierLb": 9,
+    "fitsWayfinder": false,
+    "fitsAlterrain": true,
+    "safety": "SafePlus Engineering: automotive-grade high-strength steel anti-rebound bar, premium/rigid LATCH connectors, EasyPath belt lock-off, side-impact protection, required top-tether, 2-position leveling foot + bubble indicators, UPF 50+ canopy; 4-30 lb / up to 30\"",
+
+    "bobWayfinderAdapter": "none — the Diono LiteClik 30 is NOT on the BOB Wayfinder adapter compatibility list (Wayfinder universal adapter covers only Britax ClickTight, Nuna, Cybex, Maxi-Cosi).",
+    "bobAlterrainAdapter": "BOB Gear Single Infant Car Seat Adapter for Nuna/Cybex/Maxi-Cosi — $99.99. The LiteClik 30 uses the Maxi-Cosi footprint, and Strolleria lists the LiteClik 30 RX/RXT/XT SafePlus as Alterrain/Alterrain Pro compatible with an adapter.",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "No direct data found for the LiteClik 30 in a Tacoma. (Diono's strong Tacoma reputation is for its Radian convertibles' narrow 3-across footprint, not the LiteClik 30 infant seat.) General CPST guidance: rear-facing infant seats fit a Tacoma Access/Double Cab rear seat with the front passenger seat slid forward; Regular Cab is not rated for rear-facing."
+  },
+
+  "sources": [
+    "https://store.diono.com/liteclik-30-r-safeplus-infant-car-seat-and-base/",
+    "https://store.diono.com/liteclik-30-rxt-safeplus-infant-car-seat-and-base/",
+    "https://store.diono.com/liteclik-30-xt-safeplus-infant-car-seat-and-base/",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-alterrain-alterrain-pro",
+    "https://bobparts.com/bob-infant-car-seat-adapter-single-cybex-maxi-cosi-nuna/",
+    "https://strolleria.com/products/bob-infant-car-seat-adapter-for-wayfinder-nuna-cybex-maxi-cosi-britax-clicktight"
+  ],
+  "notes": "KEY VERIFICATION (plan asked to confirm Diono on BOTH BOB lists): it is NOT on both. The LiteClik 30 appears ONLY on the BOB Alterrain/Alterrain Pro list (via a $99.99 Maxi-Cosi-footprint BOB adapter); it is NOT on the BOB Wayfinder adapter compatibility list. Recommend integration set fitsWayfinder=false (stub currently true); fitsAlterrain stays true (with adapter, not native). Carrier-only weight: base 'R' model = 9 lb (✓ matches stub; carrierLbVerify can be cleared); heavier trims XT 10.4 lb / RXT 10.6 lb. Variants: R (steel anti-rebound bar), RX/RXT (+3-pos no-rethread harness & full canopy), XT/RXT (extended). Widely OUT OF STOCK across Diono DTC and boutiques as of 2026-06; on-sale prices ranged $174.99-$209.99. Keep price:250 as MSRP fallback per SOURCING.md."
+}

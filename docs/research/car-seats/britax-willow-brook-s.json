@@ -1,0 +1,56 @@
+{
+  "_comment": "Staging fragment for ONE car-seat option. Filled by Batch B sourcing session. Do NOT edit seed.json — the integration pass folds this in. See ../../RESEARCH_PLAN.md.",
+
+  "id": "britax-willow-brook-s",
+  "name": "Britax Willow Brook S+",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/britax-willow-brook-s.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Britax (DTC)",
+      "price": 279.99,
+      "url": "https://us.britax.com/shop/car-seats/willow-s-clicktight-infant-car-seat",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "The Baby Cubby",
+      "price": 279.99,
+      "url": "https://www.babycubby.com/products/britax-willow-s-infant-car-seat",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "ANB Baby",
+      "price": 299.99,
+      "url": "https://www.anbbaby.com/products/britax-willow-sc-infant-car-seat",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "carrierLb / fitsWayfinder / fitsAlterrain / safety map into seed.json.",
+    "carrierLb": 9.3,
+    "fitsWayfinder": true,
+    "fitsAlterrain": true,
+    "safety": "ClickTight installation, ReboundReduce stability bar (anti-rebound), side-impact protection (head/neck/torso), SafeWash fabrics, RightSize harness; 4-30 lb / 17-32\"",
+
+    "bobWayfinderAdapter": "BOB Gear Wayfinder Universal Infant Car Seat Adapter — $59.99. The Willow / Willow S / Willow SC are explicitly named on the Wayfinder adapter compatibility list.",
+    "bobAlterrainAdapter": "native — Britax owns BOB; the Willow fits the Alterrain/Alterrain Pro via BOB's own Britax adapter (no third-party adapter needed).",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "No direct data found for the Willow S specifically. General CPST guidance: rear-facing infant seats fit a Tacoma Access/Double Cab rear seat (Regular Cab not rated for rear-facing); front passenger seat often slides forward to make room (Toyota owner's manual + Cars.com Tacoma car-seat check)."
+  },
+
+  "sources": [
+    "https://us.britax.com/shop/car-seats/willow-s-clicktight-infant-car-seat",
+    "https://us.britax.com/shop/travel-systems/willow-s-brook-plus-travel-system",
+    "https://www.babycubby.com/products/britax-willow-s-infant-car-seat",
+    "https://www.anbbaby.com/products/britax-willow-sc-infant-car-seat",
+    "https://www.megababiesusa.com/products/britax-willow-brook-s-travel-system",
+    "https://littlefolksnyc.com/products/bob-wayfinder-adapter-for-nuna-cybex-maxi-cosi-and-britax-infant-seats"
+  ],
+  "notes": "MODEL CLARIFICATION: 'Willow Brook S+' is the TRAVEL SYSTEM = Britax Willow S infant car seat (ClickTight, 4-30 lb) + Alpine anti-rebound base + Brook+ modular stroller. The standalone infant car seat is the Britax Willow S (the SC trim adds a no-rethread/extra fashion at ~$299.99-329.99). Seat-only is sold out at most retailers as of 2026-06 (~$279.99 MSRP for Willow S, ~$299.99-329.99 for Willow SC). The full Willow Brook S+ travel system IS in stock — Mega Babies $539.99 (https://www.megababiesusa.com/products/britax-willow-brook-s-travel-system) and Pottery Barn Kids (https://www.potterybarnkids.com/products/britax-willow-brook-s-plus-infant-travel-system/) — but that is a bundle, not the seat alone. Carrier-only weight ~9.2-9.3 lb (stub had 9, carrierLbVerify flag → ~9.3). Confirmed: Willow on BOB Wayfinder adapter list ($59.99) AND Britax native on Alterrain. Keep price:380 as MSRP fallback (travel-system-influenced) per SOURCING.md."
+}
