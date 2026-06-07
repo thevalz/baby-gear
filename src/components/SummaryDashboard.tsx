@@ -1,6 +1,7 @@
 import type { AppState, InventoryStatus, Module } from '../lib/types';
 import { useStore } from '../lib/store';
-import { formatMoney, formatPercent, maxScore, percent, topPick, weightedTotal } from '../lib/scoring';
+import { bestPrice, formatMoney, formatPercent, maxScore, percent, topPick, weightedTotal } from '../lib/scoring';
+import { assetUrl } from '../lib/assets';
 import { computeCompatibilityFlags, type FlagSeverity } from '../lib/compatibility';
 
 /** Module that incurs the stroller adapter cost. */
@@ -40,9 +41,9 @@ export default function SummaryDashboard({ state }: { state: AppState }) {
   const adapterCost = config.adapterCost ?? DEFAULT_ADAPTER_COST;
   const picks = modules.map((m) => ({ module: m, pick: topPick(m) }));
 
-  // Card 2: cost vs budget (top-pick price + adapter cost per module).
+  // Card 2: cost vs budget (top-pick best price + adapter cost per module).
   const totalCost = picks.reduce(
-    (sum, { module, pick }) => sum + (pick?.price ?? 0) + adapterCostFor(module, adapterCost),
+    (sum, { module, pick }) => sum + (pick ? bestPrice(pick) : 0) + adapterCostFor(module, adapterCost),
     0,
   );
   const overOverall = config.overallBudget > 0 && totalCost > config.overallBudget;
@@ -51,7 +52,7 @@ export default function SummaryDashboard({ state }: { state: AppState }) {
   const compatFlags = computeCompatibilityFlags(state);
 
   // Card 4: net spend.
-  const purchases = picks.reduce((sum, { pick }) => sum + (pick?.price ?? 0), 0);
+  const purchases = picks.reduce((sum, { pick }) => sum + (pick ? bestPrice(pick) : 0), 0);
   const refunds = inventory
     .filter((i) => i.status === 'return')
     .reduce((sum, i) => sum + (i.refund || 0), 0);
@@ -70,17 +71,27 @@ export default function SummaryDashboard({ state }: { state: AppState }) {
           <ul className="space-y-2">
             {modules.map((m) => {
               const t = topPick(m);
+              const img = assetUrl(t?.image);
               return (
-                <li key={m.id} className="flex items-baseline justify-between gap-2 border-b border-dashed border-slate-100 pb-2 last:border-0 last:pb-0">
-                  <div>
-                    <div className="text-xs uppercase tracking-wide text-slate-400">{m.label}</div>
-                    <div className="font-medium text-slate-800">{t ? t.name : '—'}</div>
+                <li key={m.id} className="flex items-center justify-between gap-2 border-b border-dashed border-slate-100 pb-2 last:border-0 last:pb-0">
+                  <div className="flex items-center gap-3">
+                    {t && (
+                      img ? (
+                        <img src={img} alt={t.name} className="h-12 w-12 shrink-0 rounded-md border border-slate-200 bg-white object-contain" loading="lazy" />
+                      ) : (
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-dashed border-slate-200 bg-slate-50 text-slate-300">🍼</div>
+                      )
+                    )}
+                    <div>
+                      <div className="text-xs uppercase tracking-wide text-slate-400">{m.label}</div>
+                      <div className="font-medium text-slate-800">{t ? t.name : '—'}</div>
+                    </div>
                   </div>
                   {t && (
                     <div className="text-right text-sm tabular-nums text-slate-500">
                       <div className="font-semibold text-indigo-600">{formatPercent(percent(t, m.criteria))}</div>
                       <div>
-                        {weightedTotal(t, m.criteria)}/{maxScore(m.criteria)} · {formatMoney(t.price)}
+                        {weightedTotal(t, m.criteria)}/{maxScore(m.criteria)} · {formatMoney(bestPrice(t))}
                       </div>
                     </div>
                   )}
@@ -109,7 +120,7 @@ export default function SummaryDashboard({ state }: { state: AppState }) {
           <dl className="space-y-1 text-sm">
             {picks.map(({ module, pick }) => {
               const adapter = adapterCostFor(module, adapterCost);
-              const effective = (pick?.price ?? 0) + adapter;
+              const effective = (pick ? bestPrice(pick) : 0) + adapter;
               const over = module.budget > 0 && effective > module.budget;
               return (
                 <div key={module.id} className="flex justify-between border-b border-dashed border-slate-100 py-1">

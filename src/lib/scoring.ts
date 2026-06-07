@@ -40,6 +40,28 @@ export function selectedOption(module: Module): Option | null {
   return topPick(module);
 }
 
+/**
+ * The lowest in-stock price across an option's sourced retailers, falling back
+ * to the option's reference `price` when no usable sources exist. This is what
+ * the rest of the app should treat as "the price".
+ */
+export function bestPrice(option: Option): number {
+  const usable = (option.priceSources ?? []).filter(
+    (s) => s.inStock !== false && s.price > 0,
+  );
+  if (usable.length === 0) return option.price;
+  return Math.min(...usable.map((s) => s.price));
+}
+
+/** The source object backing `bestPrice`, or null when falling back to `price`. */
+export function bestSource(option: Option) {
+  const usable = (option.priceSources ?? []).filter(
+    (s) => s.inStock !== false && s.price > 0,
+  );
+  if (usable.length === 0) return null;
+  return usable.reduce((lo, s) => (s.price < lo.price ? s : lo));
+}
+
 export const formatMoney = (n: number): string =>
   '$' + (Math.round((n || 0) * 100) / 100).toLocaleString();
 

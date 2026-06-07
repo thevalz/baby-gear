@@ -25,11 +25,33 @@ export interface OptionAttributes {
   owned?: boolean;
 }
 
+/**
+ * A single retailer price for an option, sourced by a Claude research session.
+ * `priceSources` is the data the "pricing engine" produces; the app derives the
+ * best (lowest in-stock) price from it via `bestPrice()` in scoring.ts.
+ */
+export interface PriceSource {
+  retailer: string; // e.g. "Amazon", "Target", "buybuy Baby"
+  price: number;
+  url: string;
+  inStock?: boolean; // default true when omitted
+  checkedAt: string; // ISO date the price was sourced, e.g. "2026-06-07"
+}
+
 export interface Option {
   id: string;
   moduleId: string;
   name: string;
+  /**
+   * Reference/MSRP price. Retained for backward compatibility and as a fallback
+   * when no `priceSources` exist; `bestPrice()` prefers the cheapest in-stock
+   * entry in `priceSources` when present.
+   */
   price: number;
+  /** Repo-relative image path under public/, e.g. "images/nuna-pipa-aire-rx.jpg". */
+  image?: string;
+  /** Retailer prices sourced by a research session; drives best-price + sources UI. */
+  priceSources?: PriceSource[];
   attributes: OptionAttributes;
   scores: Record<string, number>; // criterionId -> 1–5
   notes?: string;
@@ -56,6 +78,12 @@ export interface InventoryItem {
 }
 
 export interface AppState {
+  /**
+   * Monotonic version of the repo's committed data. A pricing/sourcing session
+   * bumps this after updating prices or images so the deployed app folds the
+   * fresh data into returning visitors' localStorage (see lib/sync.ts).
+   */
+  dataVersion?: number;
   config: Config;
   modules: Module[];
   inventory: InventoryItem[];
