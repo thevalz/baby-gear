@@ -1,42 +1,46 @@
 # Baby-Gear Trade Study
 
-A local, persistent, modular **trade-study dashboard** for baby-gear decisions
-(car seat, stroller, …). Each gear category is a *module* with weighted
-criteria and scored options; the app computes weighted scores live, persists
-everything, and rolls it all up into a **Main Summary Dashboard**.
+A local, modular **trade-study dashboard** for baby-gear decisions (car seat,
+stroller, …). Each gear category is a *module* with weighted criteria and
+scored options; the app computes weighted scores and rolls everything up into a
+**Summary** view.
+
+Built with **Vite + React + TypeScript**, styled with **Tailwind CSS**, charts
+via **recharts**.
 
 ## Run
 
-No dependencies, no build step, no `npm install`:
-
 ```bash
-node server.js
-# → http://localhost:3000
+npm install
+npm run dev      # → http://localhost:5173
 ```
 
-On first run it seeds `data/state.json` from `data/seed.json`. All edits are
-saved back to `data/state.json` (with a `localStorage` fallback if the server
-is offline), so they survive a page refresh.
+Other scripts:
 
-## Features
+```bash
+npm run build    # typecheck + production build to dist/
+npm run preview  # serve the production build
+```
 
-Each **module** (Car Seat, Stroller, …) has:
-- **Criteria** with integer weights (1–5) you can add/edit/remove.
-- **Options** (rows) with a price, per-criterion **scores** (1–5), attributes,
-  compatibility, and notes.
-- Live **weighted total** = Σ(weight × score), **max** = 5 × Σ(weights), and
-  **percent**. The top pick (max weighted total) is starred.
+## Project structure
 
-The **Main Summary Dashboard** surfaces the four required rollups:
-1. **Top pick per category.**
-2. **Total cost vs. budget** — each module's selected pick + adapter cost,
-   against the per-module budget and the overall budget. Pick selection
-   defaults to the top pick but can be overridden per module.
-3. **Compatibility flags** — cross-module conflicts (e.g. a car seat that fits
-   only one of the strollers you're considering, native vs. adapter fit, and
-   incompatibilities).
-4. **Keep/return decisions** — inventory with status + refund, and
-   **Net Spend = Σ(new purchases) − Σ(refunds)**.
+```
+index.html              Vite entry
+src/
+  main.tsx              React bootstrap
+  App.tsx              App shell: sidebar + swapping content pane
+  index.css            Tailwind entry (@import "tailwindcss")
+  components/
+    Sidebar.tsx        Left nav: "Summary" + one item per module
+    SummaryView.tsx    Top picks, cost vs. budget, net spend, chart
+    ModuleView.tsx     Per-module options table + weighted-score chart
+  lib/
+    types.ts           Data model (Module / Option / Criterion / …)
+    scoring.ts         weightedTotal / maxScore / percent / topPick
+    storage.ts         usePersistentState (localStorage)
+  data/
+    seed.json          Seed data (Infant Car Seat + Stroller modules)
+```
 
 ## Data model
 
@@ -48,17 +52,15 @@ InventoryItem { id, name, moduleId, status: keep|return|undecided, refund, notes
 Config        { overallBudget, adapterCost }
 ```
 
-### Compatibility & adapters
-An option's `attributes.fits` maps another option's id to `"native"` or
-`"adapter"`. An adapter adds `config.adapterCost` (~$100 — BOB sells
-brand-specific adapters) to the effective cost of the selected pick that needs
-it. Edit fit relationships under each option's **Attributes & compatibility**.
+## Scoring
 
-> The Cybex Cloud G carrier weight is marked `carrierLbVerify` in the seed —
-> the dashboard raises a reminder to confirm it before relying on it.
+- `weightedTotal(option)` = Σ over criteria of `weight × score`
+- `maxScore(module)` = `5 × Σ(weights)`
+- `percent` = `weightedTotal / maxScore`
+- Top pick per module = option with the max weighted total
 
-## Persistence & data portability
-- **Server** (default): `GET/PUT /api/state` reads/writes `data/state.json`;
-  `POST /api/reset` re-seeds from `data/seed.json`.
-- **Export / Import JSON** buttons move the full state in and out as a file.
-- **Reset to seed** restores the original seed data.
+## Persistence
+
+State seeds from `src/data/seed.json` and is mirrored to `localStorage`
+(`baby-gear-state`) so edits survive a refresh. Editing UI and JSON
+import/export are planned next.

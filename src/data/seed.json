@@ -1,5 +1,5 @@
 {
-  "config": { "overallBudget": 500 },
+  "config": { "overallBudget": 1000, "adapterCost": 100 },
   "modules": [
     {
       "id": "car-seat",
@@ -34,6 +34,29 @@
           "attributes": { "carrierLb": 11, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "anti-rebound (SafeCell)" },
           "scores": { "fit": 3, "weight": 2, "compat": 5, "safety": 4, "price": 4 },
           "notes": "Native BOB (both strollers); heavier; 4–35 lb runway." }
+      ]
+    },
+    {
+      "id": "stroller",
+      "label": "Stroller",
+      "budget": 500,
+      "selectedOptionId": null,
+      "criteria": [
+        { "id": "maneuver", "label": "Maneuverability",        "weight": 4 },
+        { "id": "terrain",  "label": "All-terrain / trails",   "weight": 5 },
+        { "id": "fold",     "label": "Fold for Tacoma bed",    "weight": 3 },
+        { "id": "comfort",  "label": "Comfort / suspension",   "weight": 3 },
+        { "id": "stprice",  "label": "Price",                  "weight": 2 }
+      ],
+      "options": [
+        { "id": "bob-wayfinder-opt", "moduleId": "stroller", "name": "BOB Wayfinder", "price": 370,
+          "attributes": { "brand": "BOB", "type": "all-terrain / jogging", "owned": true },
+          "scores": { "maneuver": 4, "terrain": 5, "fold": 3, "comfort": 4, "stprice": 4 },
+          "notes": "Already owned. Solid entry all-terrain BOB; fixed suspension." },
+        { "id": "bob-alterrain-opt", "moduleId": "stroller", "name": "BOB Alterrain", "price": 480,
+          "attributes": { "brand": "BOB", "type": "all-terrain / jogging", "owned": false },
+          "scores": { "maneuver": 4, "terrain": 5, "fold": 4, "comfort": 5, "stprice": 3 },
+          "notes": "Considering. Adjustable suspension + hand parking brake; pricier." }
       ]
     }
   ],
