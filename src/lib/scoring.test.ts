@@ -19,14 +19,20 @@ describe('car-seat scoring', () => {
     expect(maxScore(carSeat.criteria)).toBe(75);
   });
 
-  it('weighted totals match the expected values', () => {
-    for (const option of carSeat.options) {
-      expect(weightedTotal(option, carSeat.criteria)).toBe(expectedTotals[option.name]);
+  it('weighted totals match the expected values for the scored seats', () => {
+    // The roster also holds un-scored research stubs (placeholder scores);
+    // assert the hand-scored originals, which carry the real judgments.
+    for (const [name, total] of Object.entries(expectedTotals)) {
+      const option = carSeat.options.find((o) => o.name === name)!;
+      expect(weightedTotal(option, carSeat.criteria)).toBe(total);
     }
   });
 
-  it('ranks options descending by weighted total', () => {
-    const ranked = rankedOptions(carSeat).map((o) => o.name);
+  it('ranks the scored seats descending by weighted total', () => {
+    const scored = new Set(Object.keys(expectedTotals));
+    const ranked = rankedOptions(carSeat)
+      .map((o) => o.name)
+      .filter((name) => scored.has(name));
     expect(ranked).toEqual([
       'Nuna Pipa Aire RX',
       'Cybex Aton G Swivel',
