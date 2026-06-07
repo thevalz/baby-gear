@@ -38,7 +38,8 @@ src/
     ModuleView.tsx     Per-module options table + weighted-score chart
   lib/
     types.ts           Data model (Config / Module / Option / Criterion / InventoryItem)
-    scoring.ts         weightedTotal / maxScore / percent / topPick
+    scoring.ts         weightedTotal / maxScore / percent / topPick / rankedOptions
+    compatibility.ts   Data-driven cross-module compatibility map + flag engine
     store.ts           Zustand store + persist (localStorage)
   data/
     seed.json          Seed data (Infant Car Seat + Stroller modules)
@@ -53,6 +54,23 @@ Module        { id, label, budget, selectedOptionId, criteria[], options[] }
 InventoryItem { id, name, moduleId, status: keep|return|undecided, refund, notes }
 Config        { overallBudget, adapterCost }
 ```
+
+## Compatibility
+
+`src/lib/compatibility.ts` holds a **data-driven** `compatibilityMap` of
+cross-module relations. Each relation names a source module (whose selected pick
+is evaluated), a target module, and a list of targets matched by name substring
+with the boolean attribute that signals fit. The engine then compares the pick
+against the strollers you **own** (inventory `keep`) or **consider** (target
+options / `undecided` inventory) and emits flags:
+
+- 🔴 **red** — pick doesn't fit something you own (e.g. *"Selected seat doesn't
+  fit your Wayfinder — needs Alterrain."*)
+- 🟡 **yellow** — pick won't fit something you're only considering
+- 🟢 **green** — pick fits everything you own or consider
+
+Add a new relationship by appending an entry to `compatibilityMap` — no engine
+changes required.
 
 ## Scoring
 

@@ -17,9 +17,18 @@ import {
   weightedTotal,
   maxScore,
 } from '../lib/scoring';
+import { computeCompatibilityFlags, type FlagSeverity } from '../lib/compatibility';
+
+const FLAG_STYLES: Record<FlagSeverity, { wrap: string; icon: string }> = {
+  red: { wrap: 'bg-red-50 text-red-700 border-red-200', icon: '⛔' },
+  yellow: { wrap: 'bg-amber-50 text-amber-700 border-amber-200', icon: '⚠️' },
+  green: { wrap: 'bg-emerald-50 text-emerald-700 border-emerald-200', icon: '✅' },
+};
 
 export default function SummaryView({ state }: { state: AppState }) {
   const { modules, config, inventory } = state;
+
+  const compatFlags = computeCompatibilityFlags(state);
 
   const picks = modules.map((m) => ({ module: m, pick: selectedOption(m) }));
   const totalCost = picks.reduce((sum, p) => sum + (p.pick ? p.pick.price : 0), 0);
@@ -101,6 +110,29 @@ export default function SummaryView({ state }: { state: AppState }) {
             </div>
           </dl>
         </div>
+      </section>
+
+      {/* Compatibility flags */}
+      <section className="rounded-lg border border-slate-200 bg-white p-4">
+        <h3 className="mb-3 text-sm font-medium text-slate-600">Compatibility</h3>
+        {compatFlags.length === 0 ? (
+          <p className="text-sm text-slate-400">No compatibility relationships in play.</p>
+        ) : (
+          <ul className="space-y-2">
+            {compatFlags.map((flag, i) => {
+              const style = FLAG_STYLES[flag.severity];
+              return (
+                <li
+                  key={`${flag.relationId}-${i}`}
+                  className={`flex items-start gap-2 rounded-md border px-3 py-2 text-sm ${style.wrap}`}
+                >
+                  <span aria-hidden>{style.icon}</span>
+                  <span>{flag.message}</span>
+                </li>
+              );
+            })}
+          </ul>
+        )}
       </section>
 
       {/* Top pick % by category */}
