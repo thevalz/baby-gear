@@ -1,0 +1,55 @@
+{
+  "_comment": "Staging fragment for ONE car-seat option (Batch C). Folded into seed.json by the integration pass. Do NOT edit seed.json. See ../../RESEARCH_PLAN.md.",
+
+  "id": "graco-snugride-35-lite-lx",
+  "name": "Graco SnugRide 35 Lite LX",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/graco-snugride-35-lite-lx.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Target",
+      "price": 139.99,
+      "url": "https://www.target.com/p/graco-snugride-35-lite-lx-infant-car-seat/-/A-79436026",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Macy's (via Klarna price compare)",
+      "price": 149.99,
+      "url": "https://www.klarna.com/us/shopping/pl/cl369/3201205693/Child-Car-Seats/Graco-SnugRide-35-Lite-LX/",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Babylist",
+      "price": 219.98,
+      "url": "https://www.babylist.com/gp/graco-snugride-35-lite-lx-infant-car-seat-extra-base/50621/1931766",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "carrierLb / fitsWayfinder / fitsAlterrain / safety map into seed.json attributes; the rest is audit trail.",
+    "carrierLb": 7.2,
+    "fitsWayfinder": false,
+    "fitsAlterrain": true,
+    "safety": "basic — no load leg or anti-rebound bar; meets federal side-impact standard, ProtectPlus Engineered, FAA-approved",
+
+    "bobWayfinderAdapter": "none — BOB has no Wayfinder Graco adapter (Wayfinder's universal adapter only serves Nuna/Cybex/Maxi-Cosi/Britax-Willow/Diono)",
+    "bobAlterrainAdapter": "BOB Gear Single Jogging Stroller Adapter for Graco Infant Car Seats — $99.99 (fits Alterrain / Alterrain Pro)",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "No direct Toyota Tacoma data found. Compact front-to-back with a ~17–17.5 in carrier width; reviewers call it a good pick for tight/small back seats and 3-across. Offers European (baseless) belt routing to save depth. Carrier is one of the lightest at 7.2 lb."
+  },
+
+  "sources": [
+    "https://www.bobgear.com/accessories/single-jogging-stroller-adapter-graco-infant-car-seats",
+    "https://www.gracobaby.com/car-seats/infant-car-seats/snugride-35-lite-lx-infant-car-seat/SAP_2110186.html",
+    "https://www.safeintheseat.com/seats/graco-snugride-infant-car-seat-reviews-graco-snugride-35-lite-lx",
+    "https://strolleria.com/pages/compatibility-guide-bob-alterrain-alterrain-pro",
+    "https://www.klarna.com/us/shopping/pl/cl369/3201205693/Child-Car-Seats/Graco-SnugRide-35-Lite-LX/"
+  ],
+  "notes": "FLAG (b) RESOLVED — fitsAlterrain = TRUE (stub already had true; confirmed). bobgear.com's own Graco adapter page lists compatibility with 'All SnugRide models, SnugRide Click Connect models, SnugRide SnugLock models'. The 'stay-in-car-base LATCH install' concern conflates the CAR base (a stay-in-car LATCH base) with the STROLLER attachment: the Lite LX carrier uses the standard Graco Click-Connect carrier notch that latches into the BOB Graco adapter, independent of the base type. So it does click in. No Wayfinder Graco adapter exists, so fitsWayfinder stays false. Pricing: lowest in-stock is Target $139.99; Babylist $219.98 is a SEAT + EXTRA BASE bundle (not a standalone — flagged so it isn't mistaken for a standalone price); Klarna also shows eBay $122.99 / Kohl's $139.99. Keep price=130 as MSRP fallback per SOURCING.md. carrierLb 7.2 confirmed (Graco + retailer spec)."
+}

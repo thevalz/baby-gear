@@ -1,0 +1,55 @@
+{
+  "_comment": "Staging fragment for ONE car-seat option (Batch C). Folded into seed.json by the integration pass. Do NOT edit seed.json. See ../../RESEARCH_PLAN.md.",
+
+  "id": "chicco-keyfit-35",
+  "name": "Chicco KeyFit 35",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/chicco-keyfit-35.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Chicco (DTC)",
+      "price": 229.99,
+      "url": "https://www.chiccousa.com/shop-our-products/car-seats/infant/keyfit-35-infant-car-seat/79625.html",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Pish Posh Baby (via Klarna price compare)",
+      "price": 229.99,
+      "url": "https://www.klarna.com/us/shopping/pl/cl369/3202705085/Child-Car-Seats/Chicco-KeyFit-35/",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Albee Baby",
+      "price": 202.49,
+      "url": "https://www.albeebaby.com/chicco-keyfit-35-infant-car-seat-onyx.html",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "carrierLb / fitsWayfinder / fitsAlterrain / safety map into seed.json attributes; the rest is audit trail. NOTE the fitsAlterrain flip below.",
+    "carrierLb": 10,
+    "fitsWayfinder": false,
+    "fitsAlterrain": true,
+    "safety": "integrated anti-rebound bar + top crash-test scores; SuperCinch force-multiplying LATCH, LockSure belt lock, ReclineSure leveling foot",
+
+    "bobWayfinderAdapter": "none — KeyFit 35 is not on BOB's Wayfinder universal-adapter list",
+    "bobAlterrainAdapter": "BOB Gear Single Jogging Stroller Adapter for Chicco Infant Car Seats — $99.99 (fits Alterrain / Alterrain Pro)",
+    "rearFacingShellLengthIn": 27.5,
+    "tacomaFitNotes": "No direct Toyota Tacoma data found. Narrow profile — ~17 in seat width, ~16.5 in carrier handle width (about 1 in narrower than the original KeyFit), reviewers flag it as a strong 3-across / tight-rear-seat option. Base adds ~1.5 in of child legroom; ~27.5 in seat length and the anti-rebound bar add front-to-back footprint, so check rear-facing depth in a Tacoma."
+  },
+
+  "sources": [
+    "https://www.bobgear.com/accessories/single-jogging-stroller-adapter-chicco-infant-car-seats",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-alterrain-alterrain-pro",
+    "https://www.chiccousa.com/shop-our-products/car-seats/infant/keyfit-35-infant-car-seat/79625.html",
+    "https://csftl.org/chicco-keyfit-35-review/",
+    "https://www.klarna.com/us/shopping/pl/cl369/3202705085/Child-Car-Seats/Chicco-KeyFit-35/"
+  ],
+  "notes": "FLAG (a) RESOLVED — fitsAlterrain FLIPS false -> TRUE. bobgear.com's own Chicco adapter page explicitly lists 'KeyFit 35®' among the compatible seats (alongside KeyFit 30/30 Zip/Zip Air/Magic and Fit2); the adapter is the BOB Gear Single Jogging Stroller Adapter for Chicco Infant Car Seats, $99.99, and it fits the Alterrain / Alterrain Pro. Strolleria's 2026 Alterrain fitment list also names KeyFit 35. The stub's 'no current BOB adapter' note is outdated. This raises the seat's stroller compatibility (compat) story — flag for the integration pass to re-score compat upward. fitsWayfinder stays false (KeyFit 35 not on the Wayfinder universal-adapter list). carrierLb confirmed 10 lb (Chicco DTC; some reviews cite 10.4 lb). Pricing: Chicco DTC and Pish Posh Baby both $229.99 in stock; Albee Baby $202.49 currently OUT OF STOCK (kept as reference per SOURCING.md, inStock=false). Keep price=230 as MSRP fallback."
+}

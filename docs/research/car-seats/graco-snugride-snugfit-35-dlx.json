@@ -1,0 +1,47 @@
+{
+  "_comment": "Staging fragment for ONE car-seat option (Batch C). Folded into seed.json by the integration pass. Do NOT edit seed.json. See ../../RESEARCH_PLAN.md.",
+
+  "id": "graco-snugride-snugfit-35-dlx",
+  "name": "Graco SnugRide SnugFit 35 DLX",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/graco-snugride-snugfit-35-dlx.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Target",
+      "price": 239.99,
+      "url": "https://www.target.com/p/graco-snugride-snugfit-35-dlx-infant-car-seat-featuring-safety-surround-jacks/-/A-80179062",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Babylist",
+      "price": 239.99,
+      "url": "https://www.babylist.com/gp/graco-snugride-snugfit-dlx-infant-car-seat/20467/529537",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "carrierLb / fitsWayfinder / fitsAlterrain / safety map into seed.json attributes; the rest is audit trail. NOTE two stub corrections below.",
+    "carrierLb": 10,
+    "fitsWayfinder": false,
+    "fitsAlterrain": true,
+    "safety": "anti-rebound bar + Safety Surround side-impact protection; SnugLock + InRight LATCH install (NO load leg)",
+
+    "bobWayfinderAdapter": "none — BOB has no Wayfinder Graco adapter",
+    "bobAlterrainAdapter": "BOB Gear Single Jogging Stroller Adapter for Graco Infant Car Seats — $99.99 (fits Alterrain / Alterrain Pro)",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "No direct Toyota Tacoma data found. Heavier carrier (10 lb) with a longer front-to-back footprint because the anti-rebound bar extends forward off the base; expect a larger rear-facing footprint than the Lite LX — worth a CPST fit check in a Tacoma's shallow rear bench."
+  },
+
+  "sources": [
+    "https://www.bobgear.com/accessories/single-jogging-stroller-adapter-graco-infant-car-seats",
+    "https://www.consumerreports.org/babies-kids/car-seats/graco-snugride-snugfit-35-dlx/m403646/",
+    "https://www.gracobaby.com/shop/car-seats/infant-car-seats/snugride-snugfit-dlx-infant-car-seat/SP_332433.html",
+    "https://strolleria.com/pages/compatibility-guide-bob-alterrain-alterrain-pro"
+  ],
+  "notes": "FLAG (b) RESOLVED — fitsAlterrain = TRUE (stub had true; confirmed). bobgear.com's Graco adapter page covers 'All SnugRide models' (incl. Click Connect & SnugLock). The SnugFit 35 DLX carrier uses the standard Graco Click-Connect carrier attachment, so it latches into the BOB Graco Alterrain adapter ($99.99) regardless of its SnugLock car base. fitsWayfinder stays false (no Wayfinder Graco adapter). STUB CORRECTIONS: (1) carrierLb was 7.5 with carrierLbVerify=true — actual carrier-only weight is 10 lb per Consumer Reports; corrected to 10. (2) stub safety said 'load leg + anti-rebound' — the SnugFit has NO load leg (Consumer Reports lists 'Load leg: No'); its headline is the anti-rebound bar plus DLX 'Safety Surround' side-impact protection. The separate 'SnugRide 35 DLX w/ Load Leg' is a different model. Pricing: Target/Babylist/Walmart all $239.99 in stock for the DLX (Safety Surround) trim; keep price=200 as MSRP fallback per SOURCING.md."
+}
