@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useMemo, useState, type ReactNode } from 'react';
 import {
   Bar,
   BarChart,
@@ -165,6 +165,50 @@ function PriceSourcesEditor({ module, option }: { module: Module; option: Option
   );
 }
 
+/**
+ * What the options table is sorted by: a special column key or a criterion id
+ * (so every rating column is sortable too).
+ */
+type SortKey = 'name' | 'price' | 'weighted' | 'percent' | (string & {});
+interface SortState {
+  key: SortKey;
+  dir: 'asc' | 'desc';
+}
+
+/** A clickable column header that sorts the options table and shows the direction. */
+function SortHeader({
+  sortKey,
+  sort,
+  onSort,
+  align = 'center',
+  children,
+}: {
+  sortKey: SortKey;
+  sort: SortState;
+  onSort: (key: SortKey) => void;
+  align?: 'left' | 'center' | 'right';
+  children: ReactNode;
+}) {
+  const active = sort.key === sortKey;
+  const justify =
+    align === 'right' ? 'justify-end' : align === 'left' ? 'justify-start' : 'justify-center';
+  return (
+    <th className="px-3 py-2 font-medium">
+      <button
+        type="button"
+        onClick={() => onSort(sortKey)}
+        title="Sort by this column"
+        className={`inline-flex w-full items-center gap-1 ${justify} hover:text-slate-700`}
+      >
+        {children}
+        <span className={`text-[10px] ${active ? 'text-indigo-600' : 'text-slate-300'}`}>
+          {active ? (sort.dir === 'asc' ? '▲' : '▼') : '⇅'}
+        </span>
+      </button>
+    </th>
+  );
+}
+
 export default function ModuleView({
   module,
   onDeleted,
@@ -194,6 +238,35 @@ export default function ModuleView({
 
   const max = maxScore(module.criteria);
   const best = topPick(module);
+
+  // Default to the ranked view (highest weighted total first); clicking any
+  // column header re-sorts. Numeric columns start high→low, name/price low→high.
+  const [sort, setSort] = useState<SortState>({ key: 'weighted', dir: 'desc' });
+  const onSort = (key: SortKey) =>
+    setSort((s) =>
+      s.key === key
+        ? { key, dir: s.dir === 'asc' ? 'desc' : 'asc' }
+        : { key, dir: key === 'name' || key === 'price' ? 'asc' : 'desc' },
+    );
+
+  const sortedOptions = useMemo(() => {
+    const value = (o: Option): number | string => {
+      if (sort.key === 'name') return (o.name || '').toLowerCase();
+      if (sort.key === 'price') return bestPrice(o);
+      if (sort.key === 'weighted') return weightedTotal(o, module.criteria);
+      if (sort.key === 'percent') return percent(o, module.criteria);
+      return o.scores[sort.key] ?? 0; // a criterion id → its 0–5 rating
+    };
+    return [...module.options].sort((a, b) => {
+      const av = value(a);
+      const bv = value(b);
+      const cmp =
+        typeof av === 'string' || typeof bv === 'string'
+          ? String(av).localeCompare(String(bv))
+          : av - bv;
+      return sort.dir === 'asc' ? cmp : -cmp;
+    });
+  }, [module.options, module.criteria, sort]);
 
   const chartData = module.options.map((o) => ({
     name: o.name || '(unnamed)',
@@ -285,22 +358,30 @@ export default function ModuleView({
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-slate-200 bg-slate-50 text-slate-500">
-              <th className="px-3 py-2 text-left font-medium">Option</th>
+              <SortHeader sortKey="name" sort={sort} onSort={onSort} align="left">
+                Option
+              </SortHeader>
               <th className="px-3 py-2 text-left font-medium">Key facts</th>
-              <th className="px-3 py-2 text-right font-medium">Best price</th>
+              <SortHeader sortKey="price" sort={sort} onSort={onSort} align="right">
+                Best price
+              </SortHeader>
               {module.criteria.map((c) => (
-                <th key={c.id} className="px-3 py-2 text-center font-medium">
+                <SortHeader key={c.id} sortKey={c.id} sort={sort} onSort={onSort} align="center">
                   {c.label}
                   <span className="ml-1 text-xs font-semibold text-indigo-600">×{c.weight}</span>
-                </th>
+                </SortHeader>
               ))}
-              <th className="px-3 py-2 text-right font-medium">Weighted</th>
-              <th className="px-3 py-2 text-right font-medium">%</th>
+              <SortHeader sortKey="weighted" sort={sort} onSort={onSort} align="right">
+                Weighted
+              </SortHeader>
+              <SortHeader sortKey="percent" sort={sort} onSort={onSort} align="right">
+                %
+              </SortHeader>
               <th className="px-2 py-2" />
             </tr>
           </thead>
           <tbody>
-            {module.options.map((o) => {
+            {sortedOptions.map((o) => {
               const isTop = best?.id === o.id;
               const expanded = expandedId === o.id;
               const price = bestPrice(o);
@@ -309,7 +390,7 @@ export default function ModuleView({
               return (
                 <Fragment key={o.id}>
                   <tr className={`border-b border-slate-100 ${expanded ? '' : 'last:border-0'} ${isTop ? 'bg-indigo-50' : ''}`}>
-                    <td className="px-3 py-2">
+                    <td className={`px-3 py-2 border-l-4 ${isTop ? 'border-indigo-500' : 'border-transparent'}`}>
                       <div className="flex items-center gap-2">
                         <button
                           onClick={() => setDetailId(o.id)}
@@ -318,8 +399,12 @@ export default function ModuleView({
                         >
                           <Thumb src={o.image} alt={o.name} />
                         </button>
-                        {isTop && <span className="text-indigo-600">★</span>}
                         <div className="flex flex-col">
+                          {isTop && (
+                            <span className="mb-0.5 self-start rounded-full bg-indigo-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-indigo-700">
+                              Top pick
+                            </span>
+                          )}
                           <input
                             value={o.name}
                             onChange={(e) => updateOption(module.id, o.id, { name: e.target.value })}
