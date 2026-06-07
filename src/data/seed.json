@@ -1,0 +1,66 @@
+{
+  "config": { "overallBudget": 1000, "adapterCost": 100 },
+  "modules": [
+    {
+      "id": "car-seat",
+      "label": "Infant Car Seat",
+      "budget": 500,
+      "selectedOptionId": null,
+      "criteria": [
+        { "id": "fit",    "label": "Tacoma rear-facing fit", "weight": 5 },
+        { "id": "weight", "label": "Carrier weight",          "weight": 4 },
+        { "id": "compat", "label": "BOB stroller compat",     "weight": 3 },
+        { "id": "safety", "label": "Safety extras",           "weight": 2 },
+        { "id": "price",  "label": "Price",                   "weight": 1 }
+      ],
+      "options": [
+        { "id": "nuna-pipa-aire-rx", "moduleId": "car-seat", "name": "Nuna Pipa Aire RX", "price": 380,
+          "attributes": { "carrierLb": 6, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "load leg + anti-rebound + rigid LATCH" },
+          "scores": { "fit": 4, "weight": 5, "compat": 5, "safety": 5, "price": 2 },
+          "notes": "Lightest premium; top safety; both strollers. Loses on price only." },
+        { "id": "cybex-aton-g", "moduleId": "car-seat", "name": "Cybex Aton G Swivel", "price": 330,
+          "attributes": { "carrierLb": 12, "carrierLbVerify": true, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "load leg + linear side-impact; 90° swivel" },
+          "scores": { "fit": 5, "weight": 2, "compat": 5, "safety": 5, "price": 3 },
+          "notes": "Swivel = best tight-space loading; heavier; both strollers." },
+        { "id": "graco-snugride-35-lite-lx", "moduleId": "car-seat", "name": "Graco SnugRide 35 Lite LX", "price": 130,
+          "attributes": { "carrierLb": 7.2, "fitsWayfinder": false, "fitsAlterrain": true, "safety": "basic (no load leg)" },
+          "scores": { "fit": 4, "weight": 5, "compat": 3, "safety": 3, "price": 5 },
+          "notes": "Budget + ultralight; Alterrain only (no Wayfinder Graco adapter)." },
+        { "id": "chicco-keyfit-35", "moduleId": "car-seat", "name": "Chicco KeyFit 35", "price": 230,
+          "attributes": { "carrierLb": 10, "fitsWayfinder": false, "fitsAlterrain": false, "safety": "anti-rebound + top crash scores" },
+          "scores": { "fit": 5, "weight": 3, "compat": 1, "safety": 4, "price": 4 },
+          "notes": "Best fit, but no current BOB adapter for either stroller." },
+        { "id": "britax-b-safe-gen2", "moduleId": "car-seat", "name": "Britax B-Safe Gen2", "price": 230,
+          "attributes": { "carrierLb": 11, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "anti-rebound (SafeCell)" },
+          "scores": { "fit": 3, "weight": 2, "compat": 5, "safety": 4, "price": 4 },
+          "notes": "Native BOB (both strollers); heavier; 4–35 lb runway." }
+      ]
+    },
+    {
+      "id": "stroller",
+      "label": "Stroller",
+      "budget": 800,
+      "selectedOptionId": null,
+      "criteria": [
+        { "id": "ride",        "label": "Ride / terrain",        "weight": 5 },
+        { "id": "foldsize",    "label": "Weight & fold size",    "weight": 3 },
+        { "id": "adapterease", "label": "Car-seat adapter ease", "weight": 3 },
+        { "id": "stprice",     "label": "Price",                 "weight": 2 }
+      ],
+      "options": [
+        { "id": "bob-wayfinder-opt", "moduleId": "stroller", "name": "BOB Wayfinder", "price": 300,
+          "attributes": { "brand": "BOB", "type": "all-terrain / jogging", "owned": true },
+          "scores": { "ride": 3, "foldsize": 3, "adapterease": 3, "stprice": 3 },
+          "notes": "Already owned. Scores are placeholders — edit to fill in." },
+        { "id": "bob-alterrain-opt", "moduleId": "stroller", "name": "BOB Alterrain", "price": 400,
+          "attributes": { "brand": "BOB", "type": "all-terrain / jogging", "owned": false },
+          "scores": { "ride": 3, "foldsize": 3, "adapterease": 3, "stprice": 3 },
+          "notes": "Considering. Scores are placeholders — edit to fill in." }
+      ]
+    }
+  ],
+  "inventory": [
+    { "id": "evenflo-safemax", "name": "Evenflo SafeMax (infant seat)", "moduleId": "car-seat", "status": "return", "refund": 0, "notes": "Heavy; poor Tacoma fit — return candidate." },
+    { "id": "bob-wayfinder", "name": "BOB Wayfinder (stroller)", "moduleId": "stroller", "status": "keep", "refund": 0, "notes": "Already owned." }
+  ]
+}
