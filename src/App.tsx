@@ -3,11 +3,18 @@ import Sidebar from './components/Sidebar';
 import Toolbar from './components/Toolbar';
 import SummaryDashboard from './components/SummaryDashboard';
 import ModuleView from './components/ModuleView';
+import OptionDetail from './components/OptionDetail';
 import ErrorBoundary from './components/ErrorBoundary';
 import { useStore } from './lib/store';
 import type { AppState, NavItem } from './lib/types';
 
 const SUMMARY_ID = 'summary';
+
+/** Points at a single option's drill-down page, openable from any view. */
+export interface DetailRef {
+  moduleId: string;
+  optionId: string;
+}
 
 export default function App() {
   const config = useStore((s) => s.config);
@@ -16,6 +23,7 @@ export default function App() {
   const addModule = useStore((s) => s.addModule);
   const resetToSeed = useStore((s) => s.resetToSeed);
   const [activeId, setActiveId] = useState<string>(SUMMARY_ID);
+  const [detail, setDetail] = useState<DetailRef | null>(null);
 
   const navItems: NavItem[] = [
     { id: SUMMARY_ID, label: 'Summary' },
@@ -25,30 +33,53 @@ export default function App() {
   const activeModule = modules.find((m) => m.id === activeId);
   const state: AppState = { config, modules, inventory };
 
+  // Detail navigation, lifted to the app so the Summary and module views can
+  // both open an option's drill-down page (and the sidebar highlights its
+  // module). A stale ref (deleted option) simply falls back to the module view.
+  const openDetail = (moduleId: string, optionId: string) => {
+    setActiveId(moduleId);
+    setDetail({ moduleId, optionId });
+  };
+  const selectNav = (id: string) => {
+    setActiveId(id);
+    setDetail(null);
+  };
+  const detailModule = detail ? modules.find((m) => m.id === detail.moduleId) : undefined;
+  const detailOption = detailModule?.options.find((o) => o.id === detail?.optionId);
+
   const handleAddModule = () => {
     const id = addModule();
-    setActiveId(id); // jump straight into the new module to edit it
+    selectNav(id); // jump straight into the new module to edit it
   };
+
+  const content =
+    detailModule && detailOption ? (
+      <OptionDetail module={detailModule} option={detailOption} onBack={() => setDetail(null)} />
+    ) : activeModule ? (
+      <ModuleView
+        module={activeModule}
+        onOpenDetail={(optionId) => openDetail(activeModule.id, optionId)}
+        onDeleted={() => selectNav(SUMMARY_ID)}
+      />
+    ) : (
+      <SummaryDashboard state={state} onOpenDetail={openDetail} />
+    );
 
   return (
     <div className="flex min-h-screen bg-slate-50 text-slate-900">
-      <Sidebar items={navItems} activeId={activeId} onSelect={setActiveId} onAddModule={handleAddModule} />
+      <Sidebar items={navItems} activeId={activeId} onSelect={selectNav} onAddModule={handleAddModule} />
       <main className="flex flex-1 flex-col overflow-hidden">
         <Toolbar />
         <div className="flex-1 overflow-auto">
           <div className="mx-auto max-w-5xl px-6 py-6">
-            {/* Keyed by the active view so switching nav items spins up a fresh
-                boundary — a crash in one module never strands the others. */}
+            {/* Keyed by the active view (incl. which option's detail) so switching
+                spins up a fresh boundary — a crash in one view never strands the rest. */}
             <ErrorBoundary
-              key={activeId}
-              label={activeModule ? activeModule.label : 'Summary'}
+              key={detailOption ? `detail:${detail!.moduleId}:${detail!.optionId}` : activeId}
+              label={detailOption ? detailOption.name : activeModule ? activeModule.label : 'Summary'}
               onReset={resetToSeed}
             >
-              {activeModule ? (
-                <ModuleView module={activeModule} onDeleted={() => setActiveId(SUMMARY_ID)} />
-              ) : (
-                <SummaryDashboard state={state} />
-              )}
+              {content}
             </ErrorBoundary>
           </div>
         </div>

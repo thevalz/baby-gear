@@ -1,6 +1,16 @@
-import type { AppState, InventoryStatus, Module } from '../lib/types';
+import type { AppState, InventoryStatus, Module, Option } from '../lib/types';
 import { useStore } from '../lib/store';
-import { bestPrice, formatMoney, formatPercent, maxScore, percent, topPick, weightedTotal } from '../lib/scoring';
+import {
+  bestPrice,
+  formatMoney,
+  formatPercent,
+  maxScore,
+  percent,
+  rankedOptions,
+  topPick,
+  weightedTotal,
+} from '../lib/scoring';
+import { optionSummary } from '../lib/evidence';
 import { assetUrl } from '../lib/assets';
 import { computeCompatibilityFlags, type FlagSeverity } from '../lib/compatibility';
 
@@ -17,6 +27,12 @@ const FLAG_STYLES: Record<FlagSeverity, { wrap: string; icon: string }> = {
   green: { wrap: 'bg-emerald-50 text-emerald-700 border-emerald-200', icon: '✅' },
 };
 
+const CHIP_TONE = {
+  good: 'bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200',
+  bad: 'bg-red-50 text-red-700 ring-1 ring-red-200',
+  neutral: 'bg-slate-100 text-slate-600 ring-1 ring-slate-200',
+} as const;
+
 function Pill({ over }: { over: boolean }) {
   return (
     <span
@@ -32,7 +48,119 @@ function Pill({ over }: { over: boolean }) {
 const card = 'rounded-lg border border-slate-200 bg-white p-4';
 const cardTitle = 'mb-3 text-sm font-medium text-slate-600';
 
-export default function SummaryDashboard({ state }: { state: AppState }) {
+/** Price ÷ weighted score = dollars per point of value (lower is better). */
+const pricePerPoint = (o: Option, m: Module): number => {
+  const total = weightedTotal(o, m.criteria);
+  const price = bestPrice(o);
+  return total > 0 && price > 0 ? price / total : Infinity;
+};
+
+/** A gallery card for one option: image, score bar, price & value, key facts. */
+function OptionCard({
+  module,
+  option,
+  isTop,
+  isBestValue,
+  onOpen,
+}: {
+  module: Module;
+  option: Option;
+  isTop: boolean;
+  isBestValue: boolean;
+  onOpen: () => void;
+}) {
+  const total = weightedTotal(option, module.criteria);
+  const mx = maxScore(module.criteria);
+  const pct = percent(option, module.criteria);
+  const price = bestPrice(option);
+  const perPoint = pricePerPoint(option, module);
+  const img = assetUrl(option.image);
+  const chips = optionSummary(option).slice(0, 4);
+
+  return (
+    <button
+      onClick={onOpen}
+      title="View product details"
+      className={`flex flex-col gap-2 rounded-lg border p-3 text-left transition hover:shadow-md ${
+        isTop
+          ? 'border-indigo-300 bg-indigo-50/50 ring-1 ring-indigo-200'
+          : 'border-slate-200 bg-white hover:border-slate-300'
+      }`}
+    >
+      {/* Image */}
+      <div className="flex h-28 items-center justify-center rounded-md border border-slate-100 bg-white">
+        {img ? (
+          <img src={img} alt={option.name} className="h-full w-full object-contain p-1" loading="lazy" />
+        ) : (
+          <span className="text-4xl text-slate-300">🍼</span>
+        )}
+      </div>
+
+      {/* Name + badges */}
+      <div className="flex items-start justify-between gap-2">
+        <span className="font-medium leading-tight text-slate-800">{option.name || '(unnamed)'}</span>
+        <div className="flex shrink-0 flex-col items-end gap-1">
+          {isTop && (
+            <span className="rounded-full bg-indigo-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-indigo-700">
+              Top pick
+            </span>
+          )}
+          {isBestValue && (
+            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-700">
+              Best value
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* Score bar */}
+      <div>
+        <div className="mb-1 flex items-center justify-between text-xs text-slate-500">
+          <span className="tabular-nums">
+            {total}/{mx}
+          </span>
+          <span className="font-semibold tabular-nums text-indigo-600">{formatPercent(pct)}</span>
+        </div>
+        <div className="h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
+          <div
+            className={`h-full rounded-full ${isTop ? 'bg-indigo-500' : 'bg-slate-400'}`}
+            style={{ width: `${Math.round(pct * 100)}%` }}
+          />
+        </div>
+      </div>
+
+      {/* Price + value */}
+      <div className="flex items-baseline justify-between">
+        <span className="font-semibold tabular-nums text-slate-800">{formatMoney(price)}</span>
+        {perPoint !== Infinity && (
+          <span className="text-xs tabular-nums text-slate-400">{formatMoney(perPoint)}/pt</span>
+        )}
+      </div>
+
+      {/* Key-fact chips */}
+      {chips.length > 0 && (
+        <div className="flex flex-wrap gap-1">
+          {chips.map((chip) => (
+            <span
+              key={chip.key}
+              className={`whitespace-nowrap rounded-full px-2 py-0.5 text-[11px] ${CHIP_TONE[chip.tone]}`}
+            >
+              {chip.text}
+            </span>
+          ))}
+        </div>
+      )}
+    </button>
+  );
+}
+
+export default function SummaryDashboard({
+  state,
+  onOpenDetail,
+}: {
+  state: AppState;
+  onOpenDetail: (moduleId: string, optionId: string) => void;
+}) {
   const { modules, config, inventory } = state;
   const setAdapterCost = useStore((s) => s.setAdapterCost);
   const setInventoryStatus = useStore((s) => s.setInventoryStatus);
@@ -72,17 +200,16 @@ export default function SummaryDashboard({ state }: { state: AppState }) {
             {modules.map((m) => {
               const t = topPick(m);
               const img = assetUrl(t?.image);
-              return (
-                <li key={m.id} className="flex items-center justify-between gap-2 border-b border-dashed border-slate-100 pb-2 last:border-0 last:pb-0">
+              const row = (
+                <div className="flex w-full items-center justify-between gap-2">
                   <div className="flex items-center gap-3">
-                    {t && (
-                      img ? (
+                    {t &&
+                      (img ? (
                         <img src={img} alt={t.name} className="h-12 w-12 shrink-0 rounded-md border border-slate-200 bg-white object-contain" loading="lazy" />
                       ) : (
                         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-dashed border-slate-200 bg-slate-50 text-slate-300">🍼</div>
-                      )
-                    )}
-                    <div>
+                      ))}
+                    <div className="text-left">
                       <div className="text-xs uppercase tracking-wide text-slate-400">{m.label}</div>
                       <div className="font-medium text-slate-800">{t ? t.name : '—'}</div>
                     </div>
@@ -94,6 +221,21 @@ export default function SummaryDashboard({ state }: { state: AppState }) {
                         {weightedTotal(t, m.criteria)}/{maxScore(m.criteria)} · {formatMoney(bestPrice(t))}
                       </div>
                     </div>
+                  )}
+                </div>
+              );
+              return (
+                <li key={m.id} className="border-b border-dashed border-slate-100 pb-2 last:border-0 last:pb-0">
+                  {t ? (
+                    <button
+                      onClick={() => onOpenDetail(m.id, t.id)}
+                      title="View product details"
+                      className="-mx-1 w-full rounded-md px-1 py-1 hover:bg-slate-50"
+                    >
+                      {row}
+                    </button>
+                  ) : (
+                    row
                   )}
                 </li>
               );
@@ -237,6 +379,41 @@ export default function SummaryDashboard({ state }: { state: AppState }) {
           </dl>
         </section>
       </div>
+
+      {/* Gallery — every option, grouped by module, ranked best-first */}
+      {modules.map((m) => {
+        const ranked = rankedOptions(m);
+        if (ranked.length === 0) return null;
+        const top = topPick(m);
+        // Best value = lowest $/point among options that have both a price and score.
+        const bestValue = ranked.reduce<Option | null>((bestSoFar, o) => {
+          if (pricePerPoint(o, m) === Infinity) return bestSoFar;
+          if (!bestSoFar) return o;
+          return pricePerPoint(o, m) < pricePerPoint(bestSoFar, m) ? o : bestSoFar;
+        }, null);
+        return (
+          <section key={m.id} className={card}>
+            <div className="mb-3 flex items-center justify-between">
+              <h3 className="text-sm font-medium text-slate-600">{m.label} — all options</h3>
+              <span className="text-xs text-slate-400">
+                {ranked.length} option{ranked.length === 1 ? '' : 's'} · ranked best-first
+              </span>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {ranked.map((o) => (
+                <OptionCard
+                  key={o.id}
+                  module={m}
+                  option={o}
+                  isTop={top?.id === o.id}
+                  isBestValue={bestValue?.id === o.id}
+                  onOpen={() => onOpenDetail(m.id, o.id)}
+                />
+              ))}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 }
