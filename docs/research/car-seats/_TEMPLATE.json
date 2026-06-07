@@ -1,0 +1,45 @@
+{
+  "_comment": "Staging fragment for ONE car-seat option. A parallel sourcing session copies this to <option-id>.json (filename MUST equal the option id in src/data/seed.json), fills it in, and commits ONLY this file + the image. Do NOT edit seed.json — the serial integration pass folds every fragment in and bumps dataVersion once. See ../../RESEARCH_PLAN.md.",
+
+  "id": "REPLACE-with-option-id-from-seed.json",
+  "name": "Human-readable model name (must match seed.json)",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/REPLACE-with-option-id.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Amazon",
+      "price": 0,
+      "url": "https://www.amazon.com/dp/DEEP-LINK",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Target",
+      "price": 0,
+      "url": "https://www.target.com/p/DEEP-LINK",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "Facts to fold into the option's attributes. Only the first four map directly into seed.json today; the rest are captured here as the audit trail / notes source.",
+    "carrierLb": 0,
+    "fitsWayfinder": false,
+    "fitsAlterrain": false,
+    "safety": "one-line summary of headline safety features",
+
+    "bobWayfinderAdapter": "adapter part name/number + price, or 'none'",
+    "bobAlterrainAdapter": "adapter part name/number + price, or 'native' / 'none'",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "Any data found on fit in a Toyota Tacoma rear seat (rear-facing): seat-to-seat depth, recline footprint, 'fits 3-across', owner/CPST notes, or 'no direct data found'."
+  },
+
+  "sources": [
+    "https://primary-source-url",
+    "https://secondary-source-url"
+  ],
+  "notes": "Anything the integration pass should know: discontinued listing, regional-only, MSRP vs sale, bundle-only pricing, etc."
+}

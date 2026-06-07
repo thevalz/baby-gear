@@ -1,0 +1,47 @@
+{
+  "_comment": "Batch A staging fragment. Sourced 2026-06-07. Do NOT edit seed.json — integration pass folds this in.",
+
+  "id": "maxi-cosi-mico-luxe",
+  "name": "Maxi-Cosi Mico Luxe",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/maxi-cosi-mico-luxe.png",
+
+  "priceSources": [
+    {
+      "retailer": "Maxi-Cosi (DTC)",
+      "price": 239.00,
+      "url": "https://maxicosi.com/products/mico-luxe-infant-car-seat-ic365",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Target",
+      "price": 239.99,
+      "url": "https://www.target.com/p/maxi-cosi-mico-luxe-infant-car-seat/-/A-89166847",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "carrierLb / fitsWayfinder / fitsAlterrain / safety map into seed.json; rest is audit trail.",
+    "carrierLb": 9,
+    "fitsWayfinder": true,
+    "fitsAlterrain": true,
+    "safety": "Side Impact Protection (SIP) with extra plush head/lumbar inserts + ClimaFlow ventilation shell + 1-click LATCH on a 3-position adjustable base; rear-facing 4-30 lb / up to 32\"",
+
+    "bobWayfinderAdapter": "BOB Wayfinder Infant Car Seat Adapter for Nuna/Cybex/Maxi-Cosi/Britax — ~$59.99 (Strolleria). Universal Wayfinder adapter covers the Maxi-Cosi Mico family.",
+    "bobAlterrainAdapter": "BOB Infant Car Seat Adapter for single/jogging strollers (Cybex/Maxi-Cosi/Nuna, 2016+) — $99.99; mounts fit Alterrain & Alterrain PRO.",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "No direct Toyota Tacoma data found. Compact, lightweight (carrier ~9 lb) seat; no truck-specific seat-to-seat depth, recline-footprint, 3-across, or CPST Tacoma notes located."
+  },
+
+  "sources": [
+    "https://maxicosi.com/products/mico-luxe-infant-car-seat-ic365",
+    "https://www.target.com/p/maxi-cosi-mico-luxe-infant-car-seat/-/A-89166847",
+    "https://www.safeintheseat.com/seats/maxi-cosi-mico-luxe",
+    "https://strolleria.com/products/bob-infant-car-seat-adapter-for-wayfinder-nuna-cybex-maxi-cosi-britax-clicktight"
+  ],
+  "notes": "FLAG for integration: seed safety string says 'no-rethread harness (verify)' — the base Mico Luxe actually uses a RETHREAD harness; the no-rethread harness belongs to the pricier Mico Luxe+ (~$299, ~18.7 lb w/ base). carrierLb ~9 lb confirmed. Street price ~$239 (Maxi-Cosi DTC $239.00 + Target $239.99 — both in stock; Walmart also lists it (SKU 1271706889) but its price couldn't be confirmed behind a bot wall, so it's omitted). Distinct SKU from Mico Luxe+ — keep them separate. Both BOB lists (Wayfinder + Alterrain) confirmed. Lowest in-stock = $239.00 (Maxi-Cosi DTC)."
+}
