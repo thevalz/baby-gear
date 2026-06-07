@@ -90,6 +90,7 @@ src/
     Toolbar.tsx        Overall budget + Export / Import / Reset
     SummaryDashboard.tsx  Four cards: top picks, cost vs budget,
                           compatibility flags, keep/return tracker
+    CompatibilityView.tsx Browsable cross-product fit matrix (seat × stroller)
     ModuleView.tsx     Editable module: label/budget, criteria + weights,
                        options with prices & scores, weighted-score chart
   lib/
@@ -139,6 +140,18 @@ options / `undecided` inventory) and emits flags:
 
 Add a new relationship by appending an entry to `compatibilityMap` — no engine
 changes required.
+
+### Browsable fit matrix
+
+The flags above answer "does *my* pick fit *my* gear." The **Fit & compatibility**
+view (`components/CompatibilityView.tsx`) exposes the *whole grid* — every source
+option × every target option (e.g. every car seat × every stroller) — so you can
+see the tradeoffs *between* products before committing to either. Each cell is
+✓ fits / ✗ doesn't / – not-yet-sourced; rows are ordered by overall rank, the
+stroller you own is highlighted, and every product links to its drill-down.
+`compatibilityMatrix()` / `compatibilityMatrices()` in `lib/compatibility.ts`
+build the grid from the same `compatibilityMap`, so a new relationship shows up
+here automatically too.
 
 ## Scoring
 

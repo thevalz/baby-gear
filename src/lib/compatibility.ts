@@ -1,4 +1,4 @@
-import type { AppState } from './types';
+import type { AppState, Module, Option } from './types';
 import { selectedOption } from './scoring';
 
 /**
@@ -62,6 +62,73 @@ export const compatibilityMap: CompatRelation[] = [
 type TargetKind = 'owned' | 'considered' | 'none';
 
 const escapeRegExp = (s: string): string => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+// ── Browsable fit matrix ──────────────────────────────────────────────────────
+// The flags above answer "does *my* pick fit *my* stuff." This matrix exposes
+// the whole grid — every source option × every target option — so a shopper can
+// see at a glance which car seat fits which stroller before committing to either.
+
+export type Fit = true | false | null; // fits / doesn't / unknown
+
+export interface MatrixColumn {
+  /** The target (e.g. stroller) option this column represents. */
+  option: Option;
+  /** Boolean attribute on a source option that signals fit here, or null if unmapped. */
+  fitAttribute: string | null;
+  /** The relation target this column resolved to (e.g. "Alterrain"), or null. */
+  targetLabel: string | null;
+  /** True when the parent already owns this target (a kept inventory item). */
+  owned: boolean;
+}
+
+export interface CompatMatrix {
+  relation: CompatRelation;
+  sourceModule: Module;
+  targetModule: Module;
+  columns: MatrixColumn[];
+}
+
+/** Case-insensitive substring either direction (handles "Wayfinder" vs "BOB Wayfinder (stroller)"). */
+const nameMatches = (a: string, b: string): boolean => {
+  const x = a.toLowerCase();
+  const y = b.toLowerCase();
+  return x.includes(y) || y.includes(x);
+};
+
+/** Fit of one source option against one column: true / false / null (unknown). */
+export function cellFit(source: Option, column: MatrixColumn): Fit {
+  if (!column.fitAttribute) return null;
+  const v = (source.attributes as Record<string, unknown>)[column.fitAttribute];
+  return v === true ? true : v === false ? false : null;
+}
+
+/** Build the full fit grid for one relation, or null when either side has no data. */
+export function compatibilityMatrix(state: AppState, rel: CompatRelation): CompatMatrix | null {
+  const sourceModule = state.modules.find((m) => m.id === rel.sourceModuleId);
+  const targetModule = state.modules.find((m) => m.id === rel.targetModuleId);
+  if (!sourceModule || !targetModule) return null;
+  if (sourceModule.options.length === 0 || targetModule.options.length === 0) return null;
+
+  const columns: MatrixColumn[] = targetModule.options.map((option) => {
+    const target = rel.targets.find((t) => new RegExp(escapeRegExp(t.match), 'i').test(option.name));
+    const owned = state.inventory.some((i) => i.status === 'keep' && nameMatches(i.name, option.name));
+    return {
+      option,
+      fitAttribute: target?.fitAttribute ?? null,
+      targetLabel: target?.label ?? null,
+      owned,
+    };
+  });
+
+  return { relation: rel, sourceModule, targetModule, columns };
+}
+
+/** Every configured relation that has data, as a browsable matrix. */
+export function compatibilityMatrices(state: AppState): CompatMatrix[] {
+  return compatibilityMap
+    .map((rel) => compatibilityMatrix(state, rel))
+    .filter((m): m is CompatMatrix => m !== null);
+}
 
 /** Decide whether a target is owned, merely considered, or not in play. */
 function classifyTarget(state: AppState, rel: CompatRelation, match: string): TargetKind {

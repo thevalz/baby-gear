@@ -4,12 +4,14 @@ import Toolbar from './components/Toolbar';
 import SummaryDashboard from './components/SummaryDashboard';
 import ModuleView from './components/ModuleView';
 import OptionDetail from './components/OptionDetail';
+import CompatibilityView from './components/CompatibilityView';
 import ErrorBoundary from './components/ErrorBoundary';
 import Onboarding from './components/Onboarding';
 import { useStore } from './lib/store';
 import type { AppState, NavItem } from './lib/types';
 
 const SUMMARY_ID = 'summary';
+const COMPAT_ID = 'compatibility';
 
 /** Points at a single option's drill-down page, openable from any view. */
 export interface DetailRef {
@@ -30,6 +32,7 @@ export default function App() {
 
   const navItems: NavItem[] = [
     { id: SUMMARY_ID, label: 'Summary' },
+    { id: COMPAT_ID, label: 'Fit & compatibility' },
     ...modules.map((m) => ({ id: m.id, label: m.label })),
   ];
 
@@ -66,6 +69,8 @@ export default function App() {
         onOpenDetail={(optionId) => openDetail(activeModule.id, optionId)}
         onDeleted={() => selectNav(SUMMARY_ID)}
       />
+    ) : activeId === COMPAT_ID ? (
+      <CompatibilityView state={state} onOpenDetail={openDetail} />
     ) : (
       <SummaryDashboard state={state} onOpenDetail={openDetail} />
     );
@@ -103,7 +108,15 @@ export default function App() {
                   spins up a fresh boundary — a crash in one view never strands the rest. */}
               <ErrorBoundary
                 key={detailOption ? `detail:${detail!.moduleId}:${detail!.optionId}` : activeId}
-                label={detailOption ? detailOption.name : activeModule ? activeModule.label : 'Summary'}
+                label={
+                  detailOption
+                    ? detailOption.name
+                    : activeModule
+                      ? activeModule.label
+                      : activeId === COMPAT_ID
+                        ? 'Fit & compatibility'
+                        : 'Summary'
+                }
                 onReset={resetToSeed}
               >
                 {content}

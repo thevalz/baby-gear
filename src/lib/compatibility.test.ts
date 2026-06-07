@@ -1,7 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import seed from '../data/seed.json';
 import type { AppState } from './types';
-import { computeCompatibilityFlags } from './compatibility';
+import {
+  cellFit,
+  compatibilityMatrices,
+  computeCompatibilityFlags,
+} from './compatibility';
 
 const baseState = () => JSON.parse(JSON.stringify(seed)) as AppState;
 
@@ -39,5 +43,51 @@ describe('compatibility flags (car seat ↔ stroller)', () => {
     expect(red!.message).toBe("Selected seat doesn't fit your Wayfinder.");
     expect(yellow!.message).toBe("Selected seat won't fit the Alterrain you're considering.");
     expect(flags.some((f) => f.severity === 'green')).toBe(false);
+  });
+});
+
+describe('compatibility matrix (browsable fit grid)', () => {
+  const matrixOf = (state: AppState) => {
+    const ms = compatibilityMatrices(state);
+    expect(ms).toHaveLength(1);
+    return ms[0];
+  };
+  const seat = (m: ReturnType<typeof matrixOf>, name: string) =>
+    m.sourceModule.options.find((o) => o.name === name)!;
+  const col = (m: ReturnType<typeof matrixOf>, nameIncludes: string) =>
+    m.columns.find((c) => c.option.name.includes(nameIncludes))!;
+
+  it('exposes every car seat × every stroller', () => {
+    const m = matrixOf(baseState());
+    expect(m.sourceModule.id).toBe('car-seat');
+    expect(m.columns.map((c) => c.option.name)).toEqual([
+      'BOB Wayfinder',
+      'BOB Alterrain',
+      'BOB Alterrain Pro',
+    ]);
+  });
+
+  it('maps each stroller column to the fit attribute that drives it', () => {
+    const m = matrixOf(baseState());
+    expect(col(m, 'Wayfinder').fitAttribute).toBe('fitsWayfinder');
+    // Both Alterrain and Alterrain Pro resolve to the Alterrain target.
+    expect(col(m, 'Alterrain').fitAttribute).toBe('fitsAlterrain');
+    expect(col(m, 'Alterrain Pro').fitAttribute).toBe('fitsAlterrain');
+  });
+
+  it('flags the owned stroller (kept inventory) regardless of name suffix', () => {
+    const m = matrixOf(baseState());
+    expect(col(m, 'Wayfinder').owned).toBe(true); // "BOB Wayfinder (stroller)" is kept
+    expect(col(m, 'Alterrain').owned).toBe(false);
+  });
+
+  it('reports fit per cell as true / false / unknown', () => {
+    const m = matrixOf(baseState());
+    const graco = seat(m, 'Graco SnugRide 35 Lite LX'); // Wayfinder=false, Alterrain=true
+    expect(cellFit(graco, col(m, 'Wayfinder'))).toBe(false);
+    expect(cellFit(graco, col(m, 'Alterrain Pro'))).toBe(true);
+
+    const cybex = seat(m, 'Cybex Aton G Swivel'); // fits both
+    expect(cellFit(cybex, col(m, 'Wayfinder'))).toBe(true);
   });
 });
