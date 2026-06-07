@@ -1,0 +1,56 @@
+{
+  "_comment": "Batch D staging fragment. Folded into seed.json by the integration pass — do NOT edit seed.json here. See ../../RESEARCH_PLAN.md.",
+
+  "id": "uppababy-mesa-v2",
+  "name": "UPPAbaby Mesa V3",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/uppababy-mesa-v2.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "UPPAbaby (DTC)",
+      "price": 349.99,
+      "url": "https://uppababy.com/car-seats/infant/mesa-v3/",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Babylist",
+      "price": 349.99,
+      "url": "https://www.babylist.com/gp/uppababy-mesa-v3/74913/2528374",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Kidsland",
+      "price": 349.99,
+      "url": "https://www.kidslandusa.com/products/uppababy-mesa-v3-infant-car-seat",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "carrierLb / fitsWayfinder / fitsAlterrain / safety map into seed.json; rest is audit trail.",
+    "carrierLb": 9.9,
+    "fitsWayfinder": false,
+    "fitsAlterrain": true,
+    "safety": "No-rethread 5-pt harness; Side Impact Protection (adjustable EPP-foam headrest); 4th rebound carry-handle position absorbs rear-impact energy; SMARTSecure self-tensioning LATCH base with green tightness indicators; European belt routing for baseless install; GREENGUARD Gold + fire-retardant-free fabrics; FAA-certified. Rear-facing 4-30 lb, to 32\".",
+
+    "bobWayfinderAdapter": "none - Mesa is NOT on the BOB Wayfinder universal list (Wayfinder covers Nuna/Cybex/Maxi-Cosi/Britax Willow/Diono only).",
+    "bobAlterrainAdapter": "BOB Gear Infant Car Seat Adapter - Single, UPPAbaby (brand-specific), ~$50 (verify exact price). 'UPPAbaby MESA Series' explicitly listed on Strolleria's BOB Alterrain / Alterrain Pro compatible-seat list.",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "No direct seat-specific Toyota Tacoma data found. Mesa V3 carrier width ~17\"; mid-large footprint, carrier ~9.9 lb. Tacoma double-cab rear seats are shallow front-to-back, so a rear-facing Mesa will likely require moving the front seat forward; CPSTs commonly recommend an angle adjuster for RF in a Tacoma. No Tacoma 3-across data found for this seat."
+  },
+
+  "sources": [
+    "https://uppababy.com/car-seats/infant/mesa-v3/",
+    "https://www.babylist.com/gp/uppababy-mesa-v3/74913/2528374",
+    "https://www.kidslandusa.com/products/uppababy-mesa-v3-infant-car-seat",
+    "https://www.safeintheseat.com/seats/uppababy-mesa-v3",
+    "https://www.albeebaby.com/blogs/from-the-cradle/uppababy-mesa-v2-vs-the-mesa-v3-whats-new",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-alterrain-alterrain-pro"
+  ],
+  "notes": "MODEL UPDATE for integration pass: the current UPPAbaby Mesa is the MESA V3 (launched mid-2025, replaced the V2). V3 is the model now sold at UPPAbaby DTC / Babylist / Kidsland at $349.99 (all machine-verified in stock 2026-06-07). I updated 'name' to 'UPPAbaby Mesa V3' per the task; the option id stays 'uppababy-mesa-v2' (filename must equal the seed id) - integration pass should decide whether to rename the id/name in seed.json. V3 vs V2 deltas: RF capacity dropped 35 lb -> 30 lb (height limit still 32\"), longer canopy w/ magnetic peek window, 25-position headrest, no-rethread harness. The discontinued V2 is still findable on clearance (~$329, e.g. Pottery Barn Kids / Amazon B0B94TJ36K). carrierLb 9.9 confirmed. Alterrain compat CONFIRMED; Wayfinder NOT compatible - matches expected Alterrain-only. Image (Greyson) is the Mesa V3."
+}

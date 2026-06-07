@@ -1,0 +1,56 @@
+{
+  "_comment": "Batch D staging fragment. Folded into seed.json by the integration pass — do NOT edit seed.json here. See ../../RESEARCH_PLAN.md.",
+
+  "id": "chicco-fit2",
+  "name": "Chicco Fit2 (Rear-Facing 2-Year)",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/chicco-fit2.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Chicco (DTC)",
+      "price": 329.99,
+      "url": "https://www.chiccousa.com/shop-our-products/car-seats/chicco-fit2-infant-toddler-car-seat/",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Amazon",
+      "price": 329.99,
+      "url": "https://www.amazon.com/Chicco-Fit2-Infant-Toddler-Seat/dp/B07ZWVKR73",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "buybuy BABY",
+      "price": 329.99,
+      "url": "https://buybuybaby.bedbathandbeyond.com/Baby/Fit2-Infant-Toddler-Car-Seat-Cienna/42258771/product.html",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "carrierLb / fitsWayfinder / fitsAlterrain / safety map into seed.json; rest is audit trail.",
+    "carrierLb": 12.3,
+    "fitsWayfinder": false,
+    "fitsAlterrain": true,
+    "safety": "Extended rear-facing to ~2 yr (4-35 lb, to 35\"); integrated anti-rebound bar; EPS energy-absorbing foam for side-impact; meets/exceeds federal side-impact standard; FAA-approved; ReclineSure leveling foot + RideRight bubble levels.",
+
+    "bobWayfinderAdapter": "none - Fit2 is NOT on the BOB Wayfinder universal list (Wayfinder covers Nuna/Cybex/Maxi-Cosi/Britax Willow/Diono only).",
+    "bobAlterrainAdapter": "BOB Gear Infant Car Seat Adapter - Single, Chicco (brand-specific), ~$50 (verify exact price). Fit2 explicitly listed on Strolleria's BOB Alterrain / Alterrain Pro compatible-seat list.",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "No direct seat-specific Toyota Tacoma data found. The Fit2 has one of the largest/deepest rear-facing footprints of any infant seat (heaviest carrier in this batch at ~12.3 lb; engineered to last rear-facing all the way to 35\"). Chicco lists overall stage dims ~28\"L x 17\"W x 24\"H. In a Tacoma double-cab (shallow front-to-back rear seat) a rear-facing Fit2 will likely force the front seat well forward; CPST guidance for RF installs in a Tacoma commonly recommends an angle adjuster (Car Crash Detective). No Tacoma 3-across data found for this seat."
+  },
+
+  "sources": [
+    "https://www.chiccousa.com/shop-our-products/car-seats/chicco-fit2-infant-toddler-car-seat/",
+    "https://www.chiccousa.com/shop-our-products/car-seats/infant/fit2-adapt-infant-and-toddler-car-seat/79736.html",
+    "https://themomfriend.com/chicco-fit2-review/",
+    "https://www.babygearlab.com/reviews/vehicle-safety/infant-car-seat/chicco-fit2",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-alterrain-alterrain-pro",
+    "https://thecarcrashdetective.com/3-across-installations-tacoma/"
+  ],
+  "notes": "Price: Chicco's own store lists the original Fit2 at $329.99 (DTC price machine-verified 2026-06-07); the refreshed 'Fit2 Adapt' variant is $339.99 on the same site. Amazon and buybuy BABY listings are live but their prices are protected by anti-bot blocks and could not be machine-read on 2026-06-07 - both recorded at the current $329.99 list tier and should be re-verified by the integration pass; Target and Walmart also carry it. MSRP fallback (~$300) is sane. carrierLb corrected up from stub's 9 to ~12.3 lb (it is notably heavy). Alterrain compat CONFIRMED (Strolleria Alterrain list names Fit2); Wayfinder NOT compatible - matches expected Alterrain-only. Image is the original Fit2 (Tempo) product shot, not the Adapt."
+}
