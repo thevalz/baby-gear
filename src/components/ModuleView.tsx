@@ -229,19 +229,12 @@ export default function ModuleView({
 
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [detailId, setDetailId] = useState<string | null>(null);
-
-  // Drill-down: a full read-only page describing one option.
-  const detailOption = detailId ? module.options.find((o) => o.id === detailId) : undefined;
-  if (detailOption) {
-    return <OptionDetail module={module} option={detailOption} onBack={() => setDetailId(null)} />;
-  }
-
-  const max = maxScore(module.criteria);
-  const best = topPick(module);
-
   // Default to the ranked view (highest weighted total first); clicking any
   // column header re-sorts. Numeric columns start high→low, name/price low→high.
   const [sort, setSort] = useState<SortState>({ key: 'weighted', dir: 'desc' });
+
+  const max = maxScore(module.criteria);
+  const best = topPick(module);
   const onSort = (key: SortKey) =>
     setSort((s) =>
       s.key === key
@@ -267,6 +260,14 @@ export default function ModuleView({
       return sort.dir === 'asc' ? cmp : -cmp;
     });
   }, [module.options, module.criteria, sort]);
+
+  // Drill-down: a full read-only page describing one option. Kept below every
+  // hook above so React sees a stable hook order whether or not it's shown —
+  // returning early before a hook would crash the detail view.
+  const detailOption = detailId ? module.options.find((o) => o.id === detailId) : undefined;
+  if (detailOption) {
+    return <OptionDetail module={module} option={detailOption} onBack={() => setDetailId(null)} />;
+  }
 
   const chartData = module.options.map((o) => ({
     name: o.name || '(unnamed)',
