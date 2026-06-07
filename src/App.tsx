@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Sidebar from './components/Sidebar';
 import Toolbar from './components/Toolbar';
-import SummaryView from './components/SummaryView';
+import SummaryDashboard from './components/SummaryDashboard';
 import ModuleView from './components/ModuleView';
 import { useStore } from './lib/store';
 import type { AppState, NavItem } from './lib/types';
@@ -30,7 +30,7 @@ export default function App() {
         <div className="flex-1 overflow-auto">
           <div className="mx-auto max-w-5xl px-6 py-6">
             {activeId === SUMMARY_ID ? (
-              <SummaryView state={state} />
+              <SummaryDashboard state={state} />
             ) : activeModule ? (
               <ModuleView module={activeModule} />
             ) : (

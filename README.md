@@ -34,7 +34,8 @@ src/
   components/
     Sidebar.tsx        Left nav: "Summary" + one item per module
     Toolbar.tsx        Overall budget + Export / Import / Reset
-    SummaryView.tsx    Top picks, cost vs. budget, net spend, chart
+    SummaryDashboard.tsx  Four cards: top picks, cost vs budget,
+                          compatibility flags, keep/return tracker
     ModuleView.tsx     Per-module options table + weighted-score chart
   lib/
     types.ts           Data model (Config / Module / Option / Criterion / InventoryItem)

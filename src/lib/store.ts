@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import seed from '../data/seed.json';
-import type { AppState } from './types';
+import type { AppState, InventoryStatus } from './types';
 
 const seedState = seed as unknown as AppState;
 
@@ -17,6 +17,9 @@ interface StoreActions {
   exportState: () => AppState;
   setOverallBudget: (value: number) => void;
   setModuleBudget: (moduleId: string, value: number) => void;
+  setAdapterCost: (value: number) => void;
+  setInventoryStatus: (id: string, status: InventoryStatus) => void;
+  setInventoryRefund: (id: string, refund: number) => void;
 }
 
 export type Store = AppState & StoreActions;
@@ -46,6 +49,18 @@ export const useStore = create<Store>()(
       setModuleBudget: (moduleId, value) =>
         set((s) => ({
           modules: s.modules.map((m) => (m.id === moduleId ? { ...m, budget: value } : m)),
+        })),
+
+      setAdapterCost: (value) => set((s) => ({ config: { ...s.config, adapterCost: value } })),
+
+      setInventoryStatus: (id, status) =>
+        set((s) => ({
+          inventory: s.inventory.map((i) => (i.id === id ? { ...i, status } : i)),
+        })),
+
+      setInventoryRefund: (id, refund) =>
+        set((s) => ({
+          inventory: s.inventory.map((i) => (i.id === id ? { ...i, refund } : i)),
         })),
     }),
     {
