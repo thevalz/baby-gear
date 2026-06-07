@@ -1,8 +1,17 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import seed from '../data/seed.json';
-import type { AppState, Criterion, InventoryStatus, Module, Option, PriceSource } from './types';
+import type {
+  AppState,
+  Criterion,
+  InventoryStatus,
+  Module,
+  Option,
+  Preferences,
+  PriceSource,
+} from './types';
 import { mergePricingFromSeed } from './sync';
+import { applyPreferences, emptyPreferences } from './preferences';
 
 const seedState = seed as unknown as AppState;
 
@@ -20,6 +29,13 @@ const updateModuleIn = (modules: Module[], moduleId: string, fn: (m: Module) => 
 const DEFAULT_SCORE = 3; // neutral placeholder for new scores
 
 interface StoreActions {
+  /** A visitor's onboarding answers (per-visitor; gates the first-run quiz). */
+  preferences: Preferences;
+  /** Apply the onboarding answers to the trade study and mark it completed. */
+  completeOnboarding: (prefs: Preferences) => void;
+  /** Clear answers so the first-run quiz shows again (keeps current data). */
+  resetOnboarding: () => void;
+
   /** Replace the entire data state (used by Import). */
   replaceState: (next: AppState) => void;
   /** Restore the original seed data. */
@@ -72,6 +88,24 @@ export const useStore = create<Store>()(
     (set, get) => ({
       // --- initial data: loaded from seed.json on first run ---
       ...cloneSeed(),
+      preferences: emptyPreferences(),
+
+      // --- onboarding ---
+      completeOnboarding: (prefs) =>
+        set((s) => {
+          const applied = applyPreferences(
+            { dataVersion: s.dataVersion, config: s.config, modules: s.modules, inventory: s.inventory },
+            prefs,
+          );
+          return {
+            config: applied.config,
+            modules: applied.modules,
+            inventory: applied.inventory,
+            preferences: { ...prefs, completed: true },
+          };
+        }),
+
+      resetOnboarding: () => set({ preferences: emptyPreferences() }),
 
       // --- actions ---
       replaceState: (next) =>
@@ -82,7 +116,7 @@ export const useStore = create<Store>()(
           inventory: next.inventory,
         }),
 
-      resetToSeed: () => set(cloneSeed()),
+      resetToSeed: () => set({ ...cloneSeed(), preferences: emptyPreferences() }),
 
       refreshPricingFromSeed: () =>
         set((s) => {
@@ -266,12 +300,13 @@ export const useStore = create<Store>()(
         config: s.config,
         modules: s.modules,
         inventory: s.inventory,
+        preferences: s.preferences,
       }),
       // Repo is the source of truth: when the committed seed carries a newer
       // dataVersion than the persisted copy, fold its prices/images in while
       // keeping the user's scores/weights/budgets (see lib/sync.ts).
       merge: (persisted, current) => {
-        const p = (persisted ?? {}) as Partial<AppState>;
+        const p = (persisted ?? {}) as Partial<AppState> & { preferences?: Preferences };
         const data = mergePricingFromSeed(
           {
             dataVersion: p.dataVersion,
@@ -281,7 +316,8 @@ export const useStore = create<Store>()(
           },
           seedState,
         );
-        return { ...current, ...data };
+        // Keep the returning visitor's onboarding answers (per-visitor, not seeded).
+        return { ...current, ...data, preferences: p.preferences ?? current.preferences };
       },
     },
   ),

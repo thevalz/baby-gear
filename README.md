@@ -9,6 +9,36 @@ sourced from across the web.
 Built with **Vite + React + TypeScript**, styled with **Tailwind CSS**, charts
 via **recharts**. Deployed as a static site to **GitHub Pages**.
 
+## Customer-facing mode (creator advisor)
+
+On top of the trade-study engine, the app ships a **customer-facing layer** so a
+baby-gear **creator/influencer** can embed it as a branded advisor that turns
+viewers into confident buyers (and clicks into their channel + affiliate links):
+
+- **First-run onboarding** (`components/Onboarding.tsx`) — a short, branded quiz
+  (budget, what-matters-most priorities, car, back-seat length, owned stroller).
+  It *derives the criteria weights* from plain-language answers
+  (`lib/preferences.ts`), so a new parent never sees a wall of sliders. Gated by
+  a per-visitor `preferences.completed` flag in the store.
+- **"Recommended for you" hero** (`components/RecommendationHero.tsx`) — one
+  confident, explained pick per module at the top of the Summary, with a one-line
+  *why* (built from the top-contributing criteria + evidence), best price as an
+  affiliate link, and a "Watch my review" CTA.
+- **Creator branding** (`config.creator`, `components/CreatorBanner.tsx`) — name,
+  tagline, "Watch reviews" / "Subscribe" CTAs. Lives in `config` so it travels
+  through export/import and repo sync.
+- **Back-seat clearance check** (`lib/clearance.ts`) — compares each seat's
+  `rearFacingLengthIn` footprint against the parent's measured back-seat length
+  (with a safety margin and a measuring note) to flag fit problems *before*
+  purchase. An acknowledged approximation — final fit depends on the install.
+- **Critic score, Rotten-Tomatoes style** (`lib/endorsements.ts`) — options carry
+  `endorsements[]` (one per creator: verdict, optional score, quote, link) that
+  aggregate into a "% of creators recommend" badge shown next to the spec-driven
+  match score, with the host creator's pull-quote on the hero.
+
+These are additive: the original editable trade-study workspace is unchanged and
+still reachable below the hero ("The full breakdown").
+
 ## Pricing engine & images
 
 There is **no backend and no live scraping**. The "engine" that finds best

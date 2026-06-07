@@ -5,6 +5,7 @@ import SummaryDashboard from './components/SummaryDashboard';
 import ModuleView from './components/ModuleView';
 import OptionDetail from './components/OptionDetail';
 import ErrorBoundary from './components/ErrorBoundary';
+import Onboarding from './components/Onboarding';
 import { useStore } from './lib/store';
 import type { AppState, NavItem } from './lib/types';
 
@@ -22,6 +23,7 @@ export default function App() {
   const inventory = useStore((s) => s.inventory);
   const addModule = useStore((s) => s.addModule);
   const resetToSeed = useStore((s) => s.resetToSeed);
+  const onboardingDone = useStore((s) => s.preferences.completed);
   const [activeId, setActiveId] = useState<string>(SUMMARY_ID);
   const [detail, setDetail] = useState<DetailRef | null>(null);
 
@@ -66,24 +68,27 @@ export default function App() {
     );
 
   return (
-    <div className="flex min-h-screen bg-slate-50 text-slate-900">
-      <Sidebar items={navItems} activeId={activeId} onSelect={selectNav} onAddModule={handleAddModule} />
-      <main className="flex flex-1 flex-col overflow-hidden">
-        <Toolbar />
-        <div className="flex-1 overflow-auto">
-          <div className="mx-auto max-w-5xl px-6 py-6">
-            {/* Keyed by the active view (incl. which option's detail) so switching
-                spins up a fresh boundary — a crash in one view never strands the rest. */}
-            <ErrorBoundary
-              key={detailOption ? `detail:${detail!.moduleId}:${detail!.optionId}` : activeId}
-              label={detailOption ? detailOption.name : activeModule ? activeModule.label : 'Summary'}
-              onReset={resetToSeed}
-            >
-              {content}
-            </ErrorBoundary>
+    <>
+      {!onboardingDone && <Onboarding onClose={() => selectNav(SUMMARY_ID)} />}
+      <div className="flex min-h-screen bg-slate-50 text-slate-900">
+        <Sidebar items={navItems} activeId={activeId} onSelect={selectNav} onAddModule={handleAddModule} />
+        <main className="flex flex-1 flex-col overflow-hidden">
+          <Toolbar />
+          <div className="flex-1 overflow-auto">
+            <div className="mx-auto max-w-5xl px-6 py-6">
+              {/* Keyed by the active view (incl. which option's detail) so switching
+                  spins up a fresh boundary — a crash in one view never strands the rest. */}
+              <ErrorBoundary
+                key={detailOption ? `detail:${detail!.moduleId}:${detail!.optionId}` : activeId}
+                label={detailOption ? detailOption.name : activeModule ? activeModule.label : 'Summary'}
+                onReset={resetToSeed}
+              >
+                {content}
+              </ErrorBoundary>
+            </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
   );
 }

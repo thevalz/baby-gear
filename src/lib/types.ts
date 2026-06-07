@@ -1,8 +1,70 @@
 // Core data model. These interfaces match src/data/seed.json exactly.
 
+/**
+ * The influencer/creator who hosts this advisor. Their branding turns the tool
+ * into a customer-facing companion to their videos: it drives traffic back to
+ * their channel and monetizes through their (affiliate) price links. Lives in
+ * `config` so it travels through export/import and the repo-as-source-of-truth
+ * sync, since it's content the creator owns — not a per-visitor setting.
+ */
+export interface Creator {
+  /** Display name / brand, e.g. "The Baby Gear Lab". */
+  name: string;
+  /** Channel or "watch the review" URL. */
+  youtubeUrl?: string;
+  /** One-line positioning shown under the name. */
+  tagline?: string;
+  /** Optional subscribe CTA URL (defaults to youtubeUrl). */
+  subscribeUrl?: string;
+}
+
 export interface Config {
   overallBudget: number;
   adapterCost?: number;
+  creator?: Creator;
+}
+
+/**
+ * A new parent's onboarding answers. Persisted per-visitor (NOT seeded), used to
+ * personalize criterion weights, the vehicle-fit label, owned-stroller
+ * compatibility, and the overall budget. `completed` gates the first-run quiz.
+ */
+export interface Preferences {
+  completed: boolean;
+  /** Priority keys the visitor chose, most-important first (see preferences.ts). */
+  priorities: string[];
+  /** Vehicle name, personalizes the rear-facing-fit criterion, e.g. "Toyota Tacoma". */
+  vehicle?: string;
+  /** Stroller they already own, drives red/yellow compatibility flags. */
+  ownedStroller?: string;
+  /** Their budget, copied into config.overallBudget. */
+  budget?: number;
+  /**
+   * Usable rear-facing length of their back seat, in inches (front of the back
+   * cushion to the back of a reclined front seat). Compared to each seat's
+   * `rearFacingLengthIn` footprint to flag clearance problems before purchase.
+   */
+  backSeatLengthIn?: number;
+}
+
+/**
+ * One critic/creator's take on an option — the unit this app aggregates
+ * Rotten-Tomatoes style. Many endorsements across creators roll up into a
+ * "critic score" (% recommended) shown alongside the spec-driven match score.
+ */
+export interface Endorsement {
+  /** Creator / critic name, e.g. "The Baby Gear Lab". */
+  critic: string;
+  /** The fresh/rotten verdict. */
+  verdict: 'recommended' | 'not-recommended';
+  /** Optional 0–100 rating that critic gave it. */
+  score?: number;
+  /** Short pull-quote shown with the endorsement. */
+  quote?: string;
+  /** Link to the critic's review / video (or a timestamp in it). */
+  url?: string;
+  /** ISO date of the review. */
+  date?: string;
 }
 
 export interface Criterion {
@@ -74,6 +136,10 @@ export interface Option {
   image?: string;
   /** Retailer prices sourced by a research session; drives best-price + sources UI. */
   priceSources?: PriceSource[];
+  /** Optional deep link to the creator's review (or a timestamp in it) for this pick. */
+  reviewUrl?: string;
+  /** Critic/creator endorsements, aggregated into a Rotten-Tomatoes-style score. */
+  endorsements?: Endorsement[];
   attributes: OptionAttributes;
   scores: Record<string, number>; // criterionId -> 1–5
   notes?: string;
