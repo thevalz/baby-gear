@@ -18,6 +18,14 @@ export interface OptionAttributes {
   carrierLbVerify?: boolean;
   /** Rear-facing installed/shell length (front-to-back footprint), inches. */
   rearFacingLengthIn?: number;
+  /** Max child HEIGHT/length limit (rear-facing), inches — drives outgrow-by-height. */
+  maxHeightIn?: number;
+  /** Max child WEIGHT limit, lb — drives the weight-capacity longevity score. */
+  maxWeightLb?: number;
+  /** True when the seat extends into toddlerhood (rear-faces to ~2 yr) vs a pure infant bucket. */
+  convertsToToddler?: boolean;
+  /** Manufacturer-published max age in months, when stated (omitted when not on the spec page). */
+  maxAgeMonths?: number;
   fitsWayfinder?: boolean;
   fitsAlterrain?: boolean;
   safety?: string;

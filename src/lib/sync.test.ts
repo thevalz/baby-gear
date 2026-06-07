@@ -85,6 +85,38 @@ describe('mergePricingFromSeed', () => {
     expect(ids).toEqual(['x', 'y']);
   });
 
+  it('appends repo-added criteria and seeds their scores, keeping user weights/scores', () => {
+    const persisted = state({
+      dataVersion: 1,
+      modules: [
+        {
+          ...state({}).modules[0],
+          criteria: [{ id: 'a', label: 'A', weight: 5 }],
+          options: [opt('x', { scores: { a: 4 } })],
+        },
+      ],
+    });
+    const seed = state({
+      dataVersion: 2,
+      modules: [
+        {
+          ...state({}).modules[0],
+          criteria: [
+            { id: 'a', label: 'A', weight: 1 },
+            { id: 'grow', label: 'Growth', weight: 3 },
+          ],
+          options: [opt('x', { scores: { a: 2, grow: 5 } })],
+        },
+      ],
+    });
+    const m = mergePricingFromSeed(persisted, seed).modules[0];
+    expect(m.criteria.map((c) => c.id)).toEqual(['a', 'grow']); // new criterion appended
+    expect(m.criteria[0].weight).toBe(5); // user's weight for the existing criterion kept
+    const o = m.options[0];
+    expect(o.scores.a).toBe(4); // user score for the existing criterion preserved
+    expect(o.scores.grow).toBe(5); // seed score for the brand-new criterion folded in
+  });
+
   it('force merges regardless of version (manual refresh)', () => {
     const persisted = state({ dataVersion: 5, modules: [{ ...state({}).modules[0], options: [opt('x', { price: 100 })] }] });
     const seed = state({ dataVersion: 1, modules: [{ ...state({}).modules[0], options: [opt('x', { price: 70 })] }] });
