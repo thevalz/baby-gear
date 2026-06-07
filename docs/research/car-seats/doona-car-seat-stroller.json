@@ -1,0 +1,54 @@
+{
+  "_comment": "Staging fragment for ONE car-seat option (Batch E). Filename equals the option id in src/data/seed.json. Do NOT edit seed.json — the integration pass folds this in. See ../../RESEARCH_PLAN.md.",
+
+  "id": "doona-car-seat-stroller",
+  "name": "Doona Car Seat & Stroller",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/doona-car-seat-stroller.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Target",
+      "price": 650.00,
+      "url": "https://www.target.com/p/doona-car-seat-stroller/-/A-87530473",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Babylist",
+      "price": 650.00,
+      "url": "https://www.babylist.com/gp/doona-infant-car-seat-stroller/14613/31863",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Doona US (DTC)",
+      "price": 650.00,
+      "url": "https://www.doona.com/en-us/car-seat-stroller/shop-all-doona",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "Facts to fold into the option's attributes. carrierLb/fitsWayfinder/fitsAlterrain/safety map into seed.json; the rest is audit trail.",
+    "carrierLb": 16.5,
+    "fitsWayfinder": false,
+    "fitsAlterrain": false,
+    "safety": "Integrated car-seat -> stroller (wheels fold out in one motion); 5-pt harness + anti-rebound LATCH base; crash-tested 100+ times, NHTSA 5-star, meets/exceeds US & EU standards",
+
+    "bobWayfinderAdapter": "N/A — Doona is its own stroller; no infant-seat-to-stroller adapter exists or applies",
+    "bobAlterrainAdapter": "N/A — Doona is its own stroller; no adapter applies",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "No Tacoma-specific fitment data found. As a car seat it installs rear-facing on its own LATCH base; the integrated wheels/frame add bulk but its in-car footprint is comparable to a standard infant seat. Heaviest carrier in the roster (~16.5 lb; Target lists 17.2 lb), but light for a full travel system (vs. ~20+ lb for a separate seat + stroller)."
+  },
+
+  "sources": [
+    "https://www.target.com/p/doona-car-seat-stroller/-/A-87530473",
+    "https://www.doona.com/en-us/car-seat-stroller/shop-all-doona",
+    "https://www.babylist.com/gp/doona-infant-car-seat-stroller/14613/31863",
+    "https://www.babygearlab.com/reviews/getting-around/stroller-and-car-seat-combo/doona-combo"
+  ],
+  "notes": "FLAG (c) RESOLVED: BOB compatibility is N/A — the Doona IS its own stroller (car seat with integrated fold-out wheels), so no BOB Wayfinder/Alterrain adapter applies. Cross-module note for integration: the Doona competes with the STROLLER module too, not just car-seats — it's the only true 2-in-1 (car seat + stroller in one) on the roster, so its value should be judged against travel-system combos, not bare infant seats. Pricing is uniform at $650.00 (in stock at Target, Babylist, and Doona DTC); higher-end colorways (e.g. Midnight Edition) run $750. seed stub price 550 is now low vs. the $650 street price."
+}

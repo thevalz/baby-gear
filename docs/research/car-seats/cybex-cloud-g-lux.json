@@ -1,0 +1,62 @@
+{
+  "_comment": "Staging fragment for ONE car-seat option (Batch E). Filename equals the option id in src/data/seed.json. Do NOT edit seed.json — the integration pass folds this in. See ../../RESEARCH_PLAN.md.",
+
+  "id": "cybex-cloud-g-lux",
+  "name": "Cybex Cloud G Lux",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/cybex-cloud-g-lux.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Bambi Baby",
+      "price": 499.95,
+      "url": "https://www.bambibaby.com/products/cybex-cloud-g-infant-car-seat-lux",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Strolleria",
+      "price": 499.95,
+      "url": "https://strolleria.com/products/cybex-cloud-g-lux-infant-car-seat-and-base",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "ANB Baby",
+      "price": 499.95,
+      "url": "https://www.anbbaby.com/products/cybex-cloud-g-lux-sensorsafe-infant-car-seat",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Cybex US (DTC)",
+      "price": 499.95,
+      "url": "https://www.cybex-online.com/en/us/p/cs-go-cloud-g-lux-sensorsafe-3.html",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "Facts to fold into the option's attributes. carrierLb/fitsWayfinder/fitsAlterrain/safety map into seed.json; the rest is audit trail.",
+    "carrierLb": 11,
+    "fitsWayfinder": false,
+    "fitsAlterrain": false,
+    "safety": "Ergonomic lie-flat recline + extended leg rest; Linear Side-impact Protection (L.S.P.); anti-rebound load-leg base (reduces crash forces up to ~30%); SensorSafe smart chest clip",
+
+    "bobWayfinderAdapter": "none for Cloud G — BOB's Wayfinder Cybex fitment names the Aton series and Cloud Q only; the Cloud G/Cloud G Lux is NOT listed (Strolleria + bobgear adapter finder)",
+    "bobAlterrainAdapter": "none for Cloud G — BOB Alterrain / Alterrain Pro list names 'Cybex Aton and Cloud Q series' only; Cloud G is NOT listed",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "Large front-to-back footprint when reclined (~29 in reported), which is challenging in a Tacoma's shallow rear seat (~23 in depth with bases extended, Tacoma4G forum). The lie-flat/extended-leg recline trades small-vehicle fit for comfort — weaker Tacoma fit than the compact Clek Liing. No Tacoma-specific fitment doc found; see CSFTL Cloud G Lux review for shell/recline detail."
+  },
+
+  "sources": [
+    "https://www.cybex-online.com/en/us/gold-cloud-g-lux.html",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-wayfinder",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-alterrain-alterrain-pro",
+    "https://csftl.org/cybex-cloud-g-lux-rear-facing-only-car-seat-review/",
+    "https://www.bambibaby.com/products/cybex-cloud-g-infant-car-seat-lux"
+  ],
+  "notes": "FLAG (b) RESOLVED: the Cloud G does NOT share the Cloud Q's BOB adapter. Both the BOB Wayfinder and the Alterrain/Alterrain Pro fitment lists name the Cybex *Cloud Q* (and Aton series) — NOT the Cloud G/Cloud G Lux. So the seed stub is WRONG: it currently has fitsWayfinder=true and fitsAlterrain=true; both should flip to FALSE for the Cloud G Lux. IMPORTANT for integration: the Cloud G Lux is being discontinued/phased out in favor of the Cloud G Pro — Cybex DTC, Strolleria, and ANB Baby all show it unavailable; only Bambi Baby still shows it in stock at $499.95 (the consistent street price/MSRP). Carrier weight ~11 lb (Cybex spec page lists 12 lb for the carrier). seed stub price 550 is high vs. the $499.95 street price."
+}
