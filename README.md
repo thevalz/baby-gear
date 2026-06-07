@@ -36,7 +36,8 @@ src/
     Toolbar.tsx        Overall budget + Export / Import / Reset
     SummaryDashboard.tsx  Four cards: top picks, cost vs budget,
                           compatibility flags, keep/return tracker
-    ModuleView.tsx     Per-module options table + weighted-score chart
+    ModuleView.tsx     Editable module: label/budget, criteria + weights,
+                       options with prices & scores, weighted-score chart
   lib/
     types.ts           Data model (Config / Module / Option / Criterion / InventoryItem)
     scoring.ts         weightedTotal / maxScore / percent / topPick / rankedOptions
@@ -91,3 +92,11 @@ The toolbar provides:
 - **Export** — downloads the current state as `data.json`.
 - **Import** — loads a `data.json` file and replaces the state.
 - **Reset** — restores the original seed data.
+
+## Adding gear categories at runtime
+
+Click **“+ Add module”** in the sidebar to create a new category (crib,
+monitor, carrier, …) with no code changes: edit its label and budget, add
+criteria with weights, and add options with prices and scores — all inline in
+the module view. The sidebar nav and the Summary Dashboard pick up new modules
+automatically because every view iterates `state.modules`.

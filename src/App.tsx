@@ -12,6 +12,7 @@ export default function App() {
   const config = useStore((s) => s.config);
   const modules = useStore((s) => s.modules);
   const inventory = useStore((s) => s.inventory);
+  const addModule = useStore((s) => s.addModule);
   const [activeId, setActiveId] = useState<string>(SUMMARY_ID);
 
   const navItems: NavItem[] = [
@@ -22,19 +23,22 @@ export default function App() {
   const activeModule = modules.find((m) => m.id === activeId);
   const state: AppState = { config, modules, inventory };
 
+  const handleAddModule = () => {
+    const id = addModule();
+    setActiveId(id); // jump straight into the new module to edit it
+  };
+
   return (
     <div className="flex min-h-screen bg-slate-50 text-slate-900">
-      <Sidebar items={navItems} activeId={activeId} onSelect={setActiveId} />
+      <Sidebar items={navItems} activeId={activeId} onSelect={setActiveId} onAddModule={handleAddModule} />
       <main className="flex flex-1 flex-col overflow-hidden">
         <Toolbar />
         <div className="flex-1 overflow-auto">
           <div className="mx-auto max-w-5xl px-6 py-6">
-            {activeId === SUMMARY_ID ? (
-              <SummaryDashboard state={state} />
-            ) : activeModule ? (
-              <ModuleView module={activeModule} />
+            {activeModule ? (
+              <ModuleView module={activeModule} onDeleted={() => setActiveId(SUMMARY_ID)} />
             ) : (
-              <p className="text-slate-500">Nothing selected.</p>
+              <SummaryDashboard state={state} />
             )}
           </div>
         </div>

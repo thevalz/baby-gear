@@ -4,9 +4,10 @@ interface SidebarProps {
   items: NavItem[];
   activeId: string;
   onSelect: (id: string) => void;
+  onAddModule: () => void;
 }
 
-export default function Sidebar({ items, activeId, onSelect }: SidebarProps) {
+export default function Sidebar({ items, activeId, onSelect, onAddModule }: SidebarProps) {
   return (
     <aside className="w-60 shrink-0 border-r border-slate-200 bg-white">
       <div className="px-5 py-4 border-b border-slate-200">
@@ -31,6 +32,13 @@ export default function Sidebar({ items, activeId, onSelect }: SidebarProps) {
             </button>
           );
         })}
+
+        <button
+          onClick={onAddModule}
+          className="mt-2 w-full rounded-md border border-dashed border-slate-300 px-3 py-2 text-sm text-slate-500 hover:bg-slate-100"
+        >
+          + Add module
+        </button>
       </nav>
     </aside>
   );

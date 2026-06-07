@@ -42,21 +42,20 @@
       "budget": 800,
       "selectedOptionId": null,
       "criteria": [
-        { "id": "maneuver", "label": "Maneuverability",        "weight": 4 },
-        { "id": "terrain",  "label": "All-terrain / trails",   "weight": 5 },
-        { "id": "fold",     "label": "Fold for Tacoma bed",    "weight": 3 },
-        { "id": "comfort",  "label": "Comfort / suspension",   "weight": 3 },
-        { "id": "stprice",  "label": "Price",                  "weight": 2 }
+        { "id": "ride",        "label": "Ride / terrain",        "weight": 5 },
+        { "id": "foldsize",    "label": "Weight & fold size",    "weight": 3 },
+        { "id": "adapterease", "label": "Car-seat adapter ease", "weight": 3 },
+        { "id": "stprice",     "label": "Price",                 "weight": 2 }
       ],
       "options": [
-        { "id": "bob-wayfinder-opt", "moduleId": "stroller", "name": "BOB Wayfinder", "price": 370,
+        { "id": "bob-wayfinder-opt", "moduleId": "stroller", "name": "BOB Wayfinder", "price": 300,
           "attributes": { "brand": "BOB", "type": "all-terrain / jogging", "owned": true },
-          "scores": { "maneuver": 4, "terrain": 5, "fold": 3, "comfort": 4, "stprice": 4 },
-          "notes": "Already owned. Solid entry all-terrain BOB; fixed suspension." },
-        { "id": "bob-alterrain-opt", "moduleId": "stroller", "name": "BOB Alterrain", "price": 480,
+          "scores": { "ride": 3, "foldsize": 3, "adapterease": 3, "stprice": 3 },
+          "notes": "Already owned. Scores are placeholders — edit to fill in." },
+        { "id": "bob-alterrain-opt", "moduleId": "stroller", "name": "BOB Alterrain", "price": 400,
           "attributes": { "brand": "BOB", "type": "all-terrain / jogging", "owned": false },
-          "scores": { "maneuver": 4, "terrain": 5, "fold": 4, "comfort": 5, "stprice": 3 },
-          "notes": "Considering. Adjustable suspension + hand parking brake; pricier." }
+          "scores": { "ride": 3, "foldsize": 3, "adapterease": 3, "stprice": 3 },
+          "notes": "Considering. Scores are placeholders — edit to fill in." }
       ]
     }
   ],
