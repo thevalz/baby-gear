@@ -57,7 +57,7 @@ export default function Onboarding({ onClose }: { onClose: () => void }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 p-4 backdrop-blur-sm">
-      <div className="w-full max-w-xl overflow-hidden rounded-2xl bg-white shadow-2xl">
+      <div className="max-h-[90vh] w-full max-w-xl overflow-y-auto rounded-2xl bg-white shadow-2xl">
         {/* Creator-branded header */}
         <div className="bg-gradient-to-r from-indigo-600 to-violet-600 px-6 py-5 text-white">
           <div className="flex items-center gap-2 text-sm font-medium opacity-90">

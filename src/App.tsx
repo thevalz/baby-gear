@@ -26,6 +26,7 @@ export default function App() {
   const onboardingDone = useStore((s) => s.preferences.completed);
   const [activeId, setActiveId] = useState<string>(SUMMARY_ID);
   const [detail, setDetail] = useState<DetailRef | null>(null);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const navItems: NavItem[] = [
     { id: SUMMARY_ID, label: 'Summary' },
@@ -41,10 +42,12 @@ export default function App() {
   const openDetail = (moduleId: string, optionId: string) => {
     setActiveId(moduleId);
     setDetail({ moduleId, optionId });
+    setSidebarOpen(false); // close the mobile drawer after navigating
   };
   const selectNav = (id: string) => {
     setActiveId(id);
     setDetail(null);
+    setSidebarOpen(false); // close the mobile drawer after navigating
   };
   const detailModule = detail ? modules.find((m) => m.id === detail.moduleId) : undefined;
   const detailOption = detailModule?.options.find((o) => o.id === detail?.optionId);
@@ -71,11 +74,31 @@ export default function App() {
     <>
       {!onboardingDone && <Onboarding onClose={() => selectNav(SUMMARY_ID)} />}
       <div className="flex min-h-screen bg-slate-50 text-slate-900">
-        <Sidebar items={navItems} activeId={activeId} onSelect={selectNav} onAddModule={handleAddModule} />
-        <main className="flex flex-1 flex-col overflow-hidden">
+        <Sidebar
+          items={navItems}
+          activeId={activeId}
+          onSelect={selectNav}
+          onAddModule={handleAddModule}
+          open={sidebarOpen}
+          onClose={() => setSidebarOpen(false)}
+        />
+        <main className="flex min-w-0 flex-1 flex-col overflow-hidden">
+          {/* Mobile top bar with the menu toggle (hidden on lg+, where the sidebar is static). */}
+          <div className="flex items-center gap-3 border-b border-slate-200 bg-white px-4 py-3 lg:hidden">
+            <button
+              onClick={() => setSidebarOpen(true)}
+              aria-label="Open menu"
+              className="rounded-md p-1.5 text-slate-600 hover:bg-slate-100"
+            >
+              <span className="block h-0.5 w-5 bg-current" />
+              <span className="mt-1 block h-0.5 w-5 bg-current" />
+              <span className="mt-1 block h-0.5 w-5 bg-current" />
+            </button>
+            <span className="text-sm font-semibold text-slate-800">👶 Baby-Gear</span>
+          </div>
           <Toolbar />
           <div className="flex-1 overflow-auto">
-            <div className="mx-auto max-w-5xl px-6 py-6">
+            <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6">
               {/* Keyed by the active view (incl. which option's detail) so switching
                   spins up a fresh boundary — a crash in one view never strands the rest. */}
               <ErrorBoundary
