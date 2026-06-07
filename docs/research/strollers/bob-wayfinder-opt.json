@@ -1,0 +1,57 @@
+{
+  "_comment": "Stroller research fragment. Sourced 2026-06-07. Owned model. Do NOT edit seed.json — integration pass folds this in.",
+  "id": "bob-wayfinder-opt",
+  "name": "BOB Wayfinder",
+  "checkedAt": "2026-06-07",
+  "image": "images/bob-wayfinder-opt.jpg",
+  "priceSources": [
+    {
+      "retailer": "ANB Baby",
+      "price": 679.99,
+      "url": "https://www.anbbaby.com/products/bob-gear-wayfinder-jogging-stroller",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Target",
+      "price": 543.99,
+      "url": "https://www.target.com/p/bob-gear-wayfinder-jogging-stroller-with-dual-suspension-and-air-filled-tires-storm/-/A-88883947",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Strolleria",
+      "price": 679.99,
+      "url": "https://strolleria.com/products/bob-wayfinder-jogging-stroller",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Swaddles Baby",
+      "price": 679.99,
+      "url": "https://www.swaddlesbaby.com/products/bob-gear-wayfinder-jogging-stroller",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+  "verifiedAttributes": {
+    "_comment": "weightLb / foldedDimsIn / tires / suspension / maxChildLb / adapterSystem map into seed.json.",
+    "weightLb": 31.1,
+    "foldedDimsIn": "16.5 × 22 × 32.5 in",
+    "tires": "12″ front / 16″ rear air-filled",
+    "suspension": "Independent dual",
+    "maxChildLb": 75,
+    "adapterSystem": "One universal adapter (Nuna / Cybex / Maxi-Cosi / Britax / Diono)"
+  },
+  "sources": [
+    "https://www.anbbaby.com/products/bob-gear-wayfinder-jogging-stroller",
+    "https://www.target.com/p/bob-gear-wayfinder-jogging-stroller-with-dual-suspension-and-air-filled-tires-storm/-/A-88883947",
+    "https://strolleria.com/products/bob-wayfinder-jogging-stroller",
+    "https://www.swaddlesbaby.com/products/bob-gear-wayfinder-jogging-stroller",
+    "https://www.bobgear.com/single-strollers",
+    "https://bobparts.com/bob-gear-wayfinder-jogging-stroller/",
+    "https://www.amazon.com/BOB-WayfinderTM-Jogging-Stroller-Compatible/dp/B0C4VBQGRP",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-wayfinder"
+  ],
+  "notes": "Already owned. Lightest of the three (31.1 lb) with the cleverest pack — the DualRetract fold tucks the wheels in. Car-seat side is the simplest: ONE universal adapter (~$60) covers Nuna/Cybex/Maxi-Cosi/Britax/Diono (it does NOT cover Graco/Chicco/UPPAbaby). Best in-stock price $679.99 (ANB Baby). Target's $543.99 was a sale price but OUT of stock when checked; Strolleria/Swaddles list $679.99 but backordered/sold out. MSRP per bobgear.com is $679.99."
+}

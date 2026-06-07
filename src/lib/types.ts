@@ -25,6 +25,18 @@ export interface OptionAttributes {
   brand?: string;
   type?: string;
   owned?: boolean;
+  /** Stroller weight (lb) — drives the weight & fold-size score. */
+  weightLb?: number;
+  /** Folded footprint as a human string, e.g. "16.5 × 22 × 32.5 in". */
+  foldedDimsIn?: string;
+  /** Wheel/tire setup, e.g. "12″ front / 16″ rear air-filled". */
+  tires?: string;
+  /** Suspension system, e.g. "Independent dual" or "SmoothShox". */
+  suspension?: string;
+  /** Max child weight capacity (lb). */
+  maxChildLb?: number;
+  /** Car-seat adapter approach — drives the adapter-ease score. */
+  adapterSystem?: string;
 }
 
 /**

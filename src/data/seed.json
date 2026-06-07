@@ -1,5 +1,5 @@
 {
-  "dataVersion": 4,
+  "dataVersion": 5,
   "config": {
     "overallBudget": 1000,
     "adapterCost": 100
@@ -746,37 +746,138 @@
           "id": "bob-wayfinder-opt",
           "moduleId": "stroller",
           "name": "BOB Wayfinder",
-          "price": 300,
+          "price": 680,
+          "image": "images/bob-wayfinder-opt.jpg",
           "attributes": {
             "brand": "BOB",
             "type": "all-terrain / jogging",
-            "owned": true
+            "owned": true,
+            "weightLb": 31.1,
+            "foldedDimsIn": "16.5 × 22 × 32.5 in",
+            "tires": "12″ front / 16″ rear air-filled",
+            "suspension": "Independent dual",
+            "maxChildLb": 75,
+            "adapterSystem": "One universal adapter (Nuna / Cybex / Maxi-Cosi / Britax / Diono)"
           },
           "scores": {
-            "ride": 3,
-            "foldsize": 3,
-            "adapterease": 3,
+            "ride": 4,
+            "foldsize": 4,
+            "adapterease": 5,
             "stprice": 3
           },
-          "notes": "Already owned. Scores are placeholders — edit to fill in."
+          "priceSources": [
+            {
+              "retailer": "ANB Baby",
+              "price": 679.99,
+              "url": "https://www.anbbaby.com/products/bob-gear-wayfinder-jogging-stroller",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Target",
+              "price": 543.99,
+              "url": "https://www.target.com/p/bob-gear-wayfinder-jogging-stroller-with-dual-suspension-and-air-filled-tires-storm/-/A-88883947",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Strolleria",
+              "price": 679.99,
+              "url": "https://strolleria.com/products/bob-wayfinder-jogging-stroller",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Swaddles Baby",
+              "price": 679.99,
+              "url": "https://www.swaddlesbaby.com/products/bob-gear-wayfinder-jogging-stroller",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            }
+          ],
+          "notes": "Already owned. Lightest of the three (31.1 lb) with the cleverest pack — the DualRetract fold tucks the wheels in. Car-seat side is the simplest: ONE universal adapter (~$60) covers Nuna/Cybex/Maxi-Cosi/Britax/Diono (it does NOT cover Graco/Chicco/UPPAbaby). Best in-stock price $679.99 (ANB Baby). Target's $543.99 was a sale price but OUT of stock when checked; Strolleria/Swaddles list $679.99 but backordered/sold out. MSRP per bobgear.com is $679.99."
         },
         {
           "id": "bob-alterrain-opt",
           "moduleId": "stroller",
           "name": "BOB Alterrain",
-          "price": 400,
+          "price": 550,
+          "image": "images/bob-alterrain-opt.jpg",
           "attributes": {
             "brand": "BOB",
             "type": "all-terrain / jogging",
-            "owned": false
+            "owned": false,
+            "weightLb": 31.3,
+            "foldedDimsIn": "39.3 × 25.5 × 16 in",
+            "tires": "12″ front / 16″ rear air-filled",
+            "suspension": "SmoothShox",
+            "maxChildLb": 75,
+            "adapterSystem": "Brand-specific adapters (Graco / Chicco / UPPAbaby / Nuna / Cybex / Maxi-Cosi)"
           },
           "scores": {
-            "ride": 3,
+            "ride": 4,
             "foldsize": 3,
-            "adapterease": 3,
-            "stprice": 3
+            "adapterease": 4,
+            "stprice": 4
           },
-          "notes": "Considering. Scores are placeholders — edit to fill in."
+          "priceSources": [
+            {
+              "retailer": "ANB Baby",
+              "price": 649.99,
+              "url": "https://www.anbbaby.com/products/bob-gear-alterrain-jogging-stroller",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            }
+          ],
+          "notes": "Considering. SmoothShox suspension (spring-loaded shock near the seat) rides a touch plusher than the Wayfinder's dual suspension, but it folds longer/bulkier (39.3 × 25.5 × 16 in). Broader car-seat reach than the Wayfinder — brand-specific adapters add Graco/Chicco/UPPAbaby — but you must buy the adapter that matches your seat (some ~$100). Cheapest of the three on paper (MSRP $549.99) BUT largely SOLD OUT / phased out in favor of the Alterrain Pro: the only live listing found (ANB Baby, $649.99) was Not Available. Reference price = $549.99 MSRP fallback."
+        },
+        {
+          "id": "bob-alterrain-pro-opt",
+          "moduleId": "stroller",
+          "name": "BOB Alterrain Pro",
+          "price": 830,
+          "image": "images/bob-alterrain-pro-opt.jpg",
+          "attributes": {
+            "brand": "BOB",
+            "type": "all-terrain / jogging",
+            "owned": false,
+            "weightLb": 32.3,
+            "foldedDimsIn": "33 × 21.5 × 13 in",
+            "tires": "12″ front / 16″ rear air-filled",
+            "suspension": "SmoothShox",
+            "maxChildLb": 75,
+            "adapterSystem": "Brand-specific adapters (Graco / Chicco / UPPAbaby / Nuna / Cybex / Maxi-Cosi)"
+          },
+          "scores": {
+            "ride": 5,
+            "foldsize": 3,
+            "adapterease": 4,
+            "stprice": 2
+          },
+          "priceSources": [
+            {
+              "retailer": "Bambi Baby",
+              "price": 829.99,
+              "url": "https://www.bambibaby.com/products/bob-alterrain-pro-jogging-stroller-in-black",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Strolleria",
+              "price": 829.99,
+              "url": "https://strolleria.com/products/bob-alterrain-pro-jogging-stroller",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Modern Nursery",
+              "price": 879.99,
+              "url": "https://www.modernnursery.com/products/bob-gear-alterrain-pro-jogging-stroller",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            }
+          ],
+          "notes": "Considering — BOB's current flagship all-terrain jogger and the in-stock successor to the base Alterrain. SmoothShox suspension plus an ergonomic hand brake for downhill control; flattest fold of the three (33 × 21.5 × 13 in) though heaviest (32.3 lb). Shares the Alterrain's brand-specific adapter ecosystem, so any car seat marked 'fits Alterrain' fits the Pro. Best in-stock price $829.99 (Bambi Baby / Strolleria; Modern Nursery $879.99) — note this is OVER the $800 module budget. MSRP $829.99."
         }
       ]
     }

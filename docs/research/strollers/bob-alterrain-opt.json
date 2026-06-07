@@ -1,0 +1,32 @@
+{
+  "_comment": "Stroller research fragment. Sourced 2026-06-07. Base Alterrain (largely sold out / superseded by Pro). Do NOT edit seed.json.",
+  "id": "bob-alterrain-opt",
+  "name": "BOB Alterrain",
+  "checkedAt": "2026-06-07",
+  "image": "images/bob-alterrain-opt.jpg",
+  "priceSources": [
+    {
+      "retailer": "ANB Baby",
+      "price": 649.99,
+      "url": "https://www.anbbaby.com/products/bob-gear-alterrain-jogging-stroller",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+  "verifiedAttributes": {
+    "_comment": "weightLb / foldedDimsIn / tires / suspension / maxChildLb / adapterSystem map into seed.json.",
+    "weightLb": 31.3,
+    "foldedDimsIn": "39.3 × 25.5 × 16 in",
+    "tires": "12″ front / 16″ rear air-filled",
+    "suspension": "SmoothShox",
+    "maxChildLb": 75,
+    "adapterSystem": "Brand-specific adapters (Graco / Chicco / UPPAbaby / Nuna / Cybex / Maxi-Cosi)"
+  },
+  "sources": [
+    "https://www.anbbaby.com/products/bob-gear-alterrain-jogging-stroller",
+    "https://www.rei.com/product/171393/bob-gear-alterrain-jogging-stroller",
+    "https://www.albeebaby.com/collections/bob-alterrain-jogging-strollers",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-alterrain-alterrain-pro"
+  ],
+  "notes": "Considering. SmoothShox suspension (spring-loaded shock near the seat) rides a touch plusher than the Wayfinder's dual suspension, but it folds longer/bulkier (39.3 × 25.5 × 16 in). Broader car-seat reach than the Wayfinder — brand-specific adapters add Graco/Chicco/UPPAbaby — but you must buy the adapter that matches your seat (some ~$100). Cheapest of the three on paper (MSRP $549.99) BUT largely SOLD OUT / phased out in favor of the Alterrain Pro: the only live listing found (ANB Baby, $649.99) was Not Available. Reference price = $549.99 MSRP fallback."
+}

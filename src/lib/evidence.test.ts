@@ -8,6 +8,11 @@ const carSeat = state.modules.find((m) => m.id === 'car-seat')!;
 const nuna = carSeat.options.find((o) => o.id === 'nuna-pipa-aire-rx')!;
 const crit = (id: string): Criterion => carSeat.criteria.find((c) => c.id === id)!;
 
+const stroller = state.modules.find((m) => m.id === 'stroller')!;
+const wayfinder = stroller.options.find((o) => o.id === 'bob-wayfinder-opt')!;
+const alterrainPro = stroller.options.find((o) => o.id === 'bob-alterrain-pro-opt')!;
+const sCrit = (id: string): Criterion => stroller.criteria.find((c) => c.id === id)!;
+
 describe('criterionEvidence', () => {
   it('turns a carrier-weight score into the literal weight in lb', () => {
     expect(criterionEvidence(crit('weight'), nuna)).toBe('6.2 lb carrier');
@@ -70,5 +75,40 @@ describe('optionSummary', () => {
 
   it('omits the long safety prose from the compact summary', () => {
     expect(optionSummary(nuna).some((c) => c.key === 'safety')).toBe(false);
+  });
+
+  it('summarises a stroller as weight + suspension + adapter-ease chips', () => {
+    const byKey = Object.fromEntries(optionSummary(wayfinder).map((c) => [c.key, c]));
+    expect(byKey.weightLb).toMatchObject({ text: '31.1 lb', tone: 'neutral' });
+    expect(byKey.suspension).toMatchObject({ text: 'Independent dual', tone: 'neutral' });
+    // A single universal adapter reads as an ease win (good tone).
+    expect(byKey.adapterSystem).toMatchObject({ text: '1 universal adapter', tone: 'good' });
+  });
+
+  it('marks a brand-specific adapter ecosystem as a neutral chip', () => {
+    const byKey = Object.fromEntries(optionSummary(alterrainPro).map((c) => [c.key, c]));
+    expect(byKey.adapterSystem).toMatchObject({ text: 'Brand adapters', tone: 'neutral' });
+  });
+});
+
+describe('criterionEvidence (stroller)', () => {
+  it('shows suspension + tires behind the ride/terrain score', () => {
+    expect(criterionEvidence(sCrit('ride'), wayfinder)).toBe(
+      'Independent dual · 12″ front / 16″ rear air-filled',
+    );
+  });
+
+  it('shows weight + folded size behind the fold-size score', () => {
+    expect(criterionEvidence(sCrit('foldsize'), wayfinder)).toBe(
+      '31.1 lb, folds to 16.5 × 22 × 32.5 in',
+    );
+  });
+
+  it('shows the adapter system behind the adapter-ease score', () => {
+    expect(criterionEvidence(sCrit('adapterease'), wayfinder)).toContain('universal adapter');
+  });
+
+  it('shows the best in-stock price behind the price score', () => {
+    expect(criterionEvidence(sCrit('stprice'), wayfinder)).toBe('$679.99 at ANB Baby');
   });
 });

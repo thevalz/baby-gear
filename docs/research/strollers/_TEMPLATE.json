@@ -1,0 +1,42 @@
+{
+  "_comment": "Staging fragment for ONE stroller option. Copy this to <option-id>.json (filename MUST equal the option id in src/data/seed.json), fill it in, and commit ONLY this file + the image. Do NOT edit seed.json — the integration pass folds every fragment in and bumps dataVersion once. Mirrors the car-seat contract in ../../RESEARCH_PLAN.md / ../../SOURCING.md.",
+
+  "id": "REPLACE-with-option-id-from-seed.json",
+  "name": "Human-readable model name (must match seed.json)",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/REPLACE-with-option-id.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Amazon",
+      "price": 0,
+      "url": "https://www.amazon.com/dp/DEEP-LINK",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Target",
+      "price": 0,
+      "url": "https://www.target.com/p/DEEP-LINK",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "Facts to fold into the option's attributes. These map directly into seed.json's stroller attributes and drive the summary-table chips + criterion evidence.",
+    "weightLb": 0,
+    "foldedDimsIn": "L × W × H in (wheels on)",
+    "tires": "front / rear tire size + air-filled vs foam",
+    "suspension": "suspension system name (e.g. Independent dual, SmoothShox)",
+    "maxChildLb": 0,
+    "adapterSystem": "How car seats attach: 'One universal adapter (brands…)' vs 'Brand-specific adapters (brands…)' — name the adapter(s) + price if known."
+  },
+
+  "sources": [
+    "https://primary-source-url",
+    "https://secondary-source-url"
+  ],
+  "notes": "Anything the integration pass should know: discontinued/superseded listing, in-stock vs backorder, MSRP vs sale, over-budget, etc."
+}
