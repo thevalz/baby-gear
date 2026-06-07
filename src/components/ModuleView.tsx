@@ -9,6 +9,7 @@ import {
   YAxis,
 } from 'recharts';
 import type { Module } from '../lib/types';
+import { useStore } from '../lib/store';
 import {
   formatMoney,
   formatPercent,
@@ -19,6 +20,7 @@ import {
 } from '../lib/scoring';
 
 export default function ModuleView({ module }: { module: Module }) {
+  const setModuleBudget = useStore((s) => s.setModuleBudget);
   const max = maxScore(module);
   const best = topPick(module);
 
@@ -32,9 +34,19 @@ export default function ModuleView({ module }: { module: Module }) {
     <div className="space-y-6">
       <header className="flex flex-wrap items-baseline justify-between gap-2">
         <h2 className="text-xl font-semibold text-slate-800">{module.label}</h2>
-        <div className="text-sm text-slate-500">
-          Budget {formatMoney(module.budget)} · Max score {max}
-        </div>
+        <label className="flex items-center gap-2 text-sm text-slate-500">
+          Budget
+          <span className="text-slate-400">$</span>
+          <input
+            type="number"
+            min={0}
+            step={50}
+            value={module.budget}
+            onChange={(e) => setModuleBudget(module.id, Number(e.target.value) || 0)}
+            className="w-28 rounded-md border border-slate-300 px-2 py-1 text-right tabular-nums text-slate-700"
+          />
+          <span>· Max score {max}</span>
+        </label>
       </header>
 
       <section className="overflow-x-auto rounded-lg border border-slate-200 bg-white">

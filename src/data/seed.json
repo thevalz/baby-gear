@@ -39,7 +39,7 @@
     {
       "id": "stroller",
       "label": "Stroller",
-      "budget": 500,
+      "budget": 800,
       "selectedOptionId": null,
       "criteria": [
         { "id": "maneuver", "label": "Maneuverability",        "weight": 4 },

@@ -28,16 +28,17 @@ npm run preview  # serve the production build
 index.html              Vite entry
 src/
   main.tsx              React bootstrap
-  App.tsx              App shell: sidebar + swapping content pane
+  App.tsx              App shell: sidebar + toolbar + swapping content pane
   index.css            Tailwind entry (@import "tailwindcss")
   components/
     Sidebar.tsx        Left nav: "Summary" + one item per module
+    Toolbar.tsx        Overall budget + Export / Import / Reset
     SummaryView.tsx    Top picks, cost vs. budget, net spend, chart
     ModuleView.tsx     Per-module options table + weighted-score chart
   lib/
-    types.ts           Data model (Module / Option / Criterion / …)
+    types.ts           Data model (Config / Module / Option / Criterion / InventoryItem)
     scoring.ts         weightedTotal / maxScore / percent / topPick
-    storage.ts         usePersistentState (localStorage)
+    store.ts           Zustand store + persist (localStorage)
   data/
     seed.json          Seed data (Infant Car Seat + Stroller modules)
 ```
@@ -61,6 +62,12 @@ Config        { overallBudget, adapterCost }
 
 ## Persistence
 
-State seeds from `src/data/seed.json` and is mirrored to `localStorage`
-(`baby-gear-state`) so edits survive a refresh. Editing UI and JSON
-import/export are planned next.
+A global **Zustand** store (`src/lib/store.ts`) loads `src/data/seed.json` on
+first run, then persists the entire state (`config`, `modules`, `inventory`) to
+`localStorage` under the key `baby-gear-state` on every change and rehydrates
+from it on reload — so edits survive a full page refresh.
+
+The toolbar provides:
+- **Export** — downloads the current state as `data.json`.
+- **Import** — loads a `data.json` file and replaces the state.
+- **Reset** — restores the original seed data.

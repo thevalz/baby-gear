@@ -1,4 +1,9 @@
-// Core data model for the trade study. See src/data/seed.json for an instance.
+// Core data model. These interfaces match src/data/seed.json exactly.
+
+export interface Config {
+  overallBudget: number;
+  adapterCost?: number;
+}
 
 export interface Criterion {
   id: string;
@@ -6,12 +11,26 @@ export interface Criterion {
   weight: number; // 1–5
 }
 
+/** Free-form per-option attributes; every key seen in seed.json is listed. */
+export interface OptionAttributes {
+  // car-seat attributes
+  carrierLb?: number;
+  carrierLbVerify?: boolean;
+  fitsWayfinder?: boolean;
+  fitsAlterrain?: boolean;
+  safety?: string;
+  // stroller attributes
+  brand?: string;
+  type?: string;
+  owned?: boolean;
+}
+
 export interface Option {
   id: string;
   moduleId: string;
   name: string;
   price: number;
-  attributes: Record<string, unknown>;
+  attributes: OptionAttributes;
   scores: Record<string, number>; // criterionId -> 1–5
   notes?: string;
 }
@@ -20,7 +39,7 @@ export interface Module {
   id: string;
   label: string;
   budget: number;
-  selectedOptionId?: string | null;
+  selectedOptionId: string | null;
   criteria: Criterion[];
   options: Option[];
 }
@@ -34,11 +53,6 @@ export interface InventoryItem {
   status: InventoryStatus;
   refund: number;
   notes?: string;
-}
-
-export interface Config {
-  overallBudget: number;
-  adapterCost?: number;
 }
 
 export interface AppState {
