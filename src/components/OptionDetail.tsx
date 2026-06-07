@@ -10,10 +10,12 @@ import {
   weightedTotal,
 } from '../lib/scoring';
 import { criterionEvidence, optionFacts } from '../lib/evidence';
+import { useStore } from '../lib/store';
 import Thumb from './Thumb';
 
 const card = 'rounded-lg border border-slate-200 bg-white p-4';
 const cardTitle = 'mb-3 text-sm font-medium text-slate-600';
+const clampScore = (v: number) => Math.max(0, Math.min(5, v));
 
 /**
  * Read-only "drill-down" page for a single option: describes the product, the
@@ -29,6 +31,7 @@ export default function OptionDetail({
   option: Option;
   onBack: () => void;
 }) {
+  const setScore = useStore((s) => s.setScore);
   const max = maxScore(module.criteria);
   const total = weightedTotal(option, module.criteria);
   const isTop = topPick(module)?.id === option.id;
@@ -109,7 +112,8 @@ export default function OptionDetail({
         <div className="border-b border-slate-100 px-4 py-3">
           <h3 className="text-sm font-medium text-slate-600">Scoring against requirements</h3>
           <p className="mt-0.5 text-xs text-slate-400">
-            Each requirement's 0–5 score with the actual product value behind it.
+            Each requirement's 0–5 score (editable — edits save instantly) with the
+            actual product value behind it.
           </p>
         </div>
         <table className="w-full text-sm">
@@ -131,9 +135,17 @@ export default function OptionDetail({
                   <td className="px-4 py-2 font-medium text-slate-700">{c.label}</td>
                   <td className="px-3 py-2 text-center tabular-nums text-slate-500">×{c.weight}</td>
                   <td className="px-3 py-2 text-center">
-                    <span className="inline-block min-w-[1.75rem] rounded-md bg-slate-100 px-2 py-0.5 font-semibold tabular-nums text-slate-700">
-                      {score}
-                    </span>
+                    <input
+                      type="number"
+                      min={0}
+                      max={5}
+                      value={score}
+                      onChange={(e) =>
+                        setScore(module.id, option.id, c.id, clampScore(Number(e.target.value) || 0))
+                      }
+                      aria-label={`Score for ${c.label}`}
+                      className="w-16 rounded-md border border-slate-300 px-2 py-1 text-center font-semibold tabular-nums text-slate-700"
+                    />
                   </td>
                   <td className="px-3 py-2 text-right font-semibold tabular-nums text-slate-700">
                     {c.weight * score}
