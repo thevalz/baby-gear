@@ -59,6 +59,46 @@ export function optionFacts(option: Option): Fact[] {
     }));
 }
 
+/** A compact, colour-toned attribute chip for the comparison table. */
+export interface SummaryChip {
+  key: string;
+  text: string;
+  tone: 'good' | 'bad' | 'neutral';
+}
+
+/**
+ * The handful of high-signal attributes worth showing inline in the main
+ * comparison table — short enough to fit as chips (the long `safety` text and
+ * other prose live on the drill-down page, not here).
+ */
+export function optionSummary(option: Option): SummaryChip[] {
+  const a = option.attributes ?? {};
+  const chips: SummaryChip[] = [];
+
+  if (a.carrierLb != null) {
+    chips.push({ key: 'carrierLb', text: `${a.carrierLb} lb`, tone: 'neutral' });
+  }
+  if (a.fitsWayfinder != null) {
+    chips.push({
+      key: 'fitsWayfinder',
+      text: `Wayfinder ${a.fitsWayfinder ? '✓' : '✗'}`,
+      tone: a.fitsWayfinder ? 'good' : 'bad',
+    });
+  }
+  if (a.fitsAlterrain != null) {
+    chips.push({
+      key: 'fitsAlterrain',
+      text: `Alterrain ${a.fitsAlterrain ? '✓' : '✗'}`,
+      tone: a.fitsAlterrain ? 'good' : 'bad',
+    });
+  }
+  if (a.brand) chips.push({ key: 'brand', text: String(a.brand), tone: 'neutral' });
+  if (a.type) chips.push({ key: 'type', text: String(a.type), tone: 'neutral' });
+  if (a.owned) chips.push({ key: 'owned', text: 'Owned', tone: 'good' });
+
+  return chips;
+}
+
 /**
  * The literal value(s) that justify an option's score on one criterion — e.g.
  * for a "Carrier weight" requirement this returns "6.2 lb carrier", so a score

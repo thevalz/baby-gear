@@ -21,11 +21,18 @@ import {
   topPick,
   weightedTotal,
 } from '../lib/scoring';
+import { optionSummary, type SummaryChip } from '../lib/evidence';
 import Thumb from './Thumb';
 import OptionDetail from './OptionDetail';
 
 const clampScore = (v: number) => Math.max(0, Math.min(5, v));
 const clampWeight = (v: number) => Math.max(1, Math.min(5, v));
+
+const CHIP_TONE: Record<SummaryChip['tone'], string> = {
+  good: 'bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200',
+  bad: 'bg-red-50 text-red-700 ring-1 ring-red-200',
+  neutral: 'bg-slate-100 text-slate-600 ring-1 ring-slate-200',
+};
 
 const numInput = 'rounded-md border border-slate-300 px-2 py-1 text-right tabular-nums';
 const textInput = 'rounded-md border border-slate-300 px-2 py-1';
@@ -194,7 +201,7 @@ export default function ModuleView({
     isTop: best?.id === o.id,
   }));
 
-  const colSpan = module.criteria.length + 5;
+  const colSpan = module.criteria.length + 6;
 
   return (
     <div className="space-y-6">
@@ -279,6 +286,7 @@ export default function ModuleView({
           <thead>
             <tr className="border-b border-slate-200 bg-slate-50 text-slate-500">
               <th className="px-3 py-2 text-left font-medium">Option</th>
+              <th className="px-3 py-2 text-left font-medium">Key facts</th>
               <th className="px-3 py-2 text-right font-medium">Best price</th>
               {module.criteria.map((c) => (
                 <th key={c.id} className="px-3 py-2 text-center font-medium">
@@ -324,6 +332,21 @@ export default function ModuleView({
                             View details →
                           </button>
                         </div>
+                      </div>
+                    </td>
+                    <td className="px-3 py-2">
+                      <div className="flex max-w-[14rem] flex-wrap gap-1">
+                        {optionSummary(o).map((chip) => (
+                          <span
+                            key={chip.key}
+                            className={`whitespace-nowrap rounded-full px-2 py-0.5 text-xs ${CHIP_TONE[chip.tone]}`}
+                          >
+                            {chip.text}
+                          </span>
+                        ))}
+                        {optionSummary(o).length === 0 && (
+                          <span className="text-xs text-slate-300">—</span>
+                        )}
                       </div>
                     </td>
                     <td className="px-3 py-2 text-right">
