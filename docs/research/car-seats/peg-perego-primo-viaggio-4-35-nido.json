@@ -1,0 +1,55 @@
+{
+  "_comment": "Batch D staging fragment. Folded into seed.json by the integration pass — do NOT edit seed.json here. See ../../RESEARCH_PLAN.md.",
+
+  "id": "peg-perego-primo-viaggio-4-35-nido",
+  "name": "Peg Perego Primo Viaggio 4-35 Nido",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/peg-perego-primo-viaggio-4-35-nido.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Amazon",
+      "price": 359.00,
+      "url": "https://www.amazon.com/Peg-Perego-Primo-Viaggio-Nido/dp/B06XG5VGZQ",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Target",
+      "price": 449.99,
+      "url": "https://www.target.com/p/peg-perego-primo-viaggio-4-35-nido-infant-car-seat/-/A-89091313",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Strolleria",
+      "price": 449.99,
+      "url": "https://strolleria.com/products/peg-perego-primo-viaggio-4-35-nido-infant-car-seat",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "carrierLb / fitsWayfinder / fitsAlterrain / safety map into seed.json; rest is audit trail.",
+    "carrierLb": 10,
+    "fitsWayfinder": false,
+    "fitsAlterrain": true,
+    "safety": "Kinetic Pods side-impact protection (SIP); premium base with adjustable Load Leg (10 positions) plus elongated anti-rebound bar - together cut crash rotation ~50%; EPS energy-absorbing foam in shell + head panel; dual-stage cushion; Made in Italy. Rear-facing 4-35 lb, to 32\".",
+
+    "bobWayfinderAdapter": "none - Primo Viaggio is NOT on the BOB Wayfinder universal list (Wayfinder covers Nuna/Cybex/Maxi-Cosi/Britax Willow/Diono only).",
+    "bobAlterrainAdapter": "BOB Gear Single Stroller Adapter for Peg Perego Infant Car Seats (brand-specific), ~$50 (verify exact price; sold at Albee Baby). 'Peg-Perego Primo Viaggio 4-35 / Primo Viaggio 4-35 Nido' explicitly listed on Strolleria's BOB Alterrain / Alterrain Pro compatible-seat list.",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "No direct seat-specific Toyota Tacoma data found. Carrier-only ~10 lb (base ~11 lb), carrier width ~17.25\". The load-leg base needs floor contact, which is fine in a Tacoma rear footwell. Mid-large footprint; rear-facing in a Tacoma double-cab is tight front-to-back and will likely push the front seat forward; angle adjuster commonly recommended for RF in a Tacoma. No Tacoma 3-across data found for this seat."
+  },
+
+  "sources": [
+    "https://strolleria.com/products/peg-perego-primo-viaggio-4-35-nido-infant-car-seat",
+    "https://www.safeintheseat.com/seats/peg-perego-primo-viaggio-4-35-Nido",
+    "https://www.amazon.com/Peg-Perego-Primo-Viaggio-Nido/dp/B06XG5VGZQ",
+    "https://www.target.com/p/peg-perego-primo-viaggio-4-35-nido-infant-car-seat/-/A-89091313",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-alterrain-alterrain-pro"
+  ],
+  "notes": "Price machine-verified at Strolleria ($449.99, ships 3-4 days, in stock 2026-06-07). Target and Amazon listings are live but their prices are protected by anti-bot blocks; figures here ($449.99 Target, $359.00 Amazon as the typical low) come from the Strolleria price + the SafeInTheSeat price tracker ('lowest advertised $359 at Amazon, $449 at Target') and should be re-verified by the integration pass. The Amazon link is the Onyx colorway; same seat sold by Agio (Peg Perego's US brand) under slightly different color names. carrierLb confirmed ~10 lb (base ~11 lb). Alterrain compat CONFIRMED; Wayfinder NOT compatible - matches expected Alterrain-only. MSRP fallback (~$350) is sane; Peg Perego is premium-priced ($359-$450 across retailers)."
+}
