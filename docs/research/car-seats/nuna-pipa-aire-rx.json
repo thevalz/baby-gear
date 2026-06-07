@@ -1,0 +1,64 @@
+{
+  "_comment": "Batch A staging fragment. Sourced 2026-06-07. Do NOT edit seed.json — integration pass folds this in.",
+
+  "id": "nuna-pipa-aire-rx",
+  "name": "Nuna Pipa Aire RX",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/nuna-pipa-aire-rx.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Nordstrom",
+      "price": 650.00,
+      "url": "https://www.nordstrom.com/s/pipa-aire-rx-pipa-relx-base-infant-car-seat/7574714",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Baby & Kids 1st",
+      "price": 650.00,
+      "url": "https://babys1st.com/products/nuna-pipa-aire-rx-infant-car-seat-plus-relx-base",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Destination Baby & Kids",
+      "price": 650.00,
+      "url": "https://www.destinationbabykids.com/products/nuna-pipa-aire-rx",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "The Baby Cubby",
+      "price": 650.00,
+      "url": "https://www.babycubby.com/products/nuna-pipa-aire-rx-infant-car-seat-with-relx-base",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "carrierLb / fitsWayfinder / fitsAlterrain / safety map into seed.json; rest is audit trail.",
+    "carrierLb": 6.2,
+    "fitsWayfinder": true,
+    "fitsAlterrain": true,
+    "safety": "TrueLock rigid LATCH (50% stronger than belt) + integrated anti-rebound panel + stability/load leg with crumple zone + Side Impact Protection; Aeroflex EPP foam; FAA-certified, GREENGUARD Gold",
+
+    "bobWayfinderAdapter": "BOB Wayfinder Infant Car Seat Adapter for Nuna/Cybex/Maxi-Cosi/Britax — ~$59.99 (Strolleria). Strolleria review explicitly confirms it 'worked great with our Nuna Pipa aire'.",
+    "bobAlterrainAdapter": "BOB Infant Car Seat Adapter for single/jogging strollers (Cybex/Maxi-Cosi/Nuna, 2016+) — $99.99; mounts fit Alterrain & Alterrain PRO.",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "No direct Toyota Tacoma data found. Compact, lightweight (carrier ~6.2 lb sans canopy/inserts) EPP-foam shell with a baseless seat-belt install option, which generally helps tight rear seats / 3-across; no truck-specific seat-to-seat depth, recline-footprint, or CPST Tacoma notes located."
+  },
+
+  "sources": [
+    "https://nunababy.com/usa/pipa-aire-rx",
+    "https://www.nordstrom.com/s/pipa-aire-rx-pipa-relx-base-infant-car-seat/7574714",
+    "https://babys1st.com/products/nuna-pipa-aire-rx-infant-car-seat-plus-relx-base",
+    "https://www.destinationbabykids.com/products/nuna-pipa-aire-rx",
+    "https://www.babycubby.com/products/nuna-pipa-aire-rx-infant-car-seat-with-relx-base",
+    "https://strolleria.com/products/bob-infant-car-seat-adapter-for-wayfinder-nuna-cybex-maxi-cosi-britax-clicktight",
+    "https://www.consumerreports.org/babies-kids/car-seats/nuna-pipa-aire-rx/m413808/"
+  ],
+  "notes": "Pipa Aire RX is the seat+RELX base bundle; current street price is $650 across authorized Nuna retailers (Nuna enforces uniform MAP — Nuna's own DTC page was out of stock with no price shown). Lowest in-stock = $650. Seed 'price' field (380) is a low stub MSRP fallback and should be reviewed in integration. Carrier 6.2 lb without canopy/inserts (canopy+inserts add ~2.2 lb). Weight-based recline (no on-seat recline indicator) is the noted usability caveat. Confirmed on BOTH BOB lists (Wayfinder + Alterrain)."
+}

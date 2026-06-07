@@ -1,0 +1,56 @@
+{
+  "_comment": "Batch A staging fragment. Sourced 2026-06-07. Do NOT edit seed.json — integration pass folds this in.",
+
+  "id": "cybex-aton-g",
+  "name": "Cybex Aton G Swivel",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/cybex-aton-g.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Babesta",
+      "price": 499.95,
+      "url": "https://babesta.com/products/aton-g-swivel",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "ANB Baby",
+      "price": 399.95,
+      "url": "https://www.anbbaby.com/products/cybex-aton-g-swivel-infant-car-seat",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Kidsland USA",
+      "price": 299.97,
+      "url": "https://www.kidslandusa.com/products/cybex-aton-g-swivel-infant-car-seat",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "carrierLb / fitsWayfinder / fitsAlterrain / safety map into seed.json; rest is audit trail.",
+    "carrierLb": 9,
+    "fitsWayfinder": true,
+    "fitsAlterrain": true,
+    "safety": "180° swivel anti-rebound base with load leg (cuts crash forces ~30%) + Linear Side-Impact Protection (L.S.P.) + SafeLock belt tensioner + 11-position no-rethread headrest/harness; GREENGUARD Gold, FMVSS213-compliant, FAA-approved (SensorSafe on some trims)",
+
+    "bobWayfinderAdapter": "BOB Wayfinder Infant Car Seat Adapter for Nuna/Cybex/Maxi-Cosi/Britax — ~$59.99 (Strolleria). Universal Wayfinder adapter covers the Cybex Aton family.",
+    "bobAlterrainAdapter": "BOB Infant Car Seat Adapter for single/jogging strollers (Cybex/Maxi-Cosi/Nuna, 2016+) — $99.99; mounts fit Alterrain & Alterrain PRO.",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "No direct Toyota Tacoma data found. Carrier is 17.5\" wide — CPST review (Safe in the Seat) says it is 'narrow enough to fit in many 3-across configurations,' but warns the swivel function can't be used when another seat sits directly beside it. No truck-specific seat-to-seat depth or recline-footprint data located."
+  },
+
+  "sources": [
+    "https://www.safeintheseat.com/seats/cybex-aton-g-swivel",
+    "https://babesta.com/products/aton-g-swivel",
+    "https://www.anbbaby.com/products/cybex-aton-g-swivel-infant-car-seat",
+    "https://www.kidslandusa.com/products/cybex-aton-g-swivel-infant-car-seat",
+    "https://www.cybex-online.com/en/us/p/CS_GO_Aton_G_Swivel_US.html",
+    "https://strolleria.com/products/bob-infant-car-seat-adapter-for-wayfinder-nuna-cybex-maxi-cosi-britax-clicktight"
+  ],
+  "notes": "carrierLb corrected to 9 lb (carrier only — Cybex's lightest; seed stub had 12 w/ carrierLbVerify). The original Aton G Swivel is being phased out and replaced by the Cybex Aton G2 Swivel (~$549.95, in stock); remaining Aton G Swivel stock is thin — ANB ($399.95 non-SensorSafe) and Kidsland ($299.97 clearance, was $499.95) both sold out; Cybex DTC marks it 'no longer available.' Babesta still ships the SensorSafe+base trim at $499.95 (1-2 wk lead) = lowest confirmed in-stock. Both BOB lists (Wayfinder + Alterrain) confirmed."
+}
