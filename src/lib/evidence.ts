@@ -28,6 +28,12 @@ const ATTRIBUTE_META: Record<string, { label: string; format: (v: unknown) => st
   brand: { label: 'Brand', format: (v) => String(v) },
   type: { label: 'Type', format: (v) => String(v) },
   owned: { label: 'Already owned', format: yesNo },
+  weightLb: { label: 'Stroller weight', format: (v) => `${v} lb` },
+  foldedDimsIn: { label: 'Folded size', format: (v) => String(v) },
+  tires: { label: 'Tires', format: (v) => String(v) },
+  suspension: { label: 'Suspension', format: (v) => String(v) },
+  maxChildLb: { label: 'Max child weight', format: (v) => `${v} lb` },
+  adapterSystem: { label: 'Car-seat adapter', format: (v) => String(v) },
 };
 
 /** Bookkeeping attributes that are not worth showing to a human. */
@@ -96,6 +102,23 @@ export function optionSummary(option: Option): SummaryChip[] {
       tone: a.fitsAlterrain ? 'good' : 'bad',
     });
   }
+  // Stroller high-signal facts (mirror the stroller criteria: ride, fold/weight,
+  // adapter ease). Long prose like full tire/dimension specs lives on the
+  // drill-down page; these chips stay short.
+  if (a.weightLb != null) {
+    chips.push({ key: 'weightLb', text: `${a.weightLb} lb`, tone: 'neutral' });
+  }
+  if (a.suspension) {
+    chips.push({ key: 'suspension', text: String(a.suspension), tone: 'neutral' });
+  }
+  if (a.adapterSystem) {
+    const universal = /universal/i.test(String(a.adapterSystem));
+    chips.push({
+      key: 'adapterSystem',
+      text: universal ? '1 universal adapter' : 'Brand adapters',
+      tone: universal ? 'good' : 'neutral',
+    });
+  }
   if (a.brand) chips.push({ key: 'brand', text: String(a.brand), tone: 'neutral' });
   if (a.type) chips.push({ key: 'type', text: String(a.type), tone: 'neutral' });
   if (a.owned) chips.push({ key: 'owned', text: 'Owned', tone: 'good' });
@@ -124,12 +147,25 @@ export function criterionEvidence(criterion: Criterion, option: Option): string 
     return `${a.rearFacingLengthIn} in rear-facing footprint`;
   }
 
-  // Stroller / BOB adapter compatibility.
-  if (has('compat', 'stroller', 'bob', 'adapter')) {
+  // Stroller ride / terrain — the suspension + tire setup behind the score.
+  if (has('ride', 'terrain') && (a.suspension || a.tires)) {
+    return [a.suspension, a.tires].filter(Boolean).join(' · ');
+  }
+
+  // Stroller weight & fold size.
+  if (has('fold', 'foldsize', 'size', 'weight') && a.weightLb != null) {
+    const folded = a.foldedDimsIn ? `, folds to ${a.foldedDimsIn}` : '';
+    return `${a.weightLb} lb${folded}`;
+  }
+
+  // Stroller / BOB adapter compatibility (car seat: per-seat fit flags;
+  // stroller: the adapter system that drives adapter ease).
+  if (has('compat', 'stroller', 'bob', 'adapter', 'ease')) {
     const parts: string[] = [];
     if (a.fitsWayfinder != null) parts.push(`Wayfinder ${a.fitsWayfinder ? '✓' : '✗'}`);
     if (a.fitsAlterrain != null) parts.push(`Alterrain ${a.fitsAlterrain ? '✓' : '✗'}`);
     if (parts.length) return parts.join(' · ');
+    if (a.adapterSystem) return String(a.adapterSystem);
   }
 
   // Safety extras.

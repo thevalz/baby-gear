@@ -1,0 +1,48 @@
+{
+  "_comment": "Stroller research fragment. Sourced 2026-06-07. Added to the matrix at user request. Do NOT edit seed.json.",
+  "id": "bob-alterrain-pro-opt",
+  "name": "BOB Alterrain Pro",
+  "checkedAt": "2026-06-07",
+  "image": "images/bob-alterrain-pro-opt.jpg",
+  "priceSources": [
+    {
+      "retailer": "Bambi Baby",
+      "price": 829.99,
+      "url": "https://www.bambibaby.com/products/bob-alterrain-pro-jogging-stroller-in-black",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Strolleria",
+      "price": 829.99,
+      "url": "https://strolleria.com/products/bob-alterrain-pro-jogging-stroller",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Modern Nursery",
+      "price": 879.99,
+      "url": "https://www.modernnursery.com/products/bob-gear-alterrain-pro-jogging-stroller",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+  "verifiedAttributes": {
+    "_comment": "weightLb / foldedDimsIn / tires / suspension / maxChildLb / adapterSystem map into seed.json.",
+    "weightLb": 32.3,
+    "foldedDimsIn": "33 × 21.5 × 13 in",
+    "tires": "12″ front / 16″ rear air-filled",
+    "suspension": "SmoothShox",
+    "maxChildLb": 75,
+    "adapterSystem": "Brand-specific adapters (Graco / Chicco / UPPAbaby / Nuna / Cybex / Maxi-Cosi)"
+  },
+  "sources": [
+    "https://www.bambibaby.com/products/bob-alterrain-pro-jogging-stroller-in-black",
+    "https://strolleria.com/products/bob-alterrain-pro-jogging-stroller",
+    "https://www.modernnursery.com/products/bob-gear-alterrain-pro-jogging-stroller",
+    "https://www.bobgear.com/single-strollers",
+    "https://www.babygearlab.com/reviews/getting-around/jogging-stroller/bob-alterrain-pro",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-alterrain-alterrain-pro"
+  ],
+  "notes": "Considering — BOB's current flagship all-terrain jogger and the in-stock successor to the base Alterrain. SmoothShox suspension plus an ergonomic hand brake for downhill control; flattest fold of the three (33 × 21.5 × 13 in) though heaviest (32.3 lb). Shares the Alterrain's brand-specific adapter ecosystem, so any car seat marked 'fits Alterrain' fits the Pro. Best in-stock price $829.99 (Bambi Baby / Strolleria; Modern Nursery $879.99) — note this is OVER the $800 module budget. MSRP $829.99."
+}
