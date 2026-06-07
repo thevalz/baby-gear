@@ -1,6 +1,9 @@
 {
-  "dataVersion": 2,
-  "config": { "overallBudget": 1000, "adapterCost": 100 },
+  "dataVersion": 3,
+  "config": {
+    "overallBudget": 1000,
+    "adapterCost": 100
+  },
   "modules": [
     {
       "id": "car-seat",
@@ -8,74 +11,693 @@
       "budget": 500,
       "selectedOptionId": null,
       "criteria": [
-        { "id": "fit",    "label": "Tacoma rear-facing fit", "weight": 5 },
-        { "id": "weight", "label": "Carrier weight",          "weight": 4 },
-        { "id": "compat", "label": "BOB stroller compat",     "weight": 3 },
-        { "id": "safety", "label": "Safety extras",           "weight": 2 },
-        { "id": "price",  "label": "Price",                   "weight": 1 }
+        {
+          "id": "fit",
+          "label": "Tacoma rear-facing fit",
+          "weight": 5
+        },
+        {
+          "id": "weight",
+          "label": "Carrier weight",
+          "weight": 4
+        },
+        {
+          "id": "compat",
+          "label": "BOB stroller compat",
+          "weight": 3
+        },
+        {
+          "id": "safety",
+          "label": "Safety extras",
+          "weight": 2
+        },
+        {
+          "id": "price",
+          "label": "Price",
+          "weight": 1
+        }
       ],
       "options": [
-        { "id": "nuna-pipa-aire-rx", "moduleId": "car-seat", "name": "Nuna Pipa Aire RX", "price": 380,
-          "attributes": { "carrierLb": 6, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "load leg + anti-rebound + rigid LATCH" },
-          "scores": { "fit": 4, "weight": 5, "compat": 5, "safety": 5, "price": 2 },
-          "notes": "Lightest premium; top safety; both strollers. Loses on price only." },
-        { "id": "cybex-aton-g", "moduleId": "car-seat", "name": "Cybex Aton G Swivel", "price": 330,
-          "attributes": { "carrierLb": 12, "carrierLbVerify": true, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "load leg + linear side-impact; 90° swivel" },
-          "scores": { "fit": 5, "weight": 2, "compat": 5, "safety": 5, "price": 3 },
-          "notes": "Swivel = best tight-space loading; heavier; both strollers." },
-        { "id": "graco-snugride-35-lite-lx", "moduleId": "car-seat", "name": "Graco SnugRide 35 Lite LX", "price": 130,
-          "attributes": { "carrierLb": 7.2, "fitsWayfinder": false, "fitsAlterrain": true, "safety": "basic (no load leg)" },
-          "scores": { "fit": 4, "weight": 5, "compat": 3, "safety": 3, "price": 5 },
-          "notes": "Budget + ultralight; Alterrain only (no Wayfinder Graco adapter)." },
-        { "id": "chicco-keyfit-35", "moduleId": "car-seat", "name": "Chicco KeyFit 35", "price": 230,
-          "attributes": { "carrierLb": 10, "fitsWayfinder": false, "fitsAlterrain": false, "safety": "anti-rebound + top crash scores" },
-          "scores": { "fit": 5, "weight": 3, "compat": 1, "safety": 4, "price": 4 },
-          "notes": "Best fit, but no current BOB adapter for either stroller." },
-        { "id": "britax-b-safe-gen2", "moduleId": "car-seat", "name": "Britax B-Safe Gen2", "price": 230,
-          "attributes": { "carrierLb": 11, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "anti-rebound (SafeCell)" },
-          "scores": { "fit": 3, "weight": 2, "compat": 5, "safety": 4, "price": 4 },
-          "notes": "Native BOB (both strollers); heavier; 4–35 lb runway." },
-
-        { "id": "diono-liteclik-30", "moduleId": "car-seat", "name": "Diono LiteClik 30 SafePlus", "price": 250,
-          "attributes": { "carrierLb": 9, "carrierLbVerify": true, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "rigid LATCH (SafePlus) + side-impact (verify)" },
-          "scores": { "fit": 3, "weight": 3, "compat": 3, "safety": 3, "price": 3 },
-          "notes": "STUB — on BOTH BOB adapter lists (Wayfinder + Alterrain); very light, installs w/o base. Verify carrierLb + fit; source price + image. See docs/RESEARCH_PLAN.md (Batch B)." },
-        { "id": "maxi-cosi-mico-luxe", "moduleId": "car-seat", "name": "Maxi-Cosi Mico Luxe", "price": 250,
-          "attributes": { "carrierLb": 9, "carrierLbVerify": true, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "Air Protect side-impact; no-rethread harness (verify)" },
-          "scores": { "fit": 3, "weight": 3, "compat": 3, "safety": 3, "price": 3 },
-          "notes": "STUB — Mico series on BOTH BOB lists. Verify carrierLb + fit; source price + image. See docs/RESEARCH_PLAN.md (Batch A)." },
-        { "id": "britax-willow-brook-s", "moduleId": "car-seat", "name": "Britax Willow Brook S+", "price": 380,
-          "attributes": { "carrierLb": 9, "carrierLbVerify": true, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "anti-rebound (SafeCell); SafeWash fabric (verify)" },
-          "scores": { "fit": 3, "weight": 3, "compat": 3, "safety": 3, "price": 3 },
-          "notes": "STUB — Britax Willow on Wayfinder list + Britax native on Alterrain. Verify model/carrierLb; source price + image. See docs/RESEARCH_PLAN.md (Batch B)." },
-        { "id": "graco-snugride-snugfit-35-dlx", "moduleId": "car-seat", "name": "Graco SnugRide SnugFit 35 DLX", "price": 200,
-          "attributes": { "carrierLb": 7.5, "carrierLbVerify": true, "fitsWayfinder": false, "fitsAlterrain": true, "safety": "load leg + anti-rebound (verify SnugFit on BOB Graco adapter)" },
-          "scores": { "fit": 3, "weight": 3, "compat": 3, "safety": 3, "price": 3 },
-          "notes": "STUB — Graco's load-leg seat; Graco SnugRide on Alterrain list, no Wayfinder Graco adapter. Verify SnugFit adapter fit; source price + image. See docs/RESEARCH_PLAN.md (Batch C)." },
-        { "id": "chicco-fit2", "moduleId": "car-seat", "name": "Chicco Fit2 (Rear-Facing 2-Year)", "price": 300,
-          "attributes": { "carrierLb": 9, "carrierLbVerify": true, "fitsWayfinder": false, "fitsAlterrain": true, "safety": "extended rear-facing to ~2 yr; anti-rebound bar (verify)" },
-          "scores": { "fit": 3, "weight": 3, "compat": 3, "safety": 3, "price": 3 },
-          "notes": "STUB — Fit2 on Alterrain list, not Wayfinder. Larger footprint — check Tacoma rear-facing fit carefully. Source price + image. See docs/RESEARCH_PLAN.md (Batch D)." },
-        { "id": "uppababy-mesa-v2", "moduleId": "car-seat", "name": "UPPAbaby Mesa V2", "price": 400,
-          "attributes": { "carrierLb": 9.9, "carrierLbVerify": true, "fitsWayfinder": false, "fitsAlterrain": true, "safety": "no-rethread harness; some trims FR-free (verify current model)" },
-          "scores": { "fit": 3, "weight": 3, "compat": 3, "safety": 3, "price": 3 },
-          "notes": "STUB — Mesa series on Alterrain list, not Wayfinder. Confirm current model (V2/V3) + carrierLb. Source price + image. See docs/RESEARCH_PLAN.md (Batch D)." },
-        { "id": "peg-perego-primo-viaggio-4-35-nido", "moduleId": "car-seat", "name": "Peg Perego Primo Viaggio 4-35 Nido", "price": 350,
-          "attributes": { "carrierLb": 9.5, "carrierLbVerify": true, "fitsWayfinder": false, "fitsAlterrain": true, "safety": "side-impact (SIP); anti-rebound base (verify)" },
-          "scores": { "fit": 3, "weight": 3, "compat": 3, "safety": 3, "price": 3 },
-          "notes": "STUB — Primo Viaggio on Alterrain list, not Wayfinder. Verify carrierLb + fit; source price + image. See docs/RESEARCH_PLAN.md (Batch D)." },
-        { "id": "clek-liing", "moduleId": "car-seat", "name": "Clek Liing", "price": 449,
-          "attributes": { "carrierLb": 9, "carrierLbVerify": true, "fitsWayfinder": false, "fitsAlterrain": false, "safety": "load leg + rigid LATCH; FR-free fabric (verify BOB compat)" },
-          "scores": { "fit": 3, "weight": 3, "compat": 3, "safety": 3, "price": 3 },
-          "notes": "STUB — most compact infant seat (strong Tacoma fit), but NOT on either BOB list — confirm no BOB adapter. Source price + image; capture footprint dims. See docs/RESEARCH_PLAN.md (Batch E)." },
-        { "id": "cybex-cloud-g-lux", "moduleId": "car-seat", "name": "Cybex Cloud G Lux", "price": 550,
-          "attributes": { "carrierLb": 11, "carrierLbVerify": true, "fitsWayfinder": true, "fitsAlterrain": true, "safety": "lie-flat recline; Linear Side-impact (L.S.P.) (verify Cloud G vs Cloud Q adapter)" },
-          "scores": { "fit": 3, "weight": 3, "compat": 3, "safety": 3, "price": 3 },
-          "notes": "STUB — lie-flat premium; Cybex series on both BOB lists but confirm Cloud G (vs Cloud Q) adapter. Heavier. Source price + image. See docs/RESEARCH_PLAN.md (Batch E)." },
-        { "id": "doona-car-seat-stroller", "moduleId": "car-seat", "name": "Doona Car Seat & Stroller", "price": 550,
-          "attributes": { "carrierLb": 16.5, "carrierLbVerify": true, "fitsWayfinder": false, "fitsAlterrain": false, "safety": "integrated car-seat→stroller; 5-pt harness (no BOB adapter needed — is its own stroller)" },
-          "scores": { "fit": 3, "weight": 3, "compat": 3, "safety": 3, "price": 3 },
-          "notes": "STUB — wildcard: integrated seat+stroller, heaviest carrier; BOB compat N/A. Source price + image; note it competes with the stroller module too. See docs/RESEARCH_PLAN.md (Batch E)." }
+        {
+          "id": "nuna-pipa-aire-rx",
+          "moduleId": "car-seat",
+          "name": "Nuna Pipa Aire RX",
+          "price": 380,
+          "attributes": {
+            "carrierLb": 6.2,
+            "fitsWayfinder": true,
+            "fitsAlterrain": true,
+            "safety": "load leg + anti-rebound panel + rigid (TrueLock) LATCH + side-impact; Aeroflex EPP"
+          },
+          "scores": {
+            "fit": 4,
+            "weight": 5,
+            "compat": 5,
+            "safety": 5,
+            "price": 1
+          },
+          "notes": "Lightest carrier (6.2 lb) + top-tier safety (load leg + anti-rebound + rigid LATCH); fits Wayfinder & Alterrain. Real street price ~$650 (uniform MAP) is its only weak spot.",
+          "image": "images/nuna-pipa-aire-rx.jpg",
+          "priceSources": [
+            {
+              "retailer": "Nordstrom",
+              "price": 650,
+              "url": "https://www.nordstrom.com/s/pipa-aire-rx-pipa-relx-base-infant-car-seat/7574714",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Baby & Kids 1st",
+              "price": 650,
+              "url": "https://babys1st.com/products/nuna-pipa-aire-rx-infant-car-seat-plus-relx-base",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Destination Baby & Kids",
+              "price": 650,
+              "url": "https://www.destinationbabykids.com/products/nuna-pipa-aire-rx",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "The Baby Cubby",
+              "price": 650,
+              "url": "https://www.babycubby.com/products/nuna-pipa-aire-rx-infant-car-seat-with-relx-base",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "cybex-aton-g",
+          "moduleId": "car-seat",
+          "name": "Cybex Aton G Swivel",
+          "price": 330,
+          "attributes": {
+            "carrierLb": 9,
+            "fitsWayfinder": true,
+            "fitsAlterrain": true,
+            "safety": "swivel load-leg base + Linear Side-impact (L.S.P.) + belt tensioner; no-rethread harness"
+          },
+          "scores": {
+            "fit": 5,
+            "weight": 4,
+            "compat": 5,
+            "safety": 5,
+            "price": 2
+          },
+          "notes": "Verified carrier 9 lb (stub overstated 12); 180° swivel = best tight-space loading; load leg + L.S.P.; fits both BOB strollers. Top weighted pick.",
+          "image": "images/cybex-aton-g.jpg",
+          "priceSources": [
+            {
+              "retailer": "Babesta",
+              "price": 499.95,
+              "url": "https://babesta.com/products/aton-g-swivel",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "ANB Baby",
+              "price": 399.95,
+              "url": "https://www.anbbaby.com/products/cybex-aton-g-swivel-infant-car-seat",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Kidsland USA",
+              "price": 299.97,
+              "url": "https://www.kidslandusa.com/products/cybex-aton-g-swivel-infant-car-seat",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "graco-snugride-35-lite-lx",
+          "moduleId": "car-seat",
+          "name": "Graco SnugRide 35 Lite LX",
+          "price": 130,
+          "attributes": {
+            "carrierLb": 7.2,
+            "fitsWayfinder": false,
+            "fitsAlterrain": true,
+            "safety": "basic — no load leg or anti-rebound; meets federal side-impact (ProtectPlus)"
+          },
+          "scores": {
+            "fit": 4,
+            "weight": 5,
+            "compat": 3,
+            "safety": 3,
+            "price": 5
+          },
+          "notes": "Budget + ultralight (7.2 lb); Alterrain only (no Wayfinder Graco adapter). Basic safety. Best price (~$140).",
+          "image": "images/graco-snugride-35-lite-lx.jpg",
+          "priceSources": [
+            {
+              "retailer": "Target",
+              "price": 139.99,
+              "url": "https://www.target.com/p/graco-snugride-35-lite-lx-infant-car-seat/-/A-79436026",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Macy's (via Klarna price compare)",
+              "price": 149.99,
+              "url": "https://www.klarna.com/us/shopping/pl/cl369/3201205693/Child-Car-Seats/Graco-SnugRide-35-Lite-LX/",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Babylist",
+              "price": 219.98,
+              "url": "https://www.babylist.com/gp/graco-snugride-35-lite-lx-infant-car-seat-extra-base/50621/1931766",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "chicco-keyfit-35",
+          "moduleId": "car-seat",
+          "name": "Chicco KeyFit 35",
+          "price": 230,
+          "attributes": {
+            "carrierLb": 10,
+            "fitsWayfinder": false,
+            "fitsAlterrain": true,
+            "safety": "integrated anti-rebound bar + top crash-test scores; SuperCinch LATCH"
+          },
+          "scores": {
+            "fit": 5,
+            "weight": 3,
+            "compat": 3,
+            "safety": 4,
+            "price": 4
+          },
+          "notes": "FLAG RESOLVED — fitsAlterrain flips TRUE (bobgear.com Chicco adapter $99.99 lists KeyFit 35). Excellent Tacoma fit; carrier 10 lb; ~$230. Still not on Wayfinder.",
+          "image": "images/chicco-keyfit-35.jpg",
+          "priceSources": [
+            {
+              "retailer": "Chicco (DTC)",
+              "price": 229.99,
+              "url": "https://www.chiccousa.com/shop-our-products/car-seats/infant/keyfit-35-infant-car-seat/79625.html",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Pish Posh Baby (via Klarna price compare)",
+              "price": 229.99,
+              "url": "https://www.klarna.com/us/shopping/pl/cl369/3202705085/Child-Car-Seats/Chicco-KeyFit-35/",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Albee Baby",
+              "price": 202.49,
+              "url": "https://www.albeebaby.com/chicco-keyfit-35-infant-car-seat-onyx.html",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "britax-b-safe-gen2",
+          "moduleId": "car-seat",
+          "name": "Britax B-Safe Gen2",
+          "price": 230,
+          "attributes": {
+            "carrierLb": 10.9,
+            "fitsWayfinder": false,
+            "fitsAlterrain": true,
+            "safety": "SafeCell crumple zone + steel-reinforced base + side-impact foam surround; SafeWash"
+          },
+          "scores": {
+            "fit": 3,
+            "weight": 2,
+            "compat": 3,
+            "safety": 4,
+            "price": 4
+          },
+          "notes": "Discontinued/retired; widely sold out (MSRP $199.99). VERIFIED not on BOB Wayfinder list (Wayfinder Britax = ClickTight Willow only); Alterrain native. Carrier 10.9 lb. MSRP $230 kept as fallback.",
+          "image": "images/britax-b-safe-gen2.jpg",
+          "priceSources": [
+            {
+              "retailer": "Mega Babies",
+              "price": 219.99,
+              "url": "https://www.megababiesusa.com/products/britax-b-safe-gen2-infant-car-seat",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Britax (DTC)",
+              "price": 199.99,
+              "url": "https://us.britax.com/shop/retired/britax-b-safe-gen2-infant-car-seat",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "diono-liteclik-30",
+          "moduleId": "car-seat",
+          "name": "Diono LiteClik 30 SafePlus",
+          "price": 250,
+          "attributes": {
+            "carrierLb": 9,
+            "fitsWayfinder": false,
+            "fitsAlterrain": true,
+            "safety": "steel anti-rebound bar + rigid LATCH + side-impact (SafePlus); required top tether"
+          },
+          "scores": {
+            "fit": 4,
+            "weight": 4,
+            "compat": 3,
+            "safety": 4,
+            "price": 4
+          },
+          "notes": "VERIFIED only on Alterrain list (via $99.99 Maxi-Cosi-footprint adapter), NOT Wayfinder (stub overstated). Light 9 lb base trim, narrow, baseless install. Widely OOS; MSRP $250 kept as fallback.",
+          "image": "images/diono-liteclik-30.png",
+          "priceSources": [
+            {
+              "retailer": "Diono (DTC) — LiteClik 30 R + base",
+              "price": 189.99,
+              "url": "https://store.diono.com/liteclik-30-r-safeplus-infant-car-seat-and-base/",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Diono (DTC) — LiteClik 30 RXT + base",
+              "price": 174.99,
+              "url": "https://store.diono.com/liteclik-30-rxt-safeplus-infant-car-seat-and-base/",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Diono (DTC) — LiteClik 30 XT + base",
+              "price": 209.99,
+              "url": "https://store.diono.com/liteclik-30-xt-safeplus-infant-car-seat-and-base/",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Blossom Baby — LiteClik 30 R",
+              "price": 189.99,
+              "url": "https://www.blossom.baby/product/diono-liteclik-30-r-safeplus-infant-car-seat/",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "maxi-cosi-mico-luxe",
+          "moduleId": "car-seat",
+          "name": "Maxi-Cosi Mico Luxe",
+          "price": 250,
+          "attributes": {
+            "carrierLb": 9,
+            "fitsWayfinder": true,
+            "fitsAlterrain": true,
+            "safety": "side-impact protection (SIP) + ClimaFlow shell; no load leg / anti-rebound"
+          },
+          "scores": {
+            "fit": 4,
+            "weight": 4,
+            "compat": 5,
+            "safety": 3,
+            "price": 4
+          },
+          "notes": "Light (9 lb), fits both BOB strollers, well-priced (~$239). Safety is mid — side-impact only, no load leg/anti-rebound.",
+          "image": "images/maxi-cosi-mico-luxe.png",
+          "priceSources": [
+            {
+              "retailer": "Maxi-Cosi (DTC)",
+              "price": 239,
+              "url": "https://maxicosi.com/products/mico-luxe-infant-car-seat-ic365",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Target",
+              "price": 239.99,
+              "url": "https://www.target.com/p/maxi-cosi-mico-luxe-infant-car-seat/-/A-89166847",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "britax-willow-brook-s",
+          "moduleId": "car-seat",
+          "name": "Britax Willow Brook S+",
+          "price": 380,
+          "attributes": {
+            "carrierLb": 9.3,
+            "fitsWayfinder": true,
+            "fitsAlterrain": true,
+            "safety": "ClickTight install + ReboundReduce anti-rebound bar + side-impact (head/neck/torso); SafeWash"
+          },
+          "scores": {
+            "fit": 3,
+            "weight": 3,
+            "compat": 5,
+            "safety": 4,
+            "price": 2
+          },
+          "notes": "ClickTight + anti-rebound + side-impact; fits both BOB strollers (Wayfinder universal + Alterrain native). Carrier 9.3 lb. Sold out ~$279.99; MSRP $380 kept as fallback.",
+          "image": "images/britax-willow-brook-s.jpg",
+          "priceSources": [
+            {
+              "retailer": "Britax (DTC)",
+              "price": 279.99,
+              "url": "https://us.britax.com/shop/car-seats/willow-s-clicktight-infant-car-seat",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "The Baby Cubby",
+              "price": 279.99,
+              "url": "https://www.babycubby.com/products/britax-willow-s-infant-car-seat",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "ANB Baby",
+              "price": 299.99,
+              "url": "https://www.anbbaby.com/products/britax-willow-sc-infant-car-seat",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "graco-snugride-snugfit-35-dlx",
+          "moduleId": "car-seat",
+          "name": "Graco SnugRide SnugFit 35 DLX",
+          "price": 200,
+          "attributes": {
+            "carrierLb": 10,
+            "fitsWayfinder": false,
+            "fitsAlterrain": true,
+            "safety": "anti-rebound bar + Safety Surround side-impact; no load leg"
+          },
+          "scores": {
+            "fit": 3,
+            "weight": 3,
+            "compat": 3,
+            "safety": 4,
+            "price": 4
+          },
+          "notes": "Adds anti-rebound bar + side-impact over the Lite LX; heavier (10 lb), bigger footprint. Alterrain only. ~$240.",
+          "image": "images/graco-snugride-snugfit-35-dlx.jpg",
+          "priceSources": [
+            {
+              "retailer": "Target",
+              "price": 239.99,
+              "url": "https://www.target.com/p/graco-snugride-snugfit-35-dlx-infant-car-seat-featuring-safety-surround-jacks/-/A-80179062",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Babylist",
+              "price": 239.99,
+              "url": "https://www.babylist.com/gp/graco-snugride-snugfit-dlx-infant-car-seat/20467/529537",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "chicco-fit2",
+          "moduleId": "car-seat",
+          "name": "Chicco Fit2 (Rear-Facing 2-Year)",
+          "price": 300,
+          "attributes": {
+            "carrierLb": 12.3,
+            "fitsWayfinder": false,
+            "fitsAlterrain": true,
+            "safety": "extended rear-facing to ~2 yr; anti-rebound bar + EPS side-impact; FAA-approved"
+          },
+          "scores": {
+            "fit": 2,
+            "weight": 1,
+            "compat": 3,
+            "safety": 4,
+            "price": 3
+          },
+          "notes": "Extended rear-facing to ~2 yr → large footprint (watch Tacoma fit) and heaviest non-Doona carrier (12.3 lb). Alterrain only. ~$330.",
+          "image": "images/chicco-fit2.jpg",
+          "priceSources": [
+            {
+              "retailer": "Chicco (DTC)",
+              "price": 329.99,
+              "url": "https://www.chiccousa.com/shop-our-products/car-seats/chicco-fit2-infant-toddler-car-seat/",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Amazon",
+              "price": 329.99,
+              "url": "https://www.amazon.com/Chicco-Fit2-Infant-Toddler-Seat/dp/B07ZWVKR73",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "buybuy BABY",
+              "price": 329.99,
+              "url": "https://buybuybaby.bedbathandbeyond.com/Baby/Fit2-Infant-Toddler-Car-Seat-Cienna/42258771/product.html",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "uppababy-mesa-v2",
+          "moduleId": "car-seat",
+          "name": "UPPAbaby Mesa V3",
+          "price": 400,
+          "attributes": {
+            "carrierLb": 9.9,
+            "fitsWayfinder": false,
+            "fitsAlterrain": true,
+            "safety": "no-rethread harness + side-impact (EPP headrest) + rebound carry-handle position; FR-free"
+          },
+          "scores": {
+            "fit": 3,
+            "weight": 3,
+            "compat": 3,
+            "safety": 4,
+            "price": 3
+          },
+          "notes": "Verified current model is the Mesa V3; carrier 9.9 lb; no-rethread harness + side-impact, FR-free, GREENGUARD Gold. Alterrain only. ~$350.",
+          "image": "images/uppababy-mesa-v2.jpg",
+          "priceSources": [
+            {
+              "retailer": "UPPAbaby (DTC)",
+              "price": 349.99,
+              "url": "https://uppababy.com/car-seats/infant/mesa-v3/",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Babylist",
+              "price": 349.99,
+              "url": "https://www.babylist.com/gp/uppababy-mesa-v3/74913/2528374",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Kidsland",
+              "price": 349.99,
+              "url": "https://www.kidslandusa.com/products/uppababy-mesa-v3-infant-car-seat",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "peg-perego-primo-viaggio-4-35-nido",
+          "moduleId": "car-seat",
+          "name": "Peg Perego Primo Viaggio 4-35 Nido",
+          "price": 350,
+          "attributes": {
+            "carrierLb": 10,
+            "fitsWayfinder": false,
+            "fitsAlterrain": true,
+            "safety": "load leg + anti-rebound bar + Kinetic Pods side-impact (SIP); EPS foam"
+          },
+          "scores": {
+            "fit": 3,
+            "weight": 3,
+            "compat": 3,
+            "safety": 5,
+            "price": 3
+          },
+          "notes": "Load leg + anti-rebound bar + side-impact (Kinetic Pods) — top safety. Carrier 10 lb; Alterrain only. ~$359 (Amazon).",
+          "image": "images/peg-perego-primo-viaggio-4-35-nido.jpg",
+          "priceSources": [
+            {
+              "retailer": "Amazon",
+              "price": 359,
+              "url": "https://www.amazon.com/Peg-Perego-Primo-Viaggio-Nido/dp/B06XG5VGZQ",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Target",
+              "price": 449.99,
+              "url": "https://www.target.com/p/peg-perego-primo-viaggio-4-35-nido-infant-car-seat/-/A-89091313",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Strolleria",
+              "price": 449.99,
+              "url": "https://strolleria.com/products/peg-perego-primo-viaggio-4-35-nido-infant-car-seat",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "clek-liing",
+          "moduleId": "car-seat",
+          "name": "Clek Liing",
+          "price": 449,
+          "attributes": {
+            "carrierLb": 9,
+            "fitsWayfinder": false,
+            "fitsAlterrain": false,
+            "safety": "energy-absorbing load leg + rigid LATCH; flame-retardant-free fabric"
+          },
+          "scores": {
+            "fit": 5,
+            "weight": 4,
+            "compat": 1,
+            "safety": 5,
+            "price": 2
+          },
+          "notes": "FLAG RESOLVED — genuinely on neither BOB Wayfinder/Alterrain list. Here for best-in-class compact Tacoma fit + load-leg/rigid-LATCH safety. Street ~$499.99; the $300 ANB listing is open-box & baseless (marked out-of-stock so it does not drive best-price). MSRP $449 kept as fallback.",
+          "image": "images/clek-liing.jpg",
+          "priceSources": [
+            {
+              "retailer": "Clek US (DTC)",
+              "price": 499.99,
+              "url": "https://clekinc.com/products/liing",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Babylist",
+              "price": 499.99,
+              "url": "https://www.babylist.com/gp/clek-liing-infant-car-seat/14716/2028173",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "ANB Baby (open-box, baseless)",
+              "price": 300,
+              "url": "https://www.anbbaby.com/products/clek-liing-infant-car-seat-without-base",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "cybex-cloud-g-lux",
+          "moduleId": "car-seat",
+          "name": "Cybex Cloud G Lux",
+          "price": 550,
+          "attributes": {
+            "carrierLb": 11,
+            "fitsWayfinder": false,
+            "fitsAlterrain": false,
+            "safety": "lie-flat recline + load-leg base + Linear Side-impact (L.S.P.); SensorSafe clip"
+          },
+          "scores": {
+            "fit": 2,
+            "weight": 2,
+            "compat": 1,
+            "safety": 5,
+            "price": 2
+          },
+          "notes": "FLAG RESOLVED — Cloud G does NOT share Cloud Q’s BOB adapter; both fits flip FALSE. Lie-flat recline (larger footprint) + load leg + L.S.P. Being phased out for Cloud G Pro; ~$499.95. Carrier 11 lb.",
+          "image": "images/cybex-cloud-g-lux.jpg",
+          "priceSources": [
+            {
+              "retailer": "Bambi Baby",
+              "price": 499.95,
+              "url": "https://www.bambibaby.com/products/cybex-cloud-g-infant-car-seat-lux",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Strolleria",
+              "price": 499.95,
+              "url": "https://strolleria.com/products/cybex-cloud-g-lux-infant-car-seat-and-base",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "ANB Baby",
+              "price": 499.95,
+              "url": "https://www.anbbaby.com/products/cybex-cloud-g-lux-sensorsafe-infant-car-seat",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Cybex US (DTC)",
+              "price": 499.95,
+              "url": "https://www.cybex-online.com/en/us/p/cs-go-cloud-g-lux-sensorsafe-3.html",
+              "inStock": false,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        },
+        {
+          "id": "doona-car-seat-stroller",
+          "moduleId": "car-seat",
+          "name": "Doona Car Seat & Stroller",
+          "price": 550,
+          "attributes": {
+            "carrierLb": 16.5,
+            "fitsWayfinder": false,
+            "fitsAlterrain": false,
+            "safety": "integrated seat→stroller; 5-pt harness + anti-rebound LATCH base; NHTSA 5-star"
+          },
+          "scores": {
+            "fit": 2,
+            "weight": 1,
+            "compat": 1,
+            "safety": 4,
+            "price": 1
+          },
+          "notes": "Wildcard: integrated car-seat→stroller, so BOB compat is N/A (scored low — won’t pair with your BOB). Heaviest carrier (16.5 lb), large footprint, ~$650. Competes with the stroller module.",
+          "image": "images/doona-car-seat-stroller.jpg",
+          "priceSources": [
+            {
+              "retailer": "Target",
+              "price": 650,
+              "url": "https://www.target.com/p/doona-car-seat-stroller/-/A-87530473",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Babylist",
+              "price": 650,
+              "url": "https://www.babylist.com/gp/doona-infant-car-seat-stroller/14613/31863",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            },
+            {
+              "retailer": "Doona US (DTC)",
+              "price": 650,
+              "url": "https://www.doona.com/en-us/car-seat-stroller/shop-all-doona",
+              "inStock": true,
+              "checkedAt": "2026-06-07"
+            }
+          ]
+        }
       ]
     },
     {
@@ -84,25 +706,83 @@
       "budget": 800,
       "selectedOptionId": null,
       "criteria": [
-        { "id": "ride",        "label": "Ride / terrain",        "weight": 5 },
-        { "id": "foldsize",    "label": "Weight & fold size",    "weight": 3 },
-        { "id": "adapterease", "label": "Car-seat adapter ease", "weight": 3 },
-        { "id": "stprice",     "label": "Price",                 "weight": 2 }
+        {
+          "id": "ride",
+          "label": "Ride / terrain",
+          "weight": 5
+        },
+        {
+          "id": "foldsize",
+          "label": "Weight & fold size",
+          "weight": 3
+        },
+        {
+          "id": "adapterease",
+          "label": "Car-seat adapter ease",
+          "weight": 3
+        },
+        {
+          "id": "stprice",
+          "label": "Price",
+          "weight": 2
+        }
       ],
       "options": [
-        { "id": "bob-wayfinder-opt", "moduleId": "stroller", "name": "BOB Wayfinder", "price": 300,
-          "attributes": { "brand": "BOB", "type": "all-terrain / jogging", "owned": true },
-          "scores": { "ride": 3, "foldsize": 3, "adapterease": 3, "stprice": 3 },
-          "notes": "Already owned. Scores are placeholders — edit to fill in." },
-        { "id": "bob-alterrain-opt", "moduleId": "stroller", "name": "BOB Alterrain", "price": 400,
-          "attributes": { "brand": "BOB", "type": "all-terrain / jogging", "owned": false },
-          "scores": { "ride": 3, "foldsize": 3, "adapterease": 3, "stprice": 3 },
-          "notes": "Considering. Scores are placeholders — edit to fill in." }
+        {
+          "id": "bob-wayfinder-opt",
+          "moduleId": "stroller",
+          "name": "BOB Wayfinder",
+          "price": 300,
+          "attributes": {
+            "brand": "BOB",
+            "type": "all-terrain / jogging",
+            "owned": true
+          },
+          "scores": {
+            "ride": 3,
+            "foldsize": 3,
+            "adapterease": 3,
+            "stprice": 3
+          },
+          "notes": "Already owned. Scores are placeholders — edit to fill in."
+        },
+        {
+          "id": "bob-alterrain-opt",
+          "moduleId": "stroller",
+          "name": "BOB Alterrain",
+          "price": 400,
+          "attributes": {
+            "brand": "BOB",
+            "type": "all-terrain / jogging",
+            "owned": false
+          },
+          "scores": {
+            "ride": 3,
+            "foldsize": 3,
+            "adapterease": 3,
+            "stprice": 3
+          },
+          "notes": "Considering. Scores are placeholders — edit to fill in."
+        }
       ]
     }
   ],
   "inventory": [
-    { "id": "evenflo-safemax", "name": "Evenflo SafeMax (infant seat)", "moduleId": "car-seat", "status": "return", "refund": 0, "notes": "Heavy; poor Tacoma fit — return candidate." },
-    { "id": "bob-wayfinder", "name": "BOB Wayfinder (stroller)", "moduleId": "stroller", "status": "keep", "refund": 0, "notes": "Already owned." }
+    {
+      "id": "evenflo-safemax",
+      "name": "Evenflo SafeMax (infant seat)",
+      "moduleId": "car-seat",
+      "status": "return",
+      "refund": 0,
+      "notes": "Heavy; poor Tacoma fit — return candidate."
+    },
+    {
+      "id": "bob-wayfinder",
+      "name": "BOB Wayfinder (stroller)",
+      "moduleId": "stroller",
+      "status": "keep",
+      "refund": 0,
+      "notes": "Already owned."
+    }
   ]
 }

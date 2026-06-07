@@ -14,7 +14,7 @@ function pickCarSeat(state: AppState, name: string): AppState {
 
 describe('compatibility flags (car seat ↔ stroller)', () => {
   it('green when the pick fits the owned Wayfinder and considered Alterrain', () => {
-    // Default top pick is the Nuna Pipa Aire RX (fits both).
+    // Default top pick is the Cybex Aton G Swivel (fits both).
     const flags = computeCompatibilityFlags(baseState());
     expect(flags).toHaveLength(1);
     expect(flags[0].severity).toBe('green');
@@ -32,8 +32,8 @@ describe('compatibility flags (car seat ↔ stroller)', () => {
   });
 
   it('flags both targets when the pick fits neither (no alternative to suggest)', () => {
-    // Chicco: fitsWayfinder=false, fitsAlterrain=false.
-    const flags = computeCompatibilityFlags(pickCarSeat(baseState(), 'Chicco KeyFit 35'));
+    // Clek Liing: fitsWayfinder=false, fitsAlterrain=false (on neither BOB list).
+    const flags = computeCompatibilityFlags(pickCarSeat(baseState(), 'Clek Liing'));
     const red = flags.find((f) => f.severity === 'red');
     const yellow = flags.find((f) => f.severity === 'yellow');
     expect(red!.message).toBe("Selected seat doesn't fit your Wayfinder.");

@@ -6,12 +6,15 @@ import { maxScore, rankedOptions, topPick, weightedTotal } from './scoring';
 const state = seed as unknown as AppState;
 const carSeat = state.modules.find((m) => m.id === 'car-seat')!;
 
+// Re-scored consistently across all 15 seats during the sourcing integration
+// pass, using verified carrier weights, BOB Wayfinder/Alterrain compat flags,
+// and sourced best prices. These are the five highest-scoring seats.
 const expectedTotals: Record<string, number> = {
-  'Nuna Pipa Aire RX': 67,
-  'Cybex Aton G Swivel': 61,
+  'Cybex Aton G Swivel': 68,
+  'Nuna Pipa Aire RX': 66,
+  'Maxi-Cosi Mico Luxe': 61,
   'Graco SnugRide 35 Lite LX': 60,
-  'Chicco KeyFit 35': 52,
-  'Britax B-Safe Gen2': 50,
+  'Chicco KeyFit 35': 58,
 };
 
 describe('car-seat scoring', () => {
@@ -20,8 +23,6 @@ describe('car-seat scoring', () => {
   });
 
   it('weighted totals match the expected values for the scored seats', () => {
-    // The roster also holds un-scored research stubs (placeholder scores);
-    // assert the hand-scored originals, which carry the real judgments.
     for (const [name, total] of Object.entries(expectedTotals)) {
       const option = carSeat.options.find((o) => o.name === name)!;
       expect(weightedTotal(option, carSeat.criteria)).toBe(total);
@@ -34,15 +35,15 @@ describe('car-seat scoring', () => {
       .map((o) => o.name)
       .filter((name) => scored.has(name));
     expect(ranked).toEqual([
-      'Nuna Pipa Aire RX',
       'Cybex Aton G Swivel',
+      'Nuna Pipa Aire RX',
+      'Maxi-Cosi Mico Luxe',
       'Graco SnugRide 35 Lite LX',
       'Chicco KeyFit 35',
-      'Britax B-Safe Gen2',
     ]);
   });
 
-  it('topPick is the Nuna Pipa Aire RX', () => {
-    expect(topPick(carSeat)?.name).toBe('Nuna Pipa Aire RX');
+  it('topPick is the Cybex Aton G Swivel', () => {
+    expect(topPick(carSeat)?.name).toBe('Cybex Aton G Swivel');
   });
 });
