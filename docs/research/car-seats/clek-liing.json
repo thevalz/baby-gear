@@ -1,0 +1,55 @@
+{
+  "_comment": "Staging fragment for ONE car-seat option (Batch E). Filename equals the option id in src/data/seed.json. Do NOT edit seed.json — the integration pass folds this in. See ../../RESEARCH_PLAN.md.",
+
+  "id": "clek-liing",
+  "name": "Clek Liing",
+  "checkedAt": "2026-06-07",
+
+  "image": "images/clek-liing.jpg",
+
+  "priceSources": [
+    {
+      "retailer": "Clek US (DTC)",
+      "price": 499.99,
+      "url": "https://clekinc.com/products/liing",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "Babylist",
+      "price": 499.99,
+      "url": "https://www.babylist.com/gp/clek-liing-infant-car-seat/14716/2028173",
+      "inStock": false,
+      "checkedAt": "2026-06-07"
+    },
+    {
+      "retailer": "ANB Baby (open-box, baseless)",
+      "price": 300.00,
+      "url": "https://www.anbbaby.com/products/clek-liing-infant-car-seat-without-base",
+      "inStock": true,
+      "checkedAt": "2026-06-07"
+    }
+  ],
+
+  "verifiedAttributes": {
+    "_comment": "Facts to fold into the option's attributes. carrierLb/fitsWayfinder/fitsAlterrain/safety map into seed.json; the rest is audit trail.",
+    "carrierLb": 9,
+    "fitsWayfinder": false,
+    "fitsAlterrain": false,
+    "safety": "Energy-absorbing metal load leg (reduces crash forces up to 40%) + rigid-LATCH; flame-retardant-free fabric; top safety rating",
+
+    "bobWayfinderAdapter": "none — Clek Liing is NOT on BOB's Wayfinder fitment list (Strolleria + bobgear adapter finder name Nuna/Cybex Aton & Cloud Q/Maxi-Cosi/Britax Willow/Diono LiteClik, not Clek)",
+    "bobAlterrainAdapter": "none — Clek Liing is NOT on the BOB Alterrain / Alterrain Pro fitment list either",
+    "rearFacingShellLengthIn": null,
+    "tacomaFitNotes": "Best-in-class small-vehicle fit. Narrow design at just 16.9 in. wide; Clek says it 'takes up the least front-to-back room in its class' and supports 3-across; metal load leg adjusts to fit any position incl. the center floor hump. Carrier dims 26.8 H x 27.7 D x 16.9 W in; base 22.6 D x 13.2 W in. Tacoma Access/4G rear seats give ~23 in depth x 25 in width with bases extended (Tacoma4G forum) — Liing's narrow width + minimal footprint make it one of the few infant seats that fits a Tacoma rear-facing, esp. 3-across."
+  },
+
+  "sources": [
+    "https://clekinc.com/products/liing",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-wayfinder",
+    "https://strolleria.com/collections/infant-car-seats-compatible-with-bob-alterrain-alterrain-pro",
+    "https://www.babylist.com/gp/clek-liing-infant-car-seat/14716/2028173",
+    "https://www.tacoma4g.com/forum/threads/child-car-seat-capacity-in-2024-tacoma.1946/"
+  ],
+  "notes": "FLAG (a) RESOLVED: there is genuinely no BOB Wayfinder/Alterrain adapter for the Clek Liing — it appears on neither BOB fitment list (the Liing is here for best-in-class small-vehicle/Tacoma fit, not stroller compat). Caveat: the Liing IS compatible with older BOB *single jogging* strollers (2016-present) via the Maxi-Cosi/Cybex-style adapter, but that is a different adapter ecosystem from the Wayfinder/Alterrain joggers in scope here. Pricing: MSRP/current $499.99 at Clek DTC (in stock; the Railroad Ziip colorway specifically shows backordered) and Babylist ($499.99, currently out of stock). The $300 ANB Baby listing is an OPEN-BOX, BASELESS, final-sale SKU — not directly comparable to the full with-base seat; integration may want to exclude it from best-price. seed stub price 449 is now low vs. the $499.99 street price."
+}
