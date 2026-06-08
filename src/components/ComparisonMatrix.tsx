@@ -12,6 +12,9 @@ import {
   weightedTotal,
 } from '../lib/scoring';
 import { criterionEvidence } from '../lib/evidence';
+import { criterionMetric, metricFails, metricMargin, type MetricContext } from '../lib/criterionMetric';
+import { criterionMatchesPriority, isStrollerModule } from '../lib/preferences';
+import { useStore } from '../lib/store';
 import Thumb from './Thumb';
 
 /**
@@ -25,15 +28,22 @@ import Thumb from './Thumb';
 export default function ComparisonMatrix({
   module,
   onOpenDetail,
+  onEditLimits,
 }: {
   module: Module;
   onOpenDetail: (optionId: string) => void;
+  /** Opens the Objectives & requirements popover from a limit chip. */
+  onEditLimits?: () => void;
 }) {
   const [popover, setPopover] = useState<{ option: Option; rect: DOMRect } | null>(null);
+  const backSeatLengthIn = useStore((s) => s.preferences.backSeatLengthIn);
 
   const ranked = rankedOptions(module);
   const best = topPick(module);
   const max = maxScore(module.criteria);
+  // Personal limits this matrix checks values against: the visitor's back-seat
+  // length (rear-facing fit) and the module's own budget (price).
+  const ctx: MetricContext = { backSeatLengthIn, budget: module.budget };
 
   // Best (highest) score per criterion — drives the heat shading. The score is
   // never shown; it only decides which real value to tint as "best in column".
@@ -51,7 +61,9 @@ export default function ComparisonMatrix({
   }
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
+    <div className="space-y-2">
+      <LimitChips module={module} onEdit={onEditLimits} />
+      <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
       <table className="w-full border-collapse text-sm">
         <thead>
           <tr className="border-b-2 border-slate-200 bg-slate-50 text-left text-xs uppercase tracking-wide text-slate-500">
@@ -104,16 +116,28 @@ export default function ComparisonMatrix({
                 {module.criteria.map((c) => {
                   const ev = criterionEvidence(c, o);
                   const score = o.scores[c.id] ?? 0;
-                  const isBest = colMax[c.id] > 0 && score === colMax[c.id];
+                  const metric = criterionMetric(c, o, ctx);
+                  const failed = metric ? metricFails(metric) : false;
+                  // A fail (over the visitor's limit) overrides best-in-column heat.
+                  const isBest = !failed && colMax[c.id] > 0 && score === colMax[c.id];
+                  const failTitle =
+                    failed && metric?.threshold
+                      ? `${metric.threshold.label}: ${metricMargin(metric)}`
+                      : undefined;
                   return (
                     <td key={c.id} className="px-3 py-2 align-top">
                       <span
-                        title={ev ?? undefined}
+                        title={failTitle ?? ev ?? undefined}
                         className={`block max-w-[12rem] truncate rounded px-1.5 py-0.5 ${
-                          isBest ? 'bg-emerald-50 font-medium text-emerald-800' : 'text-slate-600'
+                          failed
+                            ? 'bg-red-50 font-medium text-red-700'
+                            : isBest
+                              ? 'bg-emerald-50 font-medium text-emerald-800'
+                              : 'text-slate-600'
                         }`}
                       >
                         {ev ?? <span className="text-slate-300">—</span>}
+                        {failed && <span className="ml-1 font-semibold text-red-600">✗</span>}
                       </span>
                     </td>
                   );
@@ -137,6 +161,7 @@ export default function ComparisonMatrix({
           module={module}
           option={popover.option}
           rect={popover.rect}
+          ctx={ctx}
           onClose={() => setPopover(null)}
           onShowMore={() => {
             const id = popover.option.id;
@@ -145,54 +170,195 @@ export default function ComparisonMatrix({
           }}
         />
       )}
+      </div>
     </div>
   );
 }
 
-/** One requirement's value placed on the 0–5 scale relative to every sibling. */
-function AnchoredRow({ criterion, option, module }: { criterion: Criterion; option: Option; module: Module }) {
+/**
+ * Compact, on-theme row of the parent's active hard limits for this module —
+ * the same limits the popover edits, surfaced so they're visible without opening
+ * it. Each chip is a button that opens the Objectives & requirements popover.
+ * Shows only the limits that are set and relevant to this module: its budget
+ * always, plus back-seat length + vehicle when it has a rear-facing-fit column,
+ * and the owned stroller on the stroller module.
+ */
+function LimitChips({ module, onEdit }: { module: Module; onEdit?: () => void }) {
+  const backSeatLengthIn = useStore((s) => s.preferences.backSeatLengthIn);
+  const vehicle = useStore((s) => s.preferences.vehicle);
+  const ownedStroller = useStore((s) => s.preferences.ownedStroller);
+
+  const hasFit = module.criteria.some((c) => criterionMatchesPriority(c, 'fit'));
+  const isStroller = isStrollerModule(module);
+
+  const chips: { icon: string; label: string }[] = [];
+  if (module.budget > 0) chips.push({ icon: '💰', label: `≤ ${formatMoney(module.budget)}` });
+  if (hasFit && backSeatLengthIn && backSeatLengthIn > 0)
+    chips.push({ icon: '📏', label: `back seat ${backSeatLengthIn}″` });
+  if (hasFit && vehicle?.trim()) chips.push({ icon: '🚗', label: vehicle.trim() });
+  if (isStroller && ownedStroller?.trim()) chips.push({ icon: '🍼', label: `owns ${ownedStroller.trim()}` });
+
+  if (chips.length === 0) return null;
+
+  return (
+    <div className="flex flex-wrap items-center gap-1.5">
+      <span className="text-[11px] uppercase tracking-wide text-slate-400">Your limits</span>
+      {chips.map((c, i) => (
+        <button
+          key={i}
+          type="button"
+          onClick={onEdit}
+          title="Edit objectives & requirements"
+          className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-xs text-slate-600 hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700"
+        >
+          <span aria-hidden>{c.icon}</span>
+          {c.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+/** Header line shared by both row variants: criterion label + the literal value. */
+function RowHeader({
+  criterion,
+  evidence,
+  score,
+}: {
+  criterion: Criterion;
+  evidence: string | null;
+  score: number;
+}) {
+  return (
+    <div className="flex items-baseline justify-between gap-2">
+      <span className="text-xs text-slate-500">
+        {criterion.label} <span className="text-slate-300">·×{criterion.weight}</span>
+      </span>
+      <span className="text-sm font-semibold text-slate-800">
+        {evidence ?? <span className="font-normal text-slate-300">— see notes</span>}
+        <span className="ml-1.5 text-[11px] font-medium text-slate-400">{score}/5</span>
+      </span>
+    </div>
+  );
+}
+
+/**
+ * One requirement's value plotted on the real cohort range. For numeric criteria
+ * this is the actual measurement against every sibling's measurement, with the
+ * visitor's threshold marked (back-seat length, budget) and a pass/fail margin.
+ * Non-numeric criteria (compat, safety, longevity) fall back to a 0–5 strip.
+ */
+function AnchoredRow({
+  criterion,
+  option,
+  module,
+  ctx,
+}: {
+  criterion: Criterion;
+  option: Option;
+  module: Module;
+  ctx: MetricContext;
+}) {
   const score = option.scores[criterion.id] ?? 0;
   const evidence = criterionEvidence(criterion, option);
-  const siblings = module.options.map((o) => o.scores[criterion.id] ?? 0);
-  const bestScore = siblings.reduce((m, s) => Math.max(m, s), 0);
-  const isBest = score > 0 && score === bestScore;
-  const pos = (score / 5) * 100;
+  const metric = criterionMetric(criterion, option, ctx);
+
+  // ── Fallback: no numeric metric → position by 0–5 score among siblings. ──
+  if (!metric) {
+    const siblings = module.options.map((o) => o.scores[criterion.id] ?? 0);
+    const bestScore = siblings.reduce((m, s) => Math.max(m, s), 0);
+    const isBest = score > 0 && score === bestScore;
+    const pos = (score / 5) * 100;
+    return (
+      <div className="border-b border-slate-100 py-2 last:border-0">
+        <RowHeader criterion={criterion} evidence={evidence} score={score} />
+        <div className="relative mt-2 h-2 rounded-full bg-slate-100">
+          <span
+            className={`absolute inset-y-0 left-0 rounded-full ${isBest ? 'bg-emerald-400' : 'bg-indigo-400'}`}
+            style={{ width: `${pos}%` }}
+          />
+          {siblings.map((s, i) => (
+            <span
+              key={i}
+              className="absolute top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-slate-300"
+              style={{ left: `${(s / 5) * 100}%` }}
+            />
+          ))}
+          <span
+            className={`absolute top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white ${
+              isBest ? 'bg-emerald-500 ring-1 ring-emerald-500' : 'bg-indigo-500 ring-1 ring-indigo-500'
+            }`}
+            style={{ left: `${pos}%` }}
+          />
+        </div>
+        <div className="mt-1 flex justify-between text-[10px] text-slate-400">
+          <span>weak</span>
+          {isBest ? <span className="font-semibold text-emerald-600">best in class</span> : <span />}
+          <span>strong</span>
+        </div>
+      </div>
+    );
+  }
+
+  // ── Numeric: plot the real value on the cohort range, vs the visitor's limit. ──
+  const peers = module.options
+    .map((o) => criterionMetric(criterion, o, ctx))
+    .filter((m): m is NonNullable<typeof m> => m != null)
+    .map((m) => m.value);
+  const thr = metric.threshold;
+  const lo = Math.min(...peers, thr ? thr.value : Infinity);
+  const hi = Math.max(...peers, thr ? thr.value : -Infinity);
+  const span = hi - lo || 1;
+  const posOf = (v: number) => Math.max(0, Math.min(100, ((v - lo) / span) * 100));
+  const pos = posOf(metric.value);
+  const goodLeft = metric.dir < 0; // lower-is-better → good end on the left
+  const failed = metricFails(metric);
+  const margin = metricMargin(metric);
 
   return (
     <div className="border-b border-slate-100 py-2 last:border-0">
-      <div className="flex items-baseline justify-between gap-2">
-        <span className="text-xs text-slate-500">
-          {criterion.label} <span className="text-slate-300">·×{criterion.weight}</span>
-        </span>
-        <span className="text-sm font-semibold text-slate-800">
-          {evidence ?? <span className="font-normal text-slate-300">— see notes</span>}
-          <span className="ml-1.5 text-[11px] font-medium text-slate-400">{score}/5</span>
-        </span>
-      </div>
-      {/* 0–5 track: ghost dots = the other options, filled bar = this one, vs the field. */}
+      <RowHeader criterion={criterion} evidence={evidence} score={score} />
       <div className="relative mt-2 h-2 rounded-full bg-slate-100">
+        {/* Tint from the "good" end up to this option's mark. */}
         <span
-          className={`absolute inset-y-0 left-0 rounded-full ${isBest ? 'bg-emerald-400' : 'bg-indigo-400'}`}
-          style={{ width: `${pos}%` }}
+          className={`absolute inset-y-0 rounded-full ${failed ? 'bg-red-300' : 'bg-emerald-300'}`}
+          style={goodLeft ? { left: 0, width: `${pos}%` } : { left: `${pos}%`, right: 0 }}
         />
-        {siblings.map((s, i) => (
+        {/* The rest of the field as ghost dots. */}
+        {peers.map((v, i) => (
           <span
             key={i}
             className="absolute top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-slate-300"
-            style={{ left: `${(s / 5) * 100}%` }}
+            style={{ left: `${posOf(v)}%` }}
           />
         ))}
+        {/* The visitor's threshold line. */}
+        {thr && (
+          <span
+            title={thr.label}
+            className="absolute -top-1 -bottom-1 w-0.5 -translate-x-1/2 bg-amber-500"
+            style={{ left: `${posOf(thr.value)}%` }}
+          />
+        )}
+        {/* This option. */}
         <span
-          className={`absolute top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white ${
-            isBest ? 'bg-emerald-500 ring-1 ring-emerald-500' : 'bg-indigo-500 ring-1 ring-indigo-500'
+          className={`absolute top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white ring-1 ${
+            failed ? 'bg-red-500 ring-red-500' : 'bg-indigo-600 ring-indigo-600'
           }`}
           style={{ left: `${pos}%` }}
         />
       </div>
-      <div className="mt-1 flex justify-between text-[10px] text-slate-400">
-        <span>weak</span>
-        {isBest ? <span className="font-semibold text-emerald-600">best in class</span> : <span />}
-        <span>strong</span>
+      <div className="mt-1 flex items-baseline justify-between gap-2 text-[10px] text-slate-400">
+        <span>{metric.format(lo)}</span>
+        {thr ? (
+          <span className={failed ? 'font-semibold text-red-600' : 'font-semibold text-emerald-600'}>
+            {failed ? '✗ ' : '✓ '}
+            {margin} <span className="font-normal text-amber-600">vs {thr.label}</span>
+          </span>
+        ) : (
+          <span />
+        )}
+        <span>{metric.format(hi)}</span>
       </div>
     </div>
   );
@@ -203,12 +369,14 @@ function AnchoredValuePopover({
   module,
   option,
   rect,
+  ctx,
   onClose,
   onShowMore,
 }: {
   module: Module;
   option: Option;
   rect: DOMRect;
+  ctx: MetricContext;
   onClose: () => void;
   onShowMore: () => void;
 }) {
@@ -275,7 +443,7 @@ function AnchoredValuePopover({
             <p className="py-3 text-sm text-slate-400">No requirements defined yet.</p>
           ) : (
             module.criteria.map((c) => (
-              <AnchoredRow key={c.id} criterion={c} option={option} module={module} />
+              <AnchoredRow key={c.id} criterion={c} option={option} module={module} ctx={ctx} />
             ))
           )}
         </div>

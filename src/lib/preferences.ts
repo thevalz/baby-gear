@@ -109,6 +109,35 @@ function personalizeVehicle(m: Module, vehicle: string): Module {
   };
 }
 
+/** Is this the stroller module the owned stroller belongs to? (id or label match). */
+export const isStrollerModule = (m: Pick<Module, 'id' | 'label'>): boolean =>
+  /stroller/i.test(m.id) || /stroller/i.test(m.label);
+
+/**
+ * Relabel the vehicle-fit criterion across all modules from a vehicle name, e.g.
+ * "Toyota Tacoma rear-facing fit". This is the *only* derived effect of the
+ * vehicle answer — weights and everything else are left untouched — so it can be
+ * applied live from the Objectives popover without re-running the priority
+ * re-weighting. A no-op for a blank name. Pure: returns a new state.
+ */
+export function applyVehicleFit(state: AppState, vehicle: string): AppState {
+  const name = vehicle.trim();
+  if (!name) return state;
+  return { ...state, modules: state.modules.map((m) => personalizeVehicle(m, name)) };
+}
+
+/**
+ * Record the owned stroller as kept inventory (so the compatibility engine flags
+ * non-fitting seats) — the only derived effect of the owned-stroller answer, with
+ * weights left untouched so it too can be applied live from the popover. A no-op
+ * for a blank name. Pure: returns a new state.
+ */
+export function applyOwnedStrollerToState(state: AppState, stroller: string): AppState {
+  const name = stroller.trim();
+  if (!name) return state;
+  return { ...state, inventory: applyOwnedStroller(state.inventory, state.modules, name) };
+}
+
 /**
  * Record the owned stroller as a kept inventory item so the compatibility engine
  * flags seats that don't fit it in red ("doesn't fit your <stroller>"). Other
@@ -116,7 +145,7 @@ function personalizeVehicle(m: Module, vehicle: string): Module {
  * us. A no-op when the same stroller is already kept.
  */
 function applyOwnedStroller(inventory: InventoryItem[], modules: Module[], stroller: string): InventoryItem[] {
-  const strollerModule = modules.find((m) => /stroller/i.test(m.id) || /stroller/i.test(m.label));
+  const strollerModule = modules.find(isStrollerModule);
   const moduleId = strollerModule?.id ?? 'stroller';
   const name = stroller.trim();
 
@@ -142,22 +171,23 @@ function applyOwnedStroller(inventory: InventoryItem[], modules: Module[], strol
  * and record their owned stroller for compatibility. Pure — returns a new state.
  */
 export function applyPreferences(state: AppState, prefs: Preferences): AppState {
-  let modules = state.modules.map((m) => reweightModule(m, prefs.priorities));
+  // Re-weight from priorities first, then layer on the same targeted derived
+  // effects the Objectives popover applies live (vehicle relabel, owned-stroller
+  // inventory). Keeping these as shared helpers means the two entry points can't
+  // drift apart.
+  let next: AppState = {
+    ...state,
+    modules: state.modules.map((m) => reweightModule(m, prefs.priorities)),
+  };
 
-  if (prefs.vehicle?.trim()) {
-    const vehicle = prefs.vehicle.trim();
-    modules = modules.map((m) => personalizeVehicle(m, vehicle));
+  if (prefs.vehicle?.trim()) next = applyVehicleFit(next, prefs.vehicle);
+  if (prefs.ownedStroller?.trim()) next = applyOwnedStrollerToState(next, prefs.ownedStroller);
+
+  if (prefs.budget && prefs.budget > 0) {
+    next = { ...next, config: { ...next.config, overallBudget: prefs.budget } };
   }
 
-  let inventory = state.inventory;
-  if (prefs.ownedStroller?.trim()) {
-    inventory = applyOwnedStroller(inventory, modules, prefs.ownedStroller.trim());
-  }
-
-  const config =
-    prefs.budget && prefs.budget > 0 ? { ...state.config, overallBudget: prefs.budget } : state.config;
-
-  return { ...state, config, modules, inventory };
+  return next;
 }
 
 export const emptyPreferences = (): Preferences => ({ completed: false, priorities: [] });

@@ -15,6 +15,7 @@ import { computeCompatibilityFlags, type FlagSeverity } from '../lib/compatibili
 import CreatorBanner from './CreatorBanner';
 import RecommendationHero from './RecommendationHero';
 import ComparisonMatrix from './ComparisonMatrix';
+import ObjectivesPopover from './ObjectivesPopover';
 
 /** Module that incurs the stroller adapter cost. */
 const ADAPTER_MODULE_ID = 'car-seat';
@@ -128,6 +129,8 @@ export default function SummaryDashboard({
   const resetOnboarding = useStore((s) => s.resetOnboarding);
 
   const [panel, setPanel] = useState<PanelId | null>(null);
+  // Lifted so the matrices' limit chips can open the Objectives popover too.
+  const [objectivesOpen, setObjectivesOpen] = useState(false);
 
   const adapterCost = config.adapterCost ?? DEFAULT_ADAPTER_COST;
   const picks = modules.map((m) => ({ module: m, pick: topPick(m) }));
@@ -166,7 +169,10 @@ export default function SummaryDashboard({
             {modules.length === 1 ? 'y' : 'ies'} — click any row for the value breakdown.
           </p>
         </div>
-        <InsightsMenu onOpen={setPanel} />
+        <div className="flex items-center gap-2">
+          <ObjectivesPopover modules={modules} open={objectivesOpen} onOpenChange={setObjectivesOpen} />
+          <InsightsMenu onOpen={setPanel} />
+        </div>
       </div>
 
       {/* Primary: the comparison matrix, one per module */}
@@ -178,7 +184,11 @@ export default function SummaryDashboard({
               {m.options.length} option{m.options.length === 1 ? '' : 's'} · ranked best-first
             </span>
           </div>
-          <ComparisonMatrix module={m} onOpenDetail={(optionId) => onOpenDetail(m.id, optionId)} />
+          <ComparisonMatrix
+            module={m}
+            onOpenDetail={(optionId) => onOpenDetail(m.id, optionId)}
+            onEditLimits={() => setObjectivesOpen(true)}
+          />
         </section>
       ))}
 
