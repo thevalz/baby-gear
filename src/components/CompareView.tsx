@@ -12,6 +12,8 @@ import {
 } from '../lib/scoring';
 import { assetUrl } from '../lib/assets';
 import { computeCompatibilityFlags, type FlagSeverity } from '../lib/compatibility';
+import type { MetricContext } from '../lib/criterionMetric';
+import { availableViews, filterByView, type ViewKey } from '../lib/savedViews';
 import CreatorBanner from './CreatorBanner';
 import RecommendationHero from './RecommendationHero';
 import ComparisonMatrix from './ComparisonMatrix';
@@ -115,11 +117,19 @@ function Modal({ title, onClose, children }: { title: string; onClose: () => voi
   );
 }
 
-export default function SummaryDashboard({
+export default function CompareView({
   state,
+  activeModuleId,
+  onSelectModule,
+  onAddModule,
+  onEditModule,
   onOpenDetail,
 }: {
   state: AppState;
+  activeModuleId: string;
+  onSelectModule: (id: string) => void;
+  onAddModule: () => void;
+  onEditModule: (id: string) => void;
   onOpenDetail: (moduleId: string, optionId: string) => void;
 }) {
   const { modules, config, inventory } = state;
@@ -127,10 +137,23 @@ export default function SummaryDashboard({
   const setInventoryStatus = useStore((s) => s.setInventoryStatus);
   const setInventoryRefund = useStore((s) => s.setInventoryRefund);
   const resetOnboarding = useStore((s) => s.resetOnboarding);
+  const backSeatLengthIn = useStore((s) => s.preferences.backSeatLengthIn);
 
   const [panel, setPanel] = useState<PanelId | null>(null);
-  // Lifted so the matrices' limit chips can open the Objectives popover too.
+  // Lifted so the grid's limit chips can open the Objectives popover too.
   const [objectivesOpen, setObjectivesOpen] = useState(false);
+  // C1 tier-2: the active saved-view filter for the shown module.
+  const [view, setView] = useState<ViewKey>('all');
+
+  // The module the tabs/drawer point at (guard against a stale id after delete).
+  const activeModule = modules.find((m) => m.id === activeModuleId) ?? modules[0];
+  const ctx: MetricContext = { backSeatLengthIn, budget: activeModule?.budget };
+  const views = activeModule ? availableViews(activeModule, ctx) : [];
+  // Fall back to "All" if the active view stops applying (e.g. budget cleared).
+  const activeView: ViewKey = views.some((v) => v.key === view) ? view : 'all';
+  // Pass the grid a module narrowed to the view's rows; it re-ranks the subset.
+  const shownModule =
+    activeModule ? { ...activeModule, options: filterByView(activeModule, activeView, ctx) } : undefined;
 
   const adapterCost = config.adapterCost ?? DEFAULT_ADAPTER_COST;
   const picks = modules.map((m) => ({ module: m, pick: topPick(m) }));
@@ -152,45 +175,94 @@ export default function SummaryDashboard({
   const netSpend = purchases - refunds;
 
   const moduleLabel = (id: string) => modules.find((m) => m.id === id)?.label ?? '—';
-  const totalOptions = modules.reduce((n, m) => n + m.options.length, 0);
 
   const panelTitle = PANELS.find((p) => p.id === panel)?.label ?? '';
 
   return (
-    <div className="space-y-6">
+    <div className="flex min-h-0 flex-1 flex-col">
       <CreatorBanner onRetake={resetOnboarding} />
 
-      {/* Page header — the matrix is the primary artifact; everything else is in the menu. */}
-      <div className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h2 className="text-xl font-semibold text-slate-800">Compare all options</h2>
-          <p className="mt-0.5 text-sm text-slate-500">
-            {totalOptions} option{totalOptions === 1 ? '' : 's'} across {modules.length} categor
-            {modules.length === 1 ? 'y' : 'ies'} — click any row for the value breakdown.
-          </p>
+      {/* Tier 1 — module tabs (switch product) + objectives / insights / edit. */}
+      <div className="flex flex-none flex-wrap items-center gap-2 px-3 py-2">
+        <div className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto rounded-lg border border-slate-200 bg-slate-50 p-1">
+          {modules.map((m) => {
+            const on = m.id === activeModule?.id;
+            return (
+              <button
+                key={m.id}
+                onClick={() => onSelectModule(m.id)}
+                className={`whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                  on ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-600 hover:text-slate-800'
+                }`}
+              >
+                {m.label}
+                <span className={`ml-1.5 text-xs ${on ? 'text-indigo-400' : 'text-slate-400'}`}>
+                  {m.options.length}
+                </span>
+              </button>
+            );
+          })}
+          <button
+            onClick={onAddModule}
+            className="whitespace-nowrap rounded-md px-2.5 py-1.5 text-sm text-slate-400 hover:text-slate-600"
+          >
+            + Add
+          </button>
         </div>
         <div className="flex items-center gap-2">
           <ObjectivesPopover modules={modules} open={objectivesOpen} onOpenChange={setObjectivesOpen} />
           <InsightsMenu onOpen={setPanel} />
+          {activeModule && (
+            <button
+              onClick={() => onEditModule(activeModule.id)}
+              title="Edit this module’s criteria & options"
+              className="inline-flex items-center gap-1.5 rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100"
+            >
+              ✎ Edit
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Primary: the comparison matrix, one per module */}
-      {modules.map((m) => (
-        <section key={m.id} className="space-y-2">
-          <div className="flex items-baseline justify-between">
-            <h3 className="text-sm font-medium text-slate-600">{m.label}</h3>
-            <span className="text-xs text-slate-400">
-              {m.options.length} option{m.options.length === 1 ? '' : 's'} · ranked best-first
-            </span>
-          </div>
+      {/* Tier 2 — saved views (filter this product). */}
+      {activeModule && views.length > 1 && (
+        <div className="flex flex-none items-center gap-1 overflow-x-auto border-y border-slate-100 bg-white px-3 py-1.5">
+          <span className="mr-1 text-[10px] font-semibold uppercase tracking-wide text-slate-400">View</span>
+          {views.map((v) => {
+            const on = v.key === activeView;
+            return (
+              <button
+                key={v.key}
+                onClick={() => setView(v.key)}
+                className={`whitespace-nowrap rounded-md px-2.5 py-1 text-xs font-semibold transition-colors ${
+                  on
+                    ? 'border border-indigo-200 bg-indigo-50 text-indigo-600'
+                    : 'border border-transparent text-slate-500 hover:text-slate-700'
+                }`}
+              >
+                {v.label}
+                <span className={`ml-1.5 ${on ? 'text-indigo-400' : 'text-slate-400'}`}>{v.count}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Primary — the comparison grid is the page. */}
+      <div className="min-h-0 flex-1 overflow-auto px-3 py-3">
+        {shownModule && activeModule ? (
           <ComparisonMatrix
-            module={m}
-            onOpenDetail={(optionId) => onOpenDetail(m.id, optionId)}
+            key={activeModule.id}
+            module={shownModule}
+            onOpenDetail={(optionId) => onOpenDetail(activeModule.id, optionId)}
             onEditLimits={() => setObjectivesOpen(true)}
           />
-        </section>
-      ))}
+        ) : (
+          <p className="rounded-lg border border-dashed border-slate-200 bg-white p-6 text-sm text-slate-400">
+            No modules yet — add one from the menu.
+          </p>
+        )}
+      </div>
 
       {/* Secondary views, opened from the Insights menu */}
       {panel && (
