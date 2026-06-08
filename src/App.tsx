@@ -1,15 +1,13 @@
 import { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Toolbar from './components/Toolbar';
-import SummaryDashboard from './components/SummaryDashboard';
+import TopBar from './components/TopBar';
+import NavDrawer from './components/NavDrawer';
+import CompareView from './components/CompareView';
 import ModuleView from './components/ModuleView';
 import OptionDetail from './components/OptionDetail';
 import ErrorBoundary from './components/ErrorBoundary';
 import Onboarding from './components/Onboarding';
 import { useStore } from './lib/store';
-import type { AppState, NavItem } from './lib/types';
-
-const SUMMARY_ID = 'summary';
+import type { AppState } from './lib/types';
 
 /** Points at a single option's drill-down page, openable from any view. */
 export interface DetailRef {
@@ -24,92 +22,120 @@ export default function App() {
   const addModule = useStore((s) => s.addModule);
   const resetToSeed = useStore((s) => s.resetToSeed);
   const onboardingDone = useStore((s) => s.preferences.completed);
-  const [activeId, setActiveId] = useState<string>(SUMMARY_ID);
+
+  // The module the compare grid / editor points at. Defaults to the first module.
+  const [activeId, setActiveId] = useState<string>(() => modules[0]?.id ?? '');
+  // Whether we're editing the active module (ModuleView) vs. comparing (CompareView).
+  const [editing, setEditing] = useState(false);
   const [detail, setDetail] = useState<DetailRef | null>(null);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const navItems: NavItem[] = [
-    { id: SUMMARY_ID, label: 'Summary' },
-    ...modules.map((m) => ({ id: m.id, label: m.label })),
-  ];
-
-  const activeModule = modules.find((m) => m.id === activeId);
   const state: AppState = { config, modules, inventory };
+  // Guard against a stale active id (e.g. after a module delete).
+  const activeModuleId = modules.some((m) => m.id === activeId) ? activeId : modules[0]?.id ?? '';
+  const activeModule = modules.find((m) => m.id === activeModuleId);
 
-  // Detail navigation, lifted to the app so the Summary and module views can
-  // both open an option's drill-down page (and the sidebar highlights its
-  // module). A stale ref (deleted option) simply falls back to the module view.
+  // Pick a module to compare (from tabs or the drawer).
+  const selectModule = (id: string) => {
+    setActiveId(id);
+    setEditing(false);
+    setDetail(null);
+    setDrawerOpen(false);
+  };
+
+  // Open one option's drill-down page (from a row's "full detail" link).
   const openDetail = (moduleId: string, optionId: string) => {
     setActiveId(moduleId);
+    setEditing(false);
     setDetail({ moduleId, optionId });
-    setSidebarOpen(false); // close the mobile drawer after navigating
+    setDrawerOpen(false);
   };
-  const selectNav = (id: string) => {
+
+  const editModule = (id: string) => {
     setActiveId(id);
+    setEditing(true);
     setDetail(null);
-    setSidebarOpen(false); // close the mobile drawer after navigating
   };
-  const detailModule = detail ? modules.find((m) => m.id === detail.moduleId) : undefined;
-  const detailOption = detailModule?.options.find((o) => o.id === detail?.optionId);
 
   const handleAddModule = () => {
     const id = addModule();
-    selectNav(id); // jump straight into the new module to edit it
+    setActiveId(id);
+    setEditing(true); // jump straight into the empty module to set it up
+    setDetail(null);
+    setDrawerOpen(false);
   };
 
-  const content =
-    detailModule && detailOption ? (
-      <OptionDetail module={detailModule} option={detailOption} onBack={() => setDetail(null)} />
-    ) : activeModule ? (
-      <ModuleView
-        module={activeModule}
-        onOpenDetail={(optionId) => openDetail(activeModule.id, optionId)}
-        onDeleted={() => selectNav(SUMMARY_ID)}
-      />
-    ) : (
-      <SummaryDashboard state={state} onOpenDetail={openDetail} />
+  const detailModule = detail ? modules.find((m) => m.id === detail.moduleId) : undefined;
+  const detailOption = detailModule?.options.find((o) => o.id === detail?.optionId);
+
+  let content: React.ReactNode;
+  let boundaryKey: string;
+  let boundaryLabel: string;
+  if (detailModule && detailOption) {
+    boundaryKey = `detail:${detail!.moduleId}:${detail!.optionId}`;
+    boundaryLabel = detailOption.name;
+    content = (
+      <div className="min-h-0 flex-1 overflow-auto">
+        <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6">
+          <OptionDetail module={detailModule} option={detailOption} onBack={() => setDetail(null)} />
+        </div>
+      </div>
     );
+  } else if (editing && activeModule) {
+    boundaryKey = `edit:${activeModule.id}`;
+    boundaryLabel = activeModule.label;
+    content = (
+      <div className="min-h-0 flex-1 overflow-auto">
+        <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6">
+          <ModuleView
+            module={activeModule}
+            onOpenDetail={(optionId) => openDetail(activeModule.id, optionId)}
+            onDeleted={() => selectModule(modules.find((m) => m.id !== activeModule.id)?.id ?? '')}
+          />
+        </div>
+      </div>
+    );
+  } else {
+    boundaryKey = `compare:${activeModuleId}`;
+    boundaryLabel = activeModule ? activeModule.label : 'Compare';
+    content = (
+      <CompareView
+        state={state}
+        activeModuleId={activeModuleId}
+        onSelectModule={selectModule}
+        onAddModule={handleAddModule}
+        onEditModule={editModule}
+        onOpenDetail={openDetail}
+      />
+    );
+  }
 
   return (
     <>
-      {!onboardingDone && <Onboarding onClose={() => selectNav(SUMMARY_ID)} />}
-      <div className="flex min-h-screen bg-slate-50 text-slate-900">
-        <Sidebar
-          items={navItems}
-          activeId={activeId}
-          onSelect={selectNav}
-          onAddModule={handleAddModule}
-          open={sidebarOpen}
-          onClose={() => setSidebarOpen(false)}
+      {!onboardingDone && (
+        <Onboarding
+          onClose={() => {
+            setEditing(false);
+            setDetail(null);
+          }}
         />
-        <main className="flex min-w-0 flex-1 flex-col overflow-hidden">
-          {/* Mobile top bar with the menu toggle (hidden on lg+, where the sidebar is static). */}
-          <div className="flex items-center gap-3 border-b border-slate-200 bg-white px-4 py-3 lg:hidden">
-            <button
-              onClick={() => setSidebarOpen(true)}
-              aria-label="Open menu"
-              className="rounded-md p-1.5 text-slate-600 hover:bg-slate-100"
-            >
-              <span className="block h-0.5 w-5 bg-current" />
-              <span className="mt-1 block h-0.5 w-5 bg-current" />
-              <span className="mt-1 block h-0.5 w-5 bg-current" />
-            </button>
-            <span className="text-sm font-semibold text-slate-800">👶 Baby-Gear</span>
-          </div>
-          <Toolbar />
-          <div className="flex-1 overflow-auto">
-            <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6">
-              {/* Keyed by the active view (incl. which option's detail) so switching
-                  spins up a fresh boundary — a crash in one view never strands the rest. */}
-              <ErrorBoundary
-                key={detailOption ? `detail:${detail!.moduleId}:${detail!.optionId}` : activeId}
-                label={detailOption ? detailOption.name : activeModule ? activeModule.label : 'Summary'}
-                onReset={resetToSeed}
-              >
-                {content}
-              </ErrorBoundary>
-            </div>
-          </div>
+      )}
+      <div className="flex h-screen flex-col bg-slate-50 text-slate-900">
+        <TopBar onOpenDrawer={() => setDrawerOpen(true)} />
+        <NavDrawer
+          modules={modules}
+          activeModuleId={activeModuleId}
+          open={drawerOpen}
+          onClose={() => setDrawerOpen(false)}
+          onSelect={selectModule}
+          onAddModule={handleAddModule}
+        />
+        <main className="flex min-h-0 flex-1 flex-col">
+          {/* Keyed by the active view so switching spins up a fresh boundary —
+              a crash in one view never strands the rest. */}
+          <ErrorBoundary key={boundaryKey} label={boundaryLabel} onReset={resetToSeed}>
+            {content}
+          </ErrorBoundary>
         </main>
       </div>
     </>

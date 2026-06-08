@@ -83,18 +83,21 @@ project-pages URL `https://<owner>.github.io/baby-gear/` (override via
 index.html              Vite entry
 src/
   main.tsx              React bootstrap
-  App.tsx              App shell: sidebar + toolbar + swapping content pane
+  App.tsx              Grid-first shell: minimal header + nav drawer, swapping content pane
   index.css            Tailwind entry (@import "tailwindcss")
   components/
-    Sidebar.tsx        Left nav: "Summary" + one item per module
-    Toolbar.tsx        Overall budget + Export / Import / Reset
-    SummaryDashboard.tsx  Four cards: top picks, cost vs budget,
-                          compatibility flags, keep/return tracker
+    TopBar.tsx         Minimal header: hamburger + brand + data-tools overflow (refresh/export/import/reset)
+    NavDrawer.tsx      Off-canvas nav: one item per module + "Add module"
+    CompareView.tsx    The landing: module tabs + saved-view tabs over a single
+                       full-bleed comparison grid; Objectives popover + Insights modal
+    ComparisonMatrix.tsx  The grid: options × real-value columns, heat + fail flags,
+                          row-click scrollable value-breakdown popover
     ModuleView.tsx     Editable module: label/budget, criteria + weights,
                        options with prices & scores, weighted-score chart
   lib/
     types.ts           Data model (Config / Module / Option / PriceSource / Criterion / InventoryItem)
     scoring.ts         weightedTotal / maxScore / percent / topPick / bestPrice / bestSource
+    savedViews.ts      Tier-2 saved-view filters (All / Under budget / Fits my car / Top N)
     compatibility.ts   Data-driven cross-module compatibility map + flag engine
     sync.ts            Repo-as-source-of-truth pricing merge (dataVersion)
     assets.ts          Base-path-aware asset URL helper (for images)
