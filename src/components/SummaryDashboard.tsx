@@ -129,6 +129,8 @@ export default function SummaryDashboard({
   const resetOnboarding = useStore((s) => s.resetOnboarding);
 
   const [panel, setPanel] = useState<PanelId | null>(null);
+  // Lifted so the matrices' limit chips can open the Objectives popover too.
+  const [objectivesOpen, setObjectivesOpen] = useState(false);
 
   const adapterCost = config.adapterCost ?? DEFAULT_ADAPTER_COST;
   const picks = modules.map((m) => ({ module: m, pick: topPick(m) }));
@@ -168,7 +170,7 @@ export default function SummaryDashboard({
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <ObjectivesPopover modules={modules} />
+          <ObjectivesPopover modules={modules} open={objectivesOpen} onOpenChange={setObjectivesOpen} />
           <InsightsMenu onOpen={setPanel} />
         </div>
       </div>
@@ -182,7 +184,11 @@ export default function SummaryDashboard({
               {m.options.length} option{m.options.length === 1 ? '' : 's'} · ranked best-first
             </span>
           </div>
-          <ComparisonMatrix module={m} onOpenDetail={(optionId) => onOpenDetail(m.id, optionId)} />
+          <ComparisonMatrix
+            module={m}
+            onOpenDetail={(optionId) => onOpenDetail(m.id, optionId)}
+            onEditLimits={() => setObjectivesOpen(true)}
+          />
         </section>
       ))}
 

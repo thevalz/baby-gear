@@ -13,6 +13,7 @@ import {
 } from '../lib/scoring';
 import { criterionEvidence } from '../lib/evidence';
 import { criterionMetric, metricFails, metricMargin, type MetricContext } from '../lib/criterionMetric';
+import { criterionMatchesPriority, isStrollerModule } from '../lib/preferences';
 import { useStore } from '../lib/store';
 import Thumb from './Thumb';
 
@@ -27,9 +28,12 @@ import Thumb from './Thumb';
 export default function ComparisonMatrix({
   module,
   onOpenDetail,
+  onEditLimits,
 }: {
   module: Module;
   onOpenDetail: (optionId: string) => void;
+  /** Opens the Objectives & requirements popover from a limit chip. */
+  onEditLimits?: () => void;
 }) {
   const [popover, setPopover] = useState<{ option: Option; rect: DOMRect } | null>(null);
   const backSeatLengthIn = useStore((s) => s.preferences.backSeatLengthIn);
@@ -57,7 +61,9 @@ export default function ComparisonMatrix({
   }
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
+    <div className="space-y-2">
+      <LimitChips module={module} onEdit={onEditLimits} />
+      <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
       <table className="w-full border-collapse text-sm">
         <thead>
           <tr className="border-b-2 border-slate-200 bg-slate-50 text-left text-xs uppercase tracking-wide text-slate-500">
@@ -164,6 +170,51 @@ export default function ComparisonMatrix({
           }}
         />
       )}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Compact, on-theme row of the parent's active hard limits for this module —
+ * the same limits the popover edits, surfaced so they're visible without opening
+ * it. Each chip is a button that opens the Objectives & requirements popover.
+ * Shows only the limits that are set and relevant to this module: its budget
+ * always, plus back-seat length + vehicle when it has a rear-facing-fit column,
+ * and the owned stroller on the stroller module.
+ */
+function LimitChips({ module, onEdit }: { module: Module; onEdit?: () => void }) {
+  const backSeatLengthIn = useStore((s) => s.preferences.backSeatLengthIn);
+  const vehicle = useStore((s) => s.preferences.vehicle);
+  const ownedStroller = useStore((s) => s.preferences.ownedStroller);
+
+  const hasFit = module.criteria.some((c) => criterionMatchesPriority(c, 'fit'));
+  const isStroller = isStrollerModule(module);
+
+  const chips: { icon: string; label: string }[] = [];
+  if (module.budget > 0) chips.push({ icon: '💰', label: `≤ ${formatMoney(module.budget)}` });
+  if (hasFit && backSeatLengthIn && backSeatLengthIn > 0)
+    chips.push({ icon: '📏', label: `back seat ${backSeatLengthIn}″` });
+  if (hasFit && vehicle?.trim()) chips.push({ icon: '🚗', label: vehicle.trim() });
+  if (isStroller && ownedStroller?.trim()) chips.push({ icon: '🍼', label: `owns ${ownedStroller.trim()}` });
+
+  if (chips.length === 0) return null;
+
+  return (
+    <div className="flex flex-wrap items-center gap-1.5">
+      <span className="text-[11px] uppercase tracking-wide text-slate-400">Your limits</span>
+      {chips.map((c, i) => (
+        <button
+          key={i}
+          type="button"
+          onClick={onEdit}
+          title="Edit objectives & requirements"
+          className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-xs text-slate-600 hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700"
+        >
+          <span aria-hidden>{c.icon}</span>
+          {c.label}
+        </button>
+      ))}
     </div>
   );
 }
