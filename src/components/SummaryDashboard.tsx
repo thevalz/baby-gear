@@ -15,6 +15,7 @@ import { computeCompatibilityFlags, type FlagSeverity } from '../lib/compatibili
 import CreatorBanner from './CreatorBanner';
 import RecommendationHero from './RecommendationHero';
 import ComparisonMatrix from './ComparisonMatrix';
+import ObjectivesPopover from './ObjectivesPopover';
 
 /** Module that incurs the stroller adapter cost. */
 const ADAPTER_MODULE_ID = 'car-seat';
@@ -166,7 +167,10 @@ export default function SummaryDashboard({
             {modules.length === 1 ? 'y' : 'ies'} — click any row for the value breakdown.
           </p>
         </div>
-        <InsightsMenu onOpen={setPanel} />
+        <div className="flex items-center gap-2">
+          <ObjectivesPopover modules={modules} />
+          <InsightsMenu onOpen={setPanel} />
+        </div>
       </div>
 
       {/* Primary: the comparison matrix, one per module */}

@@ -35,6 +35,8 @@ interface StoreActions {
   completeOnboarding: (prefs: Preferences) => void;
   /** Clear answers so the first-run quiz shows again (keeps current data). */
   resetOnboarding: () => void;
+  /** Merge a patch into the visitor's preferences (precise requirements live here). */
+  updatePreferences: (patch: Partial<Preferences>) => void;
 
   /** Replace the entire data state (used by Import). */
   replaceState: (next: AppState) => void;
@@ -106,6 +108,9 @@ export const useStore = create<Store>()(
         }),
 
       resetOnboarding: () => set({ preferences: emptyPreferences() }),
+
+      updatePreferences: (patch) =>
+        set((s) => ({ preferences: { ...s.preferences, ...patch } })),
 
       // --- actions ---
       replaceState: (next) =>
