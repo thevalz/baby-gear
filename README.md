@@ -62,7 +62,7 @@ npm run dev      # → http://localhost:5173
 Other scripts:
 
 ```bash
-npm run build    # typecheck + production build to dist/ (base path /family/)
+npm run build    # typecheck + production build to dist/ (base path /baby-gear/)
 npm run preview  # serve the production build
 npm test         # run the vitest unit tests
 ```
@@ -70,9 +70,9 @@ npm test         # run the vitest unit tests
 ## Deployment (GitHub Pages)
 
 `.github/workflows/deploy.yml` builds the app and publishes `dist/` to GitHub
-Pages on every push to `main`. The Vite `base` is `/family/` to match the
-project-pages URL `https://<owner>.github.io/family/` (override via `VITE_BASE`,
-or rename in `vite.config.ts` if the repo is renamed).
+Pages on every push to `main`. The Vite `base` is `/baby-gear/` to match the
+project-pages URL `https://<owner>.github.io/baby-gear/` (override via
+`VITE_BASE`, or rename in `vite.config.ts` if the repo is renamed).
 
 **One-time setup:** in repo **Settings → Pages → Build and deployment**, set the
 **Source** to **GitHub Actions**.
