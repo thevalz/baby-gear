@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Product Detail — Design Study (values, not opaque scores)</title>
+<style>
+  :root{
+    --ink:#1e293b; --ink2:#475569; --mut:#94a3b8; --mut2:#cbd5e1;
+    --line:#e2e8f0; --line2:#f1f5f9; --bg:#f8fafc; --card:#fff;
+    --good:#059669; --goodbg:#ecfdf5; --goodln:#a7f3d0;
+    --bad:#dc2626; --badbg:#fef2f2; --badln:#fecaca;
+    --warn:#d97706; --warnbg:#fffbeb;
+    --acc:#4f46e5; --accbg:#eef2ff; --accln:#c7d2fe;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:14px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px; margin:0 auto; padding:40px 24px 120px}
+  .num{font-variant-numeric:tabular-nums}
+  h1{font-size:30px; margin:0 0 6px; letter-spacing:-.02em}
+  h2{font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--mut); margin:0 0 14px; font-weight:600}
+  .lede{color:var(--ink2); max-width:760px; font-size:15px}
+  .kicker{color:var(--acc); font-weight:700; font-size:12px; letter-spacing:.1em; text-transform:uppercase}
+
+  .concept{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:0; margin:22px 0; overflow:hidden}
+  .concept > header{padding:18px 22px; border-bottom:1px solid var(--line); display:flex; align-items:flex-start; gap:14px; justify-content:space-between; flex-wrap:wrap}
+  .concept h3{margin:0; font-size:18px; letter-spacing:-.01em}
+  .concept .tag{font-size:11px; font-weight:700; color:var(--acc); background:var(--accbg); border:1px solid var(--accln); padding:3px 9px; border-radius:999px; white-space:nowrap}
+  .concept .why{color:var(--ink2); font-size:13px; margin:6px 0 0; max-width:640px}
+  .stage{padding:22px; background:linear-gradient(#fff,#fcfdff)}
+  .note{padding:12px 22px 18px; border-top:1px dashed var(--line); display:grid; grid-template-columns:1fr 1fr; gap:6px 30px; font-size:12.5px; color:var(--ink2)}
+  .note b{color:var(--ink)}
+  .note .pro::before{content:"＋ "; color:var(--good); font-weight:700}
+  .note .con::before{content:"−  "; color:var(--bad); font-weight:700}
+
+  /* device frame for detail-page concepts */
+  .device{max-width:560px; margin:0 auto; border:1px solid var(--line); border-radius:12px; background:#fff; box-shadow:0 1px 2px rgba(15,23,42,.04); overflow:hidden}
+  .device .topbar{height:30px; background:var(--line2); border-bottom:1px solid var(--line); display:flex; align-items:center; gap:6px; padding:0 12px}
+  .device .topbar i{width:9px;height:9px;border-radius:50%;background:var(--mut2);display:inline-block}
+  .device .screen{padding:18px}
+
+  .prodhead{display:flex; gap:14px; align-items:center; margin-bottom:14px}
+  .thumb{width:60px;height:60px;border-radius:10px;background:var(--accbg);border:1px solid var(--accln);display:flex;align-items:center;justify-content:center;font-size:26px;flex:0 0 auto}
+  .prodhead .nm{font-weight:600;font-size:16px}
+  .prodhead .sub{color:var(--mut);font-size:12px}
+
+  /* Concept 1: anchored value rows */
+  .arow{padding:11px 0;border-bottom:1px solid var(--line2)}
+  .arow:last-child{border-bottom:0}
+  .arow .lab{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .arow .crit{font-size:12px;color:var(--ink2)}
+  .arow .crit .w{color:var(--mut);font-size:11px}
+  .arow .val{font-weight:700;font-size:15px}
+  .arow .val small{font-weight:500;color:var(--mut);font-size:11px;margin-left:3px}
+  .track{position:relative;height:8px;margin:9px 0 4px;border-radius:6px;background:var(--line2);overflow:visible}
+  .track .goodzone{position:absolute;top:0;bottom:0;background:var(--goodbg);border-radius:6px}
+  .track .mark{position:absolute;top:-3px;width:14px;height:14px;border-radius:50%;border:2.5px solid #fff;box-shadow:0 0 0 1px var(--acc);background:var(--acc);transform:translateX(-50%)}
+  .track .thr{position:absolute;top:-5px;bottom:-5px;width:2px;background:var(--warn);transform:translateX(-50%)}
+  .track .dot{position:absolute;top:1px;width:6px;height:6px;border-radius:50%;background:var(--mut2);transform:translateX(-50%)}
+  .ends{display:flex;justify-content:space-between;font-size:10.5px;color:var(--mut)}
+  .ends .thrlab{color:var(--warn);font-weight:600}
+
+  /* Concept 2: matrix */
+  table.mx{border-collapse:collapse;width:100%;font-size:12px}
+  table.mx th,table.mx td{padding:6px 9px;text-align:right;white-space:nowrap}
+  table.mx thead th{font-weight:600;color:var(--mut);border-bottom:2px solid var(--line);text-transform:uppercase;letter-spacing:.03em;font-size:10.5px}
+  table.mx th.optname,table.mx td.optname{text-align:left;position:sticky;left:0;background:#fff}
+  table.mx tbody tr{border-bottom:1px solid var(--line2)}
+  table.mx tbody tr.focus{background:var(--accbg)}
+  table.mx tbody tr.focus td.optname{background:var(--accbg);font-weight:700}
+  table.mx td .cell{display:inline-block;padding:1px 6px;border-radius:5px}
+  table.mx td.fail{color:var(--bad)}
+  .heat0{background:var(--goodbg);color:#065f46;font-weight:700}
+  .heat1{background:#f0fdf4}
+  .mxwrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+
+  /* Concept 3: value tiles */
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .tile{border:1px solid var(--line);border-radius:10px;padding:11px 12px}
+  .tile .t-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+  .tile .t-val{font-size:20px;font-weight:700;margin:3px 0 2px;letter-spacing:-.01em}
+  .tile .t-val small{font-size:11px;font-weight:500;color:var(--mut)}
+  .tile .t-rank{font-size:10.5px;color:var(--ink2)}
+  .spark{display:flex;align-items:flex-end;gap:2px;height:20px;margin-top:7px}
+  .spark span{flex:1;background:var(--mut2);border-radius:1px;min-height:2px}
+  .spark span.me{background:var(--acc)}
+  .badge-good{color:var(--good);font-weight:700}
+  .badge-bad{color:var(--bad);font-weight:700}
+
+  /* Concept 4: fit ledger */
+  .ledger{width:100%;border-collapse:collapse;font-size:13px}
+  .ledger td{padding:10px 6px;border-bottom:1px solid var(--line2);vertical-align:middle}
+  .ledger .need{color:var(--ink2)}
+  .ledger .arrow{color:var(--mut);text-align:center;width:30px}
+  .ledger .res{text-align:right;font-weight:600}
+  .pass{color:var(--good)} .fail{color:var(--bad)} .warnc{color:var(--warn)}
+  .ledger .detail{font-size:11px;color:var(--mut);font-weight:400}
+  .verdict{margin-top:14px;padding:12px 14px;border-radius:10px;background:var(--goodbg);border:1px solid var(--goodln);font-size:13px}
+  .verdict.mix{background:var(--warnbg);border-color:#fde68a}
+
+  /* Concept 5: dotplots */
+  .dp{padding:8px 0 14px}
+  .dp .dphead{display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px}
+  .dp .crit{color:var(--ink2)} .dp .meval{font-weight:700}
+  .dpt{position:relative;height:26px;border-bottom:1px solid var(--line);margin-top:4px}
+  .dpt .pt{position:absolute;top:7px;width:9px;height:9px;border-radius:50%;background:var(--mut2);transform:translateX(-50%);border:1.5px solid #fff}
+  .dpt .pt.me{background:var(--acc);width:13px;height:13px;top:5px;z-index:3}
+  .dpt .thr{position:absolute;top:-2px;bottom:0;width:2px;background:var(--warn);transform:translateX(-50%)}
+  .dpt .melabel{position:absolute;top:-15px;font-size:10px;font-weight:700;color:var(--acc);transform:translateX(-50%);white-space:nowrap}
+  .dpends{display:flex;justify-content:space-between;font-size:10px;color:var(--mut);margin-top:2px}
+
+  /* Concept 6: decomposed bar */
+  .stackrow{margin:14px 0}
+  .stackrow .nm{font-size:13px;font-weight:600;margin-bottom:5px;display:flex;justify-content:space-between}
+  .stackrow .nm .tot{color:var(--acc);font-weight:700}
+  .stack{display:flex;height:30px;border-radius:7px;overflow:hidden;border:1px solid var(--line)}
+  .stack .seg{display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;overflow:hidden;white-space:nowrap;border-right:1px solid rgba(255,255,255,.5)}
+  .stack .seg:last-child{border-right:0}
+  .legend{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:10px;font-size:11px;color:var(--ink2)}
+  .legend span{display:inline-flex;align-items:center;gap:5px}
+  .legend i{width:10px;height:10px;border-radius:2px;display:inline-block}
+
+  /* analogies */
+  .analogy{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:14px 0;background:#fff}
+  .analogy .demo{padding:18px;border-right:1px solid var(--line);background:#fcfdff}
+  .analogy .text{padding:18px}
+  .analogy h4{margin:0 0 4px;font-size:15px}
+  .analogy .from{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+  .analogy p{margin:0;font-size:12.5px;color:var(--ink2)}
+  .analogy .steal{margin-top:8px;font-size:12.5px;color:var(--ink)}
+  .analogy .steal b{color:var(--acc)}
+
+  /* energyguide */
+  .eg{border:2px solid var(--ink);border-radius:6px;padding:12px;font-family:ui-sans-serif,system-ui}
+  .eg .egtop{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2)}
+  .eg .egbig{font-size:30px;font-weight:800;margin:2px 0}
+  .egbar{position:relative;height:12px;background:linear-gradient(90deg,#bbf7d0,#fde68a,#fecaca);border-radius:6px;margin:18px 0 4px}
+  .egbar .you{position:absolute;top:-6px;width:3px;height:24px;background:var(--ink);transform:translateX(-50%)}
+  .egbar .youlab{position:absolute;top:-22px;font-size:10px;font-weight:700;transform:translateX(-50%);white-space:nowrap}
+  .egends{display:flex;justify-content:space-between;font-size:10px;color:var(--mut)}
+
+  /* nutrition */
+  .nf{border:2px solid var(--ink);padding:10px 12px;font-family:ui-sans-serif,system-ui;max-width:240px}
+  .nf .nft{font-weight:800;border-bottom:6px solid var(--ink);padding-bottom:3px;font-size:13px}
+  .nf .nfrow{display:flex;justify-content:space-between;border-bottom:1px solid var(--ink);padding:3px 0;font-size:12px}
+  .nf .nfrow b{font-weight:700}
+  .nf .dv{font-weight:700}
+
+  /* rtings */
+  .rt{display:flex;flex-direction:column;gap:9px}
+  .rtrow{display:flex;align-items:center;gap:10px}
+  .rtrow .rl{flex:0 0 92px;font-size:11px;color:var(--ink2)}
+  .rtrow .rmeas{flex:0 0 78px;font-weight:700;font-size:14px}
+  .rtrow .rbarw{flex:1;height:7px;background:var(--line2);border-radius:5px;overflow:hidden}
+  .rtrow .rbar{height:100%;background:var(--acc);border-radius:5px}
+  .rtrow .rsub{flex:0 0 30px;text-align:right;font-size:11px;color:var(--mut)}
+
+  /* sparkline */
+  .skl{display:flex;align-items:flex-end;gap:2px;height:30px}
+  .skl span{width:6px;background:var(--mut2);border-radius:1px}
+  .skl span.last{background:var(--good)}
+
+  .eval{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .eval th,.eval td{padding:9px 11px;text-align:center;border-bottom:1px solid var(--line2)}
+  .eval th{background:var(--line2);font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:var(--ink2)}
+  .eval td:first-child,.eval th:first-child{text-align:left;font-weight:600}
+  .eval .hi{color:var(--good);font-weight:700} .eval .lo{color:var(--bad)} .eval .md{color:var(--warn)}
+  .rec{background:var(--accbg);border:1px solid var(--accln);border-radius:12px;padding:18px 20px;margin-top:18px}
+  .rec h3{margin:0 0 8px}
+  .persona{display:inline-flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  .persona span{font-size:11.5px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--ink2)}
+  .persona b{color:var(--ink)}
+  hr.sec{border:0;border-top:1px solid var(--line);margin:48px 0 30px}
+  .sectit{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--acc);font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kicker">Baby Gear Lab · UI Study</div>
+  <h1>Product detail: a grid of <em>values</em>, not opaque scores</h1>
+  <p class="lede">
+    Six mid-fidelity directions for the product-detail surface, plus five analogies from
+    adjacent problem spaces. Every mockup below is rendered from the <b>real seed data</b> —
+    15 infant car seats, their actual specs, weights and 0–5 scores — and anchored to one
+    concrete parent so “compared&nbsp;to&nbsp;what?” always has an answer. Philosophically
+    Tufte: show the measurement, enforce comparison within the eyespan, let any score ride
+    as a thin top layer that decomposes back into its parts.
+  </p>
+  <div class="persona">
+    <span>Persona: <b>new parent</b></span>
+    <span>Vehicle <b>Toyota Tacoma</b></span>
+    <span>Back-seat rear-facing length <b>28 in</b></span>
+    <span>Car-seat budget <b>$500</b></span>
+    <span>Owns <b>BOB Wayfinder</b> stroller</span>
+    <span>Focal product <b>Nuna Pipa Aire RX</b></span>
+  </div>
+
+  <hr class="sec" />
+  <div class="sectit">Part 1 — Six proposed interfaces</div>
+  <div id="concepts"><section class="concept">
+    <header><div><h3>1. Anchored Value Rows</h3><p class="why">Each requirement leads with its literal measurement; a strip places that value on the cohort’s full range, tints the “good” end, plots the other 14 seats as ghost dots, and marks <b>your</b> threshold (back-seat 28″, budget $500). The 0–5 score survives only as a faint trailing tag.</p></div><span class="tag">recommended · EnergyGuide</span></header>
+    <div class="stage"><div class="device"><div class="topbar"><i></i><i></i><i></i></div>
+    <div class="screen">
+      <div class="prodhead"><div class="thumb">🍼</div>
+        <div><div class="nm">Nuna Pipa Aire RX</div><div class="sub">Infant Car Seat · best price $650 at Nuna</div></div></div>
+      <div class="arow">
+      <div class="lab"><span class="crit">Vehicle rear-facing fit <span class="w">· weight ×5</span></span>
+        <span class="val">27.25 in footprint<small>rates 4/5</small></span></div>
+      <div class="track"><span class="goodzone" style="left:0;width:45.312499999999986%"></span><span class="dot" style="left:45.312499999999986%"></span><span class="dot" style="left:9.375000000000025%"></span><span class="dot" style="left:6.24999999999998%"></span><span class="dot" style="left:53.124999999999986%"></span><span class="dot" style="left:25.00000000000003%"></span><span class="dot" style="left:18.749999999999936%"></span><span class="dot" style="left:96.87499999999996%"></span><span class="dot" style="left:71.87500000000003%"></span><span class="dot" style="left:100%"></span><span class="dot" style="left:68.74999999999999%"></span><span class="dot" style="left:0%"></span><span class="dot" style="left:6.24999999999998%"></span><span class="dot" style="left:21.874999999999982%"></span><span class="dot" style="left:6.24999999999998%"></span><span class="thr" style="left:68.74999999999999%"></span><span class="mark" style="left:45.312499999999986%"></span></div>
+        <div class="ends"><span>25.8in ·  best</span><span class="thrlab">▲ your back seat 28″</span><span>worst  · 29in</span></div>
+    </div><div class="arow">
+      <div class="lab"><span class="crit">Carrier weight <span class="w">· weight ×4</span></span>
+        <span class="val">6.2 lb carrier<small>rates 5/5</small></span></div>
+      <div class="track"><span class="goodzone" style="left:0;width:0%"></span><span class="dot" style="left:0%"></span><span class="dot" style="left:27.184466019417474%"></span><span class="dot" style="left:9.70873786407767%"></span><span class="dot" style="left:36.89320388349514%"></span><span class="dot" style="left:45.631067961165044%"></span><span class="dot" style="left:27.184466019417474%"></span><span class="dot" style="left:27.184466019417474%"></span><span class="dot" style="left:30.09708737864078%"></span><span class="dot" style="left:36.89320388349514%"></span><span class="dot" style="left:59.22330097087378%"></span><span class="dot" style="left:35.92233009708738%"></span><span class="dot" style="left:36.89320388349514%"></span><span class="dot" style="left:27.184466019417474%"></span><span class="dot" style="left:46.60194174757281%"></span><span class="dot" style="left:100%"></span><span class="mark" style="left:0%"></span></div>
+        <div class="ends"><span>6.2lb ·  best</span><span></span><span>worst  · 16.5lb</span></div>
+    </div><div class="arow">
+      <div class="lab"><span class="crit">Stroller compatibility <span class="w">· weight ×3</span></span>
+        <span class="val">fits BOB Wayfinder ✓<small>rates 5/5</small></span></div>
+      <div class="ends" style="margin-top:6px"><span style="color:var(--good)">meets your stroller</span></div>
+    </div><div class="arow">
+      <div class="lab"><span class="crit">Outgrow-by-height (headroom) <span class="w">· weight ×4</span></span>
+        <span class="val">fits to 30 in tall<small>rates 2/5</small></span></div>
+      <div class="track"><span class="goodzone" style="left:0%;right:0"></span><span class="dot" style="left:0%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:0%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:100%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="dot" style="left:40%"></span><span class="mark" style="left:0%"></span></div>
+        <div class="ends"><span>30in ·  best</span><span></span><span>worst  · 35in</span></div>
+    </div><div class="arow">
+      <div class="lab"><span class="crit">Infant→toddler longevity <span class="w">· weight ×3</span></span>
+        <span class="val">infant bucket only<small>rates 2/5</small></span></div>
+      <div class="ends" style="margin-top:6px"><span style="color:var(--bad)">does not meet your stroller</span></div>
+    </div><div class="arow">
+      <div class="lab"><span class="crit">Price <span class="w">· weight ×1</span></span>
+        <span class="val">$650<small>rates 1/5</small></span></div>
+      <div class="track"><span class="goodzone" style="left:0;width:100%"></span><span class="dot" style="left:100%"></span><span class="dot" style="left:70.5790082547401%"></span><span class="dot" style="left:0%"></span><span class="dot" style="left:17.646712809552753%"></span><span class="dot" style="left:17.64867355542048%"></span><span class="dot" style="left:21.57016529087665%"></span><span class="dot" style="left:19.413344836375757%"></span><span class="dot" style="left:47.059861571341735%"></span><span class="dot" style="left:19.607458677280835%"></span><span class="dot" style="left:37.25417148683359%"></span><span class="dot" style="left:41.17566322228976%"></span><span class="dot" style="left:42.94229524911276%"></span><span class="dot" style="left:70.58685123821101%"></span><span class="dot" style="left:70.5790082547401%"></span><span class="dot" style="left:100%"></span><span class="thr" style="left:70.58881198407875%"></span><span class="mark" style="left:100%"></span></div>
+        <div class="ends"><span>$139.99 ·  best</span><span class="thrlab">▲ budget $500</span><span>worst  · $650</span></div>
+    </div>
+    </div></div></div>
+    <div class="note"><div class="pro">The value evaluates itself — position on the range <i>is</i> the judgment, no trust required</div><div class="pro">Personal threshold line answers “compared to <b>my</b> car?” directly</div><div class="pro">Score is present for continuity but visibly subordinate</div><div class="con">Taller per row — ~6 criteria is the comfortable ceiling on a phone</div><div class="con">Qualitative criteria (safety) fall back to text — no strip to anchor them</div></div>
+  </section><section class="concept">
+    <header><div><h3>2. Comparison Matrix</h3><p class="why">Tufte’s “tables beat graphics under ~20 numbers.” Every option is a row, every spec a real-unit column, best-in-column subtly heat-shaded, values that violate the persona’s limits flagged red. The focal product is just the highlighted row — detail and comparison in one eyespan.</p></div><span class="tag">small multiples</span></header>
+    <div class="stage"><div class="mxwrap"><table class="mx"><thead><tr><th class="optname">Option (15)</th><th>Price</th><th>Carrier</th><th>Footprint</th><th>Outgrow</th><th>Max lb</th><th>Wayfinder</th><th>Match</th></tr></thead><tbody><tr class="focus"><td class="optname">Nuna Pipa Aire RX</td><td class=""><span class="cell ">$650</span></td><td class=""><span class="cell heat0">6.2♯</span></td><td class=""><span class="cell ">27.25″</span></td><td class=""><span class="cell ">30″</span></td><td class=""><span class="cell ">30</span></td><td class=""><span class="cell ">✓</span></td><td class="num" style="color:var(--acc);font-weight:600">86</td></tr><tr class=""><td class="optname">Cybex Aton G Swivel</td><td class=""><span class="cell ">$499.95</span></td><td class=""><span class="cell ">9♯</span></td><td class=""><span class="cell ">26.1″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell heat0">35</span></td><td class=""><span class="cell ">✓</span></td><td class="num" style="color:var(--acc);font-weight:600">106</td></tr><tr class=""><td class="optname">Graco SnugRide 35 Lite LX</td><td class=""><span class="cell heat0">$139.99</span></td><td class=""><span class="cell ">7.2♯</span></td><td class=""><span class="cell ">26″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell heat0">35</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">98</td></tr><tr class=""><td class="optname">Chicco KeyFit 35</td><td class=""><span class="cell ">$229.99</span></td><td class=""><span class="cell ">10♯</span></td><td class=""><span class="cell ">27.5″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell heat0">35</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">96</td></tr><tr class=""><td class="optname">Britax B-Safe Gen2</td><td class=""><span class="cell ">$230</span></td><td class=""><span class="cell ">10.9♯</span></td><td class=""><span class="cell ">26.6″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell heat0">35</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">82</td></tr><tr class=""><td class="optname">Diono LiteClik 30</td><td class=""><span class="cell ">$250</span></td><td class=""><span class="cell ">9♯</span></td><td class=""><span class="cell ">26.4″</span></td><td class=""><span class="cell ">30″</span></td><td class=""><span class="cell ">30</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">77</td></tr><tr class=""><td class="optname">Maxi-Cosi Mico Luxe</td><td class=""><span class="cell ">$239</span></td><td class=""><span class="cell ">9♯</span></td><td class="fail"><span class="cell ">28.9″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell ">30</span></td><td class=""><span class="cell ">✓</span></td><td class="num" style="color:var(--acc);font-weight:600">92</td></tr><tr class=""><td class="optname">Britax Willow Brook S+</td><td class=""><span class="cell ">$380</span></td><td class=""><span class="cell ">9.3♯</span></td><td class="fail"><span class="cell ">28.1″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell ">30</span></td><td class=""><span class="cell ">✓</span></td><td class="num" style="color:var(--acc);font-weight:600">83</td></tr><tr class=""><td class="optname">Graco SnugFit 35 DLX</td><td class=""><span class="cell ">$239.99</span></td><td class=""><span class="cell ">10♯</span></td><td class="fail"><span class="cell ">29″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell heat0">35</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">86</td></tr><tr class=""><td class="optname">Chicco Fit2 (2-Year)</td><td class=""><span class="cell ">$329.99</span></td><td class=""><span class="cell ">12.3♯</span></td><td class=""><span class="cell ">28″</span></td><td class=""><span class="cell heat0">35″</span></td><td class=""><span class="cell heat0">35</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">79</td></tr><tr class=""><td class="optname">UPPAbaby Mesa V3</td><td class=""><span class="cell ">$349.99</span></td><td class=""><span class="cell ">9.9♯</span></td><td class=""><span class="cell heat0">25.8″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell ">30</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">78</td></tr><tr class=""><td class="optname">Peg Perego 4-35 Nido</td><td class=""><span class="cell ">$359</span></td><td class=""><span class="cell ">10♯</span></td><td class=""><span class="cell ">26″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell ">30</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">80</td></tr><tr class=""><td class="optname">Clek Liing</td><td class=""><span class="cell ">$499.99</span></td><td class=""><span class="cell ">9♯</span></td><td class=""><span class="cell ">—</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell ">30</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">87</td></tr><tr class=""><td class="optname">Cybex Cloud G Lux</td><td class=""><span class="cell ">$499.95</span></td><td class=""><span class="cell ">11♯</span></td><td class=""><span class="cell ">26.5″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell heat0">35</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">71</td></tr><tr class=""><td class="optname">Doona Car Seat & Stroller</td><td class=""><span class="cell ">$650</span></td><td class=""><span class="cell ">16.5♯</span></td><td class=""><span class="cell ">26″</span></td><td class=""><span class="cell ">32″</span></td><td class=""><span class="cell ">30</span></td><td class="fail"><span class="cell ">✗</span></td><td class="num" style="color:var(--acc);font-weight:600">57</td></tr></tbody></table></div></div>
+    <div class="note"><div class="pro">Highest data density; “compared to what” is the whole object</div><div class="pro">Best-in-column shading guides the eye with no derived score column</div><div class="pro">Reuses the data already in ModuleView — low build cost</div><div class="con">15 rows × 8 cols is wide — needs horizontal scroll / sticky first column on mobile</div><div class="con">Less “product page” feeling; it’s a spreadsheet, not a hero</div></div>
+  </section><section class="concept">
+    <header><div><h3>3. Value Tiles + Distribution Spark</h3><p class="why">A scannable grid of tiles. Each is a big real value, a rank within the cohort (“#2 of 15 lightest”), and a word-sized histogram showing where this product sits in the field. Visual, mobile-friendly, and the score disappears entirely.</p></div><span class="tag">RTINGS / dashboard</span></header>
+    <div class="stage"><div class="device"><div class="topbar"><i></i><i></i><i></i></div>
+    <div class="screen">
+      <div class="prodhead"><div class="thumb">🍼</div><div><div class="nm">Nuna Pipa Aire RX</div><div class="sub">Infant Car Seat</div></div></div>
+      <div class="tiles"><div class="tile">
+      <div class="t-lab">Best price</div>
+      <div class="t-val">$650<small> </small></div>
+      <div class="t-rank"><span class="">#14 of 15</span> lowest </div>
+      <div class="spark"><span class="" style="height:20%"></span><span class="" style="height:100%"></span><span class="" style="height:20%"></span><span class="" style="height:60%"></span><span class="" style="height:0%"></span><span class="" style="height:60%"></span><span class="" style="height:0%"></span><span class="me" style="height:40%"></span></div>
+    </div><div class="tile">
+      <div class="t-lab">Carrier weight</div>
+      <div class="t-val">6.2<small> lb</small></div>
+      <div class="t-rank"><span class="badge-good">#1 of 15</span> lowest — top third</div>
+      <div class="spark"><span class="me" style="height:22.22222222222222%"></span><span class="" style="height:0%"></span><span class="" style="height:100%"></span><span class="" style="height:22.22222222222222%"></span><span class="" style="height:11.11111111111111%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:11.11111111111111%"></span></div>
+    </div><div class="tile">
+      <div class="t-lab">Rear-facing footprint</div>
+      <div class="t-val">27.25<small> in</small></div>
+      <div class="t-rank"><span class="">#9 of 14</span> lowest </div>
+      <div class="spark"><span class="" style="height:100%"></span><span class="" style="height:40%"></span><span class="" style="height:20%"></span><span class="me" style="height:20%"></span><span class="" style="height:20%"></span><span class="" style="height:40%"></span><span class="" style="height:0%"></span><span class="" style="height:40%"></span></div>
+    </div><div class="tile">
+      <div class="t-lab">Outgrow height</div>
+      <div class="t-val">30<small> in</small></div>
+      <div class="t-rank"><span class="">#14 of 15</span> highest </div>
+      <div class="spark"><span class="me" style="height:16.666666666666664%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:100%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:8.333333333333332%"></span></div>
+    </div><div class="tile">
+      <div class="t-lab">Weight capacity</div>
+      <div class="t-val">30<small> lb</small></div>
+      <div class="t-rank"><span class="">#8 of 15</span> highest </div>
+      <div class="spark"><span class="me" style="height:100%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:0%"></span><span class="" style="height:87.5%"></span></div>
+    </div><div class="tile"><div class="t-lab">Your stroller</div>
+    <div class="t-val badge-good" style="font-size:16px">Fits BOB Wayfinder</div>
+    <div class="t-rank">4 of 15 seats fit it</div></div></div>
+    </div></div></div>
+    <div class="note"><div class="pro">Very glanceable; the histogram makes “where in the pack” instant</div><div class="pro">Card grid maps cleanly onto the existing optionFacts() tiles</div><div class="pro">No score shown at all — purest break from the opaque number</div><div class="con">Rank + 8-bin spark is approximate — hides exact gaps between rivals</div><div class="con">Per-tile context is cohort-only; doesn’t encode the user’s threshold as crisply as #1/#4</div></div>
+  </section><section class="concept">
+    <header><div><h3>4. Fit Ledger — “vs. your life”</h3><p class="why">Drops the cohort entirely and anchors every value to the parent’s own constraints, like a Nutrition label’s %DV column. Each row is <i>your need → this product’s actual value → pass/fail</i>, with the real margin (“0.75 in to spare”, “over by $150”). Zero abstract scores.</p></div><span class="tag">Nutrition %DV</span></header>
+    <div class="stage"><div class="device"><div class="topbar"><i></i><i></i><i></i></div>
+    <div class="screen">
+      <div class="prodhead"><div class="thumb">🍼</div><div><div class="nm">Nuna Pipa Aire RX</div><div class="sub">Does it fit <b>your</b> life?</div></div></div>
+      <table class="ledger"><tbody><tr>
+    <td class="need">Back seat fits ≤ <b>28 in</b></td>
+    <td class="arrow">→</td>
+    <td class="res pass">27.25 in footprint ✓<div class="detail">0.75 in to spare</div></td>
+  </tr><tr>
+    <td class="need">Within budget <b>$500</b></td>
+    <td class="arrow">→</td>
+    <td class="res fail">$650 ✗<div class="detail">over by $150</div></td>
+  </tr><tr>
+    <td class="need">Fits your <b>BOB Wayfinder</b></td>
+    <td class="arrow">→</td>
+    <td class="res pass">compatible ✓<div class="detail">click-in, no adapter drama</div></td>
+  </tr><tr>
+    <td class="need">Light enough to carry</td>
+    <td class="arrow">→</td>
+    <td class="res pass">6.2 lb ✓<div class="detail">lightest of all 15 seats</div></td>
+  </tr><tr>
+    <td class="need">Lasts past infancy</td>
+    <td class="arrow">→</td>
+    <td class="res fail">infant only ✗<div class="detail">outgrown by 30″ height</div></td>
+  </tr></tbody></table>
+      <div class="verdict mix"><b>Meets 3 of 5 of your must-haves.</b> The lightest, most stroller-friendly seat that still fits the Tacoma — but it breaks your budget by $150 and is an infant-only bucket.</div>
+    </div></div></div>
+    <div class="note"><div class="pro">Most decision-relevant framing — speaks the user’s constraints, not ours</div><div class="pro">Pass/fail falls straight out of real numbers; nothing to trust</div><div class="pro">Reuses Preferences (backSeatLengthIn, budget, ownedStroller) already in the model</div><div class="con">Needs onboarding answers to shine; degrades to generic thresholds without them</div><div class="con">Loses the field view — you see fit, not how it ranks vs rivals</div></div>
+  </section><section class="concept">
+    <header><div><h3>5. Per-Criterion Dot-Plots</h3><p class="why">The purest Tufte move: one horizontal strip per spec, all 15 seats plotted as dots by their true value, this product highlighted and labelled, the persona’s threshold marked. Reading the focal dot down the stack is the product detail — and you see the full distribution and clustering for free.</p></div><span class="tag">Tufte dotplot</span></header>
+    <div class="stage"><div class="device" style="max-width:600px"><div class="topbar"><i></i><i></i><i></i></div>
+    <div class="screen">
+      <div class="prodhead"><div class="thumb">🍼</div><div><div class="nm">Nuna Pipa Aire RX</div><div class="sub">Where it lands in the field of 15</div></div></div>
+      <div class="dp">
+      <div class="dphead"><span class="crit">Best price <span style="color:var(--mut)">· lower better</span></span>
+        <span class="meval">$650</span></div>
+      <div class="dpt"><span class="melabel" style="left:100%">this seat</span><span class="pt me" style="left:100%"></span><span class="pt " style="left:70.5790082547401%"></span><span class="pt " style="left:0%"></span><span class="pt " style="left:17.646712809552753%"></span><span class="pt " style="left:17.64867355542048%"></span><span class="pt " style="left:21.57016529087665%"></span><span class="pt " style="left:19.413344836375757%"></span><span class="pt " style="left:47.059861571341735%"></span><span class="pt " style="left:19.607458677280835%"></span><span class="pt " style="left:37.25417148683359%"></span><span class="pt " style="left:41.17566322228976%"></span><span class="pt " style="left:42.94229524911276%"></span><span class="pt " style="left:70.58685123821101%"></span><span class="pt " style="left:70.5790082547401%"></span><span class="pt " style="left:100%"></span><span class="thr" style="left:70.58881198407875%"></span></div>
+      <div class="dpends"><span>$139.99</span><span style="color:var(--warn)">▲ budget $500</span><span>$650</span></div>
+    </div><div class="dp">
+      <div class="dphead"><span class="crit">Carrier weight <span style="color:var(--mut)">· lower better</span></span>
+        <span class="meval">6.2lb</span></div>
+      <div class="dpt"><span class="melabel" style="left:0%">this seat</span><span class="pt me" style="left:0%"></span><span class="pt " style="left:27.184466019417474%"></span><span class="pt " style="left:9.70873786407767%"></span><span class="pt " style="left:36.89320388349514%"></span><span class="pt " style="left:45.631067961165044%"></span><span class="pt " style="left:27.184466019417474%"></span><span class="pt " style="left:27.184466019417474%"></span><span class="pt " style="left:30.09708737864078%"></span><span class="pt " style="left:36.89320388349514%"></span><span class="pt " style="left:59.22330097087378%"></span><span class="pt " style="left:35.92233009708738%"></span><span class="pt " style="left:36.89320388349514%"></span><span class="pt " style="left:27.184466019417474%"></span><span class="pt " style="left:46.60194174757281%"></span><span class="pt " style="left:100%"></span></div>
+      <div class="dpends"><span>6.2lb</span><span></span><span>16.5lb</span></div>
+    </div><div class="dp">
+      <div class="dphead"><span class="crit">Rear-facing footprint <span style="color:var(--mut)">· lower better</span></span>
+        <span class="meval">27.25in</span></div>
+      <div class="dpt"><span class="melabel" style="left:45.312499999999986%">this seat</span><span class="pt me" style="left:45.312499999999986%"></span><span class="pt " style="left:9.375000000000025%"></span><span class="pt " style="left:6.24999999999998%"></span><span class="pt " style="left:53.124999999999986%"></span><span class="pt " style="left:25.00000000000003%"></span><span class="pt " style="left:18.749999999999936%"></span><span class="pt " style="left:96.87499999999996%"></span><span class="pt " style="left:71.87500000000003%"></span><span class="pt " style="left:100%"></span><span class="pt " style="left:68.74999999999999%"></span><span class="pt " style="left:0%"></span><span class="pt " style="left:6.24999999999998%"></span><span class="pt " style="left:21.874999999999982%"></span><span class="pt " style="left:6.24999999999998%"></span><span class="thr" style="left:68.74999999999999%"></span></div>
+      <div class="dpends"><span>25.8in</span><span style="color:var(--warn)">▲ your back seat 28″</span><span>29in</span></div>
+    </div><div class="dp">
+      <div class="dphead"><span class="crit">Outgrow height <span style="color:var(--mut)">· higher better</span></span>
+        <span class="meval">30in</span></div>
+      <div class="dpt"><span class="melabel" style="left:0%">this seat</span><span class="pt me" style="left:0%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:0%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:100%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span><span class="pt " style="left:40%"></span></div>
+      <div class="dpends"><span>30in</span><span></span><span>35in</span></div>
+    </div>
+    </div></div></div>
+    <div class="note"><div class="pro">Shows the entire field’s shape — gaps, clusters, outliers — not just a rank</div><div class="pro">Exact positions; no binning, no lie factor</div><div class="pro">Threshold line ties the distribution to the user’s reality</div><div class="con">Dots collide when seats share a value (needs jitter / stacking)</div><div class="con">More chart than most parents expect on a product page — power-user lean</div></div>
+  </section><section class="concept">
+    <header><div><h3>6. Decomposed Contribution Bar</h3><p class="why">Keeps a single weighted total — because the score does encode the creator’s <i>preference weighting</i> that raw specs can’t — but never as a bare number. Each segment is one criterion’s weight×score contribution, hover reveals the underlying value, and stacking two products compares <i>where</i> the points come from, not just the totals.</p></div><span class="tag">honest rollup · micro+macro</span></header>
+    <div class="stage"><div class="device" style="max-width:600px"><div class="topbar"><i></i><i></i><i></i></div>
+    <div class="screen">
+      <p style="font-size:12px;color:var(--ink2);margin:0 0 6px">The one place a score is allowed — and it’s fully decomposed. Hover any segment for the value behind it.</p>
+      <div class="stackrow"><div class="nm"><span>Nuna Pipa Aire RX</span><span class="tot">86 / 120 pts</span></div>
+      <div class="stack"><span class="seg" title="Vehicle rear-facing fit: 27.25 in footprint → 4/5 × weight 5 = 20 pts" style="width:16.666666666666664%;background:#4f46e5">20</span><span class="seg" title="Carrier weight: 6.2 lb carrier → 5/5 × weight 4 = 20 pts" style="width:16.666666666666664%;background:#6366f1">20</span><span class="seg" title="Stroller compatibility: fits BOB Wayfinder ✓ → 5/5 × weight 3 = 15 pts" style="width:12.5%;background:#0ea5e9">15</span><span class="seg" title="Safety extras: load-leg / anti-rebound tier → 5/5 × weight 2 = 10 pts" style="width:8.333333333333332%;background:#14b8a6">10</span><span class="seg" title="Outgrow-by-height (headroom): fits to 30 in tall → 2/5 × weight 4 = 8 pts" style="width:6.666666666666667%;background:#10b981">8</span><span class="seg" title="Weight capacity: up to 30 lb → 3/5 × weight 2 = 6 pts" style="width:5%;background:#84cc16"></span><span class="seg" title="Infant→toddler longevity: infant bucket only → 2/5 × weight 3 = 6 pts" style="width:5%;background:#f59e0b"></span><span class="seg" title="Price: $650 → 1/5 × weight 1 = 1 pts" style="width:0.8333333333333334%;background:#ef4444"></span></div></div>
+      <div class="stackrow"><div class="nm"><span>Cybex Aton G Swivel</span><span class="tot">106 / 120 pts</span></div>
+      <div class="stack"><span class="seg" title="Vehicle rear-facing fit: 26.1 in footprint → 5/5 × weight 5 = 25 pts" style="width:20.833333333333336%;background:#4f46e5">25</span><span class="seg" title="Carrier weight: 9 lb carrier → 4/5 × weight 4 = 16 pts" style="width:13.333333333333334%;background:#6366f1">16</span><span class="seg" title="Stroller compatibility: fits BOB Wayfinder ✓ → 5/5 × weight 3 = 15 pts" style="width:12.5%;background:#0ea5e9">15</span><span class="seg" title="Safety extras: load-leg / anti-rebound tier → 5/5 × weight 2 = 10 pts" style="width:8.333333333333332%;background:#14b8a6">10</span><span class="seg" title="Outgrow-by-height (headroom): fits to 32 in tall → 4/5 × weight 4 = 16 pts" style="width:13.333333333333334%;background:#10b981">16</span><span class="seg" title="Weight capacity: up to 35 lb → 5/5 × weight 2 = 10 pts" style="width:8.333333333333332%;background:#84cc16">10</span><span class="seg" title="Infant→toddler longevity: infant bucket only → 4/5 × weight 3 = 12 pts" style="width:10%;background:#f59e0b">12</span><span class="seg" title="Price: $499.95 → 2/5 × weight 1 = 2 pts" style="width:1.6666666666666667%;background:#ef4444"></span></div></div>
+      <div class="legend"><span><i style="background:#4f46e5"></i>Vehicle rear-facing fit ×5</span><span><i style="background:#6366f1"></i>Carrier weight ×4</span><span><i style="background:#0ea5e9"></i>Stroller compatibility ×3</span><span><i style="background:#14b8a6"></i>Safety extras ×2</span><span><i style="background:#10b981"></i>Outgrow-by-height (headroom) ×4</span><span><i style="background:#84cc16"></i>Weight capacity ×2</span><span><i style="background:#f59e0b"></i>Infant→toddler longevity ×3</span><span><i style="background:#ef4444"></i>Price ×1</span></div>
+    </div></div></div>
+    <div class="note"><div class="pro">Macro total and micro breakdown in one object — an auditable score, not a trusted one</div><div class="pro">Stacked side-by-side shows <i>why</i> Nuna≈Cybex while having opposite strengths</div><div class="pro">Drop-in companion to any other concept; doesn’t replace the values</div><div class="con">Still leans on the 0–5 scores under the hood — inherits their subjectivity</div><div class="con">Segment widths mix weight and score; hard to read an exact spec off the bar alone</div></div>
+  </section></div>
+
+  <hr class="sec" />
+  <div class="sectit">Part 2 — Five analogies worth stealing from</div>
+  <div id="analogies"><div class="analogy"><div class="demo"><div class="eg"><div class="egtop">Carrier weight · this model</div><div class="egbig">6.2 lb</div>
+    <div class="egbar"><span class="you" style="left:0%"></span><span class="youlab" style="left:0%">this seat</span></div>
+    <div class="egends"><span>6.2 lb · lightest</span><span>16.5 lb · heaviest</span></div>
+    <div style="font-size:11px;color:var(--ink2);margin-top:6px">Compared with all 15 infant seats</div></div></div>
+    <div class="text"><div class="from">Appliances · vehicles</div><h4>Federal EnergyGuide / EPA fuel label</h4><p>A regulated solution to the exact problem: a single product’s value is meaningless alone, so the label always plots it on the range of <i>all comparable products</i>. The number plus its position is the rating.</p><div class="steal"><b>Steal:</b> the range strip in Concept&nbsp;1 — value-on-a-spectrum is the canonical de-opaquing device.</div></div></div><div class="analogy"><div class="demo"><div class="nf"><div class="nft">Fits Your Car</div>
+    <div class="nfrow"><span><b>Footprint</b> 27.25 in</span><span class="dv">97%</span></div>
+    <div class="nfrow"><span><b>Budget</b> $650</span><span class="dv" style="color:var(--bad)">130%</span></div>
+    <div class="nfrow"><span><b>Carry weight</b> 6.2 lb</span><span class="dv" style="color:var(--good)">62%</span></div>
+    <div style="font-size:10px;color:var(--mut);margin-top:6px">% of <i>your</i> limit (28 in · $500 · 10 lb)</div></div></div>
+    <div class="text"><div class="from">Packaged food</div><h4>Nutrition Facts — % Daily Value</h4><p>%DV solved “is 12 g a lot?” by anchoring every value to a personal reference. The raw gram is kept <i>and</i> contextualized — context without hiding the measurement.</p><div class="steal"><b>Steal:</b> the per-user anchor in Concept&nbsp;4 — express each value as a % of the parent’s own threshold.</div></div></div><div class="analogy"><div class="demo"><div class="rt"><div class="rtrow"><span class="rl">Carrier</span><span class="rmeas">6.2 lb</span>
+    <span class="rbarw"><span class="rbar" style="width:100%"></span></span><span class="rsub">5/5</span></div><div class="rtrow"><span class="rl">Footprint</span><span class="rmeas">27.25 in</span>
+    <span class="rbarw"><span class="rbar" style="width:54.687500000000014%"></span></span><span class="rsub">4/5</span></div><div class="rtrow"><span class="rl">Outgrow</span><span class="rmeas">30 in</span>
+    <span class="rbarw"><span class="rbar" style="width:0%"></span></span><span class="rsub">2/5</span></div></div></div>
+    <div class="text"><div class="from">Electronics reviews</div><h4>RTINGS / DPReview</h4><p>Measurement is the headline (“contrast 4500:1”); the derived sub-score is a faint companion on the right, and everything is built for side-by-side. The number leads, the grade follows.</p><div class="steal"><b>Steal:</b> the measurement-first ordering — keep the 0–5 as a quiet trailing companion (Concepts 1&nbsp;&amp;&nbsp;3), never the headline.</div></div></div><div class="analogy"><div class="demo"><table class="mx" style="font-size:11px"><thead><tr><th class="optname">Seat</th><th>$</th><th>lb</th><th>in</th></tr></thead>
+    <tbody><tr><td class="optname" style="font-size:11px">Nuna Pipa</td><td class="num" style="">$650</td><td class="num" style="background:#dcfce7;font-weight:700">6.2</td><td class="num" style="">30</td></tr><tr><td class="optname" style="font-size:11px">Cybex Aton</td><td class="num" style="">$499.95</td><td class="num" style="">9</td><td class="num" style="background:#dcfce7;font-weight:700">32</td></tr><tr><td class="optname" style="font-size:11px">Graco SnugRide</td><td class="num" style="background:#dcfce7;font-weight:700">$139.99</td><td class="num" style="">7.2</td><td class="num" style="background:#dcfce7;font-weight:700">32</td></tr><tr><td class="optname" style="font-size:11px">Chicco KeyFit</td><td class="num" style="">$229.99</td><td class="num" style="">10</td><td class="num" style="background:#dcfce7;font-weight:700">32</td></tr><tr><td class="optname" style="font-size:11px">Britax B-Safe</td><td class="num" style="">$230</td><td class="num" style="">10.9</td><td class="num" style="background:#dcfce7;font-weight:700">32</td></tr></tbody></table></div>
+    <div class="text"><div class="from">Finance · reference</div><h4>Bloomberg terminal · Wikipedia “Comparison of…”</h4><p>Dense all-real-value matrices where best-in-column heat shading does the evaluative work. No grade column — your eye finds the green.</p><div class="steal"><b>Steal:</b> the heat-shaded matrix of Concept&nbsp;2 — let conditional shading replace a derived score column entirely.</div></div></div><div class="analogy"><div class="demo"><div><div style="font-size:12px;color:var(--ink2);margin-bottom:6px">Price, last 8 weeks</div>
+    <div style="display:flex;align-items:flex-end;gap:10px"><div class="skl"><span class="" style="height:30px"></span><span class="" style="height:25.10204081632653px"></span><span class="" style="height:20.20408163265306px"></span><span class="" style="height:16.775510204081634px"></span><span class="" style="height:13.346938775510203px"></span><span class="" style="height:10.408163265306122px"></span><span class="" style="height:6px"></span><span class="last" style="height:6px"></span></div>
+    <div><div style="font-size:20px;font-weight:700" class="num">$650</div><div style="font-size:11px;color:var(--good)">▼ $49 since Apr</div></div></div></div></div>
+    <div class="text"><div class="from">Beautiful Evidence</div><h4>Tufte sparklines · dot-dash-plots</h4><p>“Data-intense, design-simple, word-sized graphics.” A trend or distribution embedded inline at the point of the number — your priceSources timestamps are a sparkline waiting to happen.</p><div class="steal"><b>Steal:</b> word-sized context everywhere — the inline histograms (Concept&nbsp;3) and a real price-history spark on the detail header.</div></div></div></div>
+
+  <hr class="sec" />
+  <div class="sectit">Part 3 — Side-by-side evaluation</div>
+  <div id="evaltable" style="margin-top:16px"><table class="eval"><thead><tr><th>Concept</th><th>Data density</th><th>“Compared to what?”</th><th>De-opaqued?</th><th>Build effort here</th><th>IA fit</th></tr></thead>
+  <tbody><tr><td>1 · Anchored Value Rows</td><td class="hi">High</td><td class="hi">Strong</td><td class="hi">Score demoted</td><td class="md">Medium</td><td class="hi">Drop-in</td></tr><tr><td>2 · Comparison Matrix</td><td class="hi">Highest</td><td class="hi">Strongest</td><td class="hi">No score col</td><td class="hi">Low (reuse)</td><td class="md">New surface</td></tr><tr><td>3 · Value Tiles + Spark</td><td class="md">Medium</td><td class="md">Cohort only</td><td class="hi">No score</td><td class="hi">Low</td><td class="hi">Drop-in</td></tr><tr><td>4 · Fit Ledger</td><td class="md">Focused</td><td class="hi">To the user</td><td class="hi">Zero scores</td><td class="md">Medium</td><td class="hi">Drop-in</td></tr><tr><td>5 · Dot-Plots</td><td class="hi">High</td><td class="hi">Full field</td><td class="hi">No score</td><td class="md">Medium</td><td class="lo">Power-user</td></tr><tr><td>6 · Decomposed Bar</td><td class="md">Medium</td><td class="md">Self only</td><td class="md">Keeps score</td><td class="hi">Low</td><td class="hi">Companion</td></tr></tbody></table></div>
+  <div class="rec" id="rec"><div>
+  <h3>Recommendation</h3>
+  <p style="margin:0 0 8px;color:var(--ink2)">
+    Lead the product-detail page with <b>Concept&nbsp;1 (Anchored Value Rows)</b> — it honors your “detail is the most
+    important surface” brief while smuggling the comparison into every row, so no value is ever opaque. Pair it with a
+    compact <b>Concept&nbsp;4 (Fit Ledger)</b> block up top to cash in the persona data you already collect, and offer
+    <b>Concept&nbsp;2 (Matrix)</b> as the “compare all” view one tap away. Keep <b>Concept&nbsp;6</b> as the only place
+    a rolled-up score appears, fully decomposed. Concepts 3 &amp; 5 are strong but better as progressive-disclosure flourishes.
+  </p>
+  <p style="margin:0;color:var(--ink2)">
+    The through-line, straight from Tufte: <b>show the measurement, anchor it (to the cohort and to the parent), and let
+    the score be a thin, decomposable top layer</b> — never the headline.
+  </p>
+</div></div>
+
+</div>
+
+</body>
+</html>
