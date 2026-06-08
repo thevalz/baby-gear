@@ -11,7 +11,12 @@ import type {
   PriceSource,
 } from './types';
 import { mergePricingFromSeed } from './sync';
-import { applyPreferences, emptyPreferences } from './preferences';
+import {
+  applyOwnedStrollerToState,
+  applyPreferences,
+  applyVehicleFit,
+  emptyPreferences,
+} from './preferences';
 
 const seedState = seed as unknown as AppState;
 
@@ -37,6 +42,17 @@ interface StoreActions {
   resetOnboarding: () => void;
   /** Merge a patch into the visitor's preferences (precise requirements live here). */
   updatePreferences: (patch: Partial<Preferences>) => void;
+  /**
+   * Set the vehicle and apply only its derived effect — relabel the fit
+   * criterion ("<vehicle> rear-facing fit") — leaving hand-tuned weights alone.
+   */
+  setVehicle: (vehicle: string) => void;
+  /**
+   * Set the owned stroller and apply only its derived effect — record it as kept
+   * inventory so the compatibility engine flags non-fitting seats — leaving
+   * hand-tuned weights alone.
+   */
+  setOwnedStroller: (stroller: string) => void;
 
   /** Replace the entire data state (used by Import). */
   replaceState: (next: AppState) => void;
@@ -111,6 +127,24 @@ export const useStore = create<Store>()(
 
       updatePreferences: (patch) =>
         set((s) => ({ preferences: { ...s.preferences, ...patch } })),
+
+      setVehicle: (vehicle) =>
+        set((s) => {
+          const applied = applyVehicleFit(
+            { dataVersion: s.dataVersion, config: s.config, modules: s.modules, inventory: s.inventory },
+            vehicle,
+          );
+          return { modules: applied.modules, preferences: { ...s.preferences, vehicle } };
+        }),
+
+      setOwnedStroller: (stroller) =>
+        set((s) => {
+          const applied = applyOwnedStrollerToState(
+            { dataVersion: s.dataVersion, config: s.config, modules: s.modules, inventory: s.inventory },
+            stroller,
+          );
+          return { inventory: applied.inventory, preferences: { ...s.preferences, ownedStroller: stroller } };
+        }),
 
       // --- actions ---
       replaceState: (next) =>

@@ -5,6 +5,48 @@ import { useStore } from '../lib/store';
 const clampWeight = (v: number) => Math.max(1, Math.min(5, v));
 const numInput =
   'w-24 rounded-md border border-slate-300 px-2 py-1 text-right text-sm tabular-nums focus:border-indigo-400 focus:outline-none';
+const textInput =
+  'w-44 rounded-md border border-slate-300 px-2 py-1 text-sm focus:border-indigo-400 focus:outline-none';
+
+/**
+ * A free-text hard limit (vehicle, owned stroller) whose derived effects are
+ * applied on commit — blur or Enter — rather than per keystroke, so we don't
+ * relabel/seed inventory off a half-typed name. Local state mirrors the store
+ * while editing.
+ */
+function TextLimit({
+  value,
+  placeholder,
+  ariaLabel,
+  onCommit,
+}: {
+  value: string;
+  placeholder: string;
+  ariaLabel: string;
+  onCommit: (v: string) => void;
+}) {
+  const [draft, setDraft] = useState(value);
+  // Keep the field in sync when the stored value changes from elsewhere.
+  useEffect(() => setDraft(value), [value]);
+  const commit = () => {
+    const next = draft.trim();
+    if (next !== value.trim()) onCommit(next);
+  };
+  return (
+    <input
+      type="text"
+      value={draft}
+      placeholder={placeholder}
+      aria-label={ariaLabel}
+      onChange={(e) => setDraft(e.target.value)}
+      onBlur={commit}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') (e.target as HTMLInputElement).blur();
+      }}
+      className={textInput}
+    />
+  );
+}
 
 /** A 1–5 clickable importance meter — the criterion's weight, as values not a bare number. */
 function WeightMeter({ weight, label, onChange }: { weight: number; label: string; onChange: (w: number) => void }) {
@@ -32,11 +74,29 @@ function WeightMeter({ weight, label, onChange }: { weight: number; label: strin
  * limits: back-seat length and budgets the matrix flags fails against). Edits are
  * live: the comparison matrix re-ranks and re-flags as you type.
  */
-export default function ObjectivesPopover({ modules }: { modules: Module[] }) {
-  const [open, setOpen] = useState(false);
+export default function ObjectivesPopover({
+  modules,
+  open: openProp,
+  onOpenChange,
+}: {
+  modules: Module[];
+  /**
+   * Optionally controlled open state — lifted so the matrix's limit chips can
+   * open the popover too. Falls back to internal state when omitted.
+   */
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}) {
+  const [openSelf, setOpenSelf] = useState(false);
+  const open = openProp ?? openSelf;
+  const setOpen = onOpenChange ?? setOpenSelf;
   const backSeatLengthIn = useStore((s) => s.preferences.backSeatLengthIn);
+  const vehicle = useStore((s) => s.preferences.vehicle);
+  const ownedStroller = useStore((s) => s.preferences.ownedStroller);
   const overallBudget = useStore((s) => s.config.overallBudget);
   const updatePreferences = useStore((s) => s.updatePreferences);
+  const setVehicle = useStore((s) => s.setVehicle);
+  const setOwnedStroller = useStore((s) => s.setOwnedStroller);
   const updateCriterion = useStore((s) => s.updateCriterion);
   const setModuleBudget = useStore((s) => s.setModuleBudget);
   const setOverallBudget = useStore((s) => s.setOverallBudget);
@@ -45,12 +105,12 @@ export default function ObjectivesPopover({ modules }: { modules: Module[] }) {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, []);
+  }, [setOpen]);
 
   return (
     <div className="relative">
       <button
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => setOpen(!open)}
         className="inline-flex items-center gap-1.5 rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100"
       >
         🎯 Objectives &amp; requirements <span className="text-xs text-slate-400">▾</span>
@@ -120,6 +180,30 @@ export default function ObjectivesPopover({ modules }: { modules: Module[] }) {
                     className={numInput}
                   />
                 </span>
+              </label>
+              <label className="flex items-center justify-between gap-3 py-1.5">
+                <span className="text-sm text-slate-600">
+                  Your car
+                  <span className="block text-xs text-slate-400">labels the rear-facing-fit column for your car</span>
+                </span>
+                <TextLimit
+                  value={vehicle ?? ''}
+                  placeholder="e.g. Toyota Tacoma"
+                  ariaLabel="Your car"
+                  onCommit={setVehicle}
+                />
+              </label>
+              <label className="flex items-center justify-between gap-3 py-1.5">
+                <span className="text-sm text-slate-600">
+                  Stroller you own
+                  <span className="block text-xs text-slate-400">flags car seats that won’t click into it</span>
+                </span>
+                <TextLimit
+                  value={ownedStroller ?? ''}
+                  placeholder="e.g. BOB Wayfinder"
+                  ariaLabel="Stroller you own"
+                  onCommit={setOwnedStroller}
+                />
               </label>
             </section>
 
