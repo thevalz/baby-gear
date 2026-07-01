@@ -281,7 +281,7 @@ Update as batches land (✅ done · 🟡 in progress · ⬜ not started).
 
 | Item | Status |
 |------|:------:|
-| Task 1 — official list captured (`_CLEK_LIST.md`) | ⬜ |
+| Task 1 — official list captured (`_CLEK_LIST.md`) | 🟡 captured; verbatim lock pending (Clek support URL 403s bots) |
 | Batch A sourced (`babyzen-yoyo2`, `silver-cross-jet`, `joolz-aer`) | ⬜ |
 | Batch B sourced (`uppababy-minu-v2`, `bugaboo-butterfly`, `bugaboo-bee-6`) | ⬜ |
 | Batch C sourced (`thule-sleek`, `baby-jogger-city-mini-gt2`) | ⬜ |
