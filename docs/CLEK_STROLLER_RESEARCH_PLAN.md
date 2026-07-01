@@ -95,26 +95,37 @@ goal, and fully source **those**. (Full-size compatible models like UPPAbaby
 Vista or Bugaboo Fox are kept as an appendix in `_CLEK_LIST.md`, not sourced,
 unless promoted to reference points.)
 
-### The curated compact roster (all drawn from Clek's list)
+### The curated compact roster (all confirmed on Clek's verbatim list)
 
-Each gets a stable `id` = image filename = fragment filename. Weights/folds
-below are **hypotheses to verify**, not final data.
+Each gets a stable `id` = image filename = fragment filename. Adapters below are
+**verbatim from Clek's list** ([`_CLEK_LIST.md`](research/city-strollers/_CLEK_LIST.md));
+weights/folds are **hypotheses to verify**, not final data.
 
-| # | Option id | Model | Why it fits the goal | Clek adapter path |
-|---|-----------|-------|----------------------|-------------------|
-| 1 | `babyzen-yoyo2` | BabyZen YoYo2 (6+) | ~13.6 lb, airline-cabin one-hand fold | Maxi-Cosi–style (BabyZen adapter) |
-| 2 | `uppababy-minu-v2` | UPPAbaby Minu V2 | ~16.9 lb, one-hand compact standing fold | **Clek UPPAbaby adapter** |
-| 3 | `bugaboo-butterfly` | Bugaboo Butterfly | ~16 lb, cabin-size self-standing fold | Maxi-Cosi–style (Bugaboo adapter) |
-| 4 | `silver-cross-jet` | Silver Cross Jet / Clic | ~13 lb, cabin-approved fold | Maxi-Cosi–style (Silver Cross adapter) |
-| 5 | `joolz-aer` | Joolz Aer+ / Aer2 | ~13.4 lb, compact fold | Maxi-Cosi–style (Joolz adapter) |
-| 6 | `thule-sleek` | Thule Sleek | city/modular, full recline + bassinet option | Maxi-Cosi–style (Thule adapter) |
-| 7 | `baby-jogger-city-mini-gt2` | Baby Jogger City Mini GT2 | one-hand fold urban all-rounder | Maxi-Cosi–style (Baby Jogger adapter) |
-| 8 | `bugaboo-bee-6` | Bugaboo Bee 6 | compact urban, one-piece fold | Maxi-Cosi–style (Bugaboo adapter) |
+| # | Option id | Model | Why it fits the goal | Clek-listed adapter (part #) |
+|---|-----------|-------|----------------------|------------------------------|
+| 1 | `babyzen-yoyo2` | BabyZen YoYo² | ~13.6 lb, airline-cabin one-hand fold | YOYO car seat adapters (BZ10205-03) |
+| 2 | `joolz-aer` | Joolz Aer+ / Aer 2 | ~13.4 lb, ultralight compact fold | Aer / Aer 2 Car Seat Adapters |
+| 3 | `silver-cross-jet` | Silver Cross Jet 3 | ~13 lb, cabin-approved fold | Jet Car Seat Adapters |
+| 4 | `bugaboo-butterfly` | Bugaboo Butterfly | ~16 lb, cabin-size self-standing fold | Bugaboo Butterfly car seat adapter (100045001) |
+| 5 | `uppababy-minu-v2` | UPPAbaby Minu V2 | ~16.9 lb, one-hand compact standing fold | UPPAbaby Maxi-Cosi adapter (0918-MXA-WW) — **not** the Clek adapter |
+| 6 | `bugaboo-dragonfly` | Bugaboo Dragonfly | compact city fold, adapter **included free** | Bugaboo Dragonfly adapter (incl. w/ stroller) |
+| 7 | `bugaboo-bee-6` | Bugaboo Bee 6 | compact urban, one-piece fold | Bugaboo Bee adapter (85510MC01) |
+| 8 | `thule-sleek` | Thule Sleek | city/modular, full recline + bassinet option | Thule Sleek adapter for Maxi-Cosi® (11000300) |
 
-**Stretch / verify (promote only if confirmed on Clek's current list):** Nuna
-TRVL and Cybex Libelle/Beezy share the Maxi-Cosi footprint but were **not** seen
-named on Clek's list in secondary sources — do **not** add unless Task 1
-confirms them on the official page.
+**Corrected from the first draft** (now that the verbatim list is locked):
+- **UPPAbaby Minu** uses an **UPPAbaby-made Maxi-Cosi adapter (0918-MXA-WW)** —
+  Clek's *own* adapter is only for the CRUZ/Vista, not the Minu.
+- **Silver Cross "Clic" dropped** — not on Clek's list (Clek lists Jet, not Clic).
+- **Baby Jogger City Mini GT2 dropped** from the core roster — on Clek's list but
+  its adapter (2083991) is **discontinued**; same for most Baby Jogger compacts.
+- **Excluded (retailer-claimed, not Clek-listed):** Nuna TRVL, Cybex
+  Libelle/Beezy — do not source unless Clek adds them.
+
+> 🚩 **Bonus finding from the verbatim list:** the **BOB Alterrain / Alterrain
+> Pro you already own IS Liing-compatible** (BOB Single Infant Car Seat Adapter,
+> S12046000). See [`_CLEK_LIST.md`](research/city-strollers/_CLEK_LIST.md) — this
+> corrects the existing car-seat study's `clek-liing.fitsAlterrain: false` and
+> should be flipped in the integration pass.
 
 > Roster is a **default** (curated compact shortlist). If we instead want the
 > *full* Clek list sourced, or a few full-size reference strollers added, the
@@ -218,7 +229,7 @@ Suggested batching (run in parallel, share no files):
 |-------|-----------|
 | **A — ultralight cabin folds** | `babyzen-yoyo2`, `silver-cross-jet`, `joolz-aer` |
 | **B — compact one-hand folds** | `uppababy-minu-v2`, `bugaboo-butterfly`, `bugaboo-bee-6` |
-| **C — city all-rounders** | `thule-sleek`, `baby-jogger-city-mini-gt2` |
+| **C — city all-rounders** | `thule-sleek`, `bugaboo-dragonfly` |
 
 ### Per-session prompt (copy-paste)
 
@@ -281,8 +292,9 @@ Update as batches land (✅ done · 🟡 in progress · ⬜ not started).
 
 | Item | Status |
 |------|:------:|
-| Task 1 — official list captured (`_CLEK_LIST.md`) | 🟡 captured; verbatim lock pending (Clek support URL 403s bots) |
+| Task 1 — official list captured (`_CLEK_LIST.md`) | ✅ verbatim-locked from Clek's page (owner PDF, 2026-07-01) |
 | Batch A sourced (`babyzen-yoyo2`, `silver-cross-jet`, `joolz-aer`) | ⬜ |
 | Batch B sourced (`uppababy-minu-v2`, `bugaboo-butterfly`, `bugaboo-bee-6`) | ⬜ |
-| Batch C sourced (`thule-sleek`, `baby-jogger-city-mini-gt2`) | ⬜ |
+| Batch C sourced (`thule-sleek`, `bugaboo-dragonfly`) | ⬜ |
 | Integration — module + compat + scores folded, `dataVersion` bumped | ⬜ |
+| 🚩 Flip `clek-liing.fitsAlterrain → true` (BOB adapter S12046000) | ⬜ |
