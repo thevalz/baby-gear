@@ -136,18 +136,18 @@ Alterrain Pro and Revolution Flex 3.0 are.) Leave the actual `seed.json` edit fo
 the integration pass / owner confirmation since it revises prior committed
 research.
 
-## Compact / city-shopping subset advanced to sourcing
+## The full roster (all 80 rows advance — nothing dropped)
 
-Filtered from the definitive list to the light/compact/travel models that serve
-the city+shopping goal (roster detail in
-[`../../CLEK_STROLLER_RESEARCH_PLAN.md`](../../CLEK_STROLLER_RESEARCH_PLAN.md) §2):
-**BabyZen YoYo²**, **Joolz Aer+ / Aer 2**, **Silver Cross Jet 3**, **Bugaboo
-Butterfly**, **UPPAbaby Minu V2**, **Bugaboo Dragonfly**, **Bugaboo Bee 6**,
-**Thule Sleek**. (Baby Jogger compacts are on the list but their adapters are
-mostly **discontinued** — flag before sourcing; Colugo Complete adapter is
-**discontinued** too.)
+Per the owner's directive, **every row above** is sourced — split into two
+modules (strollers + adapters). Stroller ids/batches:
+[`_ROSTER.md`](_ROSTER.md); deduped adapter ids/batches:
+[`../adapters/_ROSTER.md`](../adapters/_ROSTER.md); methodology + per-session
+prompts: [`../../CLEK_COMPAT_RESEARCH_PLAN.md`](../../CLEK_COMPAT_RESEARCH_PLAN.md).
+The personal city/shopping objective becomes a **scoring lens** (portability
+weighted ×5), not a filter — the lightest/most-compact models simply rank
+highest; none are excluded.
 
-### Retailer-claimed but NOT on Clek's list → excluded
+### Retailer-claimed but NOT on Clek's list → excluded (fail the gate)
 
 - **Silver Cross Clic** — a retailer tagged it Liing-compatible, but it is **not**
   on Clek's list (Clek lists Breez/Coast/Comet/Dune/Jet/Reef/Wave). Excluded.

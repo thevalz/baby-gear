@@ -1,0 +1,78 @@
+{
+  "_comment": "Staging fragment for ONE Clek-Liing/Liingo-compatible STROLLER. Copy to <option-id>.json (filename MUST equal the id in _ROSTER.md / the seed.json 'clek-stroller' module), fill EVERY field, commit ONLY this file + its image. Do NOT edit seed.json — the integration pass folds all fragments into the two new modules and bumps dataVersion once. Gate: the model MUST appear in _CLEK_LIST.md. See ../../CLEK_COMPAT_RESEARCH_PLAN.md + ../../SOURCING.md.",
+
+  "id": "REPLACE-with-stroller-id-from-_ROSTER.md",
+  "name": "Human-readable model name (e.g. 'Bugaboo Butterfly')",
+  "brand": "Brand (e.g. Bugaboo)",
+  "checkedAt": "2026-07-02",
+
+  "image": "images/REPLACE-with-stroller-id.jpg",
+
+  "clekListed": {
+    "_comment": "Proof this model is on Clek's definitive list — required before any other sourcing.",
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "checkedAt": "2026-07-02"
+  },
+
+  "adapterIds": [
+    "REPLACE-with-adapter-id(s)-from-adapters/_ROSTER.md (the Clek-listed adapter(s) this stroller uses)"
+  ],
+
+  "priceSources": [
+    { "retailer": "Brand DTC", "price": 0, "url": "https://REPLACE-deep-link", "inStock": true, "checkedAt": "2026-07-02" },
+    { "retailer": "Strolleria/Albee/Nordstrom/PBK/Amazon/Target", "price": 0, "url": "https://REPLACE-deep-link", "inStock": true, "checkedAt": "2026-07-02" }
+  ],
+
+  "specs": {
+    "_comment": "LITERAL, sourced numbers. Every value must trace to a manufacturer/retailer spec page in sources[]. Use inches + pounds (US). If a spec is genuinely unpublished, set null and say so in notes — do not guess.",
+    "weightLb": 0,
+
+    "unfoldedIn": {
+      "_comment": "In-use footprint.",
+      "lengthIn": 0,
+      "widthIn": 0,
+      "heightIn": 0
+    },
+    "foldedIn": {
+      "_comment": "Folded footprint.",
+      "lengthIn": 0,
+      "widthIn": 0,
+      "heightIn": 0
+    },
+
+    "brake": {
+      "_comment": "Does it have a brake, and what kind?",
+      "hasBrake": true,
+      "type": "e.g. foot-operated parking brake / hand brake / auto-lock / one-step linked"
+    },
+
+    "capacity": {
+      "maxChildWeightLb": 0,
+      "maxChildHeightIn": 0,
+      "minAgeOrNewborn": "e.g. birth (with car seat / bassinet) / 6 mo+",
+      "seatCount": 1,
+      "basketCapacityLb": 0
+    },
+
+    "safety": {
+      "_comment": "Safety tests / standards the stroller (not the car seat) meets. Cite the source.",
+      "standards": "e.g. ASTM F833; JPMA certified; EN 1888 — list what the maker/retailer publishes",
+      "certifications": "e.g. JPMA Certified; Greenguard Gold (fabric); etc.",
+      "notes": "5-point harness? auto-lock fold latch? wrist strap? etc."
+    },
+
+    "foldType": "e.g. one-hand self-standing / two-step / cabin-approved travel fold",
+    "strollerType": "e.g. compact/travel · full-size · jogger · double · wagon · modular",
+    "recline": "e.g. multi-position to near-flat / single recline",
+    "reversibleSeat": false,
+    "tires": "wheel/tire type + size (air-filled vs foam vs plastic)"
+  },
+
+  "sources": [
+    "https://manufacturer-spec-page (weight / folded + unfolded dims / capacity / brake / safety)",
+    "https://retailer-price-page",
+    "https://safety-standard-or-JPMA-page-if-separate"
+  ],
+  "notes": "Current gen vs superseded; in-stock vs backorder; MSRP vs sale; how it serves the light/compact city+shopping goal vs the owned BOB Alterrain Pro (trips/jogging); any spec Clek's handle-position/max-weight caveat affects."
+}

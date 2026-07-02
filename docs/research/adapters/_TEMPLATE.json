@@ -1,0 +1,43 @@
+{
+  "_comment": "Staging fragment for ONE car-seat stroller ADAPTER (deduped by SKU — many strollers share one adapter). Copy to <adapter-id>.json (filename MUST equal the id in _ROSTER.md / the seed.json 'adapter' module), fill EVERY field, commit ONLY this file + its image. Do NOT edit seed.json. Every adapter here connects the Clek Liing/Liingo to one or more strollers on _CLEK_LIST.md. See ../../CLEK_COMPAT_RESEARCH_PLAN.md.",
+
+  "id": "REPLACE-with-adapter-id-from-_ROSTER.md",
+  "name": "Adapter product name as sold (e.g. 'Bugaboo Butterfly car seat adapter')",
+  "checkedAt": "2026-07-02",
+
+  "image": "images/REPLACE-with-adapter-id.jpg",
+
+  "partNumber": "Manufacturer part # from Clek's list (e.g. 100045001) — or null if none listed",
+  "madeBy": "Who manufactures it: the stroller brand (e.g. Bugaboo) OR Clek (CRUZ/Vista only)",
+
+  "seatBrandsSupported": "Which infant-seat footprints it fits, per the product page (e.g. 'Maxi-Cosi / Cybex / Nuna / Clek'). Confirm Clek Liing is explicitly supported.",
+
+  "forStrollerIds": [
+    "REPLACE-with-stroller-id(s)-this-adapter-serves (from clek-strollers/_ROSTER.md)"
+  ],
+
+  "status": {
+    "_comment": "Clek flags several adapters discontinued. Record real availability.",
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "e.g. '**Adapter discontinued' if Clek's list says so, else ''"
+  },
+
+  "priceSources": [
+    { "retailer": "Brand DTC", "price": 0, "url": "https://REPLACE-deep-link", "inStock": true, "checkedAt": "2026-07-02" },
+    { "retailer": "Amazon/Strolleria/Albee/retailer", "price": 0, "url": "https://REPLACE-deep-link", "inStock": true, "checkedAt": "2026-07-02" }
+  ],
+
+  "install": {
+    "_comment": "Optional, if published: how it attaches.",
+    "pieces": "e.g. pair (left+right) / single bracket",
+    "toolFree": true,
+    "notes": "click-in / strap / mounting-bracket; handle-position or max-weight caveat Clek noted"
+  },
+
+  "sources": [
+    "https://adapter-product-page (name, part #, price, seat-brand compatibility)",
+    "https://retailer-listing"
+  ],
+  "notes": "If Clek's list marks it discontinued, note the current replacement SKU or 'no longer sold'. If bundled/included free with the stroller, say so. If one part # covers single mode and a second is needed for double mode, capture both."
+}
