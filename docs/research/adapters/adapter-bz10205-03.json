@@ -1,0 +1,37 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-03 (pilot batch S7). Do NOT edit seed.json.",
+  "id": "adapter-bz10205-03",
+  "name": "BabyZen YOYO Car Seat Adapters",
+  "checkedAt": "2026-07-03",
+
+  "image": "images/adapter-bz10205-03.jpg",
+
+  "partNumber": "BZ10205-03",
+  "madeBy": "BabyZen (Stokke)",
+
+  "seatBrandsSupported": "Maxi-Cosi / Cybex / Nuna / Clek — the current BZ10205-03 adapter explicitly lists the Clek Liing.",
+
+  "forStrollerIds": ["babyzen-yoyo"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Nordstrom", "price": 75.00, "url": "https://www.nordstrom.com/s/babyzen-adapters-for-yoyo-and-yoyo-stroller-cybex-nuna-clek-and-maxi-cosi-infant-car-seats/4601012", "inStock": true, "checkedAt": "2026-07-03" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right brackets)",
+    "toolFree": true,
+    "notes": "Clip onto the YOYO frame; the infant seat clicks into the brackets."
+  },
+
+  "sources": [
+    "https://www.nordstrom.com/s/babyzen-adapters-for-yoyo-and-yoyo-stroller-cybex-nuna-clek-and-maxi-cosi-infant-car-seats/4601012",
+    "https://www.ebay.com/itm/405316199282"
+  ],
+  "notes": "IMPORTANT distinction: the CURRENT adapter (BZ10205-03, sold as 'Adapters for YOYO+ and YOYO²' — also fits YOYO³) DOES list the Clek Liing; an OLDER YOYO+ adapter variant ($59) does NOT list Clek and only fits 2016+ YOYO+. Use BZ10205-03 for the Liing. Price ~$75 (Nordstrom); reconfirm exact price/stock at checkout."
+}

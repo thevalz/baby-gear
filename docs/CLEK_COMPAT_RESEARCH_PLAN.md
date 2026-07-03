@@ -230,6 +230,6 @@ collisions). Batches and exact id lists are in the two `_ROSTER.md` files.
 | Rosters + templates published (`clek-strollers/`, `adapters/`) | ✅ |
 | S1 Baby Jogger · S2 Bugaboo · S3 BOB/Britax/Bumbleride | ⬜ ⬜ ⬜ |
 | S4 Joolz/M&P/Mima · S5 Joovy · S6 Silver Cross | ⬜ ⬜ ⬜ |
-| S7 Stokke/BabyZen · S8 Thule · S9 UPPAbaby · S10 Long-tail | ⬜ ⬜ ⬜ ⬜ |
+| S7 Stokke/BabyZen · S8 Thule · S9 UPPAbaby · S10 Long-tail | ✅(pilot) ⬜ ⬜ ⬜ |
 | Integration — 2 modules + relations + scores, `dataVersion` bumped | ⬜ |
 | 🚩 Flip `clek-liing.fitsAlterrain → true` (BOB adapter S12046000) | ⬜ |

@@ -1,0 +1,60 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-03 (pilot batch S7). Current gen = Stokke Xplory X (Clek lists 'Xplory'). Do NOT edit seed.json.",
+  "id": "stokke-xplory",
+  "name": "Stokke Xplory X",
+  "brand": "Stokke",
+  "checkedAt": "2026-07-03",
+
+  "image": "images/stokke-xplory.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Stokke Xplory — Stokke Stroller car seat adapter Multi (321500)",
+    "checkedAt": "2026-07-03"
+  },
+
+  "adapterIds": ["adapter-321500"],
+
+  "priceSources": [
+    { "retailer": "Mega Babies", "price": 719.40, "url": "https://www.megababiesusa.com/products/stokke-xplory-x-complete-stroller", "inStock": false, "checkedAt": "2026-07-03" }
+  ],
+
+  "specs": {
+    "weightLb": 29.5,
+    "_weightNote": "13.4 kg / 29.5 lb (Strollberry official). One retailer lists 26.5 lb — reconfirm on stokke.com.",
+
+    "unfoldedIn": { "lengthIn": 39.8, "widthIn": 22.0, "heightIn": 51.6 },
+    "foldedIn": { "lengthIn": 18.7, "widthIn": 22.0, "heightIn": 41.3 },
+    "_dimsNote": "Open 131 × 56 × 101 cm (H×W×L); folded frame-only 105 × 56 × 47.5 cm (H×W×L). Tall pram-height seat.",
+
+    "brake": { "hasBrake": true, "type": "one-step rocker foot pedal (flip-flop friendly)" },
+
+    "capacity": {
+      "maxChildWeightLb": 48.5,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (seat reclines flat / bassinet-style) to ~4 yr",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (required for US sale)",
+      "certifications": "not published on the product page (JPMA not stated)",
+      "notes": "5-point harness; reversible height-adjustable seat; parking brake."
+    },
+
+    "foldType": "one-step or two-piece fold; NOT compact/travel-class",
+    "strollerType": "full-size luxury pram",
+    "recline": "multi-position incl. lie-flat",
+    "reversibleSeat": true,
+    "tires": "rubber-coated; front 18 cm swivel-lockable, rear 23 cm"
+  },
+
+  "sources": [
+    "https://strollberry.com/strollers/stokke-xplory-x/",
+    "https://www.megababiesusa.com/products/stokke-xplory-x-complete-stroller",
+    "https://www.stokke.com/USA/en-us/customer-service/faq/faq-stokke-xplory/faq-stokke-xplory-q-6.html"
+  ],
+  "notes": "Full-size luxury pram — high seat, reversible, lie-flat — NOT a portability pick (~29.5 lb, bulky fold); included for roster completeness, will score low on the portability lens. Clek Liing attaches via the Stokke Multi adapter 321500 (adapter-321500), which explicitly lists Clek Liing. Best cited price $719.40 sale (Mega Babies, sold out); MSRP ~$1,199. Reconfirm current in-stock price at stokke.com / Nordstrom."
+}

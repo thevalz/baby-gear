@@ -1,0 +1,61 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-03 (pilot batch S7). Represents the current BabyZen/Stokke YOYO (YOYO3); Clek lists YOYO+/YOYO²/YOYO³ as one entry. Do NOT edit seed.json.",
+  "id": "babyzen-yoyo",
+  "name": "BabyZen YOYO3 (covers YOYO+ / YOYO² / YOYO³)",
+  "brand": "BabyZen (Stokke)",
+  "checkedAt": "2026-07-03",
+
+  "image": "images/babyzen-yoyo.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Stokke/BABYZEN YOYO+ / YOYO² / YOYO³ — YOYO car seat adapters (BZ10205-03)",
+    "checkedAt": "2026-07-03"
+  },
+
+  "adapterIds": ["adapter-bz10205-03"],
+
+  "priceSources": [
+    { "retailer": "Strolleria", "price": 499.00, "url": "https://strolleria.com/products/babyzen-yoyo2-6-complete-stroller", "inStock": true, "checkedAt": "2026-07-03" }
+  ],
+
+  "specs": {
+    "weightLb": 14.8,
+    "_weightNote": "YOYO3 frame 6.7 kg / 14.8 lb; the prior YOYO2 was ~13.6 lb.",
+
+    "unfoldedIn": { "lengthIn": 33.8, "widthIn": 17.3, "heightIn": 41.7 },
+    "foldedIn": { "lengthIn": 20.5, "widthIn": 17.3, "heightIn": 7.1 },
+    "_dimsNote": "YOYO3 published as 106 × 86 × 44 cm open and 52 × 44 × 18 cm folded; width 17.3 in (44 cm) is the signature single-hand cabin fold that fits airline overhead bins.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated rear parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 48.5,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth with 0+ Newborn Pack; 6 mo+ with 6+ seat",
+      "seatCount": 1,
+      "basketCapacityLb": 11
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833-19",
+      "certifications": "JPMA Certified (Baby Safety Alliance)",
+      "notes": "5-point harness; multi-position recline; padded shoulder carry strap."
+    },
+
+    "foldType": "one-hand compact fold, self-standing, airline-cabin approved",
+    "strollerType": "compact / travel",
+    "recline": "multi-position reclining backrest",
+    "reversibleSeat": false,
+    "tires": "5.9 in front / 7 in rear foam-filled; front swivel with suspension"
+  },
+
+  "sources": [
+    "https://strolleria.com/products/babyzen-yoyo2-6-complete-stroller",
+    "https://www.babygearlab.com/reviews/getting-around/travel-stroller/babyzen-yoyo2",
+    "https://www.amazon.com/Babyzen-Yoyo2-Stroller-Frame-Us/dp/B0868X9HRJ",
+    "https://www.consumerreports.org/babies-kids/strollers/babyzen-yoyo2/m401950/"
+  ],
+  "notes": "The archetypal light/compact city+shopping stroller and the strongest complement to the owned BOB Alterrain Pro. ~14.8 lb, one-hand cabin fold (20.5 × 17.3 × 7.1 in). JPMA Certified. Clek Liing attaches via the BabyZen YOYO adapter BZ10205-03 (adapter-bz10205-03) — note the older YOYO+ adapter variant does NOT list Clek, so the current BZ10205-03 is the right part. Best cited price $499 (Strolleria, YOYO3 6+ complete)."
+}

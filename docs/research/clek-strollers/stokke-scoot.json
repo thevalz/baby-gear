@@ -1,0 +1,59 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-03 (pilot batch S7). Stokke Scoot — DISCONTINUED; specs are for the last gen (Scoot V2). Do NOT edit seed.json.",
+  "id": "stokke-scoot",
+  "name": "Stokke Scoot (V2)",
+  "brand": "Stokke",
+  "checkedAt": "2026-07-03",
+
+  "image": "images/stokke-scoot.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Stokke Scoot — Stokke Stroller car seat adapter Multi (321500); Scoot serial 118AA0040583 and above",
+    "checkedAt": "2026-07-03"
+  },
+
+  "adapterIds": ["adapter-321500"],
+
+  "priceSources": [],
+
+  "specs": {
+    "weightLb": 25.0,
+    "_weightNote": "Scoot V2 ~25 lb with seat.",
+
+    "unfoldedIn": { "lengthIn": null, "widthIn": null, "heightIn": null },
+    "foldedIn": { "lengthIn": 28.3, "widthIn": 21.6, "heightIn": 12.6 },
+    "_dimsNote": "Folded 28.3 L × 21.6 W × 12.6 H in (Strollberry/reviews). Open dimensions not cleanly published for the discontinued model; handlebar 36–42 in. Left null rather than guessed.",
+
+    "brake": { "hasBrake": true, "type": "foot pedal parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 45,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (with reclined seat / carrycot)",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (when sold in US)",
+      "certifications": "not published",
+      "notes": "5-point harness; reversible seat; aluminum frame."
+    },
+
+    "foldType": "one-piece fold with seat attached",
+    "strollerType": "full-size urban (discontinued)",
+    "recline": "multi-position",
+    "reversibleSeat": true,
+    "tires": "8 in front / 10 in rear foam wheels"
+  },
+
+  "sources": [
+    "https://strollberry.com/strollers/stokke-scoot-v2/",
+    "https://www.momsstrollerreviews.com/2015-stokke-scoot-v2-stroller-review/",
+    "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/stokke-scoot",
+    "https://www.stokke.com/USA/en-us/customer-service/faq/faq-stokke-scoot/faq-stokke-scoot.html"
+  ],
+  "notes": "DISCONTINUED by Stokke — no current retail listing, so priceSources is empty and no MSRP fallback is set (resale/secondhand only). On Clek's list for Scoot units at/after serial 118AA0040583, via the Stokke Multi adapter 321500 (adapter-321500). Kept for roster completeness; integration should mark it discontinued/unavailable."
+}
