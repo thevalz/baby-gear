@@ -1,0 +1,62 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-03 (pilot batch S7). Stokke Trailz all-terrain. Do NOT edit seed.json.",
+  "id": "stokke-trailz",
+  "name": "Stokke Trailz",
+  "brand": "Stokke",
+  "checkedAt": "2026-07-03",
+
+  "image": "images/stokke-trailz.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Stokke Trailz — Stokke Stroller car seat adapter Multi (321500)",
+    "checkedAt": "2026-07-03"
+  },
+
+  "adapterIds": ["adapter-321500"],
+
+  "priceSources": [
+    { "retailer": "Nordstrom", "price": 1099.00, "url": "https://www.nordstrom.com/s/stokke-trailz-all-terrain-stroller/4006064", "inStock": true, "checkedAt": "2026-07-03" }
+  ],
+
+  "specs": {
+    "weightLb": 32.0,
+    "_weightNote": "14.6 kg / ~32 lb (chassis + seat), Strollberry official.",
+
+    "unfoldedIn": { "lengthIn": 37.6, "widthIn": 24.4, "heightIn": 50.0 },
+    "foldedIn": { "lengthIn": 24.8, "widthIn": 19.7, "heightIn": 37.4 },
+    "_dimsNote": "Open 127 × 62 × 95.5 cm (H×W×L); folded 95 × 50 × 63 cm (H×W×L). Bulky fold.",
+
+    "brake": { "hasBrake": true, "type": "push down / lift up foot pedal brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 45,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (with bassinet/reclined seat)",
+      "seatCount": 1,
+      "basketCapacityLb": null,
+      "_capacityNote": "Stokke US lists to ~45 lb; Strollberry lists EU seat rating 15 kg / 33 lb."
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (required for US sale)",
+      "certifications": "not published on the product page",
+      "notes": "5-point harness; all-terrain suspension; reversible seat."
+    },
+
+    "foldType": "fold with seat on; bulky, NOT travel-class",
+    "strollerType": "full-size all-terrain",
+    "recline": "multi-position incl. near-flat",
+    "reversibleSeat": true,
+    "tires": "EVA foam-coated all-wheel; front 20 cm swivel-lockable, rear 28 cm; suspension"
+  },
+
+  "sources": [
+    "https://strollberry.com/strollers/stokke-trailz-classic/",
+    "https://www.stokke.com/USA/en-us/customer-service/faq/faq-stokke-trailz/faq-stokke-trailz-q-7.html",
+    "https://recom.onsitesupport.io/stokke/knowledge-base/article/what-are-the-weight-and-dimensions-of-the-stokke-trailz-stroller",
+    "https://www.nordstrom.com/s/stokke-trailz-all-terrain-stroller/4006064"
+  ],
+  "notes": "Full-size all-terrain pram (~32 lb, foam tires + suspension) — overlaps the BOB Alterrain Pro's role, not a portability pick; scores low on the portability lens. Clek Liing attaches via the Stokke Multi adapter 321500 (adapter-321500). Price ~$1,099 MSRP (Nordstrom); reconfirm current sale/stock."
+}

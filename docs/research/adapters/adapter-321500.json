@@ -1,0 +1,38 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-03 (pilot batch S7). Do NOT edit seed.json.",
+  "id": "adapter-321500",
+  "name": "Stokke Stroller Car Seat Adapter Multi",
+  "checkedAt": "2026-07-03",
+
+  "image": "images/adapter-321500.jpg",
+
+  "partNumber": "321500",
+  "madeBy": "Stokke",
+
+  "seatBrandsSupported": "Maxi-Cosi / Nuna / Cybex / BeSafe / Clek — explicitly lists the Clek Liing.",
+
+  "forStrollerIds": ["stokke-xplory", "stokke-trailz", "stokke-scoot"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Mega Babies", "price": 60.00, "url": "https://www.megababiesusa.com/products/stokke-stroller-car-seat-adapter-multi", "inStock": false, "checkedAt": "2026-07-03" }
+  ],
+
+  "install": {
+    "pieces": "pair",
+    "toolFree": true,
+    "notes": "Attaches to the stroller; releases with one push of a button."
+  },
+
+  "sources": [
+    "https://www.megababiesusa.com/products/stokke-stroller-car-seat-adapter-multi",
+    "https://www.amazon.com/Stokke-Seat-Adapter-Multi-Black/dp/B07NPY9T6J",
+    "https://www.stokke.com/en-rs/carriers-and-car-seats/accessories/321500.html"
+  ],
+  "notes": "One 'Multi' adapter serves Stokke Xplory X, Xplory (serial 24770+), Trailz, Beat, and Scoot (serial 118AA0040583+). Explicitly lists the Clek Liing among compatible seats. Best cited price $60 (Mega Babies, sold out at check); Amazon listing also carries it — reconfirm in-stock price."
+}
