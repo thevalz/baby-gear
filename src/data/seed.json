@@ -1,5 +1,5 @@
 {
-  "dataVersion": 7,
+  "dataVersion": 8,
   "config": {
     "overallBudget": 1000,
     "adapterCost": 100,
@@ -124,10 +124,33 @@
           "price": 330,
           "reviewUrl": "https://www.youtube.com/@thebabygearlab",
           "endorsements": [
-            { "critic": "The Baby Gear Lab", "verdict": "recommended", "score": 95, "quote": "The 180° swivel is a back-saver and it's genuinely short enough for tight trucks. My #1 this year.", "url": "https://www.youtube.com/@thebabygearlab", "date": "2026-05-20" },
-            { "critic": "Mountain Mom Reviews", "verdict": "recommended", "score": 90, "date": "2026-04-11" },
-            { "critic": "GearDad", "verdict": "recommended", "score": 88, "date": "2026-03-02" },
-            { "critic": "CarSeatNerd", "verdict": "not-recommended", "score": 70, "quote": "Excellent seat, but the price is hard to swallow versus the KeyFit.", "date": "2026-02-18" }
+            {
+              "critic": "The Baby Gear Lab",
+              "verdict": "recommended",
+              "score": 95,
+              "quote": "The 180° swivel is a back-saver and it's genuinely short enough for tight trucks. My #1 this year.",
+              "url": "https://www.youtube.com/@thebabygearlab",
+              "date": "2026-05-20"
+            },
+            {
+              "critic": "Mountain Mom Reviews",
+              "verdict": "recommended",
+              "score": 90,
+              "date": "2026-04-11"
+            },
+            {
+              "critic": "GearDad",
+              "verdict": "recommended",
+              "score": 88,
+              "date": "2026-03-02"
+            },
+            {
+              "critic": "CarSeatNerd",
+              "verdict": "not-recommended",
+              "score": 70,
+              "quote": "Excellent seat, but the price is hard to swallow versus the KeyFit.",
+              "date": "2026-02-18"
+            }
           ],
           "attributes": {
             "carrierLb": 9,
@@ -233,9 +256,26 @@
           "name": "Chicco KeyFit 35",
           "price": 230,
           "endorsements": [
-            { "critic": "The Baby Gear Lab", "verdict": "recommended", "score": 89, "quote": "The value champ. Dead-simple install and a price that leaves room in the budget for the stroller.", "url": "https://www.youtube.com/@thebabygearlab", "date": "2026-05-20" },
-            { "critic": "CarSeatNerd", "verdict": "recommended", "score": 92, "date": "2026-02-18" },
-            { "critic": "GearDad", "verdict": "recommended", "score": 85, "date": "2026-03-02" }
+            {
+              "critic": "The Baby Gear Lab",
+              "verdict": "recommended",
+              "score": 89,
+              "quote": "The value champ. Dead-simple install and a price that leaves room in the budget for the stroller.",
+              "url": "https://www.youtube.com/@thebabygearlab",
+              "date": "2026-05-20"
+            },
+            {
+              "critic": "CarSeatNerd",
+              "verdict": "recommended",
+              "score": 92,
+              "date": "2026-02-18"
+            },
+            {
+              "critic": "GearDad",
+              "verdict": "recommended",
+              "score": 85,
+              "date": "2026-03-02"
+            }
           ],
           "attributes": {
             "carrierLb": 10,
@@ -965,8 +1005,20 @@
           "image": "images/bob-alterrain-pro-opt.jpg",
           "reviewUrl": "https://www.youtube.com/@thebabygearlab",
           "endorsements": [
-            { "critic": "The Baby Gear Lab", "verdict": "recommended", "score": 93, "quote": "If you'll actually use the trails, the air tires and suspension are worth every penny. My pick for active families.", "url": "https://www.youtube.com/@thebabygearlab", "date": "2026-05-20" },
-            { "critic": "Mountain Mom Reviews", "verdict": "recommended", "score": 96, "date": "2026-04-11" }
+            {
+              "critic": "The Baby Gear Lab",
+              "verdict": "recommended",
+              "score": 93,
+              "quote": "If you'll actually use the trails, the air tires and suspension are worth every penny. My pick for active families.",
+              "url": "https://www.youtube.com/@thebabygearlab",
+              "date": "2026-05-20"
+            },
+            {
+              "critic": "Mountain Mom Reviews",
+              "verdict": "recommended",
+              "score": 96,
+              "date": "2026-04-11"
+            }
           ],
           "attributes": {
             "brand": "BOB",
@@ -1009,6 +1061,262 @@
             }
           ],
           "notes": "Considering — BOB's current flagship all-terrain jogger and the in-stock successor to the base Alterrain. SmoothShox suspension plus an ergonomic hand brake for downhill control; flattest fold of the three (33 × 21.5 × 13 in) though heaviest (32.3 lb). Shares the Alterrain's brand-specific adapter ecosystem, so any car seat marked 'fits Alterrain' fits the Pro. Best in-stock price $829.99 (Bambi Baby / Strolleria; Modern Nursery $879.99) — note this is OVER the $800 module budget. MSRP $829.99."
+        }
+      ]
+    },
+    {
+      "id": "clek-stroller",
+      "label": "Clek-Compatible Stroller",
+      "budget": 600,
+      "selectedOptionId": null,
+      "criteria": [
+        {
+          "id": "portability",
+          "label": "Weight & folded size",
+          "weight": 5
+        },
+        {
+          "id": "everyday",
+          "label": "Everyday usability",
+          "weight": 3
+        },
+        {
+          "id": "adapterease",
+          "label": "Clek Liing adapter ease",
+          "weight": 3
+        },
+        {
+          "id": "cprice",
+          "label": "Price",
+          "weight": 2
+        }
+      ],
+      "options": [
+        {
+          "id": "babyzen-yoyo",
+          "moduleId": "clek-stroller",
+          "name": "BabyZen YOYO3",
+          "price": 499,
+          "image": "images/babyzen-yoyo.jpg",
+          "attributes": {
+            "brand": "BabyZen (Stokke)",
+            "type": "compact / travel",
+            "weightLb": 14.8,
+            "foldedDimsIn": "20.5 × 17.3 × 7.1 in",
+            "unfoldedDimsIn": "33.8 × 17.3 × 41.7 in",
+            "brakeType": "foot-operated rear parking brake",
+            "maxChildLb": 48.5,
+            "foldType": "one-hand cabin fold, self-standing",
+            "safetyStandards": "ASTM F833-19 / 16 CFR 1227; JPMA Certified; 5-pt harness",
+            "adapterSystem": "BabyZen YOYO adapter (BZ10205-03), ~$75",
+            "fitsLiing": true,
+            "clekAdapter": "BabyZen YOYO adapter · BZ10205-03"
+          },
+          "scores": {
+            "portability": 5,
+            "everyday": 4,
+            "adapterease": 4,
+            "cprice": 4
+          },
+          "priceSources": [
+            {
+              "retailer": "Strolleria",
+              "price": 499.0,
+              "url": "https://strolleria.com/products/babyzen-yoyo2-6-complete-stroller",
+              "inStock": true,
+              "checkedAt": "2026-07-03"
+            }
+          ],
+          "notes": "The standout light/compact city+shopping pick — 14.8 lb, airline-cabin one-hand fold, JPMA certified. Clek Liing clicks on via the BabyZen YOYO adapter (BZ10205-03). Complements the owned BOB Alterrain Pro."
+        },
+        {
+          "id": "stokke-xplory",
+          "moduleId": "clek-stroller",
+          "name": "Stokke Xplory X",
+          "price": 1199,
+          "image": "images/stokke-xplory.jpg",
+          "attributes": {
+            "brand": "Stokke",
+            "type": "full-size luxury pram",
+            "weightLb": 29.5,
+            "foldedDimsIn": "18.7 × 22 × 41.3 in",
+            "unfoldedDimsIn": "39.8 × 22 × 51.6 in",
+            "brakeType": "one-step rocker foot pedal",
+            "maxChildLb": 48.5,
+            "foldType": "one-step/two-piece; not travel-class",
+            "safetyStandards": "ASTM F833 / 16 CFR 1227 (US); 5-pt harness",
+            "adapterSystem": "Stokke Multi adapter (321500), $60",
+            "fitsLiing": true,
+            "clekAdapter": "Stokke Stroller Car Seat Adapter Multi · 321500"
+          },
+          "scores": {
+            "portability": 1,
+            "everyday": 5,
+            "adapterease": 3,
+            "cprice": 1
+          },
+          "priceSources": [
+            {
+              "retailer": "Mega Babies",
+              "price": 719.4,
+              "url": "https://www.megababiesusa.com/products/stokke-xplory-x-complete-stroller",
+              "inStock": false,
+              "checkedAt": "2026-07-03"
+            }
+          ],
+          "notes": "Full-size luxury pram — reversible, lie-flat, high seat — but ~29.5 lb and bulky; not a portability pick. On Clek's list via the Stokke Multi adapter 321500. MSRP ~$1,199 (sale $719, sold out at check)."
+        },
+        {
+          "id": "stokke-trailz",
+          "moduleId": "clek-stroller",
+          "name": "Stokke Trailz",
+          "price": 1099,
+          "image": "images/stokke-trailz.jpg",
+          "attributes": {
+            "brand": "Stokke",
+            "type": "full-size all-terrain",
+            "weightLb": 32.0,
+            "foldedDimsIn": "24.8 × 19.7 × 37.4 in",
+            "unfoldedDimsIn": "37.6 × 24.4 × 50 in",
+            "brakeType": "push down / lift up foot pedal",
+            "maxChildLb": 45,
+            "foldType": "folds with seat on; bulky",
+            "safetyStandards": "ASTM F833 / 16 CFR 1227 (US); 5-pt harness",
+            "adapterSystem": "Stokke Multi adapter (321500), $60",
+            "fitsLiing": true,
+            "clekAdapter": "Stokke Stroller Car Seat Adapter Multi · 321500"
+          },
+          "scores": {
+            "portability": 1,
+            "everyday": 4,
+            "adapterease": 3,
+            "cprice": 1
+          },
+          "priceSources": [
+            {
+              "retailer": "Nordstrom",
+              "price": 1099.0,
+              "url": "https://www.nordstrom.com/s/stokke-trailz-all-terrain-stroller/4006064",
+              "inStock": true,
+              "checkedAt": "2026-07-03"
+            }
+          ],
+          "notes": "Full-size all-terrain pram (~32 lb, foam tires + suspension) — overlaps the BOB's role, not a portability pick. On Clek's list via the Stokke Multi adapter 321500."
+        },
+        {
+          "id": "stokke-scoot",
+          "moduleId": "clek-stroller",
+          "name": "Stokke Scoot (V2)",
+          "price": 549,
+          "image": "images/stokke-scoot.jpg",
+          "attributes": {
+            "brand": "Stokke",
+            "type": "full-size urban (discontinued)",
+            "weightLb": 25.0,
+            "foldedDimsIn": "28.3 × 21.6 × 12.6 in",
+            "unfoldedDimsIn": "not published (discontinued)",
+            "brakeType": "foot pedal parking brake",
+            "maxChildLb": 45,
+            "foldType": "one-piece fold with seat",
+            "safetyStandards": "ASTM F833 / 16 CFR 1227 (US, when sold); 5-pt harness",
+            "adapterSystem": "Stokke Multi adapter (321500), $60",
+            "fitsLiing": true,
+            "clekAdapter": "Stokke Multi adapter · 321500 (Scoot serial 118AA0040583+)",
+            "discontinued": true
+          },
+          "scores": {
+            "portability": 2,
+            "everyday": 3,
+            "adapterease": 3,
+            "cprice": 1
+          },
+          "priceSources": [],
+          "notes": "DISCONTINUED — resale only, no current retail listing (price ~$549 is last-retail reference). On Clek's list for Scoot serial 118AA0040583+ via the Stokke Multi adapter 321500."
+        }
+      ]
+    },
+    {
+      "id": "adapter",
+      "label": "Car-Seat Stroller Adapter",
+      "budget": 100,
+      "selectedOptionId": null,
+      "criteria": [
+        {
+          "id": "availability",
+          "label": "Availability",
+          "weight": 4
+        },
+        {
+          "id": "cost",
+          "label": "Adapter price",
+          "weight": 3
+        },
+        {
+          "id": "versatility",
+          "label": "Seat & stroller versatility",
+          "weight": 2
+        }
+      ],
+      "options": [
+        {
+          "id": "adapter-bz10205-03",
+          "moduleId": "adapter",
+          "name": "BabyZen YOYO Car Seat Adapters",
+          "price": 75,
+          "image": "images/adapter-bz10205-03.jpg",
+          "attributes": {
+            "partNumber": "BZ10205-03",
+            "madeBy": "BabyZen (Stokke)",
+            "seatBrands": "Maxi-Cosi / Cybex / Nuna / Clek Liing",
+            "forStrollers": "BabyZen YOYO+ / YOYO² / YOYO³",
+            "fitsLiing": true,
+            "discontinued": false
+          },
+          "scores": {
+            "availability": 5,
+            "cost": 3,
+            "versatility": 4
+          },
+          "priceSources": [
+            {
+              "retailer": "Nordstrom",
+              "price": 75.0,
+              "url": "https://www.nordstrom.com/s/babyzen-adapters-for-yoyo-and-yoyo-stroller-cybex-nuna-clek-and-maxi-cosi-infant-car-seats/4601012",
+              "inStock": true,
+              "checkedAt": "2026-07-03"
+            }
+          ],
+          "notes": "Current BabyZen YOYO adapter (BZ10205-03) that DOES list the Clek Liing — an older YOYO+ variant does not. ~$75."
+        },
+        {
+          "id": "adapter-321500",
+          "moduleId": "adapter",
+          "name": "Stokke Stroller Car Seat Adapter Multi",
+          "price": 60,
+          "image": "images/adapter-321500.jpg",
+          "attributes": {
+            "partNumber": "321500",
+            "madeBy": "Stokke",
+            "seatBrands": "Maxi-Cosi / Nuna / Cybex / BeSafe / Clek Liing",
+            "forStrollers": "Stokke Xplory X · Xplory · Trailz · Beat · Scoot",
+            "fitsLiing": true,
+            "discontinued": false
+          },
+          "scores": {
+            "availability": 3,
+            "cost": 4,
+            "versatility": 4
+          },
+          "priceSources": [
+            {
+              "retailer": "Mega Babies",
+              "price": 60.0,
+              "url": "https://www.megababiesusa.com/products/stokke-stroller-car-seat-adapter-multi",
+              "inStock": false,
+              "checkedAt": "2026-07-03"
+            }
+          ],
+          "notes": "One 'Multi' adapter serves five Stokke strollers and explicitly lists the Clek Liing. $60 (sold out at check; also on Amazon)."
         }
       ]
     }

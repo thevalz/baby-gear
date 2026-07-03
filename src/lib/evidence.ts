@@ -38,6 +38,18 @@ const ATTRIBUTE_META: Record<string, { label: string; format: (v: unknown) => st
   suspension: { label: 'Suspension', format: (v) => String(v) },
   maxChildLb: { label: 'Max child weight', format: (v) => `${v} lb` },
   adapterSystem: { label: 'Car-seat adapter', format: (v) => String(v) },
+  // Clek-compatible stroller + adapter attributes (city/compact roster).
+  unfoldedDimsIn: { label: 'Unfolded size', format: (v) => String(v) },
+  brakeType: { label: 'Brake', format: (v) => String(v) },
+  safetyStandards: { label: 'Safety standards', format: (v) => String(v) },
+  foldType: { label: 'Fold', format: (v) => String(v) },
+  fitsLiing: { label: 'Fits Clek Liing', format: yesNo },
+  clekAdapter: { label: 'Clek Liing adapter', format: (v) => String(v) },
+  partNumber: { label: 'Part #', format: (v) => String(v) },
+  madeBy: { label: 'Made by', format: (v) => String(v) },
+  seatBrands: { label: 'Fits car seats', format: (v) => String(v) },
+  forStrollers: { label: 'Fits strollers', format: (v) => String(v) },
+  discontinued: { label: 'Discontinued', format: yesNo },
 };
 
 /** Bookkeeping attributes that are not worth showing to a human. */
