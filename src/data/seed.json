@@ -1,5 +1,5 @@
 {
-  "dataVersion": 8,
+  "dataVersion": 9,
   "config": {
     "overallBudget": 1000,
     "adapterCost": 100,
@@ -1061,40 +1061,10 @@
             }
           ],
           "notes": "Considering — BOB's current flagship all-terrain jogger and the in-stock successor to the base Alterrain. SmoothShox suspension plus an ergonomic hand brake for downhill control; flattest fold of the three (33 × 21.5 × 13 in) though heaviest (32.3 lb). Shares the Alterrain's brand-specific adapter ecosystem, so any car seat marked 'fits Alterrain' fits the Pro. Best in-stock price $829.99 (Bambi Baby / Strolleria; Modern Nursery $879.99) — note this is OVER the $800 module budget. MSRP $829.99."
-        }
-      ]
-    },
-    {
-      "id": "clek-stroller",
-      "label": "Clek-Compatible Stroller",
-      "budget": 600,
-      "selectedOptionId": null,
-      "criteria": [
-        {
-          "id": "portability",
-          "label": "Weight & folded size",
-          "weight": 5
         },
-        {
-          "id": "everyday",
-          "label": "Everyday usability",
-          "weight": 3
-        },
-        {
-          "id": "adapterease",
-          "label": "Clek Liing adapter ease",
-          "weight": 3
-        },
-        {
-          "id": "cprice",
-          "label": "Price",
-          "weight": 2
-        }
-      ],
-      "options": [
         {
           "id": "babyzen-yoyo",
-          "moduleId": "clek-stroller",
+          "moduleId": "stroller",
           "name": "BabyZen YOYO3",
           "price": 499,
           "image": "images/babyzen-yoyo.jpg",
@@ -1131,7 +1101,7 @@
         },
         {
           "id": "stokke-xplory",
-          "moduleId": "clek-stroller",
+          "moduleId": "stroller",
           "name": "Stokke Xplory X",
           "price": 1199,
           "image": "images/stokke-xplory.jpg",
@@ -1168,7 +1138,7 @@
         },
         {
           "id": "stokke-trailz",
-          "moduleId": "clek-stroller",
+          "moduleId": "stroller",
           "name": "Stokke Trailz",
           "price": 1099,
           "image": "images/stokke-trailz.jpg",
@@ -1205,7 +1175,7 @@
         },
         {
           "id": "stokke-scoot",
-          "moduleId": "clek-stroller",
+          "moduleId": "stroller",
           "name": "Stokke Scoot (V2)",
           "price": 549,
           "image": "images/stokke-scoot.jpg",

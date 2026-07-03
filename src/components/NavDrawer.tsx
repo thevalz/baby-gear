@@ -14,14 +14,12 @@ export default function NavDrawer({
   open,
   onClose,
   onSelect,
-  onAddModule,
 }: {
   modules: Module[];
   activeModuleId: string;
   open: boolean;
   onClose: () => void;
   onSelect: (id: string) => void;
-  onAddModule: () => void;
 }) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
@@ -67,13 +65,6 @@ export default function NavDrawer({
               </button>
             );
           })}
-
-          <button
-            onClick={onAddModule}
-            className="mt-2 w-full rounded-md border border-dashed border-slate-300 px-3 py-2 text-sm text-slate-500 hover:bg-slate-100"
-          >
-            + Add module
-          </button>
         </nav>
       </aside>
     </>
