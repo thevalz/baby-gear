@@ -79,10 +79,13 @@ export function mergePricingFromSeed(
 
   const seedModById = new Map(seed.modules.map((m) => [m.id, m]));
   const userIds = new Set(persisted.modules.map((m) => m.id));
-  const modules = persisted.modules.map((m) => {
-    const s = seedModById.get(m.id);
-    return s ? refreshModule(m, s) : m;
-  });
+  // Reconcile the module set to the repo: drop modules the repo has removed
+  // (e.g. a category that was merged into another) so a returning visitor's
+  // stale localStorage doesn't keep showing a deleted tab. Users can no longer
+  // create their own modules, so seed is authoritative for the module list.
+  const modules = persisted.modules
+    .filter((m) => seedModById.has(m.id))
+    .map((m) => refreshModule(m, seedModById.get(m.id)!));
   const addedModules = seed.modules.filter((m) => !userIds.has(m.id));
 
   return {
