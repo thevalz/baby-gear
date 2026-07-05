@@ -4,7 +4,8 @@
   "name": "Silver Cross Comet Car Seat Adapters",
   "checkedAt": "2026-07-05",
 
-  "image": "images/adapter-silvercross-comet.jpg",
+  "image": null,
+  "_imageNote": "No clean product image found (2026-07-05): Silver Cross US's own Comet adapter page reuses a Wave-Lower adapter photo, and retailer og:images resolve to unrelated banners/store logos. Left null rather than use a wrong-product image.",
 
   "partNumber": null,
   "madeBy": "Silver Cross",

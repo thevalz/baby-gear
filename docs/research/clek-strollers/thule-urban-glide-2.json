@@ -23,8 +23,8 @@
   "specs": {
     "weightLb": 25.0,
 
-    "unfoldedIn": { "lengthIn": null, "widthIn": null, "heightIn": null },
-    "_unfoldedNote": "Thule no longer publishes an open-dimension spec for the superseded Urban Glide 2 single; not sourced → null (successor UG3 opens ~48.4 x 27.2 x 45.3 in for reference only).",
+    "unfoldedIn": { "lengthIn": 41.1, "widthIn": 27.2, "heightIn": 40 },
+    "_unfoldedNote": "Open dimensions per Strollberry's Urban Glide 2 (single) spec: 104.5 cm L x 69 cm W x 101.6 cm H = 41.1 x 27.2 x 40 in. Thule's own current page no longer lists them (model superseded by UG3).",
     "foldedIn": { "lengthIn": 34.2, "widthIn": 27.2, "heightIn": 13.3 },
 
     "brake": { "hasBrake": true, "type": "twist-action hand/running brake plus foot-operated parking brake" },
@@ -52,6 +52,7 @@
   },
 
   "sources": [
+    "https://strollberry.com/strollers/thule-urban-glide-2/",
     "https://trailandkale.com/thule-urban-glide-2-review/",
     "https://marathonhandbook.com/thule-urban-glide-2-jogging-stroller-review/",
     "https://www.jensorganicbaby.com/products/thule-urban-glide-2",

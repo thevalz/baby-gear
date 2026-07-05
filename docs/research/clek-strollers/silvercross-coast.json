@@ -29,19 +29,20 @@
     "foldedIn": { "lengthIn": 15.75, "widthIn": 24, "heightIn": 37 },
     "_dimsNote": "Converted from metric: open 109 x 61 x 109 cm (L42.9 x W24 x H42.9 in); folded frame 40 x 61 x 94 cm (L15.75 x W24 x H37 in). Strollberry.",
 
-    "brake": { "hasBrake": true, "type": null },
-    "_brakeNote": "Has a parking brake (standard on the Coast), but the archived spec pages do not name the type — left null rather than guessed.",
+    "brake": { "hasBrake": true, "type": "push-push pedal (foot) parking brake, flip-flop friendly" },
+    "_brakeNote": "Brake type from Strollberry Coast spec sheet: 'push-push pedal brake (flip-flop friendly)' — activated by pressing one side, released by pressing the other.",
 
     "capacity": {
       "maxChildWeightLb": 55,
       "maxChildHeightIn": null,
       "minAgeOrNewborn": "birth (carrycot + lie-flat seat; up to 27 carrycot/seat/car-seat configurations)",
       "seatCount": 1,
-      "basketCapacityLb": null
+      "basketCapacityLb": 11
     },
+    "_basketNote": "Basket rated 5 kg (~11 lb) per Strollberry Coast spec sheet.",
 
     "safety": {
-      "standards": "Not published on the (archived) US spec pages. Silver Cross is UK-origin (EN 1888 home market); US units met ASTM F833 / 16 CFR 1227; no specific cert stated.",
+      "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the (archived) Silver Cross US spec pages; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
       "certifications": null,
       "notes": "5-point harness; magnesium chassis; multi-position lie-flat seat."
     },

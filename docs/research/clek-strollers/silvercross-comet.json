@@ -36,11 +36,12 @@
       "maxChildHeightIn": null,
       "minAgeOrNewborn": "birth (included Babynest cocoon + reclining reversible seat)",
       "seatCount": 1,
-      "basketCapacityLb": null
+      "basketCapacityLb": 11
     },
+    "_basketNote": "Basket rated 5 kg (~11 lb) per Strollberry Comet spec sheet.",
 
     "safety": {
-      "standards": "Not published on US spec pages. Silver Cross is UK-origin (EN 1888 home market); US units must meet ASTM F833 / 16 CFR 1227; no specific cert stated by brand/retailer.",
+      "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
       "certifications": null,
       "notes": "State-of-the-art harness with 'Genius' buckle; included Babynest for newborns; one-piece compact fold."
     },

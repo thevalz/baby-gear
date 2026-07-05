@@ -28,7 +28,8 @@
     "foldedIn": { "lengthIn": 23.5, "widthIn": 20, "heightIn": 28.5 },
     "_dimsNote": "Unfolded 37.5 L x 23.5 W x 41.25 H per Rebel. Folded ~23.5 (deep) x 20 (wide) x 28.5 (high) with the seat still on, per hands-on review; Colugo does not publish an official folded-dimension spec.",
 
-    "brake": { "hasBrake": true, "type": null },
+    "brake": { "hasBrake": true, "type": "foot-operated rear foot-pedal parking brake (press down to set / lift to release)" },
+    "_brakeNote": "Colugo does not officially publish the brake mechanism for the Complete; type confirmed via hands-on reviews (Fathercraft, Consumer Reports) describing a single rear foot-pedal brake positioned away from the wheels.",
 
     "capacity": {
       "maxChildWeightLb": 55,
@@ -55,7 +56,8 @@
     "https://fromrebel.com/products/colugo-the-complete-stroller-d54755",
     "https://www.amazon.com/dp/B0B9CX7Y9W",
     "https://colugo.com/collections/all",
-    "https://fathercraft.com/colugo-complete-review/"
+    "https://fathercraft.com/colugo-complete-review/",
+    "https://www.consumerreports.org/babies-kids/strollers/colugo-complete/m401954/"
   ],
   "notes": "The Complete is a reversible-seat, 175-degree lie-flat travel/everyday stroller (24.5 lb with seat / ~15 lb frame). It appears DISCONTINUED: Colugo's own site now sells only the Compact+, and the Amazon listing is 'Currently unavailable'; best live third-party price is Rebel $301.99 (reg $465) but Out of Stock. Clek Liing attaches via Colugo's Universal Car Seat Adapter, which Clek's list marks *Discontinued (adapter-colugo-universal). Folded dims and brake type are not officially published by Colugo — folded figures come from a hands-on review, so treat as approximate."
 }

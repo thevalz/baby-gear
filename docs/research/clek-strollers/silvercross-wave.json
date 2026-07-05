@@ -30,19 +30,20 @@
     "foldedIn": { "lengthIn": 37.4, "widthIn": 23.6, "heightIn": 15.55 },
     "_dimsNote": "Wave 3: open L43.72 x W23.5 x H37-43 in; folded L37.4 x W23.6 x H15.55 in (Silver Cross US).",
 
-    "brake": { "hasBrake": true, "type": null },
-    "_brakeNote": "Has a parking brake (standard on the Wave), but the spec page does not name the type — left null rather than guessed.",
+    "brake": { "hasBrake": true, "type": "push-push pedal (foot) parking brake, flip-flop friendly" },
+    "_brakeNote": "Brake type from Strollberry Wave spec sheet: 'push-push pedal brake (flip-flop friendly)' — activated by pressing one side, released by pressing the other.",
 
     "capacity": {
       "maxChildWeightLb": 55,
       "maxChildHeightIn": null,
       "minAgeOrNewborn": "birth (bassinet + lie-flat seats included; ready as a double for newborn+toddler)",
       "seatCount": 2,
-      "basketCapacityLb": null
+      "basketCapacityLb": 11
     },
+    "_basketNote": "Basket rated 5 kg (~11 lb) per Strollberry Wave spec sheet.",
 
     "safety": {
-      "standards": "Not published on US spec pages. Silver Cross is UK-origin (EN 1888 home market); US units must meet ASTM F833 / 16 CFR 1227; no specific cert stated by brand/retailer.",
+      "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
       "certifications": null,
       "notes": "5-point harness; lie-flat seats; puncture-proof multi-terrain tires with four-way independent suspension."
     },
