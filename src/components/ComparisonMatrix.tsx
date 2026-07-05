@@ -4,6 +4,13 @@ import { bestPrice, bestSource, formatMoney } from '../lib/scoring';
 import { criterionEvidence } from '../lib/evidence';
 import { criterionMetric } from '../lib/criterionMetric';
 import Thumb from './Thumb';
+import Lightbox from './Lightbox';
+
+/** Best link to where an option's image / data came from. */
+const imageSource = (o: Option): string | undefined =>
+  (o.attributes as Record<string, unknown>).sourceUrl as string | undefined ??
+  bestSource(o)?.url ??
+  o.priceSources?.[0]?.url;
 
 /** A rendered column: how to display and how to sort one field across options. */
 interface Col {
@@ -170,6 +177,7 @@ export default function ComparisonMatrix({
 }) {
   const [query, setQuery] = useState('');
   const [sort, setSort] = useState<{ key: string; dir: 1 | -1 } | null>(null);
+  const [zoom, setZoom] = useState<Option | null>(null);
 
   const cols = useMemo(() => columnsFor(module), [module]);
 
@@ -265,7 +273,22 @@ export default function ComparisonMatrix({
                 >
                   <td className="sticky left-0 z-10 bg-inherit px-3 py-1.5">
                     <div className="flex items-center gap-2">
-                      <Thumb src={o.image} alt={o.name} size="xs" />
+                      {o.image ? (
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setZoom(o);
+                          }}
+                          className="cursor-zoom-in"
+                          aria-label={`Enlarge ${o.name} image`}
+                          title="Click to enlarge"
+                        >
+                          <Thumb src={o.image} alt={o.name} size="xs" />
+                        </button>
+                      ) : (
+                        <Thumb src={o.image} alt={o.name} size="xs" />
+                      )}
                       <div className="max-w-[14rem] truncate font-medium text-slate-800">{o.name || '(unnamed)'}</div>
                     </div>
                   </td>
@@ -295,6 +318,15 @@ export default function ComparisonMatrix({
           </tbody>
         </table>
       </div>
+
+      {zoom && (
+        <Lightbox
+          src={zoom.image}
+          alt={zoom.name}
+          sourceUrl={imageSource(zoom)}
+          onClose={() => setZoom(null)}
+        />
+      )}
     </div>
   );
 }

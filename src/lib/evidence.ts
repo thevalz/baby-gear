@@ -60,6 +60,7 @@ const ATTRIBUTE_META: Record<string, { label: string; format: (v: unknown) => st
 const HIDDEN_ATTRIBUTES = new Set([
   'carrierLbVerify',
   'foldLenIn', 'foldWidIn', 'foldHtIn', 'openLenIn', 'openWidIn', 'openHtIn',
+  'sourceUrl',
 ]);
 
 const titleCase = (key: string): string =>

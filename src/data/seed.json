@@ -1,5 +1,5 @@
 {
-  "dataVersion": 16,
+  "dataVersion": 17,
   "config": {
     "overallBudget": 1000,
     "adapterCost": 100
@@ -1091,7 +1091,8 @@
             "recline": "near-flat recline",
             "tires": "8\" wheels; front-wheel suspension",
             "adapterSystem": "Baby Jogger City Mini 2 Car Seat Adapter for Cybex/Clek",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://strollberry.com/strollers/baby-jogger-city-mini2/"
           },
           "scores": {},
           "priceSources": [],
@@ -1123,7 +1124,8 @@
             "recline": "near-flat recline",
             "tires": "6\" front double-swivel / rear wheels",
             "adapterSystem": "Baby Jogger Car Seat Adapter — Mounting Bracket Single for Maxi-Cosi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://strollberry.com/strollers/baby-jogger-city-mini-4/"
           },
           "scores": {},
           "priceSources": [],
@@ -1155,7 +1157,8 @@
             "recline": "near-flat recline",
             "tires": "8\" forever-air rubber tires; all-wheel suspension",
             "adapterSystem": "Baby Jogger Car Seat Adapter — Mounting Bracket Single for Maxi-Cosi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://strollberry.com/strollers/baby-jogger-city-mini-gt/"
           },
           "scores": {},
           "priceSources": [],
@@ -1187,7 +1190,8 @@
             "recline": "near-flat recline",
             "tires": "8\" forever-air (never-flat) rubber tires; all-wheel suspension",
             "adapterSystem": "Baby Jogger City Mini 2 Car Seat Adapter for Cybex/Clek",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://help.babyjogger.com/s/article/CITY-MINI-GT2-PRODUCT-SPECIFICATIONS"
           },
           "scores": {},
           "priceSources": [],
@@ -1218,7 +1222,8 @@
             "recline": "multi-position incl. near-flat",
             "tires": "8\"/12\" forever-air rubber tires; all-wheel suspension",
             "adapterSystem": "Baby Jogger City Select Car Seat Adapter for Maxi-Cosi/Cybex · Baby Jogger City Select Second Seat Car Seat Adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://strollberry.com/strollers/baby-jogger-city-select/"
           },
           "scores": {},
           "priceSources": [],
@@ -1249,7 +1254,8 @@
             "recline": "multi-position incl. near-flat",
             "tires": "8\"/12\" forever-air rubber tires; all-wheel suspension",
             "adapterSystem": "Baby Jogger City Select Car Seat Adapter for Maxi-Cosi/Cybex",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://strollberry.com/strollers/baby-jogger-city-select/"
           },
           "scores": {},
           "priceSources": [],
@@ -1281,7 +1287,8 @@
             "recline": "multi-position reclining backrest",
             "tires": "5.9 in front / 7 in rear foam-filled; front swivel with suspension",
             "adapterSystem": "BabyZen YOYO Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://strolleria.com/products/babyzen-yoyo2-6-complete-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -1321,7 +1328,8 @@
             "recline": "near-flat recline, one-hand adjustable",
             "tires": "pneumatic (air-filled) all-terrain; 12 in front swivel (lockable) + adjustable tracking, 16 in rear; mountain-bike-style suspension",
             "adapterSystem": "B.O.B. Gear Single Infant Car Seat Adapter (Cybex / Maxi-Cosi / Nuna)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bobgear.com/single-strollers"
           },
           "scores": {},
           "priceSources": [
@@ -1374,7 +1382,8 @@
             "recline": "near-flat infinite recline",
             "tires": "3-wheel; foam-filled (never-flat) tires with all-wheel spring suspension; front swivel with lock",
             "adapterSystem": "Britax Click & Go Infant Car Seat Adapter (Maxi-Cosi / Cybex / Nuna)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://us.britax.com/shop/strollers/b-lively-stroller/variant/76454"
           },
           "scores": {},
           "priceSources": [
@@ -1428,7 +1437,8 @@
             "recline": "multi-position; lie-flat (near-flat) when rear-facing for newborn naps; two angles when forward-facing",
             "tires": "rubber-coated foam wheels (not air-filled) with integrated suspension; front ~4.7 in, rear ~5.9 in diameter; front swivel",
             "adapterSystem": "Bugaboo Ant adapter for car seats – Nuna/Cybex",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bugaboo.com/us-en/strollers/bugaboo-ant/bugaboo-ant-sit-and-stand-travel-stroller-PM00003.html"
           },
           "scores": {},
           "priceSources": [
@@ -1475,7 +1485,8 @@
             "recline": "multi-position reclining backrest incl. full lie-flat (3 positions, one-hand)",
             "tires": "7 in front and rear, foam-filled; front swivel wheels with open-spring suspension",
             "adapterSystem": "Bugaboo Bee adapter for Turtle/Maxi-Cosi car seats",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.anbbaby.com/products/bugaboo-bee-6-complete-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -1522,7 +1533,8 @@
             "recline": "near-flat one-hand recline, approx. 30 to 143 degrees including a fully upright position",
             "tires": "front 5.5 in swivel wheels / rear 6 in (larger than the original Butterfly); advanced 4-wheel suspension (tire material not published)",
             "adapterSystem": "Bugaboo Butterfly 2 car seat adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bugaboo.com/us-en/strollers/bugaboo-butterfly-2/bugaboo-butterfly-2-travel-stroller-PM007648.html"
           },
           "scores": {},
           "priceSources": [
@@ -1569,7 +1581,8 @@
             "recline": "one-hand recline 111 to 145 degrees; 5-position adjustable integrated leg rest",
             "tires": "front 4.7 in swivel wheels / rear 6 in; 4-wheel suspension (tire material not published)",
             "adapterSystem": "Bugaboo Butterfly car seat adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://littlesproutusa.com/products/bugaboo-butterfly-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -1616,7 +1629,8 @@
             "recline": "multi-position reclining backrest incl. full lie-flat (3 positions); reversible seat + included bassinet",
             "tires": "6 in (15 cm) swivel foam front wheels; 12 in (30 cm) foam-filled (puncture-free) rear wheels; adjustable suspension",
             "adapterSystem": "Bugaboo Cameleon³ adapter for Maxi-Cosi car seat",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://goodbuygear.com/products/bugaboo-cameleon3-stroller-2029"
           },
           "scores": {},
           "priceSources": [
@@ -1663,7 +1677,8 @@
             "recline": "multi-position reclining, reversible seat; bassinet from birth",
             "tires": "puncture-proof foam-filled wheels, 10 in front / 12 in rear, all-wheel suspension",
             "adapterSystem": "Bugaboo Donkey Mono Adapter for Maxi-Cosi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://strolleria.com/products/bugaboo-donkey5-mono-complete-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -1710,7 +1725,8 @@
             "recline": "multi-position reclining, reversible seats; bassinets from birth",
             "tires": "puncture-proof foam-filled wheels, 10 in front / 12 in rear, all-wheel suspension",
             "adapterSystem": "Bugaboo Donkey Twin Adapter for Maxi-Cosi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://shoptwinklebaby.com/products/bugaboo-donkey5-duo-double-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -1757,7 +1773,8 @@
             "recline": "multi-position reclining seat (incl. full recline); reversible bassinet from birth",
             "tires": "puncture-proof foam-filled wheels, 10 in front / 12 in rear, all-wheel suspension",
             "adapterSystem": "Bugaboo Donkey Mono Adapter for Maxi-Cosi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bugaboo.com/us-en/strollers/bugaboo-donkey-3-mono/bugaboo-donkey-3-mono-bassinet-and-seat-stroller-PM001608.html"
           },
           "scores": {},
           "priceSources": [
@@ -1804,7 +1821,8 @@
             "recline": "multi-position reclining seats (incl. full recline); reversible bassinets from birth",
             "tires": "puncture-proof foam-filled wheels, 10 in front / 12 in rear, all-wheel suspension",
             "adapterSystem": "Bugaboo Donkey Twin Adapter for Maxi-Cosi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bugaboo.com/us-en/strollers/bugaboo-donkey-3-twin/bugaboo-donkey-3-twin-bassinet-and-seat-stroller-PM001618.html"
           },
           "scores": {},
           "priceSources": [
@@ -1844,7 +1862,8 @@
             "recline": "3 recline positions including a full lie-flat backrest (>150 degrees) for newborn naps",
             "tires": "rubber-coated foam wheels (not air-filled); front ~7 in (18 cm) swivel with lock and suspension, rear ~8.5 in (22 cm)",
             "adapterSystem": "Bugaboo Dragonfly adapter for Maxi-Cosi car seat",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.nordstrom.com/s/bugaboo-dragonfly-seat-stroller/7463547"
           },
           "scores": {},
           "priceSources": [
@@ -1891,7 +1910,8 @@
             "recline": "multi-position reclinable seat (both facing directions); bassinet gives full lie-flat for newborns",
             "tires": "extra-large puncture-proof foam-filled wheels with full suspension; front ~8.5 in, rear ~12 in; front swivel with lock",
             "adapterSystem": "Bugaboo Fox/Lynx/Buffalo Adapter for Maxi-Cosi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.swaddlesbaby.com/products/bugaboo-fox-5-complete-full-size-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -1943,7 +1963,8 @@
             "recline": "multi-position reclinable seats (both facing directions); bassinet gives full lie-flat for newborns",
             "tires": "extra-large puncture-proof wheels; front ~8.5 in, rear ~12 in; front swivel (all-terrain)",
             "adapterSystem": "Bugaboo Fox/Lynx/Buffalo Adapter for Maxi-Cosi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://littlesproutusa.com/products/bugaboo-kangaroo-stroller/"
           },
           "scores": {},
           "priceSources": [
@@ -1997,7 +2018,8 @@
             "recline": "3-position recline including near-flat; reversible (facing parent or world)",
             "tires": "puncture-proof double-layer rubber (foam-filled) wheels; front ~7 in, rear ~11 in; front swivel",
             "adapterSystem": "Bugaboo Fox/Lynx/Buffalo Adapter for Maxi-Cosi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bugaboo.com/us-en/strollers/bugaboo-lynx/bugaboo-lynx-seat-stroller-PM00038.html"
           },
           "scores": {},
           "priceSources": [
@@ -2052,7 +2074,8 @@
             "recline": "multi-position to lay-flat",
             "tires": "air-filled with inner tubes; 8.5 in front / 12 in rear; all-wheel suspension; front swivel with in-line lock",
             "adapterSystem": "Bumbleride Era Car Seat Adapter – Clek / Maxi-Cosi / Cybex / Nuna",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://bumbleride.com/products/era-reversible-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -2100,7 +2123,8 @@
             "recline": "independent one-hand recline per seat, to lay-flat",
             "tires": "all four 12 in air-filled; all-wheel suspension",
             "adapterSystem": "Bumbleride Indie Twin Car Seat Adapter, Single – Clek / Maxi-Cosi / Cybex / Nuna",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://bumbleride.com/products/indie-twin-double-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -2148,7 +2172,8 @@
             "recline": "independent one-hand recline per seat, to lay-flat",
             "tires": "all four 12 in air-filled; all-wheel suspension",
             "adapterSystem": "Bumbleride Indie Twin Car Seat Adapter, Set (Two Seats) – Clek / Maxi-Cosi / Cybex / Nuna",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://bumbleride.com/products/indie-twin-double-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -2196,7 +2221,8 @@
             "recline": "multi-position to lay-flat (infant mode)",
             "tires": "all three 12 in air-filled; all-wheel suspension; front swivel with in-line lock",
             "adapterSystem": "Bumbleride Indie / Speed Car Seat Adapter – Clek / Maxi-Cosi / Cybex / Nuna",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://bumbleride.com/products/indie-all-terrain-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -2244,7 +2270,8 @@
             "recline": "one-hand backrest recline strap",
             "tires": "air-filled; 12 in front / 16 in rear; Speed3 Steering front wheel (run/jog/walk: locked, partial-swivel, full-swivel)",
             "adapterSystem": "Bumbleride Indie / Speed Car Seat Adapter – Clek / Maxi-Cosi / Cybex / Nuna",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://bumbleride.com/products/speed-jogging-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -2297,7 +2324,8 @@
             "recline": "multi-position to near-flat (175 degrees)",
             "tires": "all-wheel suspension; flat-free foam tires (tire material not explicitly published)",
             "adapterSystem": "Colugo Universal Car Seat Adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://fromrebel.com/products/colugo-the-complete-stroller-d54755"
           },
           "scores": {},
           "priceSources": [
@@ -2345,7 +2373,8 @@
             "recline": "sleep-ready bassinet (lie-flat) + lay-flat toddler seat",
             "tires": "motorized rear drive wheels (500W dual-motor) with front swivel; tire material not published",
             "adapterSystem": "Glüxkind Car Seat Adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://shop.gluxkind.com/products/gluxkind-rosa-smart-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -2376,7 +2405,8 @@
             "recline": "multi-position including near-flat cocoon (3-position leg rest)",
             "tires": "high-performance PU rubber wheels; front and rear suspension",
             "adapterSystem": "Guzzie+Guss Hopscotch Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.amazon.com/guzzie-Guss-Hopscotch-Full-Sized-Stroller/dp/B08JJ3X8D4"
           },
           "scores": {},
           "priceSources": [
@@ -2425,7 +2455,8 @@
             "recline": "multi-position reclining backrest to near-flat (from birth)",
             "tires": "5.7 in front / 6.1 in EVA-foam wheels; 4-wheel suspension",
             "adapterSystem": "Joolz Aer 2 Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joolz.com/us/en/strollers/440200-M.html"
           },
           "scores": {},
           "priceSources": [
@@ -2479,7 +2510,8 @@
             "recline": "multi-position reclining backrest (exact positions not published)",
             "tires": "5.1 in front / 5.9 in EVA-foam wheels; 4-wheel suspension",
             "adapterSystem": "Joolz Aer / Aer+ Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joolz.com/us/en/lightweight-stroller/440103.html"
           },
           "scores": {},
           "priceSources": [
@@ -2533,7 +2565,8 @@
             "recline": "3 positions incl. full lie-flat",
             "tires": "7 in front / 12 in rear EVA foam-coated wheels; all-wheel suspension",
             "adapterSystem": "Joolz Day2 / Day3 / Day+ Car Seat Adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joolz.com/us/en/strollers/joolz-day3.html"
           },
           "scores": {},
           "priceSources": [
@@ -2587,7 +2620,8 @@
             "recline": "main seat 3 positions incl. lie-flat; second seat 2 positions",
             "tires": "7 in front / 12 in rear (18 cm / 30 cm) EVA foam-coated wheels; all-wheel suspension",
             "adapterSystem": "Joolz Geo2 Upper Car Seat Adapters · Joolz Geo2 Lower Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joolz.com/us/en/411110.html"
           },
           "scores": {},
           "priceSources": [
@@ -2634,7 +2668,8 @@
             "recline": "3 positions incl. full lie-flat (main seat)",
             "tires": "7 in front / 12 in rear (18 cm / 30 cm) EVA foam-coated wheels; all-wheel suspension",
             "adapterSystem": "Joolz Geo2 Upper Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joolz.com/us/en/411110.html"
           },
           "scores": {},
           "priceSources": [
@@ -2688,7 +2723,8 @@
             "recline": "multi-position reclining backrest (exact positions not published)",
             "tires": "6.3 in front / 10.3 in rear EVA foam-coated wheels",
             "adapterSystem": "Joolz Hub / Hub+ Infant Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.megababiesusa.com/products/joolz-hub-seat-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -2741,7 +2777,8 @@
             "recline": "multi-position reclining backrest to near-flat (bassinet mode)",
             "tires": "4-wheel, foam/EVA tires; swivel front wheels with suspension",
             "adapterSystem": "Joovy Universal Car Seat Adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://goodbuygear.com/products/joovy-balloon-lightweight-stroller-green-2018"
           },
           "scores": {},
           "priceSources": [
@@ -2788,7 +2825,8 @@
             "recline": "reclining front seats",
             "tires": "foam/plastic wheels",
             "adapterSystem": "Joovy Universal Car Seat Adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joovy.com/products/big-caboose-triple-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -2836,7 +2874,8 @@
             "recline": "reclining full-size front seat; stand-on platform converts to accept a bassinet",
             "tires": "all-terrain never-flat foam wheels",
             "adapterSystem": "Joovy Car Seat Adapter – Maxi-Cosi/Cybex/Nuna (Caboose RS/S & Qool)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joovy.com/products/caboose-rs-premium-sit-and-stand-double-stroller-jet"
           },
           "scores": {},
           "priceSources": [
@@ -2883,7 +2922,8 @@
             "recline": "reclining full-size front seat",
             "tires": "larger foam/plastic wheels",
             "adapterSystem": "Joovy Universal Car Seat Adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joovy.com/products/caboose-ul-sit-and-stand-double-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -2923,7 +2963,8 @@
             "recline": "3-way reclining front seat",
             "tires": "foam/plastic wheels",
             "adapterSystem": "Joovy Universal Car Seat Adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.amazon.com/Joovy-Caboose-Graphite-Tandem-Stroller/dp/B01BMAW0GS"
           },
           "scores": {},
           "priceSources": [
@@ -2962,7 +3003,8 @@
             "recline": "one-hand multi-position reclining seat",
             "tires": "never-flat rubber tires; rear-wheel suspension",
             "adapterSystem": "Joovy Car Seat Adapter – Maxi-Cosi/Cybex/Nuna (Caboose RS/S & Qool)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joovy.com/products/qool-premium-single-double-triple-stroller-jet-1"
           },
           "scores": {},
           "priceSources": [
@@ -3008,7 +3050,8 @@
             "recline": "n/a — carries the two infant car seats at their own recline",
             "tires": "foam wheels; front swivel with suspension",
             "adapterSystem": "Joovy Twin Roo+ Car Seat Adapter – Maxi-Cosi/Cybex",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joovy.com/products/twin-roo-carseat-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -3054,7 +3097,8 @@
             "recline": "multi-position reclining seat",
             "tires": "16 in rear air-filled tires + single 12 in front air-filled tire (lockable swivel); air pump included",
             "adapterSystem": "Joovy Universal Car Seat Adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joovy.com/products/zoom-360-ultralight-lightweight-performance-jogging-single-stroller-black-1"
           },
           "scores": {},
           "priceSources": [
@@ -3097,7 +3141,8 @@
             "recline": "multi-position reclining backrest, near-flat for napping",
             "tires": "foam-filled plastic wheels; front swivel (lockable) with all-wheel suspension",
             "adapterSystem": "Larktale Car Seat Adapter – Multi-Model (Coast)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.amazon.com/Larktale-Lightweight-Compact-Stroller-Freshwater/dp/B07B7PNW5J"
           },
           "scores": {},
           "priceSources": [
@@ -3137,7 +3182,8 @@
             "recline": "multi-position incl. full lie-flat",
             "tires": "8 in front / 11 in rear (19 cm / 27 cm) EVA foam-coated wheels; all-wheel suspension",
             "adapterSystem": "Mamas & Papas Armadillo Flip/XT & Ocarro Maxi-Cosi/Cybex Car Seat Adaptors",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.albeebaby.com/mamas-and-papas-ocarro-stroller-black.html"
           },
           "scores": {},
           "priceSources": [
@@ -3190,7 +3236,8 @@
             "recline": "multi-position incl. full lie-flat",
             "tires": "8.7 in front / 11.8 in rear (22 cm / 30 cm) EVA foam-coated wheels",
             "adapterSystem": "Mima Xari Car Seat Adapter Set",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://mimakidsusa.com/products/mima-xari-max-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -3244,7 +3291,8 @@
             "recline": "5-position recline including near-flat / lay-flat mode; adjustable leg rest",
             "tires": "never-flat rubber tires; lockable front swivel wheels; four-wheel suspension",
             "adapterSystem": "Mockingbird Infant Car Seat Adapter — Clek Liing",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://hellomockingbird.com/products/mockingbird-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -3288,7 +3336,8 @@
             "recline": "multi-position, reclines to near-flat",
             "tires": "no-flat E-TPU rear wheels; EVA foam no-pump front wheels; 360° swivel with Quadshock suspension",
             "adapterSystem": "Orbit Baby Car Seat Stroller Adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://orbitbaby.com/products/g5-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -3341,7 +3390,8 @@
             "recline": "multi-position reclining backrest to near-flat",
             "tires": "three high-performance wide-tread rubber-coated wheels on 8 ball bearings; swivel/lockable front",
             "adapterSystem": "Agio by Peg Perego Car Seat Adapter for Z3 Stroller",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://paltux.com/products/agio-by-peg-perego-z3-all-terrain-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -3380,7 +3430,8 @@
             "recline": "3-position reclining backrest to lie-flat (>150 degrees)",
             "tires": "four rubber-coated swivel/lockable wheels (~18 cm front / 27 cm rear) with internal spring suspension",
             "adapterSystem": "Agio by Peg Perego Car Seat Adapter for Z4 / YPSI Stroller",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://agiobaby.com/products/agio-by-peg-perego-z4-full-feature-reversible-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -3427,7 +3478,8 @@
             "recline": "multi-position to lie-flat, reversible seat",
             "tires": "multi-terrain lockable RideTech wheels, four-wheel suspension",
             "adapterSystem": "Silver Cross Breez Universal Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://silvercrossus.com/product/breez-compact-stroller/"
           },
           "scores": {},
           "priceSources": [
@@ -3474,7 +3526,8 @@
             "recline": "multi-position incl. lie-flat",
             "tires": "multi-terrain wheels, suspension; magnesium chassis",
             "adapterSystem": "Silver Cross Wave / Coast Main (Upper) Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.megababiesusa.com/products/silver-cross-coast-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -3521,7 +3574,8 @@
             "recline": "multi-position reclining reversible seat (rides reclined, rear- or forward-facing)",
             "tires": "multi-terrain wheels",
             "adapterSystem": "Silver Cross Comet Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bambibaby.com/products/silver-cross-comet-eclipse-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -3568,7 +3622,8 @@
             "recline": "multi-position reversible seat incl. lie-flat",
             "tires": "foam-filled multi-terrain wheels, four-wheel suspension",
             "adapterSystem": "Silver Cross Dune / Reef Universal Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://silvercrossus.com/product/silver-crosss-dune-compact-folding-stroller/"
           },
           "scores": {},
           "priceSources": [
@@ -3622,7 +3677,8 @@
             "recline": "multi-position reclining seat, one-hand",
             "tires": "small foam/plastic swivel wheels with dynamic spring suspension, lockable",
             "adapterSystem": "Silver Cross Jet Universal Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://littlefolksnyc.com/products/silver-cross-jet-3-super-compact-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -3669,7 +3725,8 @@
             "recline": "multi-position to full lie-flat",
             "tires": "large lockable multi-terrain wheels, four-wheel suspension (foam-filled)",
             "adapterSystem": "Silver Cross Dune / Reef Universal Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://silvercrossus.com/product/silver-cross-reef-2-foldable-stroller/"
           },
           "scores": {},
           "priceSources": [
@@ -3723,7 +3780,8 @@
             "recline": "three positions incl. lie-flat (both main and tandem seats)",
             "tires": "puncture-proof multi-terrain tires, four-way independent suspension",
             "adapterSystem": "Silver Cross Wave / Coast Main (Upper) Car Seat Adapters",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://silvercrossus.com/product/wave-3-single-to-double-stroller/"
           },
           "scores": {},
           "priceSources": [
@@ -3776,7 +3834,8 @@
             "recline": "multi-position",
             "tires": "8 in front / 10 in rear foam wheels",
             "adapterSystem": "Stokke Stroller Car Seat Adapter Multi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://strollberry.com/strollers/stokke-scoot-v2/"
           },
           "scores": {},
           "priceSources": [],
@@ -3807,7 +3866,8 @@
             "recline": "multi-position incl. near-flat",
             "tires": "EVA foam-coated all-wheel; front 20 cm swivel-lockable, rear 28 cm; suspension",
             "adapterSystem": "Stokke Stroller Car Seat Adapter Multi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.nordstrom.com/s/stokke-trailz-all-terrain-stroller/4006064"
           },
           "scores": {},
           "priceSources": [
@@ -3846,7 +3906,8 @@
             "recline": "multi-position incl. lie-flat",
             "tires": "rubber-coated; front 18 cm swivel-lockable, rear 23 cm",
             "adapterSystem": "Stokke Stroller Car Seat Adapter Multi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.megababiesusa.com/products/stokke-xplory-x-complete-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -3886,7 +3947,8 @@
             "recline": "multi-position (3-position) recline to near-flat on both seats",
             "tires": "front EVA foam-coated swivel/lockable wheels (~8 in); rear foam-filled puncture-free wheels (~11 in)",
             "adapterSystem": "Thule Sleek Car Seat Adapter for Maxi-Cosi · Thule Sleek Adapter Kit (Double Mode)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.anbbaby.com/products/thule-sleek-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -3933,7 +3995,8 @@
             "recline": "multi-position (3-position) recline to near-flat",
             "tires": "front EVA foam-coated swivel/lockable wheels (~8 in); rear foam-filled puncture-free wheels (~11 in)",
             "adapterSystem": "Thule Sleek Car Seat Adapter for Maxi-Cosi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.anbbaby.com/products/thule-sleek-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -3979,7 +4042,8 @@
             "recline": "multi-position recline to near-flat, one-hand adjust",
             "tires": "pneumatic air-filled rubber; large 16 in rear wheels, smaller swivel/lockable front wheel",
             "adapterSystem": "Thule Urban Glide Car Seat Adapter for Maxi-Cosi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.jensorganicbaby.com/products/thule-urban-glide-2"
           },
           "scores": {},
           "priceSources": [
@@ -4019,7 +4083,8 @@
             "recline": "multi-position recline to near-flat, one-hand toggle",
             "tires": "pneumatic air-filled rubber; front 12 in swivel/lockable, rear 16 in",
             "adapterSystem": "Thule Urban Glide Universal Car Seat Adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.rei.com/product/C04571/thule-urban-glide-3-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -4066,7 +4131,8 @@
             "recline": "multi-position recline to near-flat with built-in leg rest",
             "tires": "air-filled tires; two front swivel/lockable ~10 in, two rear ~16 in (4-wheel)",
             "adapterSystem": "Thule Urban Glide Universal Car Seat Adapter",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.rei.com/product/232123/thule-urban-glide-4-wheel-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -4120,7 +4186,8 @@
             "recline": "multi-position deep recline (near-flat; from-birth needs insert or car seat/bassinet)",
             "tires": "foam-filled never-flat wheels; front swivel with lock",
             "adapterSystem": "Clek Car Seat Adapter for UPPAbaby (Cruz & Vista)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.nordstrom.com/s/uppababy-cruz-v2-stroller/5499237"
           },
           "scores": {},
           "priceSources": [
@@ -4175,7 +4242,8 @@
             "recline": "4-position one-hand recline to fully lay-flat",
             "tires": "never-flat foam-filled tires with reflective detail; enhanced FlexRide suspension; front swivel with lock",
             "adapterSystem": "Clek Car Seat Adapter for UPPAbaby (Cruz & Vista)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://strolleria.com/products/uppababy-cruz-v3-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -4229,7 +4297,8 @@
             "recline": "multi-position deep recline (near-flat; from-birth needs insert or car seat/bassinet)",
             "tires": "rubber-coated never-flat foam wheels; front ~6.4 in / rear ~8.5 in; front swivel with lock",
             "adapterSystem": "Clek Car Seat Adapter for UPPAbaby (Cruz & Vista)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://goodbuygear.com/products/uppababy-cruz-stroller-2047"
           },
           "scores": {},
           "priceSources": [
@@ -4276,7 +4345,8 @@
             "recline": "multiple recline positions (deeper than prior Minu; not fully flat without accessory)",
             "tires": "never-flat foam-filled wheels; front swivel with lock; all-wheel + independent rear suspension",
             "adapterSystem": "UPPAbaby Car Seat Adapter for Minu V3 (Maxi-Cosi/Nuna/Cybex/Clek)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bambibaby.com/products/uppababy-minu-v3-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -4330,7 +4400,8 @@
             "recline": "multi-position recline (not fully flat without accessory)",
             "tires": "foam-filled never-flat wheels; front swivel with lock; all-wheel spring suspension",
             "adapterSystem": "UPPAbaby Car Seat Adapter for Minu/Minu V2 (Maxi-Cosi/Nuna/Cybex/Clek)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://goodbuygear.com/products/uppababy-minu-v2-stroller-2023-greyson-charcoal-melange-14"
           },
           "scores": {},
           "priceSources": [
@@ -4377,7 +4448,8 @@
             "recline": "multi-position recline (near-flat)",
             "tires": "12 in front / 16 in rear EVA foam-filled never-flat all-terrain tires; front swivel with lock",
             "adapterSystem": "UPPAbaby Car Seat Adapters for Ridge (Maxi-Cosi/Nuna/Cybex/Clek)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bambibaby.com/products/uppababy-ridge-v2-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -4431,7 +4503,8 @@
             "recline": "toddler seat lay-flat; RumbleSeat multi-position recline",
             "tires": "never-flat foam-filled rubber-coated tires; all-wheel suspension; front swivel with lock",
             "adapterSystem": "Clek Car Seat Adapter for UPPAbaby (Cruz & Vista) · UPPAbaby Lower Car Seat Adapter for Vista (Maxi-Cosi/Nuna/Cybex/Clek)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://strolleria.com/products/uppababy-vista-v3-rumbleseat"
           },
           "scores": {},
           "priceSources": [
@@ -4485,7 +4558,8 @@
             "recline": "multi-position reversible seat to fully lay-flat; bassinet included",
             "tires": "never-flat foam-filled rubber-coated tires; all-wheel suspension; front swivel with lock",
             "adapterSystem": "Clek Car Seat Adapter for UPPAbaby (Cruz & Vista)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://strolleria.com/products/uppababy-vista-v3-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -4538,7 +4612,8 @@
             "recline": "multi-position to full/near-flat recline (infinite recline)",
             "tires": "EVA foam-coated wheels (front ~18 cm / rear ~24 cm); front swivel wheels",
             "adapterSystem": "Valco Baby Travel System Adapters – Snap Ultra Trend",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.megababiesusa.com/products/snap-ultra-trend"
           },
           "scores": {},
           "priceSources": [
@@ -4586,7 +4661,8 @@
             "recline": "seat backs recline; near-flat with infant insert (no multi-position mechanism like a traditional stroller)",
             "tires": "large rugged knobby polyurethane foam (never-flat) tires; front swivel wheels with suspension; removable wheels",
             "adapterSystem": "Veer Cruiser Infant Car Seat Adapter (Cybex / Maxi-Cosi / Nuna / Clek)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://goveer.com/products/cruiser"
           },
           "scores": {},
           "priceSources": [
@@ -4633,7 +4709,8 @@
             "recline": "single-handed one-click 4-position recline",
             "tires": "XL air-filled pneumatic tires: 12 in front / 16 in rear; fixed front wheel for jogging",
             "adapterSystem": "Veer Switchback Infant Car Seat Adapter (Cybex / Maxi-Cosi / Nuna / Clek)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://goveer.com/products/switch-jog-jogging-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -4680,7 +4757,8 @@
             "recline": "single-handed one-click 4-position recline including near lay-flat",
             "tires": "XL never-flat (foam-filled) tires; front wheel 9.5 in / rear wheel 12 in; swivel front for strolling",
             "adapterSystem": "Veer Switchback Infant Car Seat Adapter (Cybex / Maxi-Cosi / Nuna / Clek)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://goveer.com/products/switch-roll-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -4726,7 +4804,8 @@
             "recline": "removable raised bench seats that recline",
             "tires": "all-terrain wheels with suspension and bearings",
             "adapterSystem": "Wonderfold Clek Car Seat Adapter (Car Seat Adapter for Stroller Wagon)",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.dillards.com/p/wonderfold-w4-elite-4-seater-quad-stroller-wagon/518167767"
           },
           "scores": {},
           "priceSources": [
@@ -4783,7 +4862,8 @@
             "madeBy": "UPPAbaby",
             "seatBrands": "Maxi-Cosi, Nuna PIPA series, Cybex, and Clek Liing & Liingo — the product is officially titled for Maxi-Cosi/Nuna/Cybex/Clek, so the Clek Liing is explicitly supported.",
             "forStrollers": "uppababy-minu-v3",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bambibaby.com/products/uppababy-car-seat-adapters-for-minu-v3"
           },
           "scores": {},
           "priceSources": [
@@ -4815,7 +4895,8 @@
             "madeBy": "UPPAbaby",
             "seatBrands": "Maxi-Cosi (Mico NXT, Mico Max Plus), Nuna PIPA series, Cybex Aton series, Clek Liing & Liingo (Clek listed by name), and some retailers also list BeSafe.",
             "forStrollers": "uppababy-ridge",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bambibaby.com/products/uppababy-car-seat-adapters-for-ridge-maxi-cosi-nuna-cybex-and-besafe"
           },
           "scores": {},
           "priceSources": [
@@ -4847,7 +4928,8 @@
             "madeBy": "UPPAbaby",
             "seatBrands": "Maxi-Cosi (Mico NXT, Mico Max Plus), Nuna PIPA series, Cybex Aton series, and Clek Liing & Liingo — Clek Liing explicitly listed. (Not compatible with Maxi-Cosi Prezi.)",
             "forStrollers": "uppababy-vista-double",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bambibaby.com/products/uppa-baby-lower-infant-car-seat-2018-adapter-for-maxi-cosi-nuna-and-cybex"
           },
           "scores": {},
           "priceSources": [
@@ -4879,7 +4961,8 @@
             "madeBy": "UPPAbaby",
             "seatBrands": "Maxi-Cosi (Mico Max 30, Mico NXT, Mico AP, Mico Max Plus), Nuna PIPA series, Cybex Aton series, and Clek Liing — Clek Liing listed by name (works via its Maxi-Cosi-style footprint).",
             "forStrollers": "uppababy-minu",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://bergsbaby.com/products/uppababy-minu-nuna-car-seat-adapter"
           },
           "scores": {},
           "priceSources": [
@@ -4911,7 +4994,8 @@
             "madeBy": "Bugaboo",
             "seatBrands": "Maxi-Cosi interface car seats. Bugaboo lists: Clek Liing; Maxi-Cosi Mico / Mico 30; Nuna Pipa series (Pipa, Lite, Lite LX, RX); Cybex Aton 2 / Aton Q / Cloud Q; Kiddy Evolution Pro2; and Bugaboo Turtle Air / Turtle One by Nuna. Confirms the Clek Liing + Maxi-Cosi footprint.",
             "forStrollers": "bugaboo-butterfly",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.destinationbabykids.com/products/butterfly-car-seat-adapter"
           },
           "scores": {},
           "priceSources": [
@@ -4943,7 +5027,8 @@
             "madeBy": "Thule",
             "seatBrands": "Maxi-Cosi / BeSafe / Cybex / Nuna (Maxi-Cosi-style footprint). Thule's own page does not name Clek, but Clek's official compatibility list confirms the Clek Liing/Liingo attaches to the Thule Sleek via THIS adapter (11000300) — the Liing uses the Maxi-Cosi footprint.",
             "forStrollers": "thule-sleek · thule-sleek-double",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.thule.com/en-us/strollers/strollers-accessories/thule-sleek-car-seat-adapter-for-maxi-cosi-_-11000300"
           },
           "scores": {},
           "priceSources": [
@@ -4975,7 +5060,8 @@
             "madeBy": "Thule",
             "seatBrands": "Frame-conversion kit (upper + lower adapters) that reconfigures the Thule Sleek into a sibling/double stroller — enables a second seat, bassinet, or car seat position. For a Clek Liing in the second position it is paired with the Maxi-Cosi car seat adapter 11000300 (which carries the Liing/Maxi-Cosi/BeSafe/Cybex/Nuna footprint).",
             "forStrollers": "thule-sleek-double",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.thule.com/en-us/strollers/strollers-accessories/thule-sleek-adapter-kit-_-11000326"
           },
           "scores": {},
           "priceSources": [
@@ -5000,7 +5086,8 @@
             "madeBy": "Mamas & Papas",
             "seatBrands": "Maxi-Cosi / Cybex / Joie (per M&P listing). Clek's official list attests the Liing fits the Ocarro via this adapter — the Liing shares the Maxi-Cosi infant-seat footprint, though M&P's product name does not spell out 'Clek'.",
             "forStrollers": "mamaspapas-ocarro",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.mamasandpapas.com/products/armadillo-flip-xt-ocarro-cybex-maxicosi-car-seat-adaptors-159925300"
           },
           "scores": {},
           "priceSources": [
@@ -5032,7 +5119,8 @@
             "seatBrands": "Maxi-Cosi / Cybex / Clek Liing",
             "forStrollers": "babyjogger-city-mini-gt · babyjogger-city-mini-4",
             "fitsLiing": true,
-            "discontinued": true
+            "discontinued": true,
+            "sourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
           },
           "scores": {},
           "priceSources": [],
@@ -5050,7 +5138,8 @@
             "seatBrands": "Maxi-Cosi / BeSafe / Cybex / Nuna (Maxi-Cosi-style footprint). Clek's official list confirms the Clek Liing/Liingo attaches to the Urban Glide 2 via THIS adapter (20110740) — the Liing uses the Maxi-Cosi footprint.",
             "forStrollers": "thule-urban-glide-2",
             "fitsLiing": true,
-            "discontinued": true
+            "discontinued": true,
+            "sourceUrl": "https://www.potterybarnkids.com/products/thule-maxi-cosi-carseat-adaptor/"
           },
           "scores": {},
           "priceSources": [
@@ -5082,7 +5171,8 @@
             "madeBy": "Thule",
             "seatBrands": "Universal footprint — Chicco and many other popular infant car seat brands (this is Thule's 'universal/Chicco' Urban Glide 3 adapter, distinct from the Maxi-Cosi-specific 20110761). Clek's official list confirms the Clek Liing/Liingo attaches to the Urban Glide 3 and Urban Glide 4 via THIS universal adapter (20110762).",
             "forStrollers": "thule-urban-glide-3 · thule-urban-glide-4",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.thule.com/en-us/strollers/strollers-accessories/thule-urban-glide-car-seat-adapter-universal-_-20110762"
           },
           "scores": {},
           "priceSources": [
@@ -5107,7 +5197,8 @@
             "seatBrands": "Maxi-Cosi / Cybex / Clek Liing",
             "forStrollers": "babyjogger-city-select-double",
             "fitsLiing": true,
-            "discontinued": true
+            "discontinued": true,
+            "sourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
           },
           "scores": {},
           "priceSources": [],
@@ -5124,7 +5215,8 @@
             "seatBrands": "Maxi-Cosi / Cybex / Clek Liing",
             "forStrollers": "babyjogger-city-select · babyjogger-city-select-double",
             "fitsLiing": true,
-            "discontinued": true
+            "discontinued": true,
+            "sourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
           },
           "scores": {},
           "priceSources": [],
@@ -5141,7 +5233,8 @@
             "seatBrands": "Cybex / Clek Liing",
             "forStrollers": "babyjogger-city-mini-gt2 · babyjogger-city-mini-2",
             "fitsLiing": true,
-            "discontinued": true
+            "discontinued": true,
+            "sourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
           },
           "scores": {},
           "priceSources": [],
@@ -5158,7 +5251,8 @@
             "madeBy": "Stokke",
             "seatBrands": "Maxi-Cosi / Nuna / Cybex / BeSafe / Clek — explicitly lists the Clek Liing.",
             "forStrollers": "stokke-xplory · stokke-trailz · stokke-scoot",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.megababiesusa.com/products/stokke-stroller-car-seat-adapter-multi"
           },
           "scores": {},
           "priceSources": [
@@ -5183,7 +5277,8 @@
             "madeBy": "Bugaboo",
             "seatBrands": "Maxi-Cosi interface car seats. Bugaboo lists: Clek Liing; Maxi-Cosi Coral XP / Mico XP Max / Mico 30 / Mico Luxe+; Nuna Pipa series (Pipa, Lite, Lite LX, RX, Aire, Aire RX, Urbn); Cybex Cloud Q / Aton M / Aton 2 / Cloud G Lux with SensorSafe; and Bugaboo Turtle Air / Turtle One by Nuna. Confirms the Clek Liing + Maxi-Cosi footprint.",
             "forStrollers": "bugaboo-butterfly-2",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bugaboo.com/us-en/accessories/adapters/bugaboo-butterfly-2-car-seat-adapters-400018MI.html"
           },
           "scores": {},
           "priceSources": [
@@ -5222,7 +5317,8 @@
             "madeBy": "Joolz",
             "seatBrands": "Maxi-Cosi / Nuna / Cybex / Clek — Joolz US page explicitly lists 'Clek: Liing, Liingo'.",
             "forStrollers": "joolz-geo2 · joolz-geo2-double",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joolz.com/us/en/accessories/414001-M.html"
           },
           "scores": {},
           "priceSources": [
@@ -5261,7 +5357,8 @@
             "madeBy": "Joolz",
             "seatBrands": "Maxi-Cosi / Nuna / Cybex / Clek — Joolz US page lists the same seat brands as the upper adapter, including Clek.",
             "forStrollers": "joolz-geo2-double",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joolz.com/us/en/accessories/414002-M.html"
           },
           "scores": {},
           "priceSources": [
@@ -5286,7 +5383,8 @@
             "madeBy": "Bugaboo",
             "seatBrands": "Maxi-Cosi footprint — confirm Clek Liing fits. Bugaboo's official adapter page lists it as the Fox/Lynx/Buffalo adapter for 'Maxi-Cosi' car seats (Maxi-Cosi Pebble / Pebble Plus etc.) and the same footprint used by Nuna/Cybex/BeSafe infant seats; Bugaboo's own page does NOT explicitly name Clek. Strolleria's US listing for this same Fox/Lynx adapter DOES explicitly advertise 'Clek / Cybex / Maxi-Cosi / Nuna' compatibility, and Clek's official compatibility list files the Bugaboo Fox/Fox2/Fox3/Fox5, Lynx, and Kangaroo under this part for mounting the Clek Liing/Liingo. Retailer + Clek corroboration indicate the Liing rides on this Maxi-Cosi-footprint bracket, but this is retailer/Clek-stated rather than printed on Bugaboo's own adapter page — verify at purchase. Adapter-mounted seats limited to 28.7 lb (13 kg) child weight.",
             "forStrollers": "bugaboo-fox · bugaboo-lynx · bugaboo-kangaroo",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://littlebe.com/products/bugaboo-fox-lynx-buffalo-adapter-for-maxi-cosi-r-car-seats"
           },
           "scores": {},
           "priceSources": [
@@ -5325,7 +5423,8 @@
             "madeBy": "Joolz",
             "seatBrands": "Nuna / Cybex / Maxi-Cosi / Clek — Clek's official list AND retailer titles explicitly enumerate Clek (Liing).",
             "forStrollers": "joolz-day3",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.albeebaby.com/products/joolz-day3-car-seat-adapter-nuna-maxi-cosi-clek"
           },
           "scores": {},
           "priceSources": [
@@ -5364,7 +5463,8 @@
             "madeBy": "Bugaboo",
             "seatBrands": "Maxi-Cosi / Cybex / Nuna — and the Clek Liing is explicitly listed on Bugaboo's compatibility page (confirms the Clek Liing / Maxi-Cosi footprint). Max car-seat child weight 28.7 lb per Bugaboo.",
             "forStrollers": "bugaboo-cameleon-3",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bugaboo.com/us-en/bugaboo-cameleon3-adapter-for-maxi-cosi-car-seat-80401MC02.html"
           },
           "scores": {},
           "priceSources": [
@@ -5403,7 +5503,8 @@
             "madeBy": "Bugaboo",
             "seatBrands": "Maxi-Cosi / Nuna / Cybex / Bugaboo Turtle (One & Air by Nuna) — and the Clek Liing is explicitly listed on Bugaboo's compatibility page (confirms the Clek Liing / Maxi-Cosi footprint).",
             "forStrollers": "bugaboo-bee",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://bugaboo.com/us-en/accessories/adapters/bee-adapters/bugaboo-bee5-adapters-maxi-cosi-car-seat-85510MC01.html"
           },
           "scores": {},
           "priceSources": [
@@ -5442,7 +5543,8 @@
             "madeBy": "Bugaboo",
             "seatBrands": "Maxi-Cosi footprint - fits Maxi-Cosi (Mico), Nuna Pipa series, Cybex, and Bugaboo Turtle infant seats, in a side-by-side pair. Retailer pages do not name the Clek Liing, but Clek's own compatibility list designates THIS adapter (855180MC02) for the Clek Liing on the Donkey/Donkey 5 in twin mode.",
             "forStrollers": "bugaboo-donkey-twin · bugaboo-donkey-5-twin",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bambibaby.com/products/bugaboo-donkey-maxi-cosi-carseat-adapter-twin"
           },
           "scores": {},
           "priceSources": [
@@ -5474,7 +5576,8 @@
             "madeBy": "Bugaboo",
             "seatBrands": "Maxi-Cosi footprint - fits Maxi-Cosi (Mico), Nuna Pipa series, Cybex, and Bugaboo Turtle infant seats. Retailer pages do not name the Clek Liing, but Clek's own compatibility list designates THIS adapter (855190MC01) for the Clek Liing on the Donkey/Donkey 5 in mono mode.",
             "forStrollers": "bugaboo-donkey-mono · bugaboo-donkey-5-mono",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bugaboo.com/us-en/accessories/adapters/donkey-adapters/bugaboo-donkey-adapter-for-maxi-cosi-car-seat---mono-na-855190MC01.html"
           },
           "scores": {},
           "priceSources": [
@@ -5506,7 +5609,8 @@
             "madeBy": "Joolz",
             "seatBrands": "Cybex / Nuna / Maxi-Cosi (and Avionaut / Britax per Amazon). Clek's official list attests the Liing fits the Hub via this adapter, though the Joolz/retailer product name enumerates Cybex/Nuna rather than spelling out 'Clek'.",
             "forStrollers": "joolz-hub",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bambibaby.com/products/joolz-hub-car-seat-adapters"
           },
           "scores": {},
           "priceSources": [
@@ -5545,7 +5649,8 @@
             "madeBy": "Bugaboo",
             "seatBrands": "Per Bugaboo's official 91510CS01 page: Bugaboo Turtle One by Nuna, Bugaboo Turtle Air by Nuna, Nuna Pipa Lite, Cybex Aton 2, Cybex Aton Q, Cybex Cloud Q, and — explicitly — the Clek Liing. So although the adapter is marketed as 'Nuna/Cybex' and the Clek Liing is usually described as a Maxi-Cosi-style seat, the manufacturer itself lists the Liing as compatible, corroborating Clek's official list; the Liing mounts on the same Nuna/Cybex bracket footprint. NOTE: Bugaboo's official page does NOT list Maxi-Cosi; some third-party retailers (e.g. Dearborn Baby) add 'Maxi Cosi' to the compatibility blurb — treat that as an unverified retailer claim, not manufacturer-stated. Adapter-mounted seats are limited to 28.7 lb child weight.",
             "forStrollers": "bugaboo-ant",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bugaboo.com/us-en/bugaboo-ant-adapter-for-selected-car-seats-91510CS01.html"
           },
           "scores": {},
           "priceSources": [
@@ -5577,7 +5682,8 @@
             "madeBy": "Valco Baby",
             "seatBrands": "Maxi-Cosi / Nuna / Cybex / Clek — the Clek Liing is explicitly supported (retailer listings, e.g. Snuggle Bugz, title it 'Ultra Trend Adapter – Maxi Cosi/Nuna/Cybex/Clek', and it is the exact part A9904 named on Clek's official compatibility list).",
             "forStrollers": "valco-snap-ultra-trend",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bambibaby.com/products/valco-universal-car-seat-adapter-snap-ultra-trend"
           },
           "scores": {},
           "priceSources": [
@@ -5609,7 +5715,8 @@
             "madeBy": "Britax",
             "seatBrands": "Maxi-Cosi (Mico 30 / Max 30 / AP / Prezi) / Cybex (Aton, Aton 2/Q, Cloud Q) / Nuna (Pipa, Pipa Lite). The Clek Liing/Liingo share the Maxi-Cosi footprint — Clek's official list names the Britax 'Click'n Go Infant Car Seat Adapter' as the adapter for the B-Lively, so the Liing fits via this bracket. Retailer pages list Maxi-Cosi/Cybex/Nuna (not 'Clek' by name).",
             "forStrollers": "britax-b-lively",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.megababiesusa.com/products/britax-infant-car-seat-adapter-for-cybex-nuna-and-maxi-cosi-car-seats"
           },
           "scores": {},
           "priceSources": [
@@ -5640,7 +5747,8 @@
             "madeBy": "Bugaboo",
             "seatBrands": "Maxi-Cosi footprint. Per Bugaboo's official Dragonfly Maxi-Cosi adapter page (400003001), compatible seats include: Maxi-Cosi Coral XP, Mico Max Plus, Mico, Mico 30; Nuna Pipa RX, Pipa, Pipa Lite, Pipa Lite LX; Bugaboo Turtle Air Shield/Turtle Air/Turtle One by Nuna; Cybex Aton M, Aton 2; and — explicitly — the Clek Liing. So the Clek Liing fit is manufacturer-confirmed, corroborating Clek's official list.",
             "forStrollers": "bugaboo-dragonfly",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
           },
           "scores": {},
           "priceSources": [
@@ -5679,7 +5787,8 @@
             "madeBy": "BabyZen (Stokke)",
             "seatBrands": "Maxi-Cosi / Cybex / Nuna / Clek — the current BZ10205-03 adapter explicitly lists the Clek Liing.",
             "forStrollers": "babyzen-yoyo",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.nordstrom.com/s/babyzen-adapters-for-yoyo-and-yoyo-stroller-cybex-nuna-clek-and-maxi-cosi-infant-car-seats/4601012"
           },
           "scores": {},
           "priceSources": [
@@ -5704,7 +5813,8 @@
             "madeBy": "Clek",
             "seatBrands": "Clek Liing & Liingo (this is Clek's OWN single-brand adapter — made by Clek for the Liing/Liingo footprint). UPPAbaby's own multi-brand 0919-UMA-WW 'Car Seat Adapter for Vista & Cruz' (Maxi-Cosi/Nuna/Cybex/Clek) is the functionally equivalent in-stock alternative for the upper position.",
             "forStrollers": "uppababy-cruz · uppababy-cruz-v2 · uppababy-cruz-v3 · uppababy-vista · uppababy-vista-double",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://babys1st.com/products/clek-liing-infant-car-seat-adapter-for-uppababy-vista-cruz"
           },
           "scores": {},
           "priceSources": [
@@ -5742,7 +5852,8 @@
             "seatBrands": "Maxi-Cosi / Nuna / Cybex / Clek — Colugo's universal adapter is listed for the Clek Liing on Clek's official compatibility list (marked *Discontinued). Confirmed Clek Liing supported.",
             "forStrollers": "colugo-complete",
             "fitsLiing": true,
-            "discontinued": true
+            "discontinued": true,
+            "sourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
           },
           "scores": {},
           "priceSources": [],
@@ -5759,7 +5870,8 @@
             "madeBy": "Mima",
             "seatBrands": "Maxi-Cosi / Cybex / Nuna / Clek — mimakidsusa explicitly lists 'Clek Liing' among compatible seats.",
             "forStrollers": "mima-xari",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://mimakidsusa.com/products/xari-max-car-seat-adapter"
           },
           "scores": {},
           "priceSources": [
@@ -5791,7 +5903,8 @@
             "madeBy": "Glüxkind",
             "seatBrands": "Clek Liing — a precision-fit adapter thoughtfully designed to pair the Clek Liing with the Glüxkind Rosa. Confirmed Clek Liing supported per Clek's list; Rosa is also certified for the Clek Liingo.",
             "forStrollers": "gluxkind-rosa",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://shop.gluxkind.com/products/car-seat-adaptor"
           },
           "scores": {},
           "priceSources": [
@@ -5814,7 +5927,8 @@
             "madeBy": "Guzzie+Guss",
             "seatBrands": "Clek / Maxi-Cosi / Nuna / Cybex — the Hopscotch ships with adapters compatible with these seats; confirmed Clek Liing supported per Clek's list.",
             "forStrollers": "guzzieguss-hopscotch",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.albeebaby.com/products/guzzie-guss-hopscotch-stroller-raven"
           },
           "scores": {},
           "priceSources": [
@@ -5840,7 +5954,8 @@
             "madeBy": "Agio (Peg Perego)",
             "seatBrands": "Maxi-Cosi Mico family, Cybex Aton family & Cloud Q, Nuna Pipa family, Recaro Performance Coupe, and Clek Liing — Clek Liing explicitly supported per Clek's official Liing/Liingo list. (Not compatible with Stokke PIPA.)",
             "forStrollers": "pegperego-agio-z4-ypsi",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.kidslandusa.com/products/agio-by-peg-perego-z4-ypsi-car-seat-adapters"
           },
           "scores": {},
           "priceSources": [
@@ -5872,7 +5987,8 @@
             "madeBy": "Agio (Peg Perego)",
             "seatBrands": "Peg Perego Primo Viaggio 4-35 Nido, Nuna Pipa, Maxi-Cosi Mico, UPPAbaby Mesa, Cybex Aton, and Clek Liing — Clek Liing explicitly supported per Clek's official Liing/Liingo list.",
             "forStrollers": "pegperego-agio-z3",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://agiobaby.com/products/agio-by-peg-perego-car-seat-adapter-for-z3-stroller"
           },
           "scores": {},
           "priceSources": [
@@ -5897,7 +6013,8 @@
             "madeBy": "Joolz",
             "seatBrands": "Maxi-Cosi / Cybex / Nuna / BeSafe / Avionaut / Britax Römer / Clek — the Amazon/retail listing explicitly names Clek Liing and Liingo.",
             "forStrollers": "joolz-aer",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joolz.com/us/en/accessories/309900-M.html"
           },
           "scores": {},
           "priceSources": [
@@ -5936,7 +6053,8 @@
             "madeBy": "Joolz",
             "seatBrands": "Maxi-Cosi / Cybex / Nuna / Clek — the product title explicitly names Clek.",
             "forStrollers": "joolz-aer-2",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://babyongrand.com/products/joolz-aer-2-car-seat-adapters-for-cybex-nuna-mai-cosi-clek"
           },
           "scores": {},
           "priceSources": [
@@ -5967,7 +6085,8 @@
             "madeBy": "Joovy",
             "seatBrands": "Maxi-Cosi / Cybex footprint — the Clek Liing uses this footprint and is confirmed Liing-compatible on Clek's official stroller list.",
             "forStrollers": "joovy-twin-roo",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joovy.com/products/twin-roo-maxi-cosi-cybex-carseat-adapter"
           },
           "scores": {},
           "priceSources": [
@@ -5991,7 +6110,8 @@
             "madeBy": "Joovy",
             "seatBrands": "Universal (strap/click-in) — fits most infant car seats; the Clek Liing is confirmed Liing-compatible on Clek's official stroller list for these Joovy models.",
             "forStrollers": "joovy-balloon · joovy-big-caboose · joovy-caboose · joovy-caboose-ul · joovy-zoom-360",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joovy.com/products/zoom-zoom-360-universal-car-seat-adapter"
           },
           "scores": {},
           "priceSources": [
@@ -6022,7 +6142,8 @@
             "madeBy": "Joovy",
             "seatBrands": "Maxi-Cosi / Cybex / Nuna footprint — the Clek Liing uses this footprint and is confirmed Liing-compatible on Clek's official stroller list.",
             "forStrollers": "joovy-caboose-s-rs · joovy-qool",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.joovy.com/products/caboose-rs-and-caboose-s-car-seat-adapter"
           },
           "scores": {},
           "priceSources": [
@@ -6060,7 +6181,8 @@
             "madeBy": "Larktale",
             "seatBrands": "Maxi-Cosi / Nuna / Clek / Britax / Chicco — Clek Liing (and Liingo) confirmed via Clek's official Liing/Liingo compatibility list, which names this 'Car Seat Adapter – Multi-Model' (LK29400) for the Larktale Coast. Larktale's Multi-Model adapter family lists Clek Liing/Liingo.",
             "forStrollers": "larktale-coast",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
           },
           "scores": {},
           "priceSources": [],
@@ -6077,7 +6199,8 @@
             "madeBy": "Bumbleride",
             "seatBrands": "Clek (Liing, Liingo) / Maxi-Cosi (Mico 30, AP, Luxe, Luxe+, Pro) / Cybex (Cloud G Pro, Cloud G, Cloud G Lux, Aton G) / Nuna (Pipa Aire, Aire RX, Pipa RX). Explicitly lists the Clek Liing.",
             "forStrollers": "bumbleride-indie · bumbleride-speed",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://bumbleride.com/products/indie-speed-adapter-maxi-cosi-nuna-cybex-clek"
           },
           "scores": {},
           "priceSources": [
@@ -6102,7 +6225,8 @@
             "madeBy": "Bumbleride",
             "seatBrands": "Clek (Liing, Liingo) / Maxi-Cosi (Mico series) / Cybex (Cloud G, Aton G) / Nuna (Pipa Aire, Aire RX, Pipa RX). Explicitly lists the Clek Liing.",
             "forStrollers": "bumbleride-era",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://bumbleride.com/products/era-car-seat-adapter-maxi-cosi-cybex-nuna-clek"
           },
           "scores": {},
           "priceSources": [
@@ -6134,7 +6258,8 @@
             "madeBy": "Bumbleride",
             "seatBrands": "Clek (Liing, Liingo) / Maxi-Cosi (Mico Luxe, Luxe+, Max Plus, 30, AP) / Cybex (Cloud G series, Aton series) / Nuna (Pipa Aire, Aire RX, Pipa Lite). Explicitly lists the Clek Liing.",
             "forStrollers": "bumbleride-indie-twin-one",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://bumbleride.com/products/indie-twin-car-seat-adapter-single-clek-maxi-cosi-cybex-nuna"
           },
           "scores": {},
           "priceSources": [
@@ -6166,7 +6291,8 @@
             "madeBy": "Bumbleride",
             "seatBrands": "Clek (Liing, Liingo) / Maxi-Cosi (Mico Luxe, Luxe+) / Cybex (Cloud G Pro, Cloud G, Cloud G Lux, Aton G) / Nuna (Pipa Aire, Aire RX). Explicitly lists the Clek Liing — accepts two Clek Liing seats side by side.",
             "forStrollers": "bumbleride-indie-twin-two",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://bumbleride.com/products/indie-twin-car-seat-adapter-set-clek-maxi-cosi-cybex-nuna"
           },
           "scores": {},
           "priceSources": [
@@ -6190,7 +6316,8 @@
             "madeBy": "Mockingbird",
             "seatBrands": "Clek Liing — this is the Clek-specific version selected from Mockingbird's adapter dropdown. Mockingbird's car-seat adapter line supports 40+ infant seats across Baby Jogger, Britax, Chicco, Clek, Cybex, Graco, Maxi-Cosi, Nuna and UPPAbaby; the Clek variant is literally the 'Clek Liing Car Seat Adapter'.",
             "forStrollers": "mockingbird",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://hellomockingbird.com/products/stroller-car-seat-adapter"
           },
           "scores": {},
           "priceSources": [
@@ -6215,7 +6342,8 @@
             "madeBy": "Orbit Baby",
             "seatBrands": "Maxi-Cosi / Cybex / Nuna / Bugaboo (Turtle Air) / Clek — Clek Liing explicitly listed. Attaches a non-Orbit infant car seat to the Orbit Baby stroller.",
             "forStrollers": "orbitbaby-g5",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://orbitbaby.com/products/system-adapter"
           },
           "scores": {},
           "priceSources": [
@@ -6240,7 +6368,8 @@
             "madeBy": "B.O.B. Gear (Britax)",
             "seatBrands": "Maxi-Cosi / Cybex / Nuna (Maxi-Cosi-style footprint). The Clek Liing/Liingo share this footprint — Clek's official compatibility list names S12046000 as the adapter for the BOB Alterrain / Alterrain Pro and Revolution Flex 3.0. Note: BOB's own retail page lists Cybex/Maxi-Cosi/Nuna (and a UPPAbaby variant) and does not print 'Clek', but Clek confirms the Liing fits via this adapter; car-seat specialist retailers (anb, Baby Grand) also list Clek.",
             "forStrollers": "bob-alterrain · bob-revolution-flex-3",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.bobgear.com/all-accessories"
           },
           "scores": {},
           "priceSources": [
@@ -6270,7 +6399,8 @@
             "madeBy": "Silver Cross",
             "seatBrands": "Clek (Liing) / Cybex (Aton, Aton Q, Cloud Q) / Maxi-Cosi (Mico 30, Mico Max, Coral XP) / Nuna (Pipa, Pipa Lite, Pipa Lite LX, Pipa RX). Silver Cross US lists the Clek Liing.",
             "forStrollers": "silvercross-comet",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://silvercrossus.com/product/comet-car-seat-adapters/"
           },
           "scores": {},
           "priceSources": [
@@ -6301,7 +6431,8 @@
             "madeBy": "Silver Cross",
             "seatBrands": "Clek (Liing) / Maxi-Cosi (Mico 30, Mico Max, Coral XP, Mico Luxe+) / Nuna (Pipa family) / Cybex. Retailers explicitly list the Clek Liing.",
             "forStrollers": "silvercross-dune · silvercross-reef",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://silvercrossus.com/product/dune-reef-car-seat-adapters/"
           },
           "scores": {},
           "priceSources": [
@@ -6339,7 +6470,8 @@
             "madeBy": "Silver Cross",
             "seatBrands": "Clek (Liing) / Maxi-Cosi (Mico 30, Mico Max, Coral XP, Mico Luxe+) / Nuna / Cybex. Retailers explicitly list the Clek Liing.",
             "forStrollers": "silvercross-jet",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://babys1st.com/products/silver-cross-jet-adapters-all-models"
           },
           "scores": {},
           "priceSources": [
@@ -6378,7 +6510,8 @@
             "madeBy": "Silver Cross",
             "seatBrands": "Clek (Liing) / Cybex (Aton, Aton Q, Cloud Q, Aton G, Cloud G) / Maxi-Cosi (Mico 30, Mico Max, Coral XP, Mico Luxe+) / Nuna (Pipa family). Retailers explicitly list the Clek Liing.",
             "forStrollers": "silvercross-coast · silvercross-wave",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://strolleria.com/products/silver-cross-coast-main-car-seat-adapters"
           },
           "scores": {},
           "priceSources": [
@@ -6410,7 +6543,8 @@
             "madeBy": "Silver Cross",
             "seatBrands": "Clek (Liing) / Cybex (Aton G, Cloud G) / Maxi-Cosi (Mico Luxe+) / Nuna (Pipa RX, Pipa Aire RX). Silver Cross US explicitly lists 'Clek: Liing'.",
             "forStrollers": "silvercross-breez",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://silvercrossus.com/product/breez-car-seat-adapters/"
           },
           "scores": {},
           "priceSources": [
@@ -6441,7 +6575,8 @@
             "madeBy": "Veer",
             "seatBrands": "Cybex, Maxi-Cosi, Nuna, and Clek — the NEW (May 2023) adapter EXPLICITLY adds Clek and lists the Clek Liing. Nuna PIPA family, Cybex Aton, Maxi-Cosi Mico. (Note: Stokke PIPA by Nuna not supported.)",
             "forStrollers": "veer-cruiser",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://goveer.com/products/infant-car-seat-adapter"
           },
           "scores": {},
           "priceSources": [
@@ -6472,7 +6607,8 @@
             "madeBy": "Veer",
             "seatBrands": "Cybex (Aton Q & M), Maxi-Cosi (Mico Max 30, Mico 30, Nxt, Mico AP), Nuna (PIPA lite lx, PIPA lite, PIPA RX, PIPA), and Clek (Liing) — Clek Liing explicitly listed. NOT compatible with Stokke PIPA by Nuna.",
             "forStrollers": "veer-switchback-jog · veer-switchback-roll",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://www.babycubby.com/products/veer-switchback-infant-car-seat-adapter-nuna-maxi-cosi-cybex-clek"
           },
           "scores": {},
           "priceSources": [
@@ -6503,7 +6639,8 @@
             "madeBy": "Wonderfold",
             "seatBrands": "Clek — the Clek variant is 'exclusively designed and safety tested to fit Clek car seats' (Clek Liing). Wonderfold sells the Car Seat Adapter in per-brand variants (Nuna / Cybex / Maxi-Cosi / Clek, plus Graco / UPPAbaby / Britax / Chicco); Clek's official list points to the Clek version, which is what this fragment represents.",
             "forStrollers": "wonderfold-w4-w2",
-            "fitsLiing": true
+            "fitsLiing": true,
+            "sourceUrl": "https://wonderfold.com/products/car-seat-adapter"
           },
           "scores": {},
           "priceSources": [
