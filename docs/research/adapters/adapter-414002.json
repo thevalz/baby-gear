@@ -1,0 +1,38 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json. Lower adapter — used WITH 414001 for Geo2 double mode only.",
+  "id": "adapter-414002",
+  "name": "Joolz Geo2 Lower Car Seat Adapters",
+  "checkedAt": "2026-07-05",
+
+  "image": null,
+  "_imageNote": "No downloadable clean image obtained: Joolz's own CDN (joolz.com/dw/image) rejects automated download and the Shopify-retailer lower-adapter pages returned 404 to the fetcher. Product image is visible on the Joolz US page 414002-M.html (og:image .../WP/414002_Joolz_Geo2_ga_loweradapter_01.jpg).",
+
+  "partNumber": "414002",
+  "madeBy": "Joolz",
+
+  "seatBrandsSupported": "Maxi-Cosi / Nuna / Cybex / Clek — Joolz US page lists the same seat brands as the upper adapter, including Clek.",
+
+  "forStrollerIds": ["joolz-geo2-double"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": "*Used only in Geo2 double mode, together with the Geo2 Upper adapter (414001). Lowest-position caveat applies."
+  },
+
+  "priceSources": [
+    { "retailer": "Joolz DTC", "price": 44.99, "url": "https://www.joolz.com/us/en/accessories/414002-M.html", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right) lower-frame clips",
+    "toolFree": true,
+    "notes": "Attach to the lower section of the Geo2 frame; required in addition to the upper adapter (414001) to carry a car seat in the lower position for double mode."
+  },
+
+  "sources": [
+    "https://www.joolz.com/us/en/accessories/414002-M.html",
+    "https://strollberry.com/strollers/joolz-geo-2/"
+  ],
+  "notes": "Lower car seat adapter for the Joolz Geo2 double configuration — pairs with the upper adapter (adapter-414001). Joolz DTC $44.99 but 'currently not available' at check (out of stock). Niche double-mode part; retailer availability is limited and was not confirmable in stock. Image could not be auto-downloaded (see _imageNote)."
+}

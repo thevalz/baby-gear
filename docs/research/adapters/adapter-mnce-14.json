@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S3). Do NOT edit seed.json.",
+  "id": "adapter-mnce-14",
+  "name": "Bumbleride Era Car Seat Adapter – Clek / Maxi-Cosi / Cybex / Nuna",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-mnce-14.jpg",
+
+  "partNumber": "MNCE-14",
+  "madeBy": "Bumbleride",
+
+  "seatBrandsSupported": "Clek (Liing, Liingo) / Maxi-Cosi (Mico series) / Cybex (Cloud G, Aton G) / Nuna (Pipa Aire, Aire RX, Pipa RX). Explicitly lists the Clek Liing.",
+
+  "forStrollerIds": ["bumbleride-era"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Bumbleride (DTC)", "price": 65.00, "url": "https://bumbleride.com/products/era-car-seat-adapter-maxi-cosi-cybex-nuna-clek", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Bambi Baby", "price": 65.00, "url": "https://www.bambibaby.com/products/bumbleride-car-seat-adapter-for-era-nuna-maxi-cosi-cybex-clek", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "$65 at Bumbleride DTC (out of stock at check; email-notify offered). Bambi Baby carries it.",
+
+  "install": {
+    "pieces": "single adapter (Era is a single-seat stroller)",
+    "toolFree": true,
+    "notes": "Latches into the Era's hot-shoe mounts (2024+ strollers ship with the hot-shoe pre-installed). Seat fabric removal not required. Era-only — not compatible with Indie/Speed or Indie Twin."
+  },
+
+  "sources": [
+    "https://bumbleride.com/products/era-car-seat-adapter-maxi-cosi-cybex-nuna-clek",
+    "https://www.bambibaby.com/products/bumbleride-car-seat-adapter-for-era-nuna-maxi-cosi-cybex-clek",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Bumbleride's Era-specific adapter, part MNCE-14; explicitly lists the Clek Liing among supported seats. $65; DTC stock intermittent."
+}

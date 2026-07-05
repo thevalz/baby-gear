@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-414001",
+  "name": "Joolz Geo2 Upper Car Seat Adapters",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-414001.jpg",
+
+  "partNumber": "414001",
+  "madeBy": "Joolz",
+
+  "seatBrandsSupported": "Maxi-Cosi / Nuna / Cybex / Clek — Joolz US page explicitly lists 'Clek: Liing, Liingo'.",
+
+  "forStrollerIds": ["joolz-geo2", "joolz-geo2-double"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "*Handle/seat lowest-position caveat when a car seat is fitted (per Clek's list)."
+  },
+
+  "priceSources": [
+    { "retailer": "Joolz DTC", "price": 44.99, "url": "https://www.joolz.com/us/en/accessories/414001-M.html", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Mega Babies", "price": 40.00, "url": "https://www.megababiesusa.com/products/joolz-geo2-car-seat-adapters", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": 44.99, "url": "https://www.amazon.com/Joolz-Geo2-Upper-Adapter-Black/dp/B01MF6AX4U", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right) side clips",
+    "toolFree": true,
+    "notes": "Mount to the upper section of the Geo2 frame; used alone for single mode, and together with the Geo2 Lower adapter (414002) for double mode."
+  },
+
+  "sources": [
+    "https://www.joolz.com/us/en/accessories/414001-M.html",
+    "https://www.megababiesusa.com/products/joolz-geo2-car-seat-adapters",
+    "https://www.amazon.com/Joolz-Geo2-Upper-Adapter-Black/dp/B01MF6AX4U"
+  ],
+  "notes": "Upper car seat adapter for the Joolz Geo2. Single mode needs this alone; double mode needs this PLUS the lower adapter (adapter-414002). In stock at Joolz DTC $44.99; explicitly lists Clek Liing/Liingo. *Clek flags a lowest-position caveat with a car seat installed."
+}
