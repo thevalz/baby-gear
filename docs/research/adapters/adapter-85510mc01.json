@@ -1,0 +1,41 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-85510mc01",
+  "name": "Bugaboo Bee adapter for Turtle/Maxi-Cosi car seats",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-85510mc01.jpg",
+
+  "partNumber": "85510MC01",
+  "madeBy": "Bugaboo",
+
+  "seatBrandsSupported": "Maxi-Cosi / Nuna / Cybex / Bugaboo Turtle (One & Air by Nuna) — and the Clek Liing is explicitly listed on Bugaboo's compatibility page (confirms the Clek Liing / Maxi-Cosi footprint).",
+
+  "forStrollerIds": ["bugaboo-bee"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": "On Clek's official Liing/Liingo list for the Bugaboo Bee (2010)/Bee 3/Bee 5/Bee 6 row; no handle-position caveat noted by Clek for the Bee."
+  },
+
+  "priceSources": [
+    { "retailer": "Bugaboo (DTC)", "price": 59.95, "url": "https://bugaboo.com/us-en/accessories/adapters/bee-adapters/bugaboo-bee5-adapters-maxi-cosi-car-seat-85510MC01.html", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "ANB Baby", "price": 59.95, "url": "https://www.anbbaby.com/products/bugaboo-bee-adapter-for-turtle-one-maxi-cosi-car-seats-black", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "GoodBuy Gear", "price": 16.25, "url": "https://goodbuygear.com/products/bugaboo-bee-adapter-turtle-one-maxi-cosi", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right click-and-go brackets)",
+    "toolFree": true,
+    "notes": "Click-and-go: brackets clip onto the Bee frame, infant seat clicks into the brackets. Fits Bugaboo Bee (2010), Bee 3, Bee 5 and Bee 6. No handle-position restriction noted for the Bee."
+  },
+
+  "sources": [
+    "https://bugaboo.com/us-en/accessories/adapters/bee-adapters/bugaboo-bee5-adapters-maxi-cosi-car-seat-85510MC01.html",
+    "https://www.anbbaby.com/products/bugaboo-bee-adapter-for-turtle-one-maxi-cosi-car-seats-black",
+    "https://goodbuygear.com/products/bugaboo-bee-adapter-turtle-one-maxi-cosi",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Genuine Bugaboo adapter #85510MC01, the part Clek names for the entire Bugaboo Bee row (Bee 2010/Bee3/Bee5/Bee6) to mount the Clek Liing. Bugaboo's own page lists the Clek Liing among compatible seats. MSRP $59.95 (Bugaboo DTC and ANB), but currently OUT OF STOCK at every US retailer checked (Bugaboo, ANB out of stock; GoodBuy Gear used $16.25 also out of stock) - not discontinued, just low availability as of 2026-07-05. Reconfirm price/stock at checkout."
+}

@@ -1,0 +1,60 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S10). Glüxkind smart/AI stroller. Clek's list row says 'Glüxkind Rosa' — Rosa is Glüxkind's currently-SHIPPING smart stroller ($2,290, made in Canada) and is the model certified compatible with Clek Liing/Liingo. It is distinct from the experimental 'Ella' self-driving concept ($3,800). This fragment is built on Rosa (the Clek-listed, in-market model). Do NOT edit seed.json.",
+  "id": "gluxkind-rosa",
+  "name": "Glüxkind Rosa Smart Stroller",
+  "brand": "Glüxkind",
+  "checkedAt": "2026-07-05",
+  "image": "images/gluxkind-rosa.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Glüxkind Rosa — Universal Car Seat Adapter",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-gluxkind-universal"],
+
+  "priceSources": [
+    { "retailer": "Glüxkind DTC (shop.gluxkind.com)", "price": 2290.00, "url": "https://shop.gluxkind.com/products/gluxkind-rosa-smart-stroller", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 33,
+    "_weightNote": "33 lb is the FRAME weight per Glüxkind's DTC spec (shop.gluxkind.com); components add bassinet 10.5 lb + seat 11.5 lb. A combined total assembled weight is not published.",
+
+    "unfoldedIn": { "lengthIn": 40, "widthIn": 27, "heightIn": 43 },
+    "foldedIn": { "lengthIn": 30, "widthIn": 27, "heightIn": 15 },
+    "_dimsNote": "Per Glüxkind's DTC spec (shop.gluxkind.com): unfolded 40 L x 27 W x 43 H in; folded 30 L x 27 W x 15 H in (battery/seat/bassinet removed before folding).",
+
+    "brake": { "hasBrake": true, "type": "intelligent/automatic braking + automatic parking (dual-motor assist)" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (sleep-ready bassinet included from day one) through toddler (lay-flat toddler seat)",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "Sold into the US market; meets applicable US stroller standard (ASTM F833) though Glüxkind does not cite the standard number publicly",
+      "certifications": "CES Innovation Award honoree",
+      "notes": "500W duo-motor push assist; automatic/intelligent braking + automatic parking; Rock-My-Baby auto-rocking; built-in white noise; Companion App connected care. Handle presence keeps motor assist safe. Made in Canada."
+    },
+
+    "foldType": "folding smart-stroller frame (Travel Edition offers flight-compliant modular battery)",
+    "strollerType": "smart",
+    "recline": "sleep-ready bassinet (lie-flat) + lay-flat toddler seat",
+    "reversibleSeat": true,
+    "tires": "motorized rear drive wheels (500W dual-motor) with front swivel; tire material not published"
+  },
+
+  "sources": [
+    "https://shop.gluxkind.com/products/gluxkind-rosa-smart-stroller",
+    "https://gluxkind.com/car-seats",
+    "https://gluxkind.com/rosa-smart-stroller",
+    "https://newatlas.com/around-the-home/gluxkind-ella-electric-assist-stroller/"
+  ],
+  "notes": "IMPORTANT model note: Clek lists 'Glüxkind Rosa'. Rosa is Glüxkind's in-market smart stroller ($2,290 DTC, in stock, made in Canada) and is 'certified compatible with Clek Liing and Clek Liingo' — the correct match for this catalog. The experimental self-driving 'Ella' ($3,800, special-order) is a separate model on the same platform; do not conflate the price. Rosa attaches the Clek Liing via the Glüxkind Car Seat Adapter (adapter-gluxkind-universal, $70). Glüxkind's DTC spec now publishes frame weight 33 lb, unfolded 40x27x43 in, folded 30x27x15 in (total assembled weight still unpublished). Max child weight 50 lb; bassinet-from-birth + lay-flat toddler seat; 500W dual-motor with automatic braking."
+}

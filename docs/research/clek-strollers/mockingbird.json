@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S10). Do NOT edit seed.json.",
+  "id": "mockingbird",
+  "name": "Mockingbird Single-to-Double Stroller 3.0",
+  "brand": "Mockingbird",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/mockingbird.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Mockingbird — Clek Liing Car Seat Adapter",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-mockingbird-clek"],
+
+  "priceSources": [
+    { "retailer": "Mockingbird (DTC, single config)", "price": 475.00, "url": "https://hellomockingbird.com/products/mockingbird-stroller", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon (Single-to-Double 3.0)", "price": 549.00, "url": "https://www.amazon.com/Mockingbird-Single-Double-Stroller-2-0/dp/B0F3WYZNNK", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 27,
+    "_weightNote": "~27 lb in single mode (thebump cites 28 lb with one toddler seat); ~35 lb in double mode.",
+
+    "unfoldedIn": { "lengthIn": 33, "widthIn": 25.5, "heightIn": 40 },
+    "foldedIn": { "lengthIn": 18, "widthIn": 25.5, "heightIn": 34 },
+
+    "brake": { "hasBrake": true, "type": "large one-step foot parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (lie-flat bassinet mode / infant seat insert / car-seat adapter) onward",
+      "seatCount": 1,
+      "basketCapacityLb": 25
+    },
+    "_capacityNote": "50 lb per toddler seat in single mode; 45 lb per seat when configured as a double. seatCount 1 in single mode, expandable to 2 (up to 3 riders across 44 configurations).",
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833",
+      "certifications": "Not explicitly confirmed in retrieved sources (JPMA status unverified).",
+      "notes": "5-point harness; FullShade UPF 50+ canopy + LegShade with ventilated mesh; four-wheel suspension; lockable front swivel wheels; reversible seat with lay-flat mode."
+    },
+
+    "foldType": "one-hand fold, self-standing",
+    "strollerType": "full-size convertible single-to-double (modular)",
+    "recline": "5-position recline including near-flat / lay-flat mode; adjustable leg rest",
+    "reversibleSeat": true,
+    "tires": "never-flat rubber tires; lockable front swivel wheels; four-wheel suspension"
+  },
+
+  "sources": [
+    "https://hellomockingbird.com/products/mockingbird-stroller",
+    "https://hellomockingbird.com/products/mockingbird-double-stroller",
+    "https://mommyhood101.com/mockingbird-3-stroller-review",
+    "https://www.thebump.com/a/mockingbird-stroller-review",
+    "https://www.amazon.com/Mockingbird-Single-Double-Stroller-2-0/dp/B0F3WYZNNK"
+  ],
+  "notes": "Single-to-double convertible: ships as a single (seatCount 1) and expands to 2 (up to 3 riders) with add-on seats — 44 possible configurations. Open 33 × 25.5 × 40 in; folds to 18 × 25.5 × 34 in; ~27 lb single / ~35 lb double; 25 lb basket. Sold MOSTLY DIRECT-TO-CONSUMER at hellomockingbird.com ($475 single config, currently sold out) with limited third-party (Amazon $549 for the Single-to-Double 3.0; also Target/Babylist). On Clek's official Liing/Liingo list via Mockingbird's own 'Clek Liing Car Seat Adapter' (adapter-mockingbird-clek)."
+}

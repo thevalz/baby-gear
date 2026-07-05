@@ -1,0 +1,66 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S3). Do NOT edit seed.json.",
+  "id": "bob-revolution-flex-3",
+  "name": "B.O.B. Gear Revolution Flex 3.0 Jogging Stroller",
+  "brand": "B.O.B. Gear",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/bob-revolution-flex-3.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "B.O.B. Gear Revolution Flex 3.0 — Single Infant Car Seat Adapter (S12046000)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-s12046000"],
+
+  "priceSources": [
+    { "retailer": "BOB Gear (DTC, MSRP)", "price": 649.99, "url": "https://www.bobgear.com/single-strollers", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "BOBparts / Prolithic Sports", "price": 649.99, "url": "https://bobparts.com/bob-gear-revolution-flex-3-0/", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Target", "price": 649.99, "url": "https://www.target.com/p/bob-gear-revolution-flex-3-0-jogging-stroller-graphite-black/-/A-75568320", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "Target listing carries it; price often discounts below the $649.99 MSRP — reconfirm live. bobgear MSRP and bobparts both $649.99 at check.",
+
+  "specs": {
+    "weightLb": 28.5,
+
+    "unfoldedIn": { "lengthIn": 46, "widthIn": 25, "heightIn": 45 },
+    "foldedIn": { "lengthIn": 38, "widthIn": 25, "heightIn": 16 },
+    "_foldedNote": "38 x 25 x 16 in with wheels on; ~35 x 20 x 10 in with quick-release wheels removed (14,748 cu in). Some retailers cite 39 x 24.5 x 16 in.",
+
+    "brake": {
+      "hasBrake": true,
+      "type": "flip-flop-friendly foot-pedal parking brake (no hand brake)"
+    },
+
+    "capacity": {
+      "maxChildWeightLb": 75,
+      "maxChildHeightIn": 44,
+      "minAgeOrNewborn": "8 mo+ in stroller seat for jogging/off-road; birth-ready with an infant car seat + adapter (S12046000)",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "Meets US ASTM F833 / 16 CFR 1227 carriage & stroller standard",
+      "certifications": "5-point easy-adjust, no-rethread harness; UPF 50+ canopy; wrist tether. JPMA certification not published by BOB.",
+      "notes": "Basket weight limit not published (null). Adjustable-tracking front wheel for straight-line jogging."
+    },
+
+    "foldType": "2-step compact fold with quick-release removable wheels",
+    "strollerType": "jogger / all-terrain single",
+    "recline": "near-flat recline, one-hand adjustable",
+    "reversibleSeat": false,
+    "tires": "pneumatic (air-filled) all-terrain; 12 in front swivel (lockable) + adjustable tracking, 16 in rear; mountain-bike-style suspension"
+  },
+
+  "sources": [
+    "https://bobparts.com/bob-gear-revolution-flex-3-0/",
+    "https://www.bobgear.com/single-strollers",
+    "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/bob-revolution-flex-3-0",
+    "https://www.target.com/p/bob-gear-revolution-flex-3-0-jogging-stroller-graphite-black/-/A-75568320"
+  ],
+  "notes": "Full-size all-terrain single jogger, 28.5 lb. Clek Liing attaches via BOB Single Infant Car Seat Adapter S12046000 (adapter-s12046000). Like the Alterrain family, this is a rugged/heavy stroller — the opposite end of the spectrum from the light city/shopping goal, but on Clek's list and fully sourced."
+}

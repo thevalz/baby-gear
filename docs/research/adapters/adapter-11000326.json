@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Batch S8 (Thule). Sourced 2026-07-05. Sleek DOUBLE-mode adapter kit. Do NOT edit seed.json.",
+  "id": "adapter-11000326",
+  "name": "Thule Sleek Adapter Kit (Double Mode)",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-11000326.png",
+
+  "partNumber": "11000326",
+  "madeBy": "Thule",
+
+  "seatBrandsSupported": "Frame-conversion kit (upper + lower adapters) that reconfigures the Thule Sleek into a sibling/double stroller — enables a second seat, bassinet, or car seat position. For a Clek Liing in the second position it is paired with the Maxi-Cosi car seat adapter 11000300 (which carries the Liing/Maxi-Cosi/BeSafe/Cybex/Nuna footprint).",
+
+  "forStrollerIds": ["thule-sleek-double"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": ""
+  },
+  "_statusNote": "Current product but 'Temporarily out of stock' at Thule DTC (2026-07-05). Compatible with both the original Thule Sleek and the Sleek 2.",
+
+  "priceSources": [
+    { "retailer": "Thule DTC", "price": 59.95, "url": "https://www.thule.com/en-us/strollers/strollers-accessories/thule-sleek-adapter-kit-_-11000326", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "upper + lower adapter set",
+    "toolFree": true,
+    "notes": "Upper and lower adapters configure the Sleek into a sibling stroller; car seat use in the second position additionally requires the Maxi-Cosi car seat adapter 11000300."
+  },
+
+  "sources": [
+    "https://www.thule.com/en-us/strollers/strollers-accessories/thule-sleek-adapter-kit-_-11000326",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.anbbaby.com/products/thule-sleek-stroller"
+  ],
+  "notes": "This is the SECOND-SEAT/DOUBLE-MODE kit Clek's list pairs with '11000300 (x2)' for the Sleek in double mode. It is a frame conversion kit, not a car-seat footprint adapter on its own — the Clek Liing rides on the 11000300 Maxi-Cosi adapter mounted onto this kit. Thule DTC $59.95 (out of stock at check). Only needed for double-mode car-seat carriage (thule-sleek-double)."
+}

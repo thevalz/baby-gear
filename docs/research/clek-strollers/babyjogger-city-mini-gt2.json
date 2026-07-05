@@ -1,0 +1,57 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S1 Baby Jogger, completed by integrator). Do NOT edit seed.json.",
+  "id": "babyjogger-city-mini-gt2",
+  "name": "Baby Jogger City Mini GT2",
+  "brand": "Baby Jogger",
+  "checkedAt": "2026-07-05",
+  "image": "images/babyjogger-city-mini-gt2.jpg",
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "checkedAt": "2026-07-05"
+  },
+  "adapterIds": [
+    "adapter-2083991"
+  ],
+  "priceSources": [],
+  "specs": {
+    "weightLb": 21.0,
+    "unfoldedIn": {
+      "lengthIn": 46.8,
+      "widthIn": 25.5,
+      "heightIn": 43.5
+    },
+    "foldedIn": {
+      "lengthIn": 31.5,
+      "widthIn": 24.5,
+      "heightIn": 10.0
+    },
+    "brake": {
+      "hasBrake": true,
+      "type": "hand-operated parking brake (on handlebar)"
+    },
+    "capacity": {
+      "maxChildWeightLb": 65,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (near-flat recline)",
+      "seatCount": 1,
+      "basketCapacityLb": 10
+    },
+    "safety": {
+      "standards": "ASTM F833 / 16 CFR 1227; JPMA Certified",
+      "certifications": "JPMA Certified (Baby Jogger)",
+      "notes": "5-point harness; one-hand fold with auto-lock."
+    },
+    "foldType": "one-hand compact fold, self-standing",
+    "strollerType": "all-terrain urban",
+    "recline": "near-flat recline",
+    "reversibleSeat": false,
+    "tires": "8\" forever-air (never-flat) rubber tires; all-wheel suspension"
+  },
+  "sources": [
+    "https://help.babyjogger.com/s/article/CITY-MINI-GT2-PRODUCT-SPECIFICATIONS",
+    "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/baby-jogger-city-mini-gt2",
+    "https://strollberry.com/strollers/baby-jogger-city-mini-gt2/"
+  ],
+  "notes": "All-terrain sibling of the City Mini 2 (rubber never-flat tires + all-wheel suspension). On Clek's list via Baby Jogger's City Mini 2 adapter 2083991 (Cybex/Clek) — Clek flags that adapter DISCONTINUED. The Baby Jogger brand's US line has been largely wound down; price shown ~$369.99 is MSRP reference — reconfirm current stock/price. Unfolded length 46.8 in / height 43.5 in per retail spec (Nordstrom/Babylist); handlebar is adjustable ~38.5-45.7 in (babygearlab), 43.5 is a nominal figure. Note: unfolded widthIn 25.5 was pre-filled and left as-is per gap-fill scope, though Strollberry lists ~24.2 in (61.5 cm)."
+}

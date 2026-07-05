@@ -1,0 +1,56 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S1 Baby Jogger, completed by integrator). Do NOT edit seed.json.",
+  "id": "babyjogger-city-mini-gt",
+  "name": "Baby Jogger City Mini GT (original)",
+  "brand": "Baby Jogger",
+  "checkedAt": "2026-07-05",
+  "image": "images/babyjogger-city-mini-gt.jpg",
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "checkedAt": "2026-07-05"
+  },
+  "adapterIds": [
+    "adapter-1967208"
+  ],
+  "priceSources": [],
+  "specs": {
+    "weightLb": 22.4,
+    "unfoldedIn": {
+      "lengthIn": 44.1,
+      "widthIn": 24.4,
+      "heightIn": 43.5
+    },
+    "foldedIn": {
+      "lengthIn": 31.5,
+      "widthIn": 24.4,
+      "heightIn": 9.8
+    },
+    "brake": {
+      "hasBrake": true,
+      "type": "hand-operated parking brake"
+    },
+    "capacity": {
+      "maxChildWeightLb": 65,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (near-flat recline)",
+      "seatCount": 1,
+      "basketCapacityLb": 20
+    },
+    "safety": {
+      "standards": "ASTM F833 / 16 CFR 1227; JPMA Certified",
+      "certifications": "JPMA Certified (Baby Jogger)",
+      "notes": "5-point harness; one-hand fold with auto-lock."
+    },
+    "foldType": "one-hand compact fold",
+    "strollerType": "all-terrain urban (discontinued)",
+    "recline": "near-flat recline",
+    "reversibleSeat": false,
+    "tires": "8\" forever-air rubber tires; all-wheel suspension"
+  },
+  "sources": [
+    "https://strollberry.com/strollers/baby-jogger-city-mini-gt/",
+    "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/baby-jogger-city-mini-gt"
+  ],
+  "notes": "The original City Mini GT (superseded by the GT2). On Clek's list via the Mounting Bracket Single for Maxi-Cosi 1967208 — Clek flags that adapter DISCONTINUED. Discontinued model; unfolded 44.1 x 24.4 x 43.5 in and folded 31.5 x 24.4 x 9.8 in derived from Strollberry (110.5 x 62 x 112 cm open; 80 x 62 x 25 cm folded, h x w x l); MSRP ~$279.99 reference."
+}

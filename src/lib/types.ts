@@ -1,27 +1,8 @@
 // Core data model. These interfaces match src/data/seed.json exactly.
 
-/**
- * The influencer/creator who hosts this advisor. Their branding turns the tool
- * into a customer-facing companion to their videos: it drives traffic back to
- * their channel and monetizes through their (affiliate) price links. Lives in
- * `config` so it travels through export/import and the repo-as-source-of-truth
- * sync, since it's content the creator owns — not a per-visitor setting.
- */
-export interface Creator {
-  /** Display name / brand, e.g. "The Baby Gear Lab". */
-  name: string;
-  /** Channel or "watch the review" URL. */
-  youtubeUrl?: string;
-  /** One-line positioning shown under the name. */
-  tagline?: string;
-  /** Optional subscribe CTA URL (defaults to youtubeUrl). */
-  subscribeUrl?: string;
-}
-
 export interface Config {
   overallBudget: number;
   adapterCost?: number;
-  creator?: Creator;
 }
 
 /**

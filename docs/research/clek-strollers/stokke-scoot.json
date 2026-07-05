@@ -22,9 +22,9 @@
     "weightLb": 25.0,
     "_weightNote": "Scoot V2 ~25 lb with seat.",
 
-    "unfoldedIn": { "lengthIn": null, "widthIn": null, "heightIn": null },
+    "unfoldedIn": { "lengthIn": 29.5, "widthIn": 21.6, "heightIn": 43.3 },
     "foldedIn": { "lengthIn": 28.3, "widthIn": 21.6, "heightIn": 12.6 },
-    "_dimsNote": "Folded 28.3 L × 21.6 W × 12.6 H in (Strollberry/reviews). Open dimensions not cleanly published for the discontinued model; handlebar 36–42 in. Left null rather than guessed.",
+    "_dimsNote": "Per Strollberry's Scoot V2 spec: open 75 cm L x 55 cm W x 110 cm H = 29.5 x 21.6 x 43.3 in; folded 72 x 55 x 32 cm mapped (lying) to 28.3 L x 21.6 W x 12.6 H in. Handlebar 36-42 in.",
 
     "brake": { "hasBrake": true, "type": "foot pedal parking brake" },
 

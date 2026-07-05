@@ -1,0 +1,62 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S10). Do NOT edit seed.json.",
+  "id": "larktale-coast",
+  "name": "Larktale Coast",
+  "brand": "Larktale",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/larktale-coast.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Larktale Coast — Car Seat Adapter – Multi-Model (LK29400)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-lk29400"],
+
+  "priceSources": [
+    { "retailer": "Amazon", "price": 269.99, "url": "https://www.amazon.com/Larktale-Lightweight-Compact-Stroller-Freshwater/dp/B07B7PNW5J", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 21.2,
+    "_weightNote": "Larktale publishes 21.2 lb; BabyGearLab measured 20.9 lb.",
+
+    "unfoldedIn": { "lengthIn": null, "widthIn": null, "heightIn": null },
+    "_unfoldedNote": "Larktale does not publish in-use (unfolded) L×W×H for the Coast in any retrieved source; larktale.com product-specs page is unreachable (brand has pivoted to wagons and the Coast stroller appears discontinued). Left null rather than guessed.",
+    "foldedIn": { "lengthIn": 23.6, "widthIn": 13.2, "heightIn": 26.2 },
+    "_foldedNote": "Published folded footprint 23.6 × 13.2 × 26.2 in (Compac3 3D self-nesting 3-fold, ~7,771 cubic in per BabyGearLab). Axis labeling not explicitly stated by source; width 13.2 in is the narrow dimension.",
+
+    "brake": { "hasBrake": true, "type": "single-action foot pedal parking brake (press to set / press to release)" },
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (reclines near-flat; car-seat/bassinet ready) to ~4 yr / 55 lb",
+      "seatCount": 1,
+      "basketCapacityLb": 6.6
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833",
+      "certifications": "Not confirmed in retrieved sources (JPMA status unverified — larktale.com unreachable).",
+      "notes": "5-point rethread harness; UPF 50+ canopy with peek-a-boo window; lockable front swivel wheels; all-wheel suspension. Award-winning design (Good Design). Car-seat click-in compatible with Chicco/Britax/Maxi-Cosi/Clek/Nuna via adapter."
+    },
+
+    "foldType": "Compac3 one-hand 3D self-nesting fold, self-standing",
+    "strollerType": "full-size / compact",
+    "recline": "multi-position reclining backrest, near-flat for napping",
+    "reversibleSeat": false,
+    "tires": "foam-filled plastic wheels; front swivel (lockable) with all-wheel suspension"
+  },
+
+  "sources": [
+    "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/larktale-coast",
+    "https://pishposhbaby.com/products/larktale-coast-compact-stroller",
+    "https://www.amazon.com/Larktale-Lightweight-Compact-Stroller-Freshwater/dp/B07B7PNW5J",
+    "https://good-design.org/projects/larktale-coast-stroller/"
+  ],
+  "notes": "Full-size compact stroller; weighs 21.2 lb with an ultra-compact Compac3 3D self-nesting fold (23.6 × 13.2 × 26.2 in). Newborn to ~55 lb. On Clek's official Liing/Liingo list, paired with the Larktale 'Car Seat Adapter – Multi-Model' LK29400 (adapter-lk29400), which lists the Clek Liing. GAP: unfolded dimensions unpublished (null); Larktale's DTC site (larktale.com) 404s/blocks scrapers and the brand has shifted to wagons, so the Coast stroller appears discontinued at DTC — best live price is the Amazon listing (~$269.99; BabyGearLab cites $300 list). Verify stock/price at checkout."
+}

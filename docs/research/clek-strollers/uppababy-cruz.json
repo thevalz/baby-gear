@@ -1,0 +1,62 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S9 UPPAbaby). Represents the original UPPAbaby CRUZ (V1, 2015-2019). Clek lists CRUZ as Liing-compatible via CLEK'S OWN adapter for UPPAbaby. Do NOT edit seed.json.",
+  "id": "uppababy-cruz",
+  "name": "UPPAbaby CRUZ (V1, 2015-2019)",
+  "brand": "UPPAbaby",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/uppababy-cruz.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "UPPAbaby CRUZ — **Clek** car seat adapters for UPPAbaby (Clek-made adapter)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-clek-uppababy"],
+
+  "priceSources": [
+    { "retailer": "GoodBuy Gear (resale, used)", "price": 91.22, "url": "https://goodbuygear.com/products/uppababy-cruz-stroller-2047", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "UPPAbaby (original MSRP, discontinued)", "price": 699.99, "url": "https://uppababy.com/strollers/full-size/cruz-v3/", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 21.5,
+    "_weightNote": "Frame+seat 9.75 kg / 21.5 lb (front suspension removed in the 2015 redesign).",
+
+    "unfoldedIn": { "lengthIn": 37, "widthIn": 22.2, "heightIn": 40.5 },
+    "foldedIn": { "lengthIn": 14, "widthIn": 22.2, "heightIn": 37 },
+    "_dimsNote": "Strollberry: open 102.9 x 56.5 x 94 cm; folded 94 x 56.5 x 35.5 cm (folded with seat attached, self-standing).",
+
+    "brake": { "hasBrake": true, "type": "one-step foot-operated rocker parking brake (flip-flop friendly)" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth with infant car seat / bassinet or infant SnugSeat insert; ~3 mo+ in seat",
+      "seatCount": 1,
+      "basketCapacityLb": 30
+    },
+
+    "safety": {
+      "standards": "Meets/exceeds ASTM F833 (US carriages & strollers)",
+      "certifications": "JPMA Certified; GREENGUARD Gold Certified (low chemical emissions)",
+      "notes": "5-point no-rethread harness; reversible toddler seat; multi-position recline."
+    },
+
+    "foldType": "two-hand fold with auto-lock, self-standing (folds with seat attached)",
+    "strollerType": "full-size single (compact full-size)",
+    "recline": "multi-position deep recline (near-flat; from-birth needs insert or car seat/bassinet)",
+    "reversibleSeat": true,
+    "tires": "rubber-coated never-flat foam wheels; front ~6.4 in / rear ~8.5 in; front swivel with lock"
+  },
+
+  "sources": [
+    "https://strollberry.com/strollers/uppababy-cruz/",
+    "https://niniandloli.com/blogs/articles/uppababy-cruz-stroller-weight-and-features-explained",
+    "https://support.uppababy.com/hc/en-us/articles/115009544627-Are-UPPAbaby-products-JPMA-ASTM-compliant",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Original CRUZ, discontinued in 2020 (superseded by CRUZ V2 then V3); available resale only, so priceSources is MSRP reference with inStock:false. Full-size single, ~21.5 lb, two-hand self-standing fold. Clek Liing attaches via CLEK'S OWN 'Clek car seat adapters for UPPAbaby' (adapter-clek-uppababy) — NOT a UPPAbaby-made adapter. Basket 30 lb per UPPAbaby (Strollberry lists ~24 lb for the V1 frame). Heavier/bulkier than the city/shopping target but a comfortable everyday full-size option."
+}

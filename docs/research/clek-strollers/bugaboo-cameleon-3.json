@@ -1,0 +1,66 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05. Bugaboo Cameleon 3 (Cameleon³). Discontinued by Bugaboo; new US retail stock is scarce (open-box / used marketplace only). Do NOT edit seed.json.",
+  "id": "bugaboo-cameleon-3",
+  "name": "Bugaboo Cameleon 3",
+  "brand": "Bugaboo",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/bugaboo-cameleon-3.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Bugaboo Cameleon³ — Bugaboo Cameleon³ adapter for Maxi-Cosi car seat (80401MC02) — *5 handle positions; Liing usable in positions 3–5",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-80401mc02"],
+
+  "priceSources": [
+    { "retailer": "GoodBuy Gear", "price": 101.99, "url": "https://goodbuygear.com/products/bugaboo-cameleon3-stroller-2029", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "eBay (marketplace)", "price": 479.99, "url": "https://www.ebay.com/b/Bugaboo-Cameleon-Strollers/66700/bn_7115206853", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 21.1,
+    "_weightNote": "Bugaboo lists 9.6 kg (21.1 lb) for the Cameleon 3 (chassis + seat).",
+
+    "unfoldedIn": { "lengthIn": 37.0, "widthIn": 23.2, "heightIn": 44.1 },
+    "_unfoldedNote": "Bugaboo publishes 94 x 59 x 101-112 cm (L x W x H); height varies with the telescopic handlebar (39.8-44.1 in). Max-handlebar height (112 cm / 44.1 in) recorded here.",
+
+    "foldedIn": { "lengthIn": 35.4, "widthIn": 19.7, "heightIn": 12.2 },
+    "_foldedNote": "Bugaboo publishes folded 90 x 50 x 31 cm (35.4 x 19.7 x 12.2 in); folds as a two-piece (seat/bassinet detached from chassis).",
+
+    "brake": { "hasBrake": true, "type": "central parking brake" },
+    "_brakeNote": "Strollberry lists the Cameleon 3 brake as a hand-operated central brake; recorded as central parking brake (sourced, not manufacturer-numbered).",
+
+    "capacity": {
+      "maxChildWeightLb": 37.5,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (included bassinet/carrycot; seat has full lie-flat recline)",
+      "seatCount": 1,
+      "basketCapacityLb": 8.8
+    },
+
+    "safety": {
+      "standards": "Bugaboo declares conformity to the US juvenile stroller standard ASTM F833; Clek states strollers on its list were tested and are compliant with the applicable ASTM standards for car seats on strollers.",
+      "certifications": null,
+      "notes": "5-point harness. No JPMA certification is published for this Bugaboo model; certifications left null rather than guessed. Max child weight 17 kg (~37.5 lb) per Bugaboo."
+    },
+
+    "foldType": "two-piece fold (seat/bassinet detaches from chassis), self-standing",
+    "strollerType": "full-size convertible / all-terrain city",
+    "recline": "multi-position reclining backrest incl. full lie-flat (3 positions); reversible seat + included bassinet",
+    "reversibleSeat": true,
+    "tires": "6 in (15 cm) swivel foam front wheels; 12 in (30 cm) foam-filled (puncture-free) rear wheels; adjustable suspension"
+  },
+
+  "sources": [
+    "https://www.bugaboo.com/us-en/strollers/bugaboo-cameleon-3/bugaboo-cameleon-3-PM00044.html",
+    "https://strollberry.com/strollers/bugaboo-cameleon-3/",
+    "https://goodbuygear.com/products/bugaboo-cameleon3-stroller-2029",
+    "https://www.ebay.com/b/Bugaboo-Cameleon-Strollers/66700/bn_7115206853",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Full-size convertible city/all-terrain Bugaboo. Clek-listed via the Bugaboo Cameleon³ Maxi-Cosi adapter 80401MC02 (adapter-80401mc02), which explicitly lists the Clek Liing. HANDLE-POSITION CAVEAT (carried from Clek's list): the Cameleon³ handlebar has 5 positions and the Clek Liing is usable only in positions 3-5. STOCK: Bugaboo has DISCONTINUED the Cameleon 3 (its US product page is marked 'no longer available') and it is not carried new by the US Shopify retailers checked - only open-box/used (GoodBuy Gear $101.99, out of stock) and used-marketplace listings (eBay, ~$480 for near-new) are available as of 2026-07-05, so prices are condition-dependent and volatile. Heavier and larger-folding than the Bee 6; less ideal for the compact city/shopping goal but a capable lie-flat, bassinet-included convertible."
+}

@@ -1,0 +1,41 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-400018003",
+  "name": "Bugaboo Butterfly 2 car seat adapter",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-400018003.jpg",
+
+  "partNumber": "400018003",
+  "madeBy": "Bugaboo",
+
+  "seatBrandsSupported": "Maxi-Cosi interface car seats. Bugaboo lists: Clek Liing; Maxi-Cosi Coral XP / Mico XP Max / Mico 30 / Mico Luxe+; Nuna Pipa series (Pipa, Lite, Lite LX, RX, Aire, Aire RX, Urbn); Cybex Cloud Q / Aton M / Aton 2 / Cloud G Lux with SensorSafe; and Bugaboo Turtle Air / Turtle One by Nuna. Confirms the Clek Liing + Maxi-Cosi footprint.",
+
+  "forStrollerIds": ["bugaboo-butterfly-2"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "Clek Liing is explicitly listed by Bugaboo as compatible with this adapter."
+  },
+
+  "priceSources": [
+    { "retailer": "Bugaboo (bugaboo.com DTC)", "price": 69.95, "url": "https://www.bugaboo.com/us-en/accessories/adapters/bugaboo-butterfly-2-car-seat-adapters-400018MI.html", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Swaddles Baby", "price": 69.95, "url": "https://www.swaddlesbaby.com/products/bugaboo-butterfly-2-car-seat-adapter", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Traveling Tikes", "price": 69.95, "url": "https://travelingtikes.com/products/bugaboo-butterfly-2-car-seat-adapters", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair of click-and-go adapter brackets (left + right)",
+    "toolFree": true,
+    "notes": "Bugaboo click-and-go attachment system: brackets clip onto the Butterfly 2 frame and the infant car seat clicks into the adapters; no tools required."
+  },
+
+  "sources": [
+    "https://www.bugaboo.com/us-en/accessories/adapters/bugaboo-butterfly-2-car-seat-adapters-400018MI.html",
+    "https://www.swaddlesbaby.com/products/bugaboo-butterfly-2-car-seat-adapter",
+    "https://travelingtikes.com/products/bugaboo-butterfly-2-car-seat-adapters",
+    "https://service.bugaboo.com/s/user-guide/a4JR5000000ytmPMAQ/bugaboo-butterfly-2-car-seat-adapters?language=en_US"
+  ],
+  "notes": "Adapter for the CURRENT Bugaboo Butterfly 2 only — distinct part from the original Butterfly's 100045001 adapter; the two are not interchangeable. $69.95 MSRP; currently available on bugaboo.com DTC, but sold out / on preorder (arriving early-to-late August) at several third-party retailers (Swaddles Baby, Traveling Tikes) as of 2026-07-05. Clek Liing explicitly listed as a compatible seat."
+}

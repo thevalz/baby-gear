@@ -1,0 +1,64 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S3). Do NOT edit seed.json.",
+  "id": "bumbleride-speed",
+  "name": "Bumbleride Speed Jogging Stroller",
+  "brand": "Bumbleride",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/bumbleride-speed.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Bumbleride Speed — Indie/Speed Car Seat Adapter – Maxi-Cosi/Cybex/Nuna (MNC-28)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-mnc-28"],
+
+  "priceSources": [
+    { "retailer": "Bumbleride (DTC)", "price": 799.00, "url": "https://bumbleride.com/products/speed-jogging-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Albee Baby", "price": 799.00, "url": "https://www.albeebaby.com/products/bumbleride-speed-jogging-stroller-2024-black", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Pump Station & Nurtury", "price": 799.00, "url": "https://www.pumpstation.com/products/bumbleride-speed-single-jogging-stroller-2024", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 25.5,
+
+    "unfoldedIn": { "lengthIn": 46, "widthIn": 25, "heightIn": 41 },
+    "foldedIn": { "lengthIn": 34, "widthIn": 24.5, "heightIn": 15.5 },
+
+    "brake": {
+      "hasBrake": true,
+      "type": "foot-operated one-step parking brake linking both rear wheels (sandal-friendly). No hand brake."
+    },
+
+    "capacity": {
+      "maxChildWeightLb": 65,
+      "maxChildHeightIn": 40,
+      "minAgeOrNewborn": "birth with bassinet or infant car seat; 6 mo+ in the seat for jogging",
+      "seatCount": 1,
+      "basketCapacityLb": 15
+    },
+
+    "safety": {
+      "standards": "ASTM F833 (US 16 CFR 1227); EN 1888 (EU); AS/NZS 2088 (AU/NZ); SOR/85-379 (Canada)",
+      "certifications": "OEKO-TEX Standard 100 non-toxic fabrics; 5-point breakaway harness with shoulder pads. Not JPMA-listed.",
+      "notes": "Cargo basket 17 x 15 x 11 in, 15 lb. Cork handle. Adjustable footrest. Handle range 26–47.5 in."
+    },
+
+    "foldType": "one-step ergonomic trigger-release compact fold with auto-lock, self-standing",
+    "strollerType": "performance jogger / single",
+    "recline": "one-hand backrest recline strap",
+    "reversibleSeat": false,
+    "tires": "air-filled; 12 in front / 16 in rear; Speed3 Steering front wheel (run/jog/walk: locked, partial-swivel, full-swivel)"
+  },
+
+  "sources": [
+    "https://bumbleride.com/products/speed-jogging-stroller",
+    "https://www.albeebaby.com/products/bumbleride-speed-jogging-stroller-2024-black",
+    "https://earthhero.com/products/bumbleride-speed-jogging-stroller",
+    "https://www.babygearlab.com/reviews/getting-around/jogging-stroller/bumbleride-speed"
+  ],
+  "notes": "Bumbleride's dedicated performance jogger, 25.5 lb, 65 lb capacity. Clek Liing latches via the shared Indie/Speed adapter MNC-28 (adapter-mnc-28), which explicitly lists the Clek Liing. A sport jogger, not the compact-city answer, but on Clek's list and fully sourced."
+}

@@ -1,0 +1,57 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S1 Baby Jogger, completed by integrator). Do NOT edit seed.json.",
+  "id": "babyjogger-city-select-double",
+  "name": "Baby Jogger City Select (Double Mode)",
+  "brand": "Baby Jogger",
+  "checkedAt": "2026-07-05",
+  "image": "images/babyjogger-city-select-double.jpg",
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "checkedAt": "2026-07-05"
+  },
+  "adapterIds": [
+    "adapter-2013551",
+    "adapter-2011985"
+  ],
+  "priceSources": [],
+  "specs": {
+    "weightLb": 37.07,
+    "unfoldedIn": {
+      "lengthIn": 43.5,
+      "widthIn": 25.8,
+      "heightIn": 41.5
+    },
+    "foldedIn": {
+      "lengthIn": 34.65,
+      "widthIn": 25.59,
+      "heightIn": 11.61
+    },
+    "brake": {
+      "hasBrake": true,
+      "type": "hand-operated parking brake (on handlebar)"
+    },
+    "capacity": {
+      "maxChildWeightLb": 45,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (near-flat recline)",
+      "seatCount": 2,
+      "basketCapacityLb": null
+    },
+    "safety": {
+      "standards": "ASTM F833 / 16 CFR 1227; JPMA Certified",
+      "certifications": "JPMA Certified (Baby Jogger)",
+      "notes": "5-point harness; one-hand fold with auto-lock."
+    },
+    "foldType": "fold with seats on",
+    "strollerType": "modular convertible (double)",
+    "recline": "multi-position incl. near-flat",
+    "reversibleSeat": false,
+    "tires": "8\"/12\" forever-air rubber tires; all-wheel suspension"
+  },
+  "sources": [
+    "https://strollberry.com/strollers/baby-jogger-city-select/",
+    "https://www.peppyparents.com/blogs/strollers/baby-jogger-city-select-stroller-faqs"
+  ],
+  "notes": "City Select in double mode (second seat added); ~37 lb with both seats, per-seat max 45 lb. On Clek's list via City Select adapter 2013551 (x2) plus the City Select Second Seat adapter 2011985 — both DISCONTINUED per Clek, with the lowest-handle-position car-seat caveat. Unfolded 43.5 x 25.8 x 41.5 in reflects the shared City Select frame footprint (Strollberry 105.5 x 65.5 x 110.5-119 cm, h x w x l); double mode adds a stacked second seat that raises overall height above the 41.5 in frame figure — no distinct published double-mode height. MSRP ~$499.99 reference."
+}

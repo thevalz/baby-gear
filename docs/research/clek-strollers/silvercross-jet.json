@@ -1,0 +1,62 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S6 Silver Cross). Sourced 2026-07-05. Silver Cross Jet ultra-compact cabin stroller; Clek lists 'Jet 3, Jet 4'. Specs given for Jet 3 (Jet 4 shares the frame/fold). Do NOT edit seed.json.",
+  "id": "silvercross-jet",
+  "name": "Silver Cross Jet 3 / Jet 4 (ultra-compact cabin stroller)",
+  "brand": "Silver Cross",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/silvercross-jet.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Silver Cross Jet 3, Jet 4 — Jet Car Seat Adapters",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-silvercross-jet"],
+
+  "priceSources": [
+    { "retailer": "Little Folks NYC", "price": 404.99, "url": "https://littlefolksnyc.com/products/silver-cross-jet-3-super-compact-stroller", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Silver Cross US (DTC, Jet 5 current gen)", "price": null, "url": "https://silvercrossus.com/product/jet-5-super-compact-stroller/", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 13.6,
+    "_weightNote": "Jet 3 = 13.6 lb. The newer Jet 5 (same line, US DTC) is ~15.87 lb excl. bumper bar.",
+
+    "unfoldedIn": { "lengthIn": 35.43, "widthIn": 17.7, "heightIn": 39.5 },
+    "foldedIn": { "lengthIn": 21.65, "widthIn": 11.8, "heightIn": 7.08 },
+    "_dimsNote": "Jet 3 folded ~55 x 30 x 20 cm (21.65 x 11.8 x 7.08 in) — small-suitcase, cabin-approved, self-standing and wheelable via the bumper bar. Open ~35.43 x 17.7 x 39.5 in (Little Folks NYC / MadeForMums).",
+
+    "brake": { "hasBrake": true, "type": "flip-flop-friendly foot parking brake; lockable swivel front wheels" },
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (multi-position seat recline; car-seat or carrycot compatible)",
+      "seatCount": 1,
+      "basketCapacityLb": 11
+    },
+
+    "safety": {
+      "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). Marketed as TSA / airline-cabin approved. No named third-party certification (e.g. JPMA) published.",
+      "certifications": null,
+      "notes": "5-point harness; one-hand compact fold; stands independently folded."
+    },
+
+    "foldType": "one-hand ultra-compact cabin fold, self-standing, airline-cabin / TSA approved",
+    "strollerType": "ultra-compact / travel (cabin)",
+    "recline": "multi-position reclining seat, one-hand",
+    "reversibleSeat": false,
+    "tires": "small foam/plastic swivel wheels with dynamic spring suspension, lockable"
+  },
+
+  "sources": [
+    "https://littlefolksnyc.com/products/silver-cross-jet-3-super-compact-stroller",
+    "https://www.madeformums.com/reviews/silver-cross-jet-3-stroller-review/",
+    "https://strollberry.com/strollers/silver-cross-jet-3/",
+    "https://silvercrossus.com/product/jet-5-super-compact-stroller/"
+  ],
+  "notes": "The lightest/most-compact Silver Cross and the best fit for the light/compact city+shopping goal (~13.6 lb, cabin fold). Clek lists Jet 3 & Jet 4; the frame/fold carried into the current Jet 5 (US DTC, ~15.87 lb, out of stock at check). Jet 3 in-stock supply is thin in the US — Little Folks NYC listed $404.99 but sold out. One Jet Car Seat Adapter ($59.99) fits Jet 2020/3/4/5 and mounts the Clek Liing."
+}

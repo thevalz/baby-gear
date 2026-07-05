@@ -1,0 +1,66 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S3). Same physical stroller as bumbleride-indie-twin-two; this row is the Indie Twin configured with ONE seat position occupied by a car seat (single-adapter MNCT-21). Do NOT edit seed.json.",
+  "id": "bumbleride-indie-twin-one",
+  "name": "Bumbleride Indie Twin (One Car Seat)",
+  "brand": "Bumbleride",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/bumbleride-indie-twin-one.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Bumbleride Indie Twin (One Seat) — Indie Twin Car Seat Adapter (MNCT-21)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-mnct-21"],
+
+  "priceSources": [
+    { "retailer": "Bumbleride (DTC)", "price": 1099.00, "url": "https://bumbleride.com/products/indie-twin-double-stroller", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Modern Nursery", "price": 1099.00, "url": "https://www.modernnursery.com/products/bumbleride-2024-indie-twin-stroller", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "Stroller price is for the Indie Twin itself; the one-vs-two-car-seat distinction is only the adapter. DTC Black on preorder (ships week of Jul 13) at check; Modern Nursery had Black/Dusk/Sand in stock.",
+
+  "specs": {
+    "weightLb": 36,
+
+    "unfoldedIn": { "lengthIn": 46, "widthIn": 29.5, "heightIn": 45.5 },
+    "_unfoldedNote": "Height adjustable 26.5–45.5 in (handle range). Width 29.5 in fits standard doorways.",
+    "foldedIn": { "lengthIn": 32.5, "widthIn": 29.5, "heightIn": 13.5 },
+
+    "brake": {
+      "hasBrake": true,
+      "type": "foot-operated one-step parking brake linking the rear wheels (sandal-friendly)"
+    },
+
+    "capacity": {
+      "maxChildWeightLb": 90,
+      "maxChildHeightIn": 40,
+      "minAgeOrNewborn": "birth-ready — both seats convert to infant/lay-flat mode with no attachments",
+      "seatCount": 2,
+      "basketCapacityLb": 15
+    },
+    "_capacityNote": "90 lb combined across the two side-by-side seats (~45 lb per seat).",
+
+    "safety": {
+      "standards": "ASTM F833 (US 16 CFR 1227); EN 1888 (EU); AS/NZS 2088 (AU/NZ); SOR/85-379 (Canada)",
+      "certifications": "OEKO-TEX Standard 100 non-toxic recycled fabrics; 5-point breakaway harness with shoulder pads. Not JPMA-listed.",
+      "notes": "Side-by-side double; independently adjustable seats and canopies; each seat reclines independently."
+    },
+
+    "foldType": "one-step, self-standing compact fold",
+    "strollerType": "side-by-side double / all-terrain",
+    "recline": "independent one-hand recline per seat, to lay-flat",
+    "reversibleSeat": false,
+    "tires": "all four 12 in air-filled; all-wheel suspension"
+  },
+
+  "sources": [
+    "https://bumbleride.com/products/indie-twin-double-stroller",
+    "https://www.modernnursery.com/products/bumbleride-2024-indie-twin-stroller",
+    "https://bumbleride.com/products/indie-twin-clek-liing-non-toxic-travel-system",
+    "https://canada.bumbleride.com/pages/safety-notice"
+  ],
+  "notes": "Side-by-side twin, 36 lb, 90 lb combined capacity. This row = ONE Clek Liing on the twin via the single-seat adapter MNCT-21 (adapter-mnct-21). Bumbleride even sells an 'Indie Twin + Clek Liing' travel system, explicitly confirming Liing compatibility. A double stroller — not the light/compact goal — but on Clek's list and fully sourced. Physically identical to bumbleride-indie-twin-two (that row carries TWO Liings via MNCT-22)."
+}

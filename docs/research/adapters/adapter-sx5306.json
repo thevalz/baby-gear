@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller adapter fragment (batch S6 Silver Cross). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-sx5306",
+  "name": "Silver Cross Breez Universal Car Seat Adapters",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-sx5306.jpg",
+
+  "partNumber": "SX5306.00",
+  "madeBy": "Silver Cross",
+
+  "seatBrandsSupported": "Clek (Liing) / Cybex (Aton G, Cloud G) / Maxi-Cosi (Mico Luxe+) / Nuna (Pipa RX, Pipa Aire RX). Silver Cross US explicitly lists 'Clek: Liing'.",
+
+  "forStrollerIds": ["silvercross-breez"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Silver Cross US (DTC)", "price": 59.99, "url": "https://silvercrossus.com/product/breez-car-seat-adapters/", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Albee Baby", "price": 59.99, "url": "https://www.albeebaby.com/products/silver-cross-breez-universal-car-seat-adapters-black", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (clip to chassis; car seat slots in)",
+    "toolFree": true,
+    "notes": "Clip the adapters onto the Breez chassis and the infant seat drops into place."
+  },
+
+  "sources": [
+    "https://silvercrossus.com/product/breez-car-seat-adapters/",
+    "https://www.albeebaby.com/products/silver-cross-breez-universal-car-seat-adapters-black",
+    "https://www.destinationbabykids.com/products/silver-cross-breez-universal-car-seat-adapters"
+  ],
+  "notes": "Silver Cross US lists this adapter as Model SX5306.00 — matching the part number on Clek's compatibility list — and fits the current 2026 Breez stroller only. Explicitly supports the Clek Liing. $59.99, in stock."
+}

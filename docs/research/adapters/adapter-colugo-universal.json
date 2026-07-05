@@ -1,0 +1,28 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S10). Colugo Universal Car Seat Adapter for The Complete Stroller — DISCONTINUED per Clek's official list (and Colugo has discontinued the Complete itself). Do NOT edit seed.json.",
+  "id": "adapter-colugo-universal",
+  "name": "Colugo Universal Car Seat Adapter",
+  "checkedAt": "2026-07-05",
+  "image": null,
+  "partNumber": null,
+  "madeBy": "Colugo",
+  "seatBrandsSupported": "Maxi-Cosi / Nuna / Cybex / Clek — Colugo's universal adapter is listed for the Clek Liing on Clek's official compatibility list (marked *Discontinued). Confirmed Clek Liing supported.",
+  "forStrollerIds": ["colugo-complete"],
+  "status": {
+    "discontinued": true,
+    "inStock": false,
+    "clekNote": "**Discontinued"
+  },
+  "priceSources": [],
+  "install": {
+    "pieces": "pair of side brackets",
+    "toolFree": true,
+    "notes": "One-click install onto the stroller frame; folds with the stroller (per Colugo's universal-adapter design). Infant car seat clicks into the brackets."
+  },
+  "sources": [
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://colugo.com/products/the-one-universal-carseat-adaptor",
+    "https://support.colugo.com/hc/en-us/articles/21443820667149-What-infant-carrier-car-seats-are-compatible-with-The-One-Stroller"
+  ],
+  "notes": "DISCONTINUED. Clek's list marks Colugo Complete's 'Universal Car Seat Adapter' as *Discontinued, and Colugo has discontinued the Complete stroller itself (DTC now sells only the Compact+, which has no car-seat adapter). No active product page, part number, price, or stock for the Complete's adapter — priceSources empty and image null by necessity. (Colugo currently sells a different 'The One Universal Carseat Adaptor' for its newer 'The One' stroller, which lists Clek Liing/Maxi-Cosi Mico/Cybex Aton/Nuna Pipa — a separate part, not this one.)"
+}

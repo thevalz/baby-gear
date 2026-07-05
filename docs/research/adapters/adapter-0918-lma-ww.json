@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller ADAPTER fragment (batch S9 UPPAbaby). UPPAbaby VISTA LOWER car seat adapter (double mode). Do NOT edit seed.json.",
+  "id": "adapter-0918-lma-ww",
+  "name": "UPPAbaby Lower Car Seat Adapter for Vista (Maxi-Cosi/Nuna/Cybex/Clek)",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-0918-lma-ww.jpg",
+
+  "partNumber": "0918-LMA-WW",
+  "madeBy": "UPPAbaby",
+
+  "seatBrandsSupported": "Maxi-Cosi (Mico NXT, Mico Max Plus), Nuna PIPA series, Cybex Aton series, and Clek Liing & Liingo — Clek Liing explicitly listed. (Not compatible with Maxi-Cosi Prezi.)",
+
+  "forStrollerIds": ["uppababy-vista-double"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Bambi Baby", "price": 49.99, "url": "https://www.bambibaby.com/products/uppa-baby-lower-infant-car-seat-2018-adapter-for-maxi-cosi-nuna-and-cybex", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Pump Station & Nurtury", "price": 49.99, "url": "https://www.pumpstation.com/products/uppababy-vista-vista-v2-lower-adapters-for-maxi-cosi-nuna-and-cybex", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right lower brackets)",
+    "toolFree": true,
+    "notes": "Mounts an infant car seat in the LOWER position of the Vista chassis for double/tandem use; pairs with the upper adapter (Clek adapter-clek-uppababy / UPPAbaby 0919-UMA-WW) so two car seats or seat+car-seat combos work."
+  },
+
+  "sources": [
+    "https://www.bambibaby.com/products/uppa-baby-lower-infant-car-seat-2018-adapter-for-maxi-cosi-nuna-and-cybex",
+    "https://www.pumpstation.com/products/uppababy-vista-vista-v2-lower-adapters-for-maxi-cosi-nuna-and-cybex",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "UPPAbaby-made lower adapter used ONLY in Vista double mode (Clek row: 'Lower: 0918-LMA-WW'). All Vista models 2015+ (V2/V3). $49.99, in stock. Fits the Clek Liing among Maxi-Cosi/Nuna/Cybex seats."
+}

@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S6 Silver Cross). Sourced 2026-07-05. Silver Cross Dune (compact urban modular). Do NOT edit seed.json.",
+  "id": "silvercross-dune",
+  "name": "Silver Cross Dune",
+  "brand": "Silver Cross",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/silvercross-dune.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Silver Cross Dune — Dune/Reef Car Seat Adapters",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-silvercross-dune-reef"],
+
+  "priceSources": [
+    { "retailer": "Silver Cross US (DTC)", "price": 959.99, "url": "https://silvercrossus.com/product/silver-crosss-dune-compact-folding-stroller/", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Nordstrom", "price": 959.99, "url": "https://www.nordstrom.com/s/dune-stroller/6914986", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Albee Baby", "price": 959.99, "url": "https://www.albeebaby.com/collections/silver-cross-dune-strollers", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 25.3,
+    "_weightNote": "~15.3 lb chassis + ~10 lb seat = ~25.3 lb combined (retailer spec).",
+
+    "unfoldedIn": { "lengthIn": 30, "widthIn": 23, "heightIn": 42.5 },
+    "foldedIn": { "lengthIn": 27, "widthIn": 23, "heightIn": 11 },
+    "_dimsNote": "Open ~30 x 23 x 36-42.5 in; folded ~27 x 23 x 11 in, free-standing (folds forward or rearward). From Mega Babies / retailer spec.",
+
+    "brake": { "hasBrake": true, "type": "step-on / step-off parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (reversible lie-flat seat, works from newborn out of the box)",
+      "seatCount": 1,
+      "basketCapacityLb": 11
+    },
+
+    "safety": {
+      "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
+      "certifications": null,
+      "notes": "5-point harness; reversible seat; one-hand self-standing compact fold; shell/fabrics use recycled plastic."
+    },
+
+    "foldType": "one-hand self-standing compact fold (folds both forward- and rear-facing)",
+    "strollerType": "compact modular / urban",
+    "recline": "multi-position reversible seat incl. lie-flat",
+    "reversibleSeat": true,
+    "tires": "foam-filled multi-terrain wheels, four-wheel suspension"
+  },
+
+  "sources": [
+    "https://www.megababiesusa.com/products/silver-cross-dune-stroller-system",
+    "https://strollberry.com/strollers/silver-cross-dune/",
+    "https://www.nordstrom.com/s/dune-stroller/6914986",
+    "https://silvercrossus.com/product/silver-crosss-dune-compact-folding-stroller/"
+  ],
+  "notes": "Dune is being superseded by the Reef 2 / Dune 2 generation — the Silver Cross US Dune URL now redirects to the Reef 2 (discontinued on DTC), but Nordstrom, Albee Baby and Bambi Baby still carry it. Price $959.99 is the widely-cited launch/MSRP; reconfirm at checkout as this is a wind-down SKU. Clek Liing mounts via the shared Dune/Reef car seat adapters ($59.99)."
+}

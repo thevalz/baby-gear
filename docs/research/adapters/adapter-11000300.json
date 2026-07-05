@@ -1,0 +1,41 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Batch S8 (Thule). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-11000300",
+  "name": "Thule Sleek Car Seat Adapter for Maxi-Cosi",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-11000300.png",
+
+  "partNumber": "11000300",
+  "madeBy": "Thule",
+
+  "seatBrandsSupported": "Maxi-Cosi / BeSafe / Cybex / Nuna (Maxi-Cosi-style footprint). Thule's own page does not name Clek, but Clek's official compatibility list confirms the Clek Liing/Liingo attaches to the Thule Sleek via THIS adapter (11000300) — the Liing uses the Maxi-Cosi footprint.",
+
+  "forStrollerIds": ["thule-sleek", "thule-sleek-double"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": ""
+  },
+  "_statusNote": "Current product but 'Temporarily out of stock' at Thule DTC (2026-07-05); carried by REI, Rackultra, Hazel & Fawn, Amazon. In double mode, two are used (11000300 x2) alongside the Sleek adapter kit 11000326.",
+
+  "priceSources": [
+    { "retailer": "Thule DTC", "price": 64.95, "url": "https://www.thule.com/en-us/strollers/strollers-accessories/thule-sleek-car-seat-adapter-for-maxi-cosi-_-11000300", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "REI", "price": 69.95, "url": "https://www.rei.com/product/160049/thule-sleek-car-seat-adapter-for-maxi-cosi", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right mounting adapters)",
+    "toolFree": true,
+    "notes": "Click-in mounting brackets; car seat clicks directly onto the Sleek frame. For double-mode car seat use, add the Sleek adapter kit (11000326)."
+  },
+
+  "sources": [
+    "https://www.thule.com/en-us/strollers/strollers-accessories/thule-sleek-car-seat-adapter-for-maxi-cosi-_-11000300",
+    "https://www.rei.com/product/160049/thule-sleek-car-seat-adapter-for-maxi-cosi",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/thule-sleek"
+  ],
+  "notes": "Serves the Thule Sleek (single mode) and Sleek double mode (x2). Thule DTC $64.95 (out of stock at check); REI $69.95. NOTE: Thule issued a March 2020 recall on certain Sleek/Urban Glide/Glide car-seat adapters (car seat could unexpectedly detach — fall hazard); ensure a remedied/current-production unit. Confirmed the Clek Liing fits via Clek's own list even though Thule marketing lists only Maxi-Cosi/BeSafe/Cybex/Nuna."
+}

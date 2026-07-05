@@ -1,0 +1,42 @@
+{
+  "_comment": "Car-seat stroller adapter fragment (batch S5 Joovy). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-joovy-universal-mcn",
+  "name": "Joovy Car Seat Adapter – Maxi-Cosi/Cybex/Nuna (Caboose RS/S & Qool)",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-joovy-universal-mcn.jpg",
+
+  "partNumber": null,
+
+  "madeBy": "Joovy",
+
+  "seatBrandsSupported": "Maxi-Cosi / Cybex / Nuna footprint — the Clek Liing uses this footprint and is confirmed Liing-compatible on Clek's official stroller list.",
+
+  "forStrollerIds": ["joovy-caboose-s-rs", "joovy-qool"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Joovy (DTC) — Caboose RS/S Car Seat Adapter (SKU 9121)", "price": 39.90, "url": "https://www.joovy.com/products/caboose-rs-and-caboose-s-car-seat-adapter", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Joovy (DTC) — Qool Car Seat Adapter (front, SKU 9071)", "price": 39.90, "url": "https://www.joovy.com/products/qool-car-seat-adapter", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Joovy (DTC) — Qool Rear Adapter Maxi-Cosi/Cybex/Nuna (SKU 9092)", "price": 39.90, "url": "https://www.joovy.com/products/qool-car-seat-rear-adapter-maxi-cosi-cybex-nuna", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "single click-in adapter per position (front or rear)",
+    "toolFree": true,
+    "notes": "Click the connectors onto the stroller, then click the car seat in — no unbuckling. Qool double mode needs both a front (9071) and a rear Maxi-Cosi/Cybex/Nuna (9092) adapter. The Caboose RS/S adapter (9121) is NOT compatible with the older Caboose Graphite, Caboose Ultralight or Big Caboose."
+  },
+
+  "sources": [
+    "https://www.joovy.com/products/caboose-rs-and-caboose-s-car-seat-adapter",
+    "https://www.joovy.com/products/qool-car-seat-adapter",
+    "https://www.joovy.com/products/qool-car-seat-rear-adapter-maxi-cosi-cybex-nuna",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Clek lists a 'Universal Car Seat Adapter / Maxi-Cosi/Cybex/Nuna' for the Caboose S/RS and Qool. In Joovy's catalog these are the model-specific Maxi-Cosi/Cybex/Nuna click-in adapters: Caboose RS/S (SKU 9121, $39.90) and Qool front (9071) + Qool rear MC/Cybex/Nuna (9092), each $39.90. No printed Clek part number, so partNumber is null. Clek Liing (Maxi-Cosi footprint) confirmed compatible via Clek's official list."
+}

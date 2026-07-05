@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S9 UPPAbaby). UPPAbaby MINU V3 (current compact travel). Uses UPPAbaby-made adapter 0901-MXA-WW (Maxi-Cosi/Nuna/Clek). Do NOT edit seed.json.",
+  "id": "uppababy-minu-v3",
+  "name": "UPPAbaby MINU V3",
+  "brand": "UPPAbaby",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/uppababy-minu-v3.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "UPPAbaby Minu V3 — Car seat adapter for Maxi-Cosi, Nuna, Clek (0901-MXA-WW), UPPAbaby-made",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-0901-mxa-ww"],
+
+  "priceSources": [
+    { "retailer": "Bambi Baby", "price": 499.99, "url": "https://www.bambibaby.com/products/uppababy-minu-v3-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Pottery Barn Kids", "price": 499.99, "url": "https://www.potterybarnkids.com/products/uppababy-minu-v3-stroller/", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "The Baby Cubby", "price": 499.99, "url": "https://www.babycubby.com/products/uppababy-minu-v3-stroller", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 16.7,
+
+    "unfoldedIn": { "lengthIn": 34.5, "widthIn": 18, "heightIn": 41 },
+    "foldedIn": { "lengthIn": 10, "widthIn": 18, "heightIn": 21.5 },
+    "_foldNote": "IATA-compatible folded footprint for airplane overhead bins.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "from birth (with car seat via adapter or from-birth accessory); ~3 mo+ in seat alone",
+      "seatCount": 1,
+      "basketCapacityLb": 20
+    },
+
+    "safety": {
+      "standards": "Meets/exceeds ASTM F833 (US carriages & strollers)",
+      "certifications": "JPMA Certified; GREENGUARD Gold Certified",
+      "notes": "5-point adjustable no-rethread harness; foot barrier; UPF 50+ canopy; all-wheel suspension with independent rear suspension; one-hand self-standing fold."
+    },
+
+    "foldType": "one-hand, overhead-bin-friendly compact fold, self-standing",
+    "strollerType": "compact / travel (lightweight)",
+    "recline": "multiple recline positions (deeper than prior Minu; not fully flat without accessory)",
+    "reversibleSeat": false,
+    "tires": "never-flat foam-filled wheels; front swivel with lock; all-wheel + independent rear suspension"
+  },
+
+  "sources": [
+    "https://uppababy.com/strollers/lightweight/minu-v3/",
+    "https://www.babygearlab.com/reviews/getting-around/travel-stroller/uppababy-minu-v3",
+    "https://strolleria.com/products/uppababy-minu-v3-stroller",
+    "https://support.uppababy.com/hc/en-us/articles/115009544627-Are-UPPAbaby-products-JPMA-ASTM-compliant",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Current compact travel Minu, ~16.7 lb, one-hand IATA-cabin fold (10 x 18 x 21.5 in) — a strong light city/shopping candidate second only to a YOYO-class fold. $499.99 MAP, in stock at most retailers. Uses UPPAbaby-MADE adapter 0901-MXA-WW (adapter-0901-mxa-ww), which explicitly lists the Clek Liing."
+}

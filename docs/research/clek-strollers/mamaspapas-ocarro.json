@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "mamaspapas-ocarro",
+  "name": "Mamas & Papas Ocarro",
+  "brand": "Mamas & Papas",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/mamaspapas-ocarro.png",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Mamas & Papas Ocarro — Armadillo Flip/XT and Ocarro Maxi-Cosi car seat adapters (159925300)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-159925300"],
+
+  "priceSources": [
+    { "retailer": "Albee Baby", "price": 809.99, "url": "https://www.albeebaby.com/mamas-and-papas-ocarro-stroller-black.html", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "GoodBuy Gear (open box)", "price": 138.99, "url": "https://goodbuygear.com/products/mamas-papas-ocarro-stroller", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Mamas & Papas UK", "price": 849.00, "url": "https://www.mamasandpapas.com/products/ocarro2-6161l9000", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "Albee Baby $809.99 is the US list from its Ocarro listing (page returns 403 to automated fetch; reconfirm on load). GoodBuy $138.99 is an out-of-stock open-box unit. M&P UK price is £849 (GBP), not USD — listed for reference since M&P largely withdrew from the US market.",
+
+  "specs": {
+    "weightLb": 29.8,
+
+    "unfoldedIn": { "lengthIn": 37.8, "widthIn": 22.8, "heightIn": 43.3 },
+    "foldedIn": { "lengthIn": 14.6, "widthIn": 22.8, "heightIn": 29.9 },
+    "_dimsNote": "Folds one-handed with the seat attached (either direction). 96 x 58 x 110 cm open; 37 x 58 x 76 cm folded.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated push-down pedal parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 48.5,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "from birth (lie-flat seat / carrycot) to 22 kg (48.5 lb)",
+      "seatCount": 1,
+      "basketCapacityLb": 6.6
+    },
+
+    "safety": {
+      "standards": "EN 1888 (Mamas & Papas). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
+      "certifications": null,
+      "notes": "5-point harness; reversible seat (parent- or world-facing); lie-flat recline; all-round suspension. Basket rated ~3 kg (6.6 lb) per Strollberry."
+    },
+
+    "foldType": "one-hand compact fold with seat attached, free-standing",
+    "strollerType": "full-size / all-terrain flagship pram",
+    "recline": "multi-position incl. full lie-flat",
+    "reversibleSeat": true,
+    "tires": "8 in front / 11 in rear (19 cm / 27 cm) EVA foam-coated wheels; all-wheel suspension"
+  },
+
+  "sources": [
+    "https://strollberry.com/strollers/mamaspapas-ocarro/",
+    "https://www.momsstrollerreviews.com/new-mamas-papas-ocarro-2017-stroller-review-2/",
+    "https://www.mamasandpapas.com/products/ocarro2-6161l9000",
+    "https://goodbuygear.com/products/mamas-papas-ocarro-stroller"
+  ],
+  "notes": "Full-size flagship all-terrain pram (~29.8 lb) — a do-everything stroller, not the ultralight city goal, but on Clek's list. US availability is thin since Mamas & Papas scaled back its US retail; Albee Baby still lists it (~$809.99). Liing attaches via the M&P Armadillo Flip/XT + Ocarro Maxi-Cosi adapter (adapter-159925300): the adapter enumerates Maxi-Cosi/Cybex/Joie footprints (Liing shares the Maxi-Cosi footprint) and Clek's authoritative list confirms Liing fits the Ocarro via this part."
+}

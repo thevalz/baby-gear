@@ -1,0 +1,60 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S5 Joovy). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "joovy-twin-roo",
+  "name": "Joovy Twin Roo+ Car Seat Stroller",
+  "brand": "Joovy",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joovy-twin-roo.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joovy Twin Roo+ — Maxi-Cosi/Cybex/Nuna adapter",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-joovy-twinroo-mcn"],
+
+  "priceSources": [
+    { "retailer": "Joovy (DTC)", "price": 249.90, "url": "https://www.joovy.com/products/twin-roo-carseat-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": null, "url": "https://www.amazon.com/Joovy-Twin-Roo-Seat-Stroller/dp/B00M733I02", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 24.4,
+
+    "unfoldedIn": { "lengthIn": 41.5, "widthIn": 26, "heightIn": 42 },
+    "foldedIn": { "lengthIn": 47.75, "widthIn": 26, "heightIn": 10.25 },
+
+    "brake": { "hasBrake": true, "type": "foot-operated rear-wheel parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 35,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "newborn (car-seat carrier frame — holds two infant car seats, no built-in seats)",
+      "seatCount": 2,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
+      "certifications": null,
+      "notes": "Frame stroller — occupant restraint is provided by each infant car seat's own harness. Front swivel wheel locks; front-wheel suspension; large parent tray with 4 cup holders. Joovy does not publish a per-model JPMA certification."
+    },
+
+    "foldType": "one-hand flat fold",
+    "strollerType": "double / twin infant car-seat carrier frame (mounts two car seats side-by-side, each facing either direction)",
+    "recline": "n/a — carries the two infant car seats at their own recline",
+    "reversibleSeat": true,
+    "tires": "foam wheels; front swivel with suspension"
+  },
+
+  "sources": [
+    "https://www.joovy.com/products/twin-roo-carseat-stroller",
+    "https://www.amazon.com/Joovy-Twin-Roo-Seat-Stroller/dp/B00M733I02",
+    "https://www.babygearlab.com/reviews/getting-around/stroller-and-car-seat-combo/joovy-twinroo-plus",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "A car-seat carrier frame for TWINS — it has no seats of its own; it mounts two infant car seats side-by-side (each can face either direction). Requires brand-specific adapters (sold separately); the Clek Liing (Maxi-Cosi footprint) uses the Maxi-Cosi/Cybex Twin Roo+ adapter (adapter-joovy-twinroo-mcn). Max 35 lb per car seat. DTC price $249.90 (frame only)."
+}

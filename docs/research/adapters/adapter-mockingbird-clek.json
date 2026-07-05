@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S10). Do NOT edit seed.json.",
+  "id": "adapter-mockingbird-clek",
+  "name": "Mockingbird Infant Car Seat Adapter — Clek Liing",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-mockingbird-clek.jpg",
+
+  "partNumber": null,
+
+  "madeBy": "Mockingbird",
+
+  "seatBrandsSupported": "Clek Liing — this is the Clek-specific version selected from Mockingbird's adapter dropdown. Mockingbird's car-seat adapter line supports 40+ infant seats across Baby Jogger, Britax, Chicco, Clek, Cybex, Graco, Maxi-Cosi, Nuna and UPPAbaby; the Clek variant is literally the 'Clek Liing Car Seat Adapter'.",
+
+  "forStrollerIds": ["mockingbird"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": "Named directly on Clek's official Liing/Liingo list as the Mockingbird 'Clek Liing Car Seat Adapter'. Currently sold out at Mockingbird DTC (email-when-available)."
+  },
+
+  "priceSources": [
+    { "retailer": "Mockingbird (DTC)", "price": 50.00, "url": "https://hellomockingbird.com/products/stroller-car-seat-adapter", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "left + right adapter sides",
+    "toolFree": true,
+    "notes": "Remove the stroller seat from the frame, insert each side of the adapter into the attachment points until you hear a click, then click the car seat into the adapter just like a car-seat base."
+  },
+
+  "sources": [
+    "https://hellomockingbird.com/products/stroller-car-seat-adapter",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://help.hellomockingbird.com/which-car-seat-brands-and-models-are-compatible-with-the-mockingbird-car-seat-adapter-HyD29EBic",
+    "https://www.babylist.com/gp/mockingbird-car-seat-adapter-for-mockingbird-stroller/15467/1855634"
+  ],
+  "notes": "Mockingbird's own infant car-seat adapter, Clek Liing configuration ($50 DTC, currently sold out). No public part number (internal SKU family PD_SA_*). Fits the Mockingbird Single-to-Double stroller. This is exactly the row Clek's official list cites for Mockingbird. Sold direct-to-consumer at hellomockingbird.com; resale units appear on GoodBuy Gear/Babylist."
+}

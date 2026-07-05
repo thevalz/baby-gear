@@ -1,0 +1,64 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05. Original Bugaboo Butterfly (2022 one-second-fold ultra-compact travel stroller) — the predecessor to the Butterfly 2. Do NOT edit seed.json.",
+  "id": "bugaboo-butterfly",
+  "name": "Bugaboo Butterfly (original)",
+  "brand": "Bugaboo",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/bugaboo-butterfly.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Bugaboo | Butterfly | Bugaboo Butterfly car seat adapter | 100045001",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-100045001"],
+
+  "priceSources": [
+    { "retailer": "Little Sprout (Little Sprout USA)", "price": 399.99, "url": "https://littlesproutusa.com/products/bugaboo-butterfly-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "ANB Baby", "price": 384.99, "url": "https://www.anbbaby.com/products/bugaboo-butterfly-complete-lightweight-stroller", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 16.09,
+    "_weightNote": "16.09 lb with seat (ANB Baby spec sheet); often rounded to 16.1 lb by retailers.",
+
+    "unfoldedIn": { "lengthIn": 36.42, "widthIn": 17.72, "heightIn": 40.31 },
+    "foldedIn": { "lengthIn": 17.72, "widthIn": 9.06, "heightIn": 21.26 },
+    "_dimsNote": "Folded 17.72 x 9.06 x 21.26 in is IATA cabin-compatible (fits overhead bins). Per ANB Baby / Strolleria spec sheets.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated single central parking pedal engaging both rear wheels (flip-flop friendly)" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "6 months to approx. 4 years in the seat; from birth with a compatible infant car seat + car seat adapter (100045001)",
+      "seatCount": 1,
+      "basketCapacityLb": 17.64
+    },
+
+    "safety": {
+      "standards": "Not individually published as a numbered standard by Bugaboo; all strollers sold in the US must comply with 16 CFR 1227 (which incorporates ASTM F833). Bugaboo states its products are tested beyond industry safety standards.",
+      "certifications": null,
+      "notes": "5-point harness; JPMA certification not confirmed/published for this model. Max child height not published by manufacturer (null)."
+    },
+
+    "foldType": "one-second, one-hand ultra-compact self-standing fold (IATA cabin-approved)",
+    "strollerType": "compact / travel",
+    "recline": "one-hand recline 111 to 145 degrees; 5-position adjustable integrated leg rest",
+    "reversibleSeat": false,
+    "tires": "front 4.7 in swivel wheels / rear 6 in; 4-wheel suspension (tire material not published)"
+  },
+
+  "sources": [
+    "https://www.anbbaby.com/products/bugaboo-butterfly-complete-lightweight-stroller",
+    "https://littlesproutusa.com/products/bugaboo-butterfly-stroller",
+    "https://strolleria.com/pages/all-new-bugaboo-butterfly-2",
+    "https://www.bugaboo.com/us-en/accessories/adapters/bugaboo-butterfly-car-seat-adapter-100045MI.html",
+    "https://www.babygearlab.com/reviews/getting-around/travel-stroller/bugaboo-butterfly",
+    "https://kidtravel.org/strollers/bugaboo-butterfly-stroller-review/"
+  ],
+  "notes": "SUPERSEDED generation: the original Butterfly (2022) has been replaced by the Butterfly 2 (2024/2025). Bugaboo.com no longer sells it (that page redirects to Butterfly 2); it remains available at some retailers (Little Sprout $399.99 in stock; ANB Baby $384.99 out of stock; Pottery Barn Kids lists it as No Longer Available). A prime light/compact city+travel candidate: ~16.1 lb, one-second one-hand fold to 17.72 x 9.06 x 21.26 in (cabin size). Key differences vs Butterfly 2: smaller 4.7 in front wheels (vs 5.5 in) and a slightly lower canopy. Clek Liing attaches via the Bugaboo Butterfly car seat adapter 100045001 (adapter-100045001) — distinct from the Butterfly 2 adapter 400018003; the two are NOT interchangeable."
+}

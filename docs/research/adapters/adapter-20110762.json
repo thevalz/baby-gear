@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Batch S8 (Thule). Sourced 2026-07-05. Urban Glide UNIVERSAL adapter (UG3/UG4). Do NOT edit seed.json.",
+  "id": "adapter-20110762",
+  "name": "Thule Urban Glide Universal Car Seat Adapter",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-20110762.png",
+
+  "partNumber": "20110762",
+  "madeBy": "Thule",
+
+  "seatBrandsSupported": "Universal footprint — Chicco and many other popular infant car seat brands (this is Thule's 'universal/Chicco' Urban Glide 3 adapter, distinct from the Maxi-Cosi-specific 20110761). Clek's official list confirms the Clek Liing/Liingo attaches to the Urban Glide 3 and Urban Glide 4 via THIS universal adapter (20110762).",
+
+  "forStrollerIds": ["thule-urban-glide-3", "thule-urban-glide-4"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": "Urban Glide 3 is 'Not compatible in double mode' per Clek's list."
+  },
+  "_statusNote": "Current product but 'Temporarily out of stock' at Thule DTC (2026-07-05). Single-stroller version; Thule also sells a double-stroller universal variant (20110764).",
+
+  "priceSources": [
+    { "retailer": "Thule DTC", "price": 79.95, "url": "https://www.thule.com/en-us/strollers/strollers-accessories/thule-urban-glide-car-seat-adapter-universal-_-20110762", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right mounting adapters)",
+    "toolFree": true,
+    "notes": "Easy click-in installation and removal; approved for infant car seats up to 9 kg. Fits Urban Glide 3 (single) and Urban Glide 4-Wheel."
+  },
+
+  "sources": [
+    "https://www.thule.com/en-us/strollers/strollers-accessories/thule-urban-glide-car-seat-adapter-universal-_-20110762",
+    "https://www.thule.com/en-us/stroller-car-seat-adapters/thule-urban-glide-car-seat-adapter-_-20110740",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "The 'universal' Urban Glide adapter Clek lists for both the UG3 and UG4 (adapter serves thule-urban-glide-3 + thule-urban-glide-4). Thule DTC $79.95 (out of stock at check). Clek caveat carried through: the Urban Glide 3 with the Liing is single-mode only — 'Not compatible in double mode.'"
+}

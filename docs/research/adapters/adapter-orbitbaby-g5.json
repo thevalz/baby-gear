@@ -1,0 +1,38 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S10). Do NOT edit seed.json.",
+  "id": "adapter-orbitbaby-g5",
+  "name": "Orbit Baby Car Seat Stroller Adapter",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-orbitbaby-g5.jpg",
+
+  "partNumber": "CSA810",
+  "madeBy": "Orbit Baby",
+
+  "seatBrandsSupported": "Maxi-Cosi / Cybex / Nuna / Bugaboo (Turtle Air) / Clek — Clek Liing explicitly listed. Attaches a non-Orbit infant car seat to the Orbit Baby stroller.",
+
+  "forStrollerIds": ["orbitbaby-g5"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": "Orbit Baby DTC page notes 'This adapter will not work with the Orbit Baby car seat base' — it is for third-party seats (incl. Clek Liing) only. Currently out of stock at Orbit Baby DTC."
+  },
+
+  "priceSources": [
+    { "retailer": "Orbit Baby (DTC)", "price": 60.00, "url": "https://orbitbaby.com/products/system-adapter", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "adapter unit (~3 lb; interior 33 × 32 × 14 cm)",
+    "toolFree": true,
+    "notes": "For use on Orbit Baby G5/X5 strollers only; infant car seat clicks into the adapter like a base. Will NOT work with the Orbit Baby car-seat base."
+  },
+
+  "sources": [
+    "https://orbitbaby.com/products/system-adapter",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.littlesproutonline.com/orbit-baby-g5-car-seat-stroller-adapter/"
+  ],
+  "notes": "Orbit Baby 'Car Seat Stroller Adapter' (SKU CSA810), $60 at Orbit Baby DTC, currently OUT OF STOCK. Supports Clek Liing per both Orbit Baby's compatibility list and Clek's official Liing/Liingo list (which names it for the G5). Fits Orbit Baby G5 (and X5) strollers only."
+}

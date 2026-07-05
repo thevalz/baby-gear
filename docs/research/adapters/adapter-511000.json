@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-511000",
+  "name": "Joolz Day2 / Day3 / Day+ Car Seat Adapter",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-511000.jpg",
+
+  "partNumber": "511000",
+  "madeBy": "Joolz",
+
+  "seatBrandsSupported": "Nuna / Cybex / Maxi-Cosi / Clek — Clek's official list AND retailer titles explicitly enumerate Clek (Liing).",
+
+  "forStrollerIds": ["joolz-day3"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Albee Baby", "price": 44.99, "url": "https://www.albeebaby.com/products/joolz-day3-car-seat-adapter-nuna-maxi-cosi-clek", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Mega Babies", "price": 49.99, "url": "https://www.megababiesusa.com/products/joolz-day2-day3-car-seat-adapter", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Joolz DTC", "price": 35.99, "url": "https://www.joolz.com/us/en/accessories/511000-M.html", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right)",
+    "toolFree": true,
+    "notes": "Click-in adapters mount to the Day frame; car seat clicks in facing the parent."
+  },
+
+  "sources": [
+    "https://www.albeebaby.com/products/joolz-day3-car-seat-adapter-nuna-maxi-cosi-clek",
+    "https://www.megababiesusa.com/products/joolz-day2-day3-car-seat-adapter",
+    "https://www.joolz.com/us/en/accessories/511000-M.html"
+  ],
+  "notes": "The one adapter in this batch whose Clek listing AND retailer product names spell out Clek (Liing). Covers Joolz Day+, Day2 and Day3. Joolz DTC was $35.99 (final sale) but out of stock; best in-stock $44.99 (Albee Baby)."
+}

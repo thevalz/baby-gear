@@ -1,0 +1,62 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Batch S8 (Thule). Sourced 2026-07-05. Thule Sleek in SINGLE mode. Do NOT edit seed.json.",
+  "id": "thule-sleek",
+  "name": "Thule Sleek (Single Mode)",
+  "brand": "Thule",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/thule-sleek.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Thule Sleek (Single Mode) — Thule Sleek car seat adapter for Maxi-Cosi (11000300)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-11000300"],
+
+  "priceSources": [
+    { "retailer": "ANB Baby", "price": 649.95, "url": "https://www.anbbaby.com/products/thule-sleek-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Thule DTC (Sleek 2 successor)", "price": 999.95, "url": "https://www.thule.com/en-us/strollers/full-size-strollers/thule-sleek-_-11000001", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 27.9,
+
+    "unfoldedIn": { "lengthIn": 45.7, "widthIn": 24.0, "heightIn": 33.5 },
+    "_unfoldedNote": "116 x 61 x 85 cm (seat-top height 33.5 in); telescoping handlebar adjusts 38–43 in (97–109 cm).",
+    "foldedIn": { "lengthIn": 32.7, "widthIn": 24.0, "heightIn": 16.5 },
+    "_foldedNote": "83 x 61 x 42 cm folded (folds with the forward-facing seat attached).",
+
+    "brake": { "hasBrake": true, "type": "one-step foot-operated rocker parking brake (flip-flop friendly)" },
+
+    "capacity": {
+      "maxChildWeightLb": 48.5,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (with infant car seat or Sleek bassinet); stroller seat rated 0–36 mo",
+      "seatCount": 1,
+      "basketCapacityLb": 11
+    },
+
+    "safety": {
+      "standards": "Meets US ASTM F833 stroller standard — Clek's list confirms the Sleek was tested with the Liing and is ASTM-compliant for car seats on strollers.",
+      "certifications": null,
+      "notes": "5-point harness with height-adjustable padded shoulders; auto-lock fold latch; second seat (33 lb / 15 kg) mounts in double mode via the Sleek adapter kit."
+    },
+
+    "foldType": "one-hand compact fold, self-standing with auto-lock, folds with seat attached",
+    "strollerType": "urban / convertible single-to-double (modular, up to 3 kids)",
+    "recline": "multi-position (3-position) recline to near-flat",
+    "reversibleSeat": true,
+    "tires": "front EVA foam-coated swivel/lockable wheels (~8 in); rear foam-filled puncture-free wheels (~11 in)"
+  },
+
+  "sources": [
+    "https://www.thule.com/en-us/strollers/compact-strollers/thulesleek-_-11000003",
+    "https://strollberry.com/strollers/thule-sleek/",
+    "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/thule-sleek",
+    "https://www.anbbaby.com/products/thule-sleek-stroller"
+  ],
+  "notes": "The Clek-listed 'Sleek' is the original Thule Sleek (now superseded by the Sleek 2, Thule DTC $999.95). ANB Baby still sells the original Sleek at $649.95 (was $949.95), in stock. An urban/modular convertible — heavier (27.9 lb) than a true compact-city travel stroller, but self-standing one-hand fold and reversible seat. Clek Liing attaches via the Thule Sleek Maxi-Cosi adapter 11000300 (adapter-11000300). Same frame as thule-sleek-double (double mode)."
+}

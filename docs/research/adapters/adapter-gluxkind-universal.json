@@ -1,0 +1,30 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S10). Glüxkind Car Seat Adapter (Clek's list calls it 'Universal Car Seat Adapter') for the Rosa Smart Stroller. Do NOT edit seed.json.",
+  "id": "adapter-gluxkind-universal",
+  "name": "Glüxkind Car Seat Adapter",
+  "checkedAt": "2026-07-05",
+  "image": "images/adapter-gluxkind-universal.jpg",
+  "partNumber": "GKAC-GK00011",
+  "madeBy": "Glüxkind",
+  "seatBrandsSupported": "Clek Liing — a precision-fit adapter thoughtfully designed to pair the Clek Liing with the Glüxkind Rosa. Confirmed Clek Liing supported per Clek's list; Rosa is also certified for the Clek Liingo.",
+  "forStrollerIds": ["gluxkind-rosa"],
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+  "priceSources": [
+    { "retailer": "Glüxkind DTC (shop.gluxkind.com)", "price": 70.00, "url": "https://shop.gluxkind.com/products/car-seat-adaptor", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+  "install": {
+    "pieces": "adapter unit (three-piece system: Rosa frame + adapter + Clek Liing car seat)",
+    "toolFree": true,
+    "notes": "Precision-fit; the Clek Liing clicks onto the adapter for a secure car-to-stroller transfer."
+  },
+  "sources": [
+    "https://shop.gluxkind.com/products/car-seat-adaptor",
+    "https://gluxkind.com/car-seats",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "$70 at Glüxkind DTC, in stock, made in Canada (SKU GKAC-GK00011). Purpose-built to mount the Clek Liing on the Rosa Smart Stroller; Glüxkind certifies Rosa for the Clek Liing and Clek Liingo. Glüxkind also sells the Clek Liing seat ($630) and a Clek Foonf set directly, indicating a close Clek partnership."
+}

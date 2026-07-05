@@ -1,0 +1,59 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S5 Joovy). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "joovy-caboose",
+  "name": "Joovy Caboose (original / Caboose Graphite)",
+  "brand": "Joovy",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joovy-caboose.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joovy Caboose — Universal Car Seat Adapter",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-joovy-universal"],
+
+  "priceSources": [
+    { "retailer": "Amazon", "price": null, "url": "https://www.amazon.com/Joovy-Caboose-Graphite-Tandem-Stroller/dp/B01BMAW0GS", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 27.5,
+
+    "unfoldedIn": { "lengthIn": 38, "widthIn": 21.5, "heightIn": 41.5 },
+    "_unfoldedNote": "Assembled (in-use) size 41.5 H x 21.5 W x 38 D in per the original Joovy Caboose Stand-On Tandem retail listing (Amazon B001AXJ8O0) — mapped to length(depth) 38, width 21.5, height 41.5. Consistent with the current Caboose family (~38 L x 21.5 W x 42 H).",
+    "foldedIn": { "lengthIn": 41.5, "widthIn": 21.5, "heightIn": 10.5 },
+
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 45,
+      "maxChildHeightIn": 44,
+      "minAgeOrNewborn": "front seat from ~3 mo or newborn with an infant car seat via adapter; rear standing platform ~2.5 yr+",
+      "seatCount": 2,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
+      "certifications": null,
+      "notes": "5-point harness front seat; 3-way reclining front seat. Joovy does not publish a per-model JPMA certification."
+    },
+
+    "foldType": "standing fold",
+    "strollerType": "sit-and-stand tandem double (front seat + rear bench/standing platform; optional rear seat sold separately)",
+    "recline": "3-way reclining front seat",
+    "reversibleSeat": false,
+    "tires": "foam/plastic wheels"
+  },
+
+  "sources": [
+    "https://www.amazon.com/Joovy-Caboose-Graphite-Tandem-Stroller/dp/B01BMAW0GS",
+    "https://www.amazon.com/Joovy-Caboose-Stand-Tandem-Stroller/dp/B001AXJ8O0",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "The original Joovy Caboose sit-and-stand (aka Caboose Graphite), superseded at Joovy's DTC store by the Caboose UL / Caboose RS; not in the current joovy.com catalog and shown 'Currently unavailable' on Amazon at check. Weight 27.5 lb (Amazon item weight). Folded footprint from Amazon B01BMAW0GS product dims (10.5 x 21.5 x 41.5 in); unfolded/assembled size 38 L x 21.5 W x 41.5 H in from the original Caboose Stand-On Tandem listing (Amazon B001AXJ8O0). Clek Liing attaches via the Joovy Universal Car Seat Adapter (adapter-joovy-universal). No reliable current price found — priceSources price left null."
+}

@@ -1,0 +1,62 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S9 UPPAbaby). UPPAbaby CRUZ V2 (2020-2022). Uses CLEK'S OWN adapter for UPPAbaby. Do NOT edit seed.json.",
+  "id": "uppababy-cruz-v2",
+  "name": "UPPAbaby CRUZ V2 (2020-2022)",
+  "brand": "UPPAbaby",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/uppababy-cruz-v2.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "UPPAbaby CRUZ V2 — **Clek** car seat adapters for UPPAbaby (Clek-made adapter)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-clek-uppababy"],
+
+  "priceSources": [
+    { "retailer": "Nordstrom", "price": 899.99, "url": "https://www.nordstrom.com/s/uppababy-cruz-v2-stroller/5499237", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Pottery Barn Kids", "price": 899.99, "url": "https://www.potterybarnkids.com/products/uppababy-cruz-v2-stroller/", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "GoodBuy Gear (resale, used)", "price": 436.99, "url": "https://goodbuygear.com/products/uppababy-2020-cruz-v2-stroller", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 25.5,
+
+    "unfoldedIn": { "lengthIn": 37.5, "widthIn": 22.8, "heightIn": 40 },
+    "foldedIn": { "lengthIn": 16.5, "widthIn": 22.8, "heightIn": 33 },
+
+    "brake": { "hasBrake": true, "type": "single-action foot-operated parking brake (color-coded pedal)" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth with infant car seat / bassinet or infant SnugSeat insert; ~3 mo+ in seat",
+      "seatCount": 1,
+      "basketCapacityLb": 30
+    },
+
+    "safety": {
+      "standards": "Meets/exceeds ASTM F833 (US carriages & strollers)",
+      "certifications": "JPMA Certified; GREENGUARD Gold Certified",
+      "notes": "5-point no-rethread harness; reversible toddler seat; auto-lock two-hand fold latch."
+    },
+
+    "foldType": "two-hand fold with auto-lock, self-standing (folds with seat attached)",
+    "strollerType": "full-size single (compact full-size)",
+    "recline": "multi-position deep recline (near-flat; from-birth needs insert or car seat/bassinet)",
+    "reversibleSeat": true,
+    "tires": "foam-filled never-flat wheels; front swivel with lock"
+  },
+
+  "sources": [
+    "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/uppababy-cruz-v2",
+    "https://strollberry.com/strollers/uppababy-cruz-v2/",
+    "https://support.uppababy.com/hc/en-us/articles/115009544627-Are-UPPAbaby-products-JPMA-ASTM-compliant",
+    "https://www.nordstrom.com/s/uppababy-cruz-v2-stroller/5499237",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "CRUZ V2 discontinued/superseded by CRUZ V3; still on a few authorized shelves at $899.99 (Nordstrom shows 'only 1 left') plus resale. ~25.5 lb full-size single, two-hand self-standing fold. Clek Liing attaches via CLEK'S OWN 'Clek car seat adapters for UPPAbaby' (adapter-clek-uppababy). Heavier/bulkier than the city/shopping target."
+}

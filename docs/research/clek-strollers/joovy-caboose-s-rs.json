@@ -1,0 +1,59 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S5 Joovy). Sourced 2026-07-05. Represents the current Joovy Caboose RS Premium; Clek lists 'Caboose S/RS'. Do NOT edit seed.json.",
+  "id": "joovy-caboose-s-rs",
+  "name": "Joovy Caboose RS / Caboose S (Caboose RS Premium)",
+  "brand": "Joovy",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joovy-caboose-s-rs.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joovy Caboose S/RS — Universal Car Seat Adapter / Maxi-Cosi/Cybex/Nuna",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-joovy-universal-mcn"],
+
+  "priceSources": [
+    { "retailer": "Joovy (DTC)", "price": 569.90, "url": "https://www.joovy.com/products/caboose-rs-premium-sit-and-stand-double-stroller-jet", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": null, "url": "https://www.amazon.com/Joovy-Caboose-Stroller-Premium-Stand/dp/B09WZMSGY7", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 30.2,
+
+    "unfoldedIn": { "lengthIn": 43.5, "widthIn": 24.1, "heightIn": 46.1 },
+    "foldedIn": { "lengthIn": 50.4, "widthIn": 24.1, "heightIn": 13.4 },
+
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": 44,
+      "minAgeOrNewborn": "front seat from ~3 mo, or newborn with the bassinet + car seat adapter; rear standing platform to 44 in",
+      "seatCount": 2,
+      "basketCapacityLb": 25
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
+      "certifications": null,
+      "notes": "Magnetic 5-point harness buckles; leatherette handlebar; oversized UPF 50 canopy. Joovy does not publish a per-model JPMA certification."
+    },
+
+    "foldType": "standing fold",
+    "strollerType": "premium sit-and-stand tandem double (full-size reclining front seat + bench + stand-on platform that also accepts a bassinet; optional rear seat sold separately)",
+    "recline": "reclining full-size front seat; stand-on platform converts to accept a bassinet",
+    "reversibleSeat": false,
+    "tires": "all-terrain never-flat foam wheels"
+  },
+
+  "sources": [
+    "https://www.joovy.com/products/caboose-rs-premium-sit-and-stand-double-stroller-jet",
+    "https://www.amazon.com/Joovy-Caboose-Stroller-Premium-Stand/dp/B09WZMSGY7",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Current premium Caboose RS/S sit-and-stand. Retailer dimension labels are scrambled at source (reported '24.1L x 43.5W x 46.1H' assembled / '24.1L x 50.4W x 13.4H' folded); re-mapped here to sensible L×W×H (43.5×24.1×46.1 open, 50.4×24.1×13.4 folded) with this note. Max 55 lb per seat, 25 lb basket. Clek Liing attaches via Joovy's Maxi-Cosi/Cybex/Nuna Caboose RS/S click-in adapter (adapter-joovy-universal-mcn); a separate strap-style universal adapter (SKU 9125) also exists for the RS/S front position. DTC price $569.90."
+}

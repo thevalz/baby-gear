@@ -1,0 +1,60 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S5 Joovy). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "joovy-zoom-360",
+  "name": "Joovy Zoom 360 Ultralight",
+  "brand": "Joovy",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joovy-zoom-360.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joovy Zoom 360 Ultralight / Joovy Zoom — Universal Car Seat Adapter",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-joovy-universal"],
+
+  "priceSources": [
+    { "retailer": "Joovy (DTC)", "price": 339.90, "url": "https://www.joovy.com/products/zoom-360-ultralight-lightweight-performance-jogging-single-stroller-black-1", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": null, "url": "https://www.amazon.com/Joovy-Ultralight-Jogging-Stroller-Lightweight/dp/B09C1R3FC5", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 26.25,
+
+    "unfoldedIn": { "lengthIn": 54, "widthIn": 25, "heightIn": 46 },
+    "foldedIn": { "lengthIn": 34, "widthIn": 25, "heightIn": 19 },
+
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 75,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "~3 mo (6 mo+ for jogging); newborn with an infant car seat via adapter",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
+      "certifications": null,
+      "notes": "5-point harness; lockable swiveling front wheel; rear-wheel suspension; wrist strap. Joovy does not publish a per-model JPMA certification."
+    },
+
+    "foldType": "easy one-hand fold",
+    "strollerType": "jogging / all-terrain single",
+    "recline": "multi-position reclining seat",
+    "reversibleSeat": false,
+    "tires": "16 in rear air-filled tires + single 12 in front air-filled tire (lockable swivel); air pump included"
+  },
+
+  "sources": [
+    "https://www.joovy.com/products/zoom-360-ultralight-lightweight-performance-jogging-single-stroller-black-1",
+    "https://www.amazon.com/Joovy-Ultralight-Jogging-Stroller-Lightweight/dp/B09C1R3FC5",
+    "https://www.babygearlab.com/reviews/getting-around/jogging-stroller/joovy-zoom-360-ultralight",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Lightweight jogging single (26.25 lb) with 16 in rear + 12 in front air-filled tires — a trail/run stroller, closest in role to the owned BOB Alterrain Pro rather than to the city/shopping goal. Unfolded length 54 in with front wheel locked (49 in unlocked). Clek Liing attaches via the Joovy Universal Car Seat Adapter (adapter-joovy-universal). DTC listed at $339.90 but currently backordered (Joovy states 'Estimated Back in Stock Date is August 2026'), so marked out of stock at DTC; available via Amazon (price not machine-readable, left null)."
+}

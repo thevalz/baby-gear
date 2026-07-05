@@ -1,0 +1,67 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05. Bugaboo Dragonfly is the 2023 lightweight full-feature city stroller; now retired on Bugaboo's US DTC site (superseded by the Dragonfly Plus) but still widely stocked at authorized retailers. Do NOT edit seed.json.",
+  "id": "bugaboo-dragonfly",
+  "name": "Bugaboo Dragonfly",
+  "brand": "Bugaboo",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/bugaboo-dragonfly.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Bugaboo | Dragonfly | Bugaboo Dragonfly adapter for Maxi-Cosi car seat | Included with stroller",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-bugaboo-dragonfly"],
+
+  "priceSources": [
+    { "retailer": "Nordstrom", "price": 934.15, "url": "https://www.nordstrom.com/s/bugaboo-dragonfly-seat-stroller/7463547", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 1099.00, "url": "https://strolleria.com/products/bugaboo-dragonfly-stroller-1", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "Nordstrom $934.15 is a sale price on the seat stroller ('only a few left', Graphite Grey Melange). Strolleria $1,099 is the full-price complete stroller config. Bugaboo's US DTC page for the Dragonfly seat stroller (PM006775) now redirects to Dragonfly Plus marketing content and no longer shows a live Dragonfly price, so DTC price is not asserted.",
+
+  "specs": {
+    "weightLb": 21.8,
+    "_weightNote": "21.8 lb (9.9 kg) as configured with the seat, per Bugaboo's published spec. With bassinet: 23.1 lb (10.5 kg). Strollberry lists a 17.4 lb (7.9 kg) figure that reflects the bare chassis/frame without seat; the 21.8 lb complete-with-seat number is used here.",
+
+    "unfoldedIn": { "lengthIn": 41.7, "widthIn": 20.5, "heightIn": 41 },
+    "_unfoldedNote": "Bugaboo publishes unfolded 106 x 52 x 104 cm = ~41.7 x 20.5 x 41 in (they round 106 cm to 42 in). Handlebar height 98-105 cm / 38.6-41.3 in; seat height from ground 50 cm / 19.7 in.",
+    "foldedIn": { "lengthIn": 14.2, "widthIn": 20.5, "heightIn": 35.4 },
+    "_foldedNote": "One-piece self-standing compact fold (seat need not be removed): 36 x 52 x 90 cm = 14.2 x 20.5 x 35.4 in.",
+
+    "brake": { "hasBrake": true, "type": "push-push foot pedal parking brake (flat/flip-flop friendly)" },
+
+    "capacity": {
+      "maxChildWeightLb": 48.5,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (0 mo) — suitable from birth with the bassinet or with the seat's full lie-flat recline; seat rated 0-36 mo up to 48.5 lb (~4 yrs). Adapter-mounted infant car seat used from birth.",
+      "seatCount": 1,
+      "basketCapacityLb": 22
+    },
+    "_capacityNote": "Under-seat basket rated 22 lb (10 kg); rear pocket rated 5.5 lb (2.5 kg). Bassinet max 20 lb (9.1 kg). Max child height not published by Bugaboo -> null.",
+
+    "safety": {
+      "standards": "Not explicitly published on Bugaboo's Dragonfly spec page. Sold in the US, so it must meet the mandatory federal stroller standard 16 CFR 1227 (which incorporates ASTM F833) to be marketed; EU-market units carry EN 1888. No specific standard number is printed by the manufacturer, so none is asserted as certified here.",
+      "certifications": "No JPMA or Greenguard certification is published for the Dragonfly on the manufacturer or retailer pages reviewed.",
+      "notes": "5-point safety harness (pre-assembled). Reversible seat with full lie-flat recline for newborns; front-wheel suspension; leatherette telescopic handlebar. Car-seat-adapter mode uses Maxi-Cosi-footprint infant seats."
+    },
+
+    "foldType": "one-hand, one-piece self-standing compact fold (fold in any seat position without removing the seat or bassinet)",
+    "strollerType": "compact / full-feature city",
+    "recline": "3 recline positions including a full lie-flat backrest (>150 degrees) for newborn naps",
+    "reversibleSeat": true,
+    "tires": "rubber-coated foam wheels (not air-filled); front ~7 in (18 cm) swivel with lock and suspension, rear ~8.5 in (22 cm)"
+  },
+
+  "sources": [
+    "https://www.bugaboo.com/us-en/strollers/bugaboo-dragonfly/bugaboo-dragonfly-seat-stroller-PM006775.html",
+    "https://www.bugaboo.com/us-en/accessories/adapters/bugaboo-dragonfly-adapters-for-maxi-cosi-car-seats-400003MI.html",
+    "https://strollberry.com/strollers/bugaboo-dragonfly/",
+    "https://strolleria.com/products/bugaboo-dragonfly-stroller-1",
+    "https://www.nordstrom.com/s/bugaboo-dragonfly-seat-stroller/7463547",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "The Bugaboo Dragonfly (launched 2023) is a lightweight yet full-feature compact city stroller: ~21.8 lb with seat, one-hand self-standing compact fold (14.2 x 20.5 x 35.4 in), reversible seat that reclines fully lie-flat (newborn-suitable from birth without a bassinet), 3 recline positions, 22 lb basket, and rubber-coated wheels with front suspension. A strong compact-city candidate to complement the owned BOB Alterrain Pro (jogger/all-terrain). CLEK FIT: on Clek's official Liing/Liingo compatibility list; the Bugaboo Dragonfly Maxi-Cosi car seat adapter (adapter-bugaboo-dragonfly) explicitly names the Clek Liing as a compatible seat on Bugaboo's own adapter page, so the fit is manufacturer-corroborated. ADAPTER = FREE: Clek's list files this row as 'Included with stroller' — the Maxi-Cosi car seat adapters are bundled in the Dragonfly box, so no separate part number needs buying (Bugaboo does also sell a standalone replacement adapter, 400003001, ~$69.95). PRICE: best cited $934.15 at Nordstrom (seat stroller, on sale, low stock) vs $1,099 at Strolleria (complete config). STOCK: retired on Bugaboo US DTC (replaced by Dragonfly Plus) but in stock at authorized retailers (Nordstrom, Strolleria)."
+}

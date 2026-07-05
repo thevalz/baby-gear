@@ -1,0 +1,59 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S5 Joovy). Sourced 2026-07-05. Represents the current Joovy Qool Premium; Clek lists 'Qool / New Qool'. Do NOT edit seed.json.",
+  "id": "joovy-qool",
+  "name": "Joovy Qool (Qool Premium)",
+  "brand": "Joovy",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joovy-qool.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joovy Qool / New Qool — Universal Car Seat Adapter / Maxi-Cosi/Cybex/Nuna",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-joovy-universal-mcn"],
+
+  "priceSources": [
+    { "retailer": "Joovy (DTC)", "price": 549.90, "url": "https://www.joovy.com/products/qool-premium-single-double-triple-stroller-jet-1", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": null, "url": "https://www.amazon.com/Joovy-8189-JOOVY-Qool-Melange/dp/B07CC2NHZ3", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 30.8,
+
+    "unfoldedIn": { "lengthIn": 44, "widthIn": 24.4, "heightIn": 43 },
+    "foldedIn": { "lengthIn": 36.2, "widthIn": 24.4, "heightIn": 11.2 },
+
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "6 mo+ in seat; from birth with bassinet or an infant car seat via adapter",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
+      "certifications": null,
+      "notes": "Magnetic 5-point safety harness with extra padding; leather adjustable handlebar; UPF 50+ canopy; 100% recycled fabric. Joovy does not publish a per-model JPMA certification."
+    },
+
+    "foldType": "compact standing fold",
+    "strollerType": "modular convertible single (expandable to double/triple with a second seat/bench + adapters)",
+    "recline": "one-hand multi-position reclining seat",
+    "reversibleSeat": true,
+    "tires": "never-flat rubber tires; rear-wheel suspension"
+  },
+
+  "sources": [
+    "https://www.joovy.com/products/qool-premium-single-double-triple-stroller-jet-1",
+    "https://www.amazon.com/Joovy-8189-JOOVY-Qool-Melange/dp/B07CC2NHZ3",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Modular Qool Premium (aka New Qool) — single that expands to double/triple; reversible seat, 55 lb per seat. Fairly heavy (30.8 lb) but folds relatively compact (36.2 x 24.4 x 11.2 in). Clek Liing attaches via Joovy's Maxi-Cosi/Cybex/Nuna Qool adapter (adapter-joovy-universal-mcn); for a double, both a front (SKU 9071) and rear Maxi-Cosi/Cybex/Nuna (SKU 9092) adapter are needed. DTC price $549.90."
+}

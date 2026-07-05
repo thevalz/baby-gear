@@ -1,0 +1,41 @@
+{
+  "_comment": "Car-seat stroller adapter fragment (batch S6 Silver Cross). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-silvercross-dune-reef",
+  "name": "Silver Cross Dune / Reef Universal Car Seat Adapters",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-silvercross-dune-reef.jpg",
+
+  "partNumber": null,
+  "madeBy": "Silver Cross",
+
+  "seatBrandsSupported": "Clek (Liing) / Maxi-Cosi (Mico 30, Mico Max, Coral XP, Mico Luxe+) / Nuna (Pipa family) / Cybex. Retailers explicitly list the Clek Liing.",
+
+  "forStrollerIds": ["silvercross-dune", "silvercross-reef"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Silver Cross US (DTC)", "price": 59.99, "url": "https://silvercrossus.com/product/dune-reef-car-seat-adapters/", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 59.99, "url": "https://strolleria.com/products/silver-cross-car-seat-adapters-for-dune-reef-maxi-cosi-nuna-cybex-clek", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": 59.99, "url": "https://www.amazon.com/Silver-Cross-Car-Seat-Adapters/dp/B0C6QSV89Z", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair",
+    "toolFree": true,
+    "notes": "Clip onto the Dune or Reef chassis; infant car seat slots directly in."
+  },
+
+  "sources": [
+    "https://silvercrossus.com/product/dune-reef-car-seat-adapters/",
+    "https://strolleria.com/products/silver-cross-car-seat-adapters-for-dune-reef-maxi-cosi-nuna-cybex-clek",
+    "https://www.amazon.com/Silver-Cross-Car-Seat-Adapters/dp/B0C6QSV89Z",
+    "https://www.babylist.com/gp/silver-cross-dune-reef-universal-car-seat-adapters/25568/1185762"
+  ],
+  "notes": "No printed manufacturer part number on Clek's list (partNumber null). One shared adapter serves both the Silver Cross Dune and Reef/Reef 2. $59.99, widely in stock. Explicitly supports the Clek Liing."
+}

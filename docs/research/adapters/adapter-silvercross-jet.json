@@ -1,0 +1,41 @@
+{
+  "_comment": "Car-seat stroller adapter fragment (batch S6 Silver Cross). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-silvercross-jet",
+  "name": "Silver Cross Jet Universal Car Seat Adapters",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-silvercross-jet.jpg",
+
+  "partNumber": null,
+  "madeBy": "Silver Cross",
+
+  "seatBrandsSupported": "Clek (Liing) / Maxi-Cosi (Mico 30, Mico Max, Coral XP, Mico Luxe+) / Nuna / Cybex. Retailers explicitly list the Clek Liing.",
+
+  "forStrollerIds": ["silvercross-jet"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Baby & Kids 1st", "price": 59.99, "url": "https://babys1st.com/products/silver-cross-jet-adapters-all-models", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 59.99, "url": "https://strolleria.com/products/silver-cross-car-seat-adapters-for-jet-2020-earlier-maxi-cosi-nuna-cybex", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Silver Cross US (DTC, Jet 5 / Jet Double)", "price": 59.99, "url": "https://silvercrossus.com/product/jet-5-jet-double-car-seat-adapters/", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair",
+    "toolFree": true,
+    "notes": "Clip onto the Jet chassis; infant car seat slots in. Single-seat use; the Jet Double takes a separate second-seat kit."
+  },
+
+  "sources": [
+    "https://babys1st.com/products/silver-cross-jet-adapters-all-models",
+    "https://strolleria.com/products/silver-cross-car-seat-adapters-for-jet-2020-earlier-maxi-cosi-nuna-cybex",
+    "https://silvercrossus.com/product/jet-5-jet-double-car-seat-adapters/",
+    "https://littlefolksnyc.com/products/silver-cross-jet-universal-car-seat-adapters"
+  ],
+  "notes": "No printed manufacturer part number on Clek's list (partNumber null). One Jet Car Seat Adapter covers Jet 2020 / Jet 3 / Jet 4 / Jet 5. $59.99, in stock. Explicitly supports the Clek Liing. Retailers split listings as 'Jet 2020 or earlier' vs the current Jet 5/Jet Double, but it is the same single-seat Jet adapter family."
+}

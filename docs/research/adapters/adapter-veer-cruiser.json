@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S10). The NEW Veer Cruiser infant car seat adapter (available May 2023) that added Clek support. Do NOT edit seed.json.",
+  "id": "adapter-veer-cruiser",
+  "name": "Veer Cruiser Infant Car Seat Adapter (Cybex / Maxi-Cosi / Nuna / Clek)",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-veer-cruiser.jpg",
+
+  "partNumber": null,
+  "madeBy": "Veer",
+
+  "seatBrandsSupported": "Cybex, Maxi-Cosi, Nuna, and Clek — the NEW (May 2023) adapter EXPLICITLY adds Clek and lists the Clek Liing. Nuna PIPA family, Cybex Aton, Maxi-Cosi Mico. (Note: Stokke PIPA by Nuna not supported.)",
+
+  "forStrollerIds": ["veer-cruiser"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": "Clek's list flags this as the 'NEW Clek/Cybex/Maxi-Cosi/Nuna' adapter, available May 2023 — the earlier Cruiser adapter did not list Clek, so the current/new part is the correct one for a Clek Liing."
+  },
+
+  "priceSources": [
+    { "retailer": "Veer (goveer.com DTC)", "price": 79.00, "url": "https://goveer.com/products/infant-car-seat-adapter", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "The Baby Cubby", "price": 79.00, "url": "https://www.babycubby.com/products/veer-cruiser-infant-car-seat-adapter-nuna-maxi-cosi-cybex-clek", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "single-piece adapter (one unit; ships as (1) Infant Car Seat Adapter)",
+    "toolFree": true,
+    "notes": "Clicks onto the Cruiser / Cruiser XL / Cruiser City frame; car seat can face parent or forward, over front or back seat. Veer notes the adapter is intentionally a tight fit and may require a firm push to seat/remove. Works on any Cruiser model (All-Terrain or City)."
+  },
+
+  "sources": [
+    "https://goveer.com/products/infant-car-seat-adapter",
+    "https://www.babycubby.com/products/veer-cruiser-infant-car-seat-adapter-nuna-maxi-cosi-cybex-clek",
+    "https://support.goveer.com/en-US/infant-car-seat-adapter-for-cybex-maxi-cosi-nuna-and-clek-479577",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "This is the NEW Veer Cruiser adapter (available May 2023) that added Clek/Liing compatibility to the existing Cybex/Maxi-Cosi/Nuna support; serves veer-cruiser (both 2-seat Cruiser and 4-seat Cruiser XL). No printed part number on Clek's list or Veer's page — partNumber null. $79 at Veer DTC and Baby Cubby (Baby Cubby sold out, restock est. mid-July 2026). Single-piece, tool-free."
+}

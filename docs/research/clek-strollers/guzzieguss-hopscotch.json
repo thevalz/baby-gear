@@ -1,0 +1,61 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S10). Guzzie+Guss Hopscotch — full-size stroller that INCLUDES car seat adapters free (Clek/Maxi-Cosi/Nuna/Cybex). NOTE: appears discontinued at Guzzie+Guss (not in their current Shopify catalog) and 'currently unavailable' on Amazon US; primarily a Canadian-retail item now. Do NOT edit seed.json.",
+  "id": "guzzieguss-hopscotch",
+  "name": "Guzzie+Guss Hopscotch",
+  "brand": "Guzzie+Guss",
+  "checkedAt": "2026-07-05",
+  "image": "images/guzzieguss-hopscotch.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Guzzie+Guss Hopscotch — Car Seat Adapters (included with the stroller)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-guzzieguss-incl"],
+
+  "priceSources": [
+    { "retailer": "Amazon US (Raven)", "price": null, "url": "https://www.amazon.com/guzzie-Guss-Hopscotch-Full-Sized-Stroller/dp/B08JJ3X8D4", "inStock": false, "checkedAt": "2026-07-05", "note": "Listing shows 'Currently unavailable' — no US price displayed" },
+    { "retailer": "Albee Baby (Raven)", "price": null, "url": "https://www.albeebaby.com/products/guzzie-guss-hopscotch-stroller-raven", "inStock": true, "checkedAt": "2026-07-05", "note": "Listed by this US retailer; live price sits behind bot protection (Cloudflare) and could not be read — not guessed" }
+  ],
+
+  "specs": {
+    "weightLb": 23,
+    "_weightNote": "23 lb (10.5 kg) full stroller; 14.5 lb (6.6 kg) frame alone.",
+
+    "unfoldedIn": { "lengthIn": null, "widthIn": null, "heightIn": null },
+    "foldedIn": { "lengthIn": null, "widthIn": null, "heightIn": null },
+    "_dimsNote": "Overall folded/unfolded footprint not published in inches by any accessible source (left null). Seat: depth 9.5 in (24 cm), width 13 in (33 cm), back height 21 in (54 cm).",
+
+    "brake": { "hasBrake": true, "type": "one-step (flip-flop-friendly) parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (3-position leg rest creates a newborn cocoon; near-flat recline)",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "US/Canada stroller standard (ASTM F833) presumed; not explicitly published by Guzzie+Guss",
+      "certifications": null,
+      "notes": "5-point harness; removable bumper bar; front and rear suspension."
+    },
+
+    "foldType": "one-hand fold; folds with seat on (forward or reverse facing)",
+    "strollerType": "full-size",
+    "recline": "multi-position including near-flat cocoon (3-position leg rest)",
+    "reversibleSeat": true,
+    "tires": "high-performance PU rubber wheels; front and rear suspension"
+  },
+
+  "sources": [
+    "https://www.albeebaby.com/products/guzzie-guss-hopscotch-stroller-raven",
+    "https://www.amazon.com/guzzie-Guss-Hopscotch-Full-Sized-Stroller/dp/B08JJ3X8D4",
+    "https://www.tjskids.com/en/guzzie-and-guss-hopscotch-full-size-stroller.html",
+    "https://guzzieandguss.com/product/hopscotch/"
+  ],
+  "notes": "Full-size reversible-seat stroller, 23 lb, 50 lb max, from birth. Its signature selling point: car seat adapters for Clek, Maxi-Cosi, Nuna and Cybex are INCLUDED FREE (see adapter-guzzieguss-incl). US RETAIL GAP: the model appears discontinued at Guzzie+Guss (absent from their current 16-product Shopify catalog) and is 'Currently unavailable' on Amazon US; Albee Baby still lists it but its price is behind Cloudflare. Best confirmed price reference is Canadian (~CA$729.99 MSRP at TJ's Kids). Overall folded/unfolded inch dimensions are not published anywhere accessible — left null rather than guessed."
+}

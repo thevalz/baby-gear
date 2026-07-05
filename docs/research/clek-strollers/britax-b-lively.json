@@ -1,0 +1,65 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S3). Do NOT edit seed.json.",
+  "id": "britax-b-lively",
+  "name": "Britax B-Lively Lightweight Stroller",
+  "brand": "Britax",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/britax-b-lively.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Britax B-Lively — Click'n Go Infant Car Seat Adapter",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-britax-clickngo"],
+
+  "priceSources": [
+    { "retailer": "Britax (MSRP)", "price": 239.99, "url": "https://us.britax.com/shop/strollers/b-lively-stroller/variant/76454", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon (Raven)", "price": 239.99, "url": "https://www.amazon.com/Britax-B-Lively-Lightweight-Stroller-Raven/dp/B07D15XKGY", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "GoodBuy Gear (open-box)", "price": 136.99, "url": "https://goodbuygear.com/products/britax-b-lively-stroller-2021-raven", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "MSRP $239.99 (Britax/Pish Posh/Albee). GoodBuy Gear open-box $136.99 was sold out at check. Amazon listing carries it — reconfirm live price.",
+
+  "specs": {
+    "weightLb": 20,
+
+    "unfoldedIn": { "lengthIn": 33, "widthIn": 23, "heightIn": 40 },
+    "foldedIn": { "lengthIn": 29, "widthIn": 23, "heightIn": 12 },
+
+    "brake": {
+      "hasBrake": true,
+      "type": "single-pedal foot brake engaging both rear wheels"
+    },
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth-ready (near-flat infinite recline); birth with a Britax/B-Safe infant car seat via Click & Go adapter",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "Meets US ASTM F833 / 16 CFR 1227 carriage & stroller standard",
+      "certifications": "5-point harness (adjustable slot heights 9.5/12.5/15 in); all-wheel suspension. JPMA certification not confirmed on Britax/retailer pages.",
+      "notes": "Extra-large front-access storage basket (lb capacity not published). Handle single fixed height; near-flat recline (~24°–55° range)."
+    },
+
+    "foldType": "one-hand quick fold in one motion (pull strap in seat), self-standing",
+    "strollerType": "full-size lightweight, 3-wheel single",
+    "recline": "near-flat infinite recline",
+    "reversibleSeat": false,
+    "tires": "3-wheel; foam-filled (never-flat) tires with all-wheel spring suspension; front swivel with lock"
+  },
+
+  "sources": [
+    "https://kidtravel.org/strollers/britax-b-lively-stroller-review/",
+    "https://us.britax.com/shop/retired/britax-b-lively-lightweight-stroller",
+    "https://pishposhbaby.com/blogs/blog/britax-b-lively-stroller",
+    "https://www.amazon.com/Britax-B-Lively-Lightweight-Stroller-Raven/dp/B07D15XKGY"
+  ],
+  "notes": "Lightest full-featured single in this batch (20 lb), one-hand self-standing fold (29 x 23 x 12 in) — the most city/shopping-friendly of the S3 strollers. Clek Liing attaches via Britax's Click & Go Maxi-Cosi/Cybex/Nuna adapter (adapter-britax-clickngo): the Liing shares the Maxi-Cosi footprint and Clek's official list names the Click'n Go adapter for the B-Lively. $239.99 MSRP is well under a typical stroller budget."
+}

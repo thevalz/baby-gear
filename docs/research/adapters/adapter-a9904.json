@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S10). Do NOT edit seed.json.",
+  "id": "adapter-a9904",
+  "name": "Valco Baby Travel System Adapters – Snap Ultra Trend",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-a9904.jpg",
+
+  "partNumber": "A9904",
+  "madeBy": "Valco Baby",
+
+  "seatBrandsSupported": "Maxi-Cosi / Nuna / Cybex / Clek — the Clek Liing is explicitly supported (retailer listings, e.g. Snuggle Bugz, title it 'Ultra Trend Adapter – Maxi Cosi/Nuna/Cybex/Clek', and it is the exact part A9904 named on Clek's official compatibility list).",
+
+  "forStrollerIds": ["valco-snap-ultra-trend"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "Named on Clek's Liing/Liingo list as 'Travel System Adapters – Snap Ultra Trend', part A9904."
+  },
+
+  "priceSources": [
+    { "retailer": "Bambi Baby", "price": 60.00, "url": "https://www.bambibaby.com/products/valco-universal-car-seat-adapter-snap-ultra-trend", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "ANB Baby", "price": 80.00, "url": "https://www.anbbaby.com/products/valco-snap-ultra-trend-car-seat-adapter-maxi-cosi-nuna", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair of clamp-on adapter arms (left + right)",
+    "toolFree": true,
+    "notes": "Clamp onto the Snap Ultra Trend frame side-rails; the infant car seat clicks into the arms. Remove seat, then clip in car seat to form the travel system."
+  },
+
+  "sources": [
+    "https://www.bambibaby.com/products/valco-universal-car-seat-adapter-snap-ultra-trend",
+    "https://www.anbbaby.com/products/valco-snap-ultra-trend-car-seat-adapter-maxi-cosi-nuna",
+    "https://www.amazon.com/Valco-Seat-Adapter-Ultra-Trend/dp/B07DCCMPCG"
+  ],
+  "notes": "This is the exact adapter Clek names for the Valco Snap Ultra Trend (part A9904). Supports the Clek Liing (plus Maxi-Cosi/Nuna/Cybex). Price runs ~$60 (Bambi Baby) to ~$80 (ANB Baby), both in stock. Do NOT confuse with the Snap DUO Trend adapter (A9905) or the Snap 4 Trend adapter — those are for the double/quad Valco strollers, not the Snap Ultra Trend. Image is the Valco Snap-series car-seat adapter from the Mega Babies listing (representative of A9904)."
+}

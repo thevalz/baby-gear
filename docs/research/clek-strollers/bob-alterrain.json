@@ -1,0 +1,64 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S3). This is the BASE B.O.B. Alterrain single jogger (NOT the Alterrain Pro). It is the same product family the owner already owns (Alterrain Pro). Clek lists Alterrain / Alterrain Pro as Liing-compatible via BOB Single Infant Car Seat Adapter S12046000 — this fragment confirms the Clek Liing fits the BOB Alterrain family. Do NOT edit seed.json.",
+  "id": "bob-alterrain",
+  "name": "B.O.B. Gear Alterrain Jogging Stroller (base, non-Pro)",
+  "brand": "B.O.B. Gear",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/bob-alterrain.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "B.O.B. Gear Alterrain / Alterrain Pro — Single Infant Car Seat Adapter (S12046000)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-s12046000"],
+
+  "priceSources": [
+    { "retailer": "Amazon (Melange Black listing)", "price": 549.99, "url": "https://www.amazon.com/BOB-Gear-Alterrain-Adjustable-Handlebar/dp/B089R45QRC", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Albee Baby (Melange Black)", "price": 549.99, "url": "https://www.albeebaby.com/collections/bob-black-friday-sale/products/bob-alterrain-jogging-stroller-melange-black", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "Base Alterrain has been superseded/discontinued new at BOB's DTC (bobgear.com now lists only Wayfinder, Alterrain Pro, Revolution Flex 3.0). Launch MSRP $549.99 (2020). Listings above are the canonical base-model SKUs; both sold out / clearance at check. The owned Alterrain Pro is the current in-market successor.",
+
+  "specs": {
+    "weightLb": 31.3,
+
+    "unfoldedIn": { "lengthIn": 46, "widthIn": 25.5, "heightIn": 45.5 },
+    "foldedIn": { "lengthIn": 39.3, "widthIn": 25.5, "heightIn": 16 },
+
+    "brake": {
+      "hasBrake": true,
+      "type": "foot-operated, flip-flop-friendly parking brake (center rear pedal). No hand brake — the hand-operated brake is an Alterrain Pro-only feature."
+    },
+
+    "capacity": {
+      "maxChildWeightLb": 75,
+      "maxChildHeightIn": 44,
+      "minAgeOrNewborn": "8 weeks / 30 lb minimum in the seat; birth-ready with an infant car seat + adapter (S12046000); jogging recommended from ~6–8 mo",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "Meets US ASTM F833 / 16 CFR 1227 carriage & stroller standard",
+      "certifications": "5-point no-rethread easy-adjust harness; auto-lock fold latch; wrist tether. JPMA certification not published by BOB.",
+      "notes": "Basket weight limit not published by BOB (null)."
+    },
+
+    "foldType": "one-hand quick fold, self-standing (with wheels on)",
+    "strollerType": "jogger / all-terrain single",
+    "recline": "near-flat, one-hand adjustable recline",
+    "reversibleSeat": false,
+    "tires": "air-filled pneumatic; 12 in front swivel wheel (lockable), 16 in rear; SmoothShox spring-loaded suspension; 9-position adjustable handlebar"
+  },
+
+  "sources": [
+    "https://www.babiesgetaway.com/bob-gear-all-terrain-jogging-stroller",
+    "https://www.amazon.com/BOB-Gear-Alterrain-Adjustable-Handlebar/dp/B089R45QRC",
+    "https://www.bobgear.com/news/2020/7/8/bob-gear-alterrain-jogging-stroller-blends-rugged-durability-and-athleisure-style",
+    "https://momgoescamping.com/bob-revolution-flex-3-0-vs-bob-alterrain-strollers/"
+  ],
+  "notes": "This is the OWNED product family (owner has the Alterrain Pro). Confirms the Clek Liing fits the BOB Alterrain family via BOB's Single Infant Car Seat Adapter S12046000 (adapter-s12046000) — the correction the study forces on clek-liing.fitsAlterrain. Base Alterrain is a 31.3 lb full-size trail/jogging stroller — the heavy/rugged complement to a light city stroller, not itself the city/shopping answer. Base model is discontinued new; the in-market successor is the Alterrain Pro (adds hand brake + all-weather canopy)."
+}

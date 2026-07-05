@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller ADAPTER fragment (batch S9 UPPAbaby). This is the ONE Clek-MADE adapter on the whole roster: Clek's own car seat adapter for UPPAbaby CRUZ & VISTA. Do NOT edit seed.json.",
+  "id": "adapter-clek-uppababy",
+  "name": "Clek Car Seat Adapter for UPPAbaby (Cruz & Vista)",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-clek-uppababy.jpg",
+
+  "partNumber": "Clek SKU AX-LCSA-UB (UPPAbaby-equivalent upper adapter part 0919-UMA-WW)",
+  "madeBy": "Clek",
+
+  "seatBrandsSupported": "Clek Liing & Liingo (this is Clek's OWN single-brand adapter — made by Clek for the Liing/Liingo footprint). UPPAbaby's own multi-brand 0919-UMA-WW 'Car Seat Adapter for Vista & Cruz' (Maxi-Cosi/Nuna/Cybex/Clek) is the functionally equivalent in-stock alternative for the upper position.",
+
+  "forStrollerIds": ["uppababy-cruz", "uppababy-cruz-v2", "uppababy-cruz-v3", "uppababy-vista", "uppababy-vista-double"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "Clek's own site shows 'more stock coming soon' (temporarily out); in stock at Baby & Kids 1st. UPPAbaby 0919-UMA-WW equivalent is widely in stock."
+  },
+
+  "priceSources": [
+    { "retailer": "Baby & Kids 1st", "price": 49.99, "url": "https://babys1st.com/products/clek-liing-infant-car-seat-adapter-for-uppababy-vista-cruz", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Clek (clekinc.com, DTC)", "price": 49.99, "url": "https://clekinc.com/products/car-seat-adapter-for-uppababy-vista-and-cruz", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 49.99, "url": "https://strolleria.com/products/uppababy-car-seat-adapter-for-vista-and-cruz-clek", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right upper brackets)",
+    "toolFree": true,
+    "notes": "Click-in to the Vista/Cruz upper stroller sockets; the Liing clicks onto the adapter. On the Vista in double mode a car seat can also ride the lower position using UPPAbaby's separate lower adapter 0918-LMA-WW."
+  },
+
+  "sources": [
+    "https://clekinc.com/products/car-seat-adapter-for-uppababy-vista-and-cruz",
+    "https://babys1st.com/products/clek-liing-infant-car-seat-adapter-for-uppababy-vista-cruz",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "The unique Clek-MADE adapter on Clek's list — used by UPPAbaby CRUZ (all generations) and VISTA (single + as the upper adapter in double mode). Clek Liing/Liingo only. $49.99. Supply-constrained at Clek/Strolleria (out of stock) but in stock at Baby & Kids 1st; UPPAbaby's own 0919-UMA-WW multi-brand upper adapter (Maxi-Cosi/Nuna/Cybex/Clek) is the in-stock equivalent at the same $49.99."
+}

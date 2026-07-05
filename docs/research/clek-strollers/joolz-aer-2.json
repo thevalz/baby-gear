@@ -1,0 +1,62 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "joolz-aer-2",
+  "name": "Joolz Aer 2",
+  "brand": "Joolz",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joolz-aer-2.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joolz Aer 2 — Aer 2 Car Seat Adapters",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-joolz-aer-2"],
+
+  "priceSources": [
+    { "retailer": "Joolz DTC", "price": 579.00, "url": "https://www.joolz.com/us/en/strollers/440200-M.html", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 579.00, "url": "https://strolleria.com/products/joolz-aer-buggy-single-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Nordstrom", "price": 579.00, "url": "https://www.nordstrom.com/s/joolz-aer2-lightweight-travel-stroller/8546291", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 14.3,
+
+    "unfoldedIn": { "lengthIn": 33.5, "widthIn": 17.7, "heightIn": 41.9 },
+    "foldedIn": { "lengthIn": 20.9, "widthIn": 17.3, "heightIn": 9.2 },
+    "_dimsNote": "IATA cabin-carry compliant one-hand fold. Second-generation Aer with from-birth-capable seat recline.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake (rear pedal)" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "from birth (seat reclines flat; carrycot optional) to 50 lb",
+      "seatCount": 1,
+      "basketCapacityLb": 17.6
+    },
+
+    "safety": {
+      "standards": "EN 1888-2 (published by Joolz). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
+      "certifications": null,
+      "notes": "5-point harness; one-hand one-second self-standing fold; larger 4.5-gal basket (17.6 lb) vs Aer+. JPMA mark not published by Joolz."
+    },
+
+    "foldType": "one-hand one-second self-standing compact / airline-cabin fold",
+    "strollerType": "compact / travel",
+    "recline": "multi-position reclining backrest to near-flat (from birth)",
+    "reversibleSeat": false,
+    "tires": "5.7 in front / 6.1 in EVA-foam wheels; 4-wheel suspension"
+  },
+
+  "sources": [
+    "https://www.joolz.com/us/en/strollers/440200-M.html",
+    "https://strolleria.com/products/joolz-aer-buggy-single-stroller",
+    "https://www.forbes.com/sites/forbes-personal-shopper/article/joolz-aer2-review/",
+    "https://www.nordstrom.com/s/joolz-aer2-lightweight-travel-stroller/8546291"
+  ],
+  "notes": "Current-generation Aer 2 (SKU 440200); 14.3 lb, from-birth capable, larger basket than Aer+. Clek lists 'Aer 2' as its own row with a distinct 'Aer 2 Car Seat Adapters' part (adapter-joolz-aer-2) — the Aer+ adapter does NOT fit the Aer 2 frame. The Aer 2 adapter listing explicitly names Clek. Best cited price $579 (Joolz DTC / Strolleria / Nordstrom, all in stock)."
+}

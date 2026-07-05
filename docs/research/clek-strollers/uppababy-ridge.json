@@ -1,0 +1,62 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S9 UPPAbaby). UPPAbaby RIDGE all-terrain 3-wheel (current gen = Ridge V2). Uses UPPAbaby-made adapter 0901-RMX-WW. Do NOT edit seed.json.",
+  "id": "uppababy-ridge",
+  "name": "UPPAbaby RIDGE (all-terrain; current gen Ridge V2)",
+  "brand": "UPPAbaby",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/uppababy-ridge.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "UPPAbaby Ridge — Car Seat Adapters for Ridge (Maxi-Cosi, Nuna, Cybex, Clek) 0901-RMX-WW, UPPAbaby-made",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-0901-rmx-ww"],
+
+  "priceSources": [
+    { "retailer": "Bambi Baby", "price": 699.99, "url": "https://www.bambibaby.com/products/uppababy-ridge-v2-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 699.99, "url": "https://strolleria.com/products/uppababy-ridge-v2-stroller", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "UPPAbaby (DTC)", "price": 699.99, "url": "https://uppababy.com/strollers/full-size/ridge-v2/", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 29.2,
+
+    "unfoldedIn": { "lengthIn": 38.5, "widthIn": 26, "heightIn": 40.5 },
+    "foldedIn": { "lengthIn": 18.5, "widthIn": 26, "heightIn": 36.5 },
+
+    "brake": { "hasBrake": true, "type": "hand-operated disc brake (with wrist strap) plus foot parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "~3 mo+ in seat; from birth with infant car seat (via adapter) or bassinet accessory",
+      "seatCount": 1,
+      "basketCapacityLb": 20
+    },
+
+    "safety": {
+      "standards": "Meets/exceeds ASTM F833 (US carriages & strollers)",
+      "certifications": "JPMA Certified; GREENGUARD Gold Certified",
+      "notes": "5-point harness; disc hand brake + wrist strap for controlled downhill braking; two-stage suspension; UPF 50+ mesh-vented canopy; one-hand fold, stands upright."
+    },
+
+    "foldType": "one-hand fold, stands upright when folded",
+    "strollerType": "all-terrain 3-wheel (jogger-style)",
+    "recline": "multi-position recline (near-flat)",
+    "reversibleSeat": false,
+    "tires": "12 in front / 16 in rear EVA foam-filled never-flat all-terrain tires; front swivel with lock"
+  },
+
+  "sources": [
+    "https://uppababy.com/strollers/full-size/ridge-v2/",
+    "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/uppababy-ridge",
+    "https://www.bambibaby.com/products/uppababy-ridge-v2-stroller",
+    "https://support.uppababy.com/hc/en-us/articles/115009544627-Are-UPPAbaby-products-JPMA-ASTM-compliant",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "UPPAbaby's all-terrain 3-wheeler; current gen is Ridge V2 at $699.99 (original Ridge V1 was $599.99). ~29.2 lb with big never-flat foam tires and a disc hand brake — a trail/active-lifestyle stroller closest in role to the OWNED BOB Alterrain Pro, not a light city/shopping pick. Uses UPPAbaby-MADE adapter 0901-RMX-WW (adapter-0901-rmx-ww), which explicitly lists the Clek Liing. Weight/dims reflect published Ridge specs; Ridge V2 is dimensionally near-identical."
+}

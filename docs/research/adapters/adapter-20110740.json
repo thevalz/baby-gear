@@ -1,0 +1,41 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Batch S8 (Thule). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-20110740",
+  "name": "Thule Urban Glide Car Seat Adapter for Maxi-Cosi",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-20110740.jpg",
+
+  "partNumber": "20110740",
+  "madeBy": "Thule",
+
+  "seatBrandsSupported": "Maxi-Cosi / BeSafe / Cybex / Nuna (Maxi-Cosi-style footprint). Clek's official list confirms the Clek Liing/Liingo attaches to the Urban Glide 2 via THIS adapter (20110740) — the Liing uses the Maxi-Cosi footprint.",
+
+  "forStrollerIds": ["thule-urban-glide-2"],
+
+  "status": {
+    "discontinued": true,
+    "inStock": false,
+    "clekNote": ""
+  },
+  "_statusNote": "Superseded on Thule DTC by the Urban Glide 3 adapters (20110761 Maxi-Cosi / 20110762 universal). Listed 'No Longer Available' at Pottery Barn Kids; limited/legacy stock at Rack Attack, Bicycle Buys, eTrailer. Original MSRP $69.95.",
+
+  "priceSources": [
+    { "retailer": "Pottery Barn Kids (no longer available)", "price": 69.95, "url": "https://www.potterybarnkids.com/products/thule-maxi-cosi-carseat-adaptor/", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Rack Attack (legacy listing)", "price": 69.95, "url": "https://rackattack.com/strollers/thule-maxi-cosi-infant-car-seat-adapter-glide-urban-glide-black", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right mounting adapters)",
+    "toolFree": true,
+    "notes": "Click-in car seat mounting; fits Thule Urban Glide 2, Urban Glide 2 Double, and Glide 2 frames."
+  },
+
+  "sources": [
+    "https://www.thule.com/en-us/strollers/strollers-accessories/thule-urban-glide-car-seat-adapter-for-maxi-cosi-_-20110740",
+    "https://www.potterybarnkids.com/products/thule-maxi-cosi-carseat-adaptor/",
+    "https://rackattack.com/strollers/thule-maxi-cosi-infant-car-seat-adapter-glide-urban-glide-black",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "The Urban Glide 2's Maxi-Cosi car seat adapter (MSRP $69.95), now largely discontinued with the UG2 stroller itself; buy legacy/limited stock only. NOTE: covered by the same March 2020 Thule Sleek/Urban Glide/Glide car-seat-adapter recall (car seat could detach) — confirm a remedied unit. Newer Urban Glide 3/4 use the universal 20110762 instead (adapter-20110762)."
+}

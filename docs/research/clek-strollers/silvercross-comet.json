@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S6 Silver Cross). Sourced 2026-07-05. Silver Cross Comet lightweight one-seat stroller. Do NOT edit seed.json.",
+  "id": "silvercross-comet",
+  "name": "Silver Cross Comet",
+  "brand": "Silver Cross",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/silvercross-comet.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Silver Cross Comet — Comet car seat adapters",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-silvercross-comet"],
+
+  "priceSources": [
+    { "retailer": "Bambi Baby", "price": 549.99, "url": "https://www.bambibaby.com/products/silver-cross-comet-eclipse-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "The Baby Cubby", "price": null, "url": "https://www.babycubby.com/products/silver-cross-comet-stroller", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 16,
+    "_weightNote": "~16 lb (Strollberry / retailer listings).",
+
+    "unfoldedIn": { "lengthIn": 31.5, "widthIn": 24, "heightIn": 42 },
+    "foldedIn": { "lengthIn": 34, "widthIn": 24, "heightIn": 13 },
+    "_dimsNote": "Open L31.5 x W24 x H37-42 in; folded (one-piece flat fold) L34 x W24 x H13 in. Folded length exceeds open length because the seat lies flat forward.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (included Babynest cocoon + reclining reversible seat)",
+      "seatCount": 1,
+      "basketCapacityLb": 11
+    },
+    "_basketNote": "Basket rated 5 kg (~11 lb) per Strollberry Comet spec sheet.",
+
+    "safety": {
+      "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
+      "certifications": null,
+      "notes": "State-of-the-art harness with 'Genius' buckle; included Babynest for newborns; one-piece compact fold."
+    },
+
+    "foldType": "compact one-piece fold",
+    "strollerType": "lightweight one-seat / everyday",
+    "recline": "multi-position reclining reversible seat (rides reclined, rear- or forward-facing)",
+    "reversibleSeat": true,
+    "tires": "multi-terrain wheels"
+  },
+
+  "sources": [
+    "https://www.bambibaby.com/products/silver-cross-comet-eclipse-stroller",
+    "https://strollberry.com/strollers/silver-cross-comet/",
+    "https://www.babycubby.com/blogs/parenting/video-silver-cross-comet-stroller",
+    "https://silvercrossus.com/product/comet-car-seat-adapters/"
+  ],
+  "notes": "Lightweight ~16 lb one-seat 'four-mode' stroller — a reasonable city/shopping candidate, heavier than the Jet but with a proper reversible seat. US supply is thinning (Baby Cubby empty at check); Bambi Baby lists $549.99 in stock. Basket capacity not published (null). Clek Liing mounts via the Comet car seat adapters ($24.99)."
+}

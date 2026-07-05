@@ -1,0 +1,64 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S6 Silver Cross). Sourced 2026-07-05. Silver Cross Coast — discontinued (superseded by the Wave). Do NOT edit seed.json.",
+  "id": "silvercross-coast",
+  "name": "Silver Cross Coast",
+  "brand": "Silver Cross",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/silvercross-coast.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Silver Cross Coast — 2019 Wave and Coast car seat adapters (SX5135-EU)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-sx5135-eu"],
+
+  "priceSources": [
+    { "retailer": "Mega Babies (clearance listing)", "price": 1699.99, "url": "https://www.megababiesusa.com/products/silver-cross-coast-stroller", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Mercari (secondary/used)", "price": 570.00, "url": "https://www.mercari.com/us/brand/silver-cross-17335/strollers-58/", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 27.75,
+    "_weightNote": "~12.6 kg / 27.75 lb chassis (magnesium frame) per Strollberry.",
+
+    "unfoldedIn": { "lengthIn": 42.9, "widthIn": 24, "heightIn": 42.9 },
+    "foldedIn": { "lengthIn": 15.75, "widthIn": 24, "heightIn": 37 },
+    "_dimsNote": "Converted from metric: open 109 x 61 x 109 cm (L42.9 x W24 x H42.9 in); folded frame 40 x 61 x 94 cm (L15.75 x W24 x H37 in). Strollberry.",
+
+    "brake": { "hasBrake": true, "type": "push-push pedal (foot) parking brake, flip-flop friendly" },
+    "_brakeNote": "Brake type from Strollberry Coast spec sheet: 'push-push pedal brake (flip-flop friendly)' — activated by pressing one side, released by pressing the other.",
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (carrycot + lie-flat seat; up to 27 carrycot/seat/car-seat configurations)",
+      "seatCount": 1,
+      "basketCapacityLb": 11
+    },
+    "_basketNote": "Basket rated 5 kg (~11 lb) per Strollberry Coast spec sheet.",
+
+    "safety": {
+      "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the (archived) Silver Cross US spec pages; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
+      "certifications": null,
+      "notes": "5-point harness; magnesium chassis; multi-position lie-flat seat."
+    },
+
+    "foldType": "compact fold (chassis; seat/carrycot remove)",
+    "strollerType": "full-size modular",
+    "recline": "multi-position incl. lie-flat",
+    "reversibleSeat": true,
+    "tires": "multi-terrain wheels, suspension; magnesium chassis"
+  },
+
+  "sources": [
+    "https://strollberry.com/strollers/silver-cross-coast/",
+    "https://pishposhbaby.com/blogs/blog/silver-cross-coast-full-review",
+    "https://www.megababiesusa.com/products/silver-cross-coast-stroller",
+    "https://www.mercari.com/us/brand/silver-cross-17335/strollers-58/"
+  ],
+  "notes": "DISCONTINUED since ~2020 and replaced by the Silver Cross Wave — no longer sold via official Silver Cross US channels. A Mega Babies clearance listing showed $1,699.99 (out of stock / likely stale bundle price — reconfirm). Live availability is largely secondary market (Mercari ~$570-$740 used). Uses the same 2019 Wave/Coast car seat adapter (SX5135-EU) to mount the Clek Liing."
+}

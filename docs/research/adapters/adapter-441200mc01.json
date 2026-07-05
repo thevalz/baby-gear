@@ -1,0 +1,42 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05. Do NOT edit seed.json. Primary part 441200MC01 confirmed via US retailer SKU (littlebe.com). Bugaboo's own Fox/Lynx/Buffalo Maxi-Cosi adapter; Clek's official list also cites it for the Kangaroo.",
+  "id": "adapter-441200mc01",
+  "name": "Bugaboo Fox/Lynx/Buffalo Adapter for Maxi-Cosi",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-441200mc01.jpg",
+
+  "partNumber": "441200MC01",
+  "madeBy": "Bugaboo",
+
+  "seatBrandsSupported": "Maxi-Cosi footprint — confirm Clek Liing fits. Bugaboo's official adapter page lists it as the Fox/Lynx/Buffalo adapter for 'Maxi-Cosi' car seats (Maxi-Cosi Pebble / Pebble Plus etc.) and the same footprint used by Nuna/Cybex/BeSafe infant seats; Bugaboo's own page does NOT explicitly name Clek. Strolleria's US listing for this same Fox/Lynx adapter DOES explicitly advertise 'Clek / Cybex / Maxi-Cosi / Nuna' compatibility, and Clek's official compatibility list files the Bugaboo Fox/Fox2/Fox3/Fox5, Lynx, and Kangaroo under this part for mounting the Clek Liing/Liingo. Retailer + Clek corroboration indicate the Liing rides on this Maxi-Cosi-footprint bracket, but this is retailer/Clek-stated rather than printed on Bugaboo's own adapter page — verify at purchase. Adapter-mounted seats limited to 28.7 lb (13 kg) child weight.",
+
+  "forStrollerIds": ["bugaboo-fox", "bugaboo-lynx", "bugaboo-kangaroo"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "On Clek's official list for Fox/Fox2/Fox3/Fox5 and Lynx (as '441200MC01 or 231100MC02') and for the Kangaroo (as '441200MC01'). 441200MC01 captured here as the primary part; 231100MC02 is the Clek-listed alternate for Fox/Lynx."
+  },
+
+  "priceSources": [
+    { "retailer": "Little Be (littlebe.com)", "price": 54.95, "url": "https://littlebe.com/products/bugaboo-fox-lynx-buffalo-adapter-for-maxi-cosi-r-car-seats", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Pacifier Kids Boutique", "price": 59.95, "url": "https://pacifierkids.com/products/bugaboo-fox-adapter-for-maxi-cosi-car-seats", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Bugaboo (DTC)", "price": 69.95, "url": "https://www.bugaboo.com/us-en/accessories/adapters/bugaboo-fox-lynx-buffalo-adapters-for-maxi-cosi-car-seats-MI000962.html", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair",
+    "toolFree": true,
+    "notes": "Sold as a pair (left/right). Bugaboo 'click-and-go' mount: adapters click onto the stroller frame, the Maxi-Cosi-footprint infant seat then clicks into the adapters. No tools. Adapter-mounted car seat weight limit 28.7 lb (13 kg) child."
+  },
+
+  "sources": [
+    "https://www.bugaboo.com/us-en/accessories/adapters/bugaboo-fox-lynx-buffalo-adapters-for-maxi-cosi-car-seats-MI000962.html",
+    "https://littlebe.com/products/bugaboo-fox-lynx-buffalo-adapter-for-maxi-cosi-r-car-seats",
+    "https://pacifierkids.com/products/bugaboo-fox-adapter-for-maxi-cosi-car-seats",
+    "https://strolleria.com/products/bugaboo_buffalo_adapter_for_maxi_cosi_car_seat_",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Serves Fox/Fox2/Fox3/Fox5, Lynx, Buffalo, and Kangaroo. Alternate part 231100MC02 also listed by Clek for Fox/Lynx. Primary part number 441200MC01 confirmed via US retailer SKU (littlebe.com lists sku 441200MC01). Not discontinued; in stock at US retailers (Little Be $54.95, Pacifier Kids $59.95); currently out of stock on Bugaboo DTC (MSRP $69.95). Bugaboo's official adapter page lists compatible strollers Buffalo/Fox/Fox 2/Fox 3/Fox 5/Fox 5 Renew/Fox Cub/Lynx/Turtle Air by Nuna/Otter by Nuna. Clek Liing fit is corroborated by Strolleria's US listing (explicitly 'Clek') and by Clek's own compatibility list, though Bugaboo's page itself does not print 'Clek' — reconfirm the Liing bracket at purchase."
+}

@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S6 Silver Cross). Sourced 2026-07-05. Represents Silver Cross Reef 2, the current US Reef; Clek lists 'Reef, Reef 2'. Do NOT edit seed.json.",
+  "id": "silvercross-reef",
+  "name": "Silver Cross Reef 2 (covers Reef / Reef 2)",
+  "brand": "Silver Cross",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/silvercross-reef.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Silver Cross Reef, Reef 2 — Dune/Reef Car Seat Adapters",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-silvercross-dune-reef"],
+
+  "priceSources": [
+    { "retailer": "Silver Cross US (DTC)", "price": 1199.99, "url": "https://silvercrossus.com/product/silver-cross-reef-2-foldable-stroller/", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 1199.99, "url": "https://strolleria.com/products/silver-cross-reef-2-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Nordstrom", "price": 1199.99, "url": "https://www.nordstrom.com/s/silver-cross-reef-2-stroller/7802608", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 26.5,
+    "_weightNote": "26.5 lb chassis + seat combined (excl. bumper bar) per Silver Cross US. Component breakout elsewhere quoted as ~17.6 lb chassis + ~9.9 lb seat.",
+
+    "unfoldedIn": { "lengthIn": 33, "widthIn": 23.5, "heightIn": 44 },
+    "foldedIn": { "lengthIn": 19, "widthIn": 23.5, "heightIn": 29 },
+    "_dimsNote": "Silver Cross US Reef 2: open L33 x W23.5 x H39-44 in; folded (seat on, self-standing) L19 x W23.5 x H29 in. Height range reflects adjustable handle.",
+
+    "brake": { "hasBrake": true, "type": "one-touch step-on / step-off parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (lie-flat seat / folding bassinet included, overnight-sleep approved)",
+      "seatCount": 1,
+      "basketCapacityLb": 22
+    },
+
+    "safety": {
+      "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
+      "certifications": null,
+      "notes": "5-point harness; lie-flat reversible seat; folding bassinet is overnight-sleep approved; one-hand self-standing fold."
+    },
+
+    "foldType": "one-hand self-standing fold (folds with seat attached)",
+    "strollerType": "full-size modular / all-terrain",
+    "recline": "multi-position to full lie-flat",
+    "reversibleSeat": true,
+    "tires": "large lockable multi-terrain wheels, four-wheel suspension (foam-filled)"
+  },
+
+  "sources": [
+    "https://silvercrossus.com/product/silver-cross-reef-2-foldable-stroller/",
+    "https://strolleria.com/products/silver-cross-reef-2-stroller",
+    "https://www.nordstrom.com/s/silver-cross-reef-2-stroller/7802608",
+    "https://strollberry.com/strollers/silver-cross-reef/"
+  ],
+  "notes": "Current US Reef is the Reef 2; Clek's row names 'Reef, Reef 2'. Full-size modular all-terrain system (heavier than the city goal at ~26.5 lb) — complements rather than replaces the light/compact objective. Clek Liing mounts via the shared Silver Cross Dune/Reef car seat adapters ($59.99, in stock). Best cited price $1,199.99 (multiple US retailers agree)."
+}
