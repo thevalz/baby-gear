@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S10). Do NOT edit seed.json.",
+  "id": "adapter-wonderfold-clek",
+  "name": "Wonderfold Clek Car Seat Adapter (Car Seat Adapter for Stroller Wagon)",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-wonderfold-clek.jpg",
+
+  "partNumber": null,
+
+  "madeBy": "Wonderfold",
+
+  "seatBrandsSupported": "Clek — the Clek variant is 'exclusively designed and safety tested to fit Clek car seats' (Clek Liing). Wonderfold sells the Car Seat Adapter in per-brand variants (Nuna / Cybex / Maxi-Cosi / Clek, plus Graco / UPPAbaby / Britax / Chicco); Clek's official list points to the Clek version, which is what this fragment represents.",
+
+  "forStrollerIds": ["wonderfold-w4-w2"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "Clek's Liing/Liingo list names it simply 'Clek Car Seat Adapter' with no part number."
+  },
+
+  "priceSources": [
+    { "retailer": "Wonderfold DTC", "price": 94.99, "url": "https://wonderfold.com/products/car-seat-adapter", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Dillard's", "price": 94.99, "url": "https://www.dillards.com/p/wonderfold-car-seat-adapter-for-w-series-stroller-wagon/518434223", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "single-side adapter unit with safety strap",
+    "toolFree": true,
+    "notes": "Attaches to one side of the wagon (the other side stays open for a bench/seat); rotates 360 in 90-degree steps; folds down with the wagon. Up to TWO Clek adapters can be installed on W4 Elite/Luxe; only ONE on W2 models."
+  },
+
+  "sources": [
+    "https://wonderfold.com/products/car-seat-adapter",
+    "https://www.dillards.com/p/wonderfold-car-seat-adapter-for-w-series-stroller-wagon/518434223",
+    "https://www.potterybarnkids.com/products/wonderfold-w4-elite-and-luxe-car-seat-adapter/"
+  ],
+  "notes": "This IS the 'Clek Car Seat Adapter' Clek names for the Wonderfold W4 / W2 Elite/Luxe wagons — the Clek-specific version is safety-tested for Clek seats (Liing). No part number appears on Clek's list or on Wonderfold's US product page (partNumber null). Price $94.99, in stock at Wonderfold DTC and Dillard's. Fitment: fits W2 Original+, W2 Elite/Luxe, all W4 wagons, W/W6 Pro and L Series; W4 Elite/Luxe accept two Clek adapters, W2 accepts one. Image is the Wonderfold Car Seat Adapter from the Wonderfold DTC listing (saved .jpg is a PNG file, per instructions)."
+}

@@ -1,0 +1,41 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-80401mc02",
+  "name": "Bugaboo Cameleon³ adapter for Maxi-Cosi car seat",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-80401mc02.jpg",
+
+  "partNumber": "80401MC02",
+  "madeBy": "Bugaboo",
+
+  "seatBrandsSupported": "Maxi-Cosi / Cybex / Nuna — and the Clek Liing is explicitly listed on Bugaboo's compatibility page (confirms the Clek Liing / Maxi-Cosi footprint). Max car-seat child weight 28.7 lb per Bugaboo.",
+
+  "forStrollerIds": ["bugaboo-cameleon-3"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": "On Clek's official Liing/Liingo list for the Bugaboo Cameleon³. CAVEAT: the Cameleon³ handlebar has 5 positions and the Clek Liing is usable only in positions 3–5."
+  },
+
+  "priceSources": [
+    { "retailer": "Bugaboo (DTC)", "price": 49.95, "url": "https://www.bugaboo.com/us-en/bugaboo-cameleon3-adapter-for-maxi-cosi-car-seat-80401MC02.html", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Mega Babies", "price": 49.95, "url": "https://www.megababiesusa.com/products/bugaboo-cameleon3-car-seat-adapter", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Swaddles Baby", "price": 49.95, "url": "https://www.swaddlesbaby.com/products/bugaboo-cameleon3-car-seat-adapter", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right click-and-go brackets)",
+    "toolFree": true,
+    "notes": "Click-and-go: brackets clip onto the Cameleon chassis, infant seat clicks into the brackets. Fits Bugaboo Cameleon (2007), Cameleon 3 and Cameleon 3 Plus. HANDLE-POSITION CAVEAT: the Cameleon³ has 5 handle positions and the Clek Liing is usable only in positions 3–5. Max child weight in car seat 28.7 lb per Bugaboo."
+  },
+
+  "sources": [
+    "https://www.bugaboo.com/us-en/bugaboo-cameleon3-adapter-for-maxi-cosi-car-seat-80401MC02.html",
+    "https://www.megababiesusa.com/products/bugaboo-cameleon3-car-seat-adapter",
+    "https://www.swaddlesbaby.com/products/bugaboo-cameleon3-car-seat-adapter",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Genuine Bugaboo adapter #80401MC02, the part Clek names for the Cameleon³ to mount the Clek Liing. Bugaboo's own page lists the Clek Liing among compatible seats. IMPORTANT (carried from Clek's list): Liing usable only in Cameleon³ handle positions 3–5 (of 5), with a 28.7 lb car-seat weight limit. MSRP $49.95, but currently OUT OF STOCK at every US retailer checked (Bugaboo DTC, Mega Babies, Swaddles all sold out) - not discontinued, just low availability as of 2026-07-05 (tracks the discontinued Cameleon 3 itself). Reconfirm price/stock at checkout."
+}
