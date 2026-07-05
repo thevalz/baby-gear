@@ -1,0 +1,38 @@
+{
+  "_comment": "Car-seat stroller adapter fragment (batch S5 Joovy). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-joovy-twinroo-mcn",
+  "name": "Joovy Twin Roo+ Car Seat Adapter – Maxi-Cosi/Cybex",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-joovy-twinroo-mcn.jpg",
+
+  "partNumber": null,
+
+  "madeBy": "Joovy",
+
+  "seatBrandsSupported": "Maxi-Cosi / Cybex footprint — the Clek Liing uses this footprint and is confirmed Liing-compatible on Clek's official stroller list.",
+
+  "forStrollerIds": ["joovy-twin-roo"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Joovy (DTC) — Twin Roo+ Maxi-Cosi/Cybex Adapter (SKU 9034)", "price": 44.90, "url": "https://www.joovy.com/products/twin-roo-maxi-cosi-cybex-carseat-adapter", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "car-seat adapter for the Twin Roo+ frame",
+    "toolFree": true,
+    "notes": "Clicks onto the Twin Roo+ frame to mount a Maxi-Cosi-footprint infant seat (e.g. Clek Liing). Joovy sells other Twin Roo+ adapters for Graco SnugRide Click Connect, Chicco, etc. — this Maxi-Cosi/Cybex variant is the one that fits the Liing."
+  },
+
+  "sources": [
+    "https://www.joovy.com/products/twin-roo-maxi-cosi-cybex-carseat-adapter",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "The Joovy Twin Roo+ is a frame for two infant car seats and needs brand-specific adapters (sold separately). Clek lists the Twin Roo+ under 'Maxi-Cosi/Cybex/Nuna'; the matching Joovy part is the Twin Roo+ Maxi-Cosi/Cybex Car Seat Adapter (SKU 9034, $44.90), which carries the Clek Liing. No printed Clek part number, so partNumber is null. Product page describes it as fitting 'Maxi Cosi/Cybex' seats."
+}
