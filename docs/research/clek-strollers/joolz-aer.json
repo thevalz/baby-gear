@@ -1,0 +1,62 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "joolz-aer",
+  "name": "Joolz Aer+ (covers Aer / Aer+)",
+  "brand": "Joolz",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joolz-aer.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joolz Aer / Aer+ — Aer/Aer+ Car Seat Adapters",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-joolz-aer"],
+
+  "priceSources": [
+    { "retailer": "Joolz DTC", "price": 399.20, "url": "https://www.joolz.com/us/en/lightweight-stroller/440103.html", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "ANB Baby", "price": 499.00, "url": "https://www.anbbaby.com/products/joolz-aer-lightweight-stroller", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": 499.00, "url": "https://www.amazon.com/Joolz-Lightweight-Compact-Travel-Stroller/dp/B0CYQ89PC7", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 13.2,
+
+    "unfoldedIn": { "lengthIn": 32.7, "widthIn": 17.7, "heightIn": 41.5 },
+    "foldedIn": { "lengthIn": 21.0, "widthIn": 17.7, "heightIn": 8.5 },
+    "_dimsNote": "Joolz US spec 83 x 45 x 105 cm open; 53 x 45 x 22 cm folded. IATA cabin-carry compliant.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake (rear pedal)" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "6 months to 4 years; from birth only with the separate Aer Nest / carrycot accessory",
+      "seatCount": 1,
+      "basketCapacityLb": 11
+    },
+
+    "safety": {
+      "standards": "EN 1888-2 (published by Joolz). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
+      "certifications": null,
+      "notes": "5-point harness; one-hand one-second fold with auto-lock; carry strap. Joolz does not publish a JPMA mark on this model."
+    },
+
+    "foldType": "one-hand one-second self-standing compact / airline-cabin fold",
+    "strollerType": "compact / travel",
+    "recline": "multi-position reclining backrest (exact positions not published)",
+    "reversibleSeat": false,
+    "tires": "5.1 in front / 5.9 in EVA-foam wheels; 4-wheel suspension"
+  },
+
+  "sources": [
+    "https://www.joolz.com/us/en/lightweight-stroller/440103.html",
+    "https://www.babygearlab.com/reviews/getting-around/travel-stroller/joolz-aer-plus",
+    "https://www.amazon.com/Joolz-Lightweight-Compact-Travel-Stroller/dp/B0CYQ89PC7",
+    "https://www.anbbaby.com/products/joolz-aer-lightweight-stroller"
+  ],
+  "notes": "One of the lightest full-fold city/travel strollers on Clek's list (13.2 lb) — a strong complement to the owned BOB Alterrain Pro. Clek lists 'Aer / Aer+' as one row; the Aer+ is the current 440103 model. Liing attaches via the Joolz Aer car seat adapter (adapter-joolz-aer), which explicitly lists Clek Liing/Liingo on the Amazon/retail listing. Joolz DTC price was $399.20 (20% off, final sale) at check; MSRP $499. ASTM/JPMA not published by Joolz but Clek's list attests ASTM compliance."
+}
