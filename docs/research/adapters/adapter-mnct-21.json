@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S3). Do NOT edit seed.json. Single-seat version of the Indie Twin car seat adapter (one car seat on the twin).",
+  "id": "adapter-mnct-21",
+  "name": "Bumbleride Indie Twin Car Seat Adapter, Single – Clek / Maxi-Cosi / Cybex / Nuna",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-mnct-21.jpg",
+
+  "partNumber": "MNCT-21",
+  "madeBy": "Bumbleride",
+
+  "seatBrandsSupported": "Clek (Liing, Liingo) / Maxi-Cosi (Mico Luxe, Luxe+, Max Plus, 30, AP) / Cybex (Cloud G series, Aton series) / Nuna (Pipa Aire, Aire RX, Pipa Lite). Explicitly lists the Clek Liing.",
+
+  "forStrollerIds": ["bumbleride-indie-twin-one"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Bumbleride (DTC)", "price": 65.00, "url": "https://bumbleride.com/products/indie-twin-car-seat-adapter-single-clek-maxi-cosi-cybex-nuna", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 65.00, "url": "https://strolleria.com/products/bumbleride-indie-twin-car-seat-adapters-one-set-nuna-maxi-cosi-cybex", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "$65 at Bumbleride DTC (unavailable at check; email-notify offered). Strolleria carries the one-seat set.",
+
+  "install": {
+    "pieces": "single adapter (one car seat on one side of the Indie Twin)",
+    "toolFree": true,
+    "notes": "Fits 2016–current Indie Twin. 2016–2023 strollers need 2 hot shoes fitted; current models ship with hot shoes pre-installed. For carrying TWO car seats, use the MNCT-22 set instead."
+  },
+
+  "sources": [
+    "https://bumbleride.com/products/indie-twin-car-seat-adapter-single-clek-maxi-cosi-cybex-nuna",
+    "https://strolleria.com/products/bumbleride-indie-twin-car-seat-adapters-one-set-nuna-maxi-cosi-cybex",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Indie Twin single-seat adapter, part MNCT-21; explicitly lists the Clek Liing. $65; DTC stock intermittent. Serves the one-car-seat Indie Twin config (bumbleride-indie-twin-one). The two-car-seat set is MNCT-22."
+}

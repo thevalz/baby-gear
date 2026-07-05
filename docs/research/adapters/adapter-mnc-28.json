@@ -1,0 +1,38 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S3). Do NOT edit seed.json. One adapter serves BOTH the Indie and the Speed (single strollers).",
+  "id": "adapter-mnc-28",
+  "name": "Bumbleride Indie / Speed Car Seat Adapter – Clek / Maxi-Cosi / Cybex / Nuna",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-mnc-28.jpg",
+
+  "partNumber": "MNC-28",
+  "madeBy": "Bumbleride",
+
+  "seatBrandsSupported": "Clek (Liing, Liingo) / Maxi-Cosi (Mico 30, AP, Luxe, Luxe+, Pro) / Cybex (Cloud G Pro, Cloud G, Cloud G Lux, Aton G) / Nuna (Pipa Aire, Aire RX, Pipa RX). Explicitly lists the Clek Liing.",
+
+  "forStrollerIds": ["bumbleride-indie", "bumbleride-speed"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Bumbleride (DTC)", "price": 65.00, "url": "https://bumbleride.com/products/indie-speed-adapter-maxi-cosi-nuna-cybex-clek", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "$65 at Bumbleride DTC (unavailable at check; email-notify offered). Also stocked by Strolleria/Albee/specialty baby retailers — reconfirm live.",
+
+  "install": {
+    "pieces": "single adapter (Indie and Speed are single-seat strollers)",
+    "toolFree": true,
+    "notes": "Latches into the stroller's hot-shoe mounts. 2016–2023 strollers need 2 hot shoes fitted; current (2024+) strollers ship with hot shoes pre-installed. For Indie/Speed only — NOT compatible with the Indie Twin (use MNCT-21/MNCT-22)."
+  },
+
+  "sources": [
+    "https://bumbleride.com/products/indie-speed-adapter-maxi-cosi-nuna-cybex-clek",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Shared Indie/Speed adapter, part MNC-28; explicitly lists the Clek Liing. $65; DTC stock intermittent. Serves two strollers (bumbleride-indie, bumbleride-speed)."
+}
