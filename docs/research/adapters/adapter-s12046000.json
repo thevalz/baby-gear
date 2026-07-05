@@ -1,0 +1,41 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S3). Do NOT edit seed.json. This is the adapter that confirms the OWNED Clek Liing fits the OWNED BOB Alterrain family.",
+  "id": "adapter-s12046000",
+  "name": "B.O.B. Gear Single Infant Car Seat Adapter (Cybex / Maxi-Cosi / Nuna)",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-s12046000.jpg",
+
+  "partNumber": "S12046000",
+  "madeBy": "B.O.B. Gear (Britax)",
+
+  "seatBrandsSupported": "Maxi-Cosi / Cybex / Nuna (Maxi-Cosi-style footprint). The Clek Liing/Liingo share this footprint — Clek's official compatibility list names S12046000 as the adapter for the BOB Alterrain / Alterrain Pro and Revolution Flex 3.0. Note: BOB's own retail page lists Cybex/Maxi-Cosi/Nuna (and a UPPAbaby variant) and does not print 'Clek', but Clek confirms the Liing fits via this adapter; car-seat specialist retailers (anb, Baby Grand) also list Clek.",
+
+  "forStrollerIds": ["bob-alterrain", "bob-revolution-flex-3"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "BOB Gear (DTC, MSRP)", "price": 99.99, "url": "https://www.bobgear.com/all-accessories", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "ANB Baby", "price": 99.99, "url": "https://www.anbbaby.com/products/bob-gear-single-jogging-stroller-infant-car-seat-adapter-for-nuna-cybex-maxi-cosi", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "BOB DTC lists it at $99.99 MSRP; ANB Baby showed 'Available Early July' (restocking) at check.",
+
+  "install": {
+    "pieces": "single mounting adapter (mounts to both stroller frame arms)",
+    "toolFree": true,
+    "notes": "Click-in infant car seat adapter for BOB single jogging strollers; converts the Alterrain/Revolution Flex into a travel system."
+  },
+
+  "sources": [
+    "https://www.bobgear.com/all-accessories",
+    "https://www.anbbaby.com/products/bob-gear-single-jogging-stroller-infant-car-seat-adapter-for-nuna-cybex-maxi-cosi",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.bobgear.com/carseatadapters"
+  ],
+  "notes": "THE adapter behind the study's key correction: Clek lists the Liing as compatible with the owned BOB Alterrain / Alterrain Pro via this S12046000 single infant car seat adapter — so clek-liing.fitsAlterrain should be flipped to true. $99.99 MSRP; in and out of stock across retailers. Also serves the BOB Revolution Flex 3.0."
+}

@@ -1,0 +1,41 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S3). Do NOT edit seed.json.",
+  "id": "adapter-britax-clickngo",
+  "name": "Britax Click & Go Infant Car Seat Adapter (Maxi-Cosi / Cybex / Nuna)",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-britax-clickngo.jpg",
+
+  "partNumber": "S05824400",
+  "madeBy": "Britax",
+
+  "seatBrandsSupported": "Maxi-Cosi (Mico 30 / Max 30 / AP / Prezi) / Cybex (Aton, Aton 2/Q, Cloud Q) / Nuna (Pipa, Pipa Lite). The Clek Liing/Liingo share the Maxi-Cosi footprint — Clek's official list names the Britax 'Click'n Go Infant Car Seat Adapter' as the adapter for the B-Lively, so the Liing fits via this bracket. Retailer pages list Maxi-Cosi/Cybex/Nuna (not 'Clek' by name).",
+
+  "forStrollerIds": ["britax-b-lively"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Mega Babies", "price": 59.99, "url": "https://www.megababiesusa.com/products/britax-infant-car-seat-adapter-for-cybex-nuna-and-maxi-cosi-car-seats", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": 59.99, "url": "https://www.amazon.com/Britax-Infant-Adapter-Cybex-Seats/dp/B071YP8LPS", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "Mega Babies $59.99 (sold out at check); Amazon listing carries the 2-count set — reconfirm live price.",
+
+  "install": {
+    "pieces": "2-count (pair: left + right brackets)",
+    "toolFree": true,
+    "notes": "Britax Click & Go bracket system; the infant seat clicks onto the adapters mounted on the B-Lively frame. Fits B-Lively / B-Agile / B-Free / B-Ready / Pathway single strollers."
+  },
+
+  "sources": [
+    "https://www.megababiesusa.com/products/britax-infant-car-seat-adapter-for-cybex-nuna-and-maxi-cosi-car-seats",
+    "https://us.britax.com/shop/retired/britax-infant-car-seat-adapters-maxi-cosi-cybex-nuna-britax",
+    "https://www.amazon.com/Britax-Infant-Adapter-Cybex-Seats/dp/B071YP8LPS",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Britax's Maxi-Cosi/Cybex/Nuna Click & Go adapter (part S05824400) is what Clek's list calls the B-Lively 'Click'n Go' adapter. Clek Liing shares the Maxi-Cosi footprint so it attaches. ~$59.99; availability spotty. Note Britax also sells a Willow/Cypress-specific adapter and a B-Lively DOUBLE adapter — this single Maxi-Cosi/Nuna/Cybex version is the one for the single B-Lively + Clek Liing."
+}
