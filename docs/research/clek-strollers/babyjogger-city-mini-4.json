@@ -1,0 +1,56 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S1 Baby Jogger, completed by integrator). Do NOT edit seed.json.",
+  "id": "babyjogger-city-mini-4",
+  "name": "Baby Jogger City Mini 4",
+  "brand": "Baby Jogger",
+  "checkedAt": "2026-07-05",
+  "image": "images/babyjogger-city-mini-4.jpg",
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "checkedAt": "2026-07-05"
+  },
+  "adapterIds": [
+    "adapter-1967208"
+  ],
+  "priceSources": [],
+  "specs": {
+    "weightLb": 19.9,
+    "unfoldedIn": {
+      "lengthIn": null,
+      "widthIn": 24.0,
+      "heightIn": null
+    },
+    "foldedIn": {
+      "lengthIn": 30.5,
+      "widthIn": 24.0,
+      "heightIn": 9.0
+    },
+    "brake": {
+      "hasBrake": true,
+      "type": "foot-operated parking brake"
+    },
+    "capacity": {
+      "maxChildWeightLb": 65,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (near-flat recline)",
+      "seatCount": 1,
+      "basketCapacityLb": 15
+    },
+    "safety": {
+      "standards": "ASTM F833 / 16 CFR 1227; JPMA Certified",
+      "certifications": "JPMA Certified (Baby Jogger)",
+      "notes": "5-point harness; one-hand fold with auto-lock."
+    },
+    "foldType": "one-hand compact fold",
+    "strollerType": "4-wheel urban (discontinued)",
+    "recline": "near-flat recline",
+    "reversibleSeat": false,
+    "tires": "6\" front double-swivel / rear wheels"
+  },
+  "sources": [
+    "https://strollberry.com/strollers/baby-jogger-city-mini-4/",
+    "https://www.momsstrollerreviews.com/baby-jogger-city-mini-4-wheel-stroller-review/"
+  ],
+  "notes": "The 4-wheel City Mini variant. On Clek's list via the Maxi-Cosi Mounting Bracket 1967208 — Clek flags it DISCONTINUED. Discontinued model; MSRP ~$299.99 reference."
+}

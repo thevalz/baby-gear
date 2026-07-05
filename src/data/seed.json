@@ -1,5 +1,5 @@
 {
-  "dataVersion": 11,
+  "dataVersion": 12,
   "config": {
     "overallBudget": 1000,
     "adapterCost": 100
@@ -1055,6 +1055,156 @@
             }
           ],
           "notes": "Considering — BOB's current flagship all-terrain jogger and the in-stock successor to the base Alterrain. SmoothShox suspension plus an ergonomic hand brake for downhill control; flattest fold of the three (33 × 21.5 × 13 in) though heaviest (32.3 lb). Shares the Alterrain's brand-specific adapter ecosystem, so any car seat marked 'fits Alterrain' fits the Pro. Best in-stock price $829.99 (Bambi Baby / Strolleria; Modern Nursery $879.99) — note this is OVER the $800 module budget. MSRP $829.99."
+        },
+        {
+          "id": "babyjogger-city-mini-2",
+          "moduleId": "stroller",
+          "name": "Baby Jogger City Mini 2",
+          "price": 0,
+          "image": "images/babyjogger-city-mini-2.jpg",
+          "attributes": {
+            "brand": "Baby Jogger",
+            "type": "compact / urban",
+            "weightLb": 19.0,
+            "foldedDimsIn": "30.0 × 26.0 × 11.0 in",
+            "unfoldedDimsIn": "39.5 × 26.0 × 41.0 in",
+            "brakeType": "foot-operated parking brake",
+            "maxChildLb": 50,
+            "safetyStandards": "ASTM F833 / 16 CFR 1227; JPMA Certified · JPMA Certified (Baby Jogger)",
+            "foldType": "one-hand compact fold, self-standing",
+            "recline": "near-flat recline",
+            "tires": "8\" wheels; front-wheel suspension",
+            "adapterSystem": "Baby Jogger City Mini 2 Car Seat Adapter for Cybex/Clek",
+            "clekAdapter": "Baby Jogger City Mini 2 Car Seat Adapter for Cybex/Clek",
+            "fitsLiing": true
+          },
+          "scores": {},
+          "priceSources": [],
+          "notes": "The lighter city sibling (plastic 8\" wheels, front-wheel suspension only). On Clek's list via Baby Jogger City Mini 2 adapter 2083991 (Cybex/Clek), which Clek flags DISCONTINUED. MSRP ~$279.99 reference — reconfirm current stock/price."
+        },
+        {
+          "id": "babyjogger-city-mini-4",
+          "moduleId": "stroller",
+          "name": "Baby Jogger City Mini 4",
+          "price": 0,
+          "image": "images/babyjogger-city-mini-4.jpg",
+          "attributes": {
+            "brand": "Baby Jogger",
+            "type": "4-wheel urban (discontinued)",
+            "weightLb": 19.9,
+            "foldedDimsIn": "30.5 × 24.0 × 9.0 in",
+            "brakeType": "foot-operated parking brake",
+            "maxChildLb": 65,
+            "safetyStandards": "ASTM F833 / 16 CFR 1227; JPMA Certified · JPMA Certified (Baby Jogger)",
+            "foldType": "one-hand compact fold",
+            "recline": "near-flat recline",
+            "tires": "6\" front double-swivel / rear wheels",
+            "adapterSystem": "Baby Jogger Car Seat Adapter — Mounting Bracket Single for Maxi-Cosi",
+            "clekAdapter": "Baby Jogger Car Seat Adapter — Mounting Bracket Single for Maxi-Cosi",
+            "fitsLiing": true
+          },
+          "scores": {},
+          "priceSources": [],
+          "notes": "The 4-wheel City Mini variant. On Clek's list via the Maxi-Cosi Mounting Bracket 1967208 — Clek flags it DISCONTINUED. Discontinued model; MSRP ~$299.99 reference."
+        },
+        {
+          "id": "babyjogger-city-mini-gt",
+          "moduleId": "stroller",
+          "name": "Baby Jogger City Mini GT (original)",
+          "price": 0,
+          "image": "images/babyjogger-city-mini-gt.jpg",
+          "attributes": {
+            "brand": "Baby Jogger",
+            "type": "all-terrain urban (discontinued)",
+            "weightLb": 22.4,
+            "brakeType": "hand-operated parking brake",
+            "maxChildLb": 65,
+            "safetyStandards": "ASTM F833 / 16 CFR 1227; JPMA Certified · JPMA Certified (Baby Jogger)",
+            "foldType": "one-hand compact fold",
+            "recline": "near-flat recline",
+            "tires": "8\" forever-air rubber tires; all-wheel suspension",
+            "adapterSystem": "Baby Jogger Car Seat Adapter — Mounting Bracket Single for Maxi-Cosi",
+            "clekAdapter": "Baby Jogger Car Seat Adapter — Mounting Bracket Single for Maxi-Cosi",
+            "fitsLiing": true
+          },
+          "scores": {},
+          "priceSources": [],
+          "notes": "The original City Mini GT (superseded by the GT2). On Clek's list via the Mounting Bracket Single for Maxi-Cosi 1967208 — Clek flags that adapter DISCONTINUED. Discontinued model; folded length/height not cleanly published (null); MSRP ~$279.99 reference."
+        },
+        {
+          "id": "babyjogger-city-mini-gt2",
+          "moduleId": "stroller",
+          "name": "Baby Jogger City Mini GT2",
+          "price": 0,
+          "image": "images/babyjogger-city-mini-gt2.jpg",
+          "attributes": {
+            "brand": "Baby Jogger",
+            "type": "all-terrain urban",
+            "weightLb": 21.0,
+            "foldedDimsIn": "31.5 × 24.5 × 10.0 in",
+            "brakeType": "hand-operated parking brake (on handlebar)",
+            "maxChildLb": 65,
+            "safetyStandards": "ASTM F833 / 16 CFR 1227; JPMA Certified · JPMA Certified (Baby Jogger)",
+            "foldType": "one-hand compact fold, self-standing",
+            "recline": "near-flat recline",
+            "tires": "8\" forever-air (never-flat) rubber tires; all-wheel suspension",
+            "adapterSystem": "Baby Jogger City Mini 2 Car Seat Adapter for Cybex/Clek",
+            "clekAdapter": "Baby Jogger City Mini 2 Car Seat Adapter for Cybex/Clek",
+            "fitsLiing": true
+          },
+          "scores": {},
+          "priceSources": [],
+          "notes": "All-terrain sibling of the City Mini 2 (rubber never-flat tires + all-wheel suspension). On Clek's list via Baby Jogger's City Mini 2 adapter 2083991 (Cybex/Clek) — Clek flags that adapter DISCONTINUED. The Baby Jogger brand's US line has been largely wound down; price shown ~$369.99 is MSRP reference — reconfirm current stock/price. Unfolded length/height not cleanly published (null)."
+        },
+        {
+          "id": "babyjogger-city-select-double",
+          "moduleId": "stroller",
+          "name": "Baby Jogger City Select (Double Mode)",
+          "price": 0,
+          "image": "images/babyjogger-city-select-double.jpg",
+          "attributes": {
+            "brand": "Baby Jogger",
+            "type": "modular convertible (double)",
+            "weightLb": 37.07,
+            "foldedDimsIn": "34.65 × 25.59 × 11.61 in",
+            "brakeType": "hand-operated parking brake (on handlebar)",
+            "maxChildLb": 45,
+            "safetyStandards": "ASTM F833 / 16 CFR 1227; JPMA Certified · JPMA Certified (Baby Jogger)",
+            "foldType": "fold with seats on",
+            "recline": "multi-position incl. near-flat",
+            "tires": "8\"/12\" forever-air rubber tires; all-wheel suspension",
+            "adapterSystem": "Baby Jogger City Select Car Seat Adapter for Maxi-Cosi/Cybex · Baby Jogger City Select Second Seat Car Seat Adapter",
+            "clekAdapter": "Baby Jogger City Select Car Seat Adapter for Maxi-Cosi/Cybex · Baby Jogger City Select Second Seat Car Seat Adapter",
+            "fitsLiing": true
+          },
+          "scores": {},
+          "priceSources": [],
+          "notes": "City Select in double mode (second seat added); ~37 lb with both seats, per-seat max 45 lb. On Clek's list via City Select adapter 2013551 (x2) plus the City Select Second Seat adapter 2011985 — both DISCONTINUED per Clek, with the lowest-handle-position car-seat caveat. MSRP ~$499.99 reference."
+        },
+        {
+          "id": "babyjogger-city-select",
+          "moduleId": "stroller",
+          "name": "Baby Jogger City Select (Single Mode)",
+          "price": 0,
+          "image": "images/babyjogger-city-select.jpg",
+          "attributes": {
+            "brand": "Baby Jogger",
+            "type": "modular convertible",
+            "weightLb": 29.54,
+            "foldedDimsIn": "34.65 × 25.59 × 11.61 in",
+            "brakeType": "hand-operated parking brake (on handlebar)",
+            "maxChildLb": 45,
+            "safetyStandards": "ASTM F833 / 16 CFR 1227; JPMA Certified · JPMA Certified (Baby Jogger)",
+            "foldType": "fold with seat on",
+            "recline": "multi-position incl. near-flat",
+            "tires": "8\"/12\" forever-air rubber tires; all-wheel suspension",
+            "adapterSystem": "Baby Jogger City Select Car Seat Adapter for Maxi-Cosi/Cybex",
+            "clekAdapter": "Baby Jogger City Select Car Seat Adapter for Maxi-Cosi/Cybex",
+            "fitsLiing": true
+          },
+          "scores": {},
+          "priceSources": [],
+          "notes": "Modular single-to-double convertible (single mode). Per-seat max 45 lb. On Clek's list via City Select adapter 2013551 (Maxi-Cosi/Cybex) — Clek flags it DISCONTINUED, with a handle-position caveat (car seat not usable in the lowest handle position). MSRP ~$449.99 reference; Baby Jogger US line wound down."
         },
         {
           "id": "babyzen-yoyo",
@@ -4409,6 +4559,23 @@
           "notes": "One adapter part (159925300) serves the Armadillo Flip/XT and Ocarro/Ocarro 2. Fits the Maxi-Cosi footprint that the Clek Liing uses; Clek's authoritative list confirms Liing-on-Ocarro compatibility. Inexpensive (~£29 / $30–40) and in stock."
         },
         {
+          "id": "adapter-1967208",
+          "moduleId": "adapter",
+          "name": "Baby Jogger Car Seat Adapter — Mounting Bracket Single for Maxi-Cosi",
+          "price": 0,
+          "attributes": {
+            "partNumber": "1967208",
+            "madeBy": "Baby Jogger",
+            "seatBrands": "Maxi-Cosi / Cybex / Clek Liing",
+            "forStrollers": "babyjogger-city-mini-gt · babyjogger-city-mini-4",
+            "fitsLiing": true,
+            "discontinued": true
+          },
+          "scores": {},
+          "priceSources": [],
+          "notes": "Clek-listed for City Mini GT and City Mini 4. Clek flags this adapter DISCONTINUED — no current retail listing found; secondhand only. Clek Liing rides the Maxi-Cosi-style bracket."
+        },
+        {
           "id": "adapter-20110740",
           "moduleId": "adapter",
           "name": "Thule Urban Glide Car Seat Adapter for Maxi-Cosi",
@@ -4465,6 +4632,57 @@
             }
           ],
           "notes": "The 'universal' Urban Glide adapter Clek lists for both the UG3 and UG4 (adapter serves thule-urban-glide-3 + thule-urban-glide-4). Thule DTC $79.95 (out of stock at check). Clek caveat carried through: the Urban Glide 3 with the Liing is single-mode only — 'Not compatible in double mode.'"
+        },
+        {
+          "id": "adapter-2011985",
+          "moduleId": "adapter",
+          "name": "Baby Jogger City Select Second Seat Car Seat Adapter",
+          "price": 0,
+          "attributes": {
+            "partNumber": "2011985",
+            "madeBy": "Baby Jogger",
+            "seatBrands": "Maxi-Cosi / Cybex / Clek Liing",
+            "forStrollers": "babyjogger-city-select-double",
+            "fitsLiing": true,
+            "discontinued": true
+          },
+          "scores": {},
+          "priceSources": [],
+          "notes": "The second-seat adapter required for City Select DOUBLE mode (paired with 2x 2013551). Clek flags DISCONTINUED. Secondhand only."
+        },
+        {
+          "id": "adapter-2013551",
+          "moduleId": "adapter",
+          "name": "Baby Jogger City Select Car Seat Adapter for Maxi-Cosi/Cybex",
+          "price": 0,
+          "attributes": {
+            "partNumber": "2013551",
+            "madeBy": "Baby Jogger",
+            "seatBrands": "Maxi-Cosi / Cybex / Clek Liing",
+            "forStrollers": "babyjogger-city-select · babyjogger-city-select-double",
+            "fitsLiing": true,
+            "discontinued": true
+          },
+          "scores": {},
+          "priceSources": [],
+          "notes": "Clek-listed for City Select (single needs 1; double needs 2 plus the second-seat adapter 2011985). Clek flags DISCONTINUED, with a lowest-handle-position caveat. Secondhand only."
+        },
+        {
+          "id": "adapter-2083991",
+          "moduleId": "adapter",
+          "name": "Baby Jogger City Mini 2 Car Seat Adapter for Cybex/Clek",
+          "price": 0,
+          "attributes": {
+            "partNumber": "2083991",
+            "madeBy": "Baby Jogger",
+            "seatBrands": "Cybex / Clek Liing",
+            "forStrollers": "babyjogger-city-mini-gt2 · babyjogger-city-mini-2",
+            "fitsLiing": true,
+            "discontinued": true
+          },
+          "scores": {},
+          "priceSources": [],
+          "notes": "Explicitly a Cybex/Clek adapter (Clek Liing named). Serves City Mini 2 and City Mini GT2. Clek flags the GT2 pairing/adapter DISCONTINUED — reconfirm availability; largely secondhand."
         },
         {
           "id": "adapter-321500",

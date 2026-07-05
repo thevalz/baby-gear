@@ -1,0 +1,57 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S1 Baby Jogger, completed by integrator). Do NOT edit seed.json.",
+  "id": "babyjogger-city-mini-2",
+  "name": "Baby Jogger City Mini 2",
+  "brand": "Baby Jogger",
+  "checkedAt": "2026-07-05",
+  "image": "images/babyjogger-city-mini-2.jpg",
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "checkedAt": "2026-07-05"
+  },
+  "adapterIds": [
+    "adapter-2083991"
+  ],
+  "priceSources": [],
+  "specs": {
+    "weightLb": 19.0,
+    "unfoldedIn": {
+      "lengthIn": 39.5,
+      "widthIn": 26.0,
+      "heightIn": 41.0
+    },
+    "foldedIn": {
+      "lengthIn": 30.0,
+      "widthIn": 26.0,
+      "heightIn": 11.0
+    },
+    "brake": {
+      "hasBrake": true,
+      "type": "foot-operated parking brake"
+    },
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (near-flat recline)",
+      "seatCount": 1,
+      "basketCapacityLb": 10
+    },
+    "safety": {
+      "standards": "ASTM F833 / 16 CFR 1227; JPMA Certified",
+      "certifications": "JPMA Certified (Baby Jogger)",
+      "notes": "5-point harness; one-hand fold with auto-lock."
+    },
+    "foldType": "one-hand compact fold, self-standing",
+    "strollerType": "compact / urban",
+    "recline": "near-flat recline",
+    "reversibleSeat": false,
+    "tires": "8\" wheels; front-wheel suspension"
+  },
+  "sources": [
+    "https://strollberry.com/strollers/baby-jogger-city-mini2/",
+    "https://www.babyjogger.com/strollers/shop-all-strollers/compact-and-lightweight/city-mini-2-stroller/SP_1461673.html",
+    "https://www.babygearlab.com/reviews/getting-around/travel-stroller/baby-jogger-city-mini-2"
+  ],
+  "notes": "The lighter city sibling (plastic 8\" wheels, front-wheel suspension only). On Clek's list via Baby Jogger City Mini 2 adapter 2083991 (Cybex/Clek), which Clek flags DISCONTINUED. MSRP ~$279.99 reference — reconfirm current stock/price."
+}

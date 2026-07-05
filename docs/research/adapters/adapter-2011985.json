@@ -1,0 +1,28 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S1 Baby Jogger). Do NOT edit seed.json.",
+  "id": "adapter-2011985",
+  "name": "Baby Jogger City Select Second Seat Car Seat Adapter",
+  "checkedAt": "2026-07-05",
+  "image": null,
+  "partNumber": "2011985",
+  "madeBy": "Baby Jogger",
+  "seatBrandsSupported": "Maxi-Cosi / Cybex / Clek Liing",
+  "forStrollerIds": [
+    "babyjogger-city-select-double"
+  ],
+  "status": {
+    "discontinued": true,
+    "inStock": false,
+    "clekNote": "**Adapter discontinued"
+  },
+  "priceSources": [],
+  "install": {
+    "pieces": "pair / mounting bracket",
+    "toolFree": true,
+    "notes": ""
+  },
+  "sources": [
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "The second-seat adapter required for City Select DOUBLE mode (paired with 2x 2013551). Clek flags DISCONTINUED. Secondhand only."
+}

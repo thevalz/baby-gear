@@ -1,0 +1,29 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S1 Baby Jogger). Do NOT edit seed.json.",
+  "id": "adapter-2083991",
+  "name": "Baby Jogger City Mini 2 Car Seat Adapter for Cybex/Clek",
+  "checkedAt": "2026-07-05",
+  "image": null,
+  "partNumber": "2083991",
+  "madeBy": "Baby Jogger",
+  "seatBrandsSupported": "Cybex / Clek Liing",
+  "forStrollerIds": [
+    "babyjogger-city-mini-gt2",
+    "babyjogger-city-mini-2"
+  ],
+  "status": {
+    "discontinued": true,
+    "inStock": false,
+    "clekNote": "**Adapter discontinued"
+  },
+  "priceSources": [],
+  "install": {
+    "pieces": "pair / mounting bracket",
+    "toolFree": true,
+    "notes": ""
+  },
+  "sources": [
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Explicitly a Cybex/Clek adapter (Clek Liing named). Serves City Mini 2 and City Mini GT2. Clek flags the GT2 pairing/adapter DISCONTINUED — reconfirm availability; largely secondhand."
+}
