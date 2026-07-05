@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-100045001",
+  "name": "Bugaboo Butterfly car seat adapter",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-100045001.jpg",
+
+  "partNumber": "100045001",
+  "madeBy": "Bugaboo",
+
+  "seatBrandsSupported": "Maxi-Cosi interface car seats. Bugaboo lists: Clek Liing; Maxi-Cosi Mico / Mico 30; Nuna Pipa series (Pipa, Lite, Lite LX, RX); Cybex Aton 2 / Aton Q / Cloud Q; Kiddy Evolution Pro2; and Bugaboo Turtle Air / Turtle One by Nuna. Confirms the Clek Liing + Maxi-Cosi footprint.",
+
+  "forStrollerIds": ["bugaboo-butterfly"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "Clek Liing is explicitly listed by Bugaboo as compatible with this adapter."
+  },
+
+  "priceSources": [
+    { "retailer": "Destination Baby & Kids", "price": 69.95, "url": "https://www.destinationbabykids.com/products/butterfly-car-seat-adapter", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Bugaboo (bugaboo.com DTC)", "price": 69.95, "url": "https://www.bugaboo.com/us-en/accessories/adapters/bugaboo-butterfly-car-seat-adapter-100045MI.html", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair of click-and-go adapter brackets (left + right)",
+    "toolFree": true,
+    "notes": "Bugaboo click-and-go attachment system: brackets clip onto the Butterfly frame and the infant car seat clicks into the adapters; no tools required."
+  },
+
+  "sources": [
+    "https://www.bugaboo.com/us-en/accessories/adapters/bugaboo-butterfly-car-seat-adapter-100045MI.html",
+    "https://www.destinationbabykids.com/products/butterfly-car-seat-adapter",
+    "https://travelingtikes.com/products/bugaboo-butterfly-car-seat-adapter"
+  ],
+  "notes": "Adapter for the ORIGINAL Bugaboo Butterfly (2022) only — Bugaboo's page and retailers label it 'Butterfly (2022)'. Distinct part from the Butterfly 2 adapter (400018003); the two are not interchangeable. $69.95 MSRP; in stock at Destination Baby & Kids (3 in stock), limited/out of stock on bugaboo.com DTC. Clek Liing explicitly listed as a compatible seat."
+}
