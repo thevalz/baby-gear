@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S3). Do NOT edit seed.json. Two-seat SET version of the Indie Twin car seat adapter (two car seats on the twin).",
+  "id": "adapter-mnct-22",
+  "name": "Bumbleride Indie Twin Car Seat Adapter, Set (Two Seats) – Clek / Maxi-Cosi / Cybex / Nuna",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-mnct-22.jpg",
+
+  "partNumber": "MNCT-22",
+  "madeBy": "Bumbleride",
+
+  "seatBrandsSupported": "Clek (Liing, Liingo) / Maxi-Cosi (Mico Luxe, Luxe+) / Cybex (Cloud G Pro, Cloud G, Cloud G Lux, Aton G) / Nuna (Pipa Aire, Aire RX). Explicitly lists the Clek Liing — accepts two Clek Liing seats side by side.",
+
+  "forStrollerIds": ["bumbleride-indie-twin-two"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Bumbleride (DTC)", "price": 110.00, "url": "https://bumbleride.com/products/indie-twin-car-seat-adapter-set-clek-maxi-cosi-cybex-nuna", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "$110 at Bumbleride DTC for the two-adapter set (out of stock at check; email-notify offered). Also sold via specialty baby retailers — reconfirm live.",
+
+  "install": {
+    "pieces": "set of two adapters (both side-by-side positions of the Indie Twin)",
+    "toolFree": true,
+    "notes": "Fits 2016–current Indie Twin. 2016–2023 strollers need 4 hot shoes fitted; current models ship with hot shoes pre-installed. Carries two infant car seats simultaneously."
+  },
+
+  "sources": [
+    "https://bumbleride.com/products/indie-twin-car-seat-adapter-set-clek-maxi-cosi-cybex-nuna",
+    "https://bumbleride.com/products/indie-twin-clek-liing-twin-non-toxic-travel-system",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Indie Twin two-seat adapter SET, part MNCT-22; explicitly lists the Clek Liing and enables two Liings side by side (Bumbleride sells an Indie Twin + two Clek Liing travel system). $110 for the pair; DTC stock intermittent. Serves the two-car-seat Indie Twin config (bumbleride-indie-twin-two). Single-seat version is MNCT-21."
+}

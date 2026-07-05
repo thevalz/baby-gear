@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-g4104",
+  "name": "Mima Xari Car Seat Adapter Set",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-g4104.jpg",
+
+  "partNumber": "G4104",
+  "madeBy": "Mima",
+
+  "seatBrandsSupported": "Maxi-Cosi / Cybex / Nuna / Clek — mimakidsusa explicitly lists 'Clek Liing' among compatible seats.",
+
+  "forStrollerIds": ["mima-xari"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Mima Kids USA (Xari Max adapter)", "price": 59.99, "url": "https://mimakidsusa.com/products/xari-max-car-seat-adapter", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Bambi Baby", "price": 59.99, "url": "https://www.bambibaby.com/products/mima-xari-max-car-seat-adapter", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right, marked)",
+    "toolFree": true,
+    "notes": "Right/left-indicated adapters install on the Xari chassis; infant car seat clicks in."
+  },
+
+  "sources": [
+    "https://mimakidsusa.com/products/xari-max-car-seat-adapter",
+    "https://www.bambibaby.com/products/mima-xari-max-car-seat-adapter",
+    "https://lunababystore.com/products/mima-xari-maxi-cosi-cybex-nuna-clek-car-seat-adapter"
+  ],
+  "notes": "Xari car seat adapter (Clek's list cites part G4104 for the classic Xari). The current Mima Xari Max/4G adapter set explicitly lists Clek Liing and is in stock (~$59.99). Image is the current Xari Max adapter kit."
+}

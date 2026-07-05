@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller adapter fragment (batch S5 Joovy). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-joovy-universal",
+  "name": "Joovy Universal Car Seat Adapter",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-joovy-universal.jpg",
+
+  "partNumber": null,
+
+  "madeBy": "Joovy",
+
+  "seatBrandsSupported": "Universal (strap/click-in) — fits most infant car seats; the Clek Liing is confirmed Liing-compatible on Clek's official stroller list for these Joovy models.",
+
+  "forStrollerIds": ["joovy-balloon", "joovy-big-caboose", "joovy-caboose", "joovy-caboose-ul", "joovy-zoom-360"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Joovy (DTC) — Zoom / Zoom 360 Universal Car Seat Adapter (SKU 9151)", "price": 49.90, "url": "https://www.joovy.com/products/zoom-zoom-360-universal-car-seat-adapter", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Joovy (DTC) — Caboose RS Universal Car Seat Adapter (SKU 9125)", "price": 39.90, "url": "https://www.joovy.com/products/caboose-rs-universal-car-seat-adapter", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "single click-in adapter (mounts to front of stroller)",
+    "toolFree": true,
+    "notes": "Click your infant seat into the adapter, no unbuckling required. The Big Caboose triple ships with two universal adapters included."
+  },
+
+  "sources": [
+    "https://www.joovy.com/products/zoom-zoom-360-universal-car-seat-adapter",
+    "https://www.joovy.com/products/caboose-rs-universal-car-seat-adapter",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Clek lists a generic 'Universal Car Seat Adapter' (no printed part number) for the Joovy Balloon, Big Caboose, Caboose, Caboose UL and Zoom 360. In Joovy's current catalog this is sold as model-specific 'Universal' SKUs — e.g. Zoom/Zoom 360 (SKU 9151, $49.90) and Caboose RS front (SKU 9125, $39.90); the Big Caboose includes two. partNumber left null because there is no single Clek-listed SKU and Joovy prints none on the classic adapter. Clek Liing compatibility confirmed by Clek's own list; Joovy's per-adapter pages render seat-fit as an image rather than text."
+}
