@@ -3,6 +3,7 @@ import type { Module, Option } from '../lib/types';
 import { bestPrice, bestSource, formatMoney } from '../lib/scoring';
 import { criterionEvidence } from '../lib/evidence';
 import { criterionMetric } from '../lib/criterionMetric';
+import { useSessionState } from '../lib/useSessionState';
 import Thumb from './Thumb';
 import Lightbox from './Lightbox';
 
@@ -175,8 +176,13 @@ export default function ComparisonMatrix({
   module: Module;
   onOpenDetail: (optionId: string) => void;
 }) {
-  const [query, setQuery] = useState('');
-  const [sort, setSort] = useState<{ key: string; dir: 1 | -1 } | null>(null);
+  // Sort + filter persist per module for the browser-tab session (survive tab
+  // switches, detail↔back, and reloads).
+  const [query, setQuery] = useSessionState(`matrix:${module.id}:query`, '');
+  const [sort, setSort] = useSessionState<{ key: string; dir: 1 | -1 } | null>(
+    `matrix:${module.id}:sort`,
+    null,
+  );
   const [zoom, setZoom] = useState<Option | null>(null);
 
   const cols = useMemo(() => columnsFor(module), [module]);
