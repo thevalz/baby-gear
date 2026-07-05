@@ -1,6 +1,7 @@
 import { assetUrl } from '../lib/assets';
 
 const SIZES = {
+  xs: 'h-8 w-8',
   sm: 'h-10 w-10',
   lg: 'h-36 w-36',
 } as const;

@@ -1,5 +1,5 @@
 {
-  "dataVersion": 13,
+  "dataVersion": 14,
   "config": {
     "overallBudget": 1000,
     "adapterCost": 100
@@ -1060,7 +1060,7 @@
           "id": "babyjogger-city-mini-2",
           "moduleId": "stroller",
           "name": "Baby Jogger City Mini 2",
-          "price": 0,
+          "price": 279.99,
           "image": "images/babyjogger-city-mini-2.jpg",
           "attributes": {
             "brand": "Baby Jogger",
@@ -1086,7 +1086,7 @@
           "id": "babyjogger-city-mini-4",
           "moduleId": "stroller",
           "name": "Baby Jogger City Mini 4",
-          "price": 0,
+          "price": 299.99,
           "image": "images/babyjogger-city-mini-4.jpg",
           "attributes": {
             "brand": "Baby Jogger",
@@ -1112,7 +1112,7 @@
           "id": "babyjogger-city-mini-gt",
           "moduleId": "stroller",
           "name": "Baby Jogger City Mini GT (original)",
-          "price": 0,
+          "price": 279.99,
           "image": "images/babyjogger-city-mini-gt.jpg",
           "attributes": {
             "brand": "Baby Jogger",
@@ -1138,7 +1138,7 @@
           "id": "babyjogger-city-mini-gt2",
           "moduleId": "stroller",
           "name": "Baby Jogger City Mini GT2",
-          "price": 0,
+          "price": 369.99,
           "image": "images/babyjogger-city-mini-gt2.jpg",
           "attributes": {
             "brand": "Baby Jogger",
@@ -1164,7 +1164,7 @@
           "id": "babyjogger-city-select-double",
           "moduleId": "stroller",
           "name": "Baby Jogger City Select (Double Mode)",
-          "price": 0,
+          "price": 499.99,
           "image": "images/babyjogger-city-select-double.jpg",
           "attributes": {
             "brand": "Baby Jogger",
@@ -1190,7 +1190,7 @@
           "id": "babyjogger-city-select",
           "moduleId": "stroller",
           "name": "Baby Jogger City Select (Single Mode)",
-          "price": 0,
+          "price": 449.99,
           "image": "images/babyjogger-city-select.jpg",
           "attributes": {
             "brand": "Baby Jogger",
@@ -3427,7 +3427,7 @@
           "id": "stokke-scoot",
           "moduleId": "stroller",
           "name": "Stokke Scoot (V2)",
-          "price": 0,
+          "price": 549.0,
           "image": "images/stokke-scoot.jpg",
           "attributes": {
             "brand": "Stokke",
