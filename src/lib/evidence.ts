@@ -52,8 +52,15 @@ const ATTRIBUTE_META: Record<string, { label: string; format: (v: unknown) => st
   discontinued: { label: 'Discontinued', format: yesNo },
 };
 
-/** Bookkeeping attributes that are not worth showing to a human. */
-const HIDDEN_ATTRIBUTES = new Set(['carrierLbVerify']);
+/**
+ * Bookkeeping attributes not worth showing to a human. The atomic dimension
+ * fields (foldLenIn, …) drive the sortable grid columns but are redundant on the
+ * drill-down, which shows the readable combined `foldedDimsIn`/`unfoldedDimsIn`.
+ */
+const HIDDEN_ATTRIBUTES = new Set([
+  'carrierLbVerify',
+  'foldLenIn', 'foldWidIn', 'foldHtIn', 'openLenIn', 'openWidIn', 'openHtIn',
+]);
 
 const titleCase = (key: string): string =>
   key
