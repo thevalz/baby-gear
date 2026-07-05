@@ -1,0 +1,64 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S6 Silver Cross). Sourced 2026-07-05. Represents the current Silver Cross Wave 3 single-to-double; Clek's row names the 2019 'Wave' (adapter SX5135-EU family). Do NOT edit seed.json.",
+  "id": "silvercross-wave",
+  "name": "Silver Cross Wave 3 (single-to-double; covers 2019 Wave)",
+  "brand": "Silver Cross",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/silvercross-wave.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Silver Cross Wave — 2019 Wave and Coast car seat adapters (SX5135-EU)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-sx5135-eu"],
+
+  "priceSources": [
+    { "retailer": "Silver Cross US (DTC)", "price": 1699.99, "url": "https://silvercrossus.com/product/wave-3-single-to-double-stroller/", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 1699.99, "url": "https://strolleria.com/products/silver-cross-wave-3-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Nordstrom", "price": 1699.99, "url": "https://www.nordstrom.com/s/wave-3-single-to-double-convertible-stroller/7948045", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 29.3,
+    "_weightNote": "Wave 3: 23.5 lb chassis + 5.8 lb main seat = ~29.3 lb single-seat config. Bassinet 8.5 lb, tandem seat 5.3 lb (add for double). The Clek-named 2019 Wave chassis was heavier (~24.2 lb chassis; ~30.8 lb w/ seat).",
+
+    "unfoldedIn": { "lengthIn": 43.72, "widthIn": 23.5, "heightIn": 43 },
+    "foldedIn": { "lengthIn": 37.4, "widthIn": 23.6, "heightIn": 15.55 },
+    "_dimsNote": "Wave 3: open L43.72 x W23.5 x H37-43 in; folded L37.4 x W23.6 x H15.55 in (Silver Cross US).",
+
+    "brake": { "hasBrake": true, "type": null },
+    "_brakeNote": "Has a parking brake (standard on the Wave), but the spec page does not name the type — left null rather than guessed.",
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (bassinet + lie-flat seats included; ready as a double for newborn+toddler)",
+      "seatCount": 2,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "Not published on US spec pages. Silver Cross is UK-origin (EN 1888 home market); US units must meet ASTM F833 / 16 CFR 1227; no specific cert stated by brand/retailer.",
+      "certifications": null,
+      "notes": "5-point harness; lie-flat seats; puncture-proof multi-terrain tires with four-way independent suspension."
+    },
+
+    "foldType": "compact fold (chassis folds; seats/bassinet remove)",
+    "strollerType": "single-to-double convertible / full-size modular",
+    "recline": "three positions incl. lie-flat (both main and tandem seats)",
+    "reversibleSeat": true,
+    "tires": "puncture-proof multi-terrain tires, four-way independent suspension"
+  },
+
+  "sources": [
+    "https://silvercrossus.com/product/wave-3-single-to-double-stroller/",
+    "https://strolleria.com/products/silver-cross-wave-3-stroller",
+    "https://pishposhbaby.com/blogs/blog/silver-cross-2019-wave",
+    "https://strollberry.com/strollers/silver-cross-wave/"
+  ],
+  "notes": "Clek's row names the 2019 Wave (adapter SX5135-EU, shared with the Coast). The current US product is the Wave 3, which uses the same Wave/Coast car seat adapter family — represented here as the live, purchasable model ($1,699.99). Heavy full-size single-to-double (up to 3 kids) — opposite end of the spectrum from the light/compact city goal. Brake type not published (null)."
+}
