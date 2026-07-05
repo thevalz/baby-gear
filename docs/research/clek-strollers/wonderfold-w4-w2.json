@@ -1,0 +1,62 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S10). This is a WAGON. Do NOT edit seed.json.",
+  "id": "wonderfold-w4-w2",
+  "name": "Wonderfold Wagon W4 (and W2 Elite/Luxe)",
+  "brand": "Wonderfold",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/wonderfold-w4-w2.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Wonderfold Wagon | W4 and W2 Elite/Luxe | Clek Car Seat Adapter",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-wonderfold-clek"],
+
+  "priceSources": [
+    { "retailer": "Dillard's", "price": 599.00, "url": "https://www.dillards.com/p/wonderfold-w4-elite-4-seater-quad-stroller-wagon/518167767", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Wonderfold DTC", "price": 599.00, "url": "https://wonderfold.com/products/w4-elite-stroller-wagon-4-seater", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 55,
+    "_weightNote": "55 lb (25 kg) with seats installed per Wonderfold DTC (some retailer listings cite ~51 lb).",
+
+    "unfoldedIn": { "lengthIn": 49, "widthIn": 29, "heightIn": 41.5 },
+    "foldedIn": { "lengthIn": 18.5, "widthIn": 29, "heightIn": 42 },
+    "_dimsNote": "W4 open ~49 L x 29 W; height 34–41.5 in at handlebar (51.5 in to top of canopy). Folds flat to ~18.5 L x 29 W x 42 H and self-stands. Interior cabin ~33 L x 21 W x 19 D.",
+
+    "brake": { "hasBrake": true, "type": "1-step foot brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 99,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "seated riders 6+ months (sit unassisted); newborns from birth via a Clek infant seat on the Clek Car Seat Adapter",
+      "seatCount": 4,
+      "basketCapacityLb": null
+    },
+    "_capacityNote": "W4 total wagon capacity 300 lb (136 kg); up to 99 lb (45 kg) per bench/seat. seatCount 4 reflects the primary-spec W4 (quad). W2 Elite/Luxe is the 2-seat sibling on the same Clek row.",
+
+    "safety": {
+      "standards": "ASTM F833-21; EN1888; AS 2088:2022",
+      "certifications": "Not separately published on the sources reviewed.",
+      "notes": "5-point harnesses with pads on each raised bench seat; all-terrain wheels with suspension and bearings."
+    },
+
+    "foldType": "one-step compact fold, self-standing when folded",
+    "strollerType": "wagon",
+    "recline": "removable raised bench seats that recline",
+    "reversibleSeat": true,
+    "tires": "all-terrain wheels with suspension and bearings"
+  },
+
+  "sources": [
+    "https://wonderfold.com/products/w4-elite-stroller-wagon-4-seater",
+    "https://www.dillards.com/p/wonderfold-w4-elite-4-seater-quad-stroller-wagon/518167767",
+    "https://wonderfold.com/products/car-seat-adapter"
+  ],
+  "notes": "On Clek's official Liing/Liingo list as 'W4 and W2 Elite/Luxe' using the Wonderfold 'Clek Car Seat Adapter' (adapter-wonderfold-clek, no part # on Clek's list). PRIMARY specs above are the W4 (quad, 4 seats, 300 lb / 99 lb-per-bench, ~55 lb, open ~49 x 29 in). The W2 Elite/Luxe is the smaller 2-seat sibling on the same row: seats 2 children, narrower/shorter frame and lower total capacity — verify W2-specific dims separately if needed. Adapter fitment differs by model: up to TWO Clek adapters may be installed on W4 Elite/Luxe, but only ONE on W2. Best in-stock price $599 (Dillard's); Wonderfold DTC also $599 but currently sold out. Basket capacity and some cert numbers not published on pages reviewed — left null rather than guessed."
+}

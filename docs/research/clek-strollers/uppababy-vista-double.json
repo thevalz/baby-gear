@@ -1,0 +1,65 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S9 UPPAbaby). UPPAbaby VISTA (double mode) — current VISTA V3 chassis + RumbleSeat V3 second seat. Uses CLEK'S OWN upper adapter for UPPAbaby PLUS the UPPAbaby lower adapter 0918-LMA-WW for a car seat in the lower position. Do NOT edit seed.json.",
+  "id": "uppababy-vista-double",
+  "name": "UPPAbaby VISTA V3 (double mode; Vista + RumbleSeat)",
+  "brand": "UPPAbaby",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/uppababy-vista-double.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "UPPAbaby Vista (Double Mode) — Upper: Adapters for Vista & Cruz (0919-UMA-WW); Lower: Adapters for Vista (0918-LMA-WW). Vista/V2/V3 made 2015-present only.",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-clek-uppababy", "adapter-0918-lma-ww"],
+
+  "priceSources": [
+    { "retailer": "Strolleria (Vista V3 $999.99 + RumbleSeat V3 $299.99)", "price": 1299.98, "url": "https://strolleria.com/products/uppababy-vista-v3-rumbleseat", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Albee Baby (Vista V3 Double + RumbleSeat V3 bundle)", "price": 1299.98, "url": "https://www.albeebaby.com/products/uppababy-vista-v3-double-stroller-with-rumbleseat-v3-bundle-owen", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "UPPAbaby RumbleSeat V3 (second seat, DTC)", "price": 299.99, "url": "https://uppababy.com/accessories/strollers-accessories/rumbleseat-v3/", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 27.6,
+    "_weightNote": "Vista V3 frame + toddler seat 27.6 lb; the RumbleSeat V3 second seat adds ~9 lb when fitted for double mode.",
+
+    "unfoldedIn": { "lengthIn": 36.5, "widthIn": 25.7, "heightIn": 39.5 },
+    "foldedIn": { "lengthIn": 16.3, "widthIn": 25.7, "heightIn": 33.8 },
+    "_dimsNote": "Same chassis footprint as Vista single (in-line double stacks vertically, not wider). Fold dims are for the frame + toddler seat; RumbleSeat removed to fold.",
+
+    "brake": { "hasBrake": true, "type": "single-action foot-operated parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "from birth in either position (two bassinets / two car seats / seat + RumbleSeat combos)",
+      "seatCount": 2,
+      "basketCapacityLb": 30
+    },
+    "_capacityNote": "Toddler seat 50 lb + RumbleSeat V3 40 lb (combined up to ~90 lb). 30+ configurations single-to-double.",
+
+    "safety": {
+      "standards": "Meets/exceeds ASTM F833 (US carriages & strollers)",
+      "certifications": "JPMA Certified; GREENGUARD Gold Certified",
+      "notes": "5-point harness on both seats; in-line (tandem) double; RumbleSeat forward- or parent-facing."
+    },
+
+    "foldType": "one-piece fold with auto-lock (RumbleSeat removed to fold)",
+    "strollerType": "full-size in-line (tandem) double / convertible",
+    "recline": "toddler seat lay-flat; RumbleSeat multi-position recline",
+    "reversibleSeat": true,
+    "tires": "never-flat foam-filled rubber-coated tires; all-wheel suspension; front swivel with lock"
+  },
+
+  "sources": [
+    "https://uppababy.com/strollers/full-size/vista-v3/",
+    "https://uppababy.com/accessories/strollers-accessories/rumbleseat-v3/",
+    "https://www.albeebaby.com/products/uppababy-vista-v3-double-stroller-with-rumbleseat-v3-bundle-owen",
+    "https://support.uppababy.com/hc/en-us/articles/115009544627-Are-UPPAbaby-products-JPMA-ASTM-compliant",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Vista in double mode = Vista V3 chassis ($999.99) + separately purchased RumbleSeat V3 ($299.99), effective ~$1,299.98. In double mode a Clek Liing can ride upper (adapter-clek-uppababy) and/or lower via UPPAbaby's lower adapter 0918-LMA-WW (adapter-0918-lma-ww) — hence two adapterIds. Clek compatibility applies only to 2015+ units. Large full-size tandem — far from the light city goal but a top growing-family choice. Image reuses the Vista V3 chassis shot."
+}
