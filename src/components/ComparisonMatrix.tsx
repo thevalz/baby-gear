@@ -12,18 +12,154 @@ interface Col {
   align?: 'right';
   /** Display string for a cell (null → em dash). */
   text: (o: Option) => string | null;
-  /** Sort value — number sorts numerically, string sorts alphabetically, null last. */
+  /** Sort value — number sorts numerically, string alphabetically, null last. */
   sort: (o: Option) => number | string | null;
 }
 
+const attr = (o: Option, key: string): unknown => (o.attributes as Record<string, unknown>)[key];
+
+/** Numeric column: header carries the unit, the cell shows the bare number (tight + sortable). */
+function numCol(key: string, label: string, unit: string): Col {
+  return {
+    key,
+    label: `${label} (${unit})`,
+    align: 'right',
+    text: (o) => {
+      const v = attr(o, key);
+      return typeof v === 'number' ? String(v) : null;
+    },
+    sort: (o) => {
+      const v = attr(o, key);
+      return typeof v === 'number' ? v : null;
+    },
+  };
+}
+
+/** Text column. */
+function strCol(key: string, label: string): Col {
+  return {
+    key,
+    label,
+    text: (o) => {
+      const v = attr(o, key);
+      return v == null || v === '' ? null : String(v);
+    },
+    sort: (o) => {
+      const v = attr(o, key);
+      return v == null || v === '' ? null : String(v).toLowerCase();
+    },
+  };
+}
+
+const priceCol: Col = {
+  key: '_price',
+  label: 'Best price',
+  align: 'right',
+  text: (o) => {
+    const p = bestPrice(o);
+    return p > 0 ? formatMoney(p) : null;
+  },
+  sort: (o) => {
+    const p = bestPrice(o);
+    return p > 0 ? p : null;
+  },
+};
+
+/** "Yes" when the option's safety-standards text names a given standard, else blank. */
+function standardCol(needle: string, label: string): Col {
+  const hit = (o: Option) => {
+    const s = attr(o, 'safetyStandards');
+    return typeof s === 'string' && s.toLowerCase().includes(needle.toLowerCase());
+  };
+  return {
+    key: `std_${needle}`,
+    label,
+    text: (o) => (hit(o) ? 'Yes' : null),
+    sort: (o) => (hit(o) ? 'yes' : null),
+  };
+}
+
+/** Suspension: the named system (BOBs) or "Yes" when the tire text mentions suspension. */
+const suspensionCol: Col = {
+  key: 'suspension',
+  text: (o) => {
+    const s = attr(o, 'suspension');
+    if (s) return String(s);
+    const t = attr(o, 'tires');
+    return typeof t === 'string' && /suspension/i.test(t) ? 'Yes' : null;
+  },
+  sort: (o) => suspensionCol.text(o)?.toLowerCase() ?? null,
+  label: 'Suspension',
+};
+
 const isPriceCriterion = (id: string, label: string) => /price|cost/i.test(`${id} ${label}`);
 
+/** The column set for a module. Each captured dimension is its own sortable column. */
+function columnsFor(module: Module): Col[] {
+  let cols: Col[];
+  if (module.id === 'stroller') {
+    cols = [
+      strCol('brand', 'Brand'),
+      strCol('type', 'Type'),
+      numCol('weightLb', 'Weight', 'lb'),
+      numCol('foldLenIn', 'Fold L', 'in'),
+      numCol('foldWidIn', 'Fold W', 'in'),
+      numCol('foldHtIn', 'Fold H', 'in'),
+      numCol('openLenIn', 'Open L', 'in'),
+      numCol('openWidIn', 'Open W', 'in'),
+      numCol('openHtIn', 'Open H', 'in'),
+      numCol('maxChildLb', 'Max child', 'lb'),
+      strCol('recline', 'Recline'),
+      strCol('foldType', 'Fold'),
+      suspensionCol,
+      strCol('brakeType', 'Brake'),
+      strCol('tires', 'Tires'),
+      standardCol('1227', 'CFR 1227'),
+      standardCol('f833', 'ASTM F833'),
+      strCol('adapterSystem', 'Clek adapter'),
+      priceCol,
+    ];
+  } else if (module.id === 'adapter') {
+    cols = [
+      strCol('madeBy', 'Made by'),
+      strCol('partNumber', 'Part #'),
+      strCol('seatBrands', 'Fits car seats'),
+      priceCol,
+      {
+        key: 'discontinued',
+        label: 'Status',
+        text: (o) => (attr(o, 'discontinued') ? 'Discontinued' : 'Available'),
+        sort: (o) => (attr(o, 'discontinued') ? 1 : 0),
+      },
+    ];
+  } else {
+    // Car seats etc.: one column per (non-price) criterion, showing its literal value.
+    cols = [priceCol];
+    for (const c of module.criteria) {
+      if (isPriceCriterion(c.id, c.label)) continue;
+      cols.push({
+        key: c.id,
+        label: c.label,
+        text: (o) => criterionEvidence(c, o),
+        sort: (o) => {
+          const m = criterionMetric(c, o);
+          if (m && typeof m.value === 'number' && !Number.isNaN(m.value)) return m.value;
+          const ev = criterionEvidence(c, o);
+          return ev ? ev.toLowerCase() : null;
+        },
+      });
+    }
+  }
+  // Drop any column no option has data for.
+  return cols.filter((c) => c.key === '_price' || module.options.some((o) => c.text(o) != null));
+}
+
 /**
- * Information catalog for one module: every option a row, with a filter box and
- * click-to-sort columns. Columns are the module's data-bearing facts (the price
- * is shown once as "Best price"; criterion columns that no option has data for
- * are hidden). Long values are truncated to keep rows short — the full text is
- * on the drill-down page. No scores or ranking.
+ * Information catalog for one module: every option a row, a filter box, and
+ * click-to-sort columns — one column per captured dimension (weight, each
+ * folded/unfolded measurement, brake, capacity, price, …) so any single field
+ * can be sorted or filtered. Long text truncates; the full record is on the
+ * drill-down. No scores or ranking.
  */
 export default function ComparisonMatrix({
   module,
@@ -33,59 +169,9 @@ export default function ComparisonMatrix({
   onOpenDetail: (optionId: string) => void;
 }) {
   const [query, setQuery] = useState('');
-  // Default order is the natural (seed) order; a header click sets an explicit sort.
   const [sort, setSort] = useState<{ key: string; dir: 1 | -1 } | null>(null);
 
-  const cols: Col[] = useMemo(() => {
-    const out: Col[] = [];
-    out.push({
-      key: '_price',
-      label: 'Best price',
-      align: 'right',
-      text: (o) => {
-        const p = bestPrice(o);
-        return p > 0 ? formatMoney(p) : null;
-      },
-      sort: (o) => {
-        const p = bestPrice(o);
-        return p > 0 ? p : null;
-      },
-    });
-
-    if (module.id === 'adapter') {
-      const attr = (key: string, label: string): Col => ({
-        key,
-        label,
-        text: (o) => {
-          const v = (o.attributes as Record<string, unknown>)[key];
-          return v == null ? null : String(v);
-        },
-        sort: (o) => {
-          const v = (o.attributes as Record<string, unknown>)[key];
-          return v == null ? null : String(v).toLowerCase();
-        },
-      });
-      out.push(attr('madeBy', 'Made by'), attr('seatBrands', 'Fits car seats'), attr('partNumber', 'Part #'));
-    } else {
-      for (const c of module.criteria) {
-        if (isPriceCriterion(c.id, c.label)) continue; // "Best price" already covers it
-        const hasData = module.options.some((o) => criterionEvidence(c, o) != null);
-        if (!hasData) continue;
-        out.push({
-          key: c.id,
-          label: c.label,
-          text: (o) => criterionEvidence(c, o),
-          sort: (o) => {
-            const m = criterionMetric(c, o);
-            if (m && typeof m.value === 'number' && !Number.isNaN(m.value)) return m.value;
-            const ev = criterionEvidence(c, o);
-            return ev ? ev.toLowerCase() : null;
-          },
-        });
-      }
-    }
-    return out;
-  }, [module]);
+  const cols = useMemo(() => columnsFor(module), [module]);
 
   const rows = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -104,7 +190,7 @@ export default function ComparisonMatrix({
         const va = val(a);
         const vb = val(b);
         if (va == null && vb == null) return 0;
-        if (va == null) return 1; // missing values always sort last
+        if (va == null) return 1;
         if (vb == null) return -1;
         const cmp =
           typeof va === 'number' && typeof vb === 'number'
@@ -118,7 +204,6 @@ export default function ComparisonMatrix({
 
   const toggleSort = (key: string) =>
     setSort((s) => (s?.key === key ? { key, dir: (s.dir * -1) as 1 | -1 } : { key, dir: 1 }));
-
   const arrow = (key: string) => (sort?.key === key ? (sort.dir === 1 ? ' ▲' : ' ▼') : '');
 
   if (module.options.length === 0) {
@@ -129,7 +214,7 @@ export default function ComparisonMatrix({
     );
   }
 
-  const headCls = 'cursor-pointer select-none px-3 py-1.5 font-medium hover:text-slate-800';
+  const headCls = 'cursor-pointer select-none whitespace-nowrap px-3 py-1.5 font-medium hover:text-slate-800';
 
   return (
     <div className="space-y-2">
@@ -181,26 +266,26 @@ export default function ComparisonMatrix({
                   <td className="sticky left-0 z-10 bg-inherit px-3 py-1.5">
                     <div className="flex items-center gap-2">
                       <Thumb src={o.image} alt={o.name} size="xs" />
-                      <div className="max-w-[15rem] truncate font-medium text-slate-800">{o.name || '(unnamed)'}</div>
+                      <div className="max-w-[14rem] truncate font-medium text-slate-800">{o.name || '(unnamed)'}</div>
                     </div>
                   </td>
                   {cols.map((c) => {
                     const t = c.text(o);
-                    const priceCol = c.key === '_price';
+                    const priceColumn = c.key === '_price';
                     return (
                       <td
                         key={c.key}
-                        className={`px-3 py-1.5 align-middle ${c.align === 'right' ? 'whitespace-nowrap text-right' : ''}`}
+                        className={`px-3 py-1.5 align-middle ${c.align === 'right' ? 'whitespace-nowrap text-right tabular-nums' : ''}`}
                       >
                         <span
                           title={t ?? undefined}
-                          className={`block truncate ${c.align === 'right' ? '' : 'max-w-[13rem]'} ${
-                            priceCol ? 'font-semibold tabular-nums text-slate-800' : 'text-slate-600'
+                          className={`block ${c.align === 'right' ? '' : 'max-w-[11rem] truncate'} ${
+                            priceColumn ? 'font-semibold text-slate-800' : 'text-slate-600'
                           }`}
                         >
                           {t ?? <span className="text-slate-300">—</span>}
                         </span>
-                        {priceCol && bsrc && <div className="text-[11px] text-slate-400">{bsrc.retailer}</div>}
+                        {priceColumn && bsrc && <div className="text-[11px] text-slate-400">{bsrc.retailer}</div>}
                       </td>
                     );
                   })}
