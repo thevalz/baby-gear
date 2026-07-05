@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S10). Do NOT edit seed.json.",
+  "id": "adapter-ikcs0019na",
+  "name": "Agio by Peg Perego Car Seat Adapter for Z3 Stroller",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-ikcs0019na.jpg",
+
+  "partNumber": "IKCS0019NA",
+  "madeBy": "Agio (Peg Perego)",
+
+  "seatBrandsSupported": "Peg Perego Primo Viaggio 4-35 Nido, Nuna Pipa, Maxi-Cosi Mico, UPPAbaby Mesa, Cybex Aton, and Clek Liing — Clek Liing explicitly supported per Clek's official Liing/Liingo list.",
+
+  "forStrollerIds": ["pegperego-agio-z3"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "Listed by Clek as the correct Liing/Liingo adapter for the Agio Z3 stroller."
+  },
+
+  "priceSources": [
+    { "retailer": "Agio Baby (DTC)", "price": 49.99, "url": "https://agiobaby.com/products/agio-by-peg-perego-car-seat-adapter-for-z3-stroller", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (2 adapters, one per side)",
+    "toolFree": true,
+    "notes": "Clip onto the stroller frame; the infant car seat clicks directly onto the adapters and releases tool-free."
+  },
+
+  "sources": [
+    "https://agiobaby.com/products/agio-by-peg-perego-car-seat-adapter-for-z3-stroller",
+    "https://us.pegperego.com/store/pegus/en_US/out-and-about/strollers/stroller-accessories/z3-car-seat-adapter/p/IKCS0019NA",
+    "https://strolleria.com/products/agio-car-seat-adapter-for-z3-maxi-cosi-nuna-cybex",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Agio (Peg Perego US brand) car seat adapter, part IKCS0019NA, for the Agio Z3 three-wheel stroller. Explicitly enables the Clek Liing per Clek's official list; also supports Nuna Pipa, Maxi-Cosi Mico, UPPAbaby Mesa, Cybex Aton and the Peg Perego Primo Viaggio 4-35 Nido. Sold as a pair, tool-free. Price $49.99 (Agio Baby DTC). Exact SKU not printed on all retailer pages but confirmed IKCS0019NA on the Peg Perego US store and Clek's roster."
+}

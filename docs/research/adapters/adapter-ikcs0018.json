@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S10). Do NOT edit seed.json.",
+  "id": "adapter-ikcs0018",
+  "name": "Agio by Peg Perego Car Seat Adapter for Z4 / YPSI Stroller",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-ikcs0018.jpg",
+
+  "partNumber": "IKCS0018",
+  "madeBy": "Agio (Peg Perego)",
+
+  "seatBrandsSupported": "Maxi-Cosi Mico family, Cybex Aton family & Cloud Q, Nuna Pipa family, Recaro Performance Coupe, and Clek Liing — Clek Liing explicitly supported per Clek's official Liing/Liingo list. (Not compatible with Stokke PIPA.)",
+
+  "forStrollerIds": ["pegperego-agio-z4-ypsi"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "Listed by Clek as the correct Liing/Liingo adapter for the Agio Z4:YPSI stroller."
+  },
+
+  "priceSources": [
+    { "retailer": "Kidsland USA", "price": 49.99, "url": "https://www.kidslandusa.com/products/agio-by-peg-perego-z4-ypsi-car-seat-adapters", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 49.99, "url": "https://strolleria.com/products/agio-car-seat-adapter-for-z4-maxi-cosi-nuna-cybex", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (2 adapters, one per side)",
+    "toolFree": true,
+    "notes": "Clips attach to the car seat; the car seat then clicks onto the Z4/Ypsi stroller frame. Tool-free."
+  },
+
+  "sources": [
+    "https://www.kidslandusa.com/products/agio-by-peg-perego-z4-ypsi-car-seat-adapters",
+    "https://strolleria.com/products/agio-car-seat-adapter-for-z4-maxi-cosi-nuna-cybex",
+    "https://www.anbbaby.com/products/peg-perego-car-seat-adapter-for-ypsi",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Agio (Peg Perego US brand) car seat adapter, part IKCS0018, for the Agio Z4 / Peg Perego Ypsi stroller. Explicitly enables the Clek Liing per Clek's official list; also supports Maxi-Cosi, Cybex (Aton / Cloud Q), Nuna Pipa and Recaro Performance Coupe. NOT compatible with the Stokke PIPA. Sold as a pair, tool-free. Price $49.99 (Kidsland USA and Strolleria; SKU IKCS0018 confirmed)."
+}

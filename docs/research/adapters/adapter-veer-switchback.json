@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05 (batch S10). Shared Switchback adapter serving BOTH the &Jog and &Roll Switchback frames. Do NOT edit seed.json.",
+  "id": "adapter-veer-switchback",
+  "name": "Veer Switchback Infant Car Seat Adapter (Cybex / Maxi-Cosi / Nuna / Clek)",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-veer-switchback.jpg",
+
+  "partNumber": null,
+  "madeBy": "Veer",
+
+  "seatBrandsSupported": "Cybex (Aton Q & M), Maxi-Cosi (Mico Max 30, Mico 30, Nxt, Mico AP), Nuna (PIPA lite lx, PIPA lite, PIPA RX, PIPA), and Clek (Liing) — Clek Liing explicitly listed. NOT compatible with Stokke PIPA by Nuna.",
+
+  "forStrollerIds": ["veer-switchback-jog", "veer-switchback-roll"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": "Clek lists this single 'Switchback Infant Car Seat Adapter – Cybex/Maxi-Cosi/Nuna' for both 'Switchback & Jog' and 'Switchback & Roll (Single or Double)'; the Roll double mode also needs Veer's Second-seat adapter kit."
+  },
+
+  "priceSources": [
+    { "retailer": "The Baby Cubby", "price": 59.00, "url": "https://www.babycubby.com/products/veer-switchback-infant-car-seat-adapter-nuna-maxi-cosi-cybex-clek", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Albee Baby", "price": 59.00, "url": "https://www.albeebaby.com/products/veer-switchback-infant-car-seat-adapter-for-cybex-nuna-maxi-cosi", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "single adapter (one unit); &Roll accepts up to 2 adapters when used with the separate Second Seat Adapter Kit",
+    "toolFree": true,
+    "notes": "Attaches to the &Roll or &Jog Switchback frame; car seat mounts front- or rear-facing. On &Jog, holds 1 infant car seat. On &Roll, one adapter for single; two adapters plus the Second Seat Adapter Kit for two car seats in double mode."
+  },
+
+  "sources": [
+    "https://www.babycubby.com/products/veer-switchback-infant-car-seat-adapter-nuna-maxi-cosi-cybex-clek",
+    "https://www.albeebaby.com/products/veer-switchback-infant-car-seat-adapter-for-cybex-nuna-maxi-cosi",
+    "https://strolleria.com/products/veer-car-seat-adapter-cybex-maxi-cosi-nuna",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "adapter-veer-switchback serves BOTH veer-switchback-jog and veer-switchback-roll; double mode needs a second-seat kit. Single adapter, tool-free. Clek Liing explicitly supported. No printed part number on Clek's list or retailer pages — partNumber null. $59 (Baby Cubby, sold out at check; Albee Baby in stock; Veer DTC also lists $59). Two adapters + Second Seat Adapter Kit required to run two infant car seats on the &Roll double."
+}
