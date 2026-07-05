@@ -1,7 +1,15 @@
+import { useState } from 'react';
 import type { Module, Option } from '../lib/types';
 import { bestPrice, bestSource, formatMoney } from '../lib/scoring';
 import { optionFacts } from '../lib/evidence';
 import Thumb from './Thumb';
+import Lightbox from './Lightbox';
+
+/** Best link to where an option's image / data came from. */
+const imageSource = (o: Option): string | undefined =>
+  (o.attributes as Record<string, unknown>).sourceUrl as string | undefined ??
+  bestSource(o)?.url ??
+  o.priceSources?.[0]?.url;
 
 const card = 'rounded-lg border border-slate-200 bg-white p-4';
 const cardTitle = 'mb-3 text-sm font-medium text-slate-600';
@@ -20,6 +28,7 @@ export default function OptionDetail({
   option: Option;
   onBack: () => void;
 }) {
+  const [zoom, setZoom] = useState(false);
   const facts = optionFacts(option);
   const sources = option.priceSources ?? [];
   const best = bestSource(option);
@@ -36,7 +45,19 @@ export default function OptionDetail({
 
       {/* Header */}
       <header className="flex flex-wrap items-start gap-5">
-        <Thumb src={option.image} alt={option.name} size="lg" />
+        {option.image ? (
+          <button
+            type="button"
+            onClick={() => setZoom(true)}
+            className="cursor-zoom-in rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            aria-label="Enlarge image"
+            title="Click to enlarge"
+          >
+            <Thumb src={option.image} alt={option.name} size="lg" />
+          </button>
+        ) : (
+          <Thumb src={option.image} alt={option.name} size="lg" />
+        )}
         <div className="min-w-0 flex-1">
           <h2 className="text-2xl font-semibold text-slate-800">
             {option.name || '(unnamed)'}
@@ -150,6 +171,15 @@ export default function OptionDetail({
             {option.notes}
           </p>
         </section>
+      )}
+
+      {zoom && (
+        <Lightbox
+          src={option.image}
+          alt={option.name}
+          sourceUrl={imageSource(option)}
+          onClose={() => setZoom(false)}
+        />
       )}
     </div>
   );
