@@ -34,5 +34,5 @@
     "https://www.babylist.com/gp/larktale-car-seat-adapter-maxi-cosi-clek-nuna-caravan/45463/1748741",
     "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/larktale-coast"
   ],
-  "notes": "Larktale 'Car Seat Adapter – Multi-Model', part LK29400, for the Larktale Coast. Clek's official list uses this exact part row for the Coast and confirms Liing/Liingo support. GAPS: (1) no product image sourced — larktale.com and retailer pages block scraping, so image is null; (2) no live price confirmable (see _priceNote). Comparable Larktale Multi-Model adapters run ~$59.99."
+  "notes": "Larktale 'Car Seat Adapter – Multi-Model', part LK29400, for the Larktale Coast. Clek's official list uses this exact part row for the Coast and confirms Liing/Liingo support. GAPS (re-checked 2026-07-05, still unresolved): (1) no product image — the Coast adapter is now fully DELISTED from larktale.com (products.json returns only caravan/crossover/sprout WAGON adapters); Albee Baby 403s (Cloudflare); Amazon bot-blocks (500/captcha); no Wayback snapshot; Strolleria/PishPosh do not carry it. image left null. (2) no live US price confirmable (see _priceNote). Comparable Larktale Multi-Model wagon adapters currently run ~$24.99–$69.99 on larktale.com."
 }

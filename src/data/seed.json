@@ -1,5 +1,5 @@
 {
-  "dataVersion": 12,
+  "dataVersion": 13,
   "config": {
     "overallBudget": 1000,
     "adapterCost": 100
@@ -1093,6 +1093,7 @@
             "type": "4-wheel urban (discontinued)",
             "weightLb": 19.9,
             "foldedDimsIn": "30.5 × 24.0 × 9.0 in",
+            "unfoldedDimsIn": "39.6 × 24.0 × 41.5 in",
             "brakeType": "foot-operated parking brake",
             "maxChildLb": 65,
             "safetyStandards": "ASTM F833 / 16 CFR 1227; JPMA Certified · JPMA Certified (Baby Jogger)",
@@ -1105,7 +1106,7 @@
           },
           "scores": {},
           "priceSources": [],
-          "notes": "The 4-wheel City Mini variant. On Clek's list via the Maxi-Cosi Mounting Bracket 1967208 — Clek flags it DISCONTINUED. Discontinued model; MSRP ~$299.99 reference."
+          "notes": "The 4-wheel City Mini variant. On Clek's list via the Maxi-Cosi Mounting Bracket 1967208 — Clek flags it DISCONTINUED. Discontinued model; unfolded 39.6 x 24.0 x 41.5 in derived from Strollberry (105.5 x 61 x 100.5 cm, h x w x l); MSRP ~$299.99 reference."
         },
         {
           "id": "babyjogger-city-mini-gt",
@@ -1117,6 +1118,8 @@
             "brand": "Baby Jogger",
             "type": "all-terrain urban (discontinued)",
             "weightLb": 22.4,
+            "foldedDimsIn": "31.5 × 24.4 × 9.8 in",
+            "unfoldedDimsIn": "44.1 × 24.4 × 43.5 in",
             "brakeType": "hand-operated parking brake",
             "maxChildLb": 65,
             "safetyStandards": "ASTM F833 / 16 CFR 1227; JPMA Certified · JPMA Certified (Baby Jogger)",
@@ -1129,7 +1132,7 @@
           },
           "scores": {},
           "priceSources": [],
-          "notes": "The original City Mini GT (superseded by the GT2). On Clek's list via the Mounting Bracket Single for Maxi-Cosi 1967208 — Clek flags that adapter DISCONTINUED. Discontinued model; folded length/height not cleanly published (null); MSRP ~$279.99 reference."
+          "notes": "The original City Mini GT (superseded by the GT2). On Clek's list via the Mounting Bracket Single for Maxi-Cosi 1967208 — Clek flags that adapter DISCONTINUED. Discontinued model; unfolded 44.1 x 24.4 x 43.5 in and folded 31.5 x 24.4 x 9.8 in derived from Strollberry (110.5 x 62 x 112 cm open; 80 x 62 x 25 cm folded, h x w x l); MSRP ~$279.99 reference."
         },
         {
           "id": "babyjogger-city-mini-gt2",
@@ -1142,6 +1145,7 @@
             "type": "all-terrain urban",
             "weightLb": 21.0,
             "foldedDimsIn": "31.5 × 24.5 × 10.0 in",
+            "unfoldedDimsIn": "46.8 × 25.5 × 43.5 in",
             "brakeType": "hand-operated parking brake (on handlebar)",
             "maxChildLb": 65,
             "safetyStandards": "ASTM F833 / 16 CFR 1227; JPMA Certified · JPMA Certified (Baby Jogger)",
@@ -1154,7 +1158,7 @@
           },
           "scores": {},
           "priceSources": [],
-          "notes": "All-terrain sibling of the City Mini 2 (rubber never-flat tires + all-wheel suspension). On Clek's list via Baby Jogger's City Mini 2 adapter 2083991 (Cybex/Clek) — Clek flags that adapter DISCONTINUED. The Baby Jogger brand's US line has been largely wound down; price shown ~$369.99 is MSRP reference — reconfirm current stock/price. Unfolded length/height not cleanly published (null)."
+          "notes": "All-terrain sibling of the City Mini 2 (rubber never-flat tires + all-wheel suspension). On Clek's list via Baby Jogger's City Mini 2 adapter 2083991 (Cybex/Clek) — Clek flags that adapter DISCONTINUED. The Baby Jogger brand's US line has been largely wound down; price shown ~$369.99 is MSRP reference — reconfirm current stock/price. Unfolded length 46.8 in / height 43.5 in per retail spec (Nordstrom/Babylist); handlebar is adjustable ~38.5-45.7 in (babygearlab), 43.5 is a nominal figure. Note: unfolded widthIn 25.5 was pre-filled and left as-is per gap-fill scope, though Strollberry lists ~24.2 in (61.5 cm)."
         },
         {
           "id": "babyjogger-city-select-double",
@@ -1167,6 +1171,7 @@
             "type": "modular convertible (double)",
             "weightLb": 37.07,
             "foldedDimsIn": "34.65 × 25.59 × 11.61 in",
+            "unfoldedDimsIn": "43.5 × 25.8 × 41.5 in",
             "brakeType": "hand-operated parking brake (on handlebar)",
             "maxChildLb": 45,
             "safetyStandards": "ASTM F833 / 16 CFR 1227; JPMA Certified · JPMA Certified (Baby Jogger)",
@@ -1179,7 +1184,7 @@
           },
           "scores": {},
           "priceSources": [],
-          "notes": "City Select in double mode (second seat added); ~37 lb with both seats, per-seat max 45 lb. On Clek's list via City Select adapter 2013551 (x2) plus the City Select Second Seat adapter 2011985 — both DISCONTINUED per Clek, with the lowest-handle-position car-seat caveat. MSRP ~$499.99 reference."
+          "notes": "City Select in double mode (second seat added); ~37 lb with both seats, per-seat max 45 lb. On Clek's list via City Select adapter 2013551 (x2) plus the City Select Second Seat adapter 2011985 — both DISCONTINUED per Clek, with the lowest-handle-position car-seat caveat. Unfolded 43.5 x 25.8 x 41.5 in reflects the shared City Select frame footprint (Strollberry 105.5 x 65.5 x 110.5-119 cm, h x w x l); double mode adds a stacked second seat that raises overall height above the 41.5 in frame figure — no distinct published double-mode height. MSRP ~$499.99 reference."
         },
         {
           "id": "babyjogger-city-select",
@@ -1192,6 +1197,7 @@
             "type": "modular convertible",
             "weightLb": 29.54,
             "foldedDimsIn": "34.65 × 25.59 × 11.61 in",
+            "unfoldedDimsIn": "43.5 × 25.8 × 41.5 in",
             "brakeType": "hand-operated parking brake (on handlebar)",
             "maxChildLb": 45,
             "safetyStandards": "ASTM F833 / 16 CFR 1227; JPMA Certified · JPMA Certified (Baby Jogger)",
@@ -1204,7 +1210,7 @@
           },
           "scores": {},
           "priceSources": [],
-          "notes": "Modular single-to-double convertible (single mode). Per-seat max 45 lb. On Clek's list via City Select adapter 2013551 (Maxi-Cosi/Cybex) — Clek flags it DISCONTINUED, with a handle-position caveat (car seat not usable in the lowest handle position). MSRP ~$449.99 reference; Baby Jogger US line wound down."
+          "notes": "Modular single-to-double convertible (single mode). Per-seat max 45 lb. On Clek's list via City Select adapter 2013551 (Maxi-Cosi/Cybex) — Clek flags it DISCONTINUED, with a handle-position caveat (car seat not usable in the lowest handle position). Unfolded 43.5 x 25.8 x 41.5 in derived from Strollberry (105.5 x 65.5 x 110.5-119 cm, h x w x l); lengthIn set to base 43.5 in (110.5 cm) but extends to ~46.9 in (119 cm) with leg rest/recline. MSRP ~$449.99 reference; Baby Jogger US line wound down."
         },
         {
           "id": "babyzen-yoyo",
@@ -2112,6 +2118,7 @@
             "weightLb": 24.5,
             "foldedDimsIn": "23.5 × 20 × 28.5 in",
             "unfoldedDimsIn": "37.5 × 23.5 × 41.25 in",
+            "brakeType": "foot-operated rear foot-pedal parking brake (press down to set / lift to release)",
             "maxChildLb": 55,
             "safetyStandards": "US stroller standard (ASTM F833 / 16 CFR 1227) presumed but NOT explicitly published by Colugo for the Complete",
             "foldType": "one-hand easy fold",
@@ -2151,6 +2158,9 @@
           "attributes": {
             "brand": "Glüxkind",
             "type": "smart",
+            "weightLb": 33,
+            "foldedDimsIn": "30 × 27 × 15 in",
+            "unfoldedDimsIn": "40 × 27 × 43 in",
             "brakeType": "intelligent/automatic braking + automatic parking (dual-motor assist)",
             "maxChildLb": 50,
             "safetyStandards": "Sold into the US market; meets applicable US stroller standard (ASTM F833) though Glüxkind does not cite the standard number publicly · CES Innovation Award honoree",
@@ -2171,7 +2181,7 @@
               "checkedAt": "2026-07-05"
             }
           ],
-          "notes": "IMPORTANT model note: Clek lists 'Glüxkind Rosa'. Rosa is Glüxkind's in-market smart stroller ($2,290 DTC, in stock, made in Canada) and is 'certified compatible with Clek Liing and Clek Liingo' — the correct match for this catalog. The experimental self-driving 'Ella' ($3,800, special-order) is a separate model on the same platform; do not conflate the price. Rosa attaches the Clek Liing via the Glüxkind Car Seat Adapter (adapter-gluxkind-universal, $70). Weight and folded/unfolded dimensions are not published by Glüxkind (left null). Max child weight 50 lb; bassinet-from-birth + lay-flat toddler seat; 500W dual-motor with automatic braking."
+          "notes": "IMPORTANT model note: Clek lists 'Glüxkind Rosa'. Rosa is Glüxkind's in-market smart stroller ($2,290 DTC, in stock, made in Canada) and is 'certified compatible with Clek Liing and Clek Liingo' — the correct match for this catalog. The experimental self-driving 'Ella' ($3,800, special-order) is a separate model on the same platform; do not conflate the price. Rosa attaches the Clek Liing via the Glüxkind Car Seat Adapter (adapter-gluxkind-universal, $70). Glüxkind's DTC spec now publishes frame weight 33 lb, unfolded 40x27x43 in, folded 30x27x15 in (total assembled weight still unpublished). Max child weight 50 lb; bassinet-from-birth + lay-flat toddler seat; 500W dual-motor with automatic braking."
         },
         {
           "id": "guzzieguss-hopscotch",
@@ -2666,6 +2676,7 @@
             "type": "sit-and-stand tandem double (front seat + rear bench/standing platform; optional rear seat sold separately)",
             "weightLb": 27.5,
             "foldedDimsIn": "41.5 × 21.5 × 10.5 in",
+            "unfoldedDimsIn": "38 × 21.5 × 41.5 in",
             "brakeType": "foot-operated parking brake",
             "maxChildLb": 45,
             "maxHeightIn": 44,
@@ -2687,7 +2698,7 @@
               "checkedAt": "2026-07-05"
             }
           ],
-          "notes": "The original Joovy Caboose sit-and-stand (aka Caboose Graphite), superseded at Joovy's DTC store by the Caboose UL / Caboose RS; not in the current joovy.com catalog and shown 'Currently unavailable' on Amazon at check. Weight 27.5 lb (Amazon item weight). Only a single retailer dimension set is published (10.5 x 21.5 x 41.5 in), interpreted here as the folded footprint; unfolded L×W×H left null rather than guessed. Clek Liing attaches via the Joovy Universal Car Seat Adapter (adapter-joovy-universal). No reliable current price found — priceSources price left null."
+          "notes": "The original Joovy Caboose sit-and-stand (aka Caboose Graphite), superseded at Joovy's DTC store by the Caboose UL / Caboose RS; not in the current joovy.com catalog and shown 'Currently unavailable' on Amazon at check. Weight 27.5 lb (Amazon item weight). Folded footprint from Amazon B01BMAW0GS product dims (10.5 x 21.5 x 41.5 in); unfolded/assembled size 38 L x 21.5 W x 41.5 H in from the original Caboose Stand-On Tandem listing (Amazon B001AXJ8O0). Clek Liing attaches via the Joovy Universal Car Seat Adapter (adapter-joovy-universal). No reliable current price found — priceSources price left null."
         },
         {
           "id": "joovy-qool",
@@ -3118,7 +3129,7 @@
             "unfoldedDimsIn": "27.96 × 22.05 × 40.94 in",
             "brakeType": "flip-flop-friendly foot parking brake",
             "maxChildLb": 55,
-            "safetyStandards": "Not published on the US spec page. Silver Cross is UK-origin (EN 1888 home market); US units must meet ASTM F833 / 16 CFR 1227; no specific cert stated by brand/retailer.",
+            "safetyStandards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
             "foldType": "one-hand self-standing fold (with seat or bassinet attached)",
             "recline": "multi-position to lie-flat, reversible seat",
             "tires": "multi-terrain lockable RideTech wheels, four-wheel suspension",
@@ -3157,8 +3168,9 @@
             "weightLb": 27.75,
             "foldedDimsIn": "15.75 × 24 × 37 in",
             "unfoldedDimsIn": "42.9 × 24 × 42.9 in",
+            "brakeType": "push-push pedal (foot) parking brake, flip-flop friendly",
             "maxChildLb": 55,
-            "safetyStandards": "Not published on the (archived) US spec pages. Silver Cross is UK-origin (EN 1888 home market); US units met ASTM F833 / 16 CFR 1227; no specific cert stated.",
+            "safetyStandards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the (archived) Silver Cross US spec pages; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
             "foldType": "compact fold (chassis; seat/carrycot remove)",
             "recline": "multi-position incl. lie-flat",
             "tires": "multi-terrain wheels, suspension; magnesium chassis",
@@ -3199,7 +3211,7 @@
             "unfoldedDimsIn": "31.5 × 24 × 42 in",
             "brakeType": "foot-operated parking brake",
             "maxChildLb": 55,
-            "safetyStandards": "Not published on US spec pages. Silver Cross is UK-origin (EN 1888 home market); US units must meet ASTM F833 / 16 CFR 1227; no specific cert stated by brand/retailer.",
+            "safetyStandards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
             "foldType": "compact one-piece fold",
             "recline": "multi-position reclining reversible seat (rides reclined, rear- or forward-facing)",
             "tires": "multi-terrain wheels",
@@ -3240,7 +3252,7 @@
             "unfoldedDimsIn": "30 × 23 × 42.5 in",
             "brakeType": "step-on / step-off parking brake",
             "maxChildLb": 55,
-            "safetyStandards": "Not published on US spec pages. Silver Cross is UK-origin (EN 1888 home market); US units must meet ASTM F833 / 16 CFR 1227 but no specific cert is stated by brand/retailer.",
+            "safetyStandards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
             "foldType": "one-hand self-standing compact fold (folds both forward- and rear-facing)",
             "recline": "multi-position reversible seat incl. lie-flat",
             "tires": "foam-filled multi-terrain wheels, four-wheel suspension",
@@ -3288,7 +3300,7 @@
             "unfoldedDimsIn": "35.43 × 17.7 × 39.5 in",
             "brakeType": "flip-flop-friendly foot parking brake; lockable swivel front wheels",
             "maxChildLb": 55,
-            "safetyStandards": "Not published on US spec pages. Silver Cross is UK-origin (EN 1888 home market); US units must meet ASTM F833 / 16 CFR 1227. Marketed as TSA / airline-cabin approved.",
+            "safetyStandards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). Marketed as TSA / airline-cabin approved. No named third-party certification (e.g. JPMA) published.",
             "foldType": "one-hand ultra-compact cabin fold, self-standing, airline-cabin / TSA approved",
             "recline": "multi-position reclining seat, one-hand",
             "tires": "small foam/plastic swivel wheels with dynamic spring suspension, lockable",
@@ -3329,7 +3341,7 @@
             "unfoldedDimsIn": "33 × 23.5 × 44 in",
             "brakeType": "one-touch step-on / step-off parking brake",
             "maxChildLb": 55,
-            "safetyStandards": "Not published on the US spec page. Silver Cross is UK-origin (EN 1888 in home market); US-sold units must meet ASTM F833 / 16 CFR 1227 but the brand/retailer pages do not state a specific cert.",
+            "safetyStandards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
             "foldType": "one-hand self-standing fold (folds with seat attached)",
             "recline": "multi-position to full lie-flat",
             "tires": "large lockable multi-terrain wheels, four-wheel suspension (foam-filled)",
@@ -3375,8 +3387,9 @@
             "weightLb": 29.3,
             "foldedDimsIn": "37.4 × 23.6 × 15.55 in",
             "unfoldedDimsIn": "43.72 × 23.5 × 43 in",
+            "brakeType": "push-push pedal (foot) parking brake, flip-flop friendly",
             "maxChildLb": 55,
-            "safetyStandards": "Not published on US spec pages. Silver Cross is UK-origin (EN 1888 home market); US units must meet ASTM F833 / 16 CFR 1227; no specific cert stated by brand/retailer.",
+            "safetyStandards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
             "foldType": "compact fold (chassis folds; seats/bassinet remove)",
             "recline": "three positions incl. lie-flat (both main and tandem seats)",
             "tires": "puncture-proof multi-terrain tires, four-way independent suspension",
@@ -3421,6 +3434,7 @@
             "type": "full-size urban (discontinued)",
             "weightLb": 25.0,
             "foldedDimsIn": "28.3 × 21.6 × 12.6 in",
+            "unfoldedDimsIn": "29.5 × 21.6 × 43.3 in",
             "brakeType": "foot pedal parking brake",
             "maxChildLb": 45,
             "safetyStandards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (when sold in US)",
@@ -3596,6 +3610,7 @@
             "type": "jogging / all-terrain (3-wheel)",
             "weightLb": 25.0,
             "foldedDimsIn": "34.2 × 27.2 × 13.3 in",
+            "unfoldedDimsIn": "41.1 × 27.2 × 40 in",
             "brakeType": "twist-action hand/running brake plus foot-operated parking brake",
             "maxChildLb": 48.5,
             "safetyStandards": "Meets US ASTM F833 stroller standard — Clek's list confirms the UG2 was tested with the Liing and is ASTM-compliant for car seats on strollers.",
@@ -4792,6 +4807,7 @@
           "moduleId": "adapter",
           "name": "Joolz Geo2 Lower Car Seat Adapters",
           "price": 44.99,
+          "image": "images/adapter-414002.jpg",
           "attributes": {
             "partNumber": "414002",
             "madeBy": "Joolz",
@@ -5600,7 +5616,7 @@
           },
           "scores": {},
           "priceSources": [],
-          "notes": "Larktale 'Car Seat Adapter – Multi-Model', part LK29400, for the Larktale Coast. Clek's official list uses this exact part row for the Coast and confirms Liing/Liingo support. GAPS: (1) no product image sourced — larktale.com and retailer pages block scraping, so image is null; (2) no live price confirmable (see _priceNote). Comparable Larktale Multi-Model adapters run ~$59.99."
+          "notes": "Larktale 'Car Seat Adapter – Multi-Model', part LK29400, for the Larktale Coast. Clek's official list uses this exact part row for the Coast and confirms Liing/Liingo support. GAPS (re-checked 2026-07-05, still unresolved): (1) no product image — the Coast adapter is now fully DELISTED from larktale.com (products.json returns only caravan/crossover/sprout WAGON adapters); Albee Baby 403s (Cloudflare); Amazon bot-blocks (500/captcha); no Wayback snapshot; Strolleria/PishPosh do not carry it. image left null. (2) no live US price confirmable (see _priceNote). Comparable Larktale Multi-Model wagon adapters currently run ~$24.99–$69.99 on larktale.com."
         },
         {
           "id": "adapter-mnc-28",
@@ -5832,6 +5848,7 @@
           "moduleId": "adapter",
           "name": "Silver Cross Dune / Reef Universal Car Seat Adapters",
           "price": 59.99,
+          "image": "images/adapter-silvercross-dune-reef.jpg",
           "attributes": {
             "madeBy": "Silver Cross",
             "seatBrands": "Clek (Liing) / Maxi-Cosi (Mico 30, Mico Max, Coral XP, Mico Luxe+) / Nuna (Pipa family) / Cybex. Retailers explicitly list the Clek Liing.",
@@ -5869,6 +5886,7 @@
           "moduleId": "adapter",
           "name": "Silver Cross Jet Universal Car Seat Adapters",
           "price": 59.99,
+          "image": "images/adapter-silvercross-jet.jpg",
           "attributes": {
             "madeBy": "Silver Cross",
             "seatBrands": "Clek (Liing) / Maxi-Cosi (Mico 30, Mico Max, Coral XP, Mico Luxe+) / Nuna / Cybex. Retailers explicitly list the Clek Liing.",
@@ -5906,6 +5924,7 @@
           "moduleId": "adapter",
           "name": "Silver Cross Wave / Coast Main (Upper) Car Seat Adapters",
           "price": 59.99,
+          "image": "images/adapter-sx5135-eu.jpg",
           "attributes": {
             "partNumber": "SX5135-EU",
             "madeBy": "Silver Cross",
@@ -5937,6 +5956,7 @@
           "moduleId": "adapter",
           "name": "Silver Cross Breez Universal Car Seat Adapters",
           "price": 59.99,
+          "image": "images/adapter-sx5306.jpg",
           "attributes": {
             "partNumber": "SX5306.00",
             "madeBy": "Silver Cross",
