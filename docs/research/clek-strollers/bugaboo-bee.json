@@ -1,0 +1,65 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05. Represents the current Bugaboo Bee 6; Clek lists Bee (2010)/Bee 3/Bee 5/Bee 6 as one row served by the same 85510MC01 adapter. Do NOT edit seed.json.",
+  "id": "bugaboo-bee",
+  "name": "Bugaboo Bee 6 (covers Bee/Bee3/Bee5/Bee6)",
+  "brand": "Bugaboo",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/bugaboo-bee.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Bugaboo Bee (2010) / Bee 3 / Bee 5 / Bee 6 — Bugaboo Bee adapter for Turtle/Maxi-Cosi car seats (85510MC01)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-85510mc01"],
+
+  "priceSources": [
+    { "retailer": "ANB Baby", "price": 779.00, "url": "https://www.anbbaby.com/products/bugaboo-bee-6-complete-stroller", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Swaddles Baby", "price": 779.00, "url": "https://www.swaddlesbaby.com/products/bugaboo-bee-6-complete-stroller", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 20.8,
+    "_weightNote": "Bugaboo US lists complete Bee 6 seat stroller at 20.8 lb (9.44 kg).",
+
+    "unfoldedIn": { "lengthIn": 33.8, "widthIn": 20.8, "heightIn": 36.0 },
+    "_unfoldedNote": "Bugaboo publishes a handlebar-dependent footprint: 33.8 x 20.8 x 36.02 in at the lowest handlebar up to 39.7 x 20.8 x 42.91 in at the highest. Lowest-handlebar figure recorded here.",
+
+    "foldedIn": { "lengthIn": 35.43, "widthIn": 18.5, "heightIn": 14.17 },
+    "_foldedNote": "Bugaboo publishes two folds: self-standing one-piece fold 35.43 x 18.5 x 14.17 in (recorded here) and a more compact two-piece fold 29.92 x 18.5 x 13.39 in.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated push-down/lift-up pedal parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (full-recline lie-flat seat); Bugaboo/Strollberry list 0-48 months",
+      "seatCount": 1,
+      "basketCapacityLb": 8.8
+    },
+
+    "safety": {
+      "standards": "Bugaboo declares conformity to the US juvenile stroller standard ASTM F833; Clek states strollers on its list were tested and are compliant with the applicable ASTM standards for car seats on strollers.",
+      "certifications": null,
+      "notes": "5-point harness. No JPMA certification is published for this Bugaboo model (JPMA participation not indicated on Bugaboo's page); certifications left null rather than guessed. Max forward-facing 50 lb; max parent-facing 33 lb per Bugaboo."
+    },
+
+    "foldType": "one-hand fold; self-standing one-piece fold or compact two-piece fold",
+    "strollerType": "compact / urban full-feature",
+    "recline": "multi-position reclining backrest incl. full lie-flat (3 positions, one-hand)",
+    "reversibleSeat": true,
+    "tires": "7 in front and rear, foam-filled; front swivel wheels with open-spring suspension"
+  },
+
+  "sources": [
+    "https://www.bugaboo.com/us-en/strollers/bugaboo-bee-6/bugaboo-bee-6-seat-stroller-100096MI.html",
+    "https://strollberry.com/strollers/bugaboo-bee-6/",
+    "https://www.anbbaby.com/products/bugaboo-bee-6-complete-stroller",
+    "https://www.swaddlesbaby.com/products/bugaboo-bee-6-complete-stroller",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Current Bugaboo Bee generation (Bee 6); one Clek row covers Bee(2010)/Bee3/Bee5/Bee6, all served by the same Bugaboo Bee Maxi-Cosi/Turtle adapter 85510MC01 (adapter-85510mc01), which explicitly lists the Clek Liing. Excellent city/shopping fit: ~20.8 lb, one-hand self-standing fold, reversible lie-flat seat, 7 in foam-filled tires. NOTE ON STOCK: the complete Bee 6 is sold out at the US retailers checked (ANB, Swaddles both $779 and out of stock) - Bugaboo has largely wound the Bee 6 down, so new US retail availability is thin as of 2026-07-05. Height/length dims vary with handlebar position (see _unfoldedNote)."
+}

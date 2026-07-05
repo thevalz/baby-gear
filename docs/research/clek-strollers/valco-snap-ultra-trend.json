@@ -1,0 +1,61 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S10). Do NOT edit seed.json.",
+  "id": "valco-snap-ultra-trend",
+  "name": "Valco Baby Snap Ultra Trend",
+  "brand": "Valco Baby",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/valco-snap-ultra-trend.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Valco Baby | Snap Ultra Trend | Travel System Adapters – Snap Ultra Trend | A9904",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-a9904"],
+
+  "priceSources": [
+    { "retailer": "Mega Babies", "price": 549.95, "url": "https://www.megababiesusa.com/products/snap-ultra-trend", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Bambi Baby", "price": 549.95, "url": "https://www.bambibaby.com/products/valco-snap-ultra-trend-reversible-seat-stroller-in-black", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 18.1,
+    "_weightNote": "8.2 kg / ~18.1 lb (Strollberry; Mega Babies lists '18 lbs'). NOTE: the lighter non-reversible Snap Ultra (12.3 lb) is a different model — this Trend adds the reversible seat and is heavier.",
+
+    "unfoldedIn": { "lengthIn": 30.5, "widthIn": 22, "heightIn": 41.5 },
+    "foldedIn": { "lengthIn": 34.4, "widthIn": 22, "heightIn": 16.5 },
+    "_dimsNote": "Open 30.5 x 22 x 41.5 in (105.5 x 55.7 x 77.3 cm). Folded forward-facing 34.4 x 22 x 16.5 in; folded mother/parent-facing is longer at ~35.8 in L. Fold is self-standing.",
+
+    "brake": { "hasBrake": true, "type": "one-step rocker parking pedal (flip-flop friendly)" },
+
+    "capacity": {
+      "maxChildWeightLb": 44,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (with newborn nest/insert; seat reclines full-flat) to ~36 months",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "Not individually published on the DTC/retailer spec pages reviewed for this model.",
+      "certifications": "Not published on the sources reviewed.",
+      "notes": "5-point harness; reversible seat with full/infinite recline for newborn use; one-step rocker parking brake; adjustable/telescoping handlebar."
+    },
+
+    "foldType": "patented one-hand fold, self-standing, works with seat attached in either direction",
+    "strollerType": "compact / lightweight single",
+    "recline": "multi-position to full/near-flat recline (infinite recline)",
+    "reversibleSeat": true,
+    "tires": "EVA foam-coated wheels (front ~18 cm / rear ~24 cm); front swivel wheels"
+  },
+
+  "sources": [
+    "https://www.megababiesusa.com/products/snap-ultra-trend",
+    "https://strollberry.com/strollers/valco-baby-snap-ultra-trend/",
+    "https://www.bambibaby.com/products/valco-snap-ultra-trend-reversible-seat-stroller-in-black"
+  ],
+  "notes": "On Clek's official Liing/Liingo list; attaches the Clek Liing via Valco 'Travel System Adapters – Snap Ultra Trend' part A9904 (adapter-a9904). Compact reversible-seat single stroller, ~18.1 lb (8.2 kg), one-hand self-standing fold. Best cited price $549.95 (Mega Babies and Bambi Baby, both in stock). Basket capacity and formal safety-cert numbers are not published on the retailer/DTC pages reviewed — left null rather than guessed. Weight is easily confused with the lighter non-Trend Snap Ultra (~12.3 lb); this Trend variant is the reversible-seat model Clek lists."
+}

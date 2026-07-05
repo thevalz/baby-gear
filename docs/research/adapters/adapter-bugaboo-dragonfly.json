@@ -1,0 +1,41 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-bugaboo-dragonfly",
+  "name": "Bugaboo Dragonfly adapter for Maxi-Cosi car seat",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-bugaboo-dragonfly.jpg",
+
+  "partNumber": null,
+  "_partNumberNote": "Clek's official list files this row as 'Included with stroller' (no adapter part number to buy). Bugaboo does sell a standalone replacement of the same adapter under SKU 400003001 (also styled 400003MI) for aftermarket purchase, but as a bundled-in-box item it has no purchase part number on Clek's list -> null.",
+  "madeBy": "Bugaboo",
+
+  "seatBrandsSupported": "Maxi-Cosi footprint. Per Bugaboo's official Dragonfly Maxi-Cosi adapter page (400003001), compatible seats include: Maxi-Cosi Coral XP, Mico Max Plus, Mico, Mico 30; Nuna Pipa RX, Pipa, Pipa Lite, Pipa Lite LX; Bugaboo Turtle Air Shield/Turtle Air/Turtle One by Nuna; Cybex Aton M, Aton 2; and — explicitly — the Clek Liing. So the Clek Liing fit is manufacturer-confirmed, corroborating Clek's official list.",
+
+  "forStrollerIds": ["bugaboo-dragonfly"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "Included with the Dragonfly stroller"
+  },
+
+  "priceSources": [
+    { "retailer": "Bugaboo (included with stroller)", "price": 0, "url": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Bugaboo (DTC standalone replacement, SKU 400003001)", "price": 69.95, "url": "https://www.bugaboo.com/us-en/accessories/adapters/bugaboo-dragonfly-adapters-for-maxi-cosi-car-seats-400003MI.html", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria (standalone replacement)", "price": 69.95, "url": "https://strolleria.com/products/bugaboo-car-seat-adapter-dragonfly", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right adapters that click onto the Dragonfly frame; infant car seat then clicks into the adapters)",
+    "toolFree": true,
+    "notes": "Bugaboo 'click-and-go' style mount, no tools; quick to move seat from car to stroller."
+  },
+
+  "sources": [
+    "https://www.bugaboo.com/us-en/accessories/adapters/bugaboo-dragonfly-adapters-for-maxi-cosi-car-seats-400003MI.html",
+    "https://strolleria.com/products/bugaboo-car-seat-adapter-dragonfly",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Bundled free with the stroller — Bugaboo includes the Maxi-Cosi car seat adapters in the Dragonfly box; not sold as a standalone part number on Clek's official list ('Included with stroller'), hence partNumber null. VERIFIED CLEK-LIING FIT: Bugaboo's own Dragonfly Maxi-Cosi adapter page explicitly lists the Clek Liing among compatible seats, so the Liing rides on this Maxi-Cosi-footprint adapter and the fit is manufacturer-confirmed. For replacement/extra units, Bugaboo sells the same adapter standalone as SKU 400003001 (~$69.95; shown out of stock on Bugaboo DTC but in stock at Strolleria $69.95). Installs tool-free as a click-and-go pair. Image reuses the standalone-adapter product photo (the included adapter is the identical part)."
+}
