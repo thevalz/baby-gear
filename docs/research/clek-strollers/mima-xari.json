@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "mima-xari",
+  "name": "Mima Xari (current: Xari Max / Xari 4G)",
+  "brand": "Mima",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/mima-xari.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Mima Xari — Xari car seat adapter (G4104)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-g4104"],
+
+  "priceSources": [
+    { "retailer": "Mima Kids USA (Xari Max)", "price": 1499.99, "url": "https://mimakidsusa.com/products/mima-xari-max-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Bambi Baby (Xari Max)", "price": 1499.99, "url": "https://www.bambibaby.com/products/mima%C2%AE-xari-max-stroller-stylish-comfortable-versatile", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Lullaby Baby (Xari 4G)", "price": 1299.00, "url": "https://lullabybaby.com/products/mima-xari-4g-stroller-graphite-frame", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 29.3,
+    "_weightNote": "13.3 kg / 29.3 lb (Xari Max; classic Xari 4G ~29.5 lb).",
+
+    "unfoldedIn": { "lengthIn": 31.1, "widthIn": 24.4, "heightIn": 43.3 },
+    "foldedIn": { "lengthIn": 16.5, "widthIn": 26.0, "heightIn": 35.0 },
+    "_dimsNote": "Folds as two pieces (chassis + seat/carrycot detach). Classic Xari fold 42 x 66 x 89 cm (Strollberry); Xari Max chassis-with-wheels folds ~27.2 x 16.1 x 25.6 in.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up pedal brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 37.5,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "from birth (2-in-1 convertible carrycot/seat; carrycot to ~19.8 lb) to 17 kg (37.5 lb) seat; Xari Max rated to 22 kg / 48.5 lb",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "EN 1888 (Mima). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
+      "certifications": null,
+      "notes": "5-point harness; reversible seat; full lie-flat recline; signature leatherette/pod seat converts to carrycot. Underseat storage is minimal; basket capacity not published (null)."
+    },
+
+    "foldType": "two-piece fold (chassis + seat detach); not a one-piece compact fold",
+    "strollerType": "luxury full-size / modular convertible pram",
+    "recline": "multi-position incl. full lie-flat",
+    "reversibleSeat": true,
+    "tires": "8.7 in front / 11.8 in rear (22 cm / 30 cm) EVA foam-coated wheels"
+  },
+
+  "sources": [
+    "https://strollberry.com/strollers/mima-xari/",
+    "https://mimakidsusa.com/products/mima-xari-max-stroller",
+    "https://www.mimakidsusa.com/mima-xari/",
+    "https://www.bambibaby.com/products/mima%C2%AE-xari-max-stroller-stylish-comfortable-versatile"
+  ],
+  "notes": "Luxury modular pram (~29.3 lb) — statement design, not the ultralight/compact city goal, and the priciest item in this batch (~$1,500 for the current Xari Max). Clek lists 'Mima Xari' with the Xari car seat adapter G4104; the current Mima Xari Max/4G adapter explicitly lists Clek Liing (mimakidsusa). Seat weight rating varies by generation (classic Xari 17 kg / 37.5 lb; Xari Max 22 kg / 48.5 lb) — recorded 37.5 with note."
+}

@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-joolz-aer",
+  "name": "Joolz Aer / Aer+ Car Seat Adapters",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-joolz-aer.jpg",
+
+  "partNumber": "309900",
+  "madeBy": "Joolz",
+
+  "seatBrandsSupported": "Maxi-Cosi / Cybex / Nuna / BeSafe / Avionaut / Britax Römer / Clek — the Amazon/retail listing explicitly names Clek Liing and Liingo.",
+
+  "forStrollerIds": ["joolz-aer"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": false,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Joolz DTC", "price": 39.99, "url": "https://www.joolz.com/us/en/accessories/309900-M.html", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": 59.99, "url": "https://www.amazon.com/Joolz-Aer-Adapters-Accessory-Flexibility/dp/B08F9HPW68", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "MacroBaby", "price": 49.99, "url": "https://www.macrobaby.com/products/joolz-aer-car-seat-adapters", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right)",
+    "toolFree": true,
+    "notes": "Click-in adapters; can stay attached to the chassis as the Aer folds."
+  },
+
+  "sources": [
+    "https://www.joolz.com/us/en/accessories/309900-M.html",
+    "https://www.amazon.com/Joolz-Aer-Adapters-Accessory-Flexibility/dp/B08F9HPW68",
+    "https://www.macrobaby.com/products/joolz-aer-car-seat-adapters"
+  ],
+  "notes": "Fits the original Joolz Aer / Aer+ frame (SKU 309900). NOT interchangeable with the Aer 2 adapter (adapter-joolz-aer-2). Joolz DTC listed $39.99 (20% off, final sale) but out of stock at check; Amazon carries it in stock (~$59.99). Clek Liing/Liingo explicitly listed on the Amazon product listing."
+}

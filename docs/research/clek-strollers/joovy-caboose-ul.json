@@ -1,0 +1,58 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S5 Joovy). Sourced 2026-07-05. Represents the current Joovy Caboose UL; Clek lists 'Caboose Ultralight / Caboose UL' as one entry. Do NOT edit seed.json.",
+  "id": "joovy-caboose-ul",
+  "name": "Joovy Caboose UL (Caboose Ultralight)",
+  "brand": "Joovy",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joovy-caboose-ul.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joovy Caboose Ultralight / Caboose UL — Universal Car Seat Adapter",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-joovy-universal"],
+
+  "priceSources": [
+    { "retailer": "Joovy (DTC)", "price": 399.90, "url": "https://www.joovy.com/products/caboose-ul-sit-and-stand-double-stroller", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 26.5,
+
+    "unfoldedIn": { "lengthIn": 40, "widthIn": 22.5, "heightIn": 42.5 },
+    "foldedIn": { "lengthIn": 45.25, "widthIn": 24.8, "heightIn": 16 },
+
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake with quick auto-lock fold" },
+
+    "capacity": {
+      "maxChildWeightLb": 45,
+      "maxChildHeightIn": 44,
+      "minAgeOrNewborn": "front seat from ~3 mo or newborn with an infant car seat via adapter; rear standing platform ~2.5 yr+",
+      "seatCount": 2,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
+      "certifications": null,
+      "notes": "5-point harness front seat; recycled fabrics; auto-lock fold latch. Joovy does not publish a per-model JPMA certification."
+    },
+
+    "foldType": "quick auto-lock standing fold",
+    "strollerType": "sit-and-stand tandem double (full-size reclining front seat + rear bench + standing platform; optional rear seat sold separately)",
+    "recline": "reclining full-size front seat",
+    "reversibleSeat": false,
+    "tires": "larger foam/plastic wheels"
+  },
+
+  "sources": [
+    "https://www.joovy.com/products/caboose-ul-sit-and-stand-double-stroller",
+    "https://www.amazon.com/Joovy-Caboose-Ultralight-Graphite-Stroller/dp/B01BMAW0M2",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Current-catalog Joovy Caboose UL — one of the lightest tandem sit-and-stand strollers at 26.5 lb (the older Caboose Ultralight it replaces was ~22-23.5 lb; Clek lists both under one row). Ships with an included universal car seat adapter; Clek Liing attaches via the Joovy Universal Car Seat Adapter (adapter-joovy-universal). DTC price $399.90."
+}
