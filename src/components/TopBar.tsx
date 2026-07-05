@@ -66,7 +66,7 @@ export default function TopBar({ onOpenDrawer }: { onOpenDrawer: () => void }) {
       </button>
       <span className="text-sm font-bold tracking-tight text-slate-800">
         👶 Baby-Gear
-        <span className="ml-1.5 hidden text-[11px] font-medium text-slate-400 sm:inline">trade study</span>
+        <span className="ml-1.5 hidden text-[11px] font-medium text-slate-400 sm:inline">sourced facts</span>
       </span>
 
       <span className="flex-1" />

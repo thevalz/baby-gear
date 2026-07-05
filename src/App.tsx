@@ -4,7 +4,6 @@ import NavDrawer from './components/NavDrawer';
 import CompareView from './components/CompareView';
 import OptionDetail from './components/OptionDetail';
 import ErrorBoundary from './components/ErrorBoundary';
-import Onboarding from './components/Onboarding';
 import { useStore } from './lib/store';
 import type { AppState } from './lib/types';
 
@@ -19,7 +18,6 @@ export default function App() {
   const modules = useStore((s) => s.modules);
   const inventory = useStore((s) => s.inventory);
   const resetToSeed = useStore((s) => s.resetToSeed);
-  const onboardingDone = useStore((s) => s.preferences.completed);
 
   // The category the compare grid points at. Defaults to the first module.
   const [activeId, setActiveId] = useState<string>(() => modules[0]?.id ?? '');
@@ -76,13 +74,6 @@ export default function App() {
 
   return (
     <>
-      {!onboardingDone && (
-        <Onboarding
-          onClose={() => {
-            setDetail(null);
-          }}
-        />
-      )}
       <div className="flex h-screen flex-col bg-slate-50 text-slate-900">
         <TopBar onOpenDrawer={() => setDrawerOpen(true)} />
         <NavDrawer

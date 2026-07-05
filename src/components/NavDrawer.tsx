@@ -40,7 +40,7 @@ export default function NavDrawer({
         <div className="flex items-center justify-between border-b border-slate-200 px-5 py-4">
           <div>
             <h1 className="text-base font-semibold text-slate-800">👶 Baby-Gear</h1>
-            <p className="text-xs text-slate-500">Trade Study</p>
+            <p className="text-xs text-slate-500">Sourced facts for parents</p>
           </div>
           <button onClick={onClose} aria-label="Close menu" className="rounded-md p-1 text-slate-400 hover:bg-slate-100">
             ✕

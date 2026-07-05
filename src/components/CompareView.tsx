@@ -3,7 +3,6 @@ import type { AppState, InventoryStatus } from '../lib/types';
 import { useStore } from '../lib/store';
 import { formatMoney } from '../lib/scoring';
 import { computeCompatibilityFlags, type FlagSeverity } from '../lib/compatibility';
-import CreatorBanner from './CreatorBanner';
 import ComparisonMatrix from './ComparisonMatrix';
 
 const FLAG_STYLES: Record<FlagSeverity, { wrap: string; icon: string }> = {
@@ -96,7 +95,6 @@ export default function CompareView({
   const { modules, inventory } = state;
   const setInventoryStatus = useStore((s) => s.setInventoryStatus);
   const setInventoryRefund = useStore((s) => s.setInventoryRefund);
-  const resetOnboarding = useStore((s) => s.resetOnboarding);
 
   const [panel, setPanel] = useState<PanelId | null>(null);
 
@@ -112,9 +110,17 @@ export default function CompareView({
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <CreatorBanner onRetake={resetOnboarding} />
+      {/* Neutral, parent-facing intro. */}
+      <div className="flex-none px-3 pt-3">
+        <h1 className="text-lg font-semibold text-slate-800">Baby gear, by the facts</h1>
+        <p className="mt-0.5 max-w-2xl text-sm text-slate-500">
+          Independent, sourced specs, prices, and compatibility for infant car seats,
+          strollers, and the adapters between them. Every fact links to its source —
+          no sponsored rankings. Open any item for full details.
+        </p>
+      </div>
 
-      {/* Module tabs (switch category). */}
+      {/* Category tabs. */}
       <div className="flex flex-none flex-wrap items-center gap-2 px-3 py-2">
         <div className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto rounded-lg border border-slate-200 bg-slate-50 p-1">
           {modules.map((m) => {

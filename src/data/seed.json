@@ -1,14 +1,8 @@
 {
-  "dataVersion": 9,
+  "dataVersion": 10,
   "config": {
     "overallBudget": 1000,
-    "adapterCost": 100,
-    "creator": {
-      "name": "The Baby Gear Lab",
-      "tagline": "Honest, tested baby-gear picks — find the one that fits your life.",
-      "youtubeUrl": "https://www.youtube.com/@thebabygearlab",
-      "subscribeUrl": "https://www.youtube.com/@thebabygearlab?sub_confirmation=1"
-    }
+    "adapterCost": 100
   },
   "modules": [
     {

@@ -1,43 +1,36 @@
-# Baby-Gear Trade Study
+# Baby-Gear — Sourced Facts for Parents
 
-A modular **trade-study dashboard** for baby-gear decisions (car seat,
-stroller, …). Each gear category is a *module* with weighted criteria and
-scored options; the app computes weighted scores and rolls everything up into a
-**Summary** view. Options carry **product images** and **best-price data**
-sourced from across the web.
+An **independent, information-only** reference site for baby-gear decisions.
+Three categories — **Infant Car Seats**, **Strollers**, and the **Car-Seat
+Stroller Adapters** between them — each shown as a plain comparison table of
+**literal, sourced facts**: weight, folded/unfolded dimensions, brake, capacity,
+safety standards, compatibility, and **best-price data** with dated retailer
+links. Open any item for its full spec sheet and sources.
 
-Built with **Vite + React + TypeScript**, styled with **Tailwind CSS**, charts
-via **recharts**. Deployed as a static site to **GitHub Pages**.
+**No scores, no rankings, no sponsorships.** The site presents facts and links
+to where each one came from; it never tells you what to buy.
 
-## Customer-facing mode (creator advisor)
+Built with **Vite + React + TypeScript**, styled with **Tailwind CSS**. Deployed
+as a static site to **GitHub Pages**.
 
-On top of the trade-study engine, the app ships a **customer-facing layer** so a
-baby-gear **creator/influencer** can embed it as a branded advisor that turns
-viewers into confident buyers (and clicks into their channel + affiliate links):
+## Self-maintained via AI workflows
 
-- **First-run onboarding** (`components/Onboarding.tsx`) — a short, branded quiz
-  (budget, what-matters-most priorities, car, back-seat length, owned stroller).
-  It *derives the criteria weights* from plain-language answers
-  (`lib/preferences.ts`), so a new parent never sees a wall of sliders. Gated by
-  a per-visitor `preferences.completed` flag in the store.
-- **"Recommended for you" hero** (`components/RecommendationHero.tsx`) — one
-  confident, explained pick per module at the top of the Summary, with a one-line
-  *why* (built from the top-contributing criteria + evidence), best price as an
-  affiliate link, and a "Watch my review" CTA.
-- **Creator branding** (`config.creator`, `components/CreatorBanner.tsx`) — name,
-  tagline, "Watch reviews" / "Subscribe" CTAs. Lives in `config` so it travels
-  through export/import and repo sync.
-- **Back-seat clearance check** (`lib/clearance.ts`) — compares each seat's
-  `rearFacingLengthIn` footprint against the parent's measured back-seat length
-  (with a safety margin and a measuring note) to flag fit problems *before*
-  purchase. An acknowledged approximation — final fit depends on the install.
-- **Critic score, Rotten-Tomatoes style** (`lib/endorsements.ts`) — options carry
-  `endorsements[]` (one per creator: verdict, optional score, quote, link) that
-  aggregate into a "% of creators recommend" badge shown next to the spec-driven
-  match score, with the host creator's pull-quote on the hero.
+There is **no backend and no live scraping**. The site's data is kept current by
+**Claude sourcing sessions**: an AI workflow researches current retailer prices
+and manufacturer specs, records each fact with its source link, downloads product
+images into the repo, and commits. The deployed static app reads that committed
+data. Each option holds a `priceSources[]` list (retailer, price, deep link,
+date) and factual `attributes` — every value traceable to a published source.
 
-These are additive: the original editable trade-study workspace is unchanged and
-still reachable below the hero ("The full breakdown").
+The research kit that drives this lives under `docs/` — see
+**[`docs/SOURCING.md`](docs/SOURCING.md)** for the data contract and the
+per-session prompt, and `docs/CLEK_COMPAT_RESEARCH_PLAN.md` for the
+stroller/adapter sourcing effort.
+
+> Note: the scoring/ranking engine from earlier versions (`lib/scoring.ts`,
+> criteria weights, endorsements) still exists in `src/lib` and stays unit-tested,
+> but it is **no longer surfaced anywhere in the UI**. The app is purely
+> informational.
 
 ## Pricing engine & images
 
