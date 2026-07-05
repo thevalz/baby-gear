@@ -1,0 +1,60 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S5 Joovy). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "joovy-balloon",
+  "name": "Joovy Balloon",
+  "brand": "Joovy",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joovy-balloon.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joovy Balloon — Universal Car Seat Adapter",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-joovy-universal"],
+
+  "priceSources": [
+    { "retailer": "GoodBuy Gear (resale, used)", "price": 94.99, "url": "https://goodbuygear.com/products/joovy-balloon-lightweight-stroller-green-2018", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": null, "url": "https://www.amazon.com/Joovy-8090-Balloon-Stroller-Blue/dp/B015ZL8QLI", "inStock": false, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 12.7,
+
+    "unfoldedIn": { "lengthIn": 25, "widthIn": 18.5, "heightIn": 40.5 },
+    "foldedIn": { "lengthIn": 38.5, "widthIn": 18.5, "heightIn": 11.5 },
+
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 45,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (multi-position near-flat/bassinet recline; also usable from newborn with a car seat)",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
+      "certifications": null,
+      "notes": "5-point harness; reversible handlebar; 4-wheel suspension; bumper bar. Joovy does not publish a per-model JPMA certification for this model."
+    },
+
+    "foldType": "compact standing fold (not one-hand self-standing)",
+    "strollerType": "lightweight full-feature single",
+    "recline": "multi-position reclining backrest to near-flat (bassinet mode)",
+    "reversibleSeat": false,
+    "tires": "4-wheel, foam/EVA tires; swivel front wheels with suspension"
+  },
+
+  "sources": [
+    "https://joovy.com/balloon/",
+    "https://www.amazon.com/Joovy-8090-Balloon-Stroller-Blue/dp/B015ZL8QLI",
+    "https://goodbuygear.com/products/joovy-balloon-lightweight-stroller-green-2018",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Discontinued at Joovy's DTC store (not in the current joovy.com catalog); circulates on the used/resale market (GoodBuy Gear ~$95 for a 2018 unit, out of stock at check). Original MSRP was ~$199. Light (12.7 lb) full-feature single with a near-flat bassinet-mode recline — one of the lighter city/shopping options in this batch, though heavier and less compact-folding than a BabyZen YOYO. Clek Liing attaches via the Joovy Universal Car Seat Adapter (adapter-joovy-universal). No reliable current retail price found; Amazon price left null rather than guessed."
+}

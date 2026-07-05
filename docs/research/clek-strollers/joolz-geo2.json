@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json. Single mode; joolz-geo2-double is the SAME stroller in double configuration.",
+  "id": "joolz-geo2",
+  "name": "Joolz Geo2 (Single / Mono Mode)",
+  "brand": "Joolz",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joolz-geo2.png",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joolz Geo2 (Single Mode) — Geo2 Upper car seat adapter (414001) — *lowest-position caveat",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-414001"],
+
+  "priceSources": [
+    { "retailer": "Joolz DTC", "price": 1099.00, "url": "https://www.joolz.com/us/en/411110.html", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Albee Baby", "price": 1099.00, "url": "https://www.albeebaby.com/products/joolz-geo-2-earth-mono-stroller-elephant-grey", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": 1099.00, "url": "https://www.amazon.com/Joolz-Geo2-Complete-Stroller-Hippo/dp/B075164QN9", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 30.0,
+    "_weightNote": "~30 lb as single (US retailers); Strollberry lists 14.3 kg / 31.5 lb. Double config ~36 lb (see joolz-geo2-double).",
+
+    "unfoldedIn": { "lengthIn": 32.7, "widthIn": 23.6, "heightIn": 42.9 },
+    "foldedIn": { "lengthIn": 16.5, "widthIn": 23.6, "heightIn": 39.0 },
+    "_dimsNote": "One-piece one-motion fold. 83 x 60 x 109 cm open; 42 x 60 x 99 cm folded (Strollberry).",
+
+    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up pedal brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 45,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "from birth (converts with bassinet); seat 6 mo+",
+      "seatCount": 1,
+      "basketCapacityLb": 22
+    },
+
+    "safety": {
+      "standards": "EN 1888 (Joolz). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
+      "certifications": null,
+      "notes": "5-point harness; reversible seat; 3-position recline incl. lie-flat; XXL 22-lb basket; 10-year transferable warranty. Clek notes a lowest-handle/lowest-seat-position caveat when a car seat is fitted."
+    },
+
+    "foldType": "one-motion compact one-piece fold",
+    "strollerType": "full-size, all-terrain, single-to-double convertible",
+    "recline": "3 positions incl. full lie-flat (main seat)",
+    "reversibleSeat": true,
+    "tires": "7 in front / 12 in rear (18 cm / 30 cm) EVA foam-coated wheels; all-wheel suspension"
+  },
+
+  "sources": [
+    "https://www.joolz.com/us/en/411110.html",
+    "https://strollberry.com/strollers/joolz-geo-2/",
+    "https://www.albeebaby.com/products/joolz-geo-2-earth-mono-stroller-elephant-grey",
+    "https://www.amazon.com/Joolz-Geo2-Complete-Stroller-Hippo/dp/B075164QN9"
+  ],
+  "notes": "Full-size single-to-double convertible; single/mono mode here. Heavier (~30 lb) — not the ultralight city goal but on Clek's list. Liing attaches via the Geo2 Upper adapter (adapter-414001), which explicitly lists Clek Liing/Liingo and is in stock at Joolz ($44.99). *Clek flags a lowest-position caveat with a car seat fitted. Max child weight: Joolz EU rates 15 kg (33 lb), US listings ~45 lb — recorded 45 with note."
+}

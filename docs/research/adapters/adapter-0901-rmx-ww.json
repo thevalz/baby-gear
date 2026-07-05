@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller ADAPTER fragment (batch S9 UPPAbaby). UPPAbaby RIDGE car seat adapter. Do NOT edit seed.json.",
+  "id": "adapter-0901-rmx-ww",
+  "name": "UPPAbaby Car Seat Adapters for Ridge (Maxi-Cosi/Nuna/Cybex/Clek)",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-0901-rmx-ww.jpg",
+
+  "partNumber": "0901-RMX-WW",
+  "madeBy": "UPPAbaby",
+
+  "seatBrandsSupported": "Maxi-Cosi (Mico NXT, Mico Max Plus), Nuna PIPA series, Cybex Aton series, Clek Liing & Liingo (Clek listed by name), and some retailers also list BeSafe.",
+
+  "forStrollerIds": ["uppababy-ridge"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Bambi Baby", "price": 49.99, "url": "https://www.bambibaby.com/products/uppababy-car-seat-adapters-for-ridge-maxi-cosi-nuna-cybex-and-besafe", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Berg's Baby", "price": 49.99, "url": "https://bergsbaby.com/products/uppababy-ridge-infant-car-adapters-maxi-cosi-nuna-cybex-besafe", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (left + right)",
+    "toolFree": true,
+    "notes": "Click-in to the Ridge / Ridge V2 all-terrain frame; the Liing clicks onto the adapter."
+  },
+
+  "sources": [
+    "https://www.bambibaby.com/products/uppababy-car-seat-adapters-for-ridge-maxi-cosi-nuna-cybex-and-besafe",
+    "https://bergsbaby.com/products/uppababy-ridge-infant-car-adapters-maxi-cosi-nuna-cybex-besafe",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "UPPAbaby-made (NOT the Clek adapter) for the Ridge / Ridge V2 all-terrain stroller. $49.99, in stock. Clek Liing explicitly supported."
+}

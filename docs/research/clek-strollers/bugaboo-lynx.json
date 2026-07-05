@@ -1,0 +1,67 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05. Do NOT edit seed.json. Specs from Bugaboo's official Lynx spec page. Lynx is a distinct model from the Fox; sourced on its own merits. Now largely clearance/end-of-life at retail.",
+  "id": "bugaboo-lynx",
+  "name": "Bugaboo Lynx",
+  "brand": "Bugaboo",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/bugaboo-lynx.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Bugaboo | Lynx | Bugaboo Fox/Lynx/Buffalo Adapter for Maxi-Cosi | 441200MC01 or 231100MC02",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-441200mc01"],
+
+  "priceSources": [
+    { "retailer": "Bugaboo (DTC)", "price": 711.75, "url": "https://www.bugaboo.com/us-en/strollers/bugaboo-lynx/bugaboo-lynx-seat-stroller-PM00038.html", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Swaddles Baby", "price": 849.20, "url": "https://www.swaddlesbaby.com/products/bugaboo-lynx-lightweight-full-size-stroller", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "ANB Baby", "price": 949.00, "url": "https://www.anbbaby.com/products/bugaboo-lynx-complete-stroller", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 20.7,
+    "_weightNote": "Bugaboo lists 20.7 lb (9.4 kg) for chassis + wheels + seat; fully assembled ~23.9 lb (10.8 kg) per Bugaboo detailed spec / Strollberry.",
+
+    "unfoldedIn": { "lengthIn": 31.1, "widthIn": 23.6, "heightIn": 43.3 },
+    "_unfoldedNote": "31.1 x 23.62 x 38.98 in at lowest handlebar to 43.3 in at highest handlebar. Seat height ~22 in; footprint width ~20.5 in.",
+    "foldedIn": { "lengthIn": 23.6, "widthIn": 23.6, "heightIn": 34.65 },
+    "_foldedNote": "One-piece self-standing fold 23.62 x 23.62 x 34.65 in. Two-piece compact fold 34.45 x 20.87 x 12.2 in.",
+
+    "brake": { "hasBrake": true, "type": "foot-pedal parking brake (flip-flop friendly)" },
+
+    "capacity": {
+      "maxChildWeightLb": 48,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (0 mo) — reversible seat reclines to a flat position and bassinet available for newborns; usable to ~4 yrs",
+      "seatCount": 1,
+      "basketCapacityLb": 22
+    },
+    "_capacityNote": "Max child height not published by Bugaboo. Underseat basket 22.05 lb (10 kg) / 36 L.",
+
+    "safety": {
+      "standards": "Not published on Bugaboo's Lynx spec page. Sold in the US, so it must meet the mandatory federal stroller standard 16 CFR 1227 (incorporates ASTM F833) to be marketed; EU units carry EN 1888. No explicit standard printed by the manufacturer, so not asserted as certified.",
+      "certifications": "No JPMA or Greenguard certification published for the Lynx on the manufacturer or retailer pages reviewed.",
+      "notes": "5-point harness; reversible seat with 3-position recline including flat; puncture-proof double-layer rubber tires. Adapter-mounted infant car seats limited to 28.7 lb child weight."
+    },
+
+    "foldType": "one-hand fold; self-standing one-piece fold plus two-piece compact fold",
+    "strollerType": "full-size (marketed as lightest full-size Bugaboo)",
+    "recline": "3-position recline including near-flat; reversible (facing parent or world)",
+    "reversibleSeat": true,
+    "tires": "puncture-proof double-layer rubber (foam-filled) wheels; front ~7 in, rear ~11 in; front swivel"
+  },
+
+  "sources": [
+    "https://www.bugaboo.com/us-en/strollers/bugaboo-lynx/bugaboo-lynx-seat-stroller-PM00038.html",
+    "https://www.swaddlesbaby.com/products/bugaboo-lynx-lightweight-full-size-stroller",
+    "https://www.anbbaby.com/products/bugaboo-lynx-complete-stroller",
+    "https://strollberry.com/strollers/bugaboo-lynx/",
+    "https://www.megababiesusa.com/products/bugaboo-lynx-lightweight-full-size-stroller",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Distinct model from the Fox but shares the same Fox/Lynx/Buffalo Maxi-Cosi adapter (441200MC01, alternate 231100MC02) — adapter-441200mc01. Marketed by Bugaboo as its lightest FULL-SIZE stroller (~20.7 lb chassis+seat, ~23.9 lb fully assembled) with a reversible flat-reclining seat and puncture-proof tires. Full-size class, NOT a compact/city stroller; two-piece fold needed to get compact and it does not fold as small or light as a true travel stroller. STOCK: Lynx is largely end-of-life — out of stock at Bugaboo DTC (clearance $711.75, was $949) and Swaddles Baby ($849.20 sale, sold out); still listed in stock at ANB Baby ($949). Best cited price $711.75 (Bugaboo, out of stock); best in-stock $949 (ANB). Clek Liing mounts via the Maxi-Cosi-footprint adapter."
+}

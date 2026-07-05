@@ -1,0 +1,41 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05. Bugaboo Donkey TWIN car-seat adapter for the Maxi-Cosi footprint; Clek's official list assigns this SKU to the Clek Liing on the Donkey (Twin) and Donkey 5 (Twin). Do NOT edit seed.json.",
+  "id": "adapter-855180mc02",
+  "name": "Bugaboo Donkey Twin Adapter for Maxi-Cosi",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-855180mc02.jpg",
+
+  "partNumber": "855180MC02",
+  "madeBy": "Bugaboo",
+
+  "seatBrandsSupported": "Maxi-Cosi footprint - fits Maxi-Cosi (Mico), Nuna Pipa series, Cybex, and Bugaboo Turtle infant seats, in a side-by-side pair. Retailer pages do not name the Clek Liing, but Clek's own compatibility list designates THIS adapter (855180MC02) for the Clek Liing on the Donkey/Donkey 5 in twin mode.",
+
+  "forStrollerIds": ["bugaboo-donkey-twin", "bugaboo-donkey-5-twin"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "Clek: usable in Donkey handle positions 3-5 only; on the Donkey 2 generation max 30 lb"
+  },
+  "_statusNote": "Still listed/carried by multiple US retailers (Strolleria, Bambi Baby), so treated as available; some retailers (Bambi Baby) flag it 'discontinued' as Bugaboo transitions the line to Donkey 6 adapters. Reconfirm live stock at purchase.",
+
+  "priceSources": [
+    { "retailer": "Bambi Baby", "price": 99.95, "url": "https://www.bambibaby.com/products/bugaboo-donkey-maxi-cosi-carseat-adapter-twin", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": null, "url": "https://strolleria.com/products/bugaboo_donkey_maxi_cosi_car_seat_adapter_-_twin", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+  "_priceNote": "Bambi Baby lists $99.95 (marked discontinued/out of stock). Strolleria carries the Donkey Series Twin adapter but its live price was not machine-readable at check; reseller listings run ~$50-100.",
+
+  "install": {
+    "pieces": "pair (two car-seat mounts, for side-by-side twin mode)",
+    "toolFree": true,
+    "notes": "Tool-free click-and-go: brackets clip onto the Donkey chassis, two car seats click into the paired adapters. Clek caveat: only usable in Donkey handle positions 3-5 (Donkey 2 max 30 lb)."
+  },
+
+  "sources": [
+    "https://www.bambibaby.com/products/bugaboo-donkey-maxi-cosi-carseat-adapter-twin",
+    "https://strolleria.com/products/bugaboo_donkey_maxi_cosi_car_seat_adapter_-_twin",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Bugaboo part 855180MC02, the TWIN (paired) Maxi-Cosi adapter for the Bugaboo Donkey line (serves both the older Donkey/Donkey 3 in twin mode and the current Donkey 5 in twin mode per Clek's list). It carries a pair of infant seats side-by-side. Clek's definitive list pairs 855180MC02 with the twin rows (and 855190MC01 with the mono rows). Best cited price $99.95 (Bambi Baby, marked discontinued/out of stock); Strolleria still carries the Donkey Series Twin adapter. Retailer compatibility lists cite the Maxi-Cosi footprint (Maxi-Cosi/Nuna/Cybex/Bugaboo Turtle) and do not name Clek by brand; the Clek Liing shares the Maxi-Cosi footprint and Clek lists this exact SKU as the correct part."
+}

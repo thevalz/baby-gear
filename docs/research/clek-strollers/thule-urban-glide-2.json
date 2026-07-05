@@ -1,0 +1,61 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Batch S8 (Thule). Sourced 2026-07-05. Thule Urban Glide 2 (single). Do NOT edit seed.json.",
+  "id": "thule-urban-glide-2",
+  "name": "Thule Urban Glide 2",
+  "brand": "Thule",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/thule-urban-glide-2.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Thule Urban Glide 2 — Thule Urban Glide car seat adapter for Maxi-Cosi (20110740)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-20110740"],
+
+  "priceSources": [
+    { "retailer": "Jen's Organic Baby", "price": 749.95, "url": "https://www.jensorganicbaby.com/products/thule-urban-glide-2", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 25.0,
+
+    "unfoldedIn": { "lengthIn": null, "widthIn": null, "heightIn": null },
+    "_unfoldedNote": "Thule no longer publishes an open-dimension spec for the superseded Urban Glide 2 single; not sourced → null (successor UG3 opens ~48.4 x 27.2 x 45.3 in for reference only).",
+    "foldedIn": { "lengthIn": 34.2, "widthIn": 27.2, "heightIn": 13.3 },
+
+    "brake": { "hasBrake": true, "type": "twist-action hand/running brake plus foot-operated parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 48.5,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "6 mo+ for jogging; birth with infant car seat via adapter or Thule bassinet",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+    "_capacityNote": "Max child ~48.5 lb (22 kg); total load (child + storage) rated 75 lb. Basket weight limit not clearly published for UG2 → null.",
+
+    "safety": {
+      "standards": "Meets US ASTM F833 stroller standard — Clek's list confirms the UG2 was tested with the Liing and is ASTM-compliant for car seats on strollers.",
+      "certifications": null,
+      "notes": "5-point harness; twist hand brake for speed control on descents; wrist safety strap."
+    },
+
+    "foldType": "one-hand compact fold (slide-and-twist release bar)",
+    "strollerType": "jogging / all-terrain (3-wheel)",
+    "recline": "multi-position recline to near-flat, one-hand adjust",
+    "reversibleSeat": false,
+    "tires": "pneumatic air-filled rubber; large 16 in rear wheels, smaller swivel/lockable front wheel"
+  },
+
+  "sources": [
+    "https://trailandkale.com/thule-urban-glide-2-review/",
+    "https://marathonhandbook.com/thule-urban-glide-2-jogging-stroller-review/",
+    "https://www.jensorganicbaby.com/products/thule-urban-glide-2",
+    "https://www.amazon.com/Thule-Urban-Glide-Jogging-Stroller/dp/B08JDC7Q7M"
+  ],
+  "notes": "The Urban Glide 2 is the prior-generation jogger, now superseded by the Urban Glide 3 / 4-Wheel; largely sold through as drop-ship/limited stock (Jen's Organic Baby lists $749.95 as store-pickup/drop-ship). A capable running stroller (~25 lb) but not the light/compact city goal — closest analog to the owned BOB Alterrain Pro. Clek Liing attaches via the Urban Glide Maxi-Cosi adapter 20110740 (adapter-20110740), itself largely discontinued. Open dimensions and basket limit not published for this superseded single → null + notes."
+}

@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "joolz-day3",
+  "name": "Joolz Day3",
+  "brand": "Joolz",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joolz-day3.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joolz Day3 — Day3 Car Seat Adapter – Nuna, Cybex, Maxi-Cosi, Clek (511000)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-511000"],
+
+  "priceSources": [
+    { "retailer": "Joolz DTC (bundle w/ bassinet)", "price": 999.00, "url": "https://www.joolz.com/us/en/strollers/joolz-day3.html", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 999.00, "url": "https://strolleria.com/products/joolz-day3-stroller-and-accessory-bundle", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": 999.00, "url": "https://www.amazon.com/Joolz-Day3-Stroller-Bassinet-Classic/dp/B07QWPRCGW", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 28.4,
+    "_weightNote": "Frame + seat 12.9 kg / 28.4 lb (Joolz/Strollberry). Some US retailer listings state ~29.1 lb.",
+
+    "unfoldedIn": { "lengthIn": 35.4, "widthIn": 23.2, "heightIn": 42.9 },
+    "foldedIn": { "lengthIn": 19.7, "widthIn": 24.4, "heightIn": 36.2 },
+    "_dimsNote": "Folds with seat attached in one motion; folded (frame only) ~27 x 23 x 13 in.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up central pedal brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "from birth (includes full carrycot/bassinet, birth to ~20 lb); seat mode 6 mo+",
+      "seatCount": 1,
+      "basketCapacityLb": 11
+    },
+
+    "safety": {
+      "standards": "EN 1888 (Joolz). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
+      "certifications": null,
+      "notes": "5-point harness; reversible seat (parent- or world-facing); full-recline backrest; 10-year transferable warranty."
+    },
+
+    "foldType": "one-motion compact fold (seat can stay attached), self-standing",
+    "strollerType": "full-size convertible pram (bassinet + seat)",
+    "recline": "3 positions incl. full lie-flat",
+    "reversibleSeat": true,
+    "tires": "7 in front / 12 in rear EVA foam-coated wheels; all-wheel suspension"
+  },
+
+  "sources": [
+    "https://strollberry.com/strollers/joolz-day-3/",
+    "https://strolleria.com/products/joolz-day3-stroller-and-accessory-bundle",
+    "https://pishposhbaby.com/blogs/blog/new-joolz-day3-stroller-full-review-2",
+    "https://www.amazon.com/Joolz-Day3-Stroller-Bassinet-Classic/dp/B07QWPRCGW"
+  ],
+  "notes": "Full-size convertible pram (heavier, ~28 lb) — more of a do-everything city pram than the ultralight goal, but on Clek's list. Ships with bassinet; MSRP ~$999. Liing attaches via the Joolz Day2/Day3 adapter (adapter-511000), the ONE adapter in this batch whose name explicitly enumerates Clek. Seat max child weight: Joolz EU rates 15 kg (33 lb); US retailer listings state up to 50 lb — recorded 50 with the discrepancy noted."
+}

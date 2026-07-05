@@ -1,0 +1,65 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S10). Do NOT edit seed.json.",
+  "id": "orbitbaby-g5",
+  "name": "Orbit Baby G5 Stroller",
+  "brand": "Orbit Baby",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/orbitbaby-g5.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Orbit Baby G5 — Car Seat Stroller Adapter",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-orbitbaby-g5"],
+
+  "priceSources": [
+    { "retailer": "Orbit Baby (DTC)", "price": 1200.00, "url": "https://orbitbaby.com/products/g5-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 1200.00, "url": "https://strolleria.com/products/g5-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Bambi Baby", "price": 1200.00, "url": "https://www.bambibaby.com/products/g5-stroller", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 33.4,
+    "_weightNote": "Stroller = frame 19.6 lb + stroller seat 13.8 lb = 33.4 lb (per orbitbaby.com). Some retailer listings cite ~47 lb total including an infant car seat.",
+
+    "unfoldedIn": { "lengthIn": null, "widthIn": 24, "heightIn": 46.5 },
+    "_unfoldedNote": "Orbit publishes frame width 24 in and handlebar height range 40–46.5 in; overall in-use length not published (null). Interior seat 21 in H × 13.5 in W.",
+    "foldedIn": { "lengthIn": 32.5, "widthIn": 15.5, "heightIn": 13 },
+    "_foldedNote": "Frame-only folded 32.5 × 15.5 × 13 in; with seat attached 32.5 × 15.5 × 14 in.",
+
+    "brake": { "hasBrake": true, "type": "one-touch, sandal-friendly foot brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (modular — infant car seat / stroller seat reclines flat) to 50 lb",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+    "_capacityNote": "Basket size published as 22 × 54 × 24 in interior dims; weight limit not published (null).",
+
+    "safety": {
+      "standards": "ASTM F2050 and ASTM F833; CPSIA compliant",
+      "certifications": "JPMA Certified; CA Prop 65 and AB1108 compliant",
+      "notes": "360° SmartHub seat rotation; 5-point harness; Quadshock front-wheel suspension; memory-foam cushioning."
+    },
+
+    "foldType": "compact one-piece 3D fold",
+    "strollerType": "modular",
+    "recline": "multi-position, reclines to near-flat",
+    "reversibleSeat": true,
+    "tires": "no-flat E-TPU rear wheels; EVA foam no-pump front wheels; 360° swivel with Quadshock suspension"
+  },
+
+  "sources": [
+    "https://orbitbaby.com/products/g5-stroller",
+    "https://strolleria.com/products/g5-stroller",
+    "https://www.bambibaby.com/products/g5-stroller",
+    "https://www.nordstrom.com/s/orbit-baby-g5-complete-stroller/5622229"
+  ],
+  "notes": "Modular luxury stroller with 360° SmartHub reversible/rotating seat. ~33.4 lb (frame+seat). $1,200 MSRP, in stock at Orbit Baby DTC, Strolleria and Bambi Baby. On Clek's official Liing/Liingo list via the Orbit Baby 'Car Seat Stroller Adapter' (adapter-orbitbaby-g5), which lists Clek Liing. Note the adapter attaches a non-Orbit infant seat and does NOT work with Orbit's own car-seat base."
+}

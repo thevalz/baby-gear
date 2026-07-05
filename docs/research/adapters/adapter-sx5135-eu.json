@@ -1,0 +1,40 @@
+{
+  "_comment": "Car-seat stroller adapter fragment (batch S6 Silver Cross). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-sx5135-eu",
+  "name": "Silver Cross Wave / Coast Main (Upper) Car Seat Adapters",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-sx5135-eu.jpg",
+
+  "partNumber": "SX5135-EU",
+  "madeBy": "Silver Cross",
+
+  "seatBrandsSupported": "Clek (Liing) / Cybex (Aton, Aton Q, Cloud Q, Aton G, Cloud G) / Maxi-Cosi (Mico 30, Mico Max, Coral XP, Mico Luxe+) / Nuna (Pipa family). Retailers explicitly list the Clek Liing.",
+
+  "forStrollerIds": ["silvercross-coast", "silvercross-wave"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Strolleria", "price": 59.99, "url": "https://strolleria.com/products/silver-cross-coast-main-car-seat-adapters", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Albee Baby", "price": 59.99, "url": "https://www.albeebaby.com/products/silver-cross-coast-wave-stroller-main-car-seat-adapters-nuna-cybex-maxi-cosi-clek", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair (upper / main position)",
+    "toolFree": true,
+    "notes": "This SX5135-EU is the MAIN (upper) adapter for a single car seat / upper position. A separate LOWER Wave/Coast car seat adapter is required to mount a seat in the lower/second position for double mode."
+  },
+
+  "sources": [
+    "https://strolleria.com/products/silver-cross-coast-main-car-seat-adapters",
+    "https://www.albeebaby.com/products/silver-cross-coast-wave-stroller-main-car-seat-adapters-nuna-cybex-maxi-cosi-clek",
+    "https://silvercrossbaby.ca/en/product/wave-coast-car-seat-adapters/SX5135",
+    "https://strolleria.com/products/silver-cross-wave-lower-car-seat-adapters"
+  ],
+  "notes": "Shared adapter for the 2019 Silver Cross Wave and the (discontinued) Coast; also works on the current Wave 3. $59.99, in stock. Clek Liing explicitly supported. For a second seat in the lower position, add the separate Wave/Coast Lower car seat adapter."
+}

@@ -1,0 +1,65 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S3). Do NOT edit seed.json.",
+  "id": "bumbleride-indie",
+  "name": "Bumbleride Indie All-Terrain Stroller",
+  "brand": "Bumbleride",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/bumbleride-indie.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Bumbleride Indie — Indie/Speed Car Seat Adapter – Maxi-Cosi/Cybex/Nuna (MNC-28)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-mnc-28"],
+
+  "priceSources": [
+    { "retailer": "Bumbleride (DTC)", "price": 799.00, "url": "https://bumbleride.com/products/indie-all-terrain-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 799.00, "url": "https://strolleria.com/products/bumbleride-indie-jogging-stroller", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 24,
+
+    "unfoldedIn": { "lengthIn": 46, "widthIn": 24.5, "heightIn": 40 },
+    "foldedIn": { "lengthIn": 31.5, "widthIn": 24.5, "heightIn": 13 },
+    "_foldedNote": "31.5 x 24.5 x 13 in with rear wheels on; 31.5 x 17.5 x 13 in with quick-release rear wheels removed.",
+
+    "brake": {
+      "hasBrake": true,
+      "type": "foot-operated one-step parking brake linking both rear wheels (sandal-friendly)"
+    },
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": 40,
+      "minAgeOrNewborn": "birth-ready (built-in infant mode / lay-flat); also works with bassinet or infant car seat",
+      "seatCount": 1,
+      "basketCapacityLb": 15
+    },
+
+    "safety": {
+      "standards": "ASTM F833 (US 16 CFR 1227); EN 1888 (EU); AS/NZS 2088 (AU/NZ); SOR/85-379 (Canada)",
+      "certifications": "OEKO-TEX Standard 100 non-toxic recycled fabrics; 5-point harness. Not JPMA-listed.",
+      "notes": "Cargo basket 17 x 15 x 11 in, 15 lb. Handle range 26–46 in adjustable."
+    },
+
+    "foldType": "one-step fold, self-standing stow",
+    "strollerType": "all-terrain jogger / city single",
+    "recline": "multi-position to lay-flat (infant mode)",
+    "reversibleSeat": false,
+    "tires": "all three 12 in air-filled; all-wheel suspension; front swivel with in-line lock",
+    "_tiresNote": "The Indie is an all-terrain (not sport-jogging) stroller; front swivel wheel with lock rather than a fixed jogging wheel."
+  },
+
+  "sources": [
+    "https://bumbleride.com/products/indie-all-terrain-stroller",
+    "https://strolleria.com/products/bumbleride-indie-jogging-stroller",
+    "https://canada.bumbleride.com/pages/safety-notice",
+    "https://www.consumerreports.org/babies-kids/strollers/bumbleride-indie/m406149/"
+  ],
+  "notes": "All-terrain single, 24 lb — the lightest Bumbleride here and compact folded without rear wheels (17.5 in wide). Clek Liing latches via the Indie/Speed adapter MNC-28 (adapter-mnc-28), which explicitly lists the Clek Liing. Good all-around city + light-trail stroller; heavier than a true travel stroller but versatile."
+}

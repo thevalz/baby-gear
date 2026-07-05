@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller adapter fragment (batch S6 Silver Cross). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-silvercross-comet",
+  "name": "Silver Cross Comet Car Seat Adapters",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-silvercross-comet.jpg",
+
+  "partNumber": null,
+  "madeBy": "Silver Cross",
+
+  "seatBrandsSupported": "Clek (Liing) / Cybex (Aton, Aton Q, Cloud Q) / Maxi-Cosi (Mico 30, Mico Max, Coral XP) / Nuna (Pipa, Pipa Lite, Pipa Lite LX, Pipa RX). Silver Cross US lists the Clek Liing.",
+
+  "forStrollerIds": ["silvercross-comet"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Silver Cross US (DTC)", "price": 24.99, "url": "https://silvercrossus.com/product/comet-car-seat-adapters/", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Mega Babies", "price": 29.99, "url": "https://www.megababiesusa.com/products/silver-cross-comet-car-seat-adapters", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "pair",
+    "toolFree": true,
+    "notes": "Clip to the Comet chassis; car seat slots in."
+  },
+
+  "sources": [
+    "https://silvercrossus.com/product/comet-car-seat-adapters/",
+    "https://www.megababiesusa.com/products/silver-cross-comet-car-seat-adapters",
+    "https://travelingtikes.com/products/silver-cross-comet-car-seat-adapters"
+  ],
+  "notes": "No printed manufacturer part number on Clek's list (partNumber null). Cheapest Silver Cross adapter in this batch — $24.99 on sale (orig $29.99) at Silver Cross US. Explicitly supports the Clek Liing. Serves the Silver Cross Comet only. (A separate 'Comet Elevate' adapter exists for the elevated seat position.)"
+}

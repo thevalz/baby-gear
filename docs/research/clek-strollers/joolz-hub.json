@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "joolz-hub",
+  "name": "Joolz Hub+ (covers Hub / Hub+)",
+  "brand": "Joolz",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joolz-hub.png",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joolz Hub — Hub Infant Car Seat Adapter – Cybex/Nuna (902000)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-902000"],
+
+  "priceSources": [
+    { "retailer": "Mega Babies", "price": 473.85, "url": "https://www.megababiesusa.com/products/joolz-hub-seat-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Joolz DTC", "price": 729.00, "url": "https://www.joolz.com/us/en/430200-M.html", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 729.00, "url": "https://strolleria.com/products/joolz-hub-stroller-1", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 24.3,
+
+    "unfoldedIn": { "lengthIn": 34.0, "widthIn": 21.0, "heightIn": 39.0 },
+    "_unfoldedHeightNote": "Handlebar-adjustable 37–41 in; 39 recorded as midpoint.",
+    "foldedIn": { "lengthIn": 25.0, "widthIn": 21.0, "heightIn": 12.0 },
+    "_dimsNote": "Folded with seat ~25 x 21 x 12 in; folded without seat ~10.5 in high. 21-in width fits many store aisles.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up pedal brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "6 months to 4 years; from birth only with the Joolz cocoon/carrycot or a car seat",
+      "seatCount": 1,
+      "basketCapacityLb": 11
+    },
+
+    "safety": {
+      "standards": "EN 1888-2 (Joolz). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
+      "certifications": null,
+      "notes": "5-point harness; compact urban chassis; 5-US-gal / 11-lb basket. Hub+ seat is world-facing (not reversible)."
+    },
+
+    "foldType": "compact fold (seat can stay attached), self-standing",
+    "strollerType": "compact full-size / urban",
+    "recline": "multi-position reclining backrest (exact positions not published)",
+    "reversibleSeat": false,
+    "tires": "6.3 in front / 10.3 in rear EVA foam-coated wheels"
+  },
+
+  "sources": [
+    "https://www.joolz.com/us/en/430200-M.html",
+    "https://strollberry.com/strollers/joolz-hub/",
+    "https://www.megababiesusa.com/products/joolz-hub-seat-stroller",
+    "https://strolleria.com/products/joolz-hub-stroller-1"
+  ],
+  "notes": "Lightweight full-size urban stroller (24.3 lb). Clek lists the Hub with the Joolz Hub adapter 902000, whose product name enumerates Cybex/Nuna (Maxi-Cosi-footprint) seats; Clek's authoritative list attests the Liing is compatible via this adapter even though the M&P/Joolz product name does not spell out 'Clek'. Best in-stock price $473.85 (Mega Babies sale); Joolz DTC MSRP $729. Reversibility not explicitly published; Hub+ seat is world-facing only."
+}

@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05. Bugaboo Donkey MONO car-seat adapter for the Maxi-Cosi footprint; Clek's official list assigns this SKU to the Clek Liing on the Donkey (Mono) and Donkey 5 (Mono). Do NOT edit seed.json.",
+  "id": "adapter-855190mc01",
+  "name": "Bugaboo Donkey Mono Adapter for Maxi-Cosi",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-855190mc01.jpg",
+
+  "partNumber": "855190MC01",
+  "madeBy": "Bugaboo",
+
+  "seatBrandsSupported": "Maxi-Cosi footprint - fits Maxi-Cosi (Mico), Nuna Pipa series, Cybex, and Bugaboo Turtle infant seats. Retailer pages do not name the Clek Liing, but Clek's own compatibility list designates THIS adapter (855190MC01) for the Clek Liing on the Donkey/Donkey 5 in mono mode.",
+
+  "forStrollerIds": ["bugaboo-donkey-mono", "bugaboo-donkey-5-mono"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": "Clek: usable in Donkey handle positions 3-5 only; on the Donkey 2 generation max 30 lb"
+  },
+
+  "priceSources": [
+    { "retailer": "Bugaboo.com (DTC)", "price": 79.95, "url": "https://www.bugaboo.com/us-en/accessories/adapters/donkey-adapters/bugaboo-donkey-adapter-for-maxi-cosi-car-seat---mono-na-855190MC01.html", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Destination Baby & Kids", "price": 79.95, "url": "https://www.destinationbabykids.com/products/donkey-cybex-maxi-cosi-car-seat-adapter", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "single car-seat mount (one seat position, for mono mode)",
+    "toolFree": true,
+    "notes": "Tool-free click-and-go: brackets clip onto the Donkey chassis, car seat clicks into the adapter. Clek caveat: only usable in Donkey handle positions 3-5 (Donkey 2 max 30 lb)."
+  },
+
+  "sources": [
+    "https://www.destinationbabykids.com/products/donkey-cybex-maxi-cosi-car-seat-adapter",
+    "https://www.bugaboo.com/us-en/accessories/adapters/donkey-adapters/bugaboo-donkey-adapter-for-maxi-cosi-car-seat---mono-na-855190MC01.html",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Bugaboo part 855190MC01, the MONO Maxi-Cosi adapter for the Bugaboo Donkey line (serves both the older Donkey/Donkey 3 in mono mode and the current Donkey 5 in mono mode per Clek's list). Note Bugaboo's own product page titles this SKU 'Donkey Mono and Duo adapter for Maxi-Cosi' - but Clek's definitive list pairs 855190MC01 with the mono rows and the separate 855180MC02 with the twin rows, which this catalog follows. Price $79.95 (Bugaboo DTC and Destination Baby); Bugaboo DTC showed out of stock at check, Destination Baby in stock (1-2 week order time). Retailer compatibility lists cite the Maxi-Cosi footprint (Maxi-Cosi/Nuna/Cybex/Bugaboo Turtle) and do not name Clek by brand; the Clek Liing shares the Maxi-Cosi footprint and Clek lists this exact SKU as the correct part."
+}

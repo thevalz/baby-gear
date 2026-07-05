@@ -1,0 +1,59 @@
+{
+  "_comment": "Clek-compatible stroller fragment (batch S5 Joovy). Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "joovy-big-caboose",
+  "name": "Joovy Big Caboose Triple",
+  "brand": "Joovy",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joovy-big-caboose.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joovy Big Caboose — Universal Car Seat Adapter",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-joovy-universal"],
+
+  "priceSources": [
+    { "retailer": "Joovy (DTC)", "price": 499.90, "url": "https://www.joovy.com/products/big-caboose-triple-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Amazon", "price": 499.99, "url": "https://www.amazon.com/Joovy-Big-Caboose-Triple-Stroller/dp/B09P4BVTZ3", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 30.8,
+
+    "unfoldedIn": { "lengthIn": 54, "widthIn": 22, "heightIn": 42 },
+    "foldedIn": { "lengthIn": 61, "widthIn": 22, "heightIn": 15 },
+
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 40,
+      "maxChildHeightIn": 44,
+      "minAgeOrNewborn": "6 mo+ in seats; newborn with an infant car seat via adapter",
+      "seatCount": 3,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
+      "certifications": null,
+      "notes": "5-point harnesses on front seats; two removable front trays. Joovy does not publish a per-model JPMA certification."
+    },
+
+    "foldType": "auto-lock standing fold",
+    "strollerType": "triple / sit-and-stand tandem (two full front seats + rear bench + standing platform; optional 3rd seat sold separately)",
+    "recline": "reclining front seats",
+    "reversibleSeat": false,
+    "tires": "foam/plastic wheels"
+  },
+
+  "sources": [
+    "https://www.joovy.com/products/big-caboose-triple-stroller",
+    "https://www.amazon.com/Joovy-Big-Caboose-Triple-Stroller/dp/B09P4BVTZ3",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Big, family-hauling triple sit-and-stand (54 in long unfolded, 61 in folded) — the opposite end of the batch from the city/shopping goal; scores low on portability but is the maximum-seating option. Max 40 lb per seat, 44 in / stand-on platform to 45 lb. Ships with TWO universal car seat adapters; Clek Liing attaches via the Joovy Universal Car Seat Adapter (adapter-joovy-universal). DTC price $499.90; Amazon $499.99."
+}

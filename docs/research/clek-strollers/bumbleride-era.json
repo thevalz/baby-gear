@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S3). Do NOT edit seed.json.",
+  "id": "bumbleride-era",
+  "name": "Bumbleride Era Reversible Stroller",
+  "brand": "Bumbleride",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/bumbleride-era.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Bumbleride Era — Era Car Seat Adapter – Clek/Maxi-Cosi/Cybex/Nuna (MNCE-14)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-mnce-14"],
+
+  "priceSources": [
+    { "retailer": "Bumbleride (DTC)", "price": 949.00, "url": "https://bumbleride.com/products/era-reversible-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria", "price": 949.00, "url": "https://strolleria.com/products/bumbleride-era-stroller", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 27,
+
+    "unfoldedIn": { "lengthIn": 39, "widthIn": 24, "heightIn": 40 },
+    "foldedIn": { "lengthIn": 31.5, "widthIn": 24, "heightIn": 13 },
+
+    "brake": {
+      "hasBrake": true,
+      "type": "foot-operated one-step parking brake linking both rear wheels (sandal-friendly, lock/unlock from above)"
+    },
+
+    "capacity": {
+      "maxChildWeightLb": 55,
+      "maxChildHeightIn": 40,
+      "minAgeOrNewborn": "birth-ready with no attachment needed (lay-flat + reversible seat); also works with bassinet or infant car seat",
+      "seatCount": 1,
+      "basketCapacityLb": 15
+    },
+
+    "safety": {
+      "standards": "ASTM F833 (US 16 CFR 1227); EN 1888 (EU); AS/NZS 2088 (AU/NZ); SOR/85-379 (Canada)",
+      "certifications": "OEKO-TEX Standard 100 non-toxic recycled fabrics; 5-point harness. Not JPMA-listed.",
+      "notes": "Cargo basket 21 x 15 x 9 in, 15 lb. Frame alone ~20 lb."
+    },
+
+    "foldType": "quick compact fold with auto-lock, self-standing stow",
+    "strollerType": "full-size reversible / city",
+    "recline": "multi-position to lay-flat",
+    "reversibleSeat": true,
+    "tires": "air-filled with inner tubes; 8.5 in front / 12 in rear; all-wheel suspension; front swivel with in-line lock"
+  },
+
+  "sources": [
+    "https://bumbleride.com/products/era-reversible-stroller",
+    "https://strolleria.com/products/bumbleride-era-stroller",
+    "https://canada.bumbleride.com/pages/safety-notice",
+    "https://pishposhbaby.com/blogs/blog/bumbleride-era-2020-full-depth-review"
+  ],
+  "notes": "Bumbleride's reversible-seat full-size city stroller, 27 lb, birth-ready with no attachments. Clek Liing latches via the Era adapter MNCE-14 (adapter-mnce-14), which explicitly lists the Clek Liing. Heavier/pricier than a compact travel stroller; the reversible seat + lay-flat make it a strong everyday city option."
+}

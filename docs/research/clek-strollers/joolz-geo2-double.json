@@ -1,0 +1,61 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Batch S4 (Joolz/M&P/Mima). Sourced 2026-07-05. Do NOT edit seed.json. This is the SAME stroller as joolz-geo2, configured in DOUBLE mode; specs shared except weight/seat count/adapters.",
+  "id": "joolz-geo2-double",
+  "name": "Joolz Geo2 (Double Mode)",
+  "brand": "Joolz",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/joolz-geo2-double.png",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Joolz Geo2 (Double Mode) — Geo2 Upper + Geo2 lower car seat adapter (414001 & 414002) — *lowest-position caveat",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-414001", "adapter-414002"],
+
+  "priceSources": [
+    { "retailer": "Joolz DTC (chassis; 2nd seat sold separately)", "price": 1099.00, "url": "https://www.joolz.com/us/en/411110.html", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Albee Baby", "price": 1099.00, "url": "https://www.albeebaby.com/products/joolz-open-box-geo-2-mono-single-to-double-stroller-classic-blue", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 36.0,
+    "_weightNote": "~36 lb in double configuration (30 lb single chassis + second seat/adapters). Same frame as joolz-geo2.",
+
+    "unfoldedIn": { "lengthIn": 32.7, "widthIn": 23.6, "heightIn": 42.9 },
+    "foldedIn": { "lengthIn": 16.5, "widthIn": 23.6, "heightIn": 39.0 },
+    "_dimsNote": "Same one-piece fold footprint as single; second seat/carrycot stacks on the frame.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up pedal brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 45,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "from birth (twin/duo: two carrycots, two car seats, or two seats)",
+      "seatCount": 2,
+      "basketCapacityLb": 0
+    },
+
+    "safety": {
+      "standards": "EN 1888 (Joolz). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
+      "certifications": null,
+      "notes": "5-point harness each seat; main seat 3-position recline (lie-flat), second seat 2 positions. In duo/double config the lower seat/car seat/carrycot occupies the basket space (no shopping basket). Clek notes a lowest-position caveat with a car seat fitted."
+    },
+
+    "foldType": "one-motion compact one-piece fold",
+    "strollerType": "full-size double / single-to-double convertible (all-terrain)",
+    "recline": "main seat 3 positions incl. lie-flat; second seat 2 positions",
+    "reversibleSeat": true,
+    "tires": "7 in front / 12 in rear (18 cm / 30 cm) EVA foam-coated wheels; all-wheel suspension"
+  },
+
+  "sources": [
+    "https://www.joolz.com/us/en/411110.html",
+    "https://strollberry.com/strollers/joolz-geo-2/",
+    "https://www.albeebaby.com/products/joolz-open-box-geo-2-mono-single-to-double-stroller-classic-blue"
+  ],
+  "notes": "Same physical stroller as joolz-geo2, in double/duo configuration. To carry the Liing in double mode Clek requires BOTH the Geo2 Upper (adapter-414001) AND Geo2 Lower (adapter-414002) car seat adapters. Second seat and lower adapter are add-on accessories (not included with the base chassis). ~36 lb; not the city/portability goal but on Clek's list. *Lowest-position caveat."
+}

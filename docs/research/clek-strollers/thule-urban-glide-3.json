@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Batch S8 (Thule). Sourced 2026-07-05. Thule Urban Glide 3 (single). Do NOT edit seed.json.",
+  "id": "thule-urban-glide-3",
+  "name": "Thule Urban Glide 3",
+  "brand": "Thule",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/thule-urban-glide-3.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Thule Urban Glide 3 — Thule Urban Glide universal car seat adapter (20110762) · Clek note: 'Not compatible in double mode'",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-20110762"],
+
+  "priceSources": [
+    { "retailer": "REI", "price": 799.95, "url": "https://www.rei.com/product/C04571/thule-urban-glide-3-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Thule DTC", "price": 799.95, "url": "https://www.thule.com/en-us/strollers/jogging-strollers/thule-glide-2-_-10101952", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 26.2,
+    "_weightNote": "Listed 26 lb 3.2 oz ≈ 26.2 lb.",
+
+    "unfoldedIn": { "lengthIn": 48.4, "widthIn": 27.2, "heightIn": 45.3 },
+    "_unfoldedNote": "Open 48.4 (L) x 27.2 (W) x 45.3 (H) in; telescoping handlebar 38.5–45.3 in.",
+    "foldedIn": { "lengthIn": 34.6, "widthIn": 22.8, "heightIn": 12.2 },
+
+    "brake": { "hasBrake": true, "type": "integrated twist hand/running brake plus foot-operated parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 48.5,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "6 mo+ for jogging; birth with infant car seat via adapter or Thule bassinet",
+      "seatCount": 1,
+      "basketCapacityLb": 15
+    },
+    "_capacityNote": "Max child ~48.5 lb; total combined capacity (child + basket) rated 75 lb; basket ~15.4 lb (7 kg).",
+
+    "safety": {
+      "standards": "Meets US ASTM F833 stroller standard — Clek's list confirms the UG3 was tested with the Liing and is ASTM-compliant for car seats on strollers.",
+      "certifications": null,
+      "notes": "5-point magnetic safety harness; twist hand brake for controlled descents; wrist safety strap; auto-lock fold."
+    },
+
+    "foldType": "one-hand compact fold, self-standing",
+    "strollerType": "jogging / all-terrain (3-wheel)",
+    "recline": "multi-position recline to near-flat, one-hand toggle",
+    "reversibleSeat": false,
+    "tires": "pneumatic air-filled rubber; front 12 in swivel/lockable, rear 16 in"
+  },
+
+  "sources": [
+    "https://www.rei.com/product/C04571/thule-urban-glide-3-stroller",
+    "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/thule-urban-glide-3",
+    "https://www.anbbaby.com/products/thule-urban-glide-3-stroller",
+    "https://www.thule.com/en-us/strollers/jogging-strollers/thule-glide-2-_-10101952"
+  ],
+  "notes": "Current-generation 3-wheel jogger (~26.2 lb). IMPORTANT (Clek caveat carried from _CLEK_LIST.md): the UG3 is 'Not compatible in double mode' with the Liing — single-seat car-seat use only. Clek Liing attaches via the Urban Glide UNIVERSAL adapter 20110762 (adapter-20110762), NOT the Maxi-Cosi-specific 20110761. Best cited price $799.95 (REI / Thule DTC). A jogger, not the light/compact city goal."
+}

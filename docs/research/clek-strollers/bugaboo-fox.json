@@ -1,0 +1,67 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05. Do NOT edit seed.json. Specs pulled from Bugaboo's official Fox 5 Renew spec page (identical stroller to the standard Fox 5; Renew uses recycled materials). Clek's official list Fox row covers Fox/Fox2/Fox3/Fox5 — the current-generation Fox 5 is sourced here.",
+  "id": "bugaboo-fox",
+  "name": "Bugaboo Fox 5 (covers Fox / Fox2 / Fox3 / Fox5)",
+  "brand": "Bugaboo",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/bugaboo-fox.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Bugaboo | Fox / Fox2 / Fox3 / Fox5 | Bugaboo Fox/Lynx/Buffalo Adapter for Maxi-Cosi | 441200MC01 or 231100MC02",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-441200mc01"],
+
+  "priceSources": [
+    { "retailer": "Swaddles Baby (Fox 5 Complete)", "price": 1299.00, "url": "https://www.swaddlesbaby.com/products/bugaboo-fox-5-complete-full-size-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Bugaboo (DTC, Fox 5 Renew)", "price": 1499.00, "url": "https://www.bugaboo.com/us-en/strollers/bugaboo-fox-5-renew/bugaboo-fox-5-renew-2-in-1-stroller-PM007634.html", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Strolleria (Fox 5 Renew)", "price": 1499.00, "url": "https://strolleria.com/products/bugaboo-fox-5-renew-bassinet-and-seat-stroller", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 27.1,
+    "_weightNote": "Bugaboo lists 12.3 kg (~27.1 lb) fully assembled with seat; 13.3 kg (~29.3 lb) with bassinet. Amazon lists 27.0 lb. Some third-party summaries cite a lower chassis-only figure.",
+
+    "unfoldedIn": { "lengthIn": 36.6, "widthIn": 23.6, "heightIn": 41.3 },
+    "_unfoldedNote": "Bugaboo in-use: 93 x 60 x 105 cm = 36.6 x 23.6 x 41.3 in. Adjustable handlebar 92-108 cm (36.2-42.5 in).",
+    "foldedIn": { "lengthIn": 17.3, "widthIn": 23.6, "heightIn": 35.4 },
+    "_foldedNote": "One-piece self-standing fold 45 x 60 x 90 cm = 17.3 x 23.6 x 35.4 in. Two-piece compact fold 89 x 53 x 34 cm = 35 x 20.9 x 13.4 in.",
+
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (0 mo) — 2-in-1 with lie-flat bassinet (bassinet limit 20 lb / 9 kg) and reversible reclining seat; usable to ~4 yrs",
+      "seatCount": 1,
+      "basketCapacityLb": 22
+    },
+    "_capacityNote": "Max child height not published by Bugaboo. Underseat basket 10 kg (22 lb) / 45 L.",
+
+    "safety": {
+      "standards": "Not published on Bugaboo's Fox 5 spec page. Sold in the US, so it must meet the mandatory federal stroller standard 16 CFR 1227 (incorporates ASTM F833) to be marketed; EU units carry EN 1888. No explicit standard printed by the manufacturer, so not asserted as certified.",
+      "certifications": "No JPMA or Greenguard certification published for the Fox 5 on the manufacturer or retailer pages reviewed.",
+      "notes": "5-point harness; reversible seat with multi-position recline; full suspension; extendable UPF 50+ canopy; one-hand fold. Adapter-mounted infant car seats limited to 28.7 lb child weight."
+    },
+
+    "foldType": "one-hand fold (seat or bassinet on frame); self-standing one-piece fold plus two-piece ultra-compact fold",
+    "strollerType": "full-size all-terrain",
+    "recline": "multi-position reclinable seat (both facing directions); bassinet gives full lie-flat for newborns",
+    "reversibleSeat": true,
+    "tires": "extra-large puncture-proof foam-filled wheels with full suspension; front ~8.5 in, rear ~12 in; front swivel with lock"
+  },
+
+  "sources": [
+    "https://www.bugaboo.com/us-en/strollers/bugaboo-fox-5-renew/bugaboo-fox-5-renew-2-in-1-stroller-PM007634.html",
+    "https://www.swaddlesbaby.com/products/bugaboo-fox-5-complete-full-size-stroller",
+    "https://strolleria.com/products/bugaboo-fox-5-renew-bassinet-and-seat-stroller",
+    "https://strollberry.com/strollers/bugaboo-fox-5/",
+    "https://www.amazon.com/Bugaboo-All-Terrain-Suspension-Extendable-Maneuverability/dp/B0BX4TDTXN",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Current-generation Bugaboo Fox (Fox 5 / Fox 5 Renew); Clek's Fox row covers Fox/Fox2/Fox3/Fox5, all of which take the same Fox/Lynx/Buffalo Maxi-Cosi adapter (441200MC01, alternate 231100MC02) — adapter-441200mc01. FULL-SIZE all-terrain 2-in-1: ~27 lb, 8.5 in front / 12 in rear puncture-proof wheels, full suspension, reversible lie-flat-capable seat, bassinet included. This is a premium full-size pram, NOT a compact/city stroller — it does not meet a lightweight city-travel goal (folded is bulky; two-piece compact fold still ~35 x 20.9 x 13.4 in and heavy). Best cited price $1,299 (Swaddles Baby, standard Fox 5 Complete) vs $1,499 Renew DTC/Strolleria. Clek Liing mounts via the Maxi-Cosi-footprint adapter."
+}
