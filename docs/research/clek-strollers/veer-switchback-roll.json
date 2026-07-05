@@ -1,0 +1,62 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S10). The 'Switch&Roll' stroller-roll configuration of the modular Veer Switchback system. Single by default, expandable to double with a Second Seat Adapter Kit. Shares its car-seat adapter with veer-switchback-jog (adapter-veer-switchback). Do NOT edit seed.json.",
+  "id": "veer-switchback-roll",
+  "name": "Veer Switch&Roll (Switchback System stroller, single or double)",
+  "brand": "Veer",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/veer-switchback-roll.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Veer — Switchback & Roll (Single or Double) — Switchback Infant Car Seat Adapter – Cybex/Maxi-Cosi/Nuna — Second-seat adapter kit required for double mode",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-veer-switchback"],
+
+  "priceSources": [
+    { "retailer": "Veer (goveer.com DTC)", "price": 949.00, "url": "https://goveer.com/products/switch-roll-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "Buttercup Baby Store", "price": 949.00, "url": "https://www.buttercupbabystore.com/products/veer-switchback-switch-roll-stroller", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 27.75,
+    "_weightNote": "Frame only 20.25 lb; frame + Switchback Seat 27.75 lb.",
+
+    "unfoldedIn": { "lengthIn": 44, "widthIn": 25.5, "heightIn": 40 },
+    "foldedIn": { "lengthIn": 15, "widthIn": 25.5, "heightIn": 36 },
+    "_dimsNote": "Open 44 x 25.5 x 40 in (max handle height 44 in). Folded with seat 15 x 25.5 x 36 in; folded without seat 11 x 25.5 x 33 in.",
+
+    "brake": { "hasBrake": true, "type": "foot parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "0+ years with Infant Insert (or infant car seat + adapter)",
+      "seatCount": 1,
+      "basketCapacityLb": 30
+    },
+    "_capacityNote": "Rear seat 50 lb; front seat (added in double mode via adapter) 40 lb. Default single seat; seatCount reflects single config. Max child height not published by Veer.",
+
+    "safety": {
+      "standards": "Meets or exceeds ASTM (16 CFR 1227 / ASTM F833) and EN 1888.2 safety standards",
+      "certifications": "JPMA Certified",
+      "notes": "5-point safety harness; near lay-flat recline suitable with infant insert."
+    },
+
+    "foldType": "one-hand fold (seat on or off); folds to 11 in deep without seat",
+    "strollerType": "modular (stroller-roll config; expandable single-to-double)",
+    "recline": "single-handed one-click 4-position recline including near lay-flat",
+    "reversibleSeat": false,
+    "tires": "XL never-flat (foam-filled) tires; front wheel 9.5 in / rear wheel 12 in; swivel front for strolling"
+  },
+
+  "sources": [
+    "https://goveer.com/products/switch-roll-stroller",
+    "https://www.buttercupbabystore.com/products/veer-switchback-switch-roll-stroller",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Stroller-roll configuration of the modular Veer Switchback system; smaller swivel front wheel + never-flat tires (vs the &Jog's fixed front + pneumatic tires). Ships single; DOUBLE mode requires a separate Second Seat Adapter Kit (front seat rated 40 lb). Uses the Switchback Infant Car Seat Adapter (adapter-veer-switchback), the SAME adapter as veer-switchback-jog; running two infant car seats in double mode requires two adapters plus the Second Seat Adapter Kit. Adapter (Cybex/Maxi-Cosi/Nuna) explicitly lists the Clek Liing. $949 DTC and at Buttercup (limited stock)."
+}

@@ -1,0 +1,63 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S10). The 'Switch&Jog' jogging configuration of the modular Veer Switchback system. Shares its car-seat adapter with veer-switchback-roll (adapter-veer-switchback). Do NOT edit seed.json.",
+  "id": "veer-switchback-jog",
+  "name": "Veer Switch&Jog (Switchback System jogging stroller)",
+  "brand": "Veer",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/veer-switchback-jog.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Veer — Switchback & Jog — Switchback Infant Car Seat Adapter – Cybex/Maxi-Cosi/Nuna",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-veer-switchback"],
+
+  "priceSources": [
+    { "retailer": "Veer (goveer.com DTC)", "price": 899.00, "url": "https://goveer.com/products/switch-jog-jogging-stroller", "inStock": true, "checkedAt": "2026-07-05" },
+    { "retailer": "REI Co-op", "price": 899.00, "url": "https://www.rei.com/product/C03957/veer-switchjog-jogging-stroller", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 28.7,
+    "_weightNote": "Frame only 21.2 lb; frame + Switchback Seat 28.7 lb (seat 7.5 lb). Seat sold separately in some bundles.",
+
+    "unfoldedIn": { "lengthIn": 44, "widthIn": 27, "heightIn": 39 },
+    "foldedIn": { "lengthIn": 19, "widthIn": 27, "heightIn": 35 },
+    "_dimsNote": "Open 44 x 27 x 39 in (handle low, front wheel locked). Folded with seat 19 x 27 x 35 in; folded without seat 19 x 27 x 33 in.",
+
+    "brake": { "hasBrake": true, "type": "foot parking brake plus hand-operated deceleration/drag brake for downhill jogging" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "0+ years with Infant Insert (or infant car seat + adapter); jog when child can sit unassisted per Veer",
+      "seatCount": 1,
+      "basketCapacityLb": 30
+    },
+    "_capacityNote": "Max child 50 lb; seating area 19 H x 12 W x 9.5 D in. Max child height not published by Veer.",
+
+    "safety": {
+      "standards": "Meets or exceeds ASTM (16 CFR 1227 / ASTM F833) and EN 1888.2 safety standards",
+      "certifications": "JPMA Certified",
+      "notes": "5-point safety harness; fixed/lockable front wheel for jogging; deceleration hand brake; wrist strap."
+    },
+
+    "foldType": "one-hand open and fold (seat can stay on or come off)",
+    "strollerType": "jogger (modular Switchback system)",
+    "recline": "single-handed one-click 4-position recline",
+    "reversibleSeat": false,
+    "tires": "XL air-filled pneumatic tires: 12 in front / 16 in rear; fixed front wheel for jogging"
+  },
+
+  "sources": [
+    "https://goveer.com/products/switch-jog-jogging-stroller",
+    "https://www.rei.com/product/C03957/veer-switchjog-jogging-stroller",
+    "https://strolleria.com/products/veer-switchback-switch-jog-jogging-stroller",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "Jogging configuration of the modular Veer Switchback system; the '&Jog' frame takes large 16 in pneumatic rear tires + fixed front wheel. Uses the Switchback Infant Car Seat Adapter (adapter-veer-switchback), the SAME adapter as veer-switchback-roll; that adapter (Cybex/Maxi-Cosi/Nuna) explicitly lists the Clek Liing. $899 DTC (in stock) and $899 at REI (pre-order/backorder). Weight 28.7 lb with seat / 21.2 lb frame."
+}

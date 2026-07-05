@@ -1,0 +1,62 @@
+{
+  "_comment": "Clek-compatible stroller fragment. Sourced 2026-07-05 (batch S10). Agio Z4 is the US-market Agio-branded (Peg Perego) four-wheel reversible modular stroller; the same product is also sold as Peg Perego 'Ypsi'. Do NOT edit seed.json.",
+  "id": "pegperego-agio-z4-ypsi",
+  "name": "Agio Z4:YPSI Full-Feature Reversible Stroller (by Peg Perego)",
+  "brand": "Agio (Peg Perego)",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/pegperego-agio-z4-ypsi.jpg",
+
+  "clekListed": {
+    "onClekOfficialList": true,
+    "clekSourceUrl": "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "clekRow": "Peg Perego Agio Z4:YPSI — Agio car seat adapter for Z4 stroller (IKCS0018)",
+    "checkedAt": "2026-07-05"
+  },
+
+  "adapterIds": ["adapter-ikcs0018"],
+
+  "priceSources": [
+    { "retailer": "Agio Baby (DTC)", "price": 749.99, "url": "https://agiobaby.com/products/agio-by-peg-perego-z4-full-feature-reversible-stroller", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Baby Grand", "price": 599.00, "url": "https://babyongrand.com/products/agio-by-peg-perego-z4-full-feature-reversible-stroller", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "specs": {
+    "weightLb": 22.5,
+    "_weightNote": "~10.2 kg / 22.5 lb (chassis + reversible seat).",
+
+    "unfoldedIn": { "lengthIn": 39.25, "widthIn": 20.0, "heightIn": 40.25 },
+    "foldedIn": { "lengthIn": 32.25, "widthIn": 20.5, "heightIn": 15.25 },
+    "_dimsNote": "Agio Baby lists open 20 x 39.25 x 40.25 in and folded 20 x 32.25 x 15.25 in; consistent with Strollberry metric (open 100 cm L x 51 cm W x 102 cm H; folded 82 x 52 x 38.5 cm).",
+
+    "brake": { "hasBrake": true, "type": "foot-operated push-down/lift-up pedal parking brake" },
+
+    "capacity": {
+      "maxChildWeightLb": 50,
+      "maxChildHeightIn": null,
+      "minAgeOrNewborn": "birth (with infant car seat or bassinet); reversible seat from ~6 mo+",
+      "seatCount": 1,
+      "basketCapacityLb": null
+    },
+
+    "safety": {
+      "standards": "US-market stroller; complies with ASTM F833 / 16 CFR 1227 (specific rated limits not separately published by Agio)",
+      "certifications": "Not separately published by Agio/Peg Perego on the US product page",
+      "notes": "5-point harness; reversible seat (parent- or world-facing); full recline to lie-flat; spring suspension on all wheels."
+    },
+
+    "foldType": "one-hand compact fold, self-standing (folds with seat attached)",
+    "strollerType": "four-wheel full-size / modular (converts single-to-double)",
+    "recline": "3-position reclining backrest to lie-flat (>150 degrees)",
+    "reversibleSeat": true,
+    "tires": "four rubber-coated swivel/lockable wheels (~18 cm front / 27 cm rear) with internal spring suspension"
+  },
+
+  "sources": [
+    "https://agiobaby.com/products/agio-by-peg-perego-z4-full-feature-reversible-stroller",
+    "https://babyongrand.com/products/agio-by-peg-perego-z4-full-feature-reversible-stroller",
+    "https://strollberry.com/strollers/agio-z4/",
+    "https://strolleria.com/blogs/news/agio-z4-vs-peg-perego-ypsi-stroller-comparison"
+  ],
+  "notes": "Current-gen Agio (Peg Perego US brand) four-wheel reversible, modular stroller; identical product to Peg Perego 'Ypsi' (hence Clek's 'Z4:YPSI' row). ~22.5 lb, one-hand self-standing fold, reversible seat with lie-flat recline, converts single-to-double. Confirmed on Clek's official Liing/Liingo list; Clek Liing attaches via the Agio Z4/Ypsi adapter IKCS0018 (adapter-ikcs0018). MSRP $749.99 (Agio Baby DTC, out of stock at check); in stock at Baby Grand for $599 (sale). Basket capacity and JPMA certification not separately published — left null."
+}

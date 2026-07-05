@@ -1,0 +1,39 @@
+{
+  "_comment": "Car-seat stroller adapter fragment. Sourced 2026-07-05. Do NOT edit seed.json.",
+  "id": "adapter-91510cs01",
+  "name": "Bugaboo Ant adapter for car seats – Nuna/Cybex",
+  "checkedAt": "2026-07-05",
+
+  "image": "images/adapter-91510cs01.jpg",
+
+  "partNumber": "91510CS01",
+  "madeBy": "Bugaboo",
+
+  "seatBrandsSupported": "Per Bugaboo's official 91510CS01 page: Bugaboo Turtle One by Nuna, Bugaboo Turtle Air by Nuna, Nuna Pipa Lite, Cybex Aton 2, Cybex Aton Q, Cybex Cloud Q, and — explicitly — the Clek Liing. So although the adapter is marketed as 'Nuna/Cybex' and the Clek Liing is usually described as a Maxi-Cosi-style seat, the manufacturer itself lists the Liing as compatible, corroborating Clek's official list; the Liing mounts on the same Nuna/Cybex bracket footprint. NOTE: Bugaboo's official page does NOT list Maxi-Cosi; some third-party retailers (e.g. Dearborn Baby) add 'Maxi Cosi' to the compatibility blurb — treat that as an unverified retailer claim, not manufacturer-stated. Adapter-mounted seats are limited to 28.7 lb child weight.",
+
+  "forStrollerIds": ["bugaboo-ant"],
+
+  "status": {
+    "discontinued": false,
+    "inStock": true,
+    "clekNote": ""
+  },
+
+  "priceSources": [
+    { "retailer": "Bugaboo (DTC)", "price": 29.97, "url": "https://www.bugaboo.com/us-en/bugaboo-ant-adapter-for-selected-car-seats-91510CS01.html", "inStock": false, "checkedAt": "2026-07-05" },
+    { "retailer": "Dearborn Baby", "price": 41.97, "url": "https://www.dearbornbaby.com/products/bugaboo-ant-car-seat-adapter-maxi-cosi-nuna-cybex-and-clek", "inStock": true, "checkedAt": "2026-07-05" }
+  ],
+
+  "install": {
+    "pieces": "adapter set that clicks onto the Ant frame; infant seat then clicks into the adapter",
+    "toolFree": true,
+    "notes": "Bugaboo 'click-and-go' style mount, no tools. Adapter-mounted car seat weight limit 28.7 lb (child)."
+  },
+
+  "sources": [
+    "https://www.bugaboo.com/us-en/bugaboo-ant-adapter-for-selected-car-seats-91510CS01.html",
+    "https://www.dearbornbaby.com/products/bugaboo-ant-car-seat-adapter-maxi-cosi-nuna-cybex-and-clek",
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+  ],
+  "notes": "VERIFIED CLEK-LIING FIT: Clek's list files the Bugaboo Ant under this 'Nuna/Cybex' adapter (91510CS01), which at first looks like a footprint mismatch (Liing is often called Maxi-Cosi-style). But Bugaboo's own product page explicitly names the 'Clek Liing' as a compatible seat for 91510CS01, so the fit is manufacturer-confirmed — the Liing rides on the Nuna/Cybex bracket, not a Maxi-Cosi one. No discontinuation flag on Clek's list. Availability: shown out of stock on Bugaboo DTC (listed ~$29.97, was $49.95) but in stock at retailers (Dearborn Baby $41.97, was $59.95). Reconfirm exact price/stock at checkout. Only single-mode use applies (Ant is a single stroller)."
+}
