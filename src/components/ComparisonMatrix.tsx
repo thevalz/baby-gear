@@ -106,26 +106,30 @@ const isPriceCriterion = (id: string, label: string) => /price|cost/i.test(`${id
 function columnsFor(module: Module): Col[] {
   let cols: Col[];
   if (module.id === 'stroller') {
+    // Ordered by what matters most to a parent choosing a stroller: budget and
+    // portability first (price, weight, type, folded size), then capacity /
+    // everyday usability, then ride, then the less-differentiating footprint,
+    // brand, adapter, and (mostly-uniform) safety-standard columns.
     cols = [
-      strCol('brand', 'Brand'),
-      strCol('type', 'Type'),
+      priceCol,
       numCol('weightLb', 'Weight', 'lb'),
+      strCol('type', 'Type'),
       numCol('foldLenIn', 'Fold L', 'in'),
       numCol('foldWidIn', 'Fold W', 'in'),
       numCol('foldHtIn', 'Fold H', 'in'),
-      numCol('openLenIn', 'Open L', 'in'),
-      numCol('openWidIn', 'Open W', 'in'),
-      numCol('openHtIn', 'Open H', 'in'),
       numCol('maxChildLb', 'Max child', 'lb'),
       strCol('recline', 'Recline'),
       strCol('foldType', 'Fold'),
       suspensionCol,
-      strCol('brakeType', 'Brake'),
       strCol('tires', 'Tires'),
+      strCol('brakeType', 'Brake'),
+      numCol('openLenIn', 'Open L', 'in'),
+      numCol('openWidIn', 'Open W', 'in'),
+      numCol('openHtIn', 'Open H', 'in'),
+      strCol('brand', 'Brand'),
+      strCol('adapterSystem', 'Clek adapter'),
       standardCol('1227', 'CFR 1227'),
       standardCol('f833', 'ASTM F833'),
-      strCol('adapterSystem', 'Clek adapter'),
-      priceCol,
     ];
   } else if (module.id === 'adapter') {
     cols = [
