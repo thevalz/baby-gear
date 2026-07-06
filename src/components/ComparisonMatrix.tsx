@@ -6,6 +6,7 @@ import { criterionMetric } from '../lib/criterionMetric';
 import { useSessionState } from '../lib/useSessionState';
 import Thumb from './Thumb';
 import Lightbox from './Lightbox';
+import SafetyInfo from './SafetyInfo';
 
 /** Best link to where an option's image / data came from. */
 const imageSource = (o: Option): string | undefined =>
@@ -73,19 +74,17 @@ const priceCol: Col = {
   },
 };
 
-/** "Yes" when the option's safety-standards text names a given standard, else blank. */
-function standardCol(needle: string, label: string): Col {
-  const hit = (o: Option) => {
-    const s = attr(o, 'safetyStandards');
-    return typeof s === 'string' && s.toLowerCase().includes(needle.toLowerCase());
-  };
-  return {
-    key: `std_${needle}`,
-    label,
-    text: (o) => (hit(o) ? 'Yes' : null),
-    sort: (o) => (hit(o) ? 'yes' : null),
-  };
-}
+/** Factual safety summary: recall status + certifications + harness (see the ⓘ explainer). */
+const safetyCol: Col = {
+  key: 'safety',
+  label: 'Safety',
+  text: (o) => (attr(o, 'safetySummary') as string | undefined) ?? null,
+  // Recall-free sorts first, then unknown, then recalled last.
+  sort: (o) => {
+    const r = attr(o, 'safetyRecall');
+    return r === 'recalled' ? 2 : r === 'unknown' ? 1 : 0;
+  },
+};
 
 /** Suspension: the named system (BOBs) or "Yes" when the tire text mentions suspension. */
 const suspensionCol: Col = {
@@ -123,13 +122,12 @@ function columnsFor(module: Module): Col[] {
       suspensionCol,
       strCol('tires', 'Tires'),
       strCol('brakeType', 'Brake'),
+      safetyCol,
       numCol('openLenIn', 'Open L', 'in'),
       numCol('openWidIn', 'Open W', 'in'),
       numCol('openHtIn', 'Open H', 'in'),
       strCol('brand', 'Brand'),
       strCol('adapterSystem', 'Clek adapter'),
-      standardCol('1227', 'CFR 1227'),
-      standardCol('f833', 'ASTM F833'),
     ];
   } else if (module.id === 'adapter') {
     cols = [
@@ -188,6 +186,7 @@ export default function ComparisonMatrix({
     null,
   );
   const [zoom, setZoom] = useState<Option | null>(null);
+  const [showSafety, setShowSafety] = useState(false);
 
   const cols = useMemo(() => columnsFor(module), [module]);
 
@@ -268,6 +267,20 @@ export default function ComparisonMatrix({
                 >
                   {c.label}
                   {arrow(c.key)}
+                  {c.key === 'safety' && (
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setShowSafety(true);
+                      }}
+                      title="About stroller safety"
+                      aria-label="About stroller safety"
+                      className="ml-1 font-semibold text-indigo-500 hover:text-indigo-700"
+                    >
+                      ⓘ
+                    </button>
+                  )}
                 </th>
               ))}
             </tr>
@@ -337,6 +350,8 @@ export default function ComparisonMatrix({
           onClose={() => setZoom(null)}
         />
       )}
+
+      {showSafety && <SafetyInfo onClose={() => setShowSafety(false)} />}
     </div>
   );
 }
