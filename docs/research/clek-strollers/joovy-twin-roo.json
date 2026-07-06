@@ -27,7 +27,7 @@
     "unfoldedIn": { "lengthIn": 41.5, "widthIn": 26, "heightIn": 42 },
     "foldedIn": { "lengthIn": 47.75, "widthIn": 26, "heightIn": 10.25 },
 
-    "brake": { "hasBrake": true, "type": "foot-operated rear-wheel parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated rear-wheel parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 35,
@@ -40,7 +40,13 @@
     "safety": {
       "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
       "certifications": null,
-      "notes": "Frame stroller — occupant restraint is provided by each infant car seat's own harness. Front swivel wheel locks; front-wheel suspension; large parent tray with 4 cup holders. Joovy does not publish a per-model JPMA certification."
+      "notes": "Frame stroller — occupant restraint is provided by each infant car seat's own harness. Front swivel wheel locks; front-wheel suspension; large parent tray with 4 cup holders. Joovy does not publish a per-model JPMA certification.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": true,
+      "jpmaSource": "https://jpma.vporoom.com/Joovy/",
+      "harness": null,
+      "harnessNote": "Car-seat carrier frame — no built-in stroller harness; occupant restraint is each infant car seat's own harness.",
+      "otherCerts": null
     },
 
     "foldType": "one-hand flat fold",
@@ -54,7 +60,9 @@
     "https://www.joovy.com/products/twin-roo-carseat-stroller",
     "https://www.amazon.com/Joovy-Twin-Roo-Seat-Stroller/dp/B00M733I02",
     "https://www.babygearlab.com/reviews/getting-around/stroller-and-car-seat-combo/joovy-twinroo-plus",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://jpma.vporoom.com/Joovy/",
+    "https://www.cpsc.gov/Recalls?combine=joovy"
   ],
   "notes": "A car-seat carrier frame for TWINS — it has no seats of its own; it mounts two infant car seats side-by-side (each can face either direction). Requires brand-specific adapters (sold separately); the Clek Liing (Maxi-Cosi footprint) uses the Maxi-Cosi/Cybex Twin Roo+ adapter (adapter-joovy-twinroo-mcn). Max 35 lb per car seat. DTC price $249.90 (frame only)."
 }

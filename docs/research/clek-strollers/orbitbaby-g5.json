@@ -31,7 +31,7 @@
     "foldedIn": { "lengthIn": 32.5, "widthIn": 15.5, "heightIn": 13 },
     "_foldedNote": "Frame-only folded 32.5 × 15.5 × 13 in; with seat attached 32.5 × 15.5 × 14 in.",
 
-    "brake": { "hasBrake": true, "type": "one-touch, sandal-friendly foot brake" },
+    "brake": { "hasBrake": true, "type": "one-touch, sandal-friendly foot brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -45,7 +45,12 @@
     "safety": {
       "standards": "ASTM F2050 and ASTM F833; CPSIA compliant",
       "certifications": "JPMA Certified; CA Prop 65 and AB1108 compliant",
-      "notes": "360° SmartHub seat rotation; 5-point harness; Quadshock front-wheel suspension; memory-foam cushioning."
+      "notes": "360° SmartHub seat rotation; 5-point harness; Quadshock front-wheel suspension; memory-foam cushioning.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search — no Orbit Baby G5 stroller recall found" },
+      "jpmaCertified": true,
+      "jpmaSource": "https://orbitbaby.com/products/g5-stroller",
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "compact one-piece 3D fold",
@@ -59,7 +64,8 @@
     "https://orbitbaby.com/products/g5-stroller",
     "https://strolleria.com/products/g5-stroller",
     "https://www.bambibaby.com/products/g5-stroller",
-    "https://www.nordstrom.com/s/orbit-baby-g5-complete-stroller/5622229"
+    "https://www.nordstrom.com/s/orbit-baby-g5-complete-stroller/5622229",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "Modular luxury stroller with 360° SmartHub reversible/rotating seat. ~33.4 lb (frame+seat). $1,200 MSRP, in stock at Orbit Baby DTC, Strolleria and Bambi Baby. On Clek's official Liing/Liingo list via the Orbit Baby 'Car Seat Stroller Adapter' (adapter-orbitbaby-g5), which lists Clek Liing. Note the adapter attaches a non-Orbit infant seat and does NOT work with Orbit's own car-seat base."
 }

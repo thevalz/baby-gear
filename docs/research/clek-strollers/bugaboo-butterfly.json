@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 17.72, "widthIn": 9.06, "heightIn": 21.26 },
     "_dimsNote": "Folded 17.72 x 9.06 x 21.26 in is IATA cabin-compatible (fits overhead bins). Per ANB Baby / Strolleria spec sheets.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated single central parking pedal engaging both rear wheels (flip-flop friendly)" },
+    "brake": { "hasBrake": true, "type": "foot-operated single central parking pedal engaging both rear wheels (flip-flop friendly)", "power": "linked one-step (single central pedal engages both rear wheels)" },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -42,7 +42,16 @@
     "safety": {
       "standards": "Not individually published as a numbered standard by Bugaboo; all strollers sold in the US must comply with 16 CFR 1227 (which incorporates ASTM F833). Bugaboo states its products are tested beyond industry safety standards.",
       "certifications": null,
-      "notes": "5-point harness; JPMA certification not confirmed/published for this model. Max child height not published by manufacturer (null)."
+      "notes": "5-point harness; JPMA certification not confirmed/published for this model. Max child height not published by manufacturer (null).",
+      "recall": {
+        "recalled": false,
+        "checkedAt": "2026-07-06",
+        "source": "CPSC/SaferProducts + Bugaboo product-recalls page; no recall listed for the Bugaboo Butterfly"
+      },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888 (EU-market units)"
     },
 
     "foldType": "one-second, one-hand ultra-compact self-standing fold (IATA cabin-approved)",
@@ -58,7 +67,8 @@
     "https://strolleria.com/pages/all-new-bugaboo-butterfly-2",
     "https://www.bugaboo.com/us-en/accessories/adapters/bugaboo-butterfly-car-seat-adapter-100045MI.html",
     "https://www.babygearlab.com/reviews/getting-around/travel-stroller/bugaboo-butterfly",
-    "https://kidtravel.org/strollers/bugaboo-butterfly-stroller-review/"
+    "https://kidtravel.org/strollers/bugaboo-butterfly-stroller-review/",
+    "https://www.bugaboo.com/us-en/product-recalls/"
   ],
   "notes": "SUPERSEDED generation: the original Butterfly (2022) has been replaced by the Butterfly 2 (2024/2025). Bugaboo.com no longer sells it (that page redirects to Butterfly 2); it remains available at some retailers (Little Sprout $399.99 in stock; ANB Baby $384.99 out of stock; Pottery Barn Kids lists it as No Longer Available). A prime light/compact city+travel candidate: ~16.1 lb, one-second one-hand fold to 17.72 x 9.06 x 21.26 in (cabin size). Key differences vs Butterfly 2: smaller 4.7 in front wheels (vs 5.5 in) and a slightly lower canopy. Clek Liing attaches via the Bugaboo Butterfly car seat adapter 100045001 (adapter-100045001) — distinct from the Butterfly 2 adapter 400018003; the two are NOT interchangeable."
 }

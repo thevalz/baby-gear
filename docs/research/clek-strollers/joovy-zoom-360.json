@@ -27,7 +27,7 @@
     "unfoldedIn": { "lengthIn": 54, "widthIn": 25, "heightIn": 46 },
     "foldedIn": { "lengthIn": 34, "widthIn": 25, "heightIn": 19 },
 
-    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 75,
@@ -40,7 +40,12 @@
     "safety": {
       "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
       "certifications": null,
-      "notes": "5-point harness; lockable swiveling front wheel; rear-wheel suspension; wrist strap. Joovy does not publish a per-model JPMA certification."
+      "notes": "5-point harness; lockable swiveling front wheel; rear-wheel suspension; wrist strap. Joovy does not publish a per-model JPMA certification.",
+      "recall": { "recalled": true, "year": 2022, "url": "https://www.cpsc.gov/Recalls/2022/Joovy-Recalls-Zoom-360-Ultralight-Jogging-Strollers-Due-to-Fall-Hazard-Recall-Alert", "summary": "CPSC Recall Alert: ~9,200 Joovy Zoom 360 Ultralight jogging strollers recalled for a fall/injury hazard — the front wheel fork bearing can fail or detach (25 incidents, 12 detachments, 1 fall with bruises). Scoped to SKUs 8060, 8061, 8067, 8069 with batch numbers 03-XX-20 through 10-XX-20 (sold May-Dec 2020). Remedy: free repair kit replacing the front wheel fork bearing. Later production and other SKUs are outside the recall." },
+      "jpmaCertified": true,
+      "jpmaSource": "https://jpma.vporoom.com/Joovy/",
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "easy one-hand fold",
@@ -54,7 +59,9 @@
     "https://www.joovy.com/products/zoom-360-ultralight-lightweight-performance-jogging-single-stroller-black-1",
     "https://www.amazon.com/Joovy-Ultralight-Jogging-Stroller-Lightweight/dp/B09C1R3FC5",
     "https://www.babygearlab.com/reviews/getting-around/jogging-stroller/joovy-zoom-360-ultralight",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.cpsc.gov/Recalls/2022/Joovy-Recalls-Zoom-360-Ultralight-Jogging-Strollers-Due-to-Fall-Hazard-Recall-Alert",
+    "https://jpma.vporoom.com/Joovy/"
   ],
   "notes": "Lightweight jogging single (26.25 lb) with 16 in rear + 12 in front air-filled tires — a trail/run stroller, closest in role to the owned BOB Alterrain Pro rather than to the city/shopping goal. Unfolded length 54 in with front wheel locked (49 in unlocked). Clek Liing attaches via the Joovy Universal Car Seat Adapter (adapter-joovy-universal). DTC listed at $339.90 but currently backordered (Joovy states 'Estimated Back in Stock Date is August 2026'), so marked out of stock at DTC; available via Amazon (price not machine-readable, left null)."
 }

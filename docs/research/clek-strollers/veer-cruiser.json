@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 37, "widthIn": 20, "heightIn": 14 },
     "_dimsNote": "Base Cruiser open 37 x 20 x 23 in; folded 37 x 20 x 14 in (9 in with wheels removed); 24 in wheelbase. Cruiser XL is 24 in wide (28 in overall). Wagon folds flat, one-hand, self-standing.",
 
-    "brake": { "hasBrake": true, "type": "one-touch foot parking brake" },
+    "brake": { "hasBrake": true, "type": "one-touch foot parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 55,
@@ -43,7 +43,12 @@
     "safety": {
       "standards": "Meets or exceeds ASTM (16 CFR 1227 / ASTM F833) and EN 1888.2 safety standards",
       "certifications": "JPMA Certified",
-      "notes": "Two 3-point safety harnesses (four on Cruiser XL); hose/washable seats; car-seat compatible via adapter (sold separately)."
+      "notes": "Two 3-point safety harnesses (four on Cruiser XL); hose/washable seats; car-seat compatible via adapter (sold separately).",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search — no Veer Cruiser / Cruiser XL wagon recall found" },
+      "jpmaCertified": true,
+      "jpmaSource": "https://goveer.com/products/cruiser",
+      "harness": "3-point",
+      "otherCerts": "EN 1888"
     },
 
     "foldType": "one-hand flat fold, self-standing; wheels removable to shrink to 9 in tall",
@@ -57,7 +62,8 @@
     "https://goveer.com/products/cruiser",
     "https://goveer.com/products/cruiser-xl",
     "https://www.babycubby.com/products/veer-cruiser-xl",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "Wagon, not a conventional stroller. Clek lists 'Cruiser / Cruiser XL' as one row; the NEW Clek/Cybex/Maxi-Cosi/Nuna adapter (available May 2023, adapter-veer-cruiser) EXPLICITLY supports the Clek Liing. seatCount 2 = base All-Terrain Cruiser (Cruiser XL seats 4). Base Cruiser $699 DTC in stock; Cruiser XL $799 (Baby Cubby sold out at check). Max child 55 lb/seat, up to ~45 in / age 5; birth-capable with car seat + adapter or infant insert."
 }

@@ -28,7 +28,8 @@
     },
     "brake": {
       "hasBrake": true,
-      "type": "foot-operated parking brake"
+      "type": "foot-operated parking brake",
+      "power": null
     },
     "capacity": {
       "maxChildWeightLb": 50,
@@ -40,7 +41,17 @@
     "safety": {
       "standards": "ASTM F833 / 16 CFR 1227; JPMA Certified",
       "certifications": "JPMA Certified (Baby Jogger)",
-      "notes": "5-point harness; one-hand fold with auto-lock."
+      "notes": "5-point harness; one-hand fold with auto-lock.",
+      "recall": {
+        "recalled": false,
+        "checkedAt": "2026-07-06",
+        "source": "CPSC/SaferProducts search",
+        "note": "CPSC's 2009 Baby Jogger City Mini fall-hazard (buckle) recall covered only the original City Mini single/double (sold 2007-2009) and explicitly does not include the City Mini 2."
+      },
+      "jpmaCertified": true,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null
     },
     "foldType": "one-hand compact fold, self-standing",
     "strollerType": "compact / urban",
@@ -51,7 +62,9 @@
   "sources": [
     "https://strollberry.com/strollers/baby-jogger-city-mini2/",
     "https://www.babyjogger.com/strollers/shop-all-strollers/compact-and-lightweight/city-mini-2-stroller/SP_1461673.html",
-    "https://www.babygearlab.com/reviews/getting-around/travel-stroller/baby-jogger-city-mini-2"
+    "https://www.babygearlab.com/reviews/getting-around/travel-stroller/baby-jogger-city-mini-2",
+    "https://www.cpsc.gov/Recalls/2009/Baby-Jogger-Recalls-Strollers-Due-to-Fall-Hazard",
+    "https://www.babyjogger.com/product-recall.html"
   ],
   "notes": "The lighter city sibling (plastic 8\" wheels, front-wheel suspension only). On Clek's list via Baby Jogger City Mini 2 adapter 2083991 (Cybex/Clek), which Clek flags DISCONTINUED. MSRP ~$279.99 reference — reconfirm current stock/price.",
   "price": 279.99

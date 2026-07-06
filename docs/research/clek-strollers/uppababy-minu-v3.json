@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 10, "widthIn": 18, "heightIn": 21.5 },
     "_foldNote": "IATA-compatible folded footprint for airplane overhead bins.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -42,6 +42,11 @@
     "safety": {
       "standards": "Meets/exceeds ASTM F833 (US carriages & strollers)",
       "certifications": "JPMA Certified; GREENGUARD Gold Certified",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "No CPSC/SaferProducts recall found for the current UPPAbaby MINU V3." },
+      "jpmaCertified": true,
+      "jpmaSource": "https://support.uppababy.com/hc/en-us/articles/115009544627-Are-UPPAbaby-products-JPMA-ASTM-compliant",
+      "harness": "5-point",
+      "otherCerts": null,
       "notes": "5-point adjustable no-rethread harness; foot barrier; UPF 50+ canopy; all-wheel suspension with independent rear suspension; one-hand self-standing fold."
     },
 

@@ -29,7 +29,8 @@
     },
     "brake": {
       "hasBrake": true,
-      "type": "hand-operated parking brake (on handlebar)"
+      "type": "hand-operated parking brake (on handlebar)",
+      "power": null
     },
     "capacity": {
       "maxChildWeightLb": 45,
@@ -41,7 +42,17 @@
     "safety": {
       "standards": "ASTM F833 / 16 CFR 1227; JPMA Certified",
       "certifications": "JPMA Certified (Baby Jogger)",
-      "notes": "5-point harness; one-hand fold with auto-lock."
+      "notes": "5-point harness; one-hand fold with auto-lock.",
+      "recall": {
+        "recalled": false,
+        "checkedAt": "2026-07-06",
+        "source": "CPSC/SaferProducts search",
+        "note": "No recall on the City Select stroller itself. Baby Jogger's 2013 CPSC recall covered the Select/Versa car-seat ADAPTER (support bars failing, car seats falling) — not the stroller."
+      },
+      "jpmaCertified": true,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null
     },
     "foldType": "fold with seats on",
     "strollerType": "modular convertible (double)",
@@ -51,7 +62,10 @@
   },
   "sources": [
     "https://strollberry.com/strollers/baby-jogger-city-select/",
-    "https://www.peppyparents.com/blogs/strollers/baby-jogger-city-select-stroller-faqs"
+    "https://www.peppyparents.com/blogs/strollers/baby-jogger-city-select-stroller-faqs",
+    "https://www.cpsc.gov/Recalls/2009/Baby-Jogger-Recalls-Strollers-Due-to-Fall-Hazard",
+    "https://www.cpsc.gov/Recalls/2013/Baby-Jogger-Recalls-Car-Seat-Adaptors-for-Strollers",
+    "https://www.babyjogger.com/product-recall.html"
   ],
   "notes": "City Select in double mode (second seat added); ~37 lb with both seats, per-seat max 45 lb. On Clek's list via City Select adapter 2013551 (x2) plus the City Select Second Seat adapter 2011985 — both DISCONTINUED per Clek, with the lowest-handle-position car-seat caveat. Unfolded 43.5 x 25.8 x 41.5 in reflects the shared City Select frame footprint (Strollberry 105.5 x 65.5 x 110.5-119 cm, h x w x l); double mode adds a stacked second seat that raises overall height above the 41.5 in frame figure — no distinct published double-mode height. MSRP ~$499.99 reference.",
   "price": 499.99

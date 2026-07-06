@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 20.9, "widthIn": 17.3, "heightIn": 9.2 },
     "_dimsNote": "IATA cabin-carry compliant one-hand fold. Second-generation Aer with from-birth-capable seat recline.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated parking brake (rear pedal)" },
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake (rear pedal)", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -42,7 +42,12 @@
     "safety": {
       "standards": "EN 1888-2 (published by Joolz). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
       "certifications": null,
-      "notes": "5-point harness; one-hand one-second self-standing fold; larger 4.5-gal basket (17.6 lb) vs Aer+. JPMA mark not published by Joolz."
+      "notes": "5-point harness; one-hand one-second self-standing fold; larger 4.5-gal basket (17.6 lb) vs Aer+. JPMA mark not published by Joolz.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "The Aer 2 stroller itself is NOT recalled. However, CPSC announced a recall (June 18, 2026) of the Joolz Aer2 Car Seat Adapters (adapter-joolz-aer-2; product IDs beginning NL311, sold Jun 2025–May 2026): the adapter can fail to attach to the chassis, allowing the car seat to fall. Remedy is a full refund. CPSC explicitly states only the adapter, not the stroller, is involved." },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888-2"
     },
 
     "foldType": "one-hand one-second self-standing compact / airline-cabin fold",
@@ -56,7 +61,8 @@
     "https://www.joolz.com/us/en/strollers/440200-M.html",
     "https://strolleria.com/products/joolz-aer-buggy-single-stroller",
     "https://www.forbes.com/sites/forbes-personal-shopper/article/joolz-aer2-review/",
-    "https://www.nordstrom.com/s/joolz-aer2-lightweight-travel-stroller/8546291"
+    "https://www.nordstrom.com/s/joolz-aer2-lightweight-travel-stroller/8546291",
+    "https://www.cpsc.gov/Recalls/2026/Joolz-Recalls-Aer2-Car-Seat-Adapters-for-Strollers-Due-to-Risk-of-Serious-Injury-from-Fall-Hazard"
   ],
   "notes": "Current-generation Aer 2 (SKU 440200); 14.3 lb, from-birth capable, larger basket than Aer+. Clek lists 'Aer 2' as its own row with a distinct 'Aer 2 Car Seat Adapters' part (adapter-joolz-aer-2) — the Aer+ adapter does NOT fit the Aer 2 frame. The Aer 2 adapter listing explicitly names Clek. Best cited price $579 (Joolz DTC / Strolleria / Nordstrom, all in stock)."
 }

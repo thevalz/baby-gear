@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 21.0, "widthIn": 17.7, "heightIn": 8.5 },
     "_dimsNote": "Joolz US spec 83 x 45 x 105 cm open; 53 x 45 x 22 cm folded. IATA cabin-carry compliant.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated parking brake (rear pedal)" },
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake (rear pedal)", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -42,7 +42,12 @@
     "safety": {
       "standards": "EN 1888-2 (published by Joolz). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
       "certifications": null,
-      "notes": "5-point harness; one-hand one-second fold with auto-lock; carry strap. Joolz does not publish a JPMA mark on this model."
+      "notes": "5-point harness; one-hand one-second fold with auto-lock; carry strap. Joolz does not publish a JPMA mark on this model.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "No recall for the Aer/Aer+ stroller. A June 2026 CPSC recall covered the separate Joolz Aer2 car-seat adapter (different, newer model), not the Aer+ or its adapter." },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888-2"
     },
 
     "foldType": "one-hand one-second self-standing compact / airline-cabin fold",

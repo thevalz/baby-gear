@@ -31,7 +31,8 @@
 
     "brake": {
       "hasBrake": true,
-      "type": "single-pedal foot brake engaging both rear wheels"
+      "type": "single-pedal foot brake engaging both rear wheels",
+      "power": null
     },
 
     "capacity": {
@@ -45,7 +46,12 @@
     "safety": {
       "standards": "Meets US ASTM F833 / 16 CFR 1227 carriage & stroller standard",
       "certifications": "5-point harness (adjustable slot heights 9.5/12.5/15 in); all-wheel suspension. JPMA certification not confirmed on Britax/retailer pages.",
-      "notes": "Extra-large front-access storage basket (lb capacity not published). Handle single fixed height; near-flat recline (~24°–55° range)."
+      "notes": "Extra-large front-access storage basket (lb capacity not published). Handle single fixed height; near-flat recline (~24°–55° range).",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "No recall found for the B-Lively. Other Britax models were recalled (2017 B-Agile/BOB Motion Click & Go travel-system car-seat detachment; 2016 B-Ready arm-bar; 2011 B-Nimble brake), but not the B-Lively." },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "one-hand quick fold in one motion (pull strap in seat), self-standing",
@@ -59,7 +65,9 @@
     "https://kidtravel.org/strollers/britax-b-lively-stroller-review/",
     "https://us.britax.com/shop/retired/britax-b-lively-lightweight-stroller",
     "https://pishposhbaby.com/blogs/blog/britax-b-lively-stroller",
-    "https://www.amazon.com/Britax-B-Lively-Lightweight-Stroller-Raven/dp/B07D15XKGY"
+    "https://www.amazon.com/Britax-B-Lively-Lightweight-Stroller-Raven/dp/B07D15XKGY",
+    "https://www.cpsc.gov/Recalls/2017/Britax-Recalls-Strollers",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "Lightest full-featured single in this batch (20 lb), one-hand self-standing fold (29 x 23 x 12 in) — the most city/shopping-friendly of the S3 strollers. Clek Liing attaches via Britax's Click & Go Maxi-Cosi/Cybex/Nuna adapter (adapter-britax-clickngo): the Liing shares the Maxi-Cosi footprint and Clek's official list names the Click'n Go adapter for the B-Lively. $239.99 MSRP is well under a typical stroller budget."
 }

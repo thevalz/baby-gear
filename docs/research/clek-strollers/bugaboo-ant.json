@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 9, "widthIn": 14.9, "heightIn": 21.6 },
     "_foldedNote": "Ultra-compact fold ~9 (depth) × 14.9 × 21.6 in; fits most airline overhead bins.",
 
-    "brake": { "hasBrake": true, "type": "central push-down/lift-up foot pedal parking brake" },
+    "brake": { "hasBrake": true, "type": "central push-down/lift-up foot pedal parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 48.5,
@@ -43,7 +43,16 @@
     "safety": {
       "standards": "Not published on Bugaboo's Ant spec page. Sold in the US, so it must meet the mandatory federal stroller standard 16 CFR 1227 (incorporates ASTM F833) to be marketed; EU units carry EN 1888. No explicit standard is printed by the manufacturer, so not asserted as certified.",
       "certifications": "No JPMA or Greenguard certification is published for the Ant on the manufacturer or retailer pages reviewed.",
-      "notes": "5-point harness; reversible seat with lie-flat rear-facing recline; integrated wheel suspension; carry strap. Adapter-mounted infant car seats limited to 28.7 lb child weight."
+      "notes": "5-point harness; reversible seat with lie-flat rear-facing recline; integrated wheel suspension; carry strap. Adapter-mounted infant car seats limited to 28.7 lb child weight.",
+      "recall": {
+        "recalled": false,
+        "checkedAt": "2026-07-06",
+        "source": "CPSC/SaferProducts + Bugaboo product-recalls page; no recall listed for the Bugaboo Ant"
+      },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888 (EU-market units)"
     },
 
     "foldType": "one-hand ultra-compact fold, self-standing, airline-cabin friendly",
@@ -58,7 +67,8 @@
     "https://www.bugaboo.com/us-en/strollers/bugaboo-ant/bugaboo-ant-sit-and-stand-travel-stroller-PM00003.html",
     "https://www.megababiesusa.com/products/bugaboo-ant-lightweight-stroller",
     "https://strollberry.com/strollers/bugaboo-ant/",
-    "https://www.lucieslist.com/review/bugaboo-ant-stroller-review/"
+    "https://www.lucieslist.com/review/bugaboo-ant-stroller-review/",
+    "https://www.bugaboo.com/us-en/product-recalls/"
   ],
   "notes": "Light/compact city stroller: ~15.8 lb, one-hand ultra-compact fold (~9 × 14.9 × 21.6 in) that fits overhead bins — a strong lightweight complement to the owned BOB Alterrain Pro (which covers jogging/all-terrain). Distinctive vs peers: the seat is genuinely reversible (rare in this compact class) and reclines lie-flat rear-facing, so it is newborn-suitable from birth without a bassinet. Best cited price $549 (Mega Babies) vs $678.95 Bugaboo DTC MSRP. STOCK: currently out of stock at both Bugaboo DTC and Mega Babies; the Ant is being phased out in favor of the Bugaboo Butterfly, so availability is spotty (open-box/other retailers like Albee Baby intermittently list it). Clek Liing attaches via the Bugaboo Ant 'Nuna/Cybex' adapter 91510CS01 (adapter-91510cs01). FOOTPRINT NOTE: although Clek's list files the Ant under a Nuna/Cybex adapter and the Liing is often described as a Maxi-Cosi-style seat, Bugaboo's OWN 91510CS01 product page explicitly lists 'Clek Liing' as compatible — so the manufacturer corroborates Clek's list; the Liing's stroller-mount interface matches the Nuna/Cybex bracket on this adapter (28.7 lb adapter weight limit). Bugaboo's official page does NOT list Maxi-Cosi (some third-party retailers add it) — see adapter fragment."
 }

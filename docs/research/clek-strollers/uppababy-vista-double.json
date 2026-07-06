@@ -30,7 +30,7 @@
     "foldedIn": { "lengthIn": 16.3, "widthIn": 25.7, "heightIn": 33.8 },
     "_dimsNote": "Same chassis footprint as Vista single (in-line double stacks vertically, not wider). Fold dims are for the frame + toddler seat; RumbleSeat removed to fold.",
 
-    "brake": { "hasBrake": true, "type": "single-action foot-operated parking brake" },
+    "brake": { "hasBrake": true, "type": "single-action foot-operated parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -44,6 +44,11 @@
     "safety": {
       "standards": "Meets/exceeds ASTM F833 (US carriages & strollers)",
       "certifications": "JPMA Certified; GREENGUARD Gold Certified",
+      "recall": { "recalled": true, "year": 2015, "url": "https://www.cpsc.gov/Recalls/2015/UPPAbaby-Recalls-Strollers-and-RumbleSeats", "summary": "Two historical UPPAbaby recalls touch this Vista+RumbleSeat double config: (1) 2015 bumper-bar choking recall (CPSC, Jul 23 2015) covering the 2015 VISTA/CRUZ/RumbleSeat foam bumper bar (~71,000 units; free bumper-bar cover); and (2) the 2021 recall of the RumbleSeat accessory adapters included with RumbleSeat models 0252/0917/0918 made Sept 2014-Jul 2019 (child fall hazard; free replacement adapters) — https://www.cpsc.gov/Recalls/2021/UPPAbaby-Recalls-Adapters-Included-with-RumbleSeats-Due-to-Child-Fall-Hazard . Both affected earlier production; the current Vista V3 + RumbleSeat V3 are not subject to either." },
+      "jpmaCertified": true,
+      "jpmaSource": "https://support.uppababy.com/hc/en-us/articles/115009544627-Are-UPPAbaby-products-JPMA-ASTM-compliant",
+      "harness": "5-point",
+      "otherCerts": null,
       "notes": "5-point harness on both seats; in-line (tandem) double; RumbleSeat forward- or parent-facing."
     },
 
@@ -59,7 +64,9 @@
     "https://uppababy.com/accessories/strollers-accessories/rumbleseat-v3/",
     "https://www.albeebaby.com/products/uppababy-vista-v3-double-stroller-with-rumbleseat-v3-bundle-owen",
     "https://support.uppababy.com/hc/en-us/articles/115009544627-Are-UPPAbaby-products-JPMA-ASTM-compliant",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.cpsc.gov/Recalls/2015/UPPAbaby-Recalls-Strollers-and-RumbleSeats",
+    "https://www.cpsc.gov/Recalls/2021/UPPAbaby-Recalls-Adapters-Included-with-RumbleSeats-Due-to-Child-Fall-Hazard"
   ],
   "notes": "Vista in double mode = Vista V3 chassis ($999.99) + separately purchased RumbleSeat V3 ($299.99), effective ~$1,299.98. In double mode a Clek Liing can ride upper (adapter-clek-uppababy) and/or lower via UPPAbaby's lower adapter 0918-LMA-WW (adapter-0918-lma-ww) — hence two adapterIds. Clek compatibility applies only to 2015+ units. Large full-size tandem — far from the light city goal but a top growing-family choice. Image reuses the Vista V3 chassis shot."
 }

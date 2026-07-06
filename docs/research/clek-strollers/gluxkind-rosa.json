@@ -27,7 +27,7 @@
     "foldedIn": { "lengthIn": 30, "widthIn": 27, "heightIn": 15 },
     "_dimsNote": "Per Glüxkind's DTC spec (shop.gluxkind.com): unfolded 40 L x 27 W x 43 H in; folded 30 L x 27 W x 15 H in (battery/seat/bassinet removed before folding).",
 
-    "brake": { "hasBrake": true, "type": "intelligent/automatic braking + automatic parking (dual-motor assist)" },
+    "brake": { "hasBrake": true, "type": "intelligent/automatic braking + automatic parking (dual-motor assist)", "power": "Electronic dual-brake system: intelligent brake assistance plus automatic parking. Uses gradient (hill) detection with dual-stage braking driven by the 500W dual-motor drive to hold position automatically on inclines and when the handle is released (hands-free hold). No published stopping-distance/tether spec; brake performance is software/motor-controlled rather than a mechanical tether." },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -40,7 +40,12 @@
     "safety": {
       "standards": "Sold into the US market; meets applicable US stroller standard (ASTM F833) though Glüxkind does not cite the standard number publicly",
       "certifications": "CES Innovation Award honoree",
-      "notes": "500W duo-motor push assist; automatic/intelligent braking + automatic parking; Rock-My-Baby auto-rocking; built-in white noise; Companion App connected care. Handle presence keeps motor assist safe. Made in Canada."
+      "notes": "500W duo-motor push assist; automatic/intelligent braking + automatic parking; Rock-My-Baby auto-rocking; built-in white noise; Companion App connected care. Handle presence keeps motor assist safe. Made in Canada.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search — no Glüxkind Rosa (or Ella) smart-stroller recall found" },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "folding smart-stroller frame (Travel Edition offers flight-compliant modular battery)",
@@ -54,7 +59,8 @@
     "https://shop.gluxkind.com/products/gluxkind-rosa-smart-stroller",
     "https://gluxkind.com/car-seats",
     "https://gluxkind.com/rosa-smart-stroller",
-    "https://newatlas.com/around-the-home/gluxkind-ella-electric-assist-stroller/"
+    "https://newatlas.com/around-the-home/gluxkind-ella-electric-assist-stroller/",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "IMPORTANT model note: Clek lists 'Glüxkind Rosa'. Rosa is Glüxkind's in-market smart stroller ($2,290 DTC, in stock, made in Canada) and is 'certified compatible with Clek Liing and Clek Liingo' — the correct match for this catalog. The experimental self-driving 'Ella' ($3,800, special-order) is a separate model on the same platform; do not conflate the price. Rosa attaches the Clek Liing via the Glüxkind Car Seat Adapter (adapter-gluxkind-universal, $70). Glüxkind's DTC spec now publishes frame weight 33 lb, unfolded 40x27x43 in, folded 30x27x15 in (total assembled weight still unpublished). Max child weight 50 lb; bassinet-from-birth + lay-flat toddler seat; 500W dual-motor with automatic braking."
 }

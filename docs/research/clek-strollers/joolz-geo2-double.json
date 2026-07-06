@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 16.5, "widthIn": 23.6, "heightIn": 39.0 },
     "_dimsNote": "Same one-piece fold footprint as single; second seat/carrycot stacks on the frame.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up pedal brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up pedal brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 45,
@@ -42,7 +42,12 @@
     "safety": {
       "standards": "EN 1888 (Joolz). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
       "certifications": null,
-      "notes": "5-point harness each seat; main seat 3-position recline (lie-flat), second seat 2 positions. In duo/double config the lower seat/car seat/carrycot occupies the basket space (no shopping basket). Clek notes a lowest-position caveat with a car seat fitted."
+      "notes": "5-point harness each seat; main seat 3-position recline (lie-flat), second seat 2 positions. In duo/double config the lower seat/car seat/carrycot occupies the basket space (no shopping basket). Clek notes a lowest-position caveat with a car seat fitted.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888"
     },
 
     "foldType": "one-motion compact one-piece fold",

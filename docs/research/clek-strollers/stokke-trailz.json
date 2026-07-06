@@ -28,7 +28,7 @@
     "foldedIn": { "lengthIn": 24.8, "widthIn": 19.7, "heightIn": 37.4 },
     "_dimsNote": "Open 127 × 62 × 95.5 cm (H×W×L); folded 95 × 50 × 63 cm (H×W×L). Bulky fold.",
 
-    "brake": { "hasBrake": true, "type": "push down / lift up foot pedal brake" },
+    "brake": { "hasBrake": true, "type": "push down / lift up foot pedal brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 45,
@@ -42,6 +42,11 @@
     "safety": {
       "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (required for US sale)",
       "certifications": "not published on the product page",
+      "recall": { "recalled": true, "year": 2015, "url": "https://www.cpsc.gov/Recalls/2015/Stokke-Recalls-Trailz-Strollers-Due-to-Fall-Hazard", "summary": "Stokke recalled ~400 Trailz strollers (CPSC, Apr 1 2015): the stroller handle can break while in use, posing a fall hazard. Limited to chassis+seat units sold Nov-Dec 2014; remedy was a free repair. Later Trailz production is not covered." },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null,
       "notes": "5-point harness; all-terrain suspension; reversible seat."
     },
 
@@ -56,7 +61,8 @@
     "https://strollberry.com/strollers/stokke-trailz-classic/",
     "https://www.stokke.com/USA/en-us/customer-service/faq/faq-stokke-trailz/faq-stokke-trailz-q-7.html",
     "https://recom.onsitesupport.io/stokke/knowledge-base/article/what-are-the-weight-and-dimensions-of-the-stokke-trailz-stroller",
-    "https://www.nordstrom.com/s/stokke-trailz-all-terrain-stroller/4006064"
+    "https://www.nordstrom.com/s/stokke-trailz-all-terrain-stroller/4006064",
+    "https://www.cpsc.gov/Recalls/2015/Stokke-Recalls-Trailz-Strollers-Due-to-Fall-Hazard"
   ],
   "notes": "Full-size all-terrain pram (~32 lb, foam tires + suspension) — overlaps the BOB Alterrain Pro's role, not a portability pick; scores low on the portability lens. Clek Liing attaches via the Stokke Multi adapter 321500 (adapter-321500). Price ~$1,099 MSRP (Nordstrom); reconfirm current sale/stock."
 }

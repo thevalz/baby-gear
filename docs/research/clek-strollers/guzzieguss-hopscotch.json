@@ -28,7 +28,7 @@
     "foldedIn": { "lengthIn": null, "widthIn": null, "heightIn": null },
     "_dimsNote": "Overall folded/unfolded footprint not published in inches by any accessible source (left null). Seat: depth 9.5 in (24 cm), width 13 in (33 cm), back height 21 in (54 cm).",
 
-    "brake": { "hasBrake": true, "type": "one-step (flip-flop-friendly) parking brake" },
+    "brake": { "hasBrake": true, "type": "one-step (flip-flop-friendly) parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -41,7 +41,12 @@
     "safety": {
       "standards": "US/Canada stroller standard (ASTM F833) presumed; not explicitly published by Guzzie+Guss",
       "certifications": null,
-      "notes": "5-point harness; removable bumper bar; front and rear suspension."
+      "notes": "5-point harness; removable bumper bar; front and rear suspension.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search — no Guzzie+Guss Hopscotch recall found (brand publishes a safety/recall page listing no active Hopscotch recall)" },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "one-hand fold; folds with seat on (forward or reverse facing)",
@@ -55,7 +60,9 @@
     "https://www.albeebaby.com/products/guzzie-guss-hopscotch-stroller-raven",
     "https://www.amazon.com/guzzie-Guss-Hopscotch-Full-Sized-Stroller/dp/B08JJ3X8D4",
     "https://www.tjskids.com/en/guzzie-and-guss-hopscotch-full-size-stroller.html",
-    "https://guzzieandguss.com/product/hopscotch/"
+    "https://guzzieandguss.com/product/hopscotch/",
+    "https://guzzieandguss.com/safety-recall-notice/",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "Full-size reversible-seat stroller, 23 lb, 50 lb max, from birth. Its signature selling point: car seat adapters for Clek, Maxi-Cosi, Nuna and Cybex are INCLUDED FREE (see adapter-guzzieguss-incl). US RETAIL GAP: the model appears discontinued at Guzzie+Guss (absent from their current 16-product Shopify catalog) and is 'Currently unavailable' on Amazon US; Albee Baby still lists it but its price is behind Cloudflare. Best confirmed price reference is Canadian (~CA$729.99 MSRP at TJ's Kids). Overall folded/unfolded inch dimensions are not published anywhere accessible — left null rather than guessed."
 }

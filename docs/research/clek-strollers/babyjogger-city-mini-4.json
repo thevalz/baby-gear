@@ -28,7 +28,8 @@
     },
     "brake": {
       "hasBrake": true,
-      "type": "foot-operated parking brake"
+      "type": "foot-operated parking brake",
+      "power": null
     },
     "capacity": {
       "maxChildWeightLb": 65,
@@ -40,7 +41,17 @@
     "safety": {
       "standards": "ASTM F833 / 16 CFR 1227; JPMA Certified",
       "certifications": "JPMA Certified (Baby Jogger)",
-      "notes": "5-point harness; one-hand fold with auto-lock."
+      "notes": "5-point harness; one-hand fold with auto-lock.",
+      "recall": {
+        "recalled": false,
+        "checkedAt": "2026-07-06",
+        "source": "CPSC/SaferProducts search",
+        "note": "CPSC's 2009 Baby Jogger City Mini fall-hazard (buckle) recall covered only the original City Mini single/double (sold 2007-2009) and explicitly does not include the City Mini 4."
+      },
+      "jpmaCertified": true,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null
     },
     "foldType": "one-hand compact fold",
     "strollerType": "4-wheel urban (discontinued)",
@@ -50,7 +61,9 @@
   },
   "sources": [
     "https://strollberry.com/strollers/baby-jogger-city-mini-4/",
-    "https://www.momsstrollerreviews.com/baby-jogger-city-mini-4-wheel-stroller-review/"
+    "https://www.momsstrollerreviews.com/baby-jogger-city-mini-4-wheel-stroller-review/",
+    "https://www.cpsc.gov/Recalls/2009/Baby-Jogger-Recalls-Strollers-Due-to-Fall-Hazard",
+    "https://www.babyjogger.com/product-recall.html"
   ],
   "notes": "The 4-wheel City Mini variant. On Clek's list via the Maxi-Cosi Mounting Bracket 1967208 — Clek flags it DISCONTINUED. Discontinued model; unfolded 39.6 x 24.0 x 41.5 in derived from Strollberry (105.5 x 61 x 100.5 cm, h x w x l); MSRP ~$299.99 reference.",
   "price": 299.99

@@ -28,7 +28,7 @@
     "unfoldedIn": { "lengthIn": 33, "widthIn": 25.5, "heightIn": 40 },
     "foldedIn": { "lengthIn": 18, "widthIn": 25.5, "heightIn": 34 },
 
-    "brake": { "hasBrake": true, "type": "large one-step foot parking brake" },
+    "brake": { "hasBrake": true, "type": "large one-step foot parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -42,7 +42,12 @@
     "safety": {
       "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833",
       "certifications": "Not explicitly confirmed in retrieved sources (JPMA status unverified).",
-      "notes": "5-point harness; FullShade UPF 50+ canopy + LegShade with ventilated mesh; four-wheel suspension; lockable front swivel wheels; reversible seat with lay-flat mode."
+      "notes": "5-point harness; FullShade UPF 50+ canopy + LegShade with ventilated mesh; four-wheel suspension; lockable front swivel wheels; reversible seat with lay-flat mode.",
+      "recall": { "recalled": true, "year": 2022, "url": "https://www.cpsc.gov/Recalls/2023/Mockingbird-Recalls-Single-to-Double-Strollers-Due-to-Fall-Hazard", "summary": "Mockingbird recalled ~149,000 Single-to-Double Strollers (announced 2022-11-10) because the lower frame can crack, posing a fall hazard; 138 crack reports and 8 injuries. Remedy: free frame-reinforcement kit (two side clamps). Expanded 2023-03-17 to ~25,390 Single Strollers. Applied to earlier production lots 20091–22602; the current redesigned 3.0 is sold as remedied — verify lot number on any used/older unit." },
+      "jpmaCertified": true,
+      "jpmaSource": "https://mommyhood101.com/mockingbird-3-stroller-review",
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "one-hand fold, self-standing",
@@ -57,7 +62,9 @@
     "https://hellomockingbird.com/products/mockingbird-double-stroller",
     "https://mommyhood101.com/mockingbird-3-stroller-review",
     "https://www.thebump.com/a/mockingbird-stroller-review",
-    "https://www.amazon.com/Mockingbird-Single-Double-Stroller-2-0/dp/B0F3WYZNNK"
+    "https://www.amazon.com/Mockingbird-Single-Double-Stroller-2-0/dp/B0F3WYZNNK",
+    "https://www.cpsc.gov/Recalls/2023/Mockingbird-Recalls-Single-to-Double-Strollers-Due-to-Fall-Hazard",
+    "https://www.cpsc.gov/Recalls/2023/Mockingbird-Expands-Recall-to-Include-Single-Strollers-Due-to-Fall-Hazard"
   ],
   "notes": "Single-to-double convertible: ships as a single (seatCount 1) and expands to 2 (up to 3 riders) with add-on seats — 44 possible configurations. Open 33 × 25.5 × 40 in; folds to 18 × 25.5 × 34 in; ~27 lb single / ~35 lb double; 25 lb basket. Sold MOSTLY DIRECT-TO-CONSUMER at hellomockingbird.com ($475 single config, currently sold out) with limited third-party (Amazon $549 for the Single-to-Double 3.0; also Target/Babylist). On Clek's official Liing/Liingo list via Mockingbird's own 'Clek Liing Car Seat Adapter' (adapter-mockingbird-clek)."
 }

@@ -31,7 +31,7 @@
     "foldedIn": { "lengthIn": 14.2, "widthIn": 20.5, "heightIn": 35.4 },
     "_foldedNote": "One-piece self-standing compact fold (seat need not be removed): 36 x 52 x 90 cm = 14.2 x 20.5 x 35.4 in.",
 
-    "brake": { "hasBrake": true, "type": "push-push foot pedal parking brake (flat/flip-flop friendly)" },
+    "brake": { "hasBrake": true, "type": "push-push foot pedal parking brake (flat/flip-flop friendly)", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 48.5,
@@ -45,7 +45,17 @@
     "safety": {
       "standards": "Not explicitly published on Bugaboo's Dragonfly spec page. Sold in the US, so it must meet the mandatory federal stroller standard 16 CFR 1227 (which incorporates ASTM F833) to be marketed; EU-market units carry EN 1888. No specific standard number is printed by the manufacturer, so none is asserted as certified here.",
       "certifications": "No JPMA or Greenguard certification is published for the Dragonfly on the manufacturer or retailer pages reviewed.",
-      "notes": "5-point safety harness (pre-assembled). Reversible seat with full lie-flat recline for newborns; front-wheel suspension; leatherette telescopic handlebar. Car-seat-adapter mode uses Maxi-Cosi-footprint infant seats."
+      "notes": "5-point safety harness (pre-assembled). Reversible seat with full lie-flat recline for newborns; front-wheel suspension; leatherette telescopic handlebar. Car-seat-adapter mode uses Maxi-Cosi-footprint infant seats.",
+      "recall": {
+        "recalled": true,
+        "year": 2023,
+        "url": "https://www.cpsc.gov/Recalls/2024/Bugaboo-Recalls-Dragonfly-Seat-Strollers-Due-to-Injury-Hazard-Recall-Alert",
+        "summary": "Dec 2023 CPSC recall (#24-730, injury hazard): in parent-facing mode the Dragonfly seat backrest can move down into a negative recline, risking an unrestrained infant tumbling out; ~1,000 US seats sold May-Jun 2023 with specific serial-number prefixes. Recall is on the seat component only."
+      },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888 (EU-market units)"
     },
 
     "foldType": "one-hand, one-piece self-standing compact fold (fold in any seat position without removing the seat or bassinet)",
@@ -61,7 +71,8 @@
     "https://strollberry.com/strollers/bugaboo-dragonfly/",
     "https://strolleria.com/products/bugaboo-dragonfly-stroller-1",
     "https://www.nordstrom.com/s/bugaboo-dragonfly-seat-stroller/7463547",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.cpsc.gov/Recalls/2024/Bugaboo-Recalls-Dragonfly-Seat-Strollers-Due-to-Injury-Hazard-Recall-Alert"
   ],
   "notes": "The Bugaboo Dragonfly (launched 2023) is a lightweight yet full-feature compact city stroller: ~21.8 lb with seat, one-hand self-standing compact fold (14.2 x 20.5 x 35.4 in), reversible seat that reclines fully lie-flat (newborn-suitable from birth without a bassinet), 3 recline positions, 22 lb basket, and rubber-coated wheels with front suspension. A strong compact-city candidate to complement the owned BOB Alterrain Pro (jogger/all-terrain). CLEK FIT: on Clek's official Liing/Liingo compatibility list; the Bugaboo Dragonfly Maxi-Cosi car seat adapter (adapter-bugaboo-dragonfly) explicitly names the Clek Liing as a compatible seat on Bugaboo's own adapter page, so the fit is manufacturer-corroborated. ADAPTER = FREE: Clek's list files this row as 'Included with stroller' — the Maxi-Cosi car seat adapters are bundled in the Dragonfly box, so no separate part number needs buying (Bugaboo does also sell a standalone replacement adapter, 400003001, ~$69.95). PRICE: best cited $934.15 at Nordstrom (seat stroller, on sale, low stock) vs $1,099 at Strolleria (complete config). STOCK: retired on Bugaboo US DTC (replaced by Dragonfly Plus) but in stock at authorized retailers (Nordstrom, Strolleria)."
 }

@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 19, "widthIn": 27, "heightIn": 35 },
     "_dimsNote": "Open 44 x 27 x 39 in (handle low, front wheel locked). Folded with seat 19 x 27 x 35 in; folded without seat 19 x 27 x 33 in.",
 
-    "brake": { "hasBrake": true, "type": "foot parking brake plus hand-operated deceleration/drag brake for downhill jogging" },
+    "brake": { "hasBrake": true, "type": "foot parking brake plus hand-operated deceleration/drag brake for downhill jogging", "power": "Adds a hand-operated deceleration/drag brake on the handlebar for controlled downhill speed while jogging, in addition to the foot parking brake; wrist safety strap. No published stopping-distance figure." },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -43,7 +43,12 @@
     "safety": {
       "standards": "Meets or exceeds ASTM (16 CFR 1227 / ASTM F833) and EN 1888.2 safety standards",
       "certifications": "JPMA Certified",
-      "notes": "5-point safety harness; fixed/lockable front wheel for jogging; deceleration hand brake; wrist strap."
+      "notes": "5-point safety harness; fixed/lockable front wheel for jogging; deceleration hand brake; wrist strap.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search — no Veer Switchback recall found" },
+      "jpmaCertified": true,
+      "jpmaSource": "https://goveer.com/products/switch-jog-jogging-stroller",
+      "harness": "5-point",
+      "otherCerts": "EN 1888"
     },
 
     "foldType": "one-hand open and fold (seat can stay on or come off)",

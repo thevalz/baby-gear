@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 17.6, "widthIn": 9.6, "heightIn": 21.8 },
     "_dimsNote": "Bugaboo official: unfolded 37.2 x 17.6 x 40.5 in; folded 17.6 x 9.6 x 21.8 in (IATA-compatible for overhead bins). Handlebar height 40.3 in.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated single central parking pedal engaging both rear wheels (flip-flop friendly)" },
+    "brake": { "hasBrake": true, "type": "foot-operated single central parking pedal engaging both rear wheels (flip-flop friendly)", "power": "linked one-step (single central pedal engages both rear wheels)" },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -42,7 +42,16 @@
     "safety": {
       "standards": "Not individually published as a numbered standard by Bugaboo; all strollers sold in the US must comply with 16 CFR 1227 (which incorporates ASTM F833). Bugaboo states its products are tested beyond industry safety standards.",
       "certifications": null,
-      "notes": "5-point harness; JPMA certification not confirmed/published for this model. Max child height not published by manufacturer (null)."
+      "notes": "5-point harness; JPMA certification not confirmed/published for this model. Max child height not published by manufacturer (null).",
+      "recall": {
+        "recalled": false,
+        "checkedAt": "2026-07-06",
+        "source": "CPSC/SaferProducts + Bugaboo product-recalls page; no recall listed for the Bugaboo Butterfly 2"
+      },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888 (EU-market units)"
     },
 
     "foldType": "one-second, one-hand ultra-compact self-standing fold (IATA cabin-approved)",
@@ -57,7 +66,8 @@
     "https://strolleria.com/products/bugaboo-butterfly-2-stroller",
     "https://strolleria.com/pages/all-new-bugaboo-butterfly-2",
     "https://www.megababiesusa.com/products/bugaboo-butterfly-2-complete-lightweight-stroller",
-    "https://www.consumerreports.org/babies-kids/strollers/bugaboo-butterfly-2-stroller-review-a1318711943/"
+    "https://www.consumerreports.org/babies-kids/strollers/bugaboo-butterfly-2-stroller-review-a1318711943/",
+    "https://www.bugaboo.com/us-en/product-recalls/"
   ],
   "notes": "CURRENT generation (2024/2025), successor to and replacing the original Butterfly. Same 16 lb one-second one-hand cabin fold (17.6 x 9.6 x 21.8 in) but with larger 5.5 in front wheels, taller/roomier canopy, near-flat recline and a fully-upright seat position. A prime light/compact city+travel candidate. Priced at $499 (on sale from $599 MSRP) at bugaboo.com DTC and Strolleria, both in stock. Clek Liing attaches via the Bugaboo Butterfly 2 car seat adapter 400018003 (adapter-400018003) — NOT interchangeable with the original Butterfly's 100045001 adapter."
 }

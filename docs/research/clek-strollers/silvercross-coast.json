@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 15.75, "widthIn": 24, "heightIn": 37 },
     "_dimsNote": "Converted from metric: open 109 x 61 x 109 cm (L42.9 x W24 x H42.9 in); folded frame 40 x 61 x 94 cm (L15.75 x W24 x H37 in). Strollberry.",
 
-    "brake": { "hasBrake": true, "type": "push-push pedal (foot) parking brake, flip-flop friendly" },
+    "brake": { "hasBrake": true, "type": "push-push pedal (foot) parking brake, flip-flop friendly", "power": null },
     "_brakeNote": "Brake type from Strollberry Coast spec sheet: 'push-push pedal brake (flip-flop friendly)' — activated by pressing one side, released by pressing the other.",
 
     "capacity": {
@@ -44,7 +44,12 @@
     "safety": {
       "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the (archived) Silver Cross US spec pages; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
       "certifications": null,
-      "notes": "5-point harness; magnesium chassis; multi-position lie-flat seat."
+      "notes": "5-point harness; magnesium chassis; multi-position lie-flat seat.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888 (UK/EU home market; not stated for US units)"
     },
 
     "foldType": "compact fold (chassis; seat/carrycot remove)",
@@ -58,7 +63,9 @@
     "https://strollberry.com/strollers/silver-cross-coast/",
     "https://pishposhbaby.com/blogs/blog/silver-cross-coast-full-review",
     "https://www.megababiesusa.com/products/silver-cross-coast-stroller",
-    "https://www.mercari.com/us/brand/silver-cross-17335/strollers-58/"
+    "https://www.mercari.com/us/brand/silver-cross-17335/strollers-58/",
+    "https://www.silvercrossbaby.com/the-edit/pregnancy/product-guides/a-genius-addition/",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "DISCONTINUED since ~2020 and replaced by the Silver Cross Wave — no longer sold via official Silver Cross US channels. A Mega Babies clearance listing showed $1,699.99 (out of stock / likely stale bundle price — reconfirm). Live availability is largely secondary market (Mercari ~$570-$740 used). Uses the same 2019 Wave/Coast car seat adapter (SX5135-EU) to mount the Clek Liing."
 }

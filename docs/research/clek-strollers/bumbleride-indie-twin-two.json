@@ -31,7 +31,8 @@
 
     "brake": {
       "hasBrake": true,
-      "type": "foot-operated one-step parking brake linking the rear wheels (sandal-friendly)"
+      "type": "foot-operated one-step parking brake linking the rear wheels (sandal-friendly)",
+      "power": "One-step foot brake links the rear wheels; certified to AS/NZS 2088 (stricter parking-brake + tether standard). No published brake-force figure or wrist tether."
     },
 
     "capacity": {
@@ -46,7 +47,12 @@
     "safety": {
       "standards": "ASTM F833 (US 16 CFR 1227); EN 1888 (EU); AS/NZS 2088 (AU/NZ); SOR/85-379 (Canada)",
       "certifications": "OEKO-TEX Standard 100 non-toxic recycled fabrics; 5-point breakaway harness with shoulder pads. Not JPMA-listed.",
-      "notes": "Side-by-side double; independently adjustable seats and canopies; each seat reclines independently."
+      "notes": "Side-by-side double; independently adjustable seats and canopies; each seat reclines independently.",
+      "recall": { "recalled": true, "year": 2012, "url": "https://www.cpsc.gov/Recalls/2012/bumbleride-recalls-indie-indie-twin-strollers-due-to-fall-hazard", "summary": "Feb 2012 CPSC/Health Canada recall of Bumbleride Indie Twin strollers, model numbers IT-108/IT-111/IT-305 made Jan 2009–Aug 2011: the front wheel could break at the axle hub, causing tip-over/fall hazard. Remedy was a free front-wheel retrofit kit. Applies only to those 2009–2011 model numbers, not current Indie Twin units." },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888; AS/NZS 2088"
     },
 
     "foldType": "one-step, self-standing compact fold",
@@ -60,7 +66,8 @@
     "https://bumbleride.com/products/indie-twin-double-stroller",
     "https://www.modernnursery.com/products/bumbleride-2024-indie-twin-stroller",
     "https://bumbleride.com/products/indie-twin-clek-liing-twin-non-toxic-travel-system",
-    "https://canada.bumbleride.com/pages/safety-notice"
+    "https://canada.bumbleride.com/pages/safety-notice",
+    "https://www.cpsc.gov/Recalls/2012/bumbleride-recalls-indie-indie-twin-strollers-due-to-fall-hazard"
   ],
   "notes": "Same physical Indie Twin as bumbleride-indie-twin-one, but this row = TWO Clek Liings on the twin via the two-adapter set MNCT-22 (adapter-mnct-22). Bumbleride sells an 'Indie Twin + two Clek Liing' twin travel system, explicitly confirming dual-Liing compatibility. A side-by-side double — not the light/compact goal — but on Clek's list and fully sourced."
 }

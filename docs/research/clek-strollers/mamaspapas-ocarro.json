@@ -30,7 +30,7 @@
     "foldedIn": { "lengthIn": 14.6, "widthIn": 22.8, "heightIn": 29.9 },
     "_dimsNote": "Folds one-handed with the seat attached (either direction). 96 x 58 x 110 cm open; 37 x 58 x 76 cm folded.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated push-down pedal parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated push-down pedal parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 48.5,
@@ -43,7 +43,12 @@
     "safety": {
       "standards": "EN 1888 (Mamas & Papas). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
       "certifications": null,
-      "notes": "5-point harness; reversible seat (parent- or world-facing); lie-flat recline; all-round suspension. Basket rated ~3 kg (6.6 lb) per Strollberry."
+      "notes": "5-point harness; reversible seat (parent- or world-facing); lie-flat recline; all-round suspension. Basket rated ~3 kg (6.6 lb) per Strollberry.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "No recall found for the Ocarro. Mamas & Papas recalled its Armadillo Flip/Flip XT strollers in 2017 (parent-facing seat could tip due to a loose latch), but not the Ocarro." },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888"
     },
 
     "foldType": "one-hand compact fold with seat attached, free-standing",
@@ -57,7 +62,8 @@
     "https://strollberry.com/strollers/mamaspapas-ocarro/",
     "https://www.momsstrollerreviews.com/new-mamas-papas-ocarro-2017-stroller-review-2/",
     "https://www.mamasandpapas.com/products/ocarro2-6161l9000",
-    "https://goodbuygear.com/products/mamas-papas-ocarro-stroller"
+    "https://goodbuygear.com/products/mamas-papas-ocarro-stroller",
+    "https://www.cpsc.gov/Recalls/2017/Mamas-and-Papas-Recalls-Armadillo-Strollers"
   ],
   "notes": "Full-size flagship all-terrain pram (~29.8 lb) — a do-everything stroller, not the ultralight city goal, but on Clek's list. US availability is thin since Mamas & Papas scaled back its US retail; Albee Baby still lists it (~$809.99). Liing attaches via the M&P Armadillo Flip/XT + Ocarro Maxi-Cosi adapter (adapter-159925300): the adapter enumerates Maxi-Cosi/Cybex/Joie footprints (Liing shares the Maxi-Cosi footprint) and Clek's authoritative list confirms Liing fits the Ocarro via this part."
 }
