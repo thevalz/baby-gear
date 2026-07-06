@@ -30,7 +30,7 @@
     "foldedIn": { "lengthIn": 17, "widthIn": 22.5, "heightIn": 32.5 },
     "_foldNote": "Folded with seat attached 17 x 22.5 x 32.5 in; folded without seat 13.5 x 22.5 x 30.3 in; self-standing.",
 
-    "brake": { "hasBrake": true, "type": "single-action foot-operated parking brake" },
+    "brake": { "hasBrake": true, "type": "single-action foot-operated parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -43,6 +43,11 @@
     "safety": {
       "standards": "Meets/exceeds ASTM F833 (US carriages & strollers)",
       "certifications": "JPMA Certified; GREENGUARD Gold Certified",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "No recall found for the current CRUZ V3 (2023+). The 2015 UPPAbaby bumper-bar choking recall was limited to 2015-model-year CRUZ/VISTA/RumbleSeat units." },
+      "jpmaCertified": true,
+      "jpmaSource": "https://support.uppababy.com/hc/en-us/articles/115009544627-Are-UPPAbaby-products-JPMA-ASTM-compliant",
+      "harness": "5-point",
+      "otherCerts": null,
       "notes": "5-point no-rethread harness with magnetic buckle; integrated foot barrier for carriage mode; reversible seat; auto-lock fold."
     },
 

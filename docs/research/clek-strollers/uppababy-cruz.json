@@ -42,6 +42,11 @@
     "safety": {
       "standards": "Meets/exceeds ASTM F833 (US carriages & strollers)",
       "certifications": "JPMA Certified; GREENGUARD Gold Certified (low chemical emissions)",
+      "recall": { "recalled": true, "year": 2015, "url": "https://www.cpsc.gov/Recalls/2015/UPPAbaby-Recalls-Strollers-and-RumbleSeats", "summary": "UPPAbaby recalled ~71,000 units (CPSC, Jul 23 2015) covering the 2015 CRUZ (Model 0181), 2015 VISTA (Model 0101) and 2015 RumbleSeat: the foam bumper-bar cover is a choking hazard if a child bites off a piece. Remedy was a free bumper-bar cover and warning label. Applies to the 2015-model-year bumper bar, which is within this V1 (2015-2019) fragment's range; later CRUZ V2/V3 are not affected." },
+      "jpmaCertified": true,
+      "jpmaSource": "https://support.uppababy.com/hc/en-us/articles/115009544627-Are-UPPAbaby-products-JPMA-ASTM-compliant",
+      "harness": "5-point",
+      "otherCerts": null,
       "notes": "5-point no-rethread harness; reversible toddler seat; multi-position recline."
     },
 
@@ -56,7 +61,8 @@
     "https://strollberry.com/strollers/uppababy-cruz/",
     "https://niniandloli.com/blogs/articles/uppababy-cruz-stroller-weight-and-features-explained",
     "https://support.uppababy.com/hc/en-us/articles/115009544627-Are-UPPAbaby-products-JPMA-ASTM-compliant",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.cpsc.gov/Recalls/2015/UPPAbaby-Recalls-Strollers-and-RumbleSeats"
   ],
   "notes": "Original CRUZ, discontinued in 2020 (superseded by CRUZ V2 then V3); available resale only, so priceSources is MSRP reference with inStock:false. Full-size single, ~21.5 lb, two-hand self-standing fold. Clek Liing attaches via CLEK'S OWN 'Clek car seat adapters for UPPAbaby' (adapter-clek-uppababy) — NOT a UPPAbaby-made adapter. Basket 30 lb per UPPAbaby (Strollberry lists ~24 lb for the V1 frame). Heavier/bulkier than the city/shopping target but a comfortable everyday full-size option."
 }
