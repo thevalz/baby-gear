@@ -30,7 +30,8 @@
 
     "brake": {
       "hasBrake": true,
-      "type": "foot-operated one-step parking brake linking both rear wheels (sandal-friendly)"
+      "type": "foot-operated one-step parking brake linking both rear wheels (sandal-friendly)",
+      "power": "One-step foot brake links both rear wheels; certified to AS/NZS 2088 (stricter parking-brake + tether standard). No published brake-force figure or wrist tether."
     },
 
     "capacity": {
@@ -44,7 +45,12 @@
     "safety": {
       "standards": "ASTM F833 (US 16 CFR 1227); EN 1888 (EU); AS/NZS 2088 (AU/NZ); SOR/85-379 (Canada)",
       "certifications": "OEKO-TEX Standard 100 non-toxic recycled fabrics; 5-point harness. Not JPMA-listed.",
-      "notes": "Cargo basket 17 x 15 x 11 in, 15 lb. Handle range 26–46 in adjustable."
+      "notes": "Cargo basket 17 x 15 x 11 in, 15 lb. Handle range 26–46 in adjustable.",
+      "recall": { "recalled": true, "year": 2012, "url": "https://www.cpsc.gov/Recalls/2012/bumbleride-recalls-indie-indie-twin-strollers-due-to-fall-hazard", "summary": "Feb 2012 CPSC/Health Canada recall of ~28,000 US (2,700 CA) Indie strollers, model numbers I-107/I-110/I-205 made Jan 2009–Aug 2011: the front wheel could break at the axle hub, causing tip-over/fall hazard (36 wheel-crack incidents, 2 tip-overs with minor injuries). Remedy was a free front-wheel retrofit kit. Applies only to those 2009–2011 model numbers, not current Indie units." },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888; AS/NZS 2088"
     },
 
     "foldType": "one-step fold, self-standing stow",
@@ -59,7 +65,8 @@
     "https://bumbleride.com/products/indie-all-terrain-stroller",
     "https://strolleria.com/products/bumbleride-indie-jogging-stroller",
     "https://canada.bumbleride.com/pages/safety-notice",
-    "https://www.consumerreports.org/babies-kids/strollers/bumbleride-indie/m406149/"
+    "https://www.consumerreports.org/babies-kids/strollers/bumbleride-indie/m406149/",
+    "https://www.cpsc.gov/Recalls/2012/bumbleride-recalls-indie-indie-twin-strollers-due-to-fall-hazard"
   ],
   "notes": "All-terrain single, 24 lb — the lightest Bumbleride here and compact folded without rear wheels (17.5 in wide). Clek Liing latches via the Indie/Speed adapter MNC-28 (adapter-mnc-28), which explicitly lists the Clek Liing. Good all-around city + light-trail stroller; heavier than a true travel stroller but versatile."
 }

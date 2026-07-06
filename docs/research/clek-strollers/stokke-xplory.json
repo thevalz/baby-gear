@@ -28,7 +28,7 @@
     "foldedIn": { "lengthIn": 18.7, "widthIn": 22.0, "heightIn": 41.3 },
     "_dimsNote": "Open 131 × 56 × 101 cm (H×W×L); folded frame-only 105 × 56 × 47.5 cm (H×W×L). Tall pram-height seat.",
 
-    "brake": { "hasBrake": true, "type": "one-step rocker foot pedal (flip-flop friendly)" },
+    "brake": { "hasBrake": true, "type": "one-step rocker foot pedal (flip-flop friendly)", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 48.5,
@@ -41,6 +41,11 @@
     "safety": {
       "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (required for US sale)",
       "certifications": "not published on the product page (JPMA not stated)",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "No recall applies to the current Xplory X. An earlier-generation Stokke Xplory (units sold Sept 2003-Dec 2006, grey handles, serials 1-27,295 & 27,698-28,097) was recalled in Dec 2007 for a front-wheel bolt that could loosen and detach (CPSC): https://www.cpsc.gov/Recalls/2007/stokke-announces-recall-of-certain-xplory-strollers-due-to-front-wheel-detachment . That recall does not cover the current Xplory X generation." },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null,
       "notes": "5-point harness; reversible height-adjustable seat; parking brake."
     },
 
@@ -54,7 +59,8 @@
   "sources": [
     "https://strollberry.com/strollers/stokke-xplory-x/",
     "https://www.megababiesusa.com/products/stokke-xplory-x-complete-stroller",
-    "https://www.stokke.com/USA/en-us/customer-service/faq/faq-stokke-xplory/faq-stokke-xplory-q-6.html"
+    "https://www.stokke.com/USA/en-us/customer-service/faq/faq-stokke-xplory/faq-stokke-xplory-q-6.html",
+    "https://www.cpsc.gov/Recalls/2007/stokke-announces-recall-of-certain-xplory-strollers-due-to-front-wheel-detachment"
   ],
   "notes": "Full-size luxury pram — high seat, reversible, lie-flat — NOT a portability pick (~29.5 lb, bulky fold); included for roster completeness, will score low on the portability lens. Clek Liing attaches via the Stokke Multi adapter 321500 (adapter-321500), which explicitly lists Clek Liing. Best cited price $719.40 sale (Mega Babies, sold out); MSRP ~$1,199. Reconfirm current in-stock price at stokke.com / Nordstrom."
 }

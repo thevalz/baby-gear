@@ -28,7 +28,7 @@
     "foldedIn": { "lengthIn": 20.5, "widthIn": 17.3, "heightIn": 7.1 },
     "_dimsNote": "YOYO3 published as 106 × 86 × 44 cm open and 52 × 44 × 18 cm folded; width 17.3 in (44 cm) is the signature single-hand cabin fold that fits airline overhead bins.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated rear parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated rear parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 48.5,
@@ -41,7 +41,12 @@
     "safety": {
       "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833-19",
       "certifications": "JPMA Certified (Baby Safety Alliance)",
-      "notes": "5-point harness; multi-position recline; padded shoulder carry strap."
+      "recall": { "recalled": true, "year": 2024, "url": "https://www.cpsc.gov/Recalls/2025/Stokke-Recalls-YOYO3-Strollers-Due-to-Injury-Hazard", "summary": "Stokke recalled ~2,890 YOYO3 strollers (CPSC recall 25-044, Nov 14 2024): the parking brake can disengage, posing an injury hazard. Affects YOYO3 units with serial numbers beginning '142AA' below '0062239'; remedy is a full refund. Earlier YOYO+/YOYO2 models are not included in this recall." },
+      "jpmaCertified": true,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null,
+      "notes": "5-point harness; multi-position recline; padded shoulder carry strap. This fragment represents the current YOYO3, which is the generation covered by the Nov 2024 brake recall."
     },
 
     "foldType": "one-hand compact fold, self-standing, airline-cabin approved",
@@ -55,7 +60,8 @@
     "https://strolleria.com/products/babyzen-yoyo2-6-complete-stroller",
     "https://www.babygearlab.com/reviews/getting-around/travel-stroller/babyzen-yoyo2",
     "https://www.amazon.com/Babyzen-Yoyo2-Stroller-Frame-Us/dp/B0868X9HRJ",
-    "https://www.consumerreports.org/babies-kids/strollers/babyzen-yoyo2/m401950/"
+    "https://www.consumerreports.org/babies-kids/strollers/babyzen-yoyo2/m401950/",
+    "https://www.cpsc.gov/Recalls/2025/Stokke-Recalls-YOYO3-Strollers-Due-to-Injury-Hazard"
   ],
   "notes": "The archetypal light/compact city+shopping stroller and the strongest complement to the owned BOB Alterrain Pro. ~14.8 lb, one-hand cabin fold (20.5 × 17.3 × 7.1 in). JPMA Certified. Clek Liing attaches via the BabyZen YOYO adapter BZ10205-03 (adapter-bz10205-03) — note the older YOYO+ adapter variant does NOT list Clek, so the current BZ10205-03 is the right part. Best cited price $499 (Strolleria, YOYO3 6+ complete)."
 }

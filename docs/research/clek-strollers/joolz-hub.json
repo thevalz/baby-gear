@@ -30,7 +30,7 @@
     "foldedIn": { "lengthIn": 25.0, "widthIn": 21.0, "heightIn": 12.0 },
     "_dimsNote": "Folded with seat ~25 x 21 x 12 in; folded without seat ~10.5 in high. 21-in width fits many store aisles.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up pedal brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up pedal brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -43,7 +43,12 @@
     "safety": {
       "standards": "EN 1888-2 (Joolz). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
       "certifications": null,
-      "notes": "5-point harness; compact urban chassis; 5-US-gal / 11-lb basket. Hub+ seat is world-facing (not reversible)."
+      "notes": "5-point harness; compact urban chassis; 5-US-gal / 11-lb basket. Hub+ seat is world-facing (not reversible).",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888-2"
     },
 
     "foldType": "compact fold (seat can stay attached), self-standing",

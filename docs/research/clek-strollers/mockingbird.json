@@ -28,7 +28,7 @@
     "unfoldedIn": { "lengthIn": 33, "widthIn": 25.5, "heightIn": 40 },
     "foldedIn": { "lengthIn": 18, "widthIn": 25.5, "heightIn": 34 },
 
-    "brake": { "hasBrake": true, "type": "large one-step foot parking brake" },
+    "brake": { "hasBrake": true, "type": "large one-step foot parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,

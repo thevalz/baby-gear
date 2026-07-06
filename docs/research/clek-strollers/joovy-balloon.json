@@ -27,7 +27,7 @@
     "unfoldedIn": { "lengthIn": 25, "widthIn": 18.5, "heightIn": 40.5 },
     "foldedIn": { "lengthIn": 38.5, "widthIn": 18.5, "heightIn": 11.5 },
 
-    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 45,
@@ -40,7 +40,12 @@
     "safety": {
       "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
       "certifications": null,
-      "notes": "5-point harness; reversible handlebar; 4-wheel suspension; bumper bar. Joovy does not publish a per-model JPMA certification for this model."
+      "notes": "5-point harness; reversible handlebar; 4-wheel suspension; bumper bar. Joovy does not publish a per-model JPMA certification for this model.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": true,
+      "jpmaSource": "https://jpma.vporoom.com/Joovy/",
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "compact standing fold (not one-hand self-standing)",
@@ -54,7 +59,9 @@
     "https://joovy.com/balloon/",
     "https://www.amazon.com/Joovy-8090-Balloon-Stroller-Blue/dp/B015ZL8QLI",
     "https://goodbuygear.com/products/joovy-balloon-lightweight-stroller-green-2018",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://jpma.vporoom.com/Joovy/",
+    "https://www.cpsc.gov/Recalls?combine=joovy"
   ],
   "notes": "Discontinued at Joovy's DTC store (not in the current joovy.com catalog); circulates on the used/resale market (GoodBuy Gear ~$95 for a 2018 unit, out of stock at check). Original MSRP was ~$199. Light (12.7 lb) full-feature single with a near-flat bassinet-mode recline — one of the lighter city/shopping options in this batch, though heavier and less compact-folding than a BabyZen YOYO. Clek Liing attaches via the Joovy Universal Car Seat Adapter (adapter-joovy-universal). No reliable current retail price found; Amazon price left null rather than guessed."
 }

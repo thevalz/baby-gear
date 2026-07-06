@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 18.5, "widthIn": 29, "heightIn": 42 },
     "_dimsNote": "W4 open ~49 L x 29 W; height 34–41.5 in at handlebar (51.5 in to top of canopy). Folds flat to ~18.5 L x 29 W x 42 H and self-stands. Interior cabin ~33 L x 21 W x 19 D.",
 
-    "brake": { "hasBrake": true, "type": "1-step foot brake" },
+    "brake": { "hasBrake": true, "type": "1-step foot brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 99,
@@ -43,7 +43,12 @@
     "safety": {
       "standards": "ASTM F833-21; EN1888; AS 2088:2022",
       "certifications": "Not separately published on the sources reviewed.",
-      "notes": "5-point harnesses with pads on each raised bench seat; all-terrain wheels with suspension and bearings."
+      "notes": "5-point harnesses with pads on each raised bench seat; all-terrain wheels with suspension and bearings.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search — no Wonderfold W4/W2 wagon recall found" },
+      "jpmaCertified": true,
+      "jpmaSource": "https://jpma.vporoom.com/WonderFoldWagon/",
+      "harness": "5-point",
+      "otherCerts": "EN 1888; AS/NZS 2088"
     },
 
     "foldType": "one-step compact fold, self-standing when folded",
@@ -56,7 +61,9 @@
   "sources": [
     "https://wonderfold.com/products/w4-elite-stroller-wagon-4-seater",
     "https://www.dillards.com/p/wonderfold-w4-elite-4-seater-quad-stroller-wagon/518167767",
-    "https://wonderfold.com/products/car-seat-adapter"
+    "https://wonderfold.com/products/car-seat-adapter",
+    "https://jpma.vporoom.com/WonderFoldWagon/",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "On Clek's official Liing/Liingo list as 'W4 and W2 Elite/Luxe' using the Wonderfold 'Clek Car Seat Adapter' (adapter-wonderfold-clek, no part # on Clek's list). PRIMARY specs above are the W4 (quad, 4 seats, 300 lb / 99 lb-per-bench, ~55 lb, open ~49 x 29 in). The W2 Elite/Luxe is the smaller 2-seat sibling on the same row: seats 2 children, narrower/shorter frame and lower total capacity — verify W2-specific dims separately if needed. Adapter fitment differs by model: up to TWO Clek adapters may be installed on W4 Elite/Luxe, but only ONE on W2. Best in-stock price $599 (Dillard's); Wonderfold DTC also $599 but currently sold out. Basket capacity and some cert numbers not published on pages reviewed — left null rather than guessed."
 }

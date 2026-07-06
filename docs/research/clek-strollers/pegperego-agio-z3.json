@@ -28,7 +28,7 @@
     "foldedIn": { "lengthIn": 36.2, "widthIn": 24.8, "heightIn": 15.0 },
     "_dimsNote": "Converted from Strollberry metric spec: open 113.5 x 63 x 107 cm (L x W x H); folded 92 x 63 x 38 cm. Consistent with Paltux's listed values (reordered).",
 
-    "brake": { "hasBrake": true, "type": "foot-operated push-down/lift-up pedal parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated push-down/lift-up pedal parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -41,7 +41,12 @@
     "safety": {
       "standards": "US-market stroller; complies with ASTM F833 / 16 CFR 1227 (specific rated limits not separately published by Agio)",
       "certifications": "Not separately published by Agio/Peg Perego on the US product page",
-      "notes": "5-point harness; multi-position reclining backrest; wheels lock/swivel."
+      "notes": "5-point harness; multi-position reclining backrest; wheels lock/swivel.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search — no recall found for the Agio/Peg Perego Z3 stroller. (Peg Perego's 2023 bassinet recall covered YPSI/Z4 inclined-sleeper bassinets only, not the Z3.)" },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "one-hand inward 'book' fold, self-standing",
@@ -55,7 +60,9 @@
     "https://paltux.com/products/agio-by-peg-perego-z3-all-terrain-stroller",
     "https://strollberry.com/strollers/agio-z3/",
     "https://usold.pegperego.com/baby/agio-z3",
-    "https://liapela.com/collections/full-size-strollers/products/agio-by-peg-perego-z3-all-terrain-stroller"
+    "https://liapela.com/collections/full-size-strollers/products/agio-by-peg-perego-z3-all-terrain-stroller",
+    "https://www.pegperego.com/en_us/baby/recalls",
+    "https://www.cpsc.gov/Recalls/2024/Peg-Perego-Recalls-Inclined-Sleeper-Bassinets-for-YPSI-and-Z4-Strollers-Due-to-Risk-of-Suffocation-and-Fall-Hazard-Violation-of-Federal-Safety-Standards-Recall-Alert"
   ],
   "notes": "Older-generation Agio (Peg Perego US brand) three-wheel all-terrain stroller; ~22 lb, one-hand self-standing book fold. Forward-facing only (non-reversible seat), distinguishing it from the newer four-wheel reversible Z4/Ypsi. Confirmed on Clek's official Liing/Liingo list; Clek Liing attaches via the Agio Z3 adapter IKCS0019NA (adapter-ikcs0019na). Now thinly stocked at US retail (many listings 404/discontinued); best live deep-linked price $349.99 (Paltux, sale, reg $399). Basket capacity and JPMA certification not separately published — left null."
 }

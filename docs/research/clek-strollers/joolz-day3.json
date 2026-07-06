@@ -30,7 +30,7 @@
     "foldedIn": { "lengthIn": 19.7, "widthIn": 24.4, "heightIn": 36.2 },
     "_dimsNote": "Folds with seat attached in one motion; folded (frame only) ~27 x 23 x 13 in.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up central pedal brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up central pedal brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -43,7 +43,12 @@
     "safety": {
       "standards": "EN 1888 (Joolz). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
       "certifications": null,
-      "notes": "5-point harness; reversible seat (parent- or world-facing); full-recline backrest; 10-year transferable warranty."
+      "notes": "5-point harness; reversible seat (parent- or world-facing); full-recline backrest; 10-year transferable warranty.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888"
     },
 
     "foldType": "one-motion compact fold (seat can stay attached), self-standing",

@@ -29,7 +29,8 @@
 
     "brake": {
       "hasBrake": true,
-      "type": "foot-operated one-step parking brake linking both rear wheels (sandal-friendly, lock/unlock from above)"
+      "type": "foot-operated one-step parking brake linking both rear wheels (sandal-friendly, lock/unlock from above)",
+      "power": "One-step foot brake links both rear wheels; fold has auto-lock; certified to AS/NZS 2088 (stricter parking-brake + tether standard). No published brake-force figure or separate wrist tether."
     },
 
     "capacity": {
@@ -43,7 +44,12 @@
     "safety": {
       "standards": "ASTM F833 (US 16 CFR 1227); EN 1888 (EU); AS/NZS 2088 (AU/NZ); SOR/85-379 (Canada)",
       "certifications": "OEKO-TEX Standard 100 non-toxic recycled fabrics; 5-point harness. Not JPMA-listed.",
-      "notes": "Cargo basket 21 x 15 x 9 in, 15 lb. Frame alone ~20 lb."
+      "notes": "Cargo basket 21 x 15 x 9 in, 15 lb. Frame alone ~20 lb.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts + Bumbleride safety-notice search" },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888; AS/NZS 2088"
     },
 
     "foldType": "quick compact fold with auto-lock, self-standing stow",

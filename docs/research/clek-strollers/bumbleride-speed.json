@@ -30,7 +30,8 @@
 
     "brake": {
       "hasBrake": true,
-      "type": "foot-operated one-step parking brake linking both rear wheels (sandal-friendly). No hand brake."
+      "type": "foot-operated one-step parking brake linking both rear wheels (sandal-friendly). No hand brake.",
+      "power": "One-step foot brake links both rear wheels (no hand brake); fold has auto-lock; certified to AS/NZS 2088 (stricter parking-brake + tether standard). No published brake-force figure."
     },
 
     "capacity": {
@@ -44,7 +45,12 @@
     "safety": {
       "standards": "ASTM F833 (US 16 CFR 1227); EN 1888 (EU); AS/NZS 2088 (AU/NZ); SOR/85-379 (Canada)",
       "certifications": "OEKO-TEX Standard 100 non-toxic fabrics; 5-point breakaway harness with shoulder pads. Not JPMA-listed.",
-      "notes": "Cargo basket 17 x 15 x 11 in, 15 lb. Cork handle. Adjustable footrest. Handle range 26–47.5 in."
+      "notes": "Cargo basket 17 x 15 x 11 in, 15 lb. Cork handle. Adjustable footrest. Handle range 26–47.5 in.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts + Bumbleride safety-notice search", "note": "No US CPSC recall. Bumbleride issued a Canada-only voluntary safety notice for Speed units (SP-300 series) made Apr 2016–Dec 2017 over a potentially sharp back-hinge-plate edge, offering a free retrofit kit; company reported zero incidents." },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888; AS/NZS 2088"
     },
 
     "foldType": "one-step ergonomic trigger-release compact fold with auto-lock, self-standing",

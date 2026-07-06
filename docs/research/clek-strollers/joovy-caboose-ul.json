@@ -26,7 +26,7 @@
     "unfoldedIn": { "lengthIn": 40, "widthIn": 22.5, "heightIn": 42.5 },
     "foldedIn": { "lengthIn": 45.25, "widthIn": 24.8, "heightIn": 16 },
 
-    "brake": { "hasBrake": true, "type": "foot-operated parking brake with quick auto-lock fold" },
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake with quick auto-lock fold", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 45,
@@ -39,7 +39,12 @@
     "safety": {
       "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
       "certifications": null,
-      "notes": "5-point harness front seat; recycled fabrics; auto-lock fold latch. Joovy does not publish a per-model JPMA certification."
+      "notes": "5-point harness front seat; recycled fabrics; auto-lock fold latch. Joovy does not publish a per-model JPMA certification.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": true,
+      "jpmaSource": "https://jpma.vporoom.com/Joovy/",
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "quick auto-lock standing fold",
@@ -52,7 +57,9 @@
   "sources": [
     "https://www.joovy.com/products/caboose-ul-sit-and-stand-double-stroller",
     "https://www.amazon.com/Joovy-Caboose-Ultralight-Graphite-Stroller/dp/B01BMAW0M2",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://jpma.vporoom.com/Joovy/",
+    "https://www.cpsc.gov/Recalls?combine=joovy"
   ],
   "notes": "Current-catalog Joovy Caboose UL — one of the lightest tandem sit-and-stand strollers at 26.5 lb (the older Caboose Ultralight it replaces was ~22-23.5 lb; Clek lists both under one row). Ships with an included universal car seat adapter; Clek Liing attaches via the Joovy Universal Car Seat Adapter (adapter-joovy-universal). DTC price $399.90."
 }

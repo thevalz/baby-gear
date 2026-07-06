@@ -30,7 +30,7 @@
     "foldedIn": { "lengthIn": 16.5, "widthIn": 23.6, "heightIn": 39.0 },
     "_dimsNote": "One-piece one-motion fold. 83 x 60 x 109 cm open; 42 x 60 x 99 cm folded (Strollberry).",
 
-    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up pedal brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated push-down / lift-up pedal brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 45,
@@ -43,7 +43,12 @@
     "safety": {
       "standards": "EN 1888 (Joolz). Clek's official list attests the model was tested to the applicable ASTM stroller/car-seat standard for Liing use.",
       "certifications": null,
-      "notes": "5-point harness; reversible seat; 3-position recline incl. lie-flat; XXL 22-lb basket; 10-year transferable warranty. Clek notes a lowest-handle/lowest-seat-position caveat when a car seat is fitted."
+      "notes": "5-point harness; reversible seat; 3-position recline incl. lie-flat; XXL 22-lb basket; 10-year transferable warranty. Clek notes a lowest-handle/lowest-seat-position caveat when a car seat is fitted.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888"
     },
 
     "foldType": "one-motion compact one-piece fold",

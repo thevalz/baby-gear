@@ -32,7 +32,8 @@
 
     "brake": {
       "hasBrake": true,
-      "type": "flip-flop-friendly foot-pedal parking brake (no hand brake)"
+      "type": "flip-flop-friendly foot-pedal parking brake (no hand brake)",
+      "power": "Wrist safety strap (runaway tether) included for jogging; parking-brake hold-force not published; no auto-lock feature stated."
     },
 
     "capacity": {
@@ -46,7 +47,12 @@
     "safety": {
       "standards": "Meets US ASTM F833 / 16 CFR 1227 carriage & stroller standard",
       "certifications": "5-point easy-adjust, no-rethread harness; UPF 50+ canopy; wrist tether. JPMA certification not published by BOB.",
-      "notes": "Basket weight limit not published (null). Adjustable-tracking front wheel for straight-line jogging."
+      "notes": "Basket weight limit not published (null). Adjustable-tracking front wheel for straight-line jogging.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "No recall found for the Revolution Flex 3.0. Earlier BOB single/double joggers made 1998–Sep 2015 (prior Revolution/Flex generations) were subject to a 2018 CPSC administrative complaint and 2019 settlement over front quick-release-wheel detachment (free thru-bolt axle remedy); the redesigned Flex 3.0 is a later model not covered." },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "2-step compact fold with quick-release removable wheels",
@@ -60,7 +66,9 @@
     "https://bobparts.com/bob-gear-revolution-flex-3-0/",
     "https://www.bobgear.com/single-strollers",
     "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/bob-revolution-flex-3-0",
-    "https://www.target.com/p/bob-gear-revolution-flex-3-0-jogging-stroller-graphite-black/-/A-75568320"
+    "https://www.target.com/p/bob-gear-revolution-flex-3-0-jogging-stroller-graphite-black/-/A-75568320",
+    "https://www.cpsc.gov/Newsroom/News-Releases/2018/cpsc-sues-britax-over-hazardous-jogging-strollers-action-prompted-by-ongoing-harm-to",
+    "https://www.cpsc.gov/Recalls/2019/Britax-Recalls-Modified-Thru-Bolt-Axles-for-Use-with-BOB-Jogging-Strollers-Distributed-Through-the-BOB-Information-Campaign-Due-to-Fall-and-Injury-Hazards-Recall-Alert"
   ],
   "notes": "Full-size all-terrain single jogger, 28.5 lb. Clek Liing attaches via BOB Single Infant Car Seat Adapter S12046000 (adapter-s12046000). Like the Alterrain family, this is a rugged/heavy stroller — the opposite end of the spectrum from the light city/shopping goal, but on Clek's list and fully sourced."
 }

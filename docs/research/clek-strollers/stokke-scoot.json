@@ -31,7 +31,8 @@
     "_dimsNote": "Per Strollberry's Scoot V2 spec: open 75 cm L x 55 cm W x 110 cm H = 29.5 x 21.6 x 43.3 in; folded 72 x 55 x 32 cm mapped (lying) to 28.3 L x 21.6 W x 12.6 H in. Handlebar 36-42 in.",
     "brake": {
       "hasBrake": true,
-      "type": "foot pedal parking brake"
+      "type": "foot pedal parking brake",
+      "power": null
     },
     "capacity": {
       "maxChildWeightLb": 45,
@@ -43,6 +44,11 @@
     "safety": {
       "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (when sold in US)",
       "certifications": "not published",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "No CPSC/SaferProducts recall found for the Stokke Scoot (now discontinued)." },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null,
       "notes": "5-point harness; reversible seat; aluminum frame."
     },
     "foldType": "one-piece fold with seat attached",

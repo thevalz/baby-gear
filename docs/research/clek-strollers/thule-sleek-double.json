@@ -29,7 +29,7 @@
     "_unfoldedNote": "Same 116 x 61 x 85 cm frame footprint as single mode; the second seat stacks vertically, so width (24 in) is unchanged in double mode.",
     "foldedIn": { "lengthIn": 32.7, "widthIn": 24.0, "heightIn": 16.5 },
 
-    "brake": { "hasBrake": true, "type": "one-step foot-operated rocker parking brake (flip-flop friendly)" },
+    "brake": { "hasBrake": true, "type": "one-step foot-operated rocker parking brake (flip-flop friendly)", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 48.5,
@@ -42,6 +42,11 @@
     "safety": {
       "standards": "Meets US ASTM F833 stroller standard — Clek's list confirms the Sleek (incl. double mode) was tested with the Liing and is ASTM-compliant for car seats on strollers.",
       "certifications": null,
+      "recall": { "recalled": true, "year": 2020, "url": "https://www.cpsc.gov/Recalls/2020/Thule-Recalls-Strollers-Due-to-Injury-Hazard", "summary": "Same frame as thule-sleek: Thule recalled ~4,000 US (plus ~880 Canada) Sleek strollers (CPSC, 2020) because the handlebar can detach (injury hazard). Affects Sleek units WITHOUT a 'QC2020' sticker manufactured May 2018-Sept 2019; remedy was a free replacement Sleek stroller frame. A separate 2020 recall covered the Thule Sleek Maxi-Cosi car seat adapter 11000301 (fall hazard); the adapters used here are 11000300 + kit 11000326." },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null,
       "notes": "Main seat 48.5 lb / 22 kg, second seat 33 lb / 15 kg; 5-point harnesses; auto-lock fold latch. Double-mode car seat use requires the Sleek adapter kit (11000326) plus the Maxi-Cosi car seat adapter (11000300)."
     },
 
@@ -56,7 +61,8 @@
     "https://www.thule.com/en-us/strollers/compact-strollers/thulesleek-_-11000003",
     "https://strollberry.com/strollers/thule-sleek/",
     "https://www.babygearlab.com/reviews/getting-around/double-stroller/thule-sleek-double",
-    "https://www.anbbaby.com/products/thule-sleek-stroller"
+    "https://www.anbbaby.com/products/thule-sleek-stroller",
+    "https://www.cpsc.gov/Recalls/2020/Thule-Recalls-Strollers-Due-to-Injury-Hazard"
   ],
   "notes": "Same physical stroller as thule-sleek, configured for two children. To run a Clek Liing in double mode you need the Sleek adapter kit 11000326 (adapter-11000326) plus the Maxi-Cosi car seat adapter 11000300 (adapter-11000300) — per Clek's own list. Second-seat/sibling config raises the price to ~$1,229.90 (Thule MSRP). A vertical-stack sibling stroller, not a side-by-side; footprint width stays at 24 in."
 }

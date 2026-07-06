@@ -27,7 +27,7 @@
     "unfoldedIn": { "lengthIn": 43.5, "widthIn": 24.1, "heightIn": 46.1 },
     "foldedIn": { "lengthIn": 50.4, "widthIn": 24.1, "heightIn": 13.4 },
 
-    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 55,
@@ -40,7 +40,12 @@
     "safety": {
       "standards": "US federal stroller standard 16 CFR 1227 / ASTM F833 (mandatory for US strollers); Clek confirms all listed strollers were tested to the applicable ASTM standards for car seats on strollers.",
       "certifications": null,
-      "notes": "Magnetic 5-point harness buckles; leatherette handlebar; oversized UPF 50 canopy. Joovy does not publish a per-model JPMA certification."
+      "notes": "Magnetic 5-point harness buckles; leatherette handlebar; oversized UPF 50 canopy. Joovy does not publish a per-model JPMA certification.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": true,
+      "jpmaSource": "https://jpma.vporoom.com/Joovy/",
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "standing fold",
@@ -53,7 +58,9 @@
   "sources": [
     "https://www.joovy.com/products/caboose-rs-premium-sit-and-stand-double-stroller-jet",
     "https://www.amazon.com/Joovy-Caboose-Stroller-Premium-Stand/dp/B09WZMSGY7",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://jpma.vporoom.com/Joovy/",
+    "https://www.cpsc.gov/Recalls?combine=joovy"
   ],
   "notes": "Current premium Caboose RS/S sit-and-stand. Retailer dimension labels are scrambled at source (reported '24.1L x 43.5W x 46.1H' assembled / '24.1L x 50.4W x 13.4H' folded); re-mapped here to sensible L×W×H (43.5×24.1×46.1 open, 50.4×24.1×13.4 folded) with this note. Max 55 lb per seat, 25 lb basket. Clek Liing attaches via Joovy's Maxi-Cosi/Cybex/Nuna Caboose RS/S click-in adapter (adapter-joovy-universal-mcn); a separate strap-style universal adapter (SKU 9125) also exists for the RS/S front position. DTC price $569.90."
 }

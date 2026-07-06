@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 15, "widthIn": 25.5, "heightIn": 36 },
     "_dimsNote": "Open 44 x 25.5 x 40 in (max handle height 44 in). Folded with seat 15 x 25.5 x 36 in; folded without seat 11 x 25.5 x 33 in.",
 
-    "brake": { "hasBrake": true, "type": "foot parking brake" },
+    "brake": { "hasBrake": true, "type": "foot parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -43,7 +43,12 @@
     "safety": {
       "standards": "Meets or exceeds ASTM (16 CFR 1227 / ASTM F833) and EN 1888.2 safety standards",
       "certifications": "JPMA Certified",
-      "notes": "5-point safety harness; near lay-flat recline suitable with infant insert."
+      "notes": "5-point safety harness; near lay-flat recline suitable with infant insert.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search — no Veer Switchback recall found" },
+      "jpmaCertified": true,
+      "jpmaSource": "https://goveer.com/products/switch-roll-stroller",
+      "harness": "5-point",
+      "otherCerts": "EN 1888"
     },
 
     "foldType": "one-hand fold (seat on or off); folds to 11 in deep without seat",

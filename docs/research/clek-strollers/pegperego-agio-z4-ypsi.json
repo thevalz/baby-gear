@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 32.25, "widthIn": 20.5, "heightIn": 15.25 },
     "_dimsNote": "Agio Baby lists open 20 x 39.25 x 40.25 in and folded 20 x 32.25 x 15.25 in; consistent with Strollberry metric (open 100 cm L x 51 cm W x 102 cm H; folded 82 x 52 x 38.5 cm).",
 
-    "brake": { "hasBrake": true, "type": "foot-operated push-down/lift-up pedal parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated push-down/lift-up pedal parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -42,7 +42,12 @@
     "safety": {
       "standards": "US-market stroller; complies with ASTM F833 / 16 CFR 1227 (specific rated limits not separately published by Agio)",
       "certifications": "Not separately published by Agio/Peg Perego on the US product page",
-      "notes": "5-point harness; reversible seat (parent- or world-facing); full recline to lie-flat; spring suspension on all wheels."
+      "notes": "5-point harness; reversible seat (parent- or world-facing); full recline to lie-flat; spring suspension on all wheels.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "The Z4/YPSI STROLLER itself was not recalled. Related accessory recall: Peg Perego recalled the YPSI and Z4 Inclined Sleeper Bassinet accessory (sold July 2022–April 2023, ~550 units) on 2023-11-30 for suffocation/fall hazard (incline >10 degrees; violates Safe Sleep for Babies Act). Remedy is disabling the bassinet backrest recline, not the stroller frame/seat.", "relatedRecallUrl": "https://www.cpsc.gov/Recalls/2024/Peg-Perego-Recalls-Inclined-Sleeper-Bassinets-for-YPSI-and-Z4-Strollers-Due-to-Risk-of-Suffocation-and-Fall-Hazard-Violation-of-Federal-Safety-Standards-Recall-Alert" },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "one-hand compact fold, self-standing (folds with seat attached)",
@@ -56,7 +61,9 @@
     "https://agiobaby.com/products/agio-by-peg-perego-z4-full-feature-reversible-stroller",
     "https://babyongrand.com/products/agio-by-peg-perego-z4-full-feature-reversible-stroller",
     "https://strollberry.com/strollers/agio-z4/",
-    "https://strolleria.com/blogs/news/agio-z4-vs-peg-perego-ypsi-stroller-comparison"
+    "https://strolleria.com/blogs/news/agio-z4-vs-peg-perego-ypsi-stroller-comparison",
+    "https://www.cpsc.gov/Recalls/2024/Peg-Perego-Recalls-Inclined-Sleeper-Bassinets-for-YPSI-and-Z4-Strollers-Due-to-Risk-of-Suffocation-and-Fall-Hazard-Violation-of-Federal-Safety-Standards-Recall-Alert",
+    "https://www.pegperego.com/en_us/baby/recalls"
   ],
   "notes": "Current-gen Agio (Peg Perego US brand) four-wheel reversible, modular stroller; identical product to Peg Perego 'Ypsi' (hence Clek's 'Z4:YPSI' row). ~22.5 lb, one-hand self-standing fold, reversible seat with lie-flat recline, converts single-to-double. Confirmed on Clek's official Liing/Liingo list; Clek Liing attaches via the Agio Z4/Ypsi adapter IKCS0018 (adapter-ikcs0018). MSRP $749.99 (Agio Baby DTC, out of stock at check); in stock at Baby Grand for $599 (sale). Basket capacity and JPMA certification not separately published — left null."
 }
