@@ -45,7 +45,17 @@
     "safety": {
       "standards": "Bugaboo declares conformity to the US juvenile stroller standard ASTM F833; Clek states strollers on its list were tested and are compliant with the applicable ASTM standards for car seats on strollers.",
       "certifications": null,
-      "notes": "5-point harness. No JPMA certification is published for this Bugaboo model; certifications left null rather than guessed. Max child weight 17 kg (~37.5 lb) per Bugaboo."
+      "notes": "5-point harness. No JPMA certification is published for this Bugaboo model; certifications left null rather than guessed. Max child weight 17 kg (~37.5 lb) per Bugaboo.",
+      "recall": {
+        "recalled": true,
+        "year": 2013,
+        "url": "https://www.cpsc.gov/Recalls/2013/Bugaboo-Recalls-Cameleon3-Strollers",
+        "summary": "2013 CPSC recall (fall hazard): the Cameleon3's carrying handle can break and detach from the bassinet/seat; ~9,200 US units. Free replacement handle offered."
+      },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "ASTM F833 (Bugaboo-declared conformity)"
     },
 
     "foldType": "two-piece fold (seat/bassinet detaches from chassis), self-standing",
@@ -60,7 +70,8 @@
     "https://strollberry.com/strollers/bugaboo-cameleon-3/",
     "https://goodbuygear.com/products/bugaboo-cameleon3-stroller-2029",
     "https://www.ebay.com/b/Bugaboo-Cameleon-Strollers/66700/bn_7115206853",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.cpsc.gov/Recalls/2013/Bugaboo-Recalls-Cameleon3-Strollers"
   ],
   "notes": "Full-size convertible city/all-terrain Bugaboo. Clek-listed via the Bugaboo Cameleon³ Maxi-Cosi adapter 80401MC02 (adapter-80401mc02), which explicitly lists the Clek Liing. HANDLE-POSITION CAVEAT (carried from Clek's list): the Cameleon³ handlebar has 5 positions and the Clek Liing is usable only in positions 3-5. STOCK: Bugaboo has DISCONTINUED the Cameleon 3 (its US product page is marked 'no longer available') and it is not carried new by the US Shopify retailers checked - only open-box/used (GoodBuy Gear $101.99, out of stock) and used-marketplace listings (eBay, ~$480 for near-new) are available as of 2026-07-05, so prices are condition-dependent and volatile. Heavier and larger-folding than the Bee 6; less ideal for the compact city/shopping goal but a capable lie-flat, bassinet-included convertible."
 }
