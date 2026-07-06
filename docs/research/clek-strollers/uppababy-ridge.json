@@ -28,7 +28,7 @@
     "unfoldedIn": { "lengthIn": 38.5, "widthIn": 26, "heightIn": 40.5 },
     "foldedIn": { "lengthIn": 18.5, "widthIn": 26, "heightIn": 36.5 },
 
-    "brake": { "hasBrake": true, "type": "hand-operated disc brake (with wrist strap) plus foot parking brake" },
+    "brake": { "hasBrake": true, "type": "hand-operated disc brake (with wrist strap) plus foot parking brake", "power": "hand-operated disc brake for controlled downhill braking, with a wrist strap (tether); foot-operated parking brake. NOTE: the original Ridge's rear disc brakes were recalled in 2022 (fingertip amputation hazard) and remedied with replacement discs; see specs.safety.recall." },
 
     "capacity": {
       "maxChildWeightLb": 55,

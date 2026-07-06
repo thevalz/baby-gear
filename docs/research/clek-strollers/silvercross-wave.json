@@ -30,7 +30,7 @@
     "foldedIn": { "lengthIn": 37.4, "widthIn": 23.6, "heightIn": 15.55 },
     "_dimsNote": "Wave 3: open L43.72 x W23.5 x H37-43 in; folded L37.4 x W23.6 x H15.55 in (Silver Cross US).",
 
-    "brake": { "hasBrake": true, "type": "push-push pedal (foot) parking brake, flip-flop friendly" },
+    "brake": { "hasBrake": true, "type": "push-push pedal (foot) parking brake, flip-flop friendly", "power": null },
     "_brakeNote": "Brake type from Strollberry Wave spec sheet: 'push-push pedal brake (flip-flop friendly)' — activated by pressing one side, released by pressing the other.",
 
     "capacity": {
@@ -45,7 +45,12 @@
     "safety": {
       "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
       "certifications": null,
-      "notes": "5-point harness; lie-flat seats; puncture-proof multi-terrain tires with four-way independent suspension."
+      "notes": "5-point harness; lie-flat seats; puncture-proof multi-terrain tires with four-way independent suspension.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888 (UK/EU home market; not stated for US units)"
     },
 
     "foldType": "compact fold (chassis folds; seats/bassinet remove)",
@@ -59,7 +64,9 @@
     "https://silvercrossus.com/product/wave-3-single-to-double-stroller/",
     "https://strolleria.com/products/silver-cross-wave-3-stroller",
     "https://pishposhbaby.com/blogs/blog/silver-cross-2019-wave",
-    "https://strollberry.com/strollers/silver-cross-wave/"
+    "https://strollberry.com/strollers/silver-cross-wave/",
+    "https://www.silvercrossbaby.com/the-edit/pregnancy/product-guides/a-genius-addition/",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "Clek's row names the 2019 Wave (adapter SX5135-EU, shared with the Coast). The current US product is the Wave 3, which uses the same Wave/Coast car seat adapter family — represented here as the live, purchasable model ($1,699.99). Heavy full-size single-to-double (up to 3 kids) — opposite end of the spectrum from the light/compact city goal. Brake type not published (null)."
 }

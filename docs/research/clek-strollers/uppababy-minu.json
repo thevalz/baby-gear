@@ -27,7 +27,7 @@
     "unfoldedIn": { "lengthIn": 35.5, "widthIn": 20.3, "heightIn": 41 },
     "foldedIn": { "lengthIn": 11.5, "widthIn": 20.3, "heightIn": 23 },
 
-    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -40,6 +40,11 @@
     "safety": {
       "standards": "Meets/exceeds ASTM F833 (US carriages & strollers)",
       "certifications": "JPMA Certified; GREENGUARD Gold Certified",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "No CPSC/SaferProducts recall found for the UPPAbaby MINU or MINU V2." },
+      "jpmaCertified": true,
+      "jpmaSource": "https://support.uppababy.com/hc/en-us/articles/115009544627-Are-UPPAbaby-products-JPMA-ASTM-compliant",
+      "harness": "5-point",
+      "otherCerts": null,
       "notes": "5-point harness; zip-out UPF 50+ canopy; front and rear spring suspension; one-step self-standing fold."
     },
 

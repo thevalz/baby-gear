@@ -31,7 +31,7 @@
     "foldedIn": { "lengthIn": 35.43, "widthIn": 18.5, "heightIn": 14.17 },
     "_foldedNote": "Bugaboo publishes two folds: self-standing one-piece fold 35.43 x 18.5 x 14.17 in (recorded here) and a more compact two-piece fold 29.92 x 18.5 x 13.39 in.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated push-down/lift-up pedal parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated push-down/lift-up pedal parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -44,7 +44,17 @@
     "safety": {
       "standards": "Bugaboo declares conformity to the US juvenile stroller standard ASTM F833; Clek states strollers on its list were tested and are compliant with the applicable ASTM standards for car seats on strollers.",
       "certifications": null,
-      "notes": "5-point harness. No JPMA certification is published for this Bugaboo model (JPMA participation not indicated on Bugaboo's page); certifications left null rather than guessed. Max forward-facing 50 lb; max parent-facing 33 lb per Bugaboo."
+      "notes": "5-point harness. No JPMA certification is published for this Bugaboo model (JPMA participation not indicated on Bugaboo's page); certifications left null rather than guessed. Max forward-facing 50 lb; max parent-facing 33 lb per Bugaboo.",
+      "recall": {
+        "recalled": true,
+        "year": 2011,
+        "url": "https://www.cpsc.gov/Recalls/2011/bugaboo-bee-strollers-recalled-by-bugaboo-americas-due-to-fall-hazard",
+        "summary": "2011 CPSC recall (fall hazard): front swivel wheels can lock while in motion, causing the Bee to tip; ~7,000 US Bugaboo Bee strollers sold Feb-Sep 2011. An earlier 2009 CPSC recall covered brake failure (brakes could fail and roll away on an incline) on the original Bee sold 2007-2009. These affect earlier Bee generations covered by this row; the current Bee 6 is not itself recalled."
+      },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "ASTM F833 (Bugaboo-declared conformity)"
     },
 
     "foldType": "one-hand fold; self-standing one-piece fold or compact two-piece fold",
@@ -59,7 +69,9 @@
     "https://strollberry.com/strollers/bugaboo-bee-6/",
     "https://www.anbbaby.com/products/bugaboo-bee-6-complete-stroller",
     "https://www.swaddlesbaby.com/products/bugaboo-bee-6-complete-stroller",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.cpsc.gov/Recalls/2011/bugaboo-bee-strollers-recalled-by-bugaboo-americas-due-to-fall-hazard",
+    "https://www.cpsc.gov/Recalls/2009/bugaboo-recalls-strollers-due-to-risk-of-brake-failure"
   ],
   "notes": "Current Bugaboo Bee generation (Bee 6); one Clek row covers Bee(2010)/Bee3/Bee5/Bee6, all served by the same Bugaboo Bee Maxi-Cosi/Turtle adapter 85510MC01 (adapter-85510mc01), which explicitly lists the Clek Liing. Excellent city/shopping fit: ~20.8 lb, one-hand self-standing fold, reversible lie-flat seat, 7 in foam-filled tires. NOTE ON STOCK: the complete Bee 6 is sold out at the US retailers checked (ANB, Swaddles both $779 and out of stock) - Bugaboo has largely wound the Bee 6 down, so new US retail availability is thin as of 2026-07-05. Height/length dims vary with handlebar position (see _unfoldedNote)."
 }
