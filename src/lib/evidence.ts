@@ -50,6 +50,8 @@ const ATTRIBUTE_META: Record<string, { label: string; format: (v: unknown) => st
   seatBrands: { label: 'Fits car seats', format: (v) => String(v) },
   forStrollers: { label: 'Fits strollers', format: (v) => String(v) },
   discontinued: { label: 'Discontinued', format: yesNo },
+  safetySummary: { label: 'Safety', format: (v) => String(v) },
+  brakePower: { label: 'Brake power', format: (v) => String(v) },
 };
 
 /**
@@ -60,7 +62,7 @@ const ATTRIBUTE_META: Record<string, { label: string; format: (v: unknown) => st
 const HIDDEN_ATTRIBUTES = new Set([
   'carrierLbVerify',
   'foldLenIn', 'foldWidIn', 'foldHtIn', 'openLenIn', 'openWidIn', 'openHtIn',
-  'sourceUrl',
+  'sourceUrl', 'safetyRecall', 'jpma',
 ]);
 
 const titleCase = (key: string): string =>
