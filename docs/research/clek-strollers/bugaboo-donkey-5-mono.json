@@ -31,7 +31,7 @@
     "foldedIn": { "lengthIn": 35.0, "widthIn": 23.6, "heightIn": 13.8 },
     "_foldedNote": "Compact two-piece fold per Bugaboo.com (35 x 23.6 x 13.8 in). A one-piece self-standing fold (20.5 x 23.6 x 35.4 in) is also available.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated push-down/lift-up central pedal parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated push-down/lift-up central pedal parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
@@ -44,7 +44,17 @@
     "safety": {
       "standards": "Sold in the US market (subject to CPSC 16 CFR 1227 / ASTM F833); Bugaboo does not publish a specific stroller-standard citation on the US product page.",
       "certifications": "",
-      "notes": "5-point adjustable harness (Bugaboo product page); central foot brake; UPF 50+ canopy; puncture-proof foam wheels with all-wheel suspension. Bugaboo does not advertise JPMA certification for the Donkey."
+      "notes": "5-point adjustable harness (Bugaboo product page); central foot brake; UPF 50+ canopy; puncture-proof foam wheels with all-wheel suspension. Bugaboo does not advertise JPMA certification for the Donkey.",
+      "recall": {
+        "recalled": false,
+        "checkedAt": "2026-07-06",
+        "source": "CPSC/SaferProducts search",
+        "note": "Donkey 5 (2023+) is not recalled. CPSC's 2013 Bugaboo Donkey carry-handle recall covered only the original Donkey sold Jan 2011-Dec 2012."
+      },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "two-piece compact fold (one-piece self-standing fold also available)",
@@ -58,7 +68,8 @@
     "https://www.bugaboo.com/us-en/strollers/bugaboo-donkey-5-mono/bugaboo-donkey-5-mono-2-in-1-stroller-PM004612.html",
     "https://strolleria.com/products/bugaboo-donkey5-mono-complete-stroller",
     "https://strollberry.com/strollers/bugaboo-donkey-5/",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.cpsc.gov/Recalls/2013/bugaboo-recalls-strollers-due-to-fall-and-choking-hazards"
   ],
   "notes": "This is the current-generation Bugaboo Donkey 5 (2023+) in MONO (single) mode - one seat, 23.6 in wide (as narrow as a single Bugaboo Fox 5). It is physically the SAME stroller as bugaboo-donkey-5-twin; it converts between mono (single) and duo/twin (side-by-side double) modes, so the twin file shares source pages and differs in seatCount, width, weight and price. Clek Liing attaches via the Bugaboo Donkey 5 Mono adapter for Maxi-Cosi (855190MC01 / adapter-855190mc01). CLEK CAVEAT: per Clek's official list the Liing is usable ONLY in Donkey handle positions 3-5 (the 30 lb cap flagged on the Donkey 2 rows is not repeated for the Donkey 5 rows). Best cited price $1,749 (Strolleria, in stock); Bugaboo.com now routes to the Donkey 6 and shows the Donkey 5 Mono as unavailable. Max child height not published by Bugaboo (null)."
 }

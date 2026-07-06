@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 35.8, "widthIn": 23.6, "heightIn": 9.4 },
     "_foldedNote": "Compact two-piece fold per Bugaboo.com (35.8 x 23.6 x 9.4 in). A one-piece self-standing fold (20.4 x 29.1 x 36.6 in) is also available.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated push-down/lift-up central pedal parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated push-down/lift-up central pedal parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 48.5,
@@ -42,7 +42,17 @@
     "safety": {
       "standards": "Sold in the US market (subject to CPSC 16 CFR 1227 / ASTM F833); Bugaboo does not publish a specific stroller-standard citation on the US product page.",
       "certifications": "",
-      "notes": "5-point adjustable harness per seat; central foot brake; puncture-proof foam wheels with all-wheel suspension. Bugaboo does not advertise JPMA certification for the Donkey."
+      "notes": "5-point adjustable harness per seat; central foot brake; puncture-proof foam wheels with all-wheel suspension. Bugaboo does not advertise JPMA certification for the Donkey.",
+      "recall": {
+        "recalled": false,
+        "checkedAt": "2026-07-06",
+        "source": "CPSC/SaferProducts search",
+        "note": "This Donkey 3 generation (2019+) is not recalled. CPSC's 2013 Bugaboo Cameleon/Donkey carry-handle recall (fall/choking hazard) covered only the original Donkey sold Jan 2011-Dec 2012."
+      },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null
     },
 
     "foldType": "two-piece compact fold (one-piece self-standing fold also available)",
@@ -56,7 +66,8 @@
     "https://www.bugaboo.com/us-en/strollers/bugaboo-donkey-3-twin/bugaboo-donkey-3-twin-bassinet-and-seat-stroller-PM001618.html",
     "https://www.bugaboo.com/us-en/strollers/bugaboo-donkey-3-mono/bugaboo-donkey-3-mono-bassinet-and-seat-stroller-PM001608.html",
     "https://strollberry.com/strollers/bugaboo-donkey-3/",
-    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo"
+    "https://support.clekinc.com/hc/en-us/articles/360039384292-What-strollers-are-compatible-with-Liing-and-Liingo",
+    "https://www.cpsc.gov/Recalls/2013/bugaboo-recalls-strollers-due-to-fall-and-choking-hazards"
   ],
   "notes": "This is the Bugaboo Donkey 3 in DUO/TWIN (side-by-side double) mode - two seats, 29.1 in wide (5.5 in WIDER than the 23.6 in mono mode). It is physically the SAME stroller as bugaboo-donkey-mono; three clicks convert between single and double, so it shares mono's source pages and differs only in seatCount (2), width (29.1 in), weight (33 lb) and price. Two Clek Liings attach via the Bugaboo Donkey Twin adapter for Maxi-Cosi (855180MC02 / adapter-855180mc02). CLEK CAVEAT: per Clek's official list the Liing is usable ONLY in Donkey handle positions 3-5, and on the Donkey 2 generation with a max 30 lb limit. The Donkey 3 is now largely discontinued/clearance; Bugaboo.com lists the Twin at $1,889 but out of stock at check - only one clean US retail price could be sourced (Donkey 3 Twin is broadly sold out). Max child height not published by Bugaboo (null)."
 }
