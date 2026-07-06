@@ -27,7 +27,7 @@
     "_unfoldedNote": "Open dimensions per Strollberry's Urban Glide 2 (single) spec: 104.5 cm L x 69 cm W x 101.6 cm H = 41.1 x 27.2 x 40 in. Thule's own current page no longer lists them (model superseded by UG3).",
     "foldedIn": { "lengthIn": 34.2, "widthIn": 27.2, "heightIn": 13.3 },
 
-    "brake": { "hasBrake": true, "type": "twist-action hand/running brake plus foot-operated parking brake" },
+    "brake": { "hasBrake": true, "type": "twist-action hand/running brake plus foot-operated parking brake", "power": "twist-grip hand/running brake for controlled speed on descents, plus a wrist safety strap (tether); foot-operated parking brake for standing" },
 
     "capacity": {
       "maxChildWeightLb": 48.5,
@@ -41,6 +41,11 @@
     "safety": {
       "standards": "Meets US ASTM F833 stroller standard — Clek's list confirms the UG2 was tested with the Liing and is ASTM-compliant for car seats on strollers.",
       "certifications": null,
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "No recall found for the Thule Urban Glide line; the 2020 Thule stroller recall was limited to the Thule Sleek (handlebar detachment)." },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null,
       "notes": "5-point harness; twist hand brake for speed control on descents; wrist safety strap."
     },
 
@@ -56,7 +61,8 @@
     "https://trailandkale.com/thule-urban-glide-2-review/",
     "https://marathonhandbook.com/thule-urban-glide-2-jogging-stroller-review/",
     "https://www.jensorganicbaby.com/products/thule-urban-glide-2",
-    "https://www.amazon.com/Thule-Urban-Glide-Jogging-Stroller/dp/B08JDC7Q7M"
+    "https://www.amazon.com/Thule-Urban-Glide-Jogging-Stroller/dp/B08JDC7Q7M",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "The Urban Glide 2 is the prior-generation jogger, now superseded by the Urban Glide 3 / 4-Wheel; largely sold through as drop-ship/limited stock (Jen's Organic Baby lists $749.95 as store-pickup/drop-ship). A capable running stroller (~25 lb) but not the light/compact city goal — closest analog to the owned BOB Alterrain Pro. Clek Liing attaches via the Urban Glide Maxi-Cosi adapter 20110740 (adapter-20110740), itself largely discontinued. Open dimensions and basket limit not published for this superseded single → null + notes."
 }

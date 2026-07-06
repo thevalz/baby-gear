@@ -29,7 +29,7 @@
     "unfoldedIn": { "lengthIn": 35.0, "widthIn": 27.2, "heightIn": 45.7 },
     "foldedIn": { "lengthIn": 34.6, "widthIn": 22.8, "heightIn": 11.0 },
 
-    "brake": { "hasBrake": true, "type": "twist hand/running brake plus foot-operated parking brake" },
+    "brake": { "hasBrake": true, "type": "twist hand/running brake plus foot-operated parking brake", "power": "twist-grip hand/running brake for controlled descents, plus a wrist safety strap (tether); foot-operated parking brake; front swivel wheels lock for higher speeds" },
 
     "capacity": {
       "maxChildWeightLb": 48.5,
@@ -43,6 +43,11 @@
     "safety": {
       "standards": "Meets US ASTM F833 stroller standard — Clek's list confirms the UG4 was tested with the Liing and is ASTM-compliant for car seats on strollers.",
       "certifications": null,
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search", "note": "No recall found for the Thule Urban Glide line; the 2020 Thule stroller recall was limited to the Thule Sleek (handlebar detachment)." },
+      "jpmaCertified": null,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null,
       "notes": "5-point harness; twist hand brake; wrist safety strap; front swivel wheels lock for higher speeds; full-suspension."
     },
 
@@ -57,7 +62,8 @@
     "https://www.rei.com/product/232123/thule-urban-glide-4-wheel-stroller",
     "https://www.naturebabyoutfitter.com/products/thule-urban-glide-4-wheel",
     "https://www.amazon.com/Thule-All-Terrain-Full-Suspension-Air-Filled-Adjustable/dp/B0CVPV2HD5",
-    "https://www.thule.com/en-us/strollers/jogging-strollers/thule-urban-glide-4-wheel-_-10101977"
+    "https://www.thule.com/en-us/strollers/jogging-strollers/thule-urban-glide-4-wheel-_-10101977",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "The 4-wheel variant of the current Urban Glide platform (~28.7 lb) — more stability than the 3-wheel UG3, heaviest of the Thule batch. Clek Liing attaches via the Urban Glide UNIVERSAL adapter 20110762 (adapter-20110762). Best cited price $599.93 (REI sale, reg $699.95; pre-order/ships within ~30 days); Thule DTC and Nature Baby Outfitter $799.95. A jogger/all-terrain stroller, not the light/compact city goal."
 }

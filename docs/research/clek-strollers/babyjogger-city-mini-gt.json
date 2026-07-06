@@ -28,7 +28,8 @@
     },
     "brake": {
       "hasBrake": true,
-      "type": "hand-operated parking brake"
+      "type": "hand-operated parking brake",
+      "power": null
     },
     "capacity": {
       "maxChildWeightLb": 65,
@@ -40,7 +41,17 @@
     "safety": {
       "standards": "ASTM F833 / 16 CFR 1227; JPMA Certified",
       "certifications": "JPMA Certified (Baby Jogger)",
-      "notes": "5-point harness; one-hand fold with auto-lock."
+      "notes": "5-point harness; one-hand fold with auto-lock.",
+      "recall": {
+        "recalled": false,
+        "checkedAt": "2026-07-06",
+        "source": "CPSC/SaferProducts search",
+        "note": "CPSC's 2009 Baby Jogger City Mini fall-hazard (buckle) recall covered only the original City Mini single/double (sold 2007-2009) and explicitly does not include the City Mini GT."
+      },
+      "jpmaCertified": true,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": null
     },
     "foldType": "one-hand compact fold",
     "strollerType": "all-terrain urban (discontinued)",
@@ -50,7 +61,9 @@
   },
   "sources": [
     "https://strollberry.com/strollers/baby-jogger-city-mini-gt/",
-    "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/baby-jogger-city-mini-gt"
+    "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/baby-jogger-city-mini-gt",
+    "https://www.cpsc.gov/Recalls/2009/Baby-Jogger-Recalls-Strollers-Due-to-Fall-Hazard",
+    "https://www.babyjogger.com/product-recall.html"
   ],
   "notes": "The original City Mini GT (superseded by the GT2). On Clek's list via the Mounting Bracket Single for Maxi-Cosi 1967208 — Clek flags that adapter DISCONTINUED. Discontinued model; unfolded 44.1 x 24.4 x 43.5 in and folded 31.5 x 24.4 x 9.8 in derived from Strollberry (110.5 x 62 x 112 cm open; 80 x 62 x 25 cm folded, h x w x l); MSRP ~$279.99 reference.",
   "price": 279.99

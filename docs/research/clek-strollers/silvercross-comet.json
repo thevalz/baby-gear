@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 34, "widthIn": 24, "heightIn": 13 },
     "_dimsNote": "Open L31.5 x W24 x H37-42 in; folded (one-piece flat fold) L34 x W24 x H13 in. Folded length exceeds open length because the seat lies flat forward.",
 
-    "brake": { "hasBrake": true, "type": "foot-operated parking brake" },
+    "brake": { "hasBrake": true, "type": "foot-operated parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 55,
@@ -43,7 +43,13 @@
     "safety": {
       "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
       "certifications": null,
-      "notes": "State-of-the-art harness with 'Genius' buckle; included Babynest for newborns; one-piece compact fold."
+      "notes": "State-of-the-art harness with 'Genius' buckle; included Babynest for newborns; one-piece compact fold.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "harnessNote": "Silver Cross 'Genius' buckle is a five-point harness system.",
+      "otherCerts": "EN 1888 (UK/EU home market; not stated for US units)"
     },
 
     "foldType": "compact one-piece fold",
@@ -57,7 +63,9 @@
     "https://www.bambibaby.com/products/silver-cross-comet-eclipse-stroller",
     "https://strollberry.com/strollers/silver-cross-comet/",
     "https://www.babycubby.com/blogs/parenting/video-silver-cross-comet-stroller",
-    "https://silvercrossus.com/product/comet-car-seat-adapters/"
+    "https://silvercrossus.com/product/comet-car-seat-adapters/",
+    "https://www.silvercrossbaby.com/the-edit/pregnancy/product-guides/a-genius-addition/",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "Lightweight ~16 lb one-seat 'four-mode' stroller — a reasonable city/shopping candidate, heavier than the Jet but with a proper reversible seat. US supply is thinning (Baby Cubby empty at check); Bambi Baby lists $549.99 in stock. Basket capacity not published (null). Clek Liing mounts via the Comet car seat adapters ($24.99)."
 }

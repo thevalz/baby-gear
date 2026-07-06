@@ -30,7 +30,7 @@
     "foldedIn": { "lengthIn": 27, "widthIn": 23, "heightIn": 11 },
     "_dimsNote": "Open ~30 x 23 x 36-42.5 in; folded ~27 x 23 x 11 in, free-standing (folds forward or rearward). From Mega Babies / retailer spec.",
 
-    "brake": { "hasBrake": true, "type": "step-on / step-off parking brake" },
+    "brake": { "hasBrake": true, "type": "step-on / step-off parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 55,
@@ -43,7 +43,12 @@
     "safety": {
       "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
       "certifications": null,
-      "notes": "5-point harness; reversible seat; one-hand self-standing compact fold; shell/fabrics use recycled plastic."
+      "notes": "5-point harness; reversible seat; one-hand self-standing compact fold; shell/fabrics use recycled plastic.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "otherCerts": "EN 1888 (UK/EU home market; not stated for US units)"
     },
 
     "foldType": "one-hand self-standing compact fold (folds both forward- and rear-facing)",
@@ -57,7 +62,9 @@
     "https://www.megababiesusa.com/products/silver-cross-dune-stroller-system",
     "https://strollberry.com/strollers/silver-cross-dune/",
     "https://www.nordstrom.com/s/dune-stroller/6914986",
-    "https://silvercrossus.com/product/silver-crosss-dune-compact-folding-stroller/"
+    "https://silvercrossus.com/product/silver-crosss-dune-compact-folding-stroller/",
+    "https://www.silvercrossbaby.com/the-edit/pregnancy/product-guides/a-genius-addition/",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "Dune is being superseded by the Reef 2 / Dune 2 generation — the Silver Cross US Dune URL now redirects to the Reef 2 (discontinued on DTC), but Nordstrom, Albee Baby and Bambi Baby still carry it. Price $959.99 is the widely-cited launch/MSRP; reconfirm at checkout as this is a wind-down SKU. Clek Liing mounts via the shared Dune/Reef car seat adapters ($59.99)."
 }

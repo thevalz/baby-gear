@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 12.9, "widthIn": 22.05, "heightIn": 25.9 },
     "_dimsNote": "Open 27.96 x 22.05 x 40.94 in; folded 12.9 x 22.05 x 25.9 in, one-hand self-standing (folds with seat or bassinet attached). Silver Cross US.",
 
-    "brake": { "hasBrake": true, "type": "flip-flop-friendly foot parking brake" },
+    "brake": { "hasBrake": true, "type": "flip-flop-friendly foot parking brake", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 55,
@@ -42,7 +42,13 @@
     "safety": {
       "standards": "ASTM F833 / 16 CFR 1227 (US market). No specific standard is published on the Silver Cross US spec page; Silver Cross is UK-origin (EN 1888 in home market, not stated for US units). No named third-party certification (e.g. JPMA) published.",
       "certifications": null,
-      "notes": "Magnetic Genius 2 buckle harness; UPF50+ hood; two-height elevation; one-hand self-standing fold; overnight-sleep-approved folding bassinet."
+      "notes": "Magnetic Genius 2 buckle harness; UPF50+ hood; two-height elevation; one-hand self-standing fold; overnight-sleep-approved folding bassinet.",
+      "recall": { "recalled": false, "checkedAt": "2026-07-06", "source": "CPSC/SaferProducts search" },
+      "jpmaCertified": false,
+      "jpmaSource": null,
+      "harness": "5-point",
+      "harnessNote": "Magnetic Genius 2 five-point no-rethread harness (Silver Cross Genius buckle system).",
+      "otherCerts": "EN 1888 (UK/EU home market; not stated for US units)"
     },
 
     "foldType": "one-hand self-standing fold (with seat or bassinet attached)",
@@ -56,7 +62,9 @@
     "https://silvercrossus.com/product/breez-compact-stroller/",
     "https://strolleria.com/products/silver-cross-breez-modular-stroller",
     "https://strolleria.com/blogs/news/new-stroller-review-and-comparison-2026-silver-cross-breez",
-    "https://silvercrossus.com/product/breez-car-seat-adapters/"
+    "https://silvercrossus.com/product/breez-car-seat-adapters/",
+    "https://www.silvercrossbaby.com/the-edit/pregnancy/product-guides/a-genius-addition/",
+    "https://www.cpsc.gov/recall-products/strollers"
   ],
   "notes": "Current (New for 2026) mid-size modular Breez, ~22.6 lb. Silver Cross's own Breez Universal Car Seat Adapters carry part number SX5306.00 — the exact number on Clek's list — so the roster's adapter-sx5306 maps to this current Breez (adapters explicitly list the Clek Liing). Best cited price $849.99 (Silver Cross US / Strolleria)."
 }

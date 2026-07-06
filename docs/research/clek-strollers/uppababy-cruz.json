@@ -29,7 +29,7 @@
     "foldedIn": { "lengthIn": 14, "widthIn": 22.2, "heightIn": 37 },
     "_dimsNote": "Strollberry: open 102.9 x 56.5 x 94 cm; folded 94 x 56.5 x 35.5 cm (folded with seat attached, self-standing).",
 
-    "brake": { "hasBrake": true, "type": "one-step foot-operated rocker parking brake (flip-flop friendly)" },
+    "brake": { "hasBrake": true, "type": "one-step foot-operated rocker parking brake (flip-flop friendly)", "power": null },
 
     "capacity": {
       "maxChildWeightLb": 50,
